@@ -1,4 +1,3 @@
-import 'package:fluent_ui/fluent_ui.dart' as fluent;
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import '../services/na-platform-info.service.dart';
@@ -17,9 +16,7 @@ class NaPlatformCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    if (NaPlatformInfoService.isWindows) {
-      return fluent.Card(padding: this.padding ?? const EdgeInsets.all(12.0), margin: this.margin ?? const EdgeInsets.all(4.0), child: this.child,);
-    } else if (NaPlatformInfoService.isIOS) {
+    if (NaPlatformInfoService.isIOS) {
       return Container(
         margin: this.margin ?? const EdgeInsets.all(4.0),
         padding: this.padding ?? const EdgeInsets.all(12.0),

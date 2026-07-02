@@ -1,4 +1,3 @@
-import 'package:fluent_ui/fluent_ui.dart' as fluent;
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import '../services/na-platform-info.service.dart';
@@ -17,13 +16,7 @@ class NaPlatformAlertDialog extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    if (NaPlatformInfoService.isWindows) {
-      return fluent.ContentDialog(
-        title: this.title,
-        content: this.content,
-        actions: this.actions,
-      );
-    } else if (NaPlatformInfoService.isIOS) {
+    if (NaPlatformInfoService.isIOS) {
       return CupertinoAlertDialog(
         title: this.title,
         content: this.content,
@@ -45,16 +38,7 @@ class NaPlatformAlertDialog extends StatelessWidget {
     Widget? content,
     required List<Widget> actions,
   }) {
-    if (NaPlatformInfoService.isWindows) {
-      return fluent.showDialog<T>(
-        context: context,
-        builder: (context) => NaPlatformAlertDialog(
-          title: title,
-          content: content,
-          actions: actions,
-        ),
-      );
-    } else if (NaPlatformInfoService.isIOS) {
+    if (NaPlatformInfoService.isIOS) {
       return showCupertinoDialog<T>(
         context: context,
         builder: (context) => NaPlatformAlertDialog(

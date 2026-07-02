@@ -109,11 +109,11 @@ class _ExampleAppState extends State<ExampleApp> {
                 Row(
                   children: [
                     NaPlatformSwitch(
-                      value: this._switchValue,
-                      onChanged: (val) => setState(() => this._switchValue = val),
+                      value: _switchValue,
+                      onChanged: (val) => setState(() => _switchValue = val),
                     ),
                     const SizedBox(width: 12),
-                    Text('Stato: ${this._switchValue ? "Attivo" : "Spento"}'),
+                    Text('Stato: ${_switchValue ? "Attivo" : "Spento"}'),
                   ],
                 ),
                 const Divider(height: 32),
@@ -123,11 +123,11 @@ class _ExampleAppState extends State<ExampleApp> {
                 Row(
                   children: [
                     NaPlatformCheckbox(
-                      value: this._checkboxValue,
-                      onChanged: (val) => setState(() => this._checkboxValue = val ?? false),
+                      value: _checkboxValue,
+                      onChanged: (val) => setState(() => _checkboxValue = val ?? false),
                     ),
                     const SizedBox(width: 12),
-                    Text('Spuntato: ${this._checkboxValue ? "Sì" : "No"}'),
+                    Text('Spuntato: ${_checkboxValue ? "Sì" : "No"}'),
                   ],
                 ),
                 const Divider(height: 32),
@@ -135,10 +135,10 @@ class _ExampleAppState extends State<ExampleApp> {
                 const Text('5. NaPlatformSlider', style: TextStyle(fontWeight: FontWeight.bold)),
                 const SizedBox(height: 8),
                 NaPlatformSlider(
-                  value: this._sliderValue,
+                  value: _sliderValue,
                   min: 0,
                   max: 100,
-                  onChanged: (val) => setState(() => this._sliderValue = val),
+                  onChanged: (val) => setState(() => _sliderValue = val),
                 ),
                 const Divider(height: 32),
                 

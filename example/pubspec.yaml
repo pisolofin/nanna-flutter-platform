@@ -38,7 +38,6 @@ dependencies:
     path: ..
   flutter_localizations:
     sdk: flutter
-  fluent_ui: ^4.16.0
   
 
 dev_dependencies:
@@ -99,6 +98,4 @@ flutter:
 
 
 
-dependency_overrides:
-  fluent_ui:
-    path: ../../fluent_ui_patched
+

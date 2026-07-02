@@ -1,4 +1,3 @@
-import 'package:fluent_ui/fluent_ui.dart' as fluent;
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import '../services/na-platform-info.service.dart';
@@ -15,9 +14,7 @@ class NaPlatformIconButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    if (NaPlatformInfoService.isWindows) {
-      return fluent.IconButton(icon: this.icon, onPressed: this.onPressed,);
-    } else if (NaPlatformInfoService.isIOS) {
+    if (NaPlatformInfoService.isIOS) {
       return CupertinoButton(
         padding: EdgeInsets.zero,
         onPressed: this.onPressed,
