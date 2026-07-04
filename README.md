@@ -59,7 +59,10 @@ NaPlatformButton(
   optionsBuilder: (BuildContext context, NaUiType uiType) {
     // Specific options for Material
     if (uiType == NaUiType.material) {
-      // return NaPlatformButtonOptionsMaterial(elevation: 4.0);
+      return NaPlatformButtonOptionsMaterial(
+        autofocus: true,
+        clipBehavior: Clip.hardEdge,
+      );
     }
     
     // Options for third-party plugins (e.g. Fluent UI)
@@ -78,3 +81,6 @@ This ensures that the widget remains clean and can accommodate configurations fo
 The library uses a **Widget Builder Registry** that allows external packages to add support for new design systems (like `fluent_ui` or `macos_ui`) dynamically.
 
 Read the full guide and example here: [Extending the Platform with External Libraries](.doc/external_libraries.md)
+
+### Technical Deep Dives
+*   **[Development Guidelines](.docs/development-guidelines.md)**: Strict constraints, target platforms (iOS/Android), offline-first storage logic, dependencies (e.g., `nanna_flutter`), and Dart/Flutter coding styles.
