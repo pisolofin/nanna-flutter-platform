@@ -14,4 +14,6 @@ export 'src/widgets-flutter/platform-switch.widget.dart';
 export 'src/widgets-flutter/platform-checkbox.widget.dart';
 export 'src/widgets-flutter/platform-slider.widget.dart';
 export 'src/widgets-flutter/platform-progress-indicator.widget.dart';
+export 'src/widgets-flutter/platform-card.widget.dart';
+export 'src/widgets-flutter/platform-list-tile.widget.dart';
 export 'src/exceptions/ui-type-already-registered.exception.dart';

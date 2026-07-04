@@ -85,6 +85,31 @@ class _ExampleHomePageState extends State<ExampleHomePage> {
               const Text('NaPlatformProgressIndicator:'),
               const SizedBox(height: 10.0),
               const NaPlatformProgressIndicator(),
+              const SizedBox(height: 40.0),
+              const Text('NaPlatformCard e NaPlatformListTile:'),
+              Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: NaPlatformCard(
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      NaPlatformListTile(
+                        leading: const Icon(Icons.person),
+                        title: const Text('John Doe'),
+                        subtitle: const Text('Software Engineer'),
+                        trailing: const Icon(Icons.chevron_right),
+                        onTap: () {},
+                      ),
+                      NaPlatformListTile(
+                        leading: const Icon(Icons.email),
+                        title: const Text('john.doe@example.com'),
+                        onTap: () {},
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              const SizedBox(height: 40.0),
             ],
           ),
         ),

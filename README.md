@@ -18,12 +18,12 @@ Instead of writing platform-conditional code (`if (Platform.isIOS) ...`) on ever
 | `Checkbox` | `CupertinoCheckbox` | ✅ | `NaPlatformCheckbox` |
 | `Slider` | `CupertinoSlider` | ✅ | `NaPlatformSlider` |
 | `CircularProgressIndicator`| `CupertinoActivityIndicator`| ✅ | `NaPlatformProgressIndicator` |
-| `Card` | `Container` (decorated) | ❌ | `NaPlatformCard` |
+| `Card` | `Container` (decorated) | ✅ | `NaPlatformCard` |
 | `AlertDialog` | `CupertinoAlertDialog` | ❌ | `NaPlatformAlertDialog` |
 | `BottomNavigationBar` | `CupertinoTabBar` | ❌ | `NaPlatformBottomNavigationBar` |
 | `DatePicker` | `CupertinoDatePicker` | ❌ | `NaPlatformDatePicker` |
 | `TimePicker` | `CupertinoTimerPicker` | ❌ | `NaPlatformTimePicker` |
-| `ListTile` | `CupertinoListTile` | ❌ | `NaPlatformListTile` |
+| `ListTile` | `CupertinoListTile` | ✅ | `NaPlatformListTile` |
 | `Radio` | `CupertinoRadio` | ❌ | `NaPlatformRadio` |
 | `Dialog Action` | `CupertinoDialogAction` | ❌ | `NaPlatformDialogAction` |
 
