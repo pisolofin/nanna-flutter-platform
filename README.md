@@ -36,7 +36,7 @@ To make your entire app (or a portion of it) use a specific design system, wrap 
 
 ```dart
 import 'package:flutter/widgets.dart';
-// import 'package:nanna_flutter_platform/nanna_flutter_platform.dart';
+import 'package:nanna_flutter_platform/nanna_flutter_platform.dart';
 
 void main() {
   runApp(
@@ -73,3 +73,8 @@ NaPlatformButton(
 )
 ```
 This ensures that the widget remains clean and can accommodate configurations for UI plugins added in the future without needing to be modified.
+
+### 3. Extending with External Libraries (Plugins)
+The library uses a **Widget Builder Registry** that allows external packages to add support for new design systems (like `fluent_ui` or `macos_ui`) dynamically.
+
+Read the full guide and example here: [Extending the Platform with External Libraries](.doc/external_libraries.md)
