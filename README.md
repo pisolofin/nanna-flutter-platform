@@ -1,17 +1,17 @@
 # nanna_flutter_platform
 
-Questa libreria fornisce componenti cross-platform unificati per app Flutter.
-Invece di dover scrivere codice condizionale basato sulla piattaforma (`if (Platform.isIOS) ...`) in ogni schermata, `nanna_flutter_platform` espone widget generici (come `NaPlatformButton`) che si traducono automaticamente nel design system nativo appropriato:
-- **Material Design** per Android, Web e Linux
-- **Cupertino** per iOS e macOS
-- **Fluent UI** per Windows
+This library provides unified cross-platform components for Flutter apps.
+Instead of writing platform-conditional code (`if (Platform.isIOS) ...`) on every screen, `nanna_flutter_platform` exposes generic widgets (like `NaPlatformButton`) that automatically translate into the appropriate native design system:
+- **Material Design** for Android, Web, and Linux
+- **Cupertino** for iOS and macOS
+- **Fluent UI** for Windows
 
-## Stato dei Widget Supportati
+## Supported Widgets Status
 
-| Flutter Widget (Material) | Cupertino Equivalente | Fluent UI Equivalente | Implementato | Nome Componente |
+| Flutter Widget (Material) | Cupertino Equivalent | Fluent UI Equivalent | Implemented | Component Name |
 | --- | --- | --- | :---: | --- |
 | `Scaffold` | `CupertinoPageScaffold` | `ScaffoldPage` | ✅ | `NaPlatformScaffold` |
-| `AppBar` | `CupertinoNavigationBar`| `PageHeader` | ✅ | (Integrato in `NaPlatformScaffold`) |
+| `AppBar` | `CupertinoNavigationBar`| `PageHeader` | ✅ | (Integrated in `NaPlatformScaffold`) |
 | `ElevatedButton` | `CupertinoButton` | `Button` | ✅ | `NaPlatformButton` |
 | `IconButton` | `CupertinoButton` (icon) | `IconButton` | ✅ | `NaPlatformIconButton` |
 | `TextField` | `CupertinoTextField` | `TextBox` | ✅ | `NaPlatformTextField` |
@@ -19,7 +19,7 @@ Invece di dover scrivere codice condizionale basato sulla piattaforma (`if (Plat
 | `Checkbox` | `CupertinoCheckbox` | `Checkbox` | ✅ | `NaPlatformCheckbox` |
 | `Slider` | `CupertinoSlider` | `Slider` | ✅ | `NaPlatformSlider` |
 | `CircularProgressIndicator`| `CupertinoActivityIndicator`| `ProgressRing` | ✅ | `NaPlatformProgressIndicator` |
-| `Card` | `Container` (decorato) | `Card` | ✅ | `NaPlatformCard` |
+| `Card` | `Container` (decorated) | `Card` | ✅ | `NaPlatformCard` |
 | `AlertDialog` | `CupertinoAlertDialog` | `ContentDialog` | ✅ | `NaPlatformAlertDialog` |
 | `BottomNavigationBar` | `CupertinoTabBar` | `NavigationView` | ❌ | - |
 | `DatePicker` | `CupertinoDatePicker` | `DatePicker` | ❌ | - |
@@ -28,3 +28,48 @@ Invece di dover scrivere codice condizionale basato sulla piattaforma (`if (Plat
 | `Radio` | `CupertinoRadio` | `RadioButton` | ❌ | - |
 | `Dialog Action` | `CupertinoDialogAction` | `Button` (in dialog) | ❌ | - |
 
+
+## How to use the library
+
+### 1. Initialize the Scope (NaUiTypeScope)
+To make your entire app (or a portion of it) use a specific design system, wrap your widgets inside a `NaUiTypeScope`:
+
+```dart
+import 'package:flutter/widgets.dart';
+// import 'package:nanna_flutter_platform/nanna_flutter_platform.dart';
+
+void main() {
+  runApp(
+    NaUiTypeScope(
+      // Change this value to switch the entire UI (e.g. NaUiType.cupertino)
+      uiType: NaUiType.material, 
+      child: const MyApp(),
+    )
+  );
+}
+```
+
+### 2. Create and use Widgets (Options Builder Pattern)
+When using `NaPlatform` widgets, you can pass common parameters (like `child`, `onPressed`) and define platform-specific options at runtime using the `optionsBuilder` function.
+This pattern (based on Marker Interfaces) guarantees total Type Safety and perfect decoupling.
+
+```dart
+NaPlatformButton(
+  onPressed: () => print('Pressed!'),
+  optionsBuilder: (BuildContext context, NaUiType uiType) {
+    // Specific options for Material
+    if (uiType == NaUiType.material) {
+      // return NaPlatformButtonOptionsMaterial(elevation: 4.0);
+    }
+    
+    // Options for third-party plugins (e.g. Fluent UI)
+    // if (uiType == fluentUiType) {
+    //   return FluentButtonOptions(useAcrylicEffect: true);
+    // }
+    
+    return null;
+  },
+  child: const Text('Submit'),
+)
+```
+This ensures that the widget remains clean and can accommodate configurations for UI plugins added in the future without needing to be modified.

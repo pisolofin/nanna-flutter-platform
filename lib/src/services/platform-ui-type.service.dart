@@ -4,14 +4,6 @@ import '../exceptions/ui-type-already-registered.exception.dart';
 /// Holds registered UITypes for each style
 final Map<String, dynamic> _registeredUiTypes = {};
 
-/// Initializes the platform service.
-void naPlatformServiceInit() {
-  // Register known types
-  for (NaUiType knowUiType in NaUiType.values) {
-    naPlatformServiceRegisterUiType(styleId: '', uiType: knowUiType);
-  }
-}
-
 /// Registers a specific UI type for a given style.
 ///
 /// [styleId]: The identifier of the style.

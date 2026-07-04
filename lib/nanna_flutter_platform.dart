@@ -1,1 +1,8 @@
-library nanna_flutter_platform;
+export 'src/models/style.model.dart';
+export 'src/models/ui-type.model.dart';
+export 'src/scopes/ui-type.scope.dart';
+export 'src/services/platform.service.dart';
+export 'src/widgets/platform-widget.widget.dart';
+export 'src/services/platform-builder.service.dart';
+export 'src/services/platform-ui-type.service.dart';
+export 'src/exceptions/ui-type-already-registered.exception.dart';
