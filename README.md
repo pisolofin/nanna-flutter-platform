@@ -10,6 +10,7 @@ Instead of writing platform-conditional code (`if (Platform.isIOS) ...`) on ever
 
 | Flutter Widget (Material) | Cupertino Equivalent | Fluent UI Equivalent | Implemented | Component Name |
 | --- | --- | --- | :---: | --- |
+| `MaterialApp` | `CupertinoApp` | `FluentApp` | ✅ | `NaPlatformApp` |
 | `Scaffold` | `CupertinoPageScaffold` | `ScaffoldPage` | ✅ | `NaPlatformScaffold` |
 | `AppBar` | `CupertinoNavigationBar`| `PageHeader` | ✅ | `NaPlatformAppBar` |
 | `ElevatedButton` | `CupertinoButton` | `Button` | ✅ | `NaPlatformButton` |

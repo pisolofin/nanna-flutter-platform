@@ -8,4 +8,5 @@ export 'src/widgets/platform-widget.widget.dart';
 export 'src/widgets-flutter/platform-button.widget.dart';
 export 'src/widgets-flutter/platform-app-bar.widget.dart';
 export 'src/widgets-flutter/platform-scaffold.widget.dart';
+export 'src/widgets-flutter/platform-app.widget.dart';
 export 'src/exceptions/ui-type-already-registered.exception.dart';

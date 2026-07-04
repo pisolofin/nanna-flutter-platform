@@ -43,29 +43,35 @@ class _MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
-    Widget app;
-
-    if (_currentUiType == NaUiType.cupertino) {
-      app = const CupertinoApp(
-        title: 'Nanna Platform Example',
-        theme: CupertinoThemeData(brightness: Brightness.light),
-        home: ExampleHomePage(),
-      );
-    } else {
-      app = MaterialApp(
-        title: 'Nanna Platform Example',
-        theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-          useMaterial3: true,
-        ),
-        home: const ExampleHomePage(),
-      );
-    }
-
     // Wrap the app with NaUiTypeScope to propagate the selected UI type to all NaPlatform* widgets.
     return NaUiTypeScope(
       uiType: _currentUiType,
-      child: AppStateScope(toggleUiType: _toggleUiType, child: app),
+      child: AppStateScope(
+        toggleUiType: _toggleUiType,
+        child: NaPlatformApp(
+          title: 'Nanna Platform Example',
+          optionsBuilder: (BuildContext context, NaUiType uiType) {
+            switch (uiType) {
+              case NaUiType.material:
+                return NaPlatformAppOptionsMaterial(
+                  theme: ThemeData(
+                    colorScheme: ColorScheme.fromSeed(
+                      seedColor: Colors.deepPurple,
+                    ),
+                    useMaterial3: true,
+                  ),
+                );
+              case NaUiType.cupertino:
+                return NaPlatformAppOptionsCupertino(
+                  theme: const CupertinoThemeData(brightness: Brightness.light),
+                );
+            }
+
+            return null;
+          },
+          home: const ExampleHomePage(),
+        ),
+      ),
     );
   }
 }
