@@ -97,7 +97,7 @@ class _ExampleHomePageState extends State<ExampleHomePage> {
                         leading: const Icon(Icons.person),
                         title: const Text('John Doe'),
                         subtitle: const Text('Software Engineer'),
-                        trailing: const Icon(Icons.chevron_right),
+                        hasChevron: true,
                         onTap: () {},
                       ),
                       NaPlatformListTile(

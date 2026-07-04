@@ -92,6 +92,7 @@ class NaPlatformListTile extends NaPlatformWidget {
   final Widget? subtitle;
   final Widget? trailing;
   final VoidCallback? onTap;
+  final bool hasChevron;
 
   final NaWidgetOptionsBuilder<NaPlatformListTileOptions>? optionsBuilder;
 
@@ -102,6 +103,7 @@ class NaPlatformListTile extends NaPlatformWidget {
     this.subtitle,
     this.trailing,
     this.onTap,
+    this.hasChevron = false,
     this.optionsBuilder,
     super.uiType,
   });
@@ -113,13 +115,33 @@ class NaPlatformListTile extends NaPlatformWidget {
       uiType,
     );
 
+    Widget? finalTrailing = this.trailing;
+    if (this.hasChevron) {
+      final Widget chevron = uiType == NaUiType.cupertino 
+        ? const CupertinoListTileChevron() 
+        : const Icon(Icons.chevron_right);
+        
+      if (finalTrailing != null) {
+        finalTrailing = Row(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            finalTrailing,
+            const SizedBox(width: 8.0),
+            chevron,
+          ],
+        );
+      } else {
+        finalTrailing = chevron;
+      }
+    }
+
     if (uiType == NaUiType.cupertino) {
       final NaPlatformListTileOptionsCupertino? cupertinoOptions = options is NaPlatformListTileOptionsCupertino ? options : null;
       return CupertinoListTile(
         leading                 : this.leading,
         title                   : this.title,
         subtitle                : this.subtitle,
-        trailing                : this.trailing,
+        trailing                : finalTrailing,
         additionalInfo          : cupertinoOptions?.additionalInfo,
         onTap                   : this.onTap,
         backgroundColor         : cupertinoOptions?.backgroundColor,
@@ -135,7 +157,7 @@ class NaPlatformListTile extends NaPlatformWidget {
       leading           : this.leading,
       title             : this.title,
       subtitle          : this.subtitle,
-      trailing          : this.trailing,
+      trailing          : finalTrailing,
       isThreeLine       : materialOptions?.isThreeLine ?? false,
       dense             : materialOptions?.dense,
       visualDensity     : materialOptions?.visualDensity,
