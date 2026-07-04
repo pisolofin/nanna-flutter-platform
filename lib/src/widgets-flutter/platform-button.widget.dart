@@ -5,8 +5,10 @@ import '../models/ui-type.model.dart';
 import '../models/widget-options.model.dart';
 import '../widgets/platform-widget.widget.dart';
 
+/// Base options for [NaPlatformButton].
 abstract class NaPlatformButtonOptions extends NaWidgetOptions {}
 
+/// Material-specific options for [NaPlatformButton], resolving into an [ElevatedButton].
 class NaPlatformButtonOptionsMaterial extends NaPlatformButtonOptions {
   final VoidCallback? onLongPress;
   final ValueChanged<bool>? onHover;
@@ -29,6 +31,7 @@ class NaPlatformButtonOptionsMaterial extends NaPlatformButtonOptions {
   });
 }
 
+/// Cupertino-specific options for [NaPlatformButton], resolving into a [CupertinoButton].
 class NaPlatformButtonOptionsCupertino extends NaPlatformButtonOptions {
   final EdgeInsetsGeometry? padding;
   final Color? color;
@@ -49,6 +52,8 @@ class NaPlatformButtonOptionsCupertino extends NaPlatformButtonOptions {
   });
 }
 
+/// A generic Button widget that automatically renders an [ElevatedButton] on Material 
+/// and a [CupertinoButton] on Cupertino.
 class NaPlatformButton extends NaPlatformWidget {
   final Widget child;
   final VoidCallback? onPressed;

@@ -11,22 +11,22 @@ Instead of writing platform-conditional code (`if (Platform.isIOS) ...`) on ever
 | Flutter Widget (Material) | Cupertino Equivalent | Fluent UI Equivalent | Implemented | Component Name |
 | --- | --- | --- | :---: | --- |
 | `Scaffold` | `CupertinoPageScaffold` | `ScaffoldPage` | ✅ | `NaPlatformScaffold` |
-| `AppBar` | `CupertinoNavigationBar`| `PageHeader` | ✅ | (Integrated in `NaPlatformScaffold`) |
+| `AppBar` | `CupertinoNavigationBar`| `PageHeader` | ✅ | `NaPlatformAppBar` |
 | `ElevatedButton` | `CupertinoButton` | `Button` | ✅ | `NaPlatformButton` |
-| `IconButton` | `CupertinoButton` (icon) | `IconButton` | ✅ | `NaPlatformIconButton` |
-| `TextField` | `CupertinoTextField` | `TextBox` | ✅ | `NaPlatformTextField` |
-| `Switch` | `CupertinoSwitch` | `ToggleSwitch` | ✅ | `NaPlatformSwitch` |
-| `Checkbox` | `CupertinoCheckbox` | `Checkbox` | ✅ | `NaPlatformCheckbox` |
-| `Slider` | `CupertinoSlider` | `Slider` | ✅ | `NaPlatformSlider` |
-| `CircularProgressIndicator`| `CupertinoActivityIndicator`| `ProgressRing` | ✅ | `NaPlatformProgressIndicator` |
-| `Card` | `Container` (decorated) | `Card` | ✅ | `NaPlatformCard` |
-| `AlertDialog` | `CupertinoAlertDialog` | `ContentDialog` | ✅ | `NaPlatformAlertDialog` |
-| `BottomNavigationBar` | `CupertinoTabBar` | `NavigationView` | ❌ | - |
-| `DatePicker` | `CupertinoDatePicker` | `DatePicker` | ❌ | - |
-| `TimePicker` | `CupertinoTimerPicker` | `TimePicker` | ❌ | - |
-| `ListTile` | `CupertinoListTile` | `ListTile` | ❌ | - |
-| `Radio` | `CupertinoRadio` | `RadioButton` | ❌ | - |
-| `Dialog Action` | `CupertinoDialogAction` | `Button` (in dialog) | ❌ | - |
+| `IconButton` | `CupertinoButton` (icon) | `IconButton` | ❌ | `NaPlatformIconButton` |
+| `TextField` | `CupertinoTextField` | `TextBox` | ❌ | `NaPlatformTextField` |
+| `Switch` | `CupertinoSwitch` | `ToggleSwitch` | ❌ | `NaPlatformSwitch` |
+| `Checkbox` | `CupertinoCheckbox` | `Checkbox` | ❌ | `NaPlatformCheckbox` |
+| `Slider` | `CupertinoSlider` | `Slider` | ❌ | `NaPlatformSlider` |
+| `CircularProgressIndicator`| `CupertinoActivityIndicator`| `ProgressRing` | ❌ | `NaPlatformProgressIndicator` |
+| `Card` | `Container` (decorated) | `Card` | ❌ | `NaPlatformCard` |
+| `AlertDialog` | `CupertinoAlertDialog` | `ContentDialog` | ❌ | `NaPlatformAlertDialog` |
+| `BottomNavigationBar` | `CupertinoTabBar` | `NavigationView` | ❌ | `NaPlatformBottomNavigationBar` |
+| `DatePicker` | `CupertinoDatePicker` | `DatePicker` | ❌ | `NaPlatformDatePicker` |
+| `TimePicker` | `CupertinoTimerPicker` | `TimePicker` | ❌ | `NaPlatformTimePicker` |
+| `ListTile` | `CupertinoListTile` | `ListTile` | ❌ | `NaPlatformListTile` |
+| `Radio` | `CupertinoRadio` | `RadioButton` | ❌ | `NaPlatformRadio` |
+| `Dialog Action` | `CupertinoDialogAction` | `Button` (in dialog) | ❌ | `NaPlatformDialogAction` |
 
 
 ## How to use the library

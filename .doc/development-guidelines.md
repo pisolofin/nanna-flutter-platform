@@ -29,7 +29,7 @@ This document outlines the technical constraints, architectural decisions, and s
     *   Line length limits are flexible (can exceed 80 characters).
     *   **Named Parameters Alignment:** When passing multiple named parameters to functions or constructors (e.g., UI widgets), their colons (`:`) must be vertically aligned using spaces to improve readability.
 *   **Class Properties:** Explicitly use the `this.` prefix to refer to public class properties. Do **NOT** use `this.` for private variables or methods (those starting with `_`).
-*   **Comments & Code Structure:** All code comments must be written in English. Separate long code blocks with important comments explaining what will be done. If a function or widget is too long, extract parts into private functions.
+*   **Comments & Code Structure:** All code comments must be written in English. Always add comments to important classes and functions, regardless of whether they are public or private. Separate long code blocks with important comments explaining what will be done. If a function or widget is too long, extract parts into private functions.
 *   **No Magic Values:** Never use magic strings or magic numbers in the UI. Always use the localization system (`AppLocalizations`) for text and centralized constants (in `lib/constants/`) for padding, sizes, and colors.
 *   **Imports:**
     *   Default UI import should be `import 'package:flutter/widgets.dart';` (avoid `material.dart` or `cupertino.dart` unless strictly necessary).

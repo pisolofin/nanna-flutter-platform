@@ -35,7 +35,9 @@ class _MyAppState extends State<MyApp> {
 
   void _toggleUiType() {
     setState(() {
-      _currentUiType = _currentUiType == NaUiType.material ? NaUiType.cupertino : NaUiType.material;
+      _currentUiType = _currentUiType == NaUiType.material
+          ? NaUiType.cupertino
+          : NaUiType.material;
     });
   }
 
@@ -63,10 +65,7 @@ class _MyAppState extends State<MyApp> {
     // Wrap the app with NaUiTypeScope to propagate the selected UI type to all NaPlatform* widgets.
     return NaUiTypeScope(
       uiType: _currentUiType,
-      child: AppStateScope(
-        toggleUiType: _toggleUiType,
-        child: app,
-      ),
+      child: AppStateScope(toggleUiType: _toggleUiType, child: app),
     );
   }
 }
@@ -80,45 +79,25 @@ class ExampleHomePage extends StatelessWidget {
     final bool isMaterial = uiType == NaUiType.material;
 
     return NaPlatformScaffold(
-      appBar: NaPlatformAppBar(
-        title: const Text('Nanna Platform Example'),
-        actions: [
-          NaPlatformButton(
-            onPressed: AppStateScope.of(context).toggleUiType,
-            optionsBuilder: (BuildContext context, NaUiType uiType) {
-              if (uiType == NaUiType.material) {
-                // In Material, an IconButton inside the AppBar is usually preferred,
-                // but we use NaPlatformButton for demonstration.
-                return NaPlatformButtonOptionsMaterial(
-                  style: ElevatedButton.styleFrom(
-                    elevation: 0,
-                    backgroundColor: Colors.transparent,
-                    foregroundColor: Colors.white,
-                  ),
-                );
-              }
-              return NaPlatformButtonOptionsCupertino(
-                padding: EdgeInsets.zero,
-              );
-            },
-            child: Icon(isMaterial ? Icons.android : CupertinoIcons.device_phone_portrait),
-          )
-        ],
-      ),
+      appBar: NaPlatformAppBar(title: const Text('Nanna Platform Example')),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
               'Current UI Type: ${isMaterial ? 'Material' : 'Cupertino'}',
-              style: const TextStyle(fontSize: 20.0),
+              style: const TextStyle(
+                fontSize: 20.0,
+                fontWeight: FontWeight.bold,
+              ),
             ),
-            const SizedBox(height: 20.0),
+            const SizedBox(height: 30.0),
             NaPlatformButton(
-              onPressed: () {
-                // Do something
-              },
-              child: const Text('A Platform Button'),
+              onPressed: AppStateScope.of(context).toggleUiType,
+              child: Text(
+                'Switch to ${isMaterial ? 'Cupertino' : 'Material'}',
+                style: const TextStyle(fontSize: 16.0),
+              ),
             ),
           ],
         ),
