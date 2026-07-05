@@ -3,18 +3,17 @@ import 'package:flutter/material.dart';
 import 'package:nanna_flutter_platform/nanna_flutter_platform.dart';
 
 import '../main.dart';
+import '../widgets/example-alert-dialog.widget.dart';
+import '../widgets/example-card-list.widget.dart';
+import '../widgets/example-checkbox.widget.dart';
+import '../widgets/example-date-picker.widget.dart';
+import '../widgets/example-progress-indicator.widget.dart';
+import '../widgets/example-slider.widget.dart';
+import '../widgets/example-switch.widget.dart';
+import '../widgets/example-time-picker.widget.dart';
 
-class ExampleHomePage extends StatefulWidget {
+class ExampleHomePage extends StatelessWidget {
   const ExampleHomePage({super.key});
-
-  @override
-  State<ExampleHomePage> createState() => _ExampleHomePageState();
-}
-
-class _ExampleHomePageState extends State<ExampleHomePage> {
-  bool _switchValue = false;
-  bool _checkboxValue = false;
-  double _sliderValue = 0.5;
 
   @override
   Widget build(BuildContext context) {
@@ -49,66 +48,29 @@ class _ExampleHomePageState extends State<ExampleHomePage> {
                 ),
               ),
               const SizedBox(height: 40.0),
-              const Text('NaPlatformSwitch:'),
-              NaPlatformSwitch(
-                value: _switchValue,
-                onChanged: (bool value) {
-                  setState(() {
-                    _switchValue = value;
-                  });
-                },
-              ),
+              
+              const ExampleSwitchWidget(),
               const SizedBox(height: 20.0),
-              const Text('NaPlatformCheckbox:'),
-              NaPlatformCheckbox(
-                value: _checkboxValue,
-                onChanged: (bool? value) {
-                  setState(() {
-                    _checkboxValue = value ?? false;
-                  });
-                },
-              ),
+              
+              const ExampleCheckboxWidget(),
               const SizedBox(height: 20.0),
-              const Text('NaPlatformSlider:'),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 40.0),
-                child: NaPlatformSlider(
-                  value: _sliderValue,
-                  onChanged: (double value) {
-                    setState(() {
-                      _sliderValue = value;
-                    });
-                  },
-                ),
-              ),
+              
+              const ExampleSliderWidget(),
               const SizedBox(height: 20.0),
-              const Text('NaPlatformProgressIndicator:'),
-              const SizedBox(height: 10.0),
-              const NaPlatformProgressIndicator(),
+              
+              const ExampleProgressIndicatorWidget(),
               const SizedBox(height: 40.0),
-              const Text('NaPlatformCard e NaPlatformListTile:'),
-              Padding(
-                padding: const EdgeInsets.all(16.0),
-                child: NaPlatformCard(
-                  child: Column(
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      NaPlatformListTile(
-                        leading: const Icon(Icons.person),
-                        title: const Text('John Doe'),
-                        subtitle: const Text('Software Engineer'),
-                        hasChevron: true,
-                        onTap: () {},
-                      ),
-                      NaPlatformListTile(
-                        leading: const Icon(Icons.email),
-                        title: const Text('john.doe@example.com'),
-                        onTap: () {},
-                      ),
-                    ],
-                  ),
-                ),
-              ),
+              
+              const ExampleCardListWidget(),
+              const SizedBox(height: 40.0),
+              
+              const ExampleAlertDialogWidget(),
+              const SizedBox(height: 20.0),
+              
+              const ExampleDatePickerWidget(),
+              const SizedBox(height: 20.0),
+              
+              const ExampleTimePickerWidget(),
               const SizedBox(height: 40.0),
             ],
           ),

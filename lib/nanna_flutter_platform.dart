@@ -16,4 +16,8 @@ export 'src/widgets-flutter/platform-slider.widget.dart';
 export 'src/widgets-flutter/platform-progress-indicator.widget.dart';
 export 'src/widgets-flutter/platform-card.widget.dart';
 export 'src/widgets-flutter/platform-list-tile.widget.dart';
+export 'src/widgets-flutter/platform-alert-dialog.widget.dart';
+export 'src/widgets-flutter/platform-dialog-action.widget.dart';
+export 'src/widgets-flutter/platform-date-picker.widget.dart';
+export 'src/widgets-flutter/platform-time-picker.widget.dart';
 export 'src/exceptions/ui-type-already-registered.exception.dart';

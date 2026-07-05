@@ -1,0 +1,37 @@
+import 'package:flutter/material.dart';
+import 'package:nanna_flutter_platform/nanna_flutter_platform.dart';
+
+class ExampleCardListWidget extends StatelessWidget {
+  const ExampleCardListWidget({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        const Text('NaPlatformCard e NaPlatformListTile:'),
+        Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: NaPlatformCard(
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                NaPlatformListTile(
+                  leading: const Icon(Icons.person),
+                  title: const Text('John Doe'),
+                  subtitle: const Text('Software Engineer'),
+                  hasChevron: true,
+                  onTap: () {},
+                ),
+                NaPlatformListTile(
+                  leading: const Icon(Icons.email),
+                  title: const Text('john.doe@example.com'),
+                  onTap: () {},
+                ),
+              ],
+            ),
+          ),
+        ),
+      ],
+    );
+  }
+}
