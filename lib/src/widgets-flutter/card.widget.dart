@@ -50,7 +50,7 @@ class NaCardOptionsCupertino extends NaCardOptions {
   });
 }
 
-/// A generic Card widget that automatically renders a [Card] on Material 
+/// A generic Card widget that automatically renders a [Card] on Material
 /// and a decorated [Container] on Cupertino.
 class NaCard extends NaWidget {
   final Widget child;
@@ -66,40 +66,44 @@ class NaCard extends NaWidget {
 
   @override
   Widget renderForUIType(BuildContext context, NaUiType uiType) {
-    final NaCardOptions? options = optionsBuilder?.call(
-      context,
-      uiType,
-    );
+    final NaCardOptions? options = optionsBuilder?.call(context, uiType);
 
     if (uiType == NaUiType.cupertino) {
-      final NaCardOptionsCupertino? cupertinoOptions = options is NaCardOptionsCupertino ? options : null;
+      final NaCardOptionsCupertino? cupertinoOptions =
+          options is NaCardOptionsCupertino ? options : null;
       return Container(
-        margin : cupertinoOptions?.margin ?? const EdgeInsets.all(4.0),
+        margin: cupertinoOptions?.margin ?? const EdgeInsets.all(4.0),
         padding: cupertinoOptions?.padding,
         decoration: BoxDecoration(
-          color       : cupertinoOptions?.color ?? CupertinoTheme.of(context).barBackgroundColor,
-          borderRadius: cupertinoOptions?.borderRadius ?? BorderRadius.circular(10.0),
-          border      : cupertinoOptions?.border ?? Border.all(
-            color: CupertinoColors.systemGrey4.resolveFrom(context),
-            width: 0.5,
-          ),
+          color:
+              cupertinoOptions?.color ??
+              CupertinoTheme.of(context).barBackgroundColor,
+          borderRadius:
+              cupertinoOptions?.borderRadius ?? BorderRadius.circular(10.0),
+          border:
+              cupertinoOptions?.border ??
+              Border.all(
+                color: CupertinoColors.systemGrey4.resolveFrom(context),
+                width: 0.5,
+              ),
         ),
-        child  : this.child,
+        child: this.child,
       );
     }
 
-    final NaCardOptionsMaterial? materialOptions = options is NaCardOptionsMaterial ? options : null;
+    final NaCardOptionsMaterial? materialOptions =
+        options is NaCardOptionsMaterial ? options : null;
     return Card(
-      color             : materialOptions?.color,
-      shadowColor       : materialOptions?.shadowColor,
-      surfaceTintColor  : materialOptions?.surfaceTintColor,
-      elevation         : materialOptions?.elevation,
-      shape             : materialOptions?.shape,
+      color: materialOptions?.color,
+      shadowColor: materialOptions?.shadowColor,
+      surfaceTintColor: materialOptions?.surfaceTintColor,
+      elevation: materialOptions?.elevation,
+      shape: materialOptions?.shape,
       borderOnForeground: materialOptions?.borderOnForeground ?? true,
-      margin            : materialOptions?.margin,
-      clipBehavior      : materialOptions?.clipBehavior,
-      semanticContainer : materialOptions?.semanticContainer ?? true,
-      child             : this.child,
+      margin: materialOptions?.margin,
+      clipBehavior: materialOptions?.clipBehavior,
+      semanticContainer: materialOptions?.semanticContainer ?? true,
+      child: this.child,
     );
   }
 }

@@ -38,6 +38,7 @@ class NaScaffold extends NaWidget {
   final NaAppBar? appBar;
   final Widget body;
   final Color? backgroundColor;
+  final Widget? bottomNavigationBar;
 
   final NaWidgetOptionsBuilder<NaScaffoldOptions>? optionsBuilder;
 
@@ -46,26 +47,35 @@ class NaScaffold extends NaWidget {
     this.appBar,
     required this.body,
     this.backgroundColor,
+    this.bottomNavigationBar,
     this.optionsBuilder,
     super.uiType,
   });
 
   @override
   Widget renderForUIType(BuildContext context, NaUiType uiType) {
-    final NaScaffoldOptions? options = optionsBuilder?.call(
-      context,
-      uiType,
-    );
+    final NaScaffoldOptions? options = optionsBuilder?.call(context, uiType);
 
     if (uiType == NaUiType.cupertino) {
       final NaScaffoldOptionsCupertino? cupertinoOptions =
           options is NaScaffoldOptionsCupertino ? options : null;
+
+      Widget content = this.body;
+      if (this.bottomNavigationBar != null) {
+        content = Column(
+          children: [
+            Expanded(child: content),
+            this.bottomNavigationBar!,
+          ],
+        );
+      }
+
       return CupertinoPageScaffold(
         navigationBar: this.appBar,
         backgroundColor: this.backgroundColor,
         resizeToAvoidBottomInset:
             cupertinoOptions?.resizeToAvoidBottomInset ?? true,
-        child: this.body,
+        child: content,
       );
     }
 
@@ -76,7 +86,8 @@ class NaScaffold extends NaWidget {
       body: this.body,
       backgroundColor: this.backgroundColor,
       floatingActionButton: materialOptions?.floatingActionButton,
-      bottomNavigationBar: materialOptions?.bottomNavigationBar,
+      bottomNavigationBar:
+          materialOptions?.bottomNavigationBar ?? this.bottomNavigationBar,
       drawer: materialOptions?.drawer,
       resizeToAvoidBottomInset: materialOptions?.resizeToAvoidBottomInset,
     );

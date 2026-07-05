@@ -58,7 +58,7 @@ class _MyAppState extends State<MyApp> {
                 theme: const CupertinoThemeData(brightness: Brightness.light),
               );
             }
-            
+
             return NaAppOptionsMaterial(
               theme: ThemeData(
                 colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),

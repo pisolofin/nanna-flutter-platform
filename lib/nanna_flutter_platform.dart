@@ -20,4 +20,7 @@ export 'src/widgets-flutter/alert-dialog.widget.dart';
 export 'src/widgets-flutter/dialog-action.widget.dart';
 export 'src/widgets-flutter/date-picker.widget.dart';
 export 'src/widgets-flutter/time-picker.widget.dart';
+export 'src/widgets-flutter/bottom-navigation-bar.widget.dart';
+export 'src/widgets-flutter/radio.widget.dart';
+export 'src/widgets-flutter/text-field.widget.dart';
 export 'src/exceptions/ui-type-already-registered.exception.dart';

@@ -20,7 +20,9 @@ class ExampleAlertDialogWidget extends StatelessWidget {
               onPressed: () => Navigator.pop(context),
               optionsBuilder: (context, uiType) {
                 if (uiType == NaUiType.cupertino) {
-                  return NaDialogActionOptionsCupertino(isDestructiveAction: true);
+                  return NaDialogActionOptionsCupertino(
+                    isDestructiveAction: true,
+                  );
                 }
                 return null;
               },

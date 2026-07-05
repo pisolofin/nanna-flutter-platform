@@ -3,10 +3,10 @@ import 'package:flutter/widgets.dart';
 import '../models/ui-type.model.dart';
 
 /// Injects the [NaUiType] into the widget tree.
-/// 
+///
 /// All `NaWidget` descendants within this scope will automatically
 /// render themselves according to the specified `uiType`.
-/// 
+///
 /// Example usage:
 /// ```dart
 /// NaUiTypeScope(

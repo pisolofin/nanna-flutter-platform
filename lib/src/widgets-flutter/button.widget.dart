@@ -52,7 +52,7 @@ class NaButtonOptionsCupertino extends NaButtonOptions {
   });
 }
 
-/// A generic Button widget that automatically renders an [ElevatedButton] on Material 
+/// A generic Button widget that automatically renders an [ElevatedButton] on Material
 /// and a [CupertinoButton] on Cupertino.
 class NaButton extends NaWidget {
   final Widget child;
@@ -72,40 +72,48 @@ class NaButton extends NaWidget {
   @override
   Widget renderForUIType(BuildContext context, NaUiType uiType) {
     // 1. Resolve options via the builder provided by the user (if present)
-    final NaButtonOptions? options = optionsBuilder?.call(
-      context,
-      uiType,
-    );
+    final NaButtonOptions? options = optionsBuilder?.call(context, uiType);
 
     // 2. Check type and render accordingly
     if (uiType == NaUiType.cupertino) {
-      final NaButtonOptionsCupertino? cupertinoOptions = options is NaButtonOptionsCupertino ? options : null;
+      final NaButtonOptionsCupertino? cupertinoOptions =
+          options is NaButtonOptionsCupertino ? options : null;
       return CupertinoButton(
-        onPressed     : this.onPressed,
-        padding       : cupertinoOptions?.padding,
-        color         : cupertinoOptions?.color,
-        disabledColor : cupertinoOptions?.disabledColor ?? CupertinoColors.quaternarySystemFill,
-        minimumSize   : cupertinoOptions?.minimumSize ?? const Size(kMinInteractiveDimensionCupertino, kMinInteractiveDimensionCupertino),
+        onPressed: this.onPressed,
+        padding: cupertinoOptions?.padding,
+        color: cupertinoOptions?.color,
+        disabledColor:
+            cupertinoOptions?.disabledColor ??
+            CupertinoColors.quaternarySystemFill,
+        minimumSize:
+            cupertinoOptions?.minimumSize ??
+            const Size(
+              kMinInteractiveDimensionCupertino,
+              kMinInteractiveDimensionCupertino,
+            ),
         pressedOpacity: cupertinoOptions?.pressedOpacity ?? 0.4,
-        borderRadius  : cupertinoOptions?.borderRadius ?? const BorderRadius.all(Radius.circular(8.0)),
-        alignment     : cupertinoOptions?.alignment ?? Alignment.center,
-        child         : this.child,
+        borderRadius:
+            cupertinoOptions?.borderRadius ??
+            const BorderRadius.all(Radius.circular(8.0)),
+        alignment: cupertinoOptions?.alignment ?? Alignment.center,
+        child: this.child,
       );
     }
 
     // Default fallback to Material
-    final NaButtonOptionsMaterial? materialOptions = options is NaButtonOptionsMaterial ? options : null;
+    final NaButtonOptionsMaterial? materialOptions =
+        options is NaButtonOptionsMaterial ? options : null;
     return ElevatedButton(
-      onPressed       : this.onPressed,
-      onLongPress     : materialOptions?.onLongPress,
-      onHover         : materialOptions?.onHover,
-      onFocusChange   : materialOptions?.onFocusChange,
-      style           : materialOptions?.style,
-      focusNode       : materialOptions?.focusNode,
-      autofocus       : materialOptions?.autofocus ?? false,
-      clipBehavior    : materialOptions?.clipBehavior ?? Clip.none,
+      onPressed: this.onPressed,
+      onLongPress: materialOptions?.onLongPress,
+      onHover: materialOptions?.onHover,
+      onFocusChange: materialOptions?.onFocusChange,
+      style: materialOptions?.style,
+      focusNode: materialOptions?.focusNode,
+      autofocus: materialOptions?.autofocus ?? false,
+      clipBehavior: materialOptions?.clipBehavior ?? Clip.none,
       statesController: materialOptions?.statesController,
-      child           : this.child,
+      child: this.child,
     );
   }
 }

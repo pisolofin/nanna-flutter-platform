@@ -70,7 +70,7 @@ class NaIconButtonOptionsCupertino extends NaIconButtonOptions {
   });
 }
 
-/// A generic IconButton widget that automatically renders an [IconButton] on Material 
+/// A generic IconButton widget that automatically renders an [IconButton] on Material
 /// and a [CupertinoButton] on Cupertino.
 class NaIconButton extends NaWidget {
   final Widget icon;
@@ -88,47 +88,55 @@ class NaIconButton extends NaWidget {
 
   @override
   Widget renderForUIType(BuildContext context, NaUiType uiType) {
-    final NaIconButtonOptions? options = optionsBuilder?.call(
-      context,
-      uiType,
-    );
+    final NaIconButtonOptions? options = optionsBuilder?.call(context, uiType);
 
     if (uiType == NaUiType.cupertino) {
-      final NaIconButtonOptionsCupertino? cupertinoOptions = options is NaIconButtonOptionsCupertino ? options : null;
+      final NaIconButtonOptionsCupertino? cupertinoOptions =
+          options is NaIconButtonOptionsCupertino ? options : null;
       return CupertinoButton(
-        onPressed     : this.onPressed,
-        padding       : cupertinoOptions?.padding ?? EdgeInsets.zero,
-        color         : cupertinoOptions?.color,
-        disabledColor : cupertinoOptions?.disabledColor ?? CupertinoColors.quaternarySystemFill,
-        minimumSize   : cupertinoOptions?.minimumSize ?? const Size(kMinInteractiveDimensionCupertino, kMinInteractiveDimensionCupertino),
+        onPressed: this.onPressed,
+        padding: cupertinoOptions?.padding ?? EdgeInsets.zero,
+        color: cupertinoOptions?.color,
+        disabledColor:
+            cupertinoOptions?.disabledColor ??
+            CupertinoColors.quaternarySystemFill,
+        minimumSize:
+            cupertinoOptions?.minimumSize ??
+            const Size(
+              kMinInteractiveDimensionCupertino,
+              kMinInteractiveDimensionCupertino,
+            ),
         pressedOpacity: cupertinoOptions?.pressedOpacity ?? 0.4,
-        borderRadius  : cupertinoOptions?.borderRadius ?? const BorderRadius.all(Radius.circular(8.0)),
-        alignment     : cupertinoOptions?.alignment ?? Alignment.center,
-        child         : this.icon,
+        borderRadius:
+            cupertinoOptions?.borderRadius ??
+            const BorderRadius.all(Radius.circular(8.0)),
+        alignment: cupertinoOptions?.alignment ?? Alignment.center,
+        child: this.icon,
       );
     }
 
-    final NaIconButtonOptionsMaterial? materialOptions = options is NaIconButtonOptionsMaterial ? options : null;
+    final NaIconButtonOptionsMaterial? materialOptions =
+        options is NaIconButtonOptionsMaterial ? options : null;
     return IconButton(
-      onPressed     : this.onPressed,
-      icon          : this.icon,
-      iconSize      : materialOptions?.iconSize,
-      visualDensity : materialOptions?.visualDensity,
-      padding       : materialOptions?.padding,
-      alignment     : materialOptions?.alignment,
-      splashRadius  : materialOptions?.splashRadius,
-      color         : materialOptions?.color,
-      focusColor    : materialOptions?.focusColor,
-      hoverColor    : materialOptions?.hoverColor,
+      onPressed: this.onPressed,
+      icon: this.icon,
+      iconSize: materialOptions?.iconSize,
+      visualDensity: materialOptions?.visualDensity,
+      padding: materialOptions?.padding,
+      alignment: materialOptions?.alignment,
+      splashRadius: materialOptions?.splashRadius,
+      color: materialOptions?.color,
+      focusColor: materialOptions?.focusColor,
+      hoverColor: materialOptions?.hoverColor,
       highlightColor: materialOptions?.highlightColor,
-      splashColor   : materialOptions?.splashColor,
-      disabledColor : materialOptions?.disabledColor,
-      mouseCursor   : materialOptions?.mouseCursor,
-      focusNode     : materialOptions?.focusNode,
-      autofocus     : materialOptions?.autofocus ?? false,
-      tooltip       : materialOptions?.tooltip,
-      constraints   : materialOptions?.constraints,
-      style         : materialOptions?.style,
+      splashColor: materialOptions?.splashColor,
+      disabledColor: materialOptions?.disabledColor,
+      mouseCursor: materialOptions?.mouseCursor,
+      focusNode: materialOptions?.focusNode,
+      autofocus: materialOptions?.autofocus ?? false,
+      tooltip: materialOptions?.tooltip,
+      constraints: materialOptions?.constraints,
+      style: materialOptions?.style,
     );
   }
 }

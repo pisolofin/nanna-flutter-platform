@@ -30,10 +30,7 @@ class ExampleDatePickerWidget extends StatelessWidget {
             builder: (context) => Container(
               height: 250,
               color: CupertinoColors.systemBackground.resolveFrom(context),
-              child: SafeArea(
-                top: false,
-                child: picker,
-              ),
+              child: SafeArea(top: false, child: picker),
             ),
           );
         }

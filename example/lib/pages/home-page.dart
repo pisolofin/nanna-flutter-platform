@@ -4,12 +4,15 @@ import 'package:nanna_flutter_platform/nanna_flutter_platform.dart';
 
 import '../main.dart';
 import '../widgets/example-alert-dialog.widget.dart';
+import '../widgets/example-bottom-navigation-bar.widget.dart';
 import '../widgets/example-card-list.widget.dart';
 import '../widgets/example-checkbox.widget.dart';
 import '../widgets/example-date-picker.widget.dart';
 import '../widgets/example-progress-indicator.widget.dart';
+import '../widgets/example-radio.widget.dart';
 import '../widgets/example-slider.widget.dart';
 import '../widgets/example-switch.widget.dart';
+import '../widgets/example-text-field.widget.dart';
 import '../widgets/example-time-picker.widget.dart';
 
 class ExampleHomePage extends StatelessWidget {
@@ -30,6 +33,7 @@ class ExampleHomePage extends StatelessWidget {
           ),
         ],
       ),
+      bottomNavigationBar: const ExampleBottomNavigationBarWidget(),
       body: Center(
         child: SingleChildScrollView(
           child: Column(
@@ -37,7 +41,10 @@ class ExampleHomePage extends StatelessWidget {
             children: [
               Text(
                 'Current UI Type: ${isMaterial ? 'Material' : 'Cupertino'}',
-                style: const TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),
+                style: const TextStyle(
+                  fontSize: 20.0,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
               const SizedBox(height: 30.0),
               NaButton(
@@ -48,28 +55,34 @@ class ExampleHomePage extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 40.0),
-              
+
               const ExampleSwitchWidget(),
               const SizedBox(height: 20.0),
-              
+
               const ExampleCheckboxWidget(),
               const SizedBox(height: 20.0),
-              
+
+              const ExampleRadioWidget(),
+              const SizedBox(height: 20.0),
+
+              const ExampleTextFieldWidget(),
+              const SizedBox(height: 20.0),
+
               const ExampleSliderWidget(),
               const SizedBox(height: 20.0),
-              
+
               const ExampleProgressIndicatorWidget(),
               const SizedBox(height: 40.0),
-              
+
               const ExampleCardListWidget(),
               const SizedBox(height: 40.0),
-              
+
               const ExampleAlertDialogWidget(),
               const SizedBox(height: 20.0),
-              
+
               const ExampleDatePickerWidget(),
               const SizedBox(height: 20.0),
-              
+
               const ExampleTimePickerWidget(),
               const SizedBox(height: 40.0),
             ],

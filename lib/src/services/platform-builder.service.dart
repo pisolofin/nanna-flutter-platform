@@ -4,8 +4,7 @@ import '../models/ui-type.model.dart';
 import '../widgets/na-widget.widget.dart';
 
 /// Typdef for a generic platform widget builder
-typedef NaWidgetBuilder =
-    Widget Function(BuildContext context, dynamic widget);
+typedef NaWidgetBuilder = Widget Function(BuildContext context, dynamic widget);
 
 final Map<Type, Map<NaUiType, NaWidgetBuilder>> _widgetBuilders = {};
 

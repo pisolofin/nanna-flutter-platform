@@ -71,7 +71,7 @@ class NaSwitchOptionsCupertino extends NaSwitchOptions {
   });
 }
 
-/// A generic Switch widget that automatically renders a [Switch] on Material 
+/// A generic Switch widget that automatically renders a [Switch] on Material
 /// and a [CupertinoSwitch] on Cupertino.
 class NaSwitch extends NaWidget {
   final bool value;
@@ -89,47 +89,47 @@ class NaSwitch extends NaWidget {
 
   @override
   Widget renderForUIType(BuildContext context, NaUiType uiType) {
-    final NaSwitchOptions? options = optionsBuilder?.call(
-      context,
-      uiType,
-    );
+    final NaSwitchOptions? options = optionsBuilder?.call(context, uiType);
 
     if (uiType == NaUiType.cupertino) {
-      final NaSwitchOptionsCupertino? cupertinoOptions = options is NaSwitchOptionsCupertino ? options : null;
+      final NaSwitchOptionsCupertino? cupertinoOptions =
+          options is NaSwitchOptionsCupertino ? options : null;
       return CupertinoSwitch(
-        value      : this.value,
-        onChanged  : this.onChanged,
-        activeTrackColor  : cupertinoOptions?.activeTrackColor,
+        value: this.value,
+        onChanged: this.onChanged,
+        activeTrackColor: cupertinoOptions?.activeTrackColor,
         inactiveTrackColor: cupertinoOptions?.inactiveTrackColor,
-        thumbColor        : cupertinoOptions?.thumbColor,
-        applyTheme : cupertinoOptions?.applyTheme,
-        focusColor : cupertinoOptions?.focusColor,
-        focusNode  : cupertinoOptions?.focusNode,
-        autofocus  : cupertinoOptions?.autofocus ?? false,
+        thumbColor: cupertinoOptions?.thumbColor,
+        applyTheme: cupertinoOptions?.applyTheme,
+        focusColor: cupertinoOptions?.focusColor,
+        focusNode: cupertinoOptions?.focusNode,
+        autofocus: cupertinoOptions?.autofocus ?? false,
       );
     }
 
-    final NaSwitchOptionsMaterial? materialOptions = options is NaSwitchOptionsMaterial ? options : null;
+    final NaSwitchOptionsMaterial? materialOptions =
+        options is NaSwitchOptionsMaterial ? options : null;
     return Switch(
-      value             : this.value,
-      onChanged         : this.onChanged,
-      activeThumbColor  : materialOptions?.activeThumbColor,
-      activeTrackColor  : materialOptions?.activeTrackColor,
+      value: this.value,
+      onChanged: this.onChanged,
+      activeThumbColor: materialOptions?.activeThumbColor,
+      activeTrackColor: materialOptions?.activeTrackColor,
       inactiveThumbColor: materialOptions?.inactiveThumbColor,
       inactiveTrackColor: materialOptions?.inactiveTrackColor,
-      activeThumbImage  : materialOptions?.activeThumbImage,
+      activeThumbImage: materialOptions?.activeThumbImage,
       inactiveThumbImage: materialOptions?.inactiveThumbImage,
-      thumbColor        : materialOptions?.thumbColor,
-      trackColor        : materialOptions?.trackColor,
-      thumbIcon         : materialOptions?.thumbIcon,
-      dragStartBehavior : materialOptions?.dragStartBehavior ?? DragStartBehavior.start,
-      mouseCursor       : materialOptions?.mouseCursor,
-      focusColor        : materialOptions?.focusColor,
-      hoverColor        : materialOptions?.hoverColor,
-      overlayColor      : materialOptions?.overlayColor,
-      splashRadius      : materialOptions?.splashRadius,
-      focusNode         : materialOptions?.focusNode,
-      autofocus         : materialOptions?.autofocus ?? false,
+      thumbColor: materialOptions?.thumbColor,
+      trackColor: materialOptions?.trackColor,
+      thumbIcon: materialOptions?.thumbIcon,
+      dragStartBehavior:
+          materialOptions?.dragStartBehavior ?? DragStartBehavior.start,
+      mouseCursor: materialOptions?.mouseCursor,
+      focusColor: materialOptions?.focusColor,
+      hoverColor: materialOptions?.hoverColor,
+      overlayColor: materialOptions?.overlayColor,
+      splashRadius: materialOptions?.splashRadius,
+      focusNode: materialOptions?.focusNode,
+      autofocus: materialOptions?.autofocus ?? false,
     );
   }
 }

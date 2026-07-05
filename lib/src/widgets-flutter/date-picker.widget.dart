@@ -14,7 +14,7 @@ class NaDatePickerOptionsMaterial extends NaDatePickerOptions {
   final ValueChanged<DateTime>? onDisplayedMonthChanged;
   final DatePickerMode? initialCalendarMode;
   final SelectableDayPredicate? selectableDayPredicate;
-  
+
   NaDatePickerOptionsMaterial({
     this.currentDate,
     this.onDisplayedMonthChanged,
@@ -30,7 +30,7 @@ class NaDatePickerOptionsCupertino extends NaDatePickerOptions {
   final Color? backgroundColor;
   final bool? use24hFormat;
   final int? minuteInterval;
-  
+
   NaDatePickerOptionsCupertino({
     this.itemExtent,
     this.selectionOverlay,
@@ -40,7 +40,7 @@ class NaDatePickerOptionsCupertino extends NaDatePickerOptions {
   });
 }
 
-/// A generic DatePicker widget that automatically renders a [CalendarDatePicker] on Material 
+/// A generic DatePicker widget that automatically renders a [CalendarDatePicker] on Material
 /// and a [CupertinoDatePicker] on Cupertino.
 class NaDatePicker extends NaWidget {
   final DateTime initialDate;
@@ -62,39 +62,39 @@ class NaDatePicker extends NaWidget {
 
   @override
   Widget renderForUIType(BuildContext context, NaUiType uiType) {
-    final NaDatePickerOptions? options = optionsBuilder?.call(
-      context,
-      uiType,
-    );
+    final NaDatePickerOptions? options = optionsBuilder?.call(context, uiType);
 
     if (uiType == NaUiType.cupertino) {
-      final NaDatePickerOptionsCupertino? cupertinoOptions = options is NaDatePickerOptionsCupertino ? options : null;
+      final NaDatePickerOptionsCupertino? cupertinoOptions =
+          options is NaDatePickerOptionsCupertino ? options : null;
       return SizedBox(
         height: 216.0,
         child: CupertinoDatePicker(
-          mode              : CupertinoDatePickerMode.date,
-          initialDateTime   : this.initialDate,
-          minimumDate       : this.firstDate,
-          maximumDate       : this.lastDate,
-          onDateTimeChanged : this.onDateChanged,
-          itemExtent        : cupertinoOptions?.itemExtent ?? 32.0,
-          use24hFormat      : cupertinoOptions?.use24hFormat ?? false,
-          minuteInterval    : cupertinoOptions?.minuteInterval ?? 1,
-          backgroundColor   : cupertinoOptions?.backgroundColor,
+          mode: CupertinoDatePickerMode.date,
+          initialDateTime: this.initialDate,
+          minimumDate: this.firstDate,
+          maximumDate: this.lastDate,
+          onDateTimeChanged: this.onDateChanged,
+          itemExtent: cupertinoOptions?.itemExtent ?? 32.0,
+          use24hFormat: cupertinoOptions?.use24hFormat ?? false,
+          minuteInterval: cupertinoOptions?.minuteInterval ?? 1,
+          backgroundColor: cupertinoOptions?.backgroundColor,
         ),
       );
     }
 
-    final NaDatePickerOptionsMaterial? materialOptions = options is NaDatePickerOptionsMaterial ? options : null;
+    final NaDatePickerOptionsMaterial? materialOptions =
+        options is NaDatePickerOptionsMaterial ? options : null;
     return CalendarDatePicker(
-      initialDate            : this.initialDate,
-      firstDate              : this.firstDate,
-      lastDate               : this.lastDate,
-      onDateChanged          : this.onDateChanged,
-      currentDate            : materialOptions?.currentDate,
+      initialDate: this.initialDate,
+      firstDate: this.firstDate,
+      lastDate: this.lastDate,
+      onDateChanged: this.onDateChanged,
+      currentDate: materialOptions?.currentDate,
       onDisplayedMonthChanged: materialOptions?.onDisplayedMonthChanged,
-      initialCalendarMode    : materialOptions?.initialCalendarMode ?? DatePickerMode.day,
-      selectableDayPredicate : materialOptions?.selectableDayPredicate,
+      initialCalendarMode:
+          materialOptions?.initialCalendarMode ?? DatePickerMode.day,
+      selectableDayPredicate: materialOptions?.selectableDayPredicate,
     );
   }
 }

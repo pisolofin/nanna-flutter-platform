@@ -20,12 +20,13 @@ Instead of writing platform-conditional code (`if (Platform.isIOS) ...`) on ever
 | `CircularProgressIndicator`| `CupertinoActivityIndicator`| ✅ | `NaProgressIndicator` |
 | `Card` | `Container` (decorated) | ✅ | `NaCard` |
 | `AlertDialog` | `CupertinoAlertDialog` | ✅ | `NaAlertDialog` |
-| `BottomNavigationBar` | `CupertinoTabBar` | ❌ | `NaBottomNavigationBar` |
+| `BottomNavigationBar` | `CupertinoTabBar` | ✅ | `NaBottomNavigationBar` |
 | `DatePicker` | `CupertinoDatePicker` | ✅ | `NaDatePicker` |
 | `TimePicker` | `CupertinoTimerPicker` | ✅ | `NaTimePicker` |
 | `ListTile` | `CupertinoListTile` | ✅ | `NaListTile` |
-| `Radio` | `CupertinoRadio` | ❌ | `NaRadio` |
+| `Radio` | `CupertinoRadio` | ✅ | `NaRadio` |
 | `Dialog Action` | `CupertinoDialogAction` | ✅ | `NaDialogAction` |
+| `TextField` | `CupertinoTextField` | ✅ | `NaTextField` |
 
 
 ## How to use the library
