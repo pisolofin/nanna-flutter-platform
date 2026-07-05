@@ -79,42 +79,46 @@ class NaRadio<T> extends NaWidget {
     final NaRadioOptions? options = optionsBuilder?.call(context, uiType);
 
     if (uiType == NaUiType.cupertino) {
-      final NaRadioOptionsCupertino? cupertinoOptions =
-          options is NaRadioOptionsCupertino ? options : null;
+      final NaRadioOptionsCupertino? cupertinoOptions = options is NaRadioOptionsCupertino
+        ? options
+        : null
+      ;
       return CupertinoRadio<T>(
         value: this.value,
         // ignore: deprecated_member_use
         groupValue: this.groupValue,
         // ignore: deprecated_member_use
-        onChanged: this.onChanged,
-        activeColor: cupertinoOptions?.activeColor,
+        onChanged    : this.onChanged,
+        activeColor  : cupertinoOptions?.activeColor,
         inactiveColor: cupertinoOptions?.inactiveColor,
-        fillColor: cupertinoOptions?.fillColor,
-        focusColor: cupertinoOptions?.focusColor,
-        focusNode: cupertinoOptions?.focusNode,
-        autofocus: cupertinoOptions?.autofocus ?? false,
-        toggleable: cupertinoOptions?.toggleable ?? false,
+        fillColor    : cupertinoOptions?.fillColor,
+        focusColor   : cupertinoOptions?.focusColor,
+        focusNode    : cupertinoOptions?.focusNode,
+        autofocus    : cupertinoOptions?.autofocus ?? false,
+        toggleable   : cupertinoOptions?.toggleable ?? false,
       );
     }
 
-    final NaRadioOptionsMaterial? materialOptions =
-        options is NaRadioOptionsMaterial ? options : null;
+    final NaRadioOptionsMaterial? materialOptions = options is NaRadioOptionsMaterial
+      ? options
+      : null
+    ;
     return Radio<T>(
       value: this.value,
       // ignore: deprecated_member_use
       groupValue: this.groupValue,
       // ignore: deprecated_member_use
-      onChanged: this.onChanged,
-      mouseCursor: materialOptions?.mouseCursor,
-      toggleable: materialOptions?.toggleable ?? false,
-      activeColor: materialOptions?.activeColor,
-      fillColor: materialOptions?.fillColor,
-      focusColor: materialOptions?.focusColor,
-      hoverColor: materialOptions?.hoverColor,
+      onChanged   : this.onChanged,
+      mouseCursor : materialOptions?.mouseCursor,
+      toggleable  : materialOptions?.toggleable ?? false,
+      activeColor : materialOptions?.activeColor,
+      fillColor   : materialOptions?.fillColor,
+      focusColor  : materialOptions?.focusColor,
+      hoverColor  : materialOptions?.hoverColor,
       overlayColor: materialOptions?.overlayColor,
       splashRadius: materialOptions?.splashRadius,
-      focusNode: materialOptions?.focusNode,
-      autofocus: materialOptions?.autofocus ?? false,
+      focusNode   : materialOptions?.focusNode,
+      autofocus   : materialOptions?.autofocus ?? false,
     );
   }
 }

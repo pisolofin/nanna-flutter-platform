@@ -23,8 +23,11 @@ class _ExampleBottomNavigationBarWidgetState
         });
       },
       items: const [
-        BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
-        BottomNavigationBarItem(icon: Icon(Icons.settings), label: 'Settings'),
+        BottomNavigationBarItem(icon: NaIcon(NaIcons.home), label: 'Home'),
+        BottomNavigationBarItem(
+          icon: NaIcon(NaIcons.settings),
+          label: 'Settings',
+        ),
       ],
     );
   }

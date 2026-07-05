@@ -154,103 +154,107 @@ class NaTextField extends NaWidget {
     final NaTextFieldOptions? options = optionsBuilder?.call(context, uiType);
 
     if (uiType == NaUiType.cupertino) {
-      final NaTextFieldOptionsCupertino? cupertinoOptions =
-          options is NaTextFieldOptionsCupertino ? options : null;
+      final NaTextFieldOptionsCupertino? cupertinoOptions = options is NaTextFieldOptionsCupertino
+        ? options
+        : null
+      ;
       return CupertinoTextField(
-        controller: this.controller,
-        focusNode: this.focusNode,
-        keyboardType: this.keyboardType,
-        textInputAction: this.textInputAction,
+        controller        : this.controller,
+        focusNode         : this.focusNode,
+        keyboardType      : this.keyboardType,
+        textInputAction   : this.textInputAction,
         textCapitalization: this.textCapitalization,
-        style: this.style,
-        textAlign: this.textAlign,
-        autofocus: this.autofocus,
-        readOnly: this.readOnly,
-        showCursor: cupertinoOptions?.showCursor ?? this.showCursor,
-        obscureText: cupertinoOptions?.obscureText ?? this.obscureText,
-        autocorrect: this.autocorrect,
-        enableSuggestions: this.enableSuggestions,
-        maxLines: this.maxLines,
-        minLines: this.minLines,
-        expands: this.expands,
-        maxLength: this.maxLength,
-        onChanged: this.onChanged,
-        onEditingComplete: this.onEditingComplete,
-        onSubmitted: this.onSubmitted,
-        inputFormatters: this.inputFormatters,
-        enabled: this.enabled ?? true,
+        style             : this.style,
+        textAlign         : this.textAlign,
+        autofocus         : this.autofocus,
+        readOnly          : this.readOnly,
+        showCursor        : cupertinoOptions?.showCursor ?? this.showCursor,
+        obscureText       : cupertinoOptions?.obscureText ?? this.obscureText,
+        autocorrect       : this.autocorrect,
+        enableSuggestions : this.enableSuggestions,
+        maxLines          : this.maxLines,
+        minLines          : this.minLines,
+        expands           : this.expands,
+        maxLength         : this.maxLength,
+        onChanged         : this.onChanged,
+        onEditingComplete : this.onEditingComplete,
+        onSubmitted       : this.onSubmitted,
+        inputFormatters   : this.inputFormatters,
+        enabled           : this.enabled ?? true,
         keyboardAppearance: this.keyboardAppearance,
 
         // Cupertino specific
         decoration: cupertinoOptions?.decoration,
-        padding: cupertinoOptions?.padding ?? const EdgeInsets.all(6.0),
-        prefix: cupertinoOptions?.prefix,
+        padding   : cupertinoOptions?.padding ?? const EdgeInsets.all(6.0),
+        prefix    : cupertinoOptions?.prefix,
         prefixMode:
             cupertinoOptions?.prefixMode ?? OverlayVisibilityMode.always,
-        suffix: cupertinoOptions?.suffix,
+        suffix    : cupertinoOptions?.suffix,
         suffixMode:
             cupertinoOptions?.suffixMode ?? OverlayVisibilityMode.always,
         clearButtonMode:
             cupertinoOptions?.clearButtonMode ?? OverlayVisibilityMode.never,
-        placeholder: cupertinoOptions?.placeholder,
+        placeholder     : cupertinoOptions?.placeholder,
         placeholderStyle:
             cupertinoOptions?.placeholderStyle ??
             const TextStyle(
               fontWeight: FontWeight.w400,
-              color: CupertinoColors.placeholderText,
+              color     : CupertinoColors.placeholderText,
             ),
         obscuringCharacter: cupertinoOptions?.obscuringCharacter ?? '•',
-        cursorColor: cupertinoOptions?.cursorColor,
-        cursorHeight: cupertinoOptions?.cursorHeight,
-        cursorWidth: cupertinoOptions?.cursorWidth ?? 2.0,
-        cursorRadius:
+        cursorColor       : cupertinoOptions?.cursorColor,
+        cursorHeight      : cupertinoOptions?.cursorHeight,
+        cursorWidth       : cupertinoOptions?.cursorWidth ?? 2.0,
+        cursorRadius      :
             cupertinoOptions?.cursorRadius ?? const Radius.circular(2.0),
         selectionControls: cupertinoOptions?.selectionControls,
-        strutStyle: cupertinoOptions?.strutStyle,
+        strutStyle       : cupertinoOptions?.strutStyle,
         textAlignVertical: cupertinoOptions?.textAlignVertical,
-        textDirection: cupertinoOptions?.textDirection,
+        textDirection    : cupertinoOptions?.textDirection,
       );
     }
 
-    final NaTextFieldOptionsMaterial? materialOptions =
-        options is NaTextFieldOptionsMaterial ? options : null;
+    final NaTextFieldOptionsMaterial? materialOptions = options is NaTextFieldOptionsMaterial
+      ? options
+      : null
+    ;
     return TextField(
-      controller: this.controller,
-      focusNode: this.focusNode,
-      keyboardType: this.keyboardType,
-      textInputAction: this.textInputAction,
+      controller        : this.controller,
+      focusNode         : this.focusNode,
+      keyboardType      : this.keyboardType,
+      textInputAction   : this.textInputAction,
       textCapitalization: this.textCapitalization,
-      style: this.style,
-      textAlign: this.textAlign,
-      autofocus: this.autofocus,
-      readOnly: this.readOnly,
-      showCursor: materialOptions?.showCursor ?? this.showCursor,
-      obscureText: materialOptions?.obscureText ?? this.obscureText,
-      autocorrect: this.autocorrect,
-      enableSuggestions: this.enableSuggestions,
-      maxLines: this.maxLines,
-      minLines: this.minLines,
-      expands: this.expands,
-      maxLength: this.maxLength,
-      onChanged: this.onChanged,
-      onEditingComplete: this.onEditingComplete,
-      onSubmitted: this.onSubmitted,
-      inputFormatters: this.inputFormatters,
-      enabled: this.enabled,
+      style             : this.style,
+      textAlign         : this.textAlign,
+      autofocus         : this.autofocus,
+      readOnly          : this.readOnly,
+      showCursor        : materialOptions?.showCursor ?? this.showCursor,
+      obscureText       : materialOptions?.obscureText ?? this.obscureText,
+      autocorrect       : this.autocorrect,
+      enableSuggestions : this.enableSuggestions,
+      maxLines          : this.maxLines,
+      minLines          : this.minLines,
+      expands           : this.expands,
+      maxLength         : this.maxLength,
+      onChanged         : this.onChanged,
+      onEditingComplete : this.onEditingComplete,
+      onSubmitted       : this.onSubmitted,
+      inputFormatters   : this.inputFormatters,
+      enabled           : this.enabled,
       keyboardAppearance: this.keyboardAppearance,
 
       // Material specific
-      decoration: materialOptions?.decoration ?? const InputDecoration(),
+      decoration        : materialOptions?.decoration ?? const InputDecoration(),
       obscuringCharacter: materialOptions?.obscuringCharacter ?? '•',
-      selectionControls: materialOptions?.selectionControls,
-      cursorColor: materialOptions?.cursorColor,
-      cursorHeight: materialOptions?.cursorHeight,
-      cursorWidth: materialOptions?.cursorWidth ?? 2.0,
-      cursorRadius: materialOptions?.cursorRadius,
-      mouseCursor: materialOptions?.mouseCursor,
-      strutStyle: materialOptions?.strutStyle,
-      textAlignVertical: materialOptions?.textAlignVertical,
-      textDirection: materialOptions?.textDirection,
+      selectionControls : materialOptions?.selectionControls,
+      cursorColor       : materialOptions?.cursorColor,
+      cursorHeight      : materialOptions?.cursorHeight,
+      cursorWidth       : materialOptions?.cursorWidth ?? 2.0,
+      cursorRadius      : materialOptions?.cursorRadius,
+      mouseCursor       : materialOptions?.mouseCursor,
+      strutStyle        : materialOptions?.strutStyle,
+      textAlignVertical : materialOptions?.textAlignVertical,
+      textDirection     : materialOptions?.textDirection,
     );
   }
 }

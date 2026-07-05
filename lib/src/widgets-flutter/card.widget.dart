@@ -69,12 +69,15 @@ class NaCard extends NaWidget {
     final NaCardOptions? options = optionsBuilder?.call(context, uiType);
 
     if (uiType == NaUiType.cupertino) {
-      final NaCardOptionsCupertino? cupertinoOptions =
-          options is NaCardOptionsCupertino ? options : null;
+      final NaCardOptionsCupertino? cupertinoOptions = options is NaCardOptionsCupertino
+        ? options
+        : null
+      ;
       return Container(
-        margin: cupertinoOptions?.margin ?? const EdgeInsets.all(4.0),
-        padding: cupertinoOptions?.padding,
-        decoration: BoxDecoration(
+        margin      : cupertinoOptions?.margin ?? const EdgeInsets.all(4.0),
+        padding     : cupertinoOptions?.padding,
+        clipBehavior: Clip.hardEdge,
+        decoration  : BoxDecoration(
           color:
               cupertinoOptions?.color ??
               CupertinoTheme.of(context).barBackgroundColor,
@@ -91,19 +94,21 @@ class NaCard extends NaWidget {
       );
     }
 
-    final NaCardOptionsMaterial? materialOptions =
-        options is NaCardOptionsMaterial ? options : null;
+    final NaCardOptionsMaterial? materialOptions = options is NaCardOptionsMaterial
+      ? options
+      : null
+    ;
     return Card(
-      color: materialOptions?.color,
-      shadowColor: materialOptions?.shadowColor,
-      surfaceTintColor: materialOptions?.surfaceTintColor,
-      elevation: materialOptions?.elevation,
-      shape: materialOptions?.shape,
+      color             : materialOptions?.color,
+      shadowColor       : materialOptions?.shadowColor,
+      surfaceTintColor  : materialOptions?.surfaceTintColor,
+      elevation         : materialOptions?.elevation,
+      shape             : materialOptions?.shape,
       borderOnForeground: materialOptions?.borderOnForeground ?? true,
-      margin: materialOptions?.margin,
-      clipBehavior: materialOptions?.clipBehavior,
-      semanticContainer: materialOptions?.semanticContainer ?? true,
-      child: this.child,
+      margin            : materialOptions?.margin,
+      clipBehavior      : materialOptions?.clipBehavior,
+      semanticContainer : materialOptions?.semanticContainer ?? true,
+      child             : this.child,
     );
   }
 }

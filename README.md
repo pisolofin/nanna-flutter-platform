@@ -25,6 +25,7 @@ Instead of writing platform-conditional code (`if (Platform.isIOS) ...`) on ever
 | `TimePicker` | `CupertinoTimerPicker` | ✅ | `NaTimePicker` |
 | `ListTile` | `CupertinoListTile` | ✅ | `NaListTile` |
 | `Radio` | `CupertinoRadio` | ✅ | `NaRadio` |
+| `Icon` | `Icon` (cupertino variants) | ✅ | `NaIcon` |
 | `Dialog Action` | `CupertinoDialogAction` | ✅ | `NaDialogAction` |
 | `TextField` | `CupertinoTextField` | ✅ | `NaTextField` |
 

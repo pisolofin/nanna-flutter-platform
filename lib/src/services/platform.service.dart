@@ -1,5 +1,4 @@
 import '../models/ui-type.model.dart';
-
 import 'platform-ui-type.service.dart';
 
 /// Initializes the platform service.

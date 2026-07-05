@@ -94,44 +94,48 @@ class NaBottomNavigationBar extends NaWidget {
     );
 
     if (uiType == NaUiType.cupertino) {
-      final NaBottomNavigationBarOptionsCupertino? cupertinoOptions =
-          options is NaBottomNavigationBarOptionsCupertino ? options : null;
+      final NaBottomNavigationBarOptionsCupertino? cupertinoOptions = options is NaBottomNavigationBarOptionsCupertino
+        ? options
+        : null
+      ;
       return CupertinoTabBar(
-        items: this.items,
-        onTap: this.onTap,
-        currentIndex: this.currentIndex,
+        items          : this.items,
+        onTap          : this.onTap,
+        currentIndex   : this.currentIndex,
         backgroundColor: cupertinoOptions?.backgroundColor,
-        activeColor: cupertinoOptions?.activeColor,
-        inactiveColor:
+        activeColor    : cupertinoOptions?.activeColor,
+        inactiveColor  :
             cupertinoOptions?.inactiveColor ?? CupertinoColors.inactiveGray,
         iconSize: cupertinoOptions?.iconSize ?? 30.0,
-        height: cupertinoOptions?.height ?? 50.0,
-        border: cupertinoOptions?.border,
+        height  : cupertinoOptions?.height ?? 50.0,
+        border  : cupertinoOptions?.border,
       );
     }
 
-    final NaBottomNavigationBarOptionsMaterial? materialOptions =
-        options is NaBottomNavigationBarOptionsMaterial ? options : null;
+    final NaBottomNavigationBarOptionsMaterial? materialOptions = options is NaBottomNavigationBarOptionsMaterial
+      ? options
+      : null
+    ;
     return BottomNavigationBar(
-      items: this.items,
-      onTap: this.onTap,
-      currentIndex: this.currentIndex,
-      elevation: materialOptions?.elevation,
-      type: materialOptions?.type,
-      fixedColor: materialOptions?.fixedColor,
-      backgroundColor: materialOptions?.backgroundColor,
-      iconSize: materialOptions?.iconSize ?? 24.0,
-      selectedItemColor: materialOptions?.selectedItemColor,
-      unselectedItemColor: materialOptions?.unselectedItemColor,
-      selectedIconTheme: materialOptions?.selectedIconTheme,
-      unselectedIconTheme: materialOptions?.unselectedIconTheme,
-      selectedLabelStyle: materialOptions?.selectedLabelStyle,
+      items               : this.items,
+      onTap               : this.onTap,
+      currentIndex        : this.currentIndex,
+      elevation           : materialOptions?.elevation,
+      type                : materialOptions?.type,
+      fixedColor          : materialOptions?.fixedColor,
+      backgroundColor     : materialOptions?.backgroundColor,
+      iconSize            : materialOptions?.iconSize ?? 24.0,
+      selectedItemColor   : materialOptions?.selectedItemColor,
+      unselectedItemColor : materialOptions?.unselectedItemColor,
+      selectedIconTheme   : materialOptions?.selectedIconTheme,
+      unselectedIconTheme : materialOptions?.unselectedIconTheme,
+      selectedLabelStyle  : materialOptions?.selectedLabelStyle,
       unselectedLabelStyle: materialOptions?.unselectedLabelStyle,
-      showSelectedLabels: materialOptions?.showSelectedLabels,
+      showSelectedLabels  : materialOptions?.showSelectedLabels,
       showUnselectedLabels: materialOptions?.showUnselectedLabels,
-      mouseCursor: materialOptions?.mouseCursor,
-      enableFeedback: materialOptions?.enableFeedback,
-      landscapeLayout: materialOptions?.landscapeLayout,
+      mouseCursor         : materialOptions?.mouseCursor,
+      enableFeedback      : materialOptions?.enableFeedback,
+      landscapeLayout     : materialOptions?.landscapeLayout,
     );
   }
 }

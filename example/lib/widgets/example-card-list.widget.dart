@@ -16,14 +16,14 @@ class ExampleCardListWidget extends StatelessWidget {
               mainAxisSize: MainAxisSize.min,
               children: [
                 NaListTile(
-                  leading: const Icon(Icons.person),
+                  leading: const NaIcon(NaIcons.person),
                   title: const Text('John Doe'),
                   subtitle: const Text('Software Engineer'),
                   hasChevron: true,
                   onTap: () {},
                 ),
                 NaListTile(
-                  leading: const Icon(Icons.email),
+                  leading: const NaIcon(NaIcons.email),
                   title: const Text('john.doe@example.com'),
                   onTap: () {},
                 ),

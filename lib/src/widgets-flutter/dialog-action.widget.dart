@@ -60,26 +60,30 @@ class NaDialogAction extends NaWidget {
     );
 
     if (uiType == NaUiType.cupertino) {
-      final NaDialogActionOptionsCupertino? cupertinoOptions =
-          options is NaDialogActionOptionsCupertino ? options : null;
+      final NaDialogActionOptionsCupertino? cupertinoOptions = options is NaDialogActionOptionsCupertino
+        ? options
+        : null
+      ;
       return CupertinoDialogAction(
-        onPressed: this.onPressed,
-        isDefaultAction: cupertinoOptions?.isDefaultAction ?? false,
+        onPressed          : this.onPressed,
+        isDefaultAction    : cupertinoOptions?.isDefaultAction ?? false,
         isDestructiveAction: cupertinoOptions?.isDestructiveAction ?? false,
-        textStyle: cupertinoOptions?.textStyle,
-        child: this.child,
+        textStyle          : cupertinoOptions?.textStyle,
+        child              : this.child,
       );
     }
 
-    final NaDialogActionOptionsMaterial? materialOptions =
-        options is NaDialogActionOptionsMaterial ? options : null;
+    final NaDialogActionOptionsMaterial? materialOptions = options is NaDialogActionOptionsMaterial
+      ? options
+      : null
+    ;
     return TextButton(
-      onPressed: this.onPressed,
-      style: materialOptions?.style,
-      focusNode: materialOptions?.focusNode,
-      autofocus: materialOptions?.autofocus ?? false,
+      onPressed   : this.onPressed,
+      style       : materialOptions?.style,
+      focusNode   : materialOptions?.focusNode,
+      autofocus   : materialOptions?.autofocus ?? false,
       clipBehavior: materialOptions?.clipBehavior ?? Clip.none,
-      child: this.child,
+      child       : this.child,
     );
   }
 }

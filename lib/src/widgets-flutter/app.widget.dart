@@ -67,41 +67,45 @@ class NaApp extends NaWidget {
     final NaAppOptions? options = optionsBuilder?.call(context, uiType);
 
     if (uiType == NaUiType.cupertino) {
-      final NaAppOptionsCupertino? cupertinoOptions =
-          options is NaAppOptionsCupertino ? options : null;
+      final NaAppOptionsCupertino? cupertinoOptions = options is NaAppOptionsCupertino
+        ? options
+        : null
+      ;
       return CupertinoApp(
-        key: this.key,
-        navigatorKey: this.navigatorKey,
-        home: this.home,
-        routes: this.routes ?? const <String, WidgetBuilder>{},
-        initialRoute: this.initialRoute,
-        title: this.title,
-        theme: cupertinoOptions?.theme,
-        color: this.color,
-        locale: this.locale,
-        localizationsDelegates: this.localizationsDelegates,
-        supportedLocales: this.supportedLocales,
+        key                       : this.key,
+        navigatorKey              : this.navigatorKey,
+        home                      : this.home,
+        routes                    : this.routes ?? const <String, WidgetBuilder>{},
+        initialRoute              : this.initialRoute,
+        title                     : this.title,
+        theme                     : cupertinoOptions?.theme,
+        color                     : this.color,
+        locale                    : this.locale,
+        localizationsDelegates    : this.localizationsDelegates,
+        supportedLocales          : this.supportedLocales,
         debugShowCheckedModeBanner: this.debugShowCheckedModeBanner,
       );
     }
 
-    final NaAppOptionsMaterial? materialOptions =
-        options is NaAppOptionsMaterial ? options : null;
+    final NaAppOptionsMaterial? materialOptions = options is NaAppOptionsMaterial
+      ? options
+      : null
+    ;
     return MaterialApp(
-      key: this.key,
-      navigatorKey: this.navigatorKey,
-      scaffoldMessengerKey: materialOptions?.scaffoldMessengerKey,
-      home: this.home,
-      routes: this.routes ?? const <String, WidgetBuilder>{},
-      initialRoute: this.initialRoute,
-      title: this.title,
-      theme: materialOptions?.theme,
-      darkTheme: materialOptions?.darkTheme,
-      themeMode: materialOptions?.themeMode,
-      color: this.color,
-      locale: this.locale,
-      localizationsDelegates: this.localizationsDelegates,
-      supportedLocales: this.supportedLocales,
+      key                       : this.key,
+      navigatorKey              : this.navigatorKey,
+      scaffoldMessengerKey      : materialOptions?.scaffoldMessengerKey,
+      home                      : this.home,
+      routes                    : this.routes ?? const <String, WidgetBuilder>{},
+      initialRoute              : this.initialRoute,
+      title                     : this.title,
+      theme                     : materialOptions?.theme,
+      darkTheme                 : materialOptions?.darkTheme,
+      themeMode                 : materialOptions?.themeMode,
+      color                     : this.color,
+      locale                    : this.locale,
+      localizationsDelegates    : this.localizationsDelegates,
+      supportedLocales          : this.supportedLocales,
       debugShowCheckedModeBanner: this.debugShowCheckedModeBanner,
     );
   }

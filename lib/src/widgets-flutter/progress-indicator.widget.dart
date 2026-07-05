@@ -57,25 +57,29 @@ class NaProgressIndicator extends NaWidget {
     );
 
     if (uiType == NaUiType.cupertino) {
-      final NaProgressIndicatorOptionsCupertino? cupertinoOptions =
-          options is NaProgressIndicatorOptionsCupertino ? options : null;
+      final NaProgressIndicatorOptionsCupertino? cupertinoOptions = options is NaProgressIndicatorOptionsCupertino
+        ? options
+        : null
+      ;
       return CupertinoActivityIndicator(
-        radius: cupertinoOptions?.radius ?? 10.0,
+        radius   : cupertinoOptions?.radius ?? 10.0,
         animating: cupertinoOptions?.animating ?? true,
-        color: cupertinoOptions?.color,
+        color    : cupertinoOptions?.color,
       );
     }
 
-    final NaProgressIndicatorOptionsMaterial? materialOptions =
-        options is NaProgressIndicatorOptionsMaterial ? options : null;
+    final NaProgressIndicatorOptionsMaterial? materialOptions = options is NaProgressIndicatorOptionsMaterial
+      ? options
+      : null
+    ;
     return CircularProgressIndicator(
-      value: materialOptions?.value,
+      value          : materialOptions?.value,
       backgroundColor: materialOptions?.backgroundColor,
-      color: materialOptions?.color,
-      valueColor: materialOptions?.valueColor,
-      strokeWidth: materialOptions?.strokeWidth ?? 4.0,
-      semanticsLabel: materialOptions?.semanticsLabel,
-      semanticsValue: materialOptions?.semanticsValue,
+      color          : materialOptions?.color,
+      valueColor     : materialOptions?.valueColor,
+      strokeWidth    : materialOptions?.strokeWidth ?? 4.0,
+      semanticsLabel : materialOptions?.semanticsLabel,
+      semanticsValue : materialOptions?.semanticsValue,
     );
   }
 }

@@ -65,34 +65,38 @@ class NaDatePicker extends NaWidget {
     final NaDatePickerOptions? options = optionsBuilder?.call(context, uiType);
 
     if (uiType == NaUiType.cupertino) {
-      final NaDatePickerOptionsCupertino? cupertinoOptions =
-          options is NaDatePickerOptionsCupertino ? options : null;
+      final NaDatePickerOptionsCupertino? cupertinoOptions = options is NaDatePickerOptionsCupertino
+        ? options
+        : null
+      ;
       return SizedBox(
         height: 216.0,
-        child: CupertinoDatePicker(
-          mode: CupertinoDatePickerMode.date,
-          initialDateTime: this.initialDate,
-          minimumDate: this.firstDate,
-          maximumDate: this.lastDate,
+        child : CupertinoDatePicker(
+          mode             : CupertinoDatePickerMode.date,
+          initialDateTime  : this.initialDate,
+          minimumDate      : this.firstDate,
+          maximumDate      : this.lastDate,
           onDateTimeChanged: this.onDateChanged,
-          itemExtent: cupertinoOptions?.itemExtent ?? 32.0,
-          use24hFormat: cupertinoOptions?.use24hFormat ?? false,
-          minuteInterval: cupertinoOptions?.minuteInterval ?? 1,
-          backgroundColor: cupertinoOptions?.backgroundColor,
+          itemExtent       : cupertinoOptions?.itemExtent ?? 32.0,
+          use24hFormat     : cupertinoOptions?.use24hFormat ?? false,
+          minuteInterval   : cupertinoOptions?.minuteInterval ?? 1,
+          backgroundColor  : cupertinoOptions?.backgroundColor,
         ),
       );
     }
 
-    final NaDatePickerOptionsMaterial? materialOptions =
-        options is NaDatePickerOptionsMaterial ? options : null;
+    final NaDatePickerOptionsMaterial? materialOptions = options is NaDatePickerOptionsMaterial
+      ? options
+      : null
+    ;
     return CalendarDatePicker(
-      initialDate: this.initialDate,
-      firstDate: this.firstDate,
-      lastDate: this.lastDate,
-      onDateChanged: this.onDateChanged,
-      currentDate: materialOptions?.currentDate,
+      initialDate            : this.initialDate,
+      firstDate              : this.firstDate,
+      lastDate               : this.lastDate,
+      onDateChanged          : this.onDateChanged,
+      currentDate            : materialOptions?.currentDate,
       onDisplayedMonthChanged: materialOptions?.onDisplayedMonthChanged,
-      initialCalendarMode:
+      initialCalendarMode    :
           materialOptions?.initialCalendarMode ?? DatePickerMode.day,
       selectableDayPredicate: materialOptions?.selectableDayPredicate,
     );

@@ -76,12 +76,14 @@ class NaButton extends NaWidget {
 
     // 2. Check type and render accordingly
     if (uiType == NaUiType.cupertino) {
-      final NaButtonOptionsCupertino? cupertinoOptions =
-          options is NaButtonOptionsCupertino ? options : null;
+      final NaButtonOptionsCupertino? cupertinoOptions = options is NaButtonOptionsCupertino
+        ? options
+        : null
+      ;
       return CupertinoButton(
-        onPressed: this.onPressed,
-        padding: cupertinoOptions?.padding,
-        color: cupertinoOptions?.color,
+        onPressed    : this.onPressed,
+        padding      : cupertinoOptions?.padding,
+        color        : cupertinoOptions?.color,
         disabledColor:
             cupertinoOptions?.disabledColor ??
             CupertinoColors.quaternarySystemFill,
@@ -92,28 +94,30 @@ class NaButton extends NaWidget {
               kMinInteractiveDimensionCupertino,
             ),
         pressedOpacity: cupertinoOptions?.pressedOpacity ?? 0.4,
-        borderRadius:
+        borderRadius  :
             cupertinoOptions?.borderRadius ??
             const BorderRadius.all(Radius.circular(8.0)),
         alignment: cupertinoOptions?.alignment ?? Alignment.center,
-        child: this.child,
+        child    : this.child,
       );
     }
 
     // Default fallback to Material
-    final NaButtonOptionsMaterial? materialOptions =
-        options is NaButtonOptionsMaterial ? options : null;
+    final NaButtonOptionsMaterial? materialOptions = options is NaButtonOptionsMaterial
+      ? options
+      : null
+    ;
     return ElevatedButton(
-      onPressed: this.onPressed,
-      onLongPress: materialOptions?.onLongPress,
-      onHover: materialOptions?.onHover,
-      onFocusChange: materialOptions?.onFocusChange,
-      style: materialOptions?.style,
-      focusNode: materialOptions?.focusNode,
-      autofocus: materialOptions?.autofocus ?? false,
-      clipBehavior: materialOptions?.clipBehavior ?? Clip.none,
+      onPressed       : this.onPressed,
+      onLongPress     : materialOptions?.onLongPress,
+      onHover         : materialOptions?.onHover,
+      onFocusChange   : materialOptions?.onFocusChange,
+      style           : materialOptions?.style,
+      focusNode       : materialOptions?.focusNode,
+      autofocus       : materialOptions?.autofocus ?? false,
+      clipBehavior    : materialOptions?.clipBehavior ?? Clip.none,
       statesController: materialOptions?.statesController,
-      child: this.child,
+      child           : this.child,
     );
   }
 }

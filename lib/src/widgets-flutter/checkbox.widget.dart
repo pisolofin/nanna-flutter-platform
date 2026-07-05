@@ -95,45 +95,49 @@ class NaCheckbox extends NaWidget {
     final NaCheckboxOptions? options = optionsBuilder?.call(context, uiType);
 
     if (uiType == NaUiType.cupertino) {
-      final NaCheckboxOptionsCupertino? cupertinoOptions =
-          options is NaCheckboxOptionsCupertino ? options : null;
+      final NaCheckboxOptionsCupertino? cupertinoOptions = options is NaCheckboxOptionsCupertino
+        ? options
+        : null
+      ;
       return CupertinoCheckbox(
-        value: this.value,
-        onChanged: this.onChanged,
-        tristate: cupertinoOptions?.tristate ?? false,
-        activeColor: cupertinoOptions?.activeColor,
-        checkColor: cupertinoOptions?.checkColor,
-        focusColor: cupertinoOptions?.focusColor,
-        focusNode: cupertinoOptions?.focusNode,
-        autofocus: cupertinoOptions?.autofocus ?? false,
-        shape: cupertinoOptions?.shape,
-        side: cupertinoOptions?.side,
+        value        : this.value,
+        onChanged    : this.onChanged,
+        tristate     : cupertinoOptions?.tristate ?? false,
+        activeColor  : cupertinoOptions?.activeColor,
+        checkColor   : cupertinoOptions?.checkColor,
+        focusColor   : cupertinoOptions?.focusColor,
+        focusNode    : cupertinoOptions?.focusNode,
+        autofocus    : cupertinoOptions?.autofocus ?? false,
+        shape        : cupertinoOptions?.shape,
+        side         : cupertinoOptions?.side,
         semanticLabel: cupertinoOptions?.semanticLabel,
       );
     }
 
-    final NaCheckboxOptionsMaterial? materialOptions =
-        options is NaCheckboxOptionsMaterial ? options : null;
+    final NaCheckboxOptionsMaterial? materialOptions = options is NaCheckboxOptionsMaterial
+      ? options
+      : null
+    ;
     return Checkbox(
-      value: this.value,
-      onChanged: this.onChanged,
-      tristate: materialOptions?.tristate ?? false,
-      mouseCursor: materialOptions?.mouseCursor,
-      activeColor: materialOptions?.activeColor,
-      fillColor: materialOptions?.fillColor,
-      checkColor: materialOptions?.checkColor,
-      focusColor: materialOptions?.focusColor,
-      hoverColor: materialOptions?.hoverColor,
-      overlayColor: materialOptions?.overlayColor,
-      splashRadius: materialOptions?.splashRadius,
+      value                : this.value,
+      onChanged            : this.onChanged,
+      tristate             : materialOptions?.tristate ?? false,
+      mouseCursor          : materialOptions?.mouseCursor,
+      activeColor          : materialOptions?.activeColor,
+      fillColor            : materialOptions?.fillColor,
+      checkColor           : materialOptions?.checkColor,
+      focusColor           : materialOptions?.focusColor,
+      hoverColor           : materialOptions?.hoverColor,
+      overlayColor         : materialOptions?.overlayColor,
+      splashRadius         : materialOptions?.splashRadius,
       materialTapTargetSize: materialOptions?.materialTapTargetSize,
-      visualDensity: materialOptions?.visualDensity,
-      focusNode: materialOptions?.focusNode,
-      autofocus: materialOptions?.autofocus ?? false,
-      shape: materialOptions?.shape,
-      side: materialOptions?.side,
-      isError: materialOptions?.isError ?? false,
-      semanticLabel: materialOptions?.semanticLabel,
+      visualDensity        : materialOptions?.visualDensity,
+      focusNode            : materialOptions?.focusNode,
+      autofocus            : materialOptions?.autofocus ?? false,
+      shape                : materialOptions?.shape,
+      side                 : materialOptions?.side,
+      isError              : materialOptions?.isError ?? false,
+      semanticLabel        : materialOptions?.semanticLabel,
     );
   }
 }

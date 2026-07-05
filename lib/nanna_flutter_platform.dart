@@ -23,4 +23,7 @@ export 'src/widgets-flutter/time-picker.widget.dart';
 export 'src/widgets-flutter/bottom-navigation-bar.widget.dart';
 export 'src/widgets-flutter/radio.widget.dart';
 export 'src/widgets-flutter/text-field.widget.dart';
+export 'src/widgets-flutter/icon.widget.dart';
+export 'src/models/icon-data.model.dart';
+export 'src/constants/icons.constant.dart';
 export 'src/exceptions/ui-type-already-registered.exception.dart';

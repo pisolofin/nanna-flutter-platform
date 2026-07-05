@@ -75,39 +75,43 @@ class NaTimePicker extends NaWidget {
     final NaTimePickerOptions? options = optionsBuilder?.call(context, uiType);
 
     if (uiType == NaUiType.cupertino) {
-      final NaTimePickerOptionsCupertino? cupertinoOptions =
-          options is NaTimePickerOptionsCupertino ? options : null;
+      final NaTimePickerOptionsCupertino? cupertinoOptions = options is NaTimePickerOptionsCupertino
+        ? options
+        : null
+      ;
       return SizedBox(
         height: 216.0,
-        child: CupertinoTimerPicker(
-          mode: cupertinoOptions?.mode ?? CupertinoTimerPickerMode.hms,
-          initialTimerDuration: this.initialTimerDuration,
-          minuteInterval: cupertinoOptions?.minuteInterval ?? 1,
-          secondInterval: cupertinoOptions?.secondInterval ?? 1,
-          alignment: cupertinoOptions?.alignment ?? Alignment.center,
-          backgroundColor: cupertinoOptions?.backgroundColor,
-          itemExtent: cupertinoOptions?.itemExtent ?? 32.0,
+        child : CupertinoTimerPicker(
+          mode                  : cupertinoOptions?.mode ?? CupertinoTimerPickerMode.hms,
+          initialTimerDuration  : this.initialTimerDuration,
+          minuteInterval        : cupertinoOptions?.minuteInterval ?? 1,
+          secondInterval        : cupertinoOptions?.secondInterval ?? 1,
+          alignment             : cupertinoOptions?.alignment ?? Alignment.center,
+          backgroundColor       : cupertinoOptions?.backgroundColor,
+          itemExtent            : cupertinoOptions?.itemExtent ?? 32.0,
           onTimerDurationChanged: this.onTimerDurationChanged,
         ),
       );
     }
 
-    final NaTimePickerOptionsMaterial? materialOptions =
-        options is NaTimePickerOptionsMaterial ? options : null;
+    final NaTimePickerOptionsMaterial? materialOptions = options is NaTimePickerOptionsMaterial
+      ? options
+      : null
+    ;
 
     final TimeOfDay initialTime = TimeOfDay(
-      hour: this.initialTimerDuration.inHours % 24,
+      hour  : this.initialTimerDuration.inHours % 24,
       minute: this.initialTimerDuration.inMinutes % 60,
     );
 
     return TimePickerDialog(
-      initialTime: initialTime,
-      cancelText: materialOptions?.cancelText,
-      confirmText: materialOptions?.confirmText,
-      helpText: materialOptions?.helpText,
+      initialTime     : initialTime,
+      cancelText      : materialOptions?.cancelText,
+      confirmText     : materialOptions?.confirmText,
+      helpText        : materialOptions?.helpText,
       errorInvalidText: materialOptions?.errorInvalidText,
-      hourLabelText: materialOptions?.hourLabelText,
-      minuteLabelText: materialOptions?.minuteLabelText,
+      hourLabelText   : materialOptions?.hourLabelText,
+      minuteLabelText : materialOptions?.minuteLabelText,
       initialEntryMode:
           materialOptions?.initialEntryMode ?? TimePickerEntryMode.dial,
     );

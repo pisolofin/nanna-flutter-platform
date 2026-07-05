@@ -50,38 +50,42 @@ class NaAppBar extends NaWidget implements ObstructingPreferredSizeWidget {
     final NaAppBarOptions? options = optionsBuilder?.call(context, uiType);
 
     if (uiType == NaUiType.cupertino) {
-      final NaAppBarOptionsCupertino? cupertinoOptions =
-          options is NaAppBarOptionsCupertino ? options : null;
+      final NaAppBarOptionsCupertino? cupertinoOptions = options is NaAppBarOptionsCupertino
+        ? options
+        : null
+      ;
 
       Widget? trailingWidget;
       if (this.actions != null && this.actions!.isNotEmpty) {
         trailingWidget = Row(
           mainAxisSize: MainAxisSize.min,
-          children: this.actions!,
+          children    : this.actions!,
         );
       }
 
       return CupertinoNavigationBar(
-        leading: this.leading,
-        middle: this.title,
-        trailing: trailingWidget,
-        backgroundColor: this.backgroundColor,
-        border: cupertinoOptions?.border,
+        leading                : this.leading,
+        middle                 : this.title,
+        trailing               : trailingWidget,
+        backgroundColor        : this.backgroundColor,
+        border                 : cupertinoOptions?.border,
         transitionBetweenRoutes:
             cupertinoOptions?.transitionBetweenRoutes ?? true,
       );
     }
 
-    final NaAppBarOptionsMaterial? materialOptions =
-        options is NaAppBarOptionsMaterial ? options : null;
+    final NaAppBarOptionsMaterial? materialOptions = options is NaAppBarOptionsMaterial
+      ? options
+      : null
+    ;
     return AppBar(
-      leading: this.leading,
-      title: this.title,
-      actions: this.actions,
+      leading        : this.leading,
+      title          : this.title,
+      actions        : this.actions,
       backgroundColor: this.backgroundColor,
-      elevation: materialOptions?.elevation,
-      centerTitle: materialOptions?.centerTitle,
-      bottom: materialOptions?.bottom,
+      elevation      : materialOptions?.elevation,
+      centerTitle    : materialOptions?.centerTitle,
+      bottom         : materialOptions?.bottom,
     );
   }
 

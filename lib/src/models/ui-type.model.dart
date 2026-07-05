@@ -8,13 +8,4 @@ class NaUiType {
   static const NaUiType cupertino = NaUiType(2);
 
   static const List<NaUiType> values = [none, material, cupertino];
-
-  @override
-  bool operator ==(Object other) {
-    if (identical(this, other)) return true;
-    return other is NaUiType && other.value == value;
-  }
-
-  @override
-  int get hashCode => value.hashCode;
 }
