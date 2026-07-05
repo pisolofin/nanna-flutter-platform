@@ -15,10 +15,10 @@ class _ExampleSliderWidgetState extends State<ExampleSliderWidget> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        const Text('NaPlatformSlider:'),
+        const Text('NaSlider:'),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 40.0),
-          child: NaPlatformSlider(
+          child: NaSlider(
             value: _sliderValue,
             onChanged: (double value) {
               setState(() {

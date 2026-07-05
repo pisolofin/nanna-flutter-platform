@@ -3,13 +3,13 @@ import 'package:flutter/cupertino.dart';
 
 import '../models/ui-type.model.dart';
 import '../models/widget-options.model.dart';
-import '../widgets/platform-widget.widget.dart';
+import '../widgets/na-widget.widget.dart';
 
-/// Base options for [NaPlatformButton].
-abstract class NaPlatformButtonOptions extends NaWidgetOptions {}
+/// Base options for [NaButton].
+abstract class NaButtonOptions extends NaWidgetOptions {}
 
-/// Material-specific options for [NaPlatformButton], resolving into an [ElevatedButton].
-class NaPlatformButtonOptionsMaterial extends NaPlatformButtonOptions {
+/// Material-specific options for [NaButton], resolving into an [ElevatedButton].
+class NaButtonOptionsMaterial extends NaButtonOptions {
   final VoidCallback? onLongPress;
   final ValueChanged<bool>? onHover;
   final ValueChanged<bool>? onFocusChange;
@@ -19,7 +19,7 @@ class NaPlatformButtonOptionsMaterial extends NaPlatformButtonOptions {
   final Clip? clipBehavior;
   final WidgetStatesController? statesController;
 
-  NaPlatformButtonOptionsMaterial({
+  NaButtonOptionsMaterial({
     this.onLongPress,
     this.onHover,
     this.onFocusChange,
@@ -31,8 +31,8 @@ class NaPlatformButtonOptionsMaterial extends NaPlatformButtonOptions {
   });
 }
 
-/// Cupertino-specific options for [NaPlatformButton], resolving into a [CupertinoButton].
-class NaPlatformButtonOptionsCupertino extends NaPlatformButtonOptions {
+/// Cupertino-specific options for [NaButton], resolving into a [CupertinoButton].
+class NaButtonOptionsCupertino extends NaButtonOptions {
   final EdgeInsetsGeometry? padding;
   final Color? color;
   final Color? disabledColor;
@@ -41,7 +41,7 @@ class NaPlatformButtonOptionsCupertino extends NaPlatformButtonOptions {
   final BorderRadius? borderRadius;
   final AlignmentGeometry? alignment;
 
-  NaPlatformButtonOptionsCupertino({
+  NaButtonOptionsCupertino({
     this.padding,
     this.color,
     this.disabledColor,
@@ -54,14 +54,14 @@ class NaPlatformButtonOptionsCupertino extends NaPlatformButtonOptions {
 
 /// A generic Button widget that automatically renders an [ElevatedButton] on Material 
 /// and a [CupertinoButton] on Cupertino.
-class NaPlatformButton extends NaPlatformWidget {
+class NaButton extends NaWidget {
   final Widget child;
   final VoidCallback? onPressed;
 
   /// Function to resolve platform-specific options at runtime.
-  final NaWidgetOptionsBuilder<NaPlatformButtonOptions>? optionsBuilder;
+  final NaWidgetOptionsBuilder<NaButtonOptions>? optionsBuilder;
 
-  const NaPlatformButton({
+  const NaButton({
     super.key,
     required this.child,
     required this.onPressed,
@@ -72,14 +72,14 @@ class NaPlatformButton extends NaPlatformWidget {
   @override
   Widget renderForUIType(BuildContext context, NaUiType uiType) {
     // 1. Resolve options via the builder provided by the user (if present)
-    final NaPlatformButtonOptions? options = optionsBuilder?.call(
+    final NaButtonOptions? options = optionsBuilder?.call(
       context,
       uiType,
     );
 
     // 2. Check type and render accordingly
     if (uiType == NaUiType.cupertino) {
-      final NaPlatformButtonOptionsCupertino? cupertinoOptions = options is NaPlatformButtonOptionsCupertino ? options : null;
+      final NaButtonOptionsCupertino? cupertinoOptions = options is NaButtonOptionsCupertino ? options : null;
       return CupertinoButton(
         onPressed     : this.onPressed,
         padding       : cupertinoOptions?.padding,
@@ -94,7 +94,7 @@ class NaPlatformButton extends NaPlatformWidget {
     }
 
     // Default fallback to Material
-    final NaPlatformButtonOptionsMaterial? materialOptions = options is NaPlatformButtonOptionsMaterial ? options : null;
+    final NaButtonOptionsMaterial? materialOptions = options is NaButtonOptionsMaterial ? options : null;
     return ElevatedButton(
       onPressed       : this.onPressed,
       onLongPress     : materialOptions?.onLongPress,

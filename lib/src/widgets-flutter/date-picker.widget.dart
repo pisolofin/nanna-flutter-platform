@@ -3,19 +3,19 @@ import 'package:flutter/material.dart';
 
 import '../models/ui-type.model.dart';
 import '../models/widget-options.model.dart';
-import '../widgets/platform-widget.widget.dart';
+import '../widgets/na-widget.widget.dart';
 
-/// Base options for [NaPlatformDatePicker].
-abstract class NaPlatformDatePickerOptions extends NaWidgetOptions {}
+/// Base options for [NaDatePicker].
+abstract class NaDatePickerOptions extends NaWidgetOptions {}
 
-/// Material-specific options for [NaPlatformDatePicker], resolving into a [CalendarDatePicker].
-class NaPlatformDatePickerOptionsMaterial extends NaPlatformDatePickerOptions {
+/// Material-specific options for [NaDatePicker], resolving into a [CalendarDatePicker].
+class NaDatePickerOptionsMaterial extends NaDatePickerOptions {
   final DateTime? currentDate;
   final ValueChanged<DateTime>? onDisplayedMonthChanged;
   final DatePickerMode? initialCalendarMode;
   final SelectableDayPredicate? selectableDayPredicate;
   
-  NaPlatformDatePickerOptionsMaterial({
+  NaDatePickerOptionsMaterial({
     this.currentDate,
     this.onDisplayedMonthChanged,
     this.initialCalendarMode,
@@ -23,15 +23,15 @@ class NaPlatformDatePickerOptionsMaterial extends NaPlatformDatePickerOptions {
   });
 }
 
-/// Cupertino-specific options for [NaPlatformDatePicker], resolving into a [CupertinoDatePicker].
-class NaPlatformDatePickerOptionsCupertino extends NaPlatformDatePickerOptions {
+/// Cupertino-specific options for [NaDatePicker], resolving into a [CupertinoDatePicker].
+class NaDatePickerOptionsCupertino extends NaDatePickerOptions {
   final double? itemExtent;
   final Widget? selectionOverlay;
   final Color? backgroundColor;
   final bool? use24hFormat;
   final int? minuteInterval;
   
-  NaPlatformDatePickerOptionsCupertino({
+  NaDatePickerOptionsCupertino({
     this.itemExtent,
     this.selectionOverlay,
     this.backgroundColor,
@@ -42,15 +42,15 @@ class NaPlatformDatePickerOptionsCupertino extends NaPlatformDatePickerOptions {
 
 /// A generic DatePicker widget that automatically renders a [CalendarDatePicker] on Material 
 /// and a [CupertinoDatePicker] on Cupertino.
-class NaPlatformDatePicker extends NaPlatformWidget {
+class NaDatePicker extends NaWidget {
   final DateTime initialDate;
   final DateTime firstDate;
   final DateTime lastDate;
   final ValueChanged<DateTime> onDateChanged;
 
-  final NaWidgetOptionsBuilder<NaPlatformDatePickerOptions>? optionsBuilder;
+  final NaWidgetOptionsBuilder<NaDatePickerOptions>? optionsBuilder;
 
-  const NaPlatformDatePicker({
+  const NaDatePicker({
     super.key,
     required this.initialDate,
     required this.firstDate,
@@ -62,13 +62,13 @@ class NaPlatformDatePicker extends NaPlatformWidget {
 
   @override
   Widget renderForUIType(BuildContext context, NaUiType uiType) {
-    final NaPlatformDatePickerOptions? options = optionsBuilder?.call(
+    final NaDatePickerOptions? options = optionsBuilder?.call(
       context,
       uiType,
     );
 
     if (uiType == NaUiType.cupertino) {
-      final NaPlatformDatePickerOptionsCupertino? cupertinoOptions = options is NaPlatformDatePickerOptionsCupertino ? options : null;
+      final NaDatePickerOptionsCupertino? cupertinoOptions = options is NaDatePickerOptionsCupertino ? options : null;
       return SizedBox(
         height: 216.0,
         child: CupertinoDatePicker(
@@ -85,7 +85,7 @@ class NaPlatformDatePicker extends NaPlatformWidget {
       );
     }
 
-    final NaPlatformDatePickerOptionsMaterial? materialOptions = options is NaPlatformDatePickerOptionsMaterial ? options : null;
+    final NaDatePickerOptionsMaterial? materialOptions = options is NaDatePickerOptionsMaterial ? options : null;
     return CalendarDatePicker(
       initialDate            : this.initialDate,
       firstDate              : this.firstDate,

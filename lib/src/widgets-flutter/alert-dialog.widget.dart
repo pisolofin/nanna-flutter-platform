@@ -3,13 +3,13 @@ import 'package:flutter/material.dart';
 
 import '../models/ui-type.model.dart';
 import '../models/widget-options.model.dart';
-import '../widgets/platform-widget.widget.dart';
+import '../widgets/na-widget.widget.dart';
 
-/// Base options for [NaPlatformAlertDialog].
-abstract class NaPlatformAlertDialogOptions extends NaWidgetOptions {}
+/// Base options for [NaAlertDialog].
+abstract class NaAlertDialogOptions extends NaWidgetOptions {}
 
-/// Material-specific options for [NaPlatformAlertDialog], resolving into a [AlertDialog].
-class NaPlatformAlertDialogOptionsMaterial extends NaPlatformAlertDialogOptions {
+/// Material-specific options for [NaAlertDialog], resolving into a [AlertDialog].
+class NaAlertDialogOptionsMaterial extends NaAlertDialogOptions {
   final Widget? icon;
   final EdgeInsetsGeometry? iconPadding;
   final Color? iconColor;
@@ -32,7 +32,7 @@ class NaPlatformAlertDialogOptionsMaterial extends NaPlatformAlertDialogOptions 
   final Clip? clipBehavior;
   final bool? scrollable;
 
-  NaPlatformAlertDialogOptionsMaterial({
+  NaAlertDialogOptionsMaterial({
     this.icon,
     this.iconPadding,
     this.iconColor,
@@ -57,12 +57,12 @@ class NaPlatformAlertDialogOptionsMaterial extends NaPlatformAlertDialogOptions 
   });
 }
 
-/// Cupertino-specific options for [NaPlatformAlertDialog], resolving into a [CupertinoAlertDialog].
-class NaPlatformAlertDialogOptionsCupertino extends NaPlatformAlertDialogOptions {
+/// Cupertino-specific options for [NaAlertDialog], resolving into a [CupertinoAlertDialog].
+class NaAlertDialogOptionsCupertino extends NaAlertDialogOptions {
   final ScrollController? actionScrollController;
   final ScrollController? scrollController;
   
-  NaPlatformAlertDialogOptionsCupertino({
+  NaAlertDialogOptionsCupertino({
     this.actionScrollController,
     this.scrollController,
   });
@@ -70,14 +70,14 @@ class NaPlatformAlertDialogOptionsCupertino extends NaPlatformAlertDialogOptions
 
 /// A generic Alert Dialog widget that automatically renders a [AlertDialog] on Material 
 /// and a [CupertinoAlertDialog] on Cupertino.
-class NaPlatformAlertDialog extends NaPlatformWidget {
+class NaAlertDialog extends NaWidget {
   final Widget? title;
   final Widget? content;
   final List<Widget>? actions;
 
-  final NaWidgetOptionsBuilder<NaPlatformAlertDialogOptions>? optionsBuilder;
+  final NaWidgetOptionsBuilder<NaAlertDialogOptions>? optionsBuilder;
 
-  const NaPlatformAlertDialog({
+  const NaAlertDialog({
     super.key,
     this.title,
     this.content,
@@ -88,13 +88,13 @@ class NaPlatformAlertDialog extends NaPlatformWidget {
 
   @override
   Widget renderForUIType(BuildContext context, NaUiType uiType) {
-    final NaPlatformAlertDialogOptions? options = optionsBuilder?.call(
+    final NaAlertDialogOptions? options = optionsBuilder?.call(
       context,
       uiType,
     );
 
     if (uiType == NaUiType.cupertino) {
-      final NaPlatformAlertDialogOptionsCupertino? cupertinoOptions = options is NaPlatformAlertDialogOptionsCupertino ? options : null;
+      final NaAlertDialogOptionsCupertino? cupertinoOptions = options is NaAlertDialogOptionsCupertino ? options : null;
       return CupertinoAlertDialog(
         title                  : this.title,
         content                : this.content,
@@ -104,7 +104,7 @@ class NaPlatformAlertDialog extends NaPlatformWidget {
       );
     }
 
-    final NaPlatformAlertDialogOptionsMaterial? materialOptions = options is NaPlatformAlertDialogOptionsMaterial ? options : null;
+    final NaAlertDialogOptionsMaterial? materialOptions = options is NaAlertDialogOptionsMaterial ? options : null;
     return AlertDialog(
       title                       : this.title,
       content                     : this.content,

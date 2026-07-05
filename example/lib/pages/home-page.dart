@@ -20,11 +20,11 @@ class ExampleHomePage extends StatelessWidget {
     final NaUiType uiType = NaUiTypeScope.of(context);
     final bool isMaterial = uiType == NaUiType.material;
 
-    return NaPlatformScaffold(
-      appBar: NaPlatformAppBar(
+    return NaScaffold(
+      appBar: NaAppBar(
         title: const Text('Nanna Platform Example'),
         actions: [
-          NaPlatformIconButton(
+          NaIconButton(
             icon: Icon(isMaterial ? Icons.info_outline : CupertinoIcons.info),
             onPressed: () {},
           ),
@@ -40,7 +40,7 @@ class ExampleHomePage extends StatelessWidget {
                 style: const TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),
               ),
               const SizedBox(height: 30.0),
-              NaPlatformButton(
+              NaButton(
                 onPressed: AppStateScope.of(context).toggleUiType,
                 child: Text(
                   'Switch to ${isMaterial ? 'Cupertino' : 'Material'}',

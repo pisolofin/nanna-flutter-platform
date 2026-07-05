@@ -3,19 +3,19 @@ import 'package:flutter/material.dart';
 
 import '../models/ui-type.model.dart';
 import '../models/widget-options.model.dart';
-import '../widgets/platform-widget.widget.dart';
+import '../widgets/na-widget.widget.dart';
 
-/// Base options for [NaPlatformApp].
-abstract class NaPlatformAppOptions extends NaWidgetOptions {}
+/// Base options for [NaApp].
+abstract class NaAppOptions extends NaWidgetOptions {}
 
-/// Material-specific options for [NaPlatformApp], resolving into a [MaterialApp].
-class NaPlatformAppOptionsMaterial extends NaPlatformAppOptions {
+/// Material-specific options for [NaApp], resolving into a [MaterialApp].
+class NaAppOptionsMaterial extends NaAppOptions {
   final ThemeData? theme;
   final ThemeData? darkTheme;
   final ThemeMode? themeMode;
   final GlobalKey<ScaffoldMessengerState>? scaffoldMessengerKey;
 
-  NaPlatformAppOptionsMaterial({
+  NaAppOptionsMaterial({
     this.theme,
     this.darkTheme,
     this.themeMode,
@@ -23,18 +23,18 @@ class NaPlatformAppOptionsMaterial extends NaPlatformAppOptions {
   });
 }
 
-/// Cupertino-specific options for [NaPlatformApp], resolving into a [CupertinoApp].
-class NaPlatformAppOptionsCupertino extends NaPlatformAppOptions {
+/// Cupertino-specific options for [NaApp], resolving into a [CupertinoApp].
+class NaAppOptionsCupertino extends NaAppOptions {
   final CupertinoThemeData? theme;
 
-  NaPlatformAppOptionsCupertino({
+  NaAppOptionsCupertino({
     this.theme,
   });
 }
 
 /// A generic App widget that automatically renders a [MaterialApp] on Material 
 /// and a [CupertinoApp] on Cupertino.
-class NaPlatformApp extends NaPlatformWidget {
+class NaApp extends NaWidget {
   final Widget? home;
   final Map<String, WidgetBuilder>? routes;
   final String? initialRoute;
@@ -46,9 +46,9 @@ class NaPlatformApp extends NaPlatformWidget {
   final bool debugShowCheckedModeBanner;
   final GlobalKey<NavigatorState>? navigatorKey;
 
-  final NaWidgetOptionsBuilder<NaPlatformAppOptions>? optionsBuilder;
+  final NaWidgetOptionsBuilder<NaAppOptions>? optionsBuilder;
 
-  const NaPlatformApp({
+  const NaApp({
     super.key,
     this.home,
     this.routes,
@@ -66,13 +66,13 @@ class NaPlatformApp extends NaPlatformWidget {
 
   @override
   Widget renderForUIType(BuildContext context, NaUiType uiType) {
-    final NaPlatformAppOptions? options = optionsBuilder?.call(
+    final NaAppOptions? options = optionsBuilder?.call(
       context,
       uiType,
     );
 
     if (uiType == NaUiType.cupertino) {
-      final NaPlatformAppOptionsCupertino? cupertinoOptions = options is NaPlatformAppOptionsCupertino ? options : null;
+      final NaAppOptionsCupertino? cupertinoOptions = options is NaAppOptionsCupertino ? options : null;
       return CupertinoApp(
         key                       : this.key,
         navigatorKey              : this.navigatorKey,
@@ -89,7 +89,7 @@ class NaPlatformApp extends NaPlatformWidget {
       );
     }
 
-    final NaPlatformAppOptionsMaterial? materialOptions = options is NaPlatformAppOptionsMaterial ? options : null;
+    final NaAppOptionsMaterial? materialOptions = options is NaAppOptionsMaterial ? options : null;
     return MaterialApp(
       key                       : this.key,
       navigatorKey              : this.navigatorKey,

@@ -10,27 +10,27 @@ class ExampleAlertDialogWidget extends StatelessWidget {
     final NaUiType uiType = NaUiTypeScope.of(context);
     final bool isMaterial = uiType == NaUiType.material;
 
-    return NaPlatformButton(
+    return NaButton(
       onPressed: () {
-        final dialog = NaPlatformAlertDialog(
+        final dialog = NaAlertDialog(
           title: const Text('Confirm Action'),
           content: const Text('Are you sure you want to proceed?'),
           actions: [
-            NaPlatformDialogAction(
+            NaDialogAction(
               onPressed: () => Navigator.pop(context),
               optionsBuilder: (context, uiType) {
                 if (uiType == NaUiType.cupertino) {
-                  return NaPlatformDialogActionOptionsCupertino(isDestructiveAction: true);
+                  return NaDialogActionOptionsCupertino(isDestructiveAction: true);
                 }
                 return null;
               },
               child: const Text('Cancel'),
             ),
-            NaPlatformDialogAction(
+            NaDialogAction(
               onPressed: () => Navigator.pop(context),
               optionsBuilder: (context, uiType) {
                 if (uiType == NaUiType.cupertino) {
-                  return NaPlatformDialogActionOptionsCupertino(isDefaultAction: true);
+                  return NaDialogActionOptionsCupertino(isDefaultAction: true);
                 }
                 return null;
               },

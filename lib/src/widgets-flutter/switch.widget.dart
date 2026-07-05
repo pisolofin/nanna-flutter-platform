@@ -4,13 +4,13 @@ import 'package:flutter/material.dart';
 
 import '../models/ui-type.model.dart';
 import '../models/widget-options.model.dart';
-import '../widgets/platform-widget.widget.dart';
+import '../widgets/na-widget.widget.dart';
 
-/// Base options for [NaPlatformSwitch].
-abstract class NaPlatformSwitchOptions extends NaWidgetOptions {}
+/// Base options for [NaSwitch].
+abstract class NaSwitchOptions extends NaWidgetOptions {}
 
-/// Material-specific options for [NaPlatformSwitch], resolving into a [Switch].
-class NaPlatformSwitchOptionsMaterial extends NaPlatformSwitchOptions {
+/// Material-specific options for [NaSwitch], resolving into a [Switch].
+class NaSwitchOptionsMaterial extends NaSwitchOptions {
   final Color? activeThumbColor;
   final Color? activeTrackColor;
   final Color? inactiveThumbColor;
@@ -29,7 +29,7 @@ class NaPlatformSwitchOptionsMaterial extends NaPlatformSwitchOptions {
   final FocusNode? focusNode;
   final bool? autofocus;
 
-  NaPlatformSwitchOptionsMaterial({
+  NaSwitchOptionsMaterial({
     this.activeThumbColor,
     this.activeTrackColor,
     this.inactiveThumbColor,
@@ -50,8 +50,8 @@ class NaPlatformSwitchOptionsMaterial extends NaPlatformSwitchOptions {
   });
 }
 
-/// Cupertino-specific options for [NaPlatformSwitch], resolving into a [CupertinoSwitch].
-class NaPlatformSwitchOptionsCupertino extends NaPlatformSwitchOptions {
+/// Cupertino-specific options for [NaSwitch], resolving into a [CupertinoSwitch].
+class NaSwitchOptionsCupertino extends NaSwitchOptions {
   final Color? activeTrackColor;
   final Color? inactiveTrackColor;
   final Color? thumbColor;
@@ -60,7 +60,7 @@ class NaPlatformSwitchOptionsCupertino extends NaPlatformSwitchOptions {
   final FocusNode? focusNode;
   final bool? autofocus;
 
-  NaPlatformSwitchOptionsCupertino({
+  NaSwitchOptionsCupertino({
     this.activeTrackColor,
     this.inactiveTrackColor,
     this.thumbColor,
@@ -73,13 +73,13 @@ class NaPlatformSwitchOptionsCupertino extends NaPlatformSwitchOptions {
 
 /// A generic Switch widget that automatically renders a [Switch] on Material 
 /// and a [CupertinoSwitch] on Cupertino.
-class NaPlatformSwitch extends NaPlatformWidget {
+class NaSwitch extends NaWidget {
   final bool value;
   final ValueChanged<bool>? onChanged;
 
-  final NaWidgetOptionsBuilder<NaPlatformSwitchOptions>? optionsBuilder;
+  final NaWidgetOptionsBuilder<NaSwitchOptions>? optionsBuilder;
 
-  const NaPlatformSwitch({
+  const NaSwitch({
     super.key,
     required this.value,
     required this.onChanged,
@@ -89,13 +89,13 @@ class NaPlatformSwitch extends NaPlatformWidget {
 
   @override
   Widget renderForUIType(BuildContext context, NaUiType uiType) {
-    final NaPlatformSwitchOptions? options = optionsBuilder?.call(
+    final NaSwitchOptions? options = optionsBuilder?.call(
       context,
       uiType,
     );
 
     if (uiType == NaUiType.cupertino) {
-      final NaPlatformSwitchOptionsCupertino? cupertinoOptions = options is NaPlatformSwitchOptionsCupertino ? options : null;
+      final NaSwitchOptionsCupertino? cupertinoOptions = options is NaSwitchOptionsCupertino ? options : null;
       return CupertinoSwitch(
         value      : this.value,
         onChanged  : this.onChanged,
@@ -109,7 +109,7 @@ class NaPlatformSwitch extends NaPlatformWidget {
       );
     }
 
-    final NaPlatformSwitchOptionsMaterial? materialOptions = options is NaPlatformSwitchOptionsMaterial ? options : null;
+    final NaSwitchOptionsMaterial? materialOptions = options is NaSwitchOptionsMaterial ? options : null;
     return Switch(
       value             : this.value,
       onChanged         : this.onChanged,

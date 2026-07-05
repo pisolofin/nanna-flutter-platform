@@ -1,7 +1,7 @@
 # nanna_flutter_platform
 
 This library provides unified cross-platform components for Flutter apps.
-Instead of writing platform-conditional code (`if (Platform.isIOS) ...`) on every screen, `nanna_flutter_platform` exposes generic widgets (like `NaPlatformButton`) that automatically translate into the appropriate native design system:
+Instead of writing platform-conditional code (`if (Platform.isIOS) ...`) on every screen, `nanna_flutter_platform` exposes generic widgets (like `NaButton`) that automatically translate into the appropriate native design system:
 - **Material Design** for Android, Web, and Linux
 - **Cupertino** for iOS and macOS
 
@@ -9,23 +9,23 @@ Instead of writing platform-conditional code (`if (Platform.isIOS) ...`) on ever
 
 | Flutter Widget (Material) | Cupertino Equivalent | Implemented | Component Name |
 | --- | --- | :---: | --- |
-| `MaterialApp` | `CupertinoApp` | ✅ | `NaPlatformApp` |
-| `Scaffold` | `CupertinoPageScaffold` | ✅ | `NaPlatformScaffold` |
-| `AppBar` | `CupertinoNavigationBar`| ✅ | `NaPlatformAppBar` |
-| `ElevatedButton` | `CupertinoButton` | ✅ | `NaPlatformButton` |
-| `IconButton` | `CupertinoButton` (icon) | ✅ | `NaPlatformIconButton` |
-| `Switch` | `CupertinoSwitch` | ✅ | `NaPlatformSwitch` |
-| `Checkbox` | `CupertinoCheckbox` | ✅ | `NaPlatformCheckbox` |
-| `Slider` | `CupertinoSlider` | ✅ | `NaPlatformSlider` |
-| `CircularProgressIndicator`| `CupertinoActivityIndicator`| ✅ | `NaPlatformProgressIndicator` |
-| `Card` | `Container` (decorated) | ✅ | `NaPlatformCard` |
-| `AlertDialog` | `CupertinoAlertDialog` | ✅ | `NaPlatformAlertDialog` |
-| `BottomNavigationBar` | `CupertinoTabBar` | ❌ | `NaPlatformBottomNavigationBar` |
-| `DatePicker` | `CupertinoDatePicker` | ✅ | `NaPlatformDatePicker` |
-| `TimePicker` | `CupertinoTimerPicker` | ✅ | `NaPlatformTimePicker` |
-| `ListTile` | `CupertinoListTile` | ✅ | `NaPlatformListTile` |
-| `Radio` | `CupertinoRadio` | ❌ | `NaPlatformRadio` |
-| `Dialog Action` | `CupertinoDialogAction` | ✅ | `NaPlatformDialogAction` |
+| `MaterialApp` | `CupertinoApp` | ✅ | `NaApp` |
+| `Scaffold` | `CupertinoPageScaffold` | ✅ | `NaScaffold` |
+| `AppBar` | `CupertinoNavigationBar`| ✅ | `NaAppBar` |
+| `ElevatedButton` | `CupertinoButton` | ✅ | `NaButton` |
+| `IconButton` | `CupertinoButton` (icon) | ✅ | `NaIconButton` |
+| `Switch` | `CupertinoSwitch` | ✅ | `NaSwitch` |
+| `Checkbox` | `CupertinoCheckbox` | ✅ | `NaCheckbox` |
+| `Slider` | `CupertinoSlider` | ✅ | `NaSlider` |
+| `CircularProgressIndicator`| `CupertinoActivityIndicator`| ✅ | `NaProgressIndicator` |
+| `Card` | `Container` (decorated) | ✅ | `NaCard` |
+| `AlertDialog` | `CupertinoAlertDialog` | ✅ | `NaAlertDialog` |
+| `BottomNavigationBar` | `CupertinoTabBar` | ❌ | `NaBottomNavigationBar` |
+| `DatePicker` | `CupertinoDatePicker` | ✅ | `NaDatePicker` |
+| `TimePicker` | `CupertinoTimerPicker` | ✅ | `NaTimePicker` |
+| `ListTile` | `CupertinoListTile` | ✅ | `NaListTile` |
+| `Radio` | `CupertinoRadio` | ❌ | `NaRadio` |
+| `Dialog Action` | `CupertinoDialogAction` | ✅ | `NaDialogAction` |
 
 
 ## How to use the library
@@ -53,12 +53,12 @@ When using `NaPlatform` widgets, you can pass common parameters (like `child`, `
 This pattern (based on Marker Interfaces) guarantees total Type Safety and perfect decoupling.
 
 ```dart
-NaPlatformButton(
+NaButton(
   onPressed: () => print('Pressed!'),
   optionsBuilder: (BuildContext context, NaUiType uiType) {
     // Specific options for Material
     if (uiType == NaUiType.material) {
-      return NaPlatformButtonOptionsMaterial(
+      return NaButtonOptionsMaterial(
         autofocus: true,
         clipBehavior: Clip.hardEdge,
       );

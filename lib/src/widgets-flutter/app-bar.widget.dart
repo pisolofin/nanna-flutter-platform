@@ -3,30 +3,30 @@ import 'package:flutter/cupertino.dart';
 
 import '../models/ui-type.model.dart';
 import '../models/widget-options.model.dart';
-import '../widgets/platform-widget.widget.dart';
+import '../widgets/na-widget.widget.dart';
 
-/// Base options for [NaPlatformAppBar].
-abstract class NaPlatformAppBarOptions extends NaWidgetOptions {}
+/// Base options for [NaAppBar].
+abstract class NaAppBarOptions extends NaWidgetOptions {}
 
-/// Material-specific options for [NaPlatformAppBar], resolving into an [AppBar].
-class NaPlatformAppBarOptionsMaterial extends NaPlatformAppBarOptions {
+/// Material-specific options for [NaAppBar], resolving into an [AppBar].
+class NaAppBarOptionsMaterial extends NaAppBarOptions {
   final double? elevation;
   final bool? centerTitle;
   final PreferredSizeWidget? bottom;
 
-  NaPlatformAppBarOptionsMaterial({
+  NaAppBarOptionsMaterial({
     this.elevation,
     this.centerTitle,
     this.bottom,
   });
 }
 
-/// Cupertino-specific options for [NaPlatformAppBar], resolving into a [CupertinoNavigationBar].
-class NaPlatformAppBarOptionsCupertino extends NaPlatformAppBarOptions {
+/// Cupertino-specific options for [NaAppBar], resolving into a [CupertinoNavigationBar].
+class NaAppBarOptionsCupertino extends NaAppBarOptions {
   final Border? border;
   final bool? transitionBetweenRoutes;
 
-  NaPlatformAppBarOptionsCupertino({
+  NaAppBarOptionsCupertino({
     this.border,
     this.transitionBetweenRoutes,
   });
@@ -34,15 +34,15 @@ class NaPlatformAppBarOptionsCupertino extends NaPlatformAppBarOptions {
 
 /// A generic AppBar widget that automatically renders an [AppBar] on Material 
 /// and a [CupertinoNavigationBar] on Cupertino.
-class NaPlatformAppBar extends NaPlatformWidget implements ObstructingPreferredSizeWidget {
+class NaAppBar extends NaWidget implements ObstructingPreferredSizeWidget {
   final Widget? title;
   final Widget? leading;
   final List<Widget>? actions;
   final Color? backgroundColor;
 
-  final NaWidgetOptionsBuilder<NaPlatformAppBarOptions>? optionsBuilder;
+  final NaWidgetOptionsBuilder<NaAppBarOptions>? optionsBuilder;
 
-  const NaPlatformAppBar({
+  const NaAppBar({
     super.key,
     this.title,
     this.leading,
@@ -54,13 +54,13 @@ class NaPlatformAppBar extends NaPlatformWidget implements ObstructingPreferredS
 
   @override
   Widget renderForUIType(BuildContext context, NaUiType uiType) {
-    final NaPlatformAppBarOptions? options = optionsBuilder?.call(
+    final NaAppBarOptions? options = optionsBuilder?.call(
       context,
       uiType,
     );
 
     if (uiType == NaUiType.cupertino) {
-      final NaPlatformAppBarOptionsCupertino? cupertinoOptions = options is NaPlatformAppBarOptionsCupertino ? options : null;
+      final NaAppBarOptionsCupertino? cupertinoOptions = options is NaAppBarOptionsCupertino ? options : null;
       
       Widget? trailingWidget;
       if (this.actions != null && this.actions!.isNotEmpty) {
@@ -80,7 +80,7 @@ class NaPlatformAppBar extends NaPlatformWidget implements ObstructingPreferredS
       );
     }
 
-    final NaPlatformAppBarOptionsMaterial? materialOptions = options is NaPlatformAppBarOptionsMaterial ? options : null;
+    final NaAppBarOptionsMaterial? materialOptions = options is NaAppBarOptionsMaterial ? options : null;
     return AppBar(
       leading        : this.leading,
       title          : this.title,

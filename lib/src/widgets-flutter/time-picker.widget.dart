@@ -3,13 +3,13 @@ import 'package:flutter/material.dart';
 
 import '../models/ui-type.model.dart';
 import '../models/widget-options.model.dart';
-import '../widgets/platform-widget.widget.dart';
+import '../widgets/na-widget.widget.dart';
 
-/// Base options for [NaPlatformTimePicker].
-abstract class NaPlatformTimePickerOptions extends NaWidgetOptions {}
+/// Base options for [NaTimePicker].
+abstract class NaTimePickerOptions extends NaWidgetOptions {}
 
-/// Material-specific options for [NaPlatformTimePicker], resolving into a [TimePickerDialog].
-class NaPlatformTimePickerOptionsMaterial extends NaPlatformTimePickerOptions {
+/// Material-specific options for [NaTimePicker], resolving into a [TimePickerDialog].
+class NaTimePickerOptionsMaterial extends NaTimePickerOptions {
   final String? cancelText;
   final String? confirmText;
   final String? helpText;
@@ -19,7 +19,7 @@ class NaPlatformTimePickerOptionsMaterial extends NaPlatformTimePickerOptions {
   final TimePickerEntryMode? initialEntryMode;
   final Orientation? orientation;
   
-  NaPlatformTimePickerOptionsMaterial({
+  NaTimePickerOptionsMaterial({
     this.cancelText,
     this.confirmText,
     this.helpText,
@@ -31,8 +31,8 @@ class NaPlatformTimePickerOptionsMaterial extends NaPlatformTimePickerOptions {
   });
 }
 
-/// Cupertino-specific options for [NaPlatformTimePicker], resolving into a [CupertinoTimerPicker].
-class NaPlatformTimePickerOptionsCupertino extends NaPlatformTimePickerOptions {
+/// Cupertino-specific options for [NaTimePicker], resolving into a [CupertinoTimerPicker].
+class NaTimePickerOptionsCupertino extends NaTimePickerOptions {
   final CupertinoTimerPickerMode? mode;
   final int? minuteInterval;
   final int? secondInterval;
@@ -40,7 +40,7 @@ class NaPlatformTimePickerOptionsCupertino extends NaPlatformTimePickerOptions {
   final Color? backgroundColor;
   final double? itemExtent;
   
-  NaPlatformTimePickerOptionsCupertino({
+  NaTimePickerOptionsCupertino({
     this.mode,
     this.minuteInterval,
     this.secondInterval,
@@ -56,13 +56,13 @@ class NaPlatformTimePickerOptionsCupertino extends NaPlatformTimePickerOptions {
 /// NOTE: Because Flutter Material only exposes the TimePicker as a Dialog ([TimePickerDialog]),
 /// using this widget inline on Material will render a Dialog widget directly in your tree.
 /// It is recommended to use this widget inside a dialog wrapper.
-class NaPlatformTimePicker extends NaPlatformWidget {
+class NaTimePicker extends NaWidget {
   final Duration initialTimerDuration;
   final ValueChanged<Duration> onTimerDurationChanged;
 
-  final NaWidgetOptionsBuilder<NaPlatformTimePickerOptions>? optionsBuilder;
+  final NaWidgetOptionsBuilder<NaTimePickerOptions>? optionsBuilder;
 
-  const NaPlatformTimePicker({
+  const NaTimePicker({
     super.key,
     this.initialTimerDuration = Duration.zero,
     required this.onTimerDurationChanged,
@@ -72,13 +72,13 @@ class NaPlatformTimePicker extends NaPlatformWidget {
 
   @override
   Widget renderForUIType(BuildContext context, NaUiType uiType) {
-    final NaPlatformTimePickerOptions? options = optionsBuilder?.call(
+    final NaTimePickerOptions? options = optionsBuilder?.call(
       context,
       uiType,
     );
 
     if (uiType == NaUiType.cupertino) {
-      final NaPlatformTimePickerOptionsCupertino? cupertinoOptions = options is NaPlatformTimePickerOptionsCupertino ? options : null;
+      final NaTimePickerOptionsCupertino? cupertinoOptions = options is NaTimePickerOptionsCupertino ? options : null;
       return SizedBox(
         height: 216.0,
         child: CupertinoTimerPicker(
@@ -94,7 +94,7 @@ class NaPlatformTimePicker extends NaPlatformWidget {
       );
     }
 
-    final NaPlatformTimePickerOptionsMaterial? materialOptions = options is NaPlatformTimePickerOptionsMaterial ? options : null;
+    final NaTimePickerOptionsMaterial? materialOptions = options is NaTimePickerOptionsMaterial ? options : null;
     
     final TimeOfDay initialTime = TimeOfDay(
       hour: this.initialTimerDuration.inHours % 24, 

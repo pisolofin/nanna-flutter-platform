@@ -6,7 +6,7 @@ This allows third-party libraries (or your own app code) to dynamically register
 
 ## Example: Adding `macos_ui` Support
 
-Suppose you want to create an external library `nanna_macos_ui` to add macOS UI support. You do not need to modify the core `NaPlatformButton`. 
+Suppose you want to create an external library `nanna_macos_ui` to add macOS UI support. You do not need to modify the core `NaButton`. 
 Instead, you register a builder for it.
 
 ### 1. Define the Plugin
@@ -17,7 +17,7 @@ import 'package:macos_ui/macos_ui.dart' as macos;
 import 'package:nanna_flutter_platform/nanna_flutter_platform.dart';
 
 // 1. Define custom options for your specific platform
-class MacosButtonOptions extends NaPlatformButtonOptions {
+class MacosButtonOptions extends NaButtonOptions {
   final bool useAcrylicEffect;
   MacosButtonOptions({this.useAcrylicEffect = false});
 }
@@ -33,11 +33,11 @@ void initNannaMacosUi() {
     uiType: 'macos_ui_design',
   );
 
-  // B. Register how to build a NaPlatformButton when macosUiType is active
+  // B. Register how to build a NaButton when macosUiType is active
   naPlatformServiceRegisterWidgetBuilder(
     macosUiType, 
-    NaPlatformButton, 
-    (BuildContext context, covariant NaPlatformButton widget) {
+    NaButton, 
+    (BuildContext context, covariant NaButton widget) {
       // The builder checks if the user provided an optionsBuilder, and executes it 
       // to see if MacosButtonOptions were provided.
       final options = widget.optionsBuilder?.call(context, macosUiType);
@@ -56,10 +56,10 @@ void initNannaMacosUi() {
 
 ### 2. How it works behind the scenes
 
-1. **Initialization**: The app calls `initNannaMacosUi()`. The registry now knows how to build a `NaPlatformButton` for the macOS UI type.
-2. **Execution**: When a `NaPlatformButton` is placed in the tree:
+1. **Initialization**: The app calls `initNannaMacosUi()`. The registry now knows how to build a `NaButton` for the macOS UI type.
+2. **Execution**: When a `NaButton` is placed in the tree:
    - It checks the current `NaUiTypeScope` (if set to `macosUiType`).
-   - It asks the service if a builder exists for `NaPlatformButton` + `macosUiType`.
+   - It asks the service if a builder exists for `NaButton` + `macosUiType`.
    - The registry returns the builder defined in step 1.
    - The function is executed, returning a real `macos.PushButton`.
 

@@ -3,13 +3,13 @@ import 'package:flutter/material.dart';
 
 import '../models/ui-type.model.dart';
 import '../models/widget-options.model.dart';
-import '../widgets/platform-widget.widget.dart';
+import '../widgets/na-widget.widget.dart';
 
-/// Base options for [NaPlatformCard].
-abstract class NaPlatformCardOptions extends NaWidgetOptions {}
+/// Base options for [NaCard].
+abstract class NaCardOptions extends NaWidgetOptions {}
 
-/// Material-specific options for [NaPlatformCard], resolving into a [Card].
-class NaPlatformCardOptionsMaterial extends NaPlatformCardOptions {
+/// Material-specific options for [NaCard], resolving into a [Card].
+class NaCardOptionsMaterial extends NaCardOptions {
   final Color? color;
   final Color? shadowColor;
   final Color? surfaceTintColor;
@@ -20,7 +20,7 @@ class NaPlatformCardOptionsMaterial extends NaPlatformCardOptions {
   final Clip? clipBehavior;
   final bool? semanticContainer;
 
-  NaPlatformCardOptionsMaterial({
+  NaCardOptionsMaterial({
     this.color,
     this.shadowColor,
     this.surfaceTintColor,
@@ -33,15 +33,15 @@ class NaPlatformCardOptionsMaterial extends NaPlatformCardOptions {
   });
 }
 
-/// Cupertino-specific options for [NaPlatformCard], resolving into a decorated [Container].
-class NaPlatformCardOptionsCupertino extends NaPlatformCardOptions {
+/// Cupertino-specific options for [NaCard], resolving into a decorated [Container].
+class NaCardOptionsCupertino extends NaCardOptions {
   final Color? color;
   final EdgeInsetsGeometry? margin;
   final EdgeInsetsGeometry? padding;
   final BorderRadiusGeometry? borderRadius;
   final BoxBorder? border;
 
-  NaPlatformCardOptionsCupertino({
+  NaCardOptionsCupertino({
     this.color,
     this.margin,
     this.padding,
@@ -52,12 +52,12 @@ class NaPlatformCardOptionsCupertino extends NaPlatformCardOptions {
 
 /// A generic Card widget that automatically renders a [Card] on Material 
 /// and a decorated [Container] on Cupertino.
-class NaPlatformCard extends NaPlatformWidget {
+class NaCard extends NaWidget {
   final Widget child;
 
-  final NaWidgetOptionsBuilder<NaPlatformCardOptions>? optionsBuilder;
+  final NaWidgetOptionsBuilder<NaCardOptions>? optionsBuilder;
 
-  const NaPlatformCard({
+  const NaCard({
     super.key,
     required this.child,
     this.optionsBuilder,
@@ -66,13 +66,13 @@ class NaPlatformCard extends NaPlatformWidget {
 
   @override
   Widget renderForUIType(BuildContext context, NaUiType uiType) {
-    final NaPlatformCardOptions? options = optionsBuilder?.call(
+    final NaCardOptions? options = optionsBuilder?.call(
       context,
       uiType,
     );
 
     if (uiType == NaUiType.cupertino) {
-      final NaPlatformCardOptionsCupertino? cupertinoOptions = options is NaPlatformCardOptionsCupertino ? options : null;
+      final NaCardOptionsCupertino? cupertinoOptions = options is NaCardOptionsCupertino ? options : null;
       return Container(
         margin : cupertinoOptions?.margin ?? const EdgeInsets.all(4.0),
         padding: cupertinoOptions?.padding,
@@ -88,7 +88,7 @@ class NaPlatformCard extends NaPlatformWidget {
       );
     }
 
-    final NaPlatformCardOptionsMaterial? materialOptions = options is NaPlatformCardOptionsMaterial ? options : null;
+    final NaCardOptionsMaterial? materialOptions = options is NaCardOptionsMaterial ? options : null;
     return Card(
       color             : materialOptions?.color,
       shadowColor       : materialOptions?.shadowColor,

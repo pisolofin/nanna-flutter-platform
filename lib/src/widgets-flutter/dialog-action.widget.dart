@@ -3,19 +3,19 @@ import 'package:flutter/material.dart';
 
 import '../models/ui-type.model.dart';
 import '../models/widget-options.model.dart';
-import '../widgets/platform-widget.widget.dart';
+import '../widgets/na-widget.widget.dart';
 
-/// Base options for [NaPlatformDialogAction].
-abstract class NaPlatformDialogActionOptions extends NaWidgetOptions {}
+/// Base options for [NaDialogAction].
+abstract class NaDialogActionOptions extends NaWidgetOptions {}
 
-/// Material-specific options for [NaPlatformDialogAction], resolving into a [TextButton].
-class NaPlatformDialogActionOptionsMaterial extends NaPlatformDialogActionOptions {
+/// Material-specific options for [NaDialogAction], resolving into a [TextButton].
+class NaDialogActionOptionsMaterial extends NaDialogActionOptions {
   final ButtonStyle? style;
   final FocusNode? focusNode;
   final bool? autofocus;
   final Clip? clipBehavior;
   
-  NaPlatformDialogActionOptionsMaterial({
+  NaDialogActionOptionsMaterial({
     this.style,
     this.focusNode,
     this.autofocus,
@@ -23,13 +23,13 @@ class NaPlatformDialogActionOptionsMaterial extends NaPlatformDialogActionOption
   });
 }
 
-/// Cupertino-specific options for [NaPlatformDialogAction], resolving into a [CupertinoDialogAction].
-class NaPlatformDialogActionOptionsCupertino extends NaPlatformDialogActionOptions {
+/// Cupertino-specific options for [NaDialogAction], resolving into a [CupertinoDialogAction].
+class NaDialogActionOptionsCupertino extends NaDialogActionOptions {
   final bool? isDefaultAction;
   final bool? isDestructiveAction;
   final TextStyle? textStyle;
   
-  NaPlatformDialogActionOptionsCupertino({
+  NaDialogActionOptionsCupertino({
     this.isDefaultAction,
     this.isDestructiveAction,
     this.textStyle,
@@ -38,13 +38,13 @@ class NaPlatformDialogActionOptionsCupertino extends NaPlatformDialogActionOptio
 
 /// A generic Dialog Action widget that automatically renders a [TextButton] on Material 
 /// and a [CupertinoDialogAction] on Cupertino.
-class NaPlatformDialogAction extends NaPlatformWidget {
+class NaDialogAction extends NaWidget {
   final Widget child;
   final VoidCallback? onPressed;
 
-  final NaWidgetOptionsBuilder<NaPlatformDialogActionOptions>? optionsBuilder;
+  final NaWidgetOptionsBuilder<NaDialogActionOptions>? optionsBuilder;
 
-  const NaPlatformDialogAction({
+  const NaDialogAction({
     super.key,
     required this.child,
     required this.onPressed,
@@ -54,13 +54,13 @@ class NaPlatformDialogAction extends NaPlatformWidget {
 
   @override
   Widget renderForUIType(BuildContext context, NaUiType uiType) {
-    final NaPlatformDialogActionOptions? options = optionsBuilder?.call(
+    final NaDialogActionOptions? options = optionsBuilder?.call(
       context,
       uiType,
     );
 
     if (uiType == NaUiType.cupertino) {
-      final NaPlatformDialogActionOptionsCupertino? cupertinoOptions = options is NaPlatformDialogActionOptionsCupertino ? options : null;
+      final NaDialogActionOptionsCupertino? cupertinoOptions = options is NaDialogActionOptionsCupertino ? options : null;
       return CupertinoDialogAction(
         onPressed          : this.onPressed,
         isDefaultAction    : cupertinoOptions?.isDefaultAction ?? false,
@@ -70,7 +70,7 @@ class NaPlatformDialogAction extends NaPlatformWidget {
       );
     }
 
-    final NaPlatformDialogActionOptionsMaterial? materialOptions = options is NaPlatformDialogActionOptionsMaterial ? options : null;
+    final NaDialogActionOptionsMaterial? materialOptions = options is NaDialogActionOptionsMaterial ? options : null;
     return TextButton(
       onPressed   : this.onPressed,
       style       : materialOptions?.style,

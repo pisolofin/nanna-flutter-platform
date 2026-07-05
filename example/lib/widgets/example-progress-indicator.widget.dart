@@ -8,9 +8,9 @@ class ExampleProgressIndicatorWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Column(
       children: [
-        Text('NaPlatformProgressIndicator:'),
+        Text('NaProgressIndicator:'),
         SizedBox(height: 10.0),
-        NaPlatformProgressIndicator(),
+        NaProgressIndicator(),
       ],
     );
   }

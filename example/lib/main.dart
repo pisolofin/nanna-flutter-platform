@@ -50,16 +50,16 @@ class _MyAppState extends State<MyApp> {
       uiType: _currentUiType,
       child: AppStateScope(
         toggleUiType: _toggleUiType,
-        child: NaPlatformApp(
+        child: NaApp(
           title: 'Nanna Platform Example',
           optionsBuilder: (BuildContext context, NaUiType uiType) {
             if (uiType == NaUiType.cupertino) {
-              return NaPlatformAppOptionsCupertino(
+              return NaAppOptionsCupertino(
                 theme: const CupertinoThemeData(brightness: Brightness.light),
               );
             }
             
-            return NaPlatformAppOptionsMaterial(
+            return NaAppOptionsMaterial(
               theme: ThemeData(
                 colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
                 useMaterial3: true,

@@ -3,13 +3,13 @@ import 'package:flutter/material.dart';
 
 import '../models/ui-type.model.dart';
 import '../models/widget-options.model.dart';
-import '../widgets/platform-widget.widget.dart';
+import '../widgets/na-widget.widget.dart';
 
-/// Base options for [NaPlatformSlider].
-abstract class NaPlatformSliderOptions extends NaWidgetOptions {}
+/// Base options for [NaSlider].
+abstract class NaSliderOptions extends NaWidgetOptions {}
 
-/// Material-specific options for [NaPlatformSlider], resolving into a [Slider].
-class NaPlatformSliderOptionsMaterial extends NaPlatformSliderOptions {
+/// Material-specific options for [NaSlider], resolving into a [Slider].
+class NaSliderOptionsMaterial extends NaSliderOptions {
   final Color? activeColor;
   final Color? inactiveColor;
   final Color? thumbColor;
@@ -21,7 +21,7 @@ class NaPlatformSliderOptionsMaterial extends NaPlatformSliderOptions {
   final String? label;
   final int? divisions;
 
-  NaPlatformSliderOptionsMaterial({
+  NaSliderOptionsMaterial({
     this.activeColor,
     this.inactiveColor,
     this.thumbColor,
@@ -35,13 +35,13 @@ class NaPlatformSliderOptionsMaterial extends NaPlatformSliderOptions {
   });
 }
 
-/// Cupertino-specific options for [NaPlatformSlider], resolving into a [CupertinoSlider].
-class NaPlatformSliderOptionsCupertino extends NaPlatformSliderOptions {
+/// Cupertino-specific options for [NaSlider], resolving into a [CupertinoSlider].
+class NaSliderOptionsCupertino extends NaSliderOptions {
   final Color? activeColor;
   final Color? thumbColor;
   final int? divisions;
 
-  NaPlatformSliderOptionsCupertino({
+  NaSliderOptionsCupertino({
     this.activeColor,
     this.thumbColor,
     this.divisions,
@@ -50,7 +50,7 @@ class NaPlatformSliderOptionsCupertino extends NaPlatformSliderOptions {
 
 /// A generic Slider widget that automatically renders a [Slider] on Material 
 /// and a [CupertinoSlider] on Cupertino.
-class NaPlatformSlider extends NaPlatformWidget {
+class NaSlider extends NaWidget {
   final double value;
   final ValueChanged<double>? onChanged;
   final ValueChanged<double>? onChangeStart;
@@ -58,9 +58,9 @@ class NaPlatformSlider extends NaPlatformWidget {
   final double min;
   final double max;
 
-  final NaWidgetOptionsBuilder<NaPlatformSliderOptions>? optionsBuilder;
+  final NaWidgetOptionsBuilder<NaSliderOptions>? optionsBuilder;
 
-  const NaPlatformSlider({
+  const NaSlider({
     super.key,
     required this.value,
     required this.onChanged,
@@ -74,13 +74,13 @@ class NaPlatformSlider extends NaPlatformWidget {
 
   @override
   Widget renderForUIType(BuildContext context, NaUiType uiType) {
-    final NaPlatformSliderOptions? options = optionsBuilder?.call(
+    final NaSliderOptions? options = optionsBuilder?.call(
       context,
       uiType,
     );
 
     if (uiType == NaUiType.cupertino) {
-      final NaPlatformSliderOptionsCupertino? cupertinoOptions = options is NaPlatformSliderOptionsCupertino ? options : null;
+      final NaSliderOptionsCupertino? cupertinoOptions = options is NaSliderOptionsCupertino ? options : null;
       return CupertinoSlider(
         value        : this.value,
         onChanged    : this.onChanged,
@@ -94,7 +94,7 @@ class NaPlatformSlider extends NaPlatformWidget {
       );
     }
 
-    final NaPlatformSliderOptionsMaterial? materialOptions = options is NaPlatformSliderOptionsMaterial ? options : null;
+    final NaSliderOptionsMaterial? materialOptions = options is NaSliderOptionsMaterial ? options : null;
     return Slider(
       value                    : this.value,
       onChanged                : this.onChanged,

@@ -3,21 +3,21 @@ import 'package:flutter/cupertino.dart';
 
 import '../models/ui-type.model.dart';
 import '../models/widget-options.model.dart';
-import '../widgets/platform-widget.widget.dart';
+import '../widgets/na-widget.widget.dart';
 
-import 'platform-app-bar.widget.dart';
+import 'app-bar.widget.dart';
 
-/// Base options for [NaPlatformScaffold].
-abstract class NaPlatformScaffoldOptions extends NaWidgetOptions {}
+/// Base options for [NaScaffold].
+abstract class NaScaffoldOptions extends NaWidgetOptions {}
 
-/// Material-specific options for [NaPlatformScaffold], resolving into a [Scaffold].
-class NaPlatformScaffoldOptionsMaterial extends NaPlatformScaffoldOptions {
+/// Material-specific options for [NaScaffold], resolving into a [Scaffold].
+class NaScaffoldOptionsMaterial extends NaScaffoldOptions {
   final Widget? floatingActionButton;
   final Widget? bottomNavigationBar;
   final Widget? drawer;
   final bool? resizeToAvoidBottomInset;
 
-  NaPlatformScaffoldOptionsMaterial({
+  NaScaffoldOptionsMaterial({
     this.floatingActionButton,
     this.bottomNavigationBar,
     this.drawer,
@@ -25,23 +25,23 @@ class NaPlatformScaffoldOptionsMaterial extends NaPlatformScaffoldOptions {
   });
 }
 
-/// Cupertino-specific options for [NaPlatformScaffold], resolving into a [CupertinoPageScaffold].
-class NaPlatformScaffoldOptionsCupertino extends NaPlatformScaffoldOptions {
+/// Cupertino-specific options for [NaScaffold], resolving into a [CupertinoPageScaffold].
+class NaScaffoldOptionsCupertino extends NaScaffoldOptions {
   final bool? resizeToAvoidBottomInset;
 
-  NaPlatformScaffoldOptionsCupertino({this.resizeToAvoidBottomInset});
+  NaScaffoldOptionsCupertino({this.resizeToAvoidBottomInset});
 }
 
 /// A generic Scaffold widget that automatically renders a [Scaffold] on Material
 /// and a [CupertinoPageScaffold] on Cupertino.
-class NaPlatformScaffold extends NaPlatformWidget {
-  final NaPlatformAppBar? appBar;
+class NaScaffold extends NaWidget {
+  final NaAppBar? appBar;
   final Widget body;
   final Color? backgroundColor;
 
-  final NaWidgetOptionsBuilder<NaPlatformScaffoldOptions>? optionsBuilder;
+  final NaWidgetOptionsBuilder<NaScaffoldOptions>? optionsBuilder;
 
-  const NaPlatformScaffold({
+  const NaScaffold({
     super.key,
     this.appBar,
     required this.body,
@@ -52,14 +52,14 @@ class NaPlatformScaffold extends NaPlatformWidget {
 
   @override
   Widget renderForUIType(BuildContext context, NaUiType uiType) {
-    final NaPlatformScaffoldOptions? options = optionsBuilder?.call(
+    final NaScaffoldOptions? options = optionsBuilder?.call(
       context,
       uiType,
     );
 
     if (uiType == NaUiType.cupertino) {
-      final NaPlatformScaffoldOptionsCupertino? cupertinoOptions =
-          options is NaPlatformScaffoldOptionsCupertino ? options : null;
+      final NaScaffoldOptionsCupertino? cupertinoOptions =
+          options is NaScaffoldOptionsCupertino ? options : null;
       return CupertinoPageScaffold(
         navigationBar: this.appBar,
         backgroundColor: this.backgroundColor,
@@ -69,8 +69,8 @@ class NaPlatformScaffold extends NaPlatformWidget {
       );
     }
 
-    final NaPlatformScaffoldOptionsMaterial? materialOptions =
-        options is NaPlatformScaffoldOptionsMaterial ? options : null;
+    final NaScaffoldOptionsMaterial? materialOptions =
+        options is NaScaffoldOptionsMaterial ? options : null;
     return Scaffold(
       appBar: this.appBar,
       body: this.body,

@@ -8,21 +8,21 @@ class ExampleCardListWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        const Text('NaPlatformCard e NaPlatformListTile:'),
+        const Text('NaCard e NaListTile:'),
         Padding(
           padding: const EdgeInsets.all(16.0),
-          child: NaPlatformCard(
+          child: NaCard(
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-                NaPlatformListTile(
+                NaListTile(
                   leading: const Icon(Icons.person),
                   title: const Text('John Doe'),
                   subtitle: const Text('Software Engineer'),
                   hasChevron: true,
                   onTap: () {},
                 ),
-                NaPlatformListTile(
+                NaListTile(
                   leading: const Icon(Icons.email),
                   title: const Text('john.doe@example.com'),
                   onTap: () {},

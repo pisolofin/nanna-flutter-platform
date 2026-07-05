@@ -1,16 +1,16 @@
 import 'package:flutter/widgets.dart';
 
 import '../models/ui-type.model.dart';
-import '../widgets/platform-widget.widget.dart';
+import '../widgets/na-widget.widget.dart';
 
 /// Typdef for a generic platform widget builder
-typedef NaPlatformWidgetBuilder =
+typedef NaWidgetBuilder =
     Widget Function(BuildContext context, dynamic widget);
 
-final Map<Type, Map<NaUiType, NaPlatformWidgetBuilder>> _widgetBuilders = {};
+final Map<Type, Map<NaUiType, NaWidgetBuilder>> _widgetBuilders = {};
 
 /// Registers a specific widget builder for a UI type.
-void naPlatformServiceRegisterWidgetBuilder<T extends NaPlatformWidget>(
+void naPlatformServiceRegisterWidgetBuilder<T extends NaWidget>(
   NaUiType uiType,
   Widget Function(BuildContext context, T widget) builder,
 ) {
@@ -23,7 +23,7 @@ void naPlatformServiceRegisterWidgetBuilder<T extends NaPlatformWidget>(
 }
 
 /// Gets a registered widget builder for a widget type and UI type.
-NaPlatformWidgetBuilder? naPlatformServiceGetWidgetBuilder(
+NaWidgetBuilder? naPlatformServiceGetWidgetBuilder(
   Type widgetType,
   NaUiType uiType,
 ) {

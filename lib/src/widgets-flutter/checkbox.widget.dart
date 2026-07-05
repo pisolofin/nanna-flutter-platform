@@ -3,13 +3,13 @@ import 'package:flutter/material.dart';
 
 import '../models/ui-type.model.dart';
 import '../models/widget-options.model.dart';
-import '../widgets/platform-widget.widget.dart';
+import '../widgets/na-widget.widget.dart';
 
-/// Base options for [NaPlatformCheckbox].
-abstract class NaPlatformCheckboxOptions extends NaWidgetOptions {}
+/// Base options for [NaCheckbox].
+abstract class NaCheckboxOptions extends NaWidgetOptions {}
 
-/// Material-specific options for [NaPlatformCheckbox], resolving into a [Checkbox].
-class NaPlatformCheckboxOptionsMaterial extends NaPlatformCheckboxOptions {
+/// Material-specific options for [NaCheckbox], resolving into a [Checkbox].
+class NaCheckboxOptionsMaterial extends NaCheckboxOptions {
   final bool? tristate;
   final MouseCursor? mouseCursor;
   final Color? activeColor;
@@ -28,7 +28,7 @@ class NaPlatformCheckboxOptionsMaterial extends NaPlatformCheckboxOptions {
   final bool? isError;
   final String? semanticLabel;
 
-  NaPlatformCheckboxOptionsMaterial({
+  NaCheckboxOptionsMaterial({
     this.tristate,
     this.mouseCursor,
     this.activeColor,
@@ -49,8 +49,8 @@ class NaPlatformCheckboxOptionsMaterial extends NaPlatformCheckboxOptions {
   });
 }
 
-/// Cupertino-specific options for [NaPlatformCheckbox], resolving into a [CupertinoCheckbox].
-class NaPlatformCheckboxOptionsCupertino extends NaPlatformCheckboxOptions {
+/// Cupertino-specific options for [NaCheckbox], resolving into a [CupertinoCheckbox].
+class NaCheckboxOptionsCupertino extends NaCheckboxOptions {
   final bool? tristate;
   final Color? activeColor;
   final Color? checkColor;
@@ -61,7 +61,7 @@ class NaPlatformCheckboxOptionsCupertino extends NaPlatformCheckboxOptions {
   final BorderSide? side;
   final String? semanticLabel;
 
-  NaPlatformCheckboxOptionsCupertino({
+  NaCheckboxOptionsCupertino({
     this.tristate,
     this.activeColor,
     this.checkColor,
@@ -76,13 +76,13 @@ class NaPlatformCheckboxOptionsCupertino extends NaPlatformCheckboxOptions {
 
 /// A generic Checkbox widget that automatically renders a [Checkbox] on Material 
 /// and a [CupertinoCheckbox] on Cupertino.
-class NaPlatformCheckbox extends NaPlatformWidget {
+class NaCheckbox extends NaWidget {
   final bool? value;
   final ValueChanged<bool?>? onChanged;
 
-  final NaWidgetOptionsBuilder<NaPlatformCheckboxOptions>? optionsBuilder;
+  final NaWidgetOptionsBuilder<NaCheckboxOptions>? optionsBuilder;
 
-  const NaPlatformCheckbox({
+  const NaCheckbox({
     super.key,
     required this.value,
     required this.onChanged,
@@ -92,13 +92,13 @@ class NaPlatformCheckbox extends NaPlatformWidget {
 
   @override
   Widget renderForUIType(BuildContext context, NaUiType uiType) {
-    final NaPlatformCheckboxOptions? options = optionsBuilder?.call(
+    final NaCheckboxOptions? options = optionsBuilder?.call(
       context,
       uiType,
     );
 
     if (uiType == NaUiType.cupertino) {
-      final NaPlatformCheckboxOptionsCupertino? cupertinoOptions = options is NaPlatformCheckboxOptionsCupertino ? options : null;
+      final NaCheckboxOptionsCupertino? cupertinoOptions = options is NaCheckboxOptionsCupertino ? options : null;
       return CupertinoCheckbox(
         value        : this.value,
         onChanged    : this.onChanged,
@@ -114,7 +114,7 @@ class NaPlatformCheckbox extends NaPlatformWidget {
       );
     }
 
-    final NaPlatformCheckboxOptionsMaterial? materialOptions = options is NaPlatformCheckboxOptionsMaterial ? options : null;
+    final NaCheckboxOptionsMaterial? materialOptions = options is NaCheckboxOptionsMaterial ? options : null;
     return Checkbox(
       value                : this.value,
       onChanged            : this.onChanged,

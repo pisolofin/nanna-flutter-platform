@@ -15,8 +15,8 @@ class _ExampleSwitchWidgetState extends State<ExampleSwitchWidget> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        const Text('NaPlatformSwitch:'),
-        NaPlatformSwitch(
+        const Text('NaSwitch:'),
+        NaSwitch(
           value: _switchValue,
           onChanged: (bool value) {
             setState(() {

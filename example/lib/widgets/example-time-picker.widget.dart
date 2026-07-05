@@ -10,9 +10,9 @@ class ExampleTimePickerWidget extends StatelessWidget {
     final NaUiType uiType = NaUiTypeScope.of(context);
     final bool isMaterial = uiType == NaUiType.material;
 
-    return NaPlatformButton(
+    return NaButton(
       onPressed: () {
-        final picker = NaPlatformTimePicker(
+        final picker = NaTimePicker(
           initialTimerDuration: const Duration(hours: 10, minutes: 30),
           onTimerDurationChanged: (duration) {},
         );

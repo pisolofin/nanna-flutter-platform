@@ -3,13 +3,13 @@ import 'package:flutter/material.dart';
 
 import '../models/ui-type.model.dart';
 import '../models/widget-options.model.dart';
-import '../widgets/platform-widget.widget.dart';
+import '../widgets/na-widget.widget.dart';
 
-/// Base options for [NaPlatformProgressIndicator].
-abstract class NaPlatformProgressIndicatorOptions extends NaWidgetOptions {}
+/// Base options for [NaProgressIndicator].
+abstract class NaProgressIndicatorOptions extends NaWidgetOptions {}
 
-/// Material-specific options for [NaPlatformProgressIndicator], resolving into a [CircularProgressIndicator].
-class NaPlatformProgressIndicatorOptionsMaterial extends NaPlatformProgressIndicatorOptions {
+/// Material-specific options for [NaProgressIndicator], resolving into a [CircularProgressIndicator].
+class NaProgressIndicatorOptionsMaterial extends NaProgressIndicatorOptions {
   final double? value;
   final Color? backgroundColor;
   final Color? color;
@@ -18,7 +18,7 @@ class NaPlatformProgressIndicatorOptionsMaterial extends NaPlatformProgressIndic
   final String? semanticsLabel;
   final String? semanticsValue;
 
-  NaPlatformProgressIndicatorOptionsMaterial({
+  NaProgressIndicatorOptionsMaterial({
     this.value,
     this.backgroundColor,
     this.color,
@@ -29,13 +29,13 @@ class NaPlatformProgressIndicatorOptionsMaterial extends NaPlatformProgressIndic
   });
 }
 
-/// Cupertino-specific options for [NaPlatformProgressIndicator], resolving into a [CupertinoActivityIndicator].
-class NaPlatformProgressIndicatorOptionsCupertino extends NaPlatformProgressIndicatorOptions {
+/// Cupertino-specific options for [NaProgressIndicator], resolving into a [CupertinoActivityIndicator].
+class NaProgressIndicatorOptionsCupertino extends NaProgressIndicatorOptions {
   final double? radius;
   final bool? animating;
   final Color? color;
 
-  NaPlatformProgressIndicatorOptionsCupertino({
+  NaProgressIndicatorOptionsCupertino({
     this.radius,
     this.animating,
     this.color,
@@ -44,10 +44,10 @@ class NaPlatformProgressIndicatorOptionsCupertino extends NaPlatformProgressIndi
 
 /// A generic ProgressIndicator widget that automatically renders a [CircularProgressIndicator] on Material 
 /// and a [CupertinoActivityIndicator] on Cupertino.
-class NaPlatformProgressIndicator extends NaPlatformWidget {
-  final NaWidgetOptionsBuilder<NaPlatformProgressIndicatorOptions>? optionsBuilder;
+class NaProgressIndicator extends NaWidget {
+  final NaWidgetOptionsBuilder<NaProgressIndicatorOptions>? optionsBuilder;
 
-  const NaPlatformProgressIndicator({
+  const NaProgressIndicator({
     super.key,
     this.optionsBuilder,
     super.uiType,
@@ -55,13 +55,13 @@ class NaPlatformProgressIndicator extends NaPlatformWidget {
 
   @override
   Widget renderForUIType(BuildContext context, NaUiType uiType) {
-    final NaPlatformProgressIndicatorOptions? options = optionsBuilder?.call(
+    final NaProgressIndicatorOptions? options = optionsBuilder?.call(
       context,
       uiType,
     );
 
     if (uiType == NaUiType.cupertino) {
-      final NaPlatformProgressIndicatorOptionsCupertino? cupertinoOptions = options is NaPlatformProgressIndicatorOptionsCupertino ? options : null;
+      final NaProgressIndicatorOptionsCupertino? cupertinoOptions = options is NaProgressIndicatorOptionsCupertino ? options : null;
       return CupertinoActivityIndicator(
         radius   : cupertinoOptions?.radius ?? 10.0,
         animating: cupertinoOptions?.animating ?? true,
@@ -69,7 +69,7 @@ class NaPlatformProgressIndicator extends NaPlatformWidget {
       );
     }
 
-    final NaPlatformProgressIndicatorOptionsMaterial? materialOptions = options is NaPlatformProgressIndicatorOptionsMaterial ? options : null;
+    final NaProgressIndicatorOptionsMaterial? materialOptions = options is NaProgressIndicatorOptionsMaterial ? options : null;
     return CircularProgressIndicator(
       value          : materialOptions?.value,
       backgroundColor: materialOptions?.backgroundColor,

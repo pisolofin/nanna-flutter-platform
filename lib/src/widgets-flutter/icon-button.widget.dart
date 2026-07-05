@@ -3,13 +3,13 @@ import 'package:flutter/material.dart';
 
 import '../models/ui-type.model.dart';
 import '../models/widget-options.model.dart';
-import '../widgets/platform-widget.widget.dart';
+import '../widgets/na-widget.widget.dart';
 
-/// Base options for [NaPlatformIconButton].
-abstract class NaPlatformIconButtonOptions extends NaWidgetOptions {}
+/// Base options for [NaIconButton].
+abstract class NaIconButtonOptions extends NaWidgetOptions {}
 
-/// Material-specific options for [NaPlatformIconButton], resolving into an [IconButton].
-class NaPlatformIconButtonOptionsMaterial extends NaPlatformIconButtonOptions {
+/// Material-specific options for [NaIconButton], resolving into an [IconButton].
+class NaIconButtonOptionsMaterial extends NaIconButtonOptions {
   final double? iconSize;
   final VisualDensity? visualDensity;
   final EdgeInsetsGeometry? padding;
@@ -28,7 +28,7 @@ class NaPlatformIconButtonOptionsMaterial extends NaPlatformIconButtonOptions {
   final BoxConstraints? constraints;
   final ButtonStyle? style;
 
-  NaPlatformIconButtonOptionsMaterial({
+  NaIconButtonOptionsMaterial({
     this.iconSize,
     this.visualDensity,
     this.padding,
@@ -49,8 +49,8 @@ class NaPlatformIconButtonOptionsMaterial extends NaPlatformIconButtonOptions {
   });
 }
 
-/// Cupertino-specific options for [NaPlatformIconButton], resolving into a [CupertinoButton].
-class NaPlatformIconButtonOptionsCupertino extends NaPlatformIconButtonOptions {
+/// Cupertino-specific options for [NaIconButton], resolving into a [CupertinoButton].
+class NaIconButtonOptionsCupertino extends NaIconButtonOptions {
   final EdgeInsetsGeometry? padding;
   final Color? color;
   final Color? disabledColor;
@@ -59,7 +59,7 @@ class NaPlatformIconButtonOptionsCupertino extends NaPlatformIconButtonOptions {
   final BorderRadius? borderRadius;
   final AlignmentGeometry? alignment;
 
-  NaPlatformIconButtonOptionsCupertino({
+  NaIconButtonOptionsCupertino({
     this.padding,
     this.color,
     this.disabledColor,
@@ -72,13 +72,13 @@ class NaPlatformIconButtonOptionsCupertino extends NaPlatformIconButtonOptions {
 
 /// A generic IconButton widget that automatically renders an [IconButton] on Material 
 /// and a [CupertinoButton] on Cupertino.
-class NaPlatformIconButton extends NaPlatformWidget {
+class NaIconButton extends NaWidget {
   final Widget icon;
   final VoidCallback? onPressed;
 
-  final NaWidgetOptionsBuilder<NaPlatformIconButtonOptions>? optionsBuilder;
+  final NaWidgetOptionsBuilder<NaIconButtonOptions>? optionsBuilder;
 
-  const NaPlatformIconButton({
+  const NaIconButton({
     super.key,
     required this.icon,
     required this.onPressed,
@@ -88,13 +88,13 @@ class NaPlatformIconButton extends NaPlatformWidget {
 
   @override
   Widget renderForUIType(BuildContext context, NaUiType uiType) {
-    final NaPlatformIconButtonOptions? options = optionsBuilder?.call(
+    final NaIconButtonOptions? options = optionsBuilder?.call(
       context,
       uiType,
     );
 
     if (uiType == NaUiType.cupertino) {
-      final NaPlatformIconButtonOptionsCupertino? cupertinoOptions = options is NaPlatformIconButtonOptionsCupertino ? options : null;
+      final NaIconButtonOptionsCupertino? cupertinoOptions = options is NaIconButtonOptionsCupertino ? options : null;
       return CupertinoButton(
         onPressed     : this.onPressed,
         padding       : cupertinoOptions?.padding ?? EdgeInsets.zero,
@@ -108,7 +108,7 @@ class NaPlatformIconButton extends NaPlatformWidget {
       );
     }
 
-    final NaPlatformIconButtonOptionsMaterial? materialOptions = options is NaPlatformIconButtonOptionsMaterial ? options : null;
+    final NaIconButtonOptionsMaterial? materialOptions = options is NaIconButtonOptionsMaterial ? options : null;
     return IconButton(
       onPressed     : this.onPressed,
       icon          : this.icon,

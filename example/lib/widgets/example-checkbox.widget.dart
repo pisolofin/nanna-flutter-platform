@@ -15,8 +15,8 @@ class _ExampleCheckboxWidgetState extends State<ExampleCheckboxWidget> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        const Text('NaPlatformCheckbox:'),
-        NaPlatformCheckbox(
+        const Text('NaCheckbox:'),
+        NaCheckbox(
           value: _checkboxValue,
           onChanged: (bool? value) {
             setState(() {

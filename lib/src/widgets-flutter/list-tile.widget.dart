@@ -3,13 +3,13 @@ import 'package:flutter/material.dart';
 
 import '../models/ui-type.model.dart';
 import '../models/widget-options.model.dart';
-import '../widgets/platform-widget.widget.dart';
+import '../widgets/na-widget.widget.dart';
 
-/// Base options for [NaPlatformListTile].
-abstract class NaPlatformListTileOptions extends NaWidgetOptions {}
+/// Base options for [NaListTile].
+abstract class NaListTileOptions extends NaWidgetOptions {}
 
-/// Material-specific options for [NaPlatformListTile], resolving into a [ListTile].
-class NaPlatformListTileOptionsMaterial extends NaPlatformListTileOptions {
+/// Material-specific options for [NaListTile], resolving into a [ListTile].
+class NaListTileOptionsMaterial extends NaListTileOptions {
   final bool? isThreeLine;
   final bool? dense;
   final VisualDensity? visualDensity;
@@ -36,7 +36,7 @@ class NaPlatformListTileOptionsMaterial extends NaPlatformListTileOptions {
   final double? minVerticalPadding;
   final double? minLeadingWidth;
 
-  NaPlatformListTileOptionsMaterial({
+  NaListTileOptionsMaterial({
     this.isThreeLine,
     this.dense,
     this.visualDensity,
@@ -65,8 +65,8 @@ class NaPlatformListTileOptionsMaterial extends NaPlatformListTileOptions {
   });
 }
 
-/// Cupertino-specific options for [NaPlatformListTile], resolving into a [CupertinoListTile].
-class NaPlatformListTileOptionsCupertino extends NaPlatformListTileOptions {
+/// Cupertino-specific options for [NaListTile], resolving into a [CupertinoListTile].
+class NaListTileOptionsCupertino extends NaListTileOptions {
   final Widget? additionalInfo;
   final Color? backgroundColor;
   final Color? backgroundColorActivated;
@@ -74,7 +74,7 @@ class NaPlatformListTileOptionsCupertino extends NaPlatformListTileOptions {
   final double? leadingSize;
   final double? leadingToTitle;
 
-  NaPlatformListTileOptionsCupertino({
+  NaListTileOptionsCupertino({
     this.additionalInfo,
     this.backgroundColor,
     this.backgroundColorActivated,
@@ -86,7 +86,7 @@ class NaPlatformListTileOptionsCupertino extends NaPlatformListTileOptions {
 
 /// A generic ListTile widget that automatically renders a [ListTile] on Material 
 /// and a [CupertinoListTile] on Cupertino.
-class NaPlatformListTile extends NaPlatformWidget {
+class NaListTile extends NaWidget {
   final Widget? leading;
   final Widget title;
   final Widget? subtitle;
@@ -94,9 +94,9 @@ class NaPlatformListTile extends NaPlatformWidget {
   final VoidCallback? onTap;
   final bool hasChevron;
 
-  final NaWidgetOptionsBuilder<NaPlatformListTileOptions>? optionsBuilder;
+  final NaWidgetOptionsBuilder<NaListTileOptions>? optionsBuilder;
 
-  const NaPlatformListTile({
+  const NaListTile({
     super.key,
     this.leading,
     required this.title,
@@ -110,7 +110,7 @@ class NaPlatformListTile extends NaPlatformWidget {
 
   @override
   Widget renderForUIType(BuildContext context, NaUiType uiType) {
-    final NaPlatformListTileOptions? options = optionsBuilder?.call(
+    final NaListTileOptions? options = optionsBuilder?.call(
       context,
       uiType,
     );
@@ -136,7 +136,7 @@ class NaPlatformListTile extends NaPlatformWidget {
     }
 
     if (uiType == NaUiType.cupertino) {
-      final NaPlatformListTileOptionsCupertino? cupertinoOptions = options is NaPlatformListTileOptionsCupertino ? options : null;
+      final NaListTileOptionsCupertino? cupertinoOptions = options is NaListTileOptionsCupertino ? options : null;
       return CupertinoListTile(
         leading                 : this.leading,
         title                   : this.title,
@@ -152,7 +152,7 @@ class NaPlatformListTile extends NaPlatformWidget {
       );
     }
 
-    final NaPlatformListTileOptionsMaterial? materialOptions = options is NaPlatformListTileOptionsMaterial ? options : null;
+    final NaListTileOptionsMaterial? materialOptions = options is NaListTileOptionsMaterial ? options : null;
     return ListTile(
       leading           : this.leading,
       title             : this.title,
