@@ -1,10 +1,10 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 
 import '../models/ui-type.model.dart';
-import '../models/widget-options.model.dart';
 import '../widgets/na-widget.widget.dart';
+import '../models/widget-options.model.dart';
 
 /// Base options for [NaSwitch].
 abstract class NaSwitchOptions extends NaWidgetOptions {}

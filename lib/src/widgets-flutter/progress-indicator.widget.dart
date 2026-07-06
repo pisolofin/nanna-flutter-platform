@@ -1,9 +1,9 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 
 import '../models/ui-type.model.dart';
-import '../models/widget-options.model.dart';
 import '../widgets/na-widget.widget.dart';
+import '../models/widget-options.model.dart';
 
 /// Base options for [NaProgressIndicator].
 abstract class NaProgressIndicatorOptions extends NaWidgetOptions {}
@@ -47,7 +47,7 @@ class NaProgressIndicatorOptionsCupertino extends NaProgressIndicatorOptions {
 class NaProgressIndicator extends NaWidget {
   final NaWidgetOptionsBuilder<NaProgressIndicatorOptions>? optionsBuilder;
 
-  const NaProgressIndicator({super.key, this.optionsBuilder, super.uiType});
+  const NaProgressIndicator({ super.key, this.optionsBuilder, super.uiType });
 
   @override
   Widget renderForUIType(BuildContext context, NaUiType uiType) {

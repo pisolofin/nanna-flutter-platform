@@ -101,5 +101,3 @@ class NaIcon extends NaWidget {
     );
   }
 }
-
-

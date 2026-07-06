@@ -17,7 +17,7 @@ import '../models/ui-type.model.dart';
 class NaUiTypeScope extends InheritedWidget {
   final NaUiType uiType;
 
-  const NaUiTypeScope({super.key, required this.uiType, required super.child});
+  const NaUiTypeScope({ super.key, required this.uiType, required super.child });
 
   /// Retrieves the current active [NaUiType] from the closest [NaUiTypeScope] ancestor.
   /// If no scope is found, defaults to [NaUiType.material].

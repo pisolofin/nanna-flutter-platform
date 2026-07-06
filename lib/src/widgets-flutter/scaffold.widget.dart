@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 
-import '../models/ui-type.model.dart';
-import '../models/widget-options.model.dart';
-import '../widgets/na-widget.widget.dart';
-
 import 'app-bar.widget.dart';
+import '../models/ui-type.model.dart';
+import '../widgets/na-widget.widget.dart';
+import '../models/widget-options.model.dart';
 
 /// Base options for [NaScaffold].
 abstract class NaScaffoldOptions extends NaWidgetOptions {}
@@ -29,7 +28,7 @@ class NaScaffoldOptionsMaterial extends NaScaffoldOptions {
 class NaScaffoldOptionsCupertino extends NaScaffoldOptions {
   final bool? resizeToAvoidBottomInset;
 
-  NaScaffoldOptionsCupertino({this.resizeToAvoidBottomInset});
+  NaScaffoldOptionsCupertino({ this.resizeToAvoidBottomInset });
 }
 
 /// A generic Scaffold widget that automatically renders a [Scaffold] on Material

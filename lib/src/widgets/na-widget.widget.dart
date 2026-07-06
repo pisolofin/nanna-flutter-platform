@@ -10,7 +10,7 @@ abstract class NaWidget extends StatelessWidget {
   final NaUiType? uiType;
   final dynamic options;
 
-  const NaWidget({super.key, this.uiType, this.options});
+  const NaWidget({ super.key, this.uiType, this.options });
 
   /// Renders widget for active UI type
   Widget renderForUIType(BuildContext context, NaUiType uiType);

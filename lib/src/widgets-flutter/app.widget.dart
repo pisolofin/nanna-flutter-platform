@@ -1,9 +1,9 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 
 import '../models/ui-type.model.dart';
-import '../models/widget-options.model.dart';
 import '../widgets/na-widget.widget.dart';
+import '../models/widget-options.model.dart';
 
 /// Base options for [NaApp].
 abstract class NaAppOptions extends NaWidgetOptions {}
@@ -27,7 +27,7 @@ class NaAppOptionsMaterial extends NaAppOptions {
 class NaAppOptionsCupertino extends NaAppOptions {
   final CupertinoThemeData? theme;
 
-  NaAppOptionsCupertino({this.theme});
+  NaAppOptionsCupertino({ this.theme });
 }
 
 /// A generic App widget that automatically renders a [MaterialApp] on Material

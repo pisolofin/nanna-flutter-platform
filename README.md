@@ -28,6 +28,13 @@ Instead of writing platform-conditional code (`if (Platform.isIOS) ...`) on ever
 | `Icon` | `Icon` (cupertino variants) | ✅ | `NaIcon` |
 | `Dialog Action` | `CupertinoDialogAction` | ✅ | `NaDialogAction` |
 | `TextField` | `CupertinoTextField` | ✅ | `NaTextField` |
+| `TabBar` | `CupertinoTabBar` | ⏳ | `NaTabBar` |
+| `TabBarView` | `CupertinoTabView` | ⏳ | `NaTabView` |
+| `DropdownButton` | `CupertinoPicker` | ⏳ | `NaDropdown` |
+| `RefreshIndicator` | `CupertinoSliverRefreshControl` | ⏳ | `NaRefreshIndicator` |
+| `BottomSheet` | `CupertinoActionSheet` | ⏳ | `NaActionSheet` |
+| `Scrollbar` | `CupertinoScrollbar` | ⏳ | `NaScrollbar` |
+| `SearchBar` | `CupertinoSearchTextField`| ⏳ | `NaSearchBar` |
 
 
 ## How to use the library

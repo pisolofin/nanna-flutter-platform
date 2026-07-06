@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 
 import '../models/ui-type.model.dart';
-import '../models/widget-options.model.dart';
 import '../widgets/na-widget.widget.dart';
+import '../models/widget-options.model.dart';
 
 /// Base options for [NaAppBar].
 abstract class NaAppBarOptions extends NaWidgetOptions {}
@@ -14,7 +14,7 @@ class NaAppBarOptionsMaterial extends NaAppBarOptions {
   final bool? centerTitle;
   final PreferredSizeWidget? bottom;
 
-  NaAppBarOptionsMaterial({this.elevation, this.centerTitle, this.bottom});
+  NaAppBarOptionsMaterial({ this.elevation, this.centerTitle, this.bottom });
 }
 
 /// Cupertino-specific options for [NaAppBar], resolving into a [CupertinoNavigationBar].
@@ -22,7 +22,7 @@ class NaAppBarOptionsCupertino extends NaAppBarOptions {
   final Border? border;
   final bool? transitionBetweenRoutes;
 
-  NaAppBarOptionsCupertino({this.border, this.transitionBetweenRoutes});
+  NaAppBarOptionsCupertino({ this.border, this.transitionBetweenRoutes });
 }
 
 /// A generic AppBar widget that automatically renders an [AppBar] on Material
