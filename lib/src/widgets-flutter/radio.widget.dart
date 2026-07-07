@@ -75,7 +75,7 @@ class NaRadio<T> extends NaWidget {
   });
 
   @override
-  Widget renderForUIType(BuildContext context, NaUiType uiType) {
+  Widget? renderForUIType(BuildContext context, NaUiType uiType) {
     final NaRadioOptions? options = optionsBuilder?.call(context, uiType);
 
     if (uiType == NaUiType.cupertino) {
@@ -99,26 +99,30 @@ class NaRadio<T> extends NaWidget {
       );
     }
 
-    final NaRadioOptionsMaterial? materialOptions = options is NaRadioOptionsMaterial
-      ? options
-      : null
-    ;
-    return Radio<T>(
-      value: this.value,
-      // ignore: deprecated_member_use
-      groupValue: this.groupValue,
-      // ignore: deprecated_member_use
-      onChanged   : this.onChanged,
-      mouseCursor : materialOptions?.mouseCursor,
-      toggleable  : materialOptions?.toggleable ?? false,
-      activeColor : materialOptions?.activeColor,
-      fillColor   : materialOptions?.fillColor,
-      focusColor  : materialOptions?.focusColor,
-      hoverColor  : materialOptions?.hoverColor,
-      overlayColor: materialOptions?.overlayColor,
-      splashRadius: materialOptions?.splashRadius,
-      focusNode   : materialOptions?.focusNode,
-      autofocus   : materialOptions?.autofocus ?? false,
-    );
+    if (uiType == NaUiType.material) {
+      final NaRadioOptionsMaterial? materialOptions = options is NaRadioOptionsMaterial
+        ? options
+        : null
+      ;
+      return Radio<T>(
+        value: this.value,
+        // ignore: deprecated_member_use
+        groupValue: this.groupValue,
+        // ignore: deprecated_member_use
+        onChanged   : this.onChanged,
+        mouseCursor : materialOptions?.mouseCursor,
+        toggleable  : materialOptions?.toggleable ?? false,
+        activeColor : materialOptions?.activeColor,
+        fillColor   : materialOptions?.fillColor,
+        focusColor  : materialOptions?.focusColor,
+        hoverColor  : materialOptions?.hoverColor,
+        overlayColor: materialOptions?.overlayColor,
+        splashRadius: materialOptions?.splashRadius,
+        focusNode   : materialOptions?.focusNode,
+        autofocus   : materialOptions?.autofocus ?? false,
+      );
+    }
+
+    return null;
   }
 }

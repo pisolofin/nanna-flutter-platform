@@ -88,7 +88,7 @@ class NaSwitch extends NaWidget {
   });
 
   @override
-  Widget renderForUIType(BuildContext context, NaUiType uiType) {
+  Widget? renderForUIType(BuildContext context, NaUiType uiType) {
     final NaSwitchOptions? options = optionsBuilder?.call(context, uiType);
 
     if (uiType == NaUiType.cupertino) {
@@ -109,31 +109,35 @@ class NaSwitch extends NaWidget {
       );
     }
 
-    final NaSwitchOptionsMaterial? materialOptions = options is NaSwitchOptionsMaterial
-      ? options
-      : null
-    ;
-    return Switch(
-      value             : this.value,
-      onChanged         : this.onChanged,
-      activeThumbColor  : materialOptions?.activeThumbColor,
-      activeTrackColor  : materialOptions?.activeTrackColor,
-      inactiveThumbColor: materialOptions?.inactiveThumbColor,
-      inactiveTrackColor: materialOptions?.inactiveTrackColor,
-      activeThumbImage  : materialOptions?.activeThumbImage,
-      inactiveThumbImage: materialOptions?.inactiveThumbImage,
-      thumbColor        : materialOptions?.thumbColor,
-      trackColor        : materialOptions?.trackColor,
-      thumbIcon         : materialOptions?.thumbIcon,
-      dragStartBehavior :
-          materialOptions?.dragStartBehavior ?? DragStartBehavior.start,
-      mouseCursor : materialOptions?.mouseCursor,
-      focusColor  : materialOptions?.focusColor,
-      hoverColor  : materialOptions?.hoverColor,
-      overlayColor: materialOptions?.overlayColor,
-      splashRadius: materialOptions?.splashRadius,
-      focusNode   : materialOptions?.focusNode,
-      autofocus   : materialOptions?.autofocus ?? false,
-    );
+    if (uiType == NaUiType.material) {
+      final NaSwitchOptionsMaterial? materialOptions = options is NaSwitchOptionsMaterial
+        ? options
+        : null
+      ;
+      return Switch(
+        value             : this.value,
+        onChanged         : this.onChanged,
+        activeThumbColor  : materialOptions?.activeThumbColor,
+        activeTrackColor  : materialOptions?.activeTrackColor,
+        inactiveThumbColor: materialOptions?.inactiveThumbColor,
+        inactiveTrackColor: materialOptions?.inactiveTrackColor,
+        activeThumbImage  : materialOptions?.activeThumbImage,
+        inactiveThumbImage: materialOptions?.inactiveThumbImage,
+        thumbColor        : materialOptions?.thumbColor,
+        trackColor        : materialOptions?.trackColor,
+        thumbIcon         : materialOptions?.thumbIcon,
+        dragStartBehavior :
+            materialOptions?.dragStartBehavior ?? DragStartBehavior.start,
+        mouseCursor : materialOptions?.mouseCursor,
+        focusColor  : materialOptions?.focusColor,
+        hoverColor  : materialOptions?.hoverColor,
+        overlayColor: materialOptions?.overlayColor,
+        splashRadius: materialOptions?.splashRadius,
+        focusNode   : materialOptions?.focusNode,
+        autofocus   : materialOptions?.autofocus ?? false,
+      );
+    }
+
+    return null;
   }
 }

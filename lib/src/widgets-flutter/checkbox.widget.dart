@@ -91,7 +91,7 @@ class NaCheckbox extends NaWidget {
   });
 
   @override
-  Widget renderForUIType(BuildContext context, NaUiType uiType) {
+  Widget? renderForUIType(BuildContext context, NaUiType uiType) {
     final NaCheckboxOptions? options = optionsBuilder?.call(context, uiType);
 
     if (uiType == NaUiType.cupertino) {
@@ -114,30 +114,34 @@ class NaCheckbox extends NaWidget {
       );
     }
 
-    final NaCheckboxOptionsMaterial? materialOptions = options is NaCheckboxOptionsMaterial
-      ? options
-      : null
-    ;
-    return Checkbox(
-      value                : this.value,
-      onChanged            : this.onChanged,
-      tristate             : materialOptions?.tristate ?? false,
-      mouseCursor          : materialOptions?.mouseCursor,
-      activeColor          : materialOptions?.activeColor,
-      fillColor            : materialOptions?.fillColor,
-      checkColor           : materialOptions?.checkColor,
-      focusColor           : materialOptions?.focusColor,
-      hoverColor           : materialOptions?.hoverColor,
-      overlayColor         : materialOptions?.overlayColor,
-      splashRadius         : materialOptions?.splashRadius,
-      materialTapTargetSize: materialOptions?.materialTapTargetSize,
-      visualDensity        : materialOptions?.visualDensity,
-      focusNode            : materialOptions?.focusNode,
-      autofocus            : materialOptions?.autofocus ?? false,
-      shape                : materialOptions?.shape,
-      side                 : materialOptions?.side,
-      isError              : materialOptions?.isError ?? false,
-      semanticLabel        : materialOptions?.semanticLabel,
-    );
+    if (uiType == NaUiType.material) {
+      final NaCheckboxOptionsMaterial? materialOptions = options is NaCheckboxOptionsMaterial
+        ? options
+        : null
+      ;
+      return Checkbox(
+        value                : this.value,
+        onChanged            : this.onChanged,
+        tristate             : materialOptions?.tristate ?? false,
+        mouseCursor          : materialOptions?.mouseCursor,
+        activeColor          : materialOptions?.activeColor,
+        fillColor            : materialOptions?.fillColor,
+        checkColor           : materialOptions?.checkColor,
+        focusColor           : materialOptions?.focusColor,
+        hoverColor           : materialOptions?.hoverColor,
+        overlayColor         : materialOptions?.overlayColor,
+        splashRadius         : materialOptions?.splashRadius,
+        materialTapTargetSize: materialOptions?.materialTapTargetSize,
+        visualDensity        : materialOptions?.visualDensity,
+        focusNode            : materialOptions?.focusNode,
+        autofocus            : materialOptions?.autofocus ?? false,
+        shape                : materialOptions?.shape,
+        side                 : materialOptions?.side,
+        isError              : materialOptions?.isError ?? false,
+        semanticLabel        : materialOptions?.semanticLabel,
+      );
+    }
+
+    return null;
   }
 }

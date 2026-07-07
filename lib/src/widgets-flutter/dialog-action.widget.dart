@@ -53,7 +53,7 @@ class NaDialogAction extends NaWidget {
   });
 
   @override
-  Widget renderForUIType(BuildContext context, NaUiType uiType) {
+  Widget? renderForUIType(BuildContext context, NaUiType uiType) {
     final NaDialogActionOptions? options = optionsBuilder?.call(
       context,
       uiType,
@@ -73,17 +73,21 @@ class NaDialogAction extends NaWidget {
       );
     }
 
-    final NaDialogActionOptionsMaterial? materialOptions = options is NaDialogActionOptionsMaterial
-      ? options
-      : null
-    ;
-    return TextButton(
-      onPressed   : this.onPressed,
-      style       : materialOptions?.style,
-      focusNode   : materialOptions?.focusNode,
-      autofocus   : materialOptions?.autofocus ?? false,
-      clipBehavior: materialOptions?.clipBehavior ?? Clip.none,
-      child       : this.child,
-    );
+    if (uiType == NaUiType.material) {
+      final NaDialogActionOptionsMaterial? materialOptions = options is NaDialogActionOptionsMaterial
+        ? options
+        : null
+      ;
+      return TextButton(
+        onPressed   : this.onPressed,
+        style       : materialOptions?.style,
+        focusNode   : materialOptions?.focusNode,
+        autofocus   : materialOptions?.autofocus ?? false,
+        clipBehavior: materialOptions?.clipBehavior ?? Clip.none,
+        child       : this.child,
+      );
+    }
+
+    return null;
   }
 }

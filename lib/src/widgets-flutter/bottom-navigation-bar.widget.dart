@@ -87,7 +87,7 @@ class NaBottomNavigationBar extends NaWidget {
   });
 
   @override
-  Widget renderForUIType(BuildContext context, NaUiType uiType) {
+  Widget? renderForUIType(BuildContext context, NaUiType uiType) {
     final NaBottomNavigationBarOptions? options = optionsBuilder?.call(
       context,
       uiType,
@@ -112,30 +112,34 @@ class NaBottomNavigationBar extends NaWidget {
       );
     }
 
-    final NaBottomNavigationBarOptionsMaterial? materialOptions = options is NaBottomNavigationBarOptionsMaterial
-      ? options
-      : null
-    ;
-    return BottomNavigationBar(
-      items               : this.items,
-      onTap               : this.onTap,
-      currentIndex        : this.currentIndex,
-      elevation           : materialOptions?.elevation,
-      type                : materialOptions?.type,
-      fixedColor          : materialOptions?.fixedColor,
-      backgroundColor     : materialOptions?.backgroundColor,
-      iconSize            : materialOptions?.iconSize ?? 24.0,
-      selectedItemColor   : materialOptions?.selectedItemColor,
-      unselectedItemColor : materialOptions?.unselectedItemColor,
-      selectedIconTheme   : materialOptions?.selectedIconTheme,
-      unselectedIconTheme : materialOptions?.unselectedIconTheme,
-      selectedLabelStyle  : materialOptions?.selectedLabelStyle,
-      unselectedLabelStyle: materialOptions?.unselectedLabelStyle,
-      showSelectedLabels  : materialOptions?.showSelectedLabels,
-      showUnselectedLabels: materialOptions?.showUnselectedLabels,
-      mouseCursor         : materialOptions?.mouseCursor,
-      enableFeedback      : materialOptions?.enableFeedback,
-      landscapeLayout     : materialOptions?.landscapeLayout,
-    );
+    if (uiType == NaUiType.material) {
+      final NaBottomNavigationBarOptionsMaterial? materialOptions = options is NaBottomNavigationBarOptionsMaterial
+        ? options
+        : null
+      ;
+      return BottomNavigationBar(
+        items               : this.items,
+        onTap               : this.onTap,
+        currentIndex        : this.currentIndex,
+        elevation           : materialOptions?.elevation,
+        type                : materialOptions?.type,
+        fixedColor          : materialOptions?.fixedColor,
+        backgroundColor     : materialOptions?.backgroundColor,
+        iconSize            : materialOptions?.iconSize ?? 24.0,
+        selectedItemColor   : materialOptions?.selectedItemColor,
+        unselectedItemColor : materialOptions?.unselectedItemColor,
+        selectedIconTheme   : materialOptions?.selectedIconTheme,
+        unselectedIconTheme : materialOptions?.unselectedIconTheme,
+        selectedLabelStyle  : materialOptions?.selectedLabelStyle,
+        unselectedLabelStyle: materialOptions?.unselectedLabelStyle,
+        showSelectedLabels  : materialOptions?.showSelectedLabels,
+        showUnselectedLabels: materialOptions?.showUnselectedLabels,
+        mouseCursor         : materialOptions?.mouseCursor,
+        enableFeedback      : materialOptions?.enableFeedback,
+        landscapeLayout     : materialOptions?.landscapeLayout,
+      );
+    }
+
+    return null;
   }
 }

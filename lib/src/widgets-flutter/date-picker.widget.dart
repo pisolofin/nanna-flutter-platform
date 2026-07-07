@@ -61,7 +61,7 @@ class NaDatePicker extends NaWidget {
   });
 
   @override
-  Widget renderForUIType(BuildContext context, NaUiType uiType) {
+  Widget? renderForUIType(BuildContext context, NaUiType uiType) {
     final NaDatePickerOptions? options = optionsBuilder?.call(context, uiType);
 
     if (uiType == NaUiType.cupertino) {
@@ -85,20 +85,24 @@ class NaDatePicker extends NaWidget {
       );
     }
 
-    final NaDatePickerOptionsMaterial? materialOptions = options is NaDatePickerOptionsMaterial
-      ? options
-      : null
-    ;
-    return CalendarDatePicker(
-      initialDate            : this.initialDate,
-      firstDate              : this.firstDate,
-      lastDate               : this.lastDate,
-      onDateChanged          : this.onDateChanged,
-      currentDate            : materialOptions?.currentDate,
-      onDisplayedMonthChanged: materialOptions?.onDisplayedMonthChanged,
-      initialCalendarMode    :
-          materialOptions?.initialCalendarMode ?? DatePickerMode.day,
-      selectableDayPredicate: materialOptions?.selectableDayPredicate,
-    );
+    if (uiType == NaUiType.material) {
+      final NaDatePickerOptionsMaterial? materialOptions = options is NaDatePickerOptionsMaterial
+        ? options
+        : null
+      ;
+      return CalendarDatePicker(
+        initialDate            : this.initialDate,
+        firstDate              : this.firstDate,
+        lastDate               : this.lastDate,
+        onDateChanged          : this.onDateChanged,
+        currentDate            : materialOptions?.currentDate,
+        onDisplayedMonthChanged: materialOptions?.onDisplayedMonthChanged,
+        initialCalendarMode    :
+            materialOptions?.initialCalendarMode ?? DatePickerMode.day,
+        selectableDayPredicate: materialOptions?.selectableDayPredicate,
+      );
+    }
+
+    return null;
   }
 }

@@ -87,7 +87,7 @@ class NaAlertDialog extends NaWidget {
   });
 
   @override
-  Widget renderForUIType(BuildContext context, NaUiType uiType) {
+  Widget? renderForUIType(BuildContext context, NaUiType uiType) {
     final NaAlertDialogOptions? options = optionsBuilder?.call(context, uiType);
 
     if (uiType == NaUiType.cupertino) {
@@ -104,36 +104,40 @@ class NaAlertDialog extends NaWidget {
       );
     }
 
-    final NaAlertDialogOptionsMaterial? materialOptions = options is NaAlertDialogOptionsMaterial
-      ? options
-      : null
-    ;
-    return AlertDialog(
-      title                       : this.title,
-      content                     : this.content,
-      actions                     : this.actions,
-      icon                        : materialOptions?.icon,
-      iconPadding                 : materialOptions?.iconPadding,
-      iconColor                   : materialOptions?.iconColor,
-      titlePadding                : materialOptions?.titlePadding,
-      titleTextStyle              : materialOptions?.titleTextStyle,
-      contentPadding              : materialOptions?.contentPadding,
-      contentTextStyle            : materialOptions?.contentTextStyle,
-      actionsPadding              : materialOptions?.actionsPadding,
-      actionsAlignment            : materialOptions?.actionsAlignment,
-      actionsOverflowAlignment    : materialOptions?.actionsOverflowAlignment,
-      actionsOverflowDirection    : materialOptions?.actionsOverflowDirection,
-      actionsOverflowButtonSpacing:
-          materialOptions?.actionsOverflowButtonSpacing,
-      buttonPadding   : materialOptions?.buttonPadding,
-      backgroundColor : materialOptions?.backgroundColor,
-      elevation       : materialOptions?.elevation,
-      shadowColor     : materialOptions?.shadowColor,
-      surfaceTintColor: materialOptions?.surfaceTintColor,
-      semanticLabel   : materialOptions?.semanticLabel,
-      shape           : materialOptions?.shape,
-      clipBehavior    : materialOptions?.clipBehavior ?? Clip.none,
-      scrollable      : materialOptions?.scrollable ?? false,
-    );
+    if (uiType == NaUiType.material) {
+      final NaAlertDialogOptionsMaterial? materialOptions = options is NaAlertDialogOptionsMaterial
+        ? options
+        : null
+      ;
+      return AlertDialog(
+        title                       : this.title,
+        content                     : this.content,
+        actions                     : this.actions,
+        icon                        : materialOptions?.icon,
+        iconPadding                 : materialOptions?.iconPadding,
+        iconColor                   : materialOptions?.iconColor,
+        titlePadding                : materialOptions?.titlePadding,
+        titleTextStyle              : materialOptions?.titleTextStyle,
+        contentPadding              : materialOptions?.contentPadding,
+        contentTextStyle            : materialOptions?.contentTextStyle,
+        actionsPadding              : materialOptions?.actionsPadding,
+        actionsAlignment            : materialOptions?.actionsAlignment,
+        actionsOverflowAlignment    : materialOptions?.actionsOverflowAlignment,
+        actionsOverflowDirection    : materialOptions?.actionsOverflowDirection,
+        actionsOverflowButtonSpacing:
+            materialOptions?.actionsOverflowButtonSpacing,
+        buttonPadding   : materialOptions?.buttonPadding,
+        backgroundColor : materialOptions?.backgroundColor,
+        elevation       : materialOptions?.elevation,
+        shadowColor     : materialOptions?.shadowColor,
+        surfaceTintColor: materialOptions?.surfaceTintColor,
+        semanticLabel   : materialOptions?.semanticLabel,
+        shape           : materialOptions?.shape,
+        clipBehavior    : materialOptions?.clipBehavior ?? Clip.none,
+        scrollable      : materialOptions?.scrollable ?? false,
+      );
+    }
+
+    return null;
   }
 }

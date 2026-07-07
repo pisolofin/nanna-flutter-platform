@@ -12,7 +12,7 @@ dependencies:
   flutter:
     sdk: flutter
   
-  nanna_flutter:
+  nanna:
     path: ../nanna-flutter
 
 dev_dependencies:

@@ -63,7 +63,7 @@ class NaApp extends NaWidget {
   });
 
   @override
-  Widget renderForUIType(BuildContext context, NaUiType uiType) {
+  Widget? renderForUIType(BuildContext context, NaUiType uiType) {
     final NaAppOptions? options = optionsBuilder?.call(context, uiType);
 
     if (uiType == NaUiType.cupertino) {
@@ -87,26 +87,30 @@ class NaApp extends NaWidget {
       );
     }
 
-    final NaAppOptionsMaterial? materialOptions = options is NaAppOptionsMaterial
-      ? options
-      : null
-    ;
-    return MaterialApp(
-      key                       : this.key,
-      navigatorKey              : this.navigatorKey,
-      scaffoldMessengerKey      : materialOptions?.scaffoldMessengerKey,
-      home                      : this.home,
-      routes                    : this.routes ?? const <String, WidgetBuilder>{},
-      initialRoute              : this.initialRoute,
-      title                     : this.title,
-      theme                     : materialOptions?.theme,
-      darkTheme                 : materialOptions?.darkTheme,
-      themeMode                 : materialOptions?.themeMode,
-      color                     : this.color,
-      locale                    : this.locale,
-      localizationsDelegates    : this.localizationsDelegates,
-      supportedLocales          : this.supportedLocales,
-      debugShowCheckedModeBanner: this.debugShowCheckedModeBanner,
-    );
+    if (uiType == NaUiType.material) {
+      final NaAppOptionsMaterial? materialOptions = options is NaAppOptionsMaterial
+        ? options
+        : null
+      ;
+      return MaterialApp(
+        key                       : this.key,
+        navigatorKey              : this.navigatorKey,
+        scaffoldMessengerKey      : materialOptions?.scaffoldMessengerKey,
+        home                      : this.home,
+        routes                    : this.routes ?? const <String, WidgetBuilder>{},
+        initialRoute              : this.initialRoute,
+        title                     : this.title,
+        theme                     : materialOptions?.theme,
+        darkTheme                 : materialOptions?.darkTheme,
+        themeMode                 : materialOptions?.themeMode,
+        color                     : this.color,
+        locale                    : this.locale,
+        localizationsDelegates    : this.localizationsDelegates,
+        supportedLocales          : this.supportedLocales,
+        debugShowCheckedModeBanner: this.debugShowCheckedModeBanner,
+      );
+    }
+
+    return null;
   }
 }

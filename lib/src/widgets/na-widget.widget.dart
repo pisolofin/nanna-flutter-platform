@@ -12,21 +12,36 @@ abstract class NaWidget extends StatelessWidget {
 
   const NaWidget({ super.key, this.uiType, this.options });
 
-  /// Renders widget for active UI type
-  Widget renderForUIType(BuildContext context, NaUiType uiType);
+  /// Renders widget for active UI type.
+  /// Return null if the widget does not natively support the given [uiType].
+  Widget? renderForUIType(BuildContext context, NaUiType uiType);
 
   @override
   Widget build(BuildContext context) {
-    final NaUiType currentUiType = this.uiType ?? NaUiTypeScope.of(context);
+    final List<NaUiType> currentUiTypes = this.uiType != null
+        ? [this.uiType!]
+        : NaUiTypeScope.of(context);
 
-    final NaWidgetBuilder? builder = naPlatformServiceGetWidgetBuilder(
-      this.runtimeType,
-      currentUiType,
-    );
-    if (builder != null) {
-      return builder(context, this);
+    for (final NaUiType type in currentUiTypes) {
+      final NaWidgetBuilder? builder = naPlatformServiceGetWidgetBuilder(
+        this.runtimeType,
+        type,
+      );
+      if (builder != null) {
+        return builder(context, this);
+      }
+
+      final Widget? nativeWidget = renderForUIType(context, type);
+      if (nativeWidget != null) {
+        return nativeWidget;
+      }
     }
 
-    return renderForUIType(context, currentUiType);
+    return fallbackRender(context);
+  }
+
+  /// Ultimate fallback if no uiType in the chain was supported.
+  Widget fallbackRender(BuildContext context) {
+    return renderForUIType(context, NaUiType.material) ?? const SizedBox.shrink();
   }
 }

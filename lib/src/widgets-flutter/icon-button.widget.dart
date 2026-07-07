@@ -87,7 +87,7 @@ class NaIconButton extends NaWidget {
   });
 
   @override
-  Widget renderForUIType(BuildContext context, NaUiType uiType) {
+  Widget? renderForUIType(BuildContext context, NaUiType uiType) {
     final NaIconButtonOptions? options = optionsBuilder?.call(context, uiType);
 
     if (uiType == NaUiType.cupertino) {
@@ -117,30 +117,34 @@ class NaIconButton extends NaWidget {
       );
     }
 
-    final NaIconButtonOptionsMaterial? materialOptions = options is NaIconButtonOptionsMaterial
-      ? options
-      : null
-    ;
-    return IconButton(
-      onPressed     : this.onPressed,
-      icon          : this.icon,
-      iconSize      : materialOptions?.iconSize,
-      visualDensity : materialOptions?.visualDensity,
-      padding       : materialOptions?.padding,
-      alignment     : materialOptions?.alignment,
-      splashRadius  : materialOptions?.splashRadius,
-      color         : materialOptions?.color,
-      focusColor    : materialOptions?.focusColor,
-      hoverColor    : materialOptions?.hoverColor,
-      highlightColor: materialOptions?.highlightColor,
-      splashColor   : materialOptions?.splashColor,
-      disabledColor : materialOptions?.disabledColor,
-      mouseCursor   : materialOptions?.mouseCursor,
-      focusNode     : materialOptions?.focusNode,
-      autofocus     : materialOptions?.autofocus ?? false,
-      tooltip       : materialOptions?.tooltip,
-      constraints   : materialOptions?.constraints,
-      style         : materialOptions?.style,
-    );
+    if (uiType == NaUiType.material) {
+      final NaIconButtonOptionsMaterial? materialOptions = options is NaIconButtonOptionsMaterial
+        ? options
+        : null
+      ;
+      return IconButton(
+        onPressed     : this.onPressed,
+        icon          : this.icon,
+        iconSize      : materialOptions?.iconSize,
+        visualDensity : materialOptions?.visualDensity,
+        padding       : materialOptions?.padding,
+        alignment     : materialOptions?.alignment,
+        splashRadius  : materialOptions?.splashRadius,
+        color         : materialOptions?.color,
+        focusColor    : materialOptions?.focusColor,
+        hoverColor    : materialOptions?.hoverColor,
+        highlightColor: materialOptions?.highlightColor,
+        splashColor   : materialOptions?.splashColor,
+        disabledColor : materialOptions?.disabledColor,
+        mouseCursor   : materialOptions?.mouseCursor,
+        focusNode     : materialOptions?.focusNode,
+        autofocus     : materialOptions?.autofocus ?? false,
+        tooltip       : materialOptions?.tooltip,
+        constraints   : materialOptions?.constraints,
+        style         : materialOptions?.style,
+      );
+    }
+
+    return null;
   }
 }

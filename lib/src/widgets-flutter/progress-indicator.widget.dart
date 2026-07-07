@@ -50,7 +50,7 @@ class NaProgressIndicator extends NaWidget {
   const NaProgressIndicator({ super.key, this.optionsBuilder, super.uiType });
 
   @override
-  Widget renderForUIType(BuildContext context, NaUiType uiType) {
+  Widget? renderForUIType(BuildContext context, NaUiType uiType) {
     final NaProgressIndicatorOptions? options = optionsBuilder?.call(
       context,
       uiType,
@@ -68,18 +68,22 @@ class NaProgressIndicator extends NaWidget {
       );
     }
 
-    final NaProgressIndicatorOptionsMaterial? materialOptions = options is NaProgressIndicatorOptionsMaterial
-      ? options
-      : null
-    ;
-    return CircularProgressIndicator(
-      value          : materialOptions?.value,
-      backgroundColor: materialOptions?.backgroundColor,
-      color          : materialOptions?.color,
-      valueColor     : materialOptions?.valueColor,
-      strokeWidth    : materialOptions?.strokeWidth ?? 4.0,
-      semanticsLabel : materialOptions?.semanticsLabel,
-      semanticsValue : materialOptions?.semanticsValue,
-    );
+    if (uiType == NaUiType.material) {
+      final NaProgressIndicatorOptionsMaterial? materialOptions = options is NaProgressIndicatorOptionsMaterial
+        ? options
+        : null
+      ;
+      return CircularProgressIndicator(
+        value          : materialOptions?.value,
+        backgroundColor: materialOptions?.backgroundColor,
+        color          : materialOptions?.color,
+        valueColor     : materialOptions?.valueColor,
+        strokeWidth    : materialOptions?.strokeWidth ?? 4.0,
+        semanticsLabel : materialOptions?.semanticsLabel,
+        semanticsValue : materialOptions?.semanticsValue,
+      );
+    }
+
+    return null;
   }
 }

@@ -69,7 +69,7 @@ class NaSlider extends NaWidget {
   });
 
   @override
-  Widget renderForUIType(BuildContext context, NaUiType uiType) {
+  Widget? renderForUIType(BuildContext context, NaUiType uiType) {
     final NaSliderOptions? options = optionsBuilder?.call(context, uiType);
 
     if (uiType == NaUiType.cupertino) {
@@ -90,27 +90,31 @@ class NaSlider extends NaWidget {
       );
     }
 
-    final NaSliderOptionsMaterial? materialOptions = options is NaSliderOptionsMaterial
-      ? options
-      : null
-    ;
-    return Slider(
-      value                    : this.value,
-      onChanged                : this.onChanged,
-      onChangeStart            : this.onChangeStart,
-      onChangeEnd              : this.onChangeEnd,
-      min                      : this.min,
-      max                      : this.max,
-      activeColor              : materialOptions?.activeColor,
-      inactiveColor            : materialOptions?.inactiveColor,
-      thumbColor               : materialOptions?.thumbColor,
-      overlayColor             : materialOptions?.overlayColor,
-      mouseCursor              : materialOptions?.mouseCursor,
-      semanticFormatterCallback: materialOptions?.semanticFormatterCallback,
-      focusNode                : materialOptions?.focusNode,
-      autofocus                : materialOptions?.autofocus ?? false,
-      label                    : materialOptions?.label,
-      divisions                : materialOptions?.divisions,
-    );
+    if (uiType == NaUiType.material) {
+      final NaSliderOptionsMaterial? materialOptions = options is NaSliderOptionsMaterial
+        ? options
+        : null
+      ;
+      return Slider(
+        value                    : this.value,
+        onChanged                : this.onChanged,
+        onChangeStart            : this.onChangeStart,
+        onChangeEnd              : this.onChangeEnd,
+        min                      : this.min,
+        max                      : this.max,
+        activeColor              : materialOptions?.activeColor,
+        inactiveColor            : materialOptions?.inactiveColor,
+        thumbColor               : materialOptions?.thumbColor,
+        overlayColor             : materialOptions?.overlayColor,
+        mouseCursor              : materialOptions?.mouseCursor,
+        semanticFormatterCallback: materialOptions?.semanticFormatterCallback,
+        focusNode                : materialOptions?.focusNode,
+        autofocus                : materialOptions?.autofocus ?? false,
+        label                    : materialOptions?.label,
+        divisions                : materialOptions?.divisions,
+      );
+    }
+
+    return null;
   }
 }

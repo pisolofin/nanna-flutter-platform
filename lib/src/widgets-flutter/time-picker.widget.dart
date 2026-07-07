@@ -71,7 +71,7 @@ class NaTimePicker extends NaWidget {
   });
 
   @override
-  Widget renderForUIType(BuildContext context, NaUiType uiType) {
+  Widget? renderForUIType(BuildContext context, NaUiType uiType) {
     final NaTimePickerOptions? options = optionsBuilder?.call(context, uiType);
 
     if (uiType == NaUiType.cupertino) {
@@ -94,26 +94,30 @@ class NaTimePicker extends NaWidget {
       );
     }
 
-    final NaTimePickerOptionsMaterial? materialOptions = options is NaTimePickerOptionsMaterial
-      ? options
-      : null
-    ;
+    if (uiType == NaUiType.material) {
+      final NaTimePickerOptionsMaterial? materialOptions = options is NaTimePickerOptionsMaterial
+        ? options
+        : null
+      ;
 
-    final TimeOfDay initialTime = TimeOfDay(
-      hour  : this.initialTimerDuration.inHours % 24,
-      minute: this.initialTimerDuration.inMinutes % 60,
-    );
+      final TimeOfDay initialTime = TimeOfDay(
+        hour  : this.initialTimerDuration.inHours % 24,
+        minute: this.initialTimerDuration.inMinutes % 60,
+      );
 
-    return TimePickerDialog(
-      initialTime     : initialTime,
-      cancelText      : materialOptions?.cancelText,
-      confirmText     : materialOptions?.confirmText,
-      helpText        : materialOptions?.helpText,
-      errorInvalidText: materialOptions?.errorInvalidText,
-      hourLabelText   : materialOptions?.hourLabelText,
-      minuteLabelText : materialOptions?.minuteLabelText,
-      initialEntryMode:
-          materialOptions?.initialEntryMode ?? TimePickerEntryMode.dial,
-    );
+      return TimePickerDialog(
+        initialTime     : initialTime,
+        cancelText      : materialOptions?.cancelText,
+        confirmText     : materialOptions?.confirmText,
+        helpText        : materialOptions?.helpText,
+        errorInvalidText: materialOptions?.errorInvalidText,
+        hourLabelText   : materialOptions?.hourLabelText,
+        minuteLabelText : materialOptions?.minuteLabelText,
+        initialEntryMode:
+            materialOptions?.initialEntryMode ?? TimePickerEntryMode.dial,
+      );
+    }
+
+    return null;
   }
 }

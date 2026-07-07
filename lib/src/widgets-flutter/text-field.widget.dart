@@ -150,7 +150,7 @@ class NaTextField extends NaWidget {
   });
 
   @override
-  Widget renderForUIType(BuildContext context, NaUiType uiType) {
+  Widget? renderForUIType(BuildContext context, NaUiType uiType) {
     final NaTextFieldOptions? options = optionsBuilder?.call(context, uiType);
 
     if (uiType == NaUiType.cupertino) {
@@ -214,47 +214,51 @@ class NaTextField extends NaWidget {
       );
     }
 
-    final NaTextFieldOptionsMaterial? materialOptions = options is NaTextFieldOptionsMaterial
-      ? options
-      : null
-    ;
-    return TextField(
-      controller        : this.controller,
-      focusNode         : this.focusNode,
-      keyboardType      : this.keyboardType,
-      textInputAction   : this.textInputAction,
-      textCapitalization: this.textCapitalization,
-      style             : this.style,
-      textAlign         : this.textAlign,
-      autofocus         : this.autofocus,
-      readOnly          : this.readOnly,
-      showCursor        : materialOptions?.showCursor ?? this.showCursor,
-      obscureText       : materialOptions?.obscureText ?? this.obscureText,
-      autocorrect       : this.autocorrect,
-      enableSuggestions : this.enableSuggestions,
-      maxLines          : this.maxLines,
-      minLines          : this.minLines,
-      expands           : this.expands,
-      maxLength         : this.maxLength,
-      onChanged         : this.onChanged,
-      onEditingComplete : this.onEditingComplete,
-      onSubmitted       : this.onSubmitted,
-      inputFormatters   : this.inputFormatters,
-      enabled           : this.enabled,
-      keyboardAppearance: this.keyboardAppearance,
+    if (uiType == NaUiType.material) {
+      final NaTextFieldOptionsMaterial? materialOptions = options is NaTextFieldOptionsMaterial
+        ? options
+        : null
+      ;
+      return TextField(
+        controller        : this.controller,
+        focusNode         : this.focusNode,
+        keyboardType      : this.keyboardType,
+        textInputAction   : this.textInputAction,
+        textCapitalization: this.textCapitalization,
+        style             : this.style,
+        textAlign         : this.textAlign,
+        autofocus         : this.autofocus,
+        readOnly          : this.readOnly,
+        showCursor        : materialOptions?.showCursor ?? this.showCursor,
+        obscureText       : materialOptions?.obscureText ?? this.obscureText,
+        autocorrect       : this.autocorrect,
+        enableSuggestions : this.enableSuggestions,
+        maxLines          : this.maxLines,
+        minLines          : this.minLines,
+        expands           : this.expands,
+        maxLength         : this.maxLength,
+        onChanged         : this.onChanged,
+        onEditingComplete : this.onEditingComplete,
+        onSubmitted       : this.onSubmitted,
+        inputFormatters   : this.inputFormatters,
+        enabled           : this.enabled,
+        keyboardAppearance: this.keyboardAppearance,
 
-      // Material specific
-      decoration        : materialOptions?.decoration ?? const InputDecoration(),
-      obscuringCharacter: materialOptions?.obscuringCharacter ?? '•',
-      selectionControls : materialOptions?.selectionControls,
-      cursorColor       : materialOptions?.cursorColor,
-      cursorHeight      : materialOptions?.cursorHeight,
-      cursorWidth       : materialOptions?.cursorWidth ?? 2.0,
-      cursorRadius      : materialOptions?.cursorRadius,
-      mouseCursor       : materialOptions?.mouseCursor,
-      strutStyle        : materialOptions?.strutStyle,
-      textAlignVertical : materialOptions?.textAlignVertical,
-      textDirection     : materialOptions?.textDirection,
-    );
+        // Material specific
+        decoration        : materialOptions?.decoration ?? const InputDecoration(),
+        obscuringCharacter: materialOptions?.obscuringCharacter ?? '•',
+        selectionControls : materialOptions?.selectionControls,
+        cursorColor       : materialOptions?.cursorColor,
+        cursorHeight      : materialOptions?.cursorHeight,
+        cursorWidth       : materialOptions?.cursorWidth ?? 2.0,
+        cursorRadius      : materialOptions?.cursorRadius,
+        mouseCursor       : materialOptions?.mouseCursor,
+        strutStyle        : materialOptions?.strutStyle,
+        textAlignVertical : materialOptions?.textAlignVertical,
+        textDirection     : materialOptions?.textDirection,
+      );
+    }
+
+    return null;
   }
 }

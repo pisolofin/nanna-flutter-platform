@@ -70,7 +70,7 @@ class NaButton extends NaWidget {
   });
 
   @override
-  Widget renderForUIType(BuildContext context, NaUiType uiType) {
+  Widget? renderForUIType(BuildContext context, NaUiType uiType) {
     // 1. Resolve options via the builder provided by the user (if present)
     final NaButtonOptions? options = optionsBuilder?.call(context, uiType);
 
@@ -102,22 +102,26 @@ class NaButton extends NaWidget {
       );
     }
 
-    // Default fallback to Material
-    final NaButtonOptionsMaterial? materialOptions = options is NaButtonOptionsMaterial
-      ? options
-      : null
-    ;
-    return ElevatedButton(
-      onPressed       : this.onPressed,
-      onLongPress     : materialOptions?.onLongPress,
-      onHover         : materialOptions?.onHover,
-      onFocusChange   : materialOptions?.onFocusChange,
-      style           : materialOptions?.style,
-      focusNode       : materialOptions?.focusNode,
-      autofocus       : materialOptions?.autofocus ?? false,
-      clipBehavior    : materialOptions?.clipBehavior ?? Clip.none,
-      statesController: materialOptions?.statesController,
-      child           : this.child,
-    );
+    if (uiType == NaUiType.material) {
+      // Default fallback to Material
+      final NaButtonOptionsMaterial? materialOptions = options is NaButtonOptionsMaterial
+        ? options
+        : null
+      ;
+      return ElevatedButton(
+        onPressed       : this.onPressed,
+        onLongPress     : materialOptions?.onLongPress,
+        onHover         : materialOptions?.onHover,
+        onFocusChange   : materialOptions?.onFocusChange,
+        style           : materialOptions?.style,
+        focusNode       : materialOptions?.focusNode,
+        autofocus       : materialOptions?.autofocus ?? false,
+        clipBehavior    : materialOptions?.clipBehavior ?? Clip.none,
+        statesController: materialOptions?.statesController,
+        child           : this.child,
+      );
+    }
+
+    return null;
   }
 }

@@ -63,7 +63,7 @@ class NaIcon extends NaWidget {
   });
 
   @override
-  Widget renderForUIType(BuildContext context, NaUiType uiType) {
+  Widget? renderForUIType(BuildContext context, NaUiType uiType) {
     final NaIconOptions? options = optionsBuilder?.call(context, uiType);
 
     final IconData resolvedIcon = this.icon.resolve(uiType);
@@ -83,21 +83,25 @@ class NaIcon extends NaWidget {
       );
     }
 
-    final NaIconOptionsMaterial? materialOptions = options is NaIconOptionsMaterial
-      ? options
-      : null
-    ;
-    return Icon(
-      resolvedIcon,
-      size         : this.size,
-      color        : this.color,
-      fill         : materialOptions?.fill,
-      weight       : materialOptions?.weight,
-      grade        : materialOptions?.grade,
-      opticalSize  : materialOptions?.opticalSize,
-      shadows      : materialOptions?.shadows,
-      semanticLabel: materialOptions?.semanticLabel,
-      textDirection: materialOptions?.textDirection,
-    );
+    if (uiType == NaUiType.material) {
+      final NaIconOptionsMaterial? materialOptions = options is NaIconOptionsMaterial
+        ? options
+        : null
+      ;
+      return Icon(
+        resolvedIcon,
+        size         : this.size,
+        color        : this.color,
+        fill         : materialOptions?.fill,
+        weight       : materialOptions?.weight,
+        grade        : materialOptions?.grade,
+        opticalSize  : materialOptions?.opticalSize,
+        shadows      : materialOptions?.shadows,
+        semanticLabel: materialOptions?.semanticLabel,
+        textDirection: materialOptions?.textDirection,
+      );
+    }
+
+    return null;
   }
 }

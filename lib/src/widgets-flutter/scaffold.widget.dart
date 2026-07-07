@@ -52,7 +52,7 @@ class NaScaffold extends NaWidget {
   });
 
   @override
-  Widget renderForUIType(BuildContext context, NaUiType uiType) {
+  Widget? renderForUIType(BuildContext context, NaUiType uiType) {
     final NaScaffoldOptions? options = optionsBuilder?.call(context, uiType);
 
     if (uiType == NaUiType.cupertino) {
@@ -80,19 +80,23 @@ class NaScaffold extends NaWidget {
       );
     }
 
-    final NaScaffoldOptionsMaterial? materialOptions = options is NaScaffoldOptionsMaterial
-      ? options
-      : null
-    ;
-    return Scaffold(
-      appBar              : this.appBar,
-      body                : this.body,
-      backgroundColor     : this.backgroundColor,
-      floatingActionButton: materialOptions?.floatingActionButton,
-      bottomNavigationBar :
-          materialOptions?.bottomNavigationBar ?? this.bottomNavigationBar,
-      drawer                  : materialOptions?.drawer,
-      resizeToAvoidBottomInset: materialOptions?.resizeToAvoidBottomInset,
-    );
+    if (uiType == NaUiType.material) {
+      final NaScaffoldOptionsMaterial? materialOptions = options is NaScaffoldOptionsMaterial
+        ? options
+        : null
+      ;
+      return Scaffold(
+        appBar              : this.appBar,
+        body                : this.body,
+        backgroundColor     : this.backgroundColor,
+        floatingActionButton: materialOptions?.floatingActionButton,
+        bottomNavigationBar :
+            materialOptions?.bottomNavigationBar ?? this.bottomNavigationBar,
+        drawer                  : materialOptions?.drawer,
+        resizeToAvoidBottomInset: materialOptions?.resizeToAvoidBottomInset,
+      );
+    }
+
+    return null;
   }
 }

@@ -40,7 +40,8 @@ Instead of writing platform-conditional code (`if (Platform.isIOS) ...`) on ever
 ## How to use the library
 
 ### 1. Initialize the Scope (NaUiTypeScope)
-To make your entire app (or a portion of it) use a specific design system, wrap your widgets inside a `NaUiTypeScope`:
+To make your entire app (or a portion of it) use a specific design system, wrap your widgets inside a `NaUiTypeScope`.
+You can pass a fallback chain of UI types. The widgets will attempt to render themselves according to the first supported type in the list, falling back gracefully to the next ones if a custom style is not supported.
 
 ```dart
 import 'package:flutter/widgets.dart';
@@ -49,8 +50,8 @@ import 'package:nanna_flutter_platform/nanna_flutter_platform.dart';
 void main() {
   runApp(
     NaUiTypeScope(
-      // Change this value to switch the entire UI (e.g. NaUiType.cupertino)
-      uiType: NaUiType.material, 
+      // Priority list of UI types (e.g., custom style first, then cupertino, falling back to material)
+      uiTypes: [NaUiType('custom'), NaUiType.cupertino], 
       child: const MyApp(),
     )
   );

@@ -65,7 +65,7 @@ class NaCard extends NaWidget {
   });
 
   @override
-  Widget renderForUIType(BuildContext context, NaUiType uiType) {
+  Widget? renderForUIType(BuildContext context, NaUiType uiType) {
     final NaCardOptions? options = optionsBuilder?.call(context, uiType);
 
     if (uiType == NaUiType.cupertino) {
@@ -94,21 +94,25 @@ class NaCard extends NaWidget {
       );
     }
 
-    final NaCardOptionsMaterial? materialOptions = options is NaCardOptionsMaterial
-      ? options
-      : null
-    ;
-    return Card(
-      color             : materialOptions?.color,
-      shadowColor       : materialOptions?.shadowColor,
-      surfaceTintColor  : materialOptions?.surfaceTintColor,
-      elevation         : materialOptions?.elevation,
-      shape             : materialOptions?.shape,
-      borderOnForeground: materialOptions?.borderOnForeground ?? true,
-      margin            : materialOptions?.margin,
-      clipBehavior      : materialOptions?.clipBehavior,
-      semanticContainer : materialOptions?.semanticContainer ?? true,
-      child             : this.child,
-    );
+    if (uiType == NaUiType.material) {
+      final NaCardOptionsMaterial? materialOptions = options is NaCardOptionsMaterial
+        ? options
+        : null
+      ;
+      return Card(
+        color             : materialOptions?.color,
+        shadowColor       : materialOptions?.shadowColor,
+        surfaceTintColor  : materialOptions?.surfaceTintColor,
+        elevation         : materialOptions?.elevation,
+        shape             : materialOptions?.shape,
+        borderOnForeground: materialOptions?.borderOnForeground ?? true,
+        margin            : materialOptions?.margin,
+        clipBehavior      : materialOptions?.clipBehavior,
+        semanticContainer : materialOptions?.semanticContainer ?? true,
+        child             : this.child,
+      );
+    }
+
+    return null;
   }
 }

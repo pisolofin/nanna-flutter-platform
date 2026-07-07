@@ -47,7 +47,7 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     // Wrap the app with NaUiTypeScope to propagate the selected UI type to all NaPlatform* widgets.
     return NaUiTypeScope(
-      uiType: _currentUiType,
+      uiTypes: [_currentUiType],
       child: AppStateScope(
         toggleUiType: _toggleUiType,
         child: NaApp(

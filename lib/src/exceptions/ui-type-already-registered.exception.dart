@@ -1,4 +1,4 @@
-import 'package:nanna_flutter/nanna_flutter.dart';
+import 'package:nanna/nanna.dart';
 
 class NaUiTypeAlreadyRegisteredException extends NaException {
   NaUiTypeAlreadyRegisteredException([

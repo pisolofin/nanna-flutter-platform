@@ -46,7 +46,7 @@ class NaAppBar extends NaWidget implements ObstructingPreferredSizeWidget {
   });
 
   @override
-  Widget renderForUIType(BuildContext context, NaUiType uiType) {
+  Widget? renderForUIType(BuildContext context, NaUiType uiType) {
     final NaAppBarOptions? options = optionsBuilder?.call(context, uiType);
 
     if (uiType == NaUiType.cupertino) {
@@ -74,19 +74,23 @@ class NaAppBar extends NaWidget implements ObstructingPreferredSizeWidget {
       );
     }
 
-    final NaAppBarOptionsMaterial? materialOptions = options is NaAppBarOptionsMaterial
-      ? options
-      : null
-    ;
-    return AppBar(
-      leading        : this.leading,
-      title          : this.title,
-      actions        : this.actions,
-      backgroundColor: this.backgroundColor,
-      elevation      : materialOptions?.elevation,
-      centerTitle    : materialOptions?.centerTitle,
-      bottom         : materialOptions?.bottom,
-    );
+    if (uiType == NaUiType.material) {
+      final NaAppBarOptionsMaterial? materialOptions = options is NaAppBarOptionsMaterial
+        ? options
+        : null
+      ;
+      return AppBar(
+        leading        : this.leading,
+        title          : this.title,
+        actions        : this.actions,
+        backgroundColor: this.backgroundColor,
+        elevation      : materialOptions?.elevation,
+        centerTitle    : materialOptions?.centerTitle,
+        bottom         : materialOptions?.bottom,
+      );
+    }
+
+    return null;
   }
 
   @override

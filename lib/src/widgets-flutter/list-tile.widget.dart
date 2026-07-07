@@ -109,7 +109,7 @@ class NaListTile extends NaWidget {
   });
 
   @override
-  Widget renderForUIType(BuildContext context, NaUiType uiType) {
+  Widget? renderForUIType(BuildContext context, NaUiType uiType) {
     final NaListTileOptions? options = optionsBuilder?.call(context, uiType);
 
     Widget? finalTrailing = this.trailing;
@@ -123,7 +123,7 @@ class NaListTile extends NaWidget {
           mainAxisSize: MainAxisSize.min,
           children    : [finalTrailing, const SizedBox(width: 8.0), chevron],
         );
-      } else {
+      }else {
         finalTrailing = chevron;
       }
     }
@@ -148,41 +148,45 @@ class NaListTile extends NaWidget {
       );
     }
 
-    final NaListTileOptionsMaterial? materialOptions = options is NaListTileOptionsMaterial
-      ? options
-      : null
-    ;
-    return ListTile(
-      leading           : this.leading,
-      title             : this.title,
-      subtitle          : this.subtitle,
-      trailing          : finalTrailing,
-      isThreeLine       : materialOptions?.isThreeLine ?? false,
-      dense             : materialOptions?.dense,
-      visualDensity     : materialOptions?.visualDensity,
-      shape             : materialOptions?.shape,
-      style             : materialOptions?.style,
-      selectedColor     : materialOptions?.selectedColor,
-      iconColor         : materialOptions?.iconColor,
-      textColor         : materialOptions?.textColor,
-      contentPadding    : materialOptions?.contentPadding,
-      enabled           : materialOptions?.enabled ?? true,
-      onTap             : this.onTap,
-      onLongPress       : materialOptions?.onLongPress,
-      onFocusChange     : materialOptions?.onFocusChange,
-      mouseCursor       : materialOptions?.mouseCursor,
-      selected          : materialOptions?.selected ?? false,
-      focusColor        : materialOptions?.focusColor,
-      hoverColor        : materialOptions?.hoverColor,
-      splashColor       : materialOptions?.splashColor,
-      focusNode         : materialOptions?.focusNode,
-      autofocus         : materialOptions?.autofocus ?? false,
-      tileColor         : materialOptions?.tileColor,
-      selectedTileColor : materialOptions?.selectedTileColor,
-      enableFeedback    : materialOptions?.enableFeedback,
-      horizontalTitleGap: materialOptions?.horizontalTitleGap,
-      minVerticalPadding: materialOptions?.minVerticalPadding,
-      minLeadingWidth   : materialOptions?.minLeadingWidth,
-    );
+    if (uiType == NaUiType.material) {
+      final NaListTileOptionsMaterial? materialOptions = options is NaListTileOptionsMaterial
+        ? options
+        : null
+      ;
+      return ListTile(
+        leading           : this.leading,
+        title             : this.title,
+        subtitle          : this.subtitle,
+        trailing          : finalTrailing,
+        isThreeLine       : materialOptions?.isThreeLine ?? false,
+        dense             : materialOptions?.dense,
+        visualDensity     : materialOptions?.visualDensity,
+        shape             : materialOptions?.shape,
+        style             : materialOptions?.style,
+        selectedColor     : materialOptions?.selectedColor,
+        iconColor         : materialOptions?.iconColor,
+        textColor         : materialOptions?.textColor,
+        contentPadding    : materialOptions?.contentPadding,
+        enabled           : materialOptions?.enabled ?? true,
+        onTap             : this.onTap,
+        onLongPress       : materialOptions?.onLongPress,
+        onFocusChange     : materialOptions?.onFocusChange,
+        mouseCursor       : materialOptions?.mouseCursor,
+        selected          : materialOptions?.selected ?? false,
+        focusColor        : materialOptions?.focusColor,
+        hoverColor        : materialOptions?.hoverColor,
+        splashColor       : materialOptions?.splashColor,
+        focusNode         : materialOptions?.focusNode,
+        autofocus         : materialOptions?.autofocus ?? false,
+        tileColor         : materialOptions?.tileColor,
+        selectedTileColor : materialOptions?.selectedTileColor,
+        enableFeedback    : materialOptions?.enableFeedback,
+        horizontalTitleGap: materialOptions?.horizontalTitleGap,
+        minVerticalPadding: materialOptions?.minVerticalPadding,
+        minLeadingWidth   : materialOptions?.minLeadingWidth,
+      );
+    }
+
+    return null;
   }
 }

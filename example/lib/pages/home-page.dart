@@ -20,7 +20,7 @@ class ExampleHomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final NaUiType uiType = NaUiTypeScope.of(context);
+    final NaUiType uiType = NaUiTypeScope.of(context).first;
     final bool isMaterial = uiType == NaUiType.material;
 
     return NaScaffold(
