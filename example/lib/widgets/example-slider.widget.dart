@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:nanna_flutter_platform/nanna_flutter_platform.dart';
+import 'package:nanna_platform/nanna_platform.dart';
 
 class ExampleSliderWidget extends StatefulWidget {
   const ExampleSliderWidget({super.key});

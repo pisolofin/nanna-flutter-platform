@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:nanna_flutter_platform/nanna_flutter_platform.dart';
+import 'package:nanna_platform/nanna_platform.dart';
 
 import 'pages/home-page.dart';
 
