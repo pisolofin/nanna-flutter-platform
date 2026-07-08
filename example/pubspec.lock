@@ -238,7 +238,7 @@ packages:
       path: "../../nanna-flutter"
       relative: true
     source: path
-    version: "1.0.1"
+    version: "1.0.2"
   nanna_platform:
     dependency: "direct main"
     description:
