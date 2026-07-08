@@ -1,0 +1,47 @@
+import 'package:flutter/widgets.dart';
+
+import '../models/ui-type.model.dart';
+import '../scopes/ui-type.scope.dart';
+import '../services/platform-builder.service.dart';
+
+/// Generic Widget that change its apparence according to the [NaUiType]
+abstract class NaWidget extends StatelessWidget {
+  /// The UI type to use for this widget. If not provided, the [NaUiTypeScope] will be used.
+  final NaUiType? uiType;
+  final dynamic options;
+
+  const NaWidget({ super.key, this.uiType, this.options });
+
+  /// Renders widget for active UI type.
+  /// Return null if the widget does not natively support the given [uiType].
+  Widget? renderForUIType(BuildContext context, NaUiType uiType);
+
+  @override
+  Widget build(BuildContext context) {
+    final List<NaUiType> currentUiTypes = this.uiType != null
+        ? [this.uiType!]
+        : NaUiTypeScope.of(context);
+
+    for (final NaUiType type in currentUiTypes) {
+      final NaWidgetBuilder? builder = naPlatformServiceGetWidgetBuilder(
+        this.runtimeType,
+        type,
+      );
+      if (builder != null) {
+        return builder(context, this);
+      }
+
+      final Widget? nativeWidget = renderForUIType(context, type);
+      if (nativeWidget != null) {
+        return nativeWidget;
+      }
+    }
+
+    return fallbackRender(context);
+  }
+
+  /// Ultimate fallback if no uiType in the chain was supported.
+  Widget fallbackRender(BuildContext context) {
+    return renderForUIType(context, NaUiType.material) ?? const SizedBox.shrink();
+  }
+}

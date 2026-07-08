@@ -1,0 +1,28 @@
+name: nanna_platform_example
+description: "Demonstrates how to use the nanna_platform package."
+publish_to: 'none'
+
+environment:
+  sdk: ^3.9.2
+  flutter: ">=1.17.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  nanna_platform:
+    path: ../
+    
+  nanna: ^1.0.1
+
+dependency_overrides:
+  nanna:
+    path: ../../nanna-flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
