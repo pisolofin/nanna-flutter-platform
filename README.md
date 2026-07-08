@@ -1,3 +1,6 @@
+<p align="center">
+  <img src="https://raw.githubusercontent.com/pisolofin/nanna-flutter-platform/main/.logo/nanna-logo-transparent.png" alt="Nanna Platform Logo" width="200"/>
+</p>
 # nanna_flutter_platform
 
 This library provides unified cross-platform components for Flutter apps.
@@ -93,3 +96,4 @@ Read the full guide and example here: [Extending the Platform with External Libr
 
 ### Technical Deep Dives
 *   **[Development Guidelines](.docs/development-guidelines.md)**: Strict constraints, target platforms (iOS/Android), offline-first storage logic, dependencies (e.g., `nanna_flutter`), and Dart/Flutter coding styles.
+
