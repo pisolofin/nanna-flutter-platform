@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/pisolofin/nanna-flutter-platform/main/.logo/nanna-logo-transparent.png" alt="Nanna Platform Logo" width="200"/>
+  <img src="https://raw.githubusercontent.com/pisolofin/nanna-flutter-platform/main/.logo/nanna-platform-logo-transparent.png" alt="Nanna Platform Logo" width="200"/>
 </p>
 # nanna_flutter_platform
 
