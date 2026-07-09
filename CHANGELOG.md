@@ -1,6 +1,7 @@
 ## 1.0.2
 
 * Cupertino icons dependency.
+* Navigation (NaPageRoute).
 
 ## 1.0.1
 
