@@ -31,61 +31,64 @@ class ExampleHomePage extends StatelessWidget {
         ],
       ),
       bottomNavigationBar: const ExampleBottomNavigationBarWidget(),
-      body: Center(
+      body: SafeArea(
         child: SingleChildScrollView(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text(
-                'Current UI Type: ${isMaterial ? 'Material' : 'Cupertino'}',
-                style: const TextStyle(
-                  fontSize: 20.0,
-                  fontWeight: FontWeight.bold,
+          child: Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                const SizedBox(height: 20.0),
+                Text(
+                  'Current UI Type: ${isMaterial ? 'Material' : 'Cupertino'}',
+                  style: const TextStyle(
+                    fontSize: 20.0,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
-              ),
-              const SizedBox(height: 30.0),
-              NaButton(
-                onPressed: AppStateScope.of(context).toggleUiType,
-                child: Text(
-                  'Switch to ${isMaterial ? 'Cupertino' : 'Material'}',
-                  style: const TextStyle(fontSize: 16.0),
+                const SizedBox(height: 30.0),
+                NaButton(
+                  onPressed: AppStateScope.of(context).toggleUiType,
+                  child: Text(
+                    'Switch to ${isMaterial ? 'Cupertino' : 'Material'}',
+                    style: const TextStyle(fontSize: 16.0),
+                  ),
                 ),
-              ),
-              const SizedBox(height: 40.0),
+                const SizedBox(height: 40.0),
 
-              const ExamplePageRouteWidget(),
-              const SizedBox(height: 20.0),
+                const ExamplePageRouteWidget(),
+                const SizedBox(height: 20.0),
 
-              const ExampleSwitchWidget(),
-              const SizedBox(height: 20.0),
+                const ExampleSwitchWidget(),
+                const SizedBox(height: 20.0),
 
-              const ExampleCheckboxWidget(),
-              const SizedBox(height: 20.0),
+                const ExampleCheckboxWidget(),
+                const SizedBox(height: 20.0),
 
-              const ExampleRadioWidget(),
-              const SizedBox(height: 20.0),
+                const ExampleRadioWidget(),
+                const SizedBox(height: 20.0),
 
-              const ExampleTextFieldWidget(),
-              const SizedBox(height: 20.0),
+                const ExampleTextFieldWidget(),
+                const SizedBox(height: 20.0),
 
-              const ExampleSliderWidget(),
-              const SizedBox(height: 20.0),
+                const ExampleSliderWidget(),
+                const SizedBox(height: 20.0),
 
-              const ExampleProgressIndicatorWidget(),
-              const SizedBox(height: 40.0),
+                const ExampleProgressIndicatorWidget(),
+                const SizedBox(height: 40.0),
 
-              const ExampleCardListWidget(),
-              const SizedBox(height: 40.0),
+                const ExampleCardListWidget(),
+                const SizedBox(height: 40.0),
 
-              const ExampleAlertDialogWidget(),
-              const SizedBox(height: 20.0),
+                const ExampleAlertDialogWidget(),
+                const SizedBox(height: 20.0),
 
-              const ExampleDatePickerWidget(),
-              const SizedBox(height: 20.0),
+                const ExampleDatePickerWidget(),
+                const SizedBox(height: 20.0),
 
-              const ExampleTimePickerWidget(),
-              const SizedBox(height: 40.0),
-            ],
+                const ExampleTimePickerWidget(),
+                const SizedBox(height: 40.0),
+              ],
+            ),
           ),
         ),
       ),
