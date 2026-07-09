@@ -1,6 +1,6 @@
 name: nanna_platform
 description: A platform-adaptive UI extension for the Nanna Flutter package, providing dynamic fallback rendering for Material and Cupertino widgets.
-version: 1.0.0
+version: 1.0.1
 repository: https://github.com/pisolofin/nanna-flutter-platform
 issue_tracker: https://github.com/pisolofin/nanna-flutter-platform/issues
 
@@ -21,3 +21,4 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^5.0.0
+

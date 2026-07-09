@@ -10,28 +10,50 @@ abstract class NaAlertDialogOptions extends NaWidgetOptions {}
 
 /// Material-specific options for [NaAlertDialog], resolving into a [AlertDialog].
 class NaAlertDialogOptionsMaterial extends NaAlertDialogOptions {
+  /// The optional icon at the top of the dialog.
   final Widget? icon;
+  /// Padding around the icon.
   final EdgeInsetsGeometry? iconPadding;
+  /// Color of the icon.
   final Color? iconColor;
+  /// Padding around the title.
   final EdgeInsetsGeometry? titlePadding;
+  /// Text style for the title.
   final TextStyle? titleTextStyle;
+  /// Padding around the content.
   final EdgeInsetsGeometry? contentPadding;
+  /// Text style for the content.
   final TextStyle? contentTextStyle;
+  /// Padding around the actions.
   final EdgeInsetsGeometry? actionsPadding;
+  /// Alignment of the actions.
   final MainAxisAlignment? actionsAlignment;
+  /// Alignment when actions overflow.
   final OverflowBarAlignment? actionsOverflowAlignment;
+  /// Direction when actions overflow.
   final VerticalDirection? actionsOverflowDirection;
+  /// Spacing between actions when they overflow.
   final double? actionsOverflowButtonSpacing;
+  /// Padding around each action button.
   final EdgeInsetsGeometry? buttonPadding;
+  /// Background color of the dialog.
   final Color? backgroundColor;
+  /// Elevation of the dialog.
   final double? elevation;
+  /// Shadow color of the dialog.
   final Color? shadowColor;
+  /// Surface tint color of the dialog.
   final Color? surfaceTintColor;
+  /// Semantic label for accessibility.
   final String? semanticLabel;
+  /// Shape of the dialog.
   final ShapeBorder? shape;
+  /// Clip behavior of the dialog.
   final Clip? clipBehavior;
+  /// Whether the dialog should be scrollable.
   final bool? scrollable;
 
+  /// Creates material-specific options for the dialog.
   NaAlertDialogOptionsMaterial({
     this.icon,
     this.iconPadding,
@@ -59,9 +81,12 @@ class NaAlertDialogOptionsMaterial extends NaAlertDialogOptions {
 
 /// Cupertino-specific options for [NaAlertDialog], resolving into a [CupertinoAlertDialog].
 class NaAlertDialogOptionsCupertino extends NaAlertDialogOptions {
+  /// Scroll controller for the actions section.
   final ScrollController? actionScrollController;
+  /// Scroll controller for the main content section.
   final ScrollController? scrollController;
 
+  /// Creates cupertino-specific options for the dialog.
   NaAlertDialogOptionsCupertino({
     this.actionScrollController,
     this.scrollController,
@@ -71,12 +96,17 @@ class NaAlertDialogOptionsCupertino extends NaAlertDialogOptions {
 /// A generic Alert Dialog widget that automatically renders a [AlertDialog] on Material
 /// and a [CupertinoAlertDialog] on Cupertino.
 class NaAlertDialog extends NaWidget {
+  /// The (optional) title of the dialog.
   final Widget? title;
+  /// The (optional) content of the dialog.
   final Widget? content;
+  /// The (optional) set of actions that are displayed at the bottom of the dialog.
   final List<Widget>? actions;
 
+  /// Builder for providing platform-specific options.
   final NaWidgetOptionsBuilder<NaAlertDialogOptions>? optionsBuilder;
 
+  /// Creates a cross-platform alert dialog.
   const NaAlertDialog({
     super.key,
     this.title,
