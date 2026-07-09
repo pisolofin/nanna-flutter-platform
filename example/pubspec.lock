@@ -241,11 +241,12 @@ packages:
     source: hosted
     version: "1.16.0"
   nanna:
-    dependency: "direct main"
+    dependency: transitive
     description:
-      path: "../../nanna-flutter"
-      relative: true
-    source: path
+      name: nanna
+      sha256: "99e223a6fd9b313de8cce3966a1f130c318045426e76f35dde90012035506072"
+      url: "https://pub.dev"
+    source: hosted
     version: "1.0.2"
   nanna_platform:
     dependency: "direct main"

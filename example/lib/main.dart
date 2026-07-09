@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:nanna_platform/nanna_platform.dart';
@@ -33,7 +35,14 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  NaUiType _currentUiType = NaUiType.material;
+  late NaUiType _currentUiType = NaUiType.material;
+
+  @override
+  void initState() {
+    super.initState();
+
+    _currentUiType = Platform.isIOS ? NaUiType.cupertino : NaUiType.material;
+  }
 
   void _toggleUiType() {
     setState(() {
@@ -52,6 +61,7 @@ class _MyAppState extends State<MyApp> {
         toggleUiType: _toggleUiType,
         child: NaApp(
           title: 'Nanna Platform Example',
+          debugShowCheckedModeBanner: false,
           optionsBuilder: (BuildContext context, NaUiType uiType) {
             if (uiType == NaUiType.cupertino) {
               return NaAppOptionsCupertino(

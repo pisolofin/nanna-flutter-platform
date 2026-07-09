@@ -12,12 +12,6 @@ dependencies:
 
   nanna_platform:
     path: ../
-    
-  nanna: ^1.0.1
-
-dependency_overrides:
-  nanna:
-    path: ../../nanna-flutter
 
 dev_dependencies:
   flutter_test:

@@ -8,6 +8,32 @@ Instead of writing platform-conditional code (`if (Platform.isIOS) ...`) on ever
 - **Material Design** for Android, Web, and Linux
 - **Cupertino** for iOS and macOS
 
+## Visual Comparison
+Below are side-by-side examples of the exact same code rendering automatically in Material Design (Android) and Cupertino (iOS).
+
+<table align="center">
+  <tr>
+    <td align="center"><strong>Android (Material)</strong></td>
+    <td align="center"><strong>iPhone (Cupertino)</strong></td>
+  </tr>
+  <tr>
+    <td><img src="https://raw.githubusercontent.com/pisolofin/nanna-flutter-platform/main/.doc/images/android-A.png" width="300" /></td>
+    <td><img src="https://raw.githubusercontent.com/pisolofin/nanna-flutter-platform/main/.doc/images/iPhone-A.png" width="300" /></td>
+  </tr>
+  <tr>
+    <td><img src="https://raw.githubusercontent.com/pisolofin/nanna-flutter-platform/main/.doc/images/android-B.png" width="300" /></td>
+    <td><img src="https://raw.githubusercontent.com/pisolofin/nanna-flutter-platform/main/.doc/images/iPhone-B.png" width="300" /></td>
+  </tr>
+  <tr>
+    <td><img src="https://raw.githubusercontent.com/pisolofin/nanna-flutter-platform/main/.doc/images/android-C.png" width="300" /></td>
+    <td><img src="https://raw.githubusercontent.com/pisolofin/nanna-flutter-platform/main/.doc/images/iPhone-C.png" width="300" /></td>
+  </tr>
+  <tr>
+    <td><img src="https://raw.githubusercontent.com/pisolofin/nanna-flutter-platform/main/.doc/images/android-D.png" width="300" /></td>
+    <td><img src="https://raw.githubusercontent.com/pisolofin/nanna-flutter-platform/main/.doc/images/iPhone-D.png" width="300" /></td>
+  </tr>
+</table>
+
 ## Supported Widgets Status
 
 | Flutter Widget (Material) | Cupertino Equivalent | Implemented | Component Name |
@@ -31,6 +57,7 @@ Instead of writing platform-conditional code (`if (Platform.isIOS) ...`) on ever
 | `Icon` | `Icon` (cupertino variants) | ✅ | `NaIcon` |
 | `Dialog Action` | `CupertinoDialogAction` | ✅ | `NaDialogAction` |
 | `TextField` | `CupertinoTextField` | ✅ | `NaTextField` |
+| `PageRoute` | `CupertinoPageRoute` | ✅ | `NaPageRoute` |
 | `TabBar` | `CupertinoTabBar` | ⏳ | `NaTabBar` |
 | `TabBarView` | `CupertinoTabView` | ⏳ | `NaTabView` |
 | `DropdownButton` | `CupertinoPicker` | ⏳ | `NaDropdown` |
@@ -89,7 +116,20 @@ NaButton(
 ```
 This ensures that the widget remains clean and can accommodate configurations for UI plugins added in the future without needing to be modified.
 
-### 3. Extending with External Libraries (Plugins)
+### 3. Navigation (NaPageRoute)
+When changing pages, standard Flutter routing pushes either a material transition or requires you to manually specify a `CupertinoPageRoute`. To get the correct native transition (like the swipe-back gesture on iOS) based on the active `NaUiType`, use `NaPageRoute.create`:
+
+```dart
+Navigator.push(
+  context,
+  NaPageRoute.create(
+    context, 
+    builder: (context) => const MyNextPage(),
+  ),
+);
+```
+
+### 4. Extending with External Libraries (Plugins)
 The library uses a **Widget Builder Registry** that allows external packages to add support for new design systems (like `macos_ui`) dynamically.
 
 Read the full guide and example here: [Extending the Platform with External Libraries](.doc/external-libraries.md)
