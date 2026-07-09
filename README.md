@@ -31,6 +31,7 @@ Instead of writing platform-conditional code (`if (Platform.isIOS) ...`) on ever
 | `Icon` | `Icon` (cupertino variants) | ✅ | `NaIcon` |
 | `Dialog Action` | `CupertinoDialogAction` | ✅ | `NaDialogAction` |
 | `TextField` | `CupertinoTextField` | ✅ | `NaTextField` |
+| `PageRoute` | `CupertinoPageRoute` | ✅ | `NaPageRoute` |
 | `TabBar` | `CupertinoTabBar` | ⏳ | `NaTabBar` |
 | `TabBarView` | `CupertinoTabView` | ⏳ | `NaTabView` |
 | `DropdownButton` | `CupertinoPicker` | ⏳ | `NaDropdown` |
@@ -89,7 +90,20 @@ NaButton(
 ```
 This ensures that the widget remains clean and can accommodate configurations for UI plugins added in the future without needing to be modified.
 
-### 3. Extending with External Libraries (Plugins)
+### 3. Navigation (NaPageRoute)
+When changing pages, standard Flutter routing pushes either a material transition or requires you to manually specify a `CupertinoPageRoute`. To get the correct native transition (like the swipe-back gesture on iOS) based on the active `NaUiType`, use `NaPageRoute.create`:
+
+```dart
+Navigator.push(
+  context,
+  NaPageRoute.create(
+    context, 
+    builder: (context) => const MyNextPage(),
+  ),
+);
+```
+
+### 4. Extending with External Libraries (Plugins)
 The library uses a **Widget Builder Registry** that allows external packages to add support for new design systems (like `macos_ui`) dynamically.
 
 Read the full guide and example here: [Extending the Platform with External Libraries](.doc/external-libraries.md)

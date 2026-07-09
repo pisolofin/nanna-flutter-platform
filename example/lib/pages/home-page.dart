@@ -8,6 +8,7 @@ import '../widgets/example-switch.widget.dart';
 import '../widgets/example-checkbox.widget.dart';
 import '../widgets/example-card-list.widget.dart';
 import '../widgets/example-text-field.widget.dart';
+import '../widgets/example-page-route.widget.dart';
 import '../widgets/example-date-picker.widget.dart';
 import '../widgets/example-time-picker.widget.dart';
 import '../widgets/example-alert-dialog.widget.dart';
@@ -51,6 +52,9 @@ class ExampleHomePage extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 40.0),
+
+              const ExamplePageRouteWidget(),
+              const SizedBox(height: 20.0),
 
               const ExampleSwitchWidget(),
               const SizedBox(height: 20.0),
