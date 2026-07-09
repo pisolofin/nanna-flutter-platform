@@ -8,6 +8,32 @@ Instead of writing platform-conditional code (`if (Platform.isIOS) ...`) on ever
 - **Material Design** for Android, Web, and Linux
 - **Cupertino** for iOS and macOS
 
+## Visual Comparison
+Below are side-by-side examples of the exact same code rendering automatically in Material Design (Android) and Cupertino (iOS).
+
+<table align="center">
+  <tr>
+    <td align="center"><strong>Android (Material)</strong></td>
+    <td align="center"><strong>iPhone (Cupertino)</strong></td>
+  </tr>
+  <tr>
+    <td><img src="https://raw.githubusercontent.com/pisolofin/nanna-flutter-platform/main/.doc/images/android-A.png" width="300" /></td>
+    <td><img src="https://raw.githubusercontent.com/pisolofin/nanna-flutter-platform/main/.doc/images/iPhone-A.png" width="300" /></td>
+  </tr>
+  <tr>
+    <td><img src="https://raw.githubusercontent.com/pisolofin/nanna-flutter-platform/main/.doc/images/android-B.png" width="300" /></td>
+    <td><img src="https://raw.githubusercontent.com/pisolofin/nanna-flutter-platform/main/.doc/images/iPhone-B.png" width="300" /></td>
+  </tr>
+  <tr>
+    <td><img src="https://raw.githubusercontent.com/pisolofin/nanna-flutter-platform/main/.doc/images/android-C.png" width="300" /></td>
+    <td><img src="https://raw.githubusercontent.com/pisolofin/nanna-flutter-platform/main/.doc/images/iPhone-C.png" width="300" /></td>
+  </tr>
+  <tr>
+    <td><img src="https://raw.githubusercontent.com/pisolofin/nanna-flutter-platform/main/.doc/images/android-D.png" width="300" /></td>
+    <td><img src="https://raw.githubusercontent.com/pisolofin/nanna-flutter-platform/main/.doc/images/iPhone-D.png" width="300" /></td>
+  </tr>
+</table>
+
 ## Supported Widgets Status
 
 | Flutter Widget (Material) | Cupertino Equivalent | Implemented | Component Name |
