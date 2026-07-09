@@ -1,3 +1,7 @@
+## 1.0.2
+
+* Cupertino icons dependency.
+
 ## 1.0.1
 
 * Added dynamic fallback engine for UI rendering with `NaUiTypeScope` and `uiTypes` chain.
