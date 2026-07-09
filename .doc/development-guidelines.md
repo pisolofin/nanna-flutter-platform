@@ -10,14 +10,6 @@ This document outlines the technical constraints, architectural decisions, and s
 - **Offline-First:** All data (trips, POIs, notes, toggles) must be saved locally on the device first. The app must be fully functional without an internet connection.
 - **Synchronization:** The app will sync with a remote server. The server-side implementation is postponed, but the local data models and architecture must be designed to support eventual synchronization.
 
-## Dependencies
-- The project relies on a custom local framework. It must be included in `pubspec.yaml` as follows:
-  ```yaml
-  dependencies:
-    nanna_flutter:
-      path: ../nanna/nanna-flutter
-  ```
-
 ## Coding Styles & Rules (Dart/Flutter)
 *   **Naming (Variables and Methods):**
     *   Strict English naming. Highly descriptive. No single-letter variables.

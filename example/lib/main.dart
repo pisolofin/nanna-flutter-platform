@@ -52,6 +52,7 @@ class _MyAppState extends State<MyApp> {
         toggleUiType: _toggleUiType,
         child: NaApp(
           title: 'Nanna Platform Example',
+          debugShowCheckedModeBanner: false,
           optionsBuilder: (BuildContext context, NaUiType uiType) {
             if (uiType == NaUiType.cupertino) {
               return NaAppOptionsCupertino(
