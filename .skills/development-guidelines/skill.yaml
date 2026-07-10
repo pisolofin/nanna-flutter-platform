@@ -1,0 +1,12 @@
+id: "development_guidelines"
+name: "Development Guidelines and Code Standards"
+version: "1.0.0"
+description: "Global syntax, formatting, and style standards for the Flutter project."
+
+# Automatically injects these rules into every sub-agent spawned in the workspace
+auto_activate: true
+
+resources:
+  - name: "development_guidelines_doc"
+    path: "../../.doc/development-guidelines.md"
+    type: "markdown"
