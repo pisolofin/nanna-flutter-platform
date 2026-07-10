@@ -63,7 +63,7 @@ Below are side-by-side examples of the exact same code rendering automatically i
 | `DropdownButton` | `CupertinoPicker` | ⏳ | `NaDropdown` |
 | `RefreshIndicator` | `CupertinoSliverRefreshControl` | ⏳ | `NaRefreshIndicator` |
 | `BottomSheet` | `CupertinoActionSheet` | ⏳ | `NaActionSheet` |
-| `Scrollbar` | `CupertinoScrollbar` | ⏳ | `NaScrollbar` |
+| `Scrollbar` | `CupertinoScrollbar` | ✅ | `NaScrollbar` |
 | `SearchBar` | `CupertinoSearchTextField`| ✅ | `NaSearchBar` |
 
 
