@@ -16,7 +16,8 @@ This document outlines the technical constraints, architectural decisions, and s
     *   Variables representing lists/arrays must be singular and end with `List` (e.g., `userList`, not `users`).
     *   Asynchronous methods must have the `Async` suffix (e.g., `fetchDataAsync()`).
 *   **Syntax and Formatting:**
-    *   Mandatory use of curly braces `{}` for all `if`, `for`, and `while` blocks, with no exceptions for single-line blocks.
+    *   **Mandatory Braces & Multiline:** Use curly braces `{}` for all `if`, `for`, and `while` blocks, with **no exceptions** for single-line blocks. The body of the block (e.g. `return;`) must NEVER be on the same line as the condition; it must be wrapped in `{}` on a new line.
+    *   **Condition Parentheses:** When writing multiple conditions with logical operators (e.g. `||` or `&&`), any condition that is not a direct boolean must be wrapped in parentheses. Example: `if ((item == null) || (item.latitude == null))`. Direct booleans like `if (!mounted)` are fine without extra parentheses.
     *   No spaces before structural keywords if preceded by a closing brace (e.g., `}else` and `}catch`, not `} else`).
     *   Line length limits are flexible (can exceed 80 characters).
     *   **Named Parameters Alignment:** When passing multiple named parameters to functions or constructors (e.g., UI widgets), their colons (`:`) must be vertically aligned using spaces to improve readability.
