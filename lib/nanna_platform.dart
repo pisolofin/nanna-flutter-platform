@@ -23,6 +23,7 @@ export 'src/widgets-flutter/checkbox.widget.dart';
 export 'src/widgets-flutter/list-tile.widget.dart';
 export 'src/widgets-flutter/text-field.widget.dart';
 export 'src/widgets-flutter/page-route.widget.dart';
+export 'src/widgets-flutter/search-bar.widget.dart';
 export 'src/widgets-flutter/icon-button.widget.dart';
 export 'src/widgets-flutter/date-picker.widget.dart';
 export 'src/widgets-flutter/time-picker.widget.dart';
@@ -34,4 +35,3 @@ export 'src/widgets-flutter/bottom-navigation-bar.widget.dart';
 export 'src/constants/icons.constant.dart';
 
 export 'src/exceptions/ui-type-already-registered.exception.dart';
-

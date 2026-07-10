@@ -64,7 +64,7 @@ Below are side-by-side examples of the exact same code rendering automatically i
 | `RefreshIndicator` | `CupertinoSliverRefreshControl` | ⏳ | `NaRefreshIndicator` |
 | `BottomSheet` | `CupertinoActionSheet` | ⏳ | `NaActionSheet` |
 | `Scrollbar` | `CupertinoScrollbar` | ⏳ | `NaScrollbar` |
-| `SearchBar` | `CupertinoSearchTextField`| ⏳ | `NaSearchBar` |
+| `SearchBar` | `CupertinoSearchTextField`| ✅ | `NaSearchBar` |
 
 
 ## How to use the library
