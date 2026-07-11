@@ -7,9 +7,6 @@ class ExampleAlertDialogWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final NaUiType uiType = NaUiTypeScope.of(context).first;
-    final bool isMaterial = uiType == NaUiType.material;
-
     return NaButton(
       onPressed: () {
         final dialog = NaAlertDialog(
@@ -41,11 +38,7 @@ class ExampleAlertDialogWidget extends StatelessWidget {
           ],
         );
 
-        if (isMaterial) {
-          showDialog(context: context, builder: (context) => dialog);
-        } else {
-          showCupertinoDialog(context: context, builder: (context) => dialog);
-        }
+        naShowDialog(context: context, builder: (context) => dialog);
       },
       child: const Text('Show Alert Dialog'),
     );

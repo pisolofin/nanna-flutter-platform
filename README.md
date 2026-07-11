@@ -116,8 +116,10 @@ NaButton(
 ```
 This ensures that the widget remains clean and can accommodate configurations for UI plugins added in the future without needing to be modified.
 
-### 3. Navigation (NaPageRoute)
-When changing pages, standard Flutter routing pushes either a material transition or requires you to manually specify a `CupertinoPageRoute`. To get the correct native transition (like the swipe-back gesture on iOS) based on the active `NaUiType`, use `NaPageRoute.create`:
+### 3. Navigation and Dialogs (NaPageRoute & naShowDialog)
+When changing pages or showing modals, standard Flutter routing pushes either a material transition or requires you to manually specify a `CupertinoPageRoute`. 
+
+To get the correct native transition (like the swipe-back gesture on iOS) based on the active `NaUiType`, use `NaPageRoute.create`:
 
 ```dart
 Navigator.push(
@@ -125,6 +127,17 @@ Navigator.push(
   NaPageRoute.create(
     context, 
     builder: (context) => const MyNextPage(),
+  ),
+);
+```
+
+Similarly, to show a dialog with the correct native animation (fade for Material, spring/scale for Cupertino), use the `naShowDialog` helper instead of the standard `showDialog`:
+
+```dart
+naShowDialog(
+  context: context,
+  builder: (context) => NaAlertDialog(
+    title: const Text('Hello!'),
   ),
 );
 ```

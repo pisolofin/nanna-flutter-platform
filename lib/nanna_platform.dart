@@ -36,3 +36,5 @@ export 'src/widgets-flutter/bottom-navigation-bar.widget.dart';
 export 'src/constants/icons.constant.dart';
 
 export 'src/exceptions/ui-type-already-registered.exception.dart';
+
+export 'src/helpers/show-dialog.helper.dart';
