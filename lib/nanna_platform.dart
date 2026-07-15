@@ -23,6 +23,7 @@ export 'src/widgets-flutter/checkbox.widget.dart';
 export 'src/widgets-flutter/list-tile.widget.dart';
 export 'src/widgets-flutter/scrollbar.widget.dart';
 export 'src/widgets-flutter/text-field.widget.dart';
+export 'src/widgets-flutter/text-field-caption.widget.dart';
 export 'src/widgets-flutter/page-route.widget.dart';
 export 'src/widgets-flutter/search-bar.widget.dart';
 export 'src/widgets-flutter/icon-button.widget.dart';

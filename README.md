@@ -66,6 +66,13 @@ Below are side-by-side examples of the exact same code rendering automatically i
 | `Scrollbar` | `CupertinoScrollbar` | ✅ | `NaScrollbar` |
 | `SearchBar` | `CupertinoSearchTextField`| ✅ | `NaSearchBar` |
 
+### Composed Widgets
+
+These widgets are not direct wrappers of native platform components, but rather compositions of multiple components to create ready-to-use UI elements.
+
+| Component Name | Description | Implemented |
+| --- | --- | :---: |
+| `NaTextFieldCaption` | A `NaTextField` with a label placed above it. | ✅ |
 
 ## How to use the library
 
