@@ -66,6 +66,8 @@ Below are side-by-side examples of the exact same code rendering automatically i
 | `Scrollbar` | `CupertinoScrollbar` | ✅ | `NaScrollbar` |
 | `SearchBar` | `CupertinoSearchTextField`| ✅ | `NaSearchBar` |
 
+> 💡 **Icons Mapping**: For the full mapping table of all 10,000+ Material and Cupertino icons available via `NaIcons`, see [.doc/icons-mapping.md](.doc/icons-mapping.md).
+
 ### Composed Widgets
 
 These widgets are not direct wrappers of native platform components, but rather compositions of multiple components to create ready-to-use UI elements.
@@ -155,5 +157,7 @@ The library uses a **Widget Builder Registry** that allows external packages to 
 Read the full guide and example here: [Extending the Platform with External Libraries](.doc/external-libraries.md)
 
 ### Technical Deep Dives
-*   **[Development Guidelines](.docs/development-guidelines.md)**: Strict constraints, target platforms (iOS/Android), offline-first storage logic, dependencies (e.g., `nanna_flutter`), and Dart/Flutter coding styles.
+*   **[Development Guidelines](.doc/development-guidelines.md)**: Strict constraints, target platforms (iOS/Android), offline-first storage logic, dependencies (e.g., `nanna_flutter`), and Dart/Flutter coding styles.
+*   **[Icons Mapping](.doc/icons-mapping.md)**: Complete mapping table of all Flutter `Icons` (Material) and `CupertinoIcons` available in `NaIcons`.
+
 
