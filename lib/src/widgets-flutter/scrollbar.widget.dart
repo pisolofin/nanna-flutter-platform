@@ -29,7 +29,8 @@ class NaScrollbarOptionsCupertino extends NaScrollbarOptions {
 
   NaScrollbarOptionsCupertino({
     this.thickness = CupertinoScrollbar.defaultThickness,
-    this.thicknessWhileDragging = CupertinoScrollbar.defaultThicknessWhileDragging,
+    this.thicknessWhileDragging =
+        CupertinoScrollbar.defaultThicknessWhileDragging,
     this.radius = CupertinoScrollbar.defaultRadius,
     this.radiusWhileDragging = CupertinoScrollbar.defaultRadiusWhileDragging,
   });
@@ -56,28 +57,30 @@ class NaScrollbar extends NaWidget {
 
   @override
   Widget? renderForUIType(BuildContext context, NaUiType uiType) {
-    final NaScrollbarOptions? options = this.options ?? optionsBuilder?.call(context, uiType);
+    final NaScrollbarOptions? options =
+        this.options ?? optionsBuilder?.call(context, uiType);
 
     if (uiType == NaUiType.cupertino) {
-      final NaScrollbarOptionsCupertino? cupertinoOptions = options is NaScrollbarOptionsCupertino
-        ? options
-        : null;
+      final NaScrollbarOptionsCupertino? cupertinoOptions =
+          options is NaScrollbarOptionsCupertino ? options : null;
 
       return CupertinoScrollbar(
         controller: this.controller,
         thumbVisibility: this.thumbVisibility ?? false,
-        thickness: cupertinoOptions?.thickness ?? CupertinoScrollbar.defaultThickness,
-        thicknessWhileDragging: cupertinoOptions?.thicknessWhileDragging ?? CupertinoScrollbar.defaultThicknessWhileDragging,
+        thickness:
+            cupertinoOptions?.thickness ?? CupertinoScrollbar.defaultThickness,
+        thicknessWhileDragging: cupertinoOptions?.thicknessWhileDragging ??
+            CupertinoScrollbar.defaultThicknessWhileDragging,
         radius: cupertinoOptions?.radius ?? CupertinoScrollbar.defaultRadius,
-        radiusWhileDragging: cupertinoOptions?.radiusWhileDragging ?? CupertinoScrollbar.defaultRadiusWhileDragging,
+        radiusWhileDragging: cupertinoOptions?.radiusWhileDragging ??
+            CupertinoScrollbar.defaultRadiusWhileDragging,
         child: this.child,
       );
     }
 
     if (uiType == NaUiType.material) {
-      final NaScrollbarOptionsMaterial? materialOptions = options is NaScrollbarOptionsMaterial
-        ? options
-        : null;
+      final NaScrollbarOptionsMaterial? materialOptions =
+          options is NaScrollbarOptionsMaterial ? options : null;
 
       return Scrollbar(
         controller: this.controller,

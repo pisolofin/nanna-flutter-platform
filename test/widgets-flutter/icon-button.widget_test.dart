@@ -5,13 +5,14 @@ import '../helpers/test-helpers.dart';
 
 void main() {
   testWidgets('NaIconButton renders in Material', (WidgetTester tester) async {
-    await pumpMaterialNaWidget(tester, NaIconButton(icon: const SizedBox(), onPressed: () {}));
+    await pumpMaterialNaWidget(
+        tester, NaIconButton(icon: const SizedBox(), onPressed: () {}));
     expect(find.byType(NaIconButton), findsOneWidget);
   });
 
   testWidgets('NaIconButton renders in Cupertino', (WidgetTester tester) async {
-    await pumpCupertinoNaWidget(tester, NaIconButton(icon: const SizedBox(), onPressed: () {}));
+    await pumpCupertinoNaWidget(
+        tester, NaIconButton(icon: const SizedBox(), onPressed: () {}));
     expect(find.byType(NaIconButton), findsOneWidget);
   });
 }
-

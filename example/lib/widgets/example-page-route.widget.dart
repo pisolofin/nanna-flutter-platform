@@ -10,10 +10,7 @@ class ExamplePageRouteWidget extends StatelessWidget {
       onPressed: () {
         Navigator.push(
           context,
-          NaPageRoute.create(
-            context,
-            builder: (context) => const _TestPage(),
-          ),
+          NaPageRoute.create(context, builder: (context) => const _TestPage()),
         );
       },
       child: const Text('Open PageRoute Example'),
@@ -27,12 +24,8 @@ class _TestPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return NaScaffold(
-      appBar: NaAppBar(
-        title: const Text('New Page'),
-      ),
-      body: const Center(
-        child: Text('This page was pushed with NaPageRoute!'),
-      ),
+      appBar: NaAppBar(title: const Text('New Page')),
+      body: const Center(child: Text('This page was pushed with NaPageRoute!')),
     );
   }
 }

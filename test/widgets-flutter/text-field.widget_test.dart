@@ -13,4 +13,3 @@ void main() {
     expect(find.byType(NaTextField), findsOneWidget);
   });
 }
-

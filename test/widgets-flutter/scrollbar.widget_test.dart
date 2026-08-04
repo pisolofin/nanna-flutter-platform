@@ -5,7 +5,8 @@ import 'package:nanna_platform/nanna_platform.dart';
 import '../helpers/test-helpers.dart';
 
 void main() {
-  testWidgets('NaScrollbar renders Scrollbar in material', (WidgetTester tester) async {
+  testWidgets('NaScrollbar renders Scrollbar in material',
+      (WidgetTester tester) async {
     await pumpMaterialNaWidget(
       tester,
       NaScrollbar(
@@ -16,7 +17,8 @@ void main() {
     expect(find.byType(Scrollbar), findsOneWidget);
   });
 
-  testWidgets('NaScrollbar renders CupertinoScrollbar in cupertino', (WidgetTester tester) async {
+  testWidgets('NaScrollbar renders CupertinoScrollbar in cupertino',
+      (WidgetTester tester) async {
     await pumpCupertinoNaWidget(
       tester,
       NaScrollbar(

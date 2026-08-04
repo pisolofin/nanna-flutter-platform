@@ -5,7 +5,8 @@ import 'package:nanna_platform/nanna_platform.dart';
 import '../helpers/test-helpers.dart';
 
 void main() {
-  testWidgets('NaSearchBar renders SearchBar in material', (WidgetTester tester) async {
+  testWidgets('NaSearchBar renders SearchBar in material',
+      (WidgetTester tester) async {
     await pumpMaterialNaWidget(
       tester,
       const NaSearchBar(
@@ -17,7 +18,8 @@ void main() {
     expect(find.text('Search...'), findsOneWidget);
   });
 
-  testWidgets('NaSearchBar renders CupertinoSearchTextField in cupertino', (WidgetTester tester) async {
+  testWidgets('NaSearchBar renders CupertinoSearchTextField in cupertino',
+      (WidgetTester tester) async {
     await pumpCupertinoNaWidget(
       tester,
       const NaSearchBar(

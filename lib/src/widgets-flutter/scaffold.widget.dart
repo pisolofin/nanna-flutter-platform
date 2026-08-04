@@ -28,7 +28,7 @@ class NaScaffoldOptionsMaterial extends NaScaffoldOptions {
 class NaScaffoldOptionsCupertino extends NaScaffoldOptions {
   final bool? resizeToAvoidBottomInset;
 
-  NaScaffoldOptionsCupertino({ this.resizeToAvoidBottomInset });
+  NaScaffoldOptionsCupertino({this.resizeToAvoidBottomInset});
 }
 
 /// A generic Scaffold widget that automatically renders a [Scaffold] on Material
@@ -56,10 +56,8 @@ class NaScaffold extends NaWidget {
     final NaScaffoldOptions? options = optionsBuilder?.call(context, uiType);
 
     if (uiType == NaUiType.cupertino) {
-      final NaScaffoldOptionsCupertino? cupertinoOptions = options is NaScaffoldOptionsCupertino
-        ? options
-        : null
-      ;
+      final NaScaffoldOptionsCupertino? cupertinoOptions =
+          options is NaScaffoldOptionsCupertino ? options : null;
 
       Widget content = this.body;
       if (this.bottomNavigationBar != null) {
@@ -72,8 +70,8 @@ class NaScaffold extends NaWidget {
       }
 
       return CupertinoPageScaffold(
-        navigationBar           : this.appBar,
-        backgroundColor         : this.backgroundColor,
+        navigationBar: this.appBar,
+        backgroundColor: this.backgroundColor,
         resizeToAvoidBottomInset:
             cupertinoOptions?.resizeToAvoidBottomInset ?? true,
         child: content,
@@ -81,18 +79,16 @@ class NaScaffold extends NaWidget {
     }
 
     if (uiType == NaUiType.material) {
-      final NaScaffoldOptionsMaterial? materialOptions = options is NaScaffoldOptionsMaterial
-        ? options
-        : null
-      ;
+      final NaScaffoldOptionsMaterial? materialOptions =
+          options is NaScaffoldOptionsMaterial ? options : null;
       return Scaffold(
-        appBar              : this.appBar,
-        body                : this.body,
-        backgroundColor     : this.backgroundColor,
+        appBar: this.appBar,
+        body: this.body,
+        backgroundColor: this.backgroundColor,
         floatingActionButton: materialOptions?.floatingActionButton,
-        bottomNavigationBar :
+        bottomNavigationBar:
             materialOptions?.bottomNavigationBar ?? this.bottomNavigationBar,
-        drawer                  : materialOptions?.drawer,
+        drawer: materialOptions?.drawer,
         resizeToAvoidBottomInset: materialOptions?.resizeToAvoidBottomInset,
       );
     }

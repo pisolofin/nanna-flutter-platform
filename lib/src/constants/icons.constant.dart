@@ -11,697 +11,697 @@ class NaIcons {
   // ==========================================
   static const NaIconData home = NaIconData(
     Icons.home,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.home },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.home},
   );
 
   static const NaIconData settings = NaIconData(
     Icons.settings,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.settings },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.settings},
   );
 
   static const NaIconData info = NaIconData(
     Icons.info_outline,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.info },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.info},
   );
 
   static const NaIconData person = NaIconData(
     Icons.person,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.person },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.person},
   );
 
   static const NaIconData email = NaIconData(
     Icons.email,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.mail },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.mail},
   );
 
   static const NaIconData add = NaIconData(
     Icons.add,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.add },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.add},
   );
 
   static const NaIconData close = NaIconData(
     Icons.close,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.clear },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.clear},
   );
 
   static const NaIconData chevronRight = NaIconData(
     Icons.chevron_right,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.chevron_right },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.chevron_right},
   );
 
   static const NaIconData chevronLeft = NaIconData(
     Icons.chevron_left,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.chevron_left },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.chevron_left},
   );
 
   static const NaIconData search = NaIconData(
     Icons.search,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.search },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.search},
   );
 
   static const NaIconData check = NaIconData(
     Icons.check,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.checkmark_alt },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.checkmark_alt},
   );
 
   static const NaIconData delete = NaIconData(
     Icons.delete,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.delete },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.delete},
   );
 
   static const NaIconData edit = NaIconData(
     Icons.edit,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.pencil },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.pencil},
   );
 
   static const NaIconData expand = NaIconData(
     Icons.fullscreen,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.fullscreen },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.fullscreen},
   );
 
   static const NaIconData shrink = NaIconData(
     Icons.fullscreen_exit,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.fullscreen_exit },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.fullscreen_exit},
   );
 
   static const NaIconData alarm = NaIconData(
     Icons.alarm,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.alarm },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.alarm},
   );
 
   static const NaIconData arrowLeft = NaIconData(
     Icons.arrow_left,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrow_left },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.arrow_left},
   );
 
   static const NaIconData arrowRight = NaIconData(
     Icons.arrow_right,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrow_right },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.arrow_right},
   );
 
   static const NaIconData batteryFull = NaIconData(
     Icons.battery_full,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.battery_full },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.battery_full},
   );
 
   static const NaIconData bluetooth = NaIconData(
     Icons.bluetooth,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.bluetooth },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.bluetooth},
   );
 
   static const NaIconData bolt = NaIconData(
     Icons.bolt,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.bolt },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.bolt},
   );
 
   static const NaIconData book = NaIconData(
     Icons.book,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.book },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.book},
   );
 
   static const NaIconData bookmark = NaIconData(
     Icons.bookmark,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.bookmark },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.bookmark},
   );
 
   static const NaIconData calendarToday = NaIconData(
     Icons.calendar_today,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.calendar_today },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.calendar_today},
   );
 
   static const NaIconData camera = NaIconData(
     Icons.camera,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.camera },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.camera},
   );
 
   static const NaIconData chatBubble = NaIconData(
     Icons.chat_bubble,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.chat_bubble },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.chat_bubble},
   );
 
   static const NaIconData circle = NaIconData(
     Icons.circle,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.circle },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.circle},
   );
 
   static const NaIconData cloud = NaIconData(
     Icons.cloud,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.cloud },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.cloud},
   );
 
   static const NaIconData cloudDownload = NaIconData(
     Icons.cloud_download,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.cloud_download },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.cloud_download},
   );
 
   static const NaIconData cloudUpload = NaIconData(
     Icons.cloud_upload,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.cloud_upload },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.cloud_upload},
   );
 
   static const NaIconData collections = NaIconData(
     Icons.collections,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.collections },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.collections},
   );
 
   static const NaIconData create = NaIconData(
     Icons.create,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.create },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.create},
   );
 
   static const NaIconData crop = NaIconData(
     Icons.crop,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.crop },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.crop},
   );
 
   static const NaIconData cropRotate = NaIconData(
     Icons.crop_rotate,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.crop_rotate },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.crop_rotate},
   );
 
   static const NaIconData eject = NaIconData(
     Icons.eject,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.eject },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.eject},
   );
 
   static const NaIconData flag = NaIconData(
     Icons.flag,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.flag },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.flag},
   );
 
   static const NaIconData flagCircle = NaIconData(
     Icons.flag_circle,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.flag_circle },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.flag_circle},
   );
 
   static const NaIconData folder = NaIconData(
     Icons.folder,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.folder },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.folder},
   );
 
   static const NaIconData folderOpen = NaIconData(
     Icons.folder_open,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.folder_open },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.folder_open},
   );
 
   static const NaIconData forward = NaIconData(
     Icons.forward,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.forward },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.forward},
   );
 
   static const NaIconData group = NaIconData(
     Icons.group,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.group },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.group},
   );
 
   static const NaIconData headphones = NaIconData(
     Icons.headphones,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.headphones },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.headphones},
   );
 
   static const NaIconData hexagon = NaIconData(
     Icons.hexagon,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.hexagon },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.hexagon},
   );
 
   static const NaIconData house = NaIconData(
     Icons.house,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.house },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.house},
   );
 
   static const NaIconData keyboard = NaIconData(
     Icons.keyboard,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.keyboard },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.keyboard},
   );
 
   static const NaIconData layers = NaIconData(
     Icons.layers,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.layers },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.layers},
   );
 
   static const NaIconData lightbulb = NaIconData(
     Icons.lightbulb,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.lightbulb },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.lightbulb},
   );
 
   static const NaIconData link = NaIconData(
     Icons.link,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.link },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.link},
   );
 
   static const NaIconData lock = NaIconData(
     Icons.lock,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.lock },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.lock},
   );
 
   static const NaIconData lockOpen = NaIconData(
     Icons.lock_open,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.lock_open },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.lock_open},
   );
 
   static const NaIconData loop = NaIconData(
     Icons.loop,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.loop },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.loop},
   );
 
   static const NaIconData map = NaIconData(
     Icons.map,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.map },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.map},
   );
 
   static const NaIconData mic = NaIconData(
     Icons.mic,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.mic },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.mic},
   );
 
   static const NaIconData micOff = NaIconData(
     Icons.mic_off,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.mic_off },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.mic_off},
   );
 
   static const NaIconData musicNote = NaIconData(
     Icons.music_note,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.music_note },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.music_note},
   );
 
   static const NaIconData pause = NaIconData(
     Icons.pause,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.pause },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.pause},
   );
 
   static const NaIconData pauseCircle = NaIconData(
     Icons.pause_circle,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.pause_circle },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.pause_circle},
   );
 
   static const NaIconData percent = NaIconData(
     Icons.percent,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.percent },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.percent},
   );
 
   static const NaIconData person2 = NaIconData(
     Icons.person_2,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.person_2 },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.person_2},
   );
 
   static const NaIconData person3 = NaIconData(
     Icons.person_3,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.person_3 },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.person_3},
   );
 
   static const NaIconData personAdd = NaIconData(
     Icons.person_add,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.person_add },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.person_add},
   );
 
   static const NaIconData phone = NaIconData(
     Icons.phone,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.phone },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.phone},
   );
 
   static const NaIconData photo = NaIconData(
     Icons.photo,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.photo },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.photo},
   );
 
   static const NaIconData photoCamera = NaIconData(
     Icons.photo_camera,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.photo_camera },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.photo_camera},
   );
 
   static const NaIconData piano = NaIconData(
     Icons.piano,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.piano },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.piano},
   );
 
   static const NaIconData pin = NaIconData(
     Icons.pin,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.pin },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.pin},
   );
 
   static const NaIconData playArrow = NaIconData(
     Icons.play_arrow,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.play_arrow },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.play_arrow},
   );
 
   static const NaIconData playCircle = NaIconData(
     Icons.play_circle,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.play_circle },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.play_circle},
   );
 
   static const NaIconData playCircleFill = NaIconData(
     Icons.play_circle_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.play_circle_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.play_circle_fill},
   );
 
   static const NaIconData power = NaIconData(
     Icons.power,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.power },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.power},
   );
 
   static const NaIconData rectangle = NaIconData(
     Icons.rectangle,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.rectangle },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.rectangle},
   );
 
   static const NaIconData refresh = NaIconData(
     Icons.refresh,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.refresh },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.refresh},
   );
 
   static const NaIconData repeat = NaIconData(
     Icons.repeat,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.repeat },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.repeat},
   );
 
   static const NaIconData reply = NaIconData(
     Icons.reply,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.reply },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.reply},
   );
 
   static const NaIconData replyAll = NaIconData(
     Icons.reply_all,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.reply_all },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.reply_all},
   );
 
   static const NaIconData rocket = NaIconData(
     Icons.rocket,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.rocket },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.rocket},
   );
 
   static const NaIconData rotateLeft = NaIconData(
     Icons.rotate_left,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.rotate_left },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.rotate_left},
   );
 
   static const NaIconData rotateRight = NaIconData(
     Icons.rotate_right,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.rotate_right },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.rotate_right},
   );
 
   static const NaIconData share = NaIconData(
     Icons.share,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.share },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.share},
   );
 
   static const NaIconData shield = NaIconData(
     Icons.shield,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.shield },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.shield},
   );
 
   static const NaIconData shoppingCart = NaIconData(
     Icons.shopping_cart,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.shopping_cart },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.shopping_cart},
   );
 
   static const NaIconData shuffle = NaIconData(
     Icons.shuffle,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.shuffle },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.shuffle},
   );
 
   static const NaIconData speaker = NaIconData(
     Icons.speaker,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.speaker },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.speaker},
   );
 
   static const NaIconData square = NaIconData(
     Icons.square,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.square },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.square},
   );
 
   static const NaIconData star = NaIconData(
     Icons.star,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.star },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.star},
   );
 
   static const NaIconData stop = NaIconData(
     Icons.stop,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.stop },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.stop},
   );
 
   static const NaIconData stopCircle = NaIconData(
     Icons.stop_circle,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.stop_circle },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.stop_circle},
   );
 
   static const NaIconData switchCamera = NaIconData(
     Icons.switch_camera,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.switch_camera },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.switch_camera},
   );
 
   static const NaIconData tag = NaIconData(
     Icons.tag,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.tag },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.tag},
   );
 
   static const NaIconData timelapse = NaIconData(
     Icons.timelapse,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.timelapse },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.timelapse},
   );
 
   static const NaIconData timer = NaIconData(
     Icons.timer,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.timer },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.timer},
   );
 
   static const NaIconData today = NaIconData(
     Icons.today,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.today },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.today},
   );
 
   static const NaIconData tornado = NaIconData(
     Icons.tornado,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.tornado },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.tornado},
   );
 
   static const NaIconData tv = NaIconData(
     Icons.tv,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.tv },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.tv},
   );
 
   static const NaIconData umbrella = NaIconData(
     Icons.umbrella,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.umbrella },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.umbrella},
   );
 
   static const NaIconData videocam = NaIconData(
     Icons.videocam,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.videocam },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.videocam},
   );
 
   static const NaIconData volumeDown = NaIconData(
     Icons.volume_down,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.volume_down },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.volume_down},
   );
 
   static const NaIconData volumeMute = NaIconData(
     Icons.volume_mute,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.volume_mute },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.volume_mute},
   );
 
   static const NaIconData volumeOff = NaIconData(
     Icons.volume_off,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.volume_off },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.volume_off},
   );
 
   static const NaIconData volumeUp = NaIconData(
     Icons.volume_up,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.volume_up },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.volume_up},
   );
 
   static const NaIconData wifi = NaIconData(
     Icons.wifi,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.wifi },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.wifi},
   );
 
   static const NaIconData zoomIn = NaIconData(
     Icons.zoom_in,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.zoom_in },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.zoom_in},
   );
 
   static const NaIconData zoomOut = NaIconData(
     Icons.zoom_out,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.zoom_out },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.zoom_out},
   );
 
   static const NaIconData deleteOutline = NaIconData(
     Icons.delete_outline,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.trash },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.trash},
   );
 
   static const NaIconData editNote = NaIconData(
     Icons.edit_note,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.pencil_circle },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.pencil_circle},
   );
 
   static const NaIconData settingsSuggest = NaIconData(
     Icons.settings_suggest,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.gear_alt },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.gear_alt},
   );
 
   static const NaIconData notifications = NaIconData(
     Icons.notifications,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.bell },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.bell},
   );
 
   static const NaIconData notificationsOff = NaIconData(
     Icons.notifications_off,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.bell_slash },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.bell_slash},
   );
 
   static const NaIconData favoriteBorder = NaIconData(
     Icons.favorite_border,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.heart },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.heart},
   );
 
   static const NaIconData favorite = NaIconData(
     Icons.favorite,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.heart_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.heart_fill},
   );
 
   static const NaIconData visibility = NaIconData(
     Icons.visibility,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.eye },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.eye},
   );
 
   static const NaIconData visibilityOff = NaIconData(
     Icons.visibility_off,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.eye_slash },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.eye_slash},
   );
 
   static const NaIconData fastRewind = NaIconData(
     Icons.fast_rewind,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.backward },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.backward},
   );
 
   static const NaIconData keyboardArrowUp = NaIconData(
     Icons.keyboard_arrow_up,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.chevron_up },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.chevron_up},
   );
 
   static const NaIconData keyboardArrowDown = NaIconData(
     Icons.keyboard_arrow_down,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.chevron_down },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.chevron_down},
   );
 
   static const NaIconData arrowUpward = NaIconData(
     Icons.arrow_upward,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrow_up },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.arrow_up},
   );
 
   static const NaIconData arrowDownward = NaIconData(
     Icons.arrow_downward,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrow_down },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.arrow_down},
   );
 
   static const NaIconData clear = NaIconData(
     Icons.clear,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.xmark },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.xmark},
   );
 
   static const NaIconData done = NaIconData(
     Icons.done,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.checkmark },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.checkmark},
   );
 
   static const NaIconData remove = NaIconData(
     Icons.remove,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.minus },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.minus},
   );
 
   static const NaIconData accountCircle = NaIconData(
     Icons.account_circle,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.person_crop_circle },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.person_crop_circle},
   );
 
   static const NaIconData send = NaIconData(
     Icons.send,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.paperplane },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.paperplane},
   );
 
   static const NaIconData label = NaIconData(
     Icons.label,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.tag_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.tag_fill},
   );
 
   static const NaIconData public = NaIconData(
     Icons.public,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.globe },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.globe},
   );
 
   static const NaIconData pushPin = NaIconData(
     Icons.push_pin,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.pin_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.pin_fill},
   );
 
   static const NaIconData locationOn = NaIconData(
     Icons.location_on,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.location_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.location_fill},
   );
 
   static const NaIconData cameraAlt = NaIconData(
     Icons.camera_alt,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.camera_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.camera_fill},
   );
 
   static const NaIconData image = NaIconData(
     Icons.image,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.photo_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.photo_fill},
   );
 
   static const NaIconData wbSunny = NaIconData(
     Icons.wb_sunny,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.sun_max },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.sun_max},
   );
 
   static const NaIconData nightlightRound = NaIconData(
     Icons.nightlight_round,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.moon },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.moon},
   );
 
   static const NaIconData waterDrop = NaIconData(
     Icons.water_drop,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.drop },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.drop},
   );
 
   static const NaIconData localFireDepartment = NaIconData(
     Icons.local_fire_department,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.flame },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.flame},
   );
 
   static const NaIconData formatBold = NaIconData(
     Icons.format_bold,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.bold },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.bold},
   );
 
   static const NaIconData formatItalic = NaIconData(
     Icons.format_italic,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.italic },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.italic},
   );
 
   static const NaIconData formatUnderlined = NaIconData(
     Icons.format_underlined,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.underline },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.underline},
   );
 
   static const NaIconData formatStrikethrough = NaIconData(
     Icons.format_strikethrough,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.strikethrough },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.strikethrough},
   );
 
   static const NaIconData download = NaIconData(
     Icons.download,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.download_circle },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.download_circle},
   );
 
   static const NaIconData tram = NaIconData(
     Icons.tram,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.tram_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.tram_fill},
   );
 
   static const NaIconData upload = NaIconData(
     Icons.upload,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.upload_circle },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.upload_circle},
   );
 
   // ==========================================
@@ -28415,15 +28415,18 @@ class NaIcons {
     Icons.signal_cellular_connected_no_internet_0_bar,
   );
 
-  static const NaIconData signalCellularConnectedNoInternet0BarSharp = NaIconData(
+  static const NaIconData signalCellularConnectedNoInternet0BarSharp =
+      NaIconData(
     Icons.signal_cellular_connected_no_internet_0_bar_sharp,
   );
 
-  static const NaIconData signalCellularConnectedNoInternet0BarRounded = NaIconData(
+  static const NaIconData signalCellularConnectedNoInternet0BarRounded =
+      NaIconData(
     Icons.signal_cellular_connected_no_internet_0_bar_rounded,
   );
 
-  static const NaIconData signalCellularConnectedNoInternet0BarOutlined = NaIconData(
+  static const NaIconData signalCellularConnectedNoInternet0BarOutlined =
+      NaIconData(
     Icons.signal_cellular_connected_no_internet_0_bar_outlined,
   );
 
@@ -28431,15 +28434,18 @@ class NaIcons {
     Icons.signal_cellular_connected_no_internet_4_bar,
   );
 
-  static const NaIconData signalCellularConnectedNoInternet4BarSharp = NaIconData(
+  static const NaIconData signalCellularConnectedNoInternet4BarSharp =
+      NaIconData(
     Icons.signal_cellular_connected_no_internet_4_bar_sharp,
   );
 
-  static const NaIconData signalCellularConnectedNoInternet4BarRounded = NaIconData(
+  static const NaIconData signalCellularConnectedNoInternet4BarRounded =
+      NaIconData(
     Icons.signal_cellular_connected_no_internet_4_bar_rounded,
   );
 
-  static const NaIconData signalCellularConnectedNoInternet4BarOutlined = NaIconData(
+  static const NaIconData signalCellularConnectedNoInternet4BarOutlined =
+      NaIconData(
     Icons.signal_cellular_connected_no_internet_4_bar_outlined,
   );
 
@@ -28623,15 +28629,18 @@ class NaIcons {
     Icons.signal_wifi_statusbar_connected_no_internet_4,
   );
 
-  static const NaIconData signalWifiStatusbarConnectedNoInternet4Sharp = NaIconData(
+  static const NaIconData signalWifiStatusbarConnectedNoInternet4Sharp =
+      NaIconData(
     Icons.signal_wifi_statusbar_connected_no_internet_4_sharp,
   );
 
-  static const NaIconData signalWifiStatusbarConnectedNoInternet4Rounded = NaIconData(
+  static const NaIconData signalWifiStatusbarConnectedNoInternet4Rounded =
+      NaIconData(
     Icons.signal_wifi_statusbar_connected_no_internet_4_rounded,
   );
 
-  static const NaIconData signalWifiStatusbarConnectedNoInternet4Outlined = NaIconData(
+  static const NaIconData signalWifiStatusbarConnectedNoInternet4Outlined =
+      NaIconData(
     Icons.signal_wifi_statusbar_connected_no_internet_4_outlined,
   );
 
@@ -35456,5917 +35465,6240 @@ class NaIcons {
   // ==========================================
   static const NaIconData leftChevron = NaIconData(
     CupertinoIcons.left_chevron,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.left_chevron },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.left_chevron},
   );
 
   static const NaIconData rightChevron = NaIconData(
     CupertinoIcons.right_chevron,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.right_chevron },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.right_chevron},
   );
 
   static const NaIconData shareSolid = NaIconData(
     CupertinoIcons.share_solid,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.share_solid },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.share_solid},
   );
 
   static const NaIconData bookSolid = NaIconData(
     CupertinoIcons.book_solid,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.book_solid },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.book_solid},
   );
 
   static const NaIconData bookmarkSolid = NaIconData(
     CupertinoIcons.bookmark_solid,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.bookmark_solid },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.bookmark_solid},
   );
 
   static const NaIconData conversationBubble = NaIconData(
     CupertinoIcons.conversation_bubble,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.conversation_bubble },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.conversation_bubble},
   );
 
   static const NaIconData profileCircled = NaIconData(
     CupertinoIcons.profile_circled,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.profile_circled },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.profile_circled},
   );
 
   static const NaIconData plusCircled = NaIconData(
     CupertinoIcons.plus_circled,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.plus_circled },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.plus_circled},
   );
 
   static const NaIconData minusCircled = NaIconData(
     CupertinoIcons.minus_circled,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.minus_circled },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.minus_circled},
   );
 
   static const NaIconData checkMark = NaIconData(
     CupertinoIcons.check_mark,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.check_mark },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.check_mark},
   );
 
   static const NaIconData checkMarkCircled = NaIconData(
     CupertinoIcons.check_mark_circled,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.check_mark_circled },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.check_mark_circled},
   );
 
   static const NaIconData checkMarkCircledSolid = NaIconData(
     CupertinoIcons.check_mark_circled_solid,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.check_mark_circled_solid },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.check_mark_circled_solid
+    },
   );
 
   static const NaIconData circleFilled = NaIconData(
     CupertinoIcons.circle_filled,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.circle_filled },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.circle_filled},
   );
 
   static const NaIconData back = NaIconData(
     CupertinoIcons.back,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.back },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.back},
   );
 
   static const NaIconData ellipsis = NaIconData(
     CupertinoIcons.ellipsis,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.ellipsis },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.ellipsis},
   );
 
   static const NaIconData phoneSolid = NaIconData(
     CupertinoIcons.phone_solid,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.phone_solid },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.phone_solid},
   );
 
   static const NaIconData downArrow = NaIconData(
     CupertinoIcons.down_arrow,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.down_arrow },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.down_arrow},
   );
 
   static const NaIconData upArrow = NaIconData(
     CupertinoIcons.up_arrow,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.up_arrow },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.up_arrow},
   );
 
   static const NaIconData batteryCharging = NaIconData(
     CupertinoIcons.battery_charging,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.battery_charging },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.battery_charging},
   );
 
   static const NaIconData batteryEmpty = NaIconData(
     CupertinoIcons.battery_empty,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.battery_empty },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.battery_empty},
   );
 
   static const NaIconData battery75Percent = NaIconData(
     CupertinoIcons.battery_75_percent,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.battery_75_percent },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.battery_75_percent},
   );
 
   static const NaIconData battery25Percent = NaIconData(
     CupertinoIcons.battery_25_percent,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.battery_25_percent },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.battery_25_percent},
   );
 
   static const NaIconData restart = NaIconData(
     CupertinoIcons.restart,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.restart },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.restart},
   );
 
   static const NaIconData replyThickSolid = NaIconData(
     CupertinoIcons.reply_thick_solid,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.reply_thick_solid },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.reply_thick_solid},
   );
 
   static const NaIconData shareUp = NaIconData(
     CupertinoIcons.share_up,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.share_up },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.share_up},
   );
 
   static const NaIconData shuffleMedium = NaIconData(
     CupertinoIcons.shuffle_medium,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.shuffle_medium },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.shuffle_medium},
   );
 
   static const NaIconData shuffleThick = NaIconData(
     CupertinoIcons.shuffle_thick,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.shuffle_thick },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.shuffle_thick},
   );
 
   static const NaIconData photoCameraSolid = NaIconData(
     CupertinoIcons.photo_camera_solid,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.photo_camera_solid },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.photo_camera_solid},
   );
 
   static const NaIconData videoCamera = NaIconData(
     CupertinoIcons.video_camera,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.video_camera },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.video_camera},
   );
 
   static const NaIconData videoCameraSolid = NaIconData(
     CupertinoIcons.video_camera_solid,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.video_camera_solid },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.video_camera_solid},
   );
 
   static const NaIconData switchCameraSolid = NaIconData(
     CupertinoIcons.switch_camera_solid,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.switch_camera_solid },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.switch_camera_solid},
   );
 
   static const NaIconData collectionsSolid = NaIconData(
     CupertinoIcons.collections_solid,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.collections_solid },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.collections_solid},
   );
 
   static const NaIconData folderSolid = NaIconData(
     CupertinoIcons.folder_solid,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.folder_solid },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.folder_solid},
   );
 
   static const NaIconData deleteSolid = NaIconData(
     CupertinoIcons.delete_solid,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.delete_solid },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.delete_solid},
   );
 
   static const NaIconData deleteSimple = NaIconData(
     CupertinoIcons.delete_simple,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.delete_simple },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.delete_simple},
   );
 
   static const NaIconData pen = NaIconData(
     CupertinoIcons.pen,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.pen },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.pen},
   );
 
   static const NaIconData createSolid = NaIconData(
     CupertinoIcons.create_solid,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.create_solid },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.create_solid},
   );
 
   static const NaIconData refreshCircled = NaIconData(
     CupertinoIcons.refresh_circled,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.refresh_circled },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.refresh_circled},
   );
 
   static const NaIconData refreshCircledSolid = NaIconData(
     CupertinoIcons.refresh_circled_solid,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.refresh_circled_solid },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.refresh_circled_solid},
   );
 
   static const NaIconData refreshThin = NaIconData(
     CupertinoIcons.refresh_thin,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.refresh_thin },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.refresh_thin},
   );
 
   static const NaIconData refreshThick = NaIconData(
     CupertinoIcons.refresh_thick,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.refresh_thick },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.refresh_thick},
   );
 
   static const NaIconData refreshBold = NaIconData(
     CupertinoIcons.refresh_bold,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.refresh_bold },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.refresh_bold},
   );
 
   static const NaIconData clearThick = NaIconData(
     CupertinoIcons.clear_thick,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.clear_thick },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.clear_thick},
   );
 
   static const NaIconData clearThickCircled = NaIconData(
     CupertinoIcons.clear_thick_circled,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.clear_thick_circled },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.clear_thick_circled},
   );
 
   static const NaIconData clearCircled = NaIconData(
     CupertinoIcons.clear_circled,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.clear_circled },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.clear_circled},
   );
 
   static const NaIconData clearCircledSolid = NaIconData(
     CupertinoIcons.clear_circled_solid,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.clear_circled_solid },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.clear_circled_solid},
   );
 
   static const NaIconData addCircled = NaIconData(
     CupertinoIcons.add_circled,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.add_circled },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.add_circled},
   );
 
   static const NaIconData addCircledSolid = NaIconData(
     CupertinoIcons.add_circled_solid,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.add_circled_solid },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.add_circled_solid},
   );
 
   static const NaIconData gear = NaIconData(
     CupertinoIcons.gear,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.gear },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.gear},
   );
 
   static const NaIconData gearSolid = NaIconData(
     CupertinoIcons.gear_solid,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.gear_solid },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.gear_solid},
   );
 
   static const NaIconData gearBig = NaIconData(
     CupertinoIcons.gear_big,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.gear_big },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.gear_big},
   );
 
   static const NaIconData settingsSolid = NaIconData(
     CupertinoIcons.settings_solid,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.settings_solid },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.settings_solid},
   );
 
   static const NaIconData doubleMusicNote = NaIconData(
     CupertinoIcons.double_music_note,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.double_music_note },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.double_music_note},
   );
 
   static const NaIconData playArrowSolid = NaIconData(
     CupertinoIcons.play_arrow_solid,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.play_arrow_solid },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.play_arrow_solid},
   );
 
   static const NaIconData pauseSolid = NaIconData(
     CupertinoIcons.pause_solid,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.pause_solid },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.pause_solid},
   );
 
   static const NaIconData loopThick = NaIconData(
     CupertinoIcons.loop_thick,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.loop_thick },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.loop_thick},
   );
 
   static const NaIconData micSolid = NaIconData(
     CupertinoIcons.mic_solid,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.mic_solid },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.mic_solid},
   );
 
   static const NaIconData clock = NaIconData(
     CupertinoIcons.clock,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.clock },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.clock},
   );
 
   static const NaIconData clockSolid = NaIconData(
     CupertinoIcons.clock_solid,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.clock_solid },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.clock_solid},
   );
 
   static const NaIconData time = NaIconData(
     CupertinoIcons.time,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.time },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.time},
   );
 
   static const NaIconData timeSolid = NaIconData(
     CupertinoIcons.time_solid,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.time_solid },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.time_solid},
   );
 
   static const NaIconData padlock = NaIconData(
     CupertinoIcons.padlock,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.padlock },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.padlock},
   );
 
   static const NaIconData padlockSolid = NaIconData(
     CupertinoIcons.padlock_solid,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.padlock_solid },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.padlock_solid},
   );
 
   static const NaIconData eyeSolid = NaIconData(
     CupertinoIcons.eye_solid,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.eye_solid },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.eye_solid},
   );
 
   static const NaIconData personSolid = NaIconData(
     CupertinoIcons.person_solid,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.person_solid },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.person_solid},
   );
 
   static const NaIconData personAddSolid = NaIconData(
     CupertinoIcons.person_add_solid,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.person_add_solid },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.person_add_solid},
   );
 
   static const NaIconData groupSolid = NaIconData(
     CupertinoIcons.group_solid,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.group_solid },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.group_solid},
   );
 
   static const NaIconData mailSolid = NaIconData(
     CupertinoIcons.mail_solid,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.mail_solid },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.mail_solid},
   );
 
   static const NaIconData location = NaIconData(
     CupertinoIcons.location,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.location },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.location},
   );
 
   static const NaIconData locationSolid = NaIconData(
     CupertinoIcons.location_solid,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.location_solid },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.location_solid},
   );
 
   static const NaIconData tagSolid = NaIconData(
     CupertinoIcons.tag_solid,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.tag_solid },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.tag_solid},
   );
 
   static const NaIconData tags = NaIconData(
     CupertinoIcons.tags,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.tags },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.tags},
   );
 
   static const NaIconData tagsSolid = NaIconData(
     CupertinoIcons.tags_solid,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.tags_solid },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.tags_solid},
   );
 
   static const NaIconData bus = NaIconData(
     CupertinoIcons.bus,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.bus },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.bus},
   );
 
   static const NaIconData car = NaIconData(
     CupertinoIcons.car,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.car },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.car},
   );
 
   static const NaIconData carDetailed = NaIconData(
     CupertinoIcons.car_detailed,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.car_detailed },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.car_detailed},
   );
 
   static const NaIconData trainStyleOne = NaIconData(
     CupertinoIcons.train_style_one,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.train_style_one },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.train_style_one},
   );
 
   static const NaIconData trainStyleTwo = NaIconData(
     CupertinoIcons.train_style_two,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.train_style_two },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.train_style_two},
   );
 
   static const NaIconData paw = NaIconData(
     CupertinoIcons.paw,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.paw },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.paw},
   );
 
   static const NaIconData pawSolid = NaIconData(
     CupertinoIcons.paw_solid,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.paw_solid },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.paw_solid},
   );
 
   static const NaIconData gameController = NaIconData(
     CupertinoIcons.game_controller,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.game_controller },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.game_controller},
   );
 
   static const NaIconData gameControllerSolid = NaIconData(
     CupertinoIcons.game_controller_solid,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.game_controller_solid },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.game_controller_solid},
   );
 
   static const NaIconData labFlask = NaIconData(
     CupertinoIcons.lab_flask,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.lab_flask },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.lab_flask},
   );
 
   static const NaIconData labFlaskSolid = NaIconData(
     CupertinoIcons.lab_flask_solid,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.lab_flask_solid },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.lab_flask_solid},
   );
 
   static const NaIconData heartSolid = NaIconData(
     CupertinoIcons.heart_solid,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.heart_solid },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.heart_solid},
   );
 
   static const NaIconData bellSolid = NaIconData(
     CupertinoIcons.bell_solid,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.bell_solid },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.bell_solid},
   );
 
   static const NaIconData news = NaIconData(
     CupertinoIcons.news,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.news },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.news},
   );
 
   static const NaIconData newsSolid = NaIconData(
     CupertinoIcons.news_solid,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.news_solid },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.news_solid},
   );
 
   static const NaIconData brightness = NaIconData(
     CupertinoIcons.brightness,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.brightness },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.brightness},
   );
 
   static const NaIconData brightnessSolid = NaIconData(
     CupertinoIcons.brightness_solid,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.brightness_solid },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.brightness_solid},
   );
 
   static const NaIconData airplane = NaIconData(
     CupertinoIcons.airplane,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.airplane },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.airplane},
   );
 
   static const NaIconData alarmFill = NaIconData(
     CupertinoIcons.alarm_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.alarm_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.alarm_fill},
   );
 
   static const NaIconData alt = NaIconData(
     CupertinoIcons.alt,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.alt },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.alt},
   );
 
   static const NaIconData ant = NaIconData(
     CupertinoIcons.ant,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.ant },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.ant},
   );
 
   static const NaIconData antCircle = NaIconData(
     CupertinoIcons.ant_circle,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.ant_circle },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.ant_circle},
   );
 
   static const NaIconData antCircleFill = NaIconData(
     CupertinoIcons.ant_circle_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.ant_circle_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.ant_circle_fill},
   );
 
   static const NaIconData antFill = NaIconData(
     CupertinoIcons.ant_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.ant_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.ant_fill},
   );
 
   static const NaIconData antennaRadiowavesLeftRight = NaIconData(
     CupertinoIcons.antenna_radiowaves_left_right,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.antenna_radiowaves_left_right },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.antenna_radiowaves_left_right
+    },
   );
 
   static const NaIconData app = NaIconData(
     CupertinoIcons.app,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.app },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.app},
   );
 
   static const NaIconData appBadge = NaIconData(
     CupertinoIcons.app_badge,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.app_badge },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.app_badge},
   );
 
   static const NaIconData appBadgeFill = NaIconData(
     CupertinoIcons.app_badge_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.app_badge_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.app_badge_fill},
   );
 
   static const NaIconData appFill = NaIconData(
     CupertinoIcons.app_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.app_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.app_fill},
   );
 
   static const NaIconData archivebox = NaIconData(
     CupertinoIcons.archivebox,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.archivebox },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.archivebox},
   );
 
   static const NaIconData archiveboxFill = NaIconData(
     CupertinoIcons.archivebox_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.archivebox_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.archivebox_fill},
   );
 
   static const NaIconData arrow2Circlepath = NaIconData(
     CupertinoIcons.arrow_2_circlepath,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrow_2_circlepath },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.arrow_2_circlepath},
   );
 
   static const NaIconData arrow2CirclepathCircle = NaIconData(
     CupertinoIcons.arrow_2_circlepath_circle,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrow_2_circlepath_circle },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.arrow_2_circlepath_circle
+    },
   );
 
   static const NaIconData arrow2CirclepathCircleFill = NaIconData(
     CupertinoIcons.arrow_2_circlepath_circle_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrow_2_circlepath_circle_fill },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.arrow_2_circlepath_circle_fill
+    },
   );
 
   static const NaIconData arrow2Squarepath = NaIconData(
     CupertinoIcons.arrow_2_squarepath,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrow_2_squarepath },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.arrow_2_squarepath},
   );
 
   static const NaIconData arrow3Trianglepath = NaIconData(
     CupertinoIcons.arrow_3_trianglepath,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrow_3_trianglepath },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.arrow_3_trianglepath},
   );
 
   static const NaIconData arrowBranch = NaIconData(
     CupertinoIcons.arrow_branch,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrow_branch },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.arrow_branch},
   );
 
   static const NaIconData arrowClockwise = NaIconData(
     CupertinoIcons.arrow_clockwise,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrow_clockwise },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.arrow_clockwise},
   );
 
   static const NaIconData arrowClockwiseCircle = NaIconData(
     CupertinoIcons.arrow_clockwise_circle,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrow_clockwise_circle },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.arrow_clockwise_circle},
   );
 
   static const NaIconData arrowClockwiseCircleFill = NaIconData(
     CupertinoIcons.arrow_clockwise_circle_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrow_clockwise_circle_fill },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.arrow_clockwise_circle_fill
+    },
   );
 
   static const NaIconData arrowCounterclockwise = NaIconData(
     CupertinoIcons.arrow_counterclockwise,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrow_counterclockwise },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.arrow_counterclockwise},
   );
 
   static const NaIconData arrowCounterclockwiseCircle = NaIconData(
     CupertinoIcons.arrow_counterclockwise_circle,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrow_counterclockwise_circle },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.arrow_counterclockwise_circle
+    },
   );
 
   static const NaIconData arrowCounterclockwiseCircleFill = NaIconData(
     CupertinoIcons.arrow_counterclockwise_circle_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrow_counterclockwise_circle_fill },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.arrow_counterclockwise_circle_fill
+    },
   );
 
   static const NaIconData arrowDownCircle = NaIconData(
     CupertinoIcons.arrow_down_circle,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrow_down_circle },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.arrow_down_circle},
   );
 
   static const NaIconData arrowDownCircleFill = NaIconData(
     CupertinoIcons.arrow_down_circle_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrow_down_circle_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.arrow_down_circle_fill},
   );
 
   static const NaIconData arrowDownDoc = NaIconData(
     CupertinoIcons.arrow_down_doc,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrow_down_doc },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.arrow_down_doc},
   );
 
   static const NaIconData arrowDownDocFill = NaIconData(
     CupertinoIcons.arrow_down_doc_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrow_down_doc_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.arrow_down_doc_fill},
   );
 
   static const NaIconData arrowDownLeft = NaIconData(
     CupertinoIcons.arrow_down_left,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrow_down_left },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.arrow_down_left},
   );
 
   static const NaIconData arrowDownLeftCircle = NaIconData(
     CupertinoIcons.arrow_down_left_circle,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrow_down_left_circle },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.arrow_down_left_circle},
   );
 
   static const NaIconData arrowDownLeftCircleFill = NaIconData(
     CupertinoIcons.arrow_down_left_circle_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrow_down_left_circle_fill },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.arrow_down_left_circle_fill
+    },
   );
 
   static const NaIconData arrowDownLeftSquare = NaIconData(
     CupertinoIcons.arrow_down_left_square,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrow_down_left_square },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.arrow_down_left_square},
   );
 
   static const NaIconData arrowDownLeftSquareFill = NaIconData(
     CupertinoIcons.arrow_down_left_square_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrow_down_left_square_fill },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.arrow_down_left_square_fill
+    },
   );
 
   static const NaIconData arrowDownRight = NaIconData(
     CupertinoIcons.arrow_down_right,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrow_down_right },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.arrow_down_right},
   );
 
   static const NaIconData arrowDownRightArrowUpLeft = NaIconData(
     CupertinoIcons.arrow_down_right_arrow_up_left,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrow_down_right_arrow_up_left },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.arrow_down_right_arrow_up_left
+    },
   );
 
   static const NaIconData arrowDownRightCircle = NaIconData(
     CupertinoIcons.arrow_down_right_circle,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrow_down_right_circle },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.arrow_down_right_circle},
   );
 
   static const NaIconData arrowDownRightCircleFill = NaIconData(
     CupertinoIcons.arrow_down_right_circle_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrow_down_right_circle_fill },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.arrow_down_right_circle_fill
+    },
   );
 
   static const NaIconData arrowDownRightSquare = NaIconData(
     CupertinoIcons.arrow_down_right_square,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrow_down_right_square },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.arrow_down_right_square},
   );
 
   static const NaIconData arrowDownRightSquareFill = NaIconData(
     CupertinoIcons.arrow_down_right_square_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrow_down_right_square_fill },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.arrow_down_right_square_fill
+    },
   );
 
   static const NaIconData arrowDownSquare = NaIconData(
     CupertinoIcons.arrow_down_square,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrow_down_square },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.arrow_down_square},
   );
 
   static const NaIconData arrowDownSquareFill = NaIconData(
     CupertinoIcons.arrow_down_square_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrow_down_square_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.arrow_down_square_fill},
   );
 
   static const NaIconData arrowDownToLine = NaIconData(
     CupertinoIcons.arrow_down_to_line,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrow_down_to_line },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.arrow_down_to_line},
   );
 
   static const NaIconData arrowDownToLineAlt = NaIconData(
     CupertinoIcons.arrow_down_to_line_alt,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrow_down_to_line_alt },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.arrow_down_to_line_alt},
   );
 
   static const NaIconData arrowLeftCircle = NaIconData(
     CupertinoIcons.arrow_left_circle,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrow_left_circle },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.arrow_left_circle},
   );
 
   static const NaIconData arrowLeftCircleFill = NaIconData(
     CupertinoIcons.arrow_left_circle_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrow_left_circle_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.arrow_left_circle_fill},
   );
 
   static const NaIconData arrowLeftRight = NaIconData(
     CupertinoIcons.arrow_left_right,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrow_left_right },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.arrow_left_right},
   );
 
   static const NaIconData arrowLeftRightCircle = NaIconData(
     CupertinoIcons.arrow_left_right_circle,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrow_left_right_circle },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.arrow_left_right_circle},
   );
 
   static const NaIconData arrowLeftRightCircleFill = NaIconData(
     CupertinoIcons.arrow_left_right_circle_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrow_left_right_circle_fill },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.arrow_left_right_circle_fill
+    },
   );
 
   static const NaIconData arrowLeftRightSquare = NaIconData(
     CupertinoIcons.arrow_left_right_square,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrow_left_right_square },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.arrow_left_right_square},
   );
 
   static const NaIconData arrowLeftRightSquareFill = NaIconData(
     CupertinoIcons.arrow_left_right_square_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrow_left_right_square_fill },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.arrow_left_right_square_fill
+    },
   );
 
   static const NaIconData arrowLeftSquare = NaIconData(
     CupertinoIcons.arrow_left_square,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrow_left_square },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.arrow_left_square},
   );
 
   static const NaIconData arrowLeftSquareFill = NaIconData(
     CupertinoIcons.arrow_left_square_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrow_left_square_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.arrow_left_square_fill},
   );
 
   static const NaIconData arrowLeftToLine = NaIconData(
     CupertinoIcons.arrow_left_to_line,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrow_left_to_line },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.arrow_left_to_line},
   );
 
   static const NaIconData arrowLeftToLineAlt = NaIconData(
     CupertinoIcons.arrow_left_to_line_alt,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrow_left_to_line_alt },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.arrow_left_to_line_alt},
   );
 
   static const NaIconData arrowMerge = NaIconData(
     CupertinoIcons.arrow_merge,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrow_merge },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.arrow_merge},
   );
 
   static const NaIconData arrowRightArrowLeft = NaIconData(
     CupertinoIcons.arrow_right_arrow_left,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrow_right_arrow_left },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.arrow_right_arrow_left},
   );
 
   static const NaIconData arrowRightArrowLeftCircle = NaIconData(
     CupertinoIcons.arrow_right_arrow_left_circle,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrow_right_arrow_left_circle },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.arrow_right_arrow_left_circle
+    },
   );
 
   static const NaIconData arrowRightArrowLeftCircleFill = NaIconData(
     CupertinoIcons.arrow_right_arrow_left_circle_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrow_right_arrow_left_circle_fill },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.arrow_right_arrow_left_circle_fill
+    },
   );
 
   static const NaIconData arrowRightArrowLeftSquare = NaIconData(
     CupertinoIcons.arrow_right_arrow_left_square,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrow_right_arrow_left_square },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.arrow_right_arrow_left_square
+    },
   );
 
   static const NaIconData arrowRightArrowLeftSquareFill = NaIconData(
     CupertinoIcons.arrow_right_arrow_left_square_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrow_right_arrow_left_square_fill },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.arrow_right_arrow_left_square_fill
+    },
   );
 
   static const NaIconData arrowRightCircle = NaIconData(
     CupertinoIcons.arrow_right_circle,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrow_right_circle },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.arrow_right_circle},
   );
 
   static const NaIconData arrowRightCircleFill = NaIconData(
     CupertinoIcons.arrow_right_circle_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrow_right_circle_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.arrow_right_circle_fill},
   );
 
   static const NaIconData arrowRightSquare = NaIconData(
     CupertinoIcons.arrow_right_square,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrow_right_square },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.arrow_right_square},
   );
 
   static const NaIconData arrowRightSquareFill = NaIconData(
     CupertinoIcons.arrow_right_square_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrow_right_square_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.arrow_right_square_fill},
   );
 
   static const NaIconData arrowRightToLine = NaIconData(
     CupertinoIcons.arrow_right_to_line,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrow_right_to_line },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.arrow_right_to_line},
   );
 
   static const NaIconData arrowRightToLineAlt = NaIconData(
     CupertinoIcons.arrow_right_to_line_alt,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrow_right_to_line_alt },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.arrow_right_to_line_alt},
   );
 
   static const NaIconData arrowSwap = NaIconData(
     CupertinoIcons.arrow_swap,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrow_swap },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.arrow_swap},
   );
 
   static const NaIconData arrowTurnDownLeft = NaIconData(
     CupertinoIcons.arrow_turn_down_left,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrow_turn_down_left },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.arrow_turn_down_left},
   );
 
   static const NaIconData arrowTurnDownRight = NaIconData(
     CupertinoIcons.arrow_turn_down_right,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrow_turn_down_right },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.arrow_turn_down_right},
   );
 
   static const NaIconData arrowTurnLeftDown = NaIconData(
     CupertinoIcons.arrow_turn_left_down,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrow_turn_left_down },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.arrow_turn_left_down},
   );
 
   static const NaIconData arrowTurnLeftUp = NaIconData(
     CupertinoIcons.arrow_turn_left_up,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrow_turn_left_up },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.arrow_turn_left_up},
   );
 
   static const NaIconData arrowTurnRightDown = NaIconData(
     CupertinoIcons.arrow_turn_right_down,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrow_turn_right_down },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.arrow_turn_right_down},
   );
 
   static const NaIconData arrowTurnRightUp = NaIconData(
     CupertinoIcons.arrow_turn_right_up,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrow_turn_right_up },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.arrow_turn_right_up},
   );
 
   static const NaIconData arrowTurnUpLeft = NaIconData(
     CupertinoIcons.arrow_turn_up_left,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrow_turn_up_left },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.arrow_turn_up_left},
   );
 
   static const NaIconData arrowTurnUpRight = NaIconData(
     CupertinoIcons.arrow_turn_up_right,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrow_turn_up_right },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.arrow_turn_up_right},
   );
 
   static const NaIconData arrowUpArrowDown = NaIconData(
     CupertinoIcons.arrow_up_arrow_down,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrow_up_arrow_down },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.arrow_up_arrow_down},
   );
 
   static const NaIconData arrowUpArrowDownCircle = NaIconData(
     CupertinoIcons.arrow_up_arrow_down_circle,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrow_up_arrow_down_circle },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.arrow_up_arrow_down_circle
+    },
   );
 
   static const NaIconData arrowUpArrowDownCircleFill = NaIconData(
     CupertinoIcons.arrow_up_arrow_down_circle_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrow_up_arrow_down_circle_fill },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.arrow_up_arrow_down_circle_fill
+    },
   );
 
   static const NaIconData arrowUpArrowDownSquare = NaIconData(
     CupertinoIcons.arrow_up_arrow_down_square,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrow_up_arrow_down_square },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.arrow_up_arrow_down_square
+    },
   );
 
   static const NaIconData arrowUpArrowDownSquareFill = NaIconData(
     CupertinoIcons.arrow_up_arrow_down_square_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrow_up_arrow_down_square_fill },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.arrow_up_arrow_down_square_fill
+    },
   );
 
   static const NaIconData arrowUpBin = NaIconData(
     CupertinoIcons.arrow_up_bin,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrow_up_bin },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.arrow_up_bin},
   );
 
   static const NaIconData arrowUpBinFill = NaIconData(
     CupertinoIcons.arrow_up_bin_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrow_up_bin_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.arrow_up_bin_fill},
   );
 
   static const NaIconData arrowUpCircle = NaIconData(
     CupertinoIcons.arrow_up_circle,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrow_up_circle },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.arrow_up_circle},
   );
 
   static const NaIconData arrowUpCircleFill = NaIconData(
     CupertinoIcons.arrow_up_circle_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrow_up_circle_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.arrow_up_circle_fill},
   );
 
   static const NaIconData arrowUpDoc = NaIconData(
     CupertinoIcons.arrow_up_doc,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrow_up_doc },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.arrow_up_doc},
   );
 
   static const NaIconData arrowUpDocFill = NaIconData(
     CupertinoIcons.arrow_up_doc_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrow_up_doc_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.arrow_up_doc_fill},
   );
 
   static const NaIconData arrowUpDown = NaIconData(
     CupertinoIcons.arrow_up_down,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrow_up_down },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.arrow_up_down},
   );
 
   static const NaIconData arrowUpDownCircle = NaIconData(
     CupertinoIcons.arrow_up_down_circle,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrow_up_down_circle },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.arrow_up_down_circle},
   );
 
   static const NaIconData arrowUpDownCircleFill = NaIconData(
     CupertinoIcons.arrow_up_down_circle_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrow_up_down_circle_fill },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.arrow_up_down_circle_fill
+    },
   );
 
   static const NaIconData arrowUpDownSquare = NaIconData(
     CupertinoIcons.arrow_up_down_square,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrow_up_down_square },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.arrow_up_down_square},
   );
 
   static const NaIconData arrowUpDownSquareFill = NaIconData(
     CupertinoIcons.arrow_up_down_square_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrow_up_down_square_fill },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.arrow_up_down_square_fill
+    },
   );
 
   static const NaIconData arrowUpLeft = NaIconData(
     CupertinoIcons.arrow_up_left,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrow_up_left },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.arrow_up_left},
   );
 
   static const NaIconData arrowUpLeftArrowDownRight = NaIconData(
     CupertinoIcons.arrow_up_left_arrow_down_right,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrow_up_left_arrow_down_right },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.arrow_up_left_arrow_down_right
+    },
   );
 
   static const NaIconData arrowUpLeftCircle = NaIconData(
     CupertinoIcons.arrow_up_left_circle,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrow_up_left_circle },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.arrow_up_left_circle},
   );
 
   static const NaIconData arrowUpLeftCircleFill = NaIconData(
     CupertinoIcons.arrow_up_left_circle_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrow_up_left_circle_fill },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.arrow_up_left_circle_fill
+    },
   );
 
   static const NaIconData arrowUpLeftSquare = NaIconData(
     CupertinoIcons.arrow_up_left_square,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrow_up_left_square },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.arrow_up_left_square},
   );
 
   static const NaIconData arrowUpLeftSquareFill = NaIconData(
     CupertinoIcons.arrow_up_left_square_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrow_up_left_square_fill },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.arrow_up_left_square_fill
+    },
   );
 
   static const NaIconData arrowUpRight = NaIconData(
     CupertinoIcons.arrow_up_right,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrow_up_right },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.arrow_up_right},
   );
 
   static const NaIconData arrowUpRightCircle = NaIconData(
     CupertinoIcons.arrow_up_right_circle,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrow_up_right_circle },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.arrow_up_right_circle},
   );
 
   static const NaIconData arrowUpRightCircleFill = NaIconData(
     CupertinoIcons.arrow_up_right_circle_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrow_up_right_circle_fill },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.arrow_up_right_circle_fill
+    },
   );
 
   static const NaIconData arrowUpRightDiamond = NaIconData(
     CupertinoIcons.arrow_up_right_diamond,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrow_up_right_diamond },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.arrow_up_right_diamond},
   );
 
   static const NaIconData arrowUpRightDiamondFill = NaIconData(
     CupertinoIcons.arrow_up_right_diamond_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrow_up_right_diamond_fill },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.arrow_up_right_diamond_fill
+    },
   );
 
   static const NaIconData arrowUpRightSquare = NaIconData(
     CupertinoIcons.arrow_up_right_square,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrow_up_right_square },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.arrow_up_right_square},
   );
 
   static const NaIconData arrowUpRightSquareFill = NaIconData(
     CupertinoIcons.arrow_up_right_square_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrow_up_right_square_fill },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.arrow_up_right_square_fill
+    },
   );
 
   static const NaIconData arrowUpSquare = NaIconData(
     CupertinoIcons.arrow_up_square,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrow_up_square },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.arrow_up_square},
   );
 
   static const NaIconData arrowUpSquareFill = NaIconData(
     CupertinoIcons.arrow_up_square_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrow_up_square_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.arrow_up_square_fill},
   );
 
   static const NaIconData arrowUpToLine = NaIconData(
     CupertinoIcons.arrow_up_to_line,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrow_up_to_line },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.arrow_up_to_line},
   );
 
   static const NaIconData arrowUpToLineAlt = NaIconData(
     CupertinoIcons.arrow_up_to_line_alt,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrow_up_to_line_alt },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.arrow_up_to_line_alt},
   );
 
   static const NaIconData arrowUturnDown = NaIconData(
     CupertinoIcons.arrow_uturn_down,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrow_uturn_down },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.arrow_uturn_down},
   );
 
   static const NaIconData arrowUturnDownCircle = NaIconData(
     CupertinoIcons.arrow_uturn_down_circle,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrow_uturn_down_circle },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.arrow_uturn_down_circle},
   );
 
   static const NaIconData arrowUturnDownCircleFill = NaIconData(
     CupertinoIcons.arrow_uturn_down_circle_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrow_uturn_down_circle_fill },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.arrow_uturn_down_circle_fill
+    },
   );
 
   static const NaIconData arrowUturnDownSquare = NaIconData(
     CupertinoIcons.arrow_uturn_down_square,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrow_uturn_down_square },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.arrow_uturn_down_square},
   );
 
   static const NaIconData arrowUturnDownSquareFill = NaIconData(
     CupertinoIcons.arrow_uturn_down_square_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrow_uturn_down_square_fill },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.arrow_uturn_down_square_fill
+    },
   );
 
   static const NaIconData arrowUturnLeft = NaIconData(
     CupertinoIcons.arrow_uturn_left,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrow_uturn_left },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.arrow_uturn_left},
   );
 
   static const NaIconData arrowUturnLeftCircle = NaIconData(
     CupertinoIcons.arrow_uturn_left_circle,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrow_uturn_left_circle },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.arrow_uturn_left_circle},
   );
 
   static const NaIconData arrowUturnLeftCircleFill = NaIconData(
     CupertinoIcons.arrow_uturn_left_circle_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrow_uturn_left_circle_fill },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.arrow_uturn_left_circle_fill
+    },
   );
 
   static const NaIconData arrowUturnLeftSquare = NaIconData(
     CupertinoIcons.arrow_uturn_left_square,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrow_uturn_left_square },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.arrow_uturn_left_square},
   );
 
   static const NaIconData arrowUturnLeftSquareFill = NaIconData(
     CupertinoIcons.arrow_uturn_left_square_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrow_uturn_left_square_fill },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.arrow_uturn_left_square_fill
+    },
   );
 
   static const NaIconData arrowUturnRight = NaIconData(
     CupertinoIcons.arrow_uturn_right,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrow_uturn_right },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.arrow_uturn_right},
   );
 
   static const NaIconData arrowUturnRightCircle = NaIconData(
     CupertinoIcons.arrow_uturn_right_circle,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrow_uturn_right_circle },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.arrow_uturn_right_circle
+    },
   );
 
   static const NaIconData arrowUturnRightCircleFill = NaIconData(
     CupertinoIcons.arrow_uturn_right_circle_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrow_uturn_right_circle_fill },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.arrow_uturn_right_circle_fill
+    },
   );
 
   static const NaIconData arrowUturnRightSquare = NaIconData(
     CupertinoIcons.arrow_uturn_right_square,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrow_uturn_right_square },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.arrow_uturn_right_square
+    },
   );
 
   static const NaIconData arrowUturnRightSquareFill = NaIconData(
     CupertinoIcons.arrow_uturn_right_square_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrow_uturn_right_square_fill },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.arrow_uturn_right_square_fill
+    },
   );
 
   static const NaIconData arrowUturnUp = NaIconData(
     CupertinoIcons.arrow_uturn_up,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrow_uturn_up },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.arrow_uturn_up},
   );
 
   static const NaIconData arrowUturnUpCircle = NaIconData(
     CupertinoIcons.arrow_uturn_up_circle,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrow_uturn_up_circle },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.arrow_uturn_up_circle},
   );
 
   static const NaIconData arrowUturnUpCircleFill = NaIconData(
     CupertinoIcons.arrow_uturn_up_circle_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrow_uturn_up_circle_fill },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.arrow_uturn_up_circle_fill
+    },
   );
 
   static const NaIconData arrowUturnUpSquare = NaIconData(
     CupertinoIcons.arrow_uturn_up_square,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrow_uturn_up_square },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.arrow_uturn_up_square},
   );
 
   static const NaIconData arrowUturnUpSquareFill = NaIconData(
     CupertinoIcons.arrow_uturn_up_square_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrow_uturn_up_square_fill },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.arrow_uturn_up_square_fill
+    },
   );
 
   static const NaIconData arrowshapeTurnUpLeft = NaIconData(
     CupertinoIcons.arrowshape_turn_up_left,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrowshape_turn_up_left },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.arrowshape_turn_up_left},
   );
 
   static const NaIconData arrowshapeTurnUpLeft2 = NaIconData(
     CupertinoIcons.arrowshape_turn_up_left_2,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrowshape_turn_up_left_2 },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.arrowshape_turn_up_left_2
+    },
   );
 
   static const NaIconData arrowshapeTurnUpLeft2Fill = NaIconData(
     CupertinoIcons.arrowshape_turn_up_left_2_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrowshape_turn_up_left_2_fill },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.arrowshape_turn_up_left_2_fill
+    },
   );
 
   static const NaIconData arrowshapeTurnUpLeftCircle = NaIconData(
     CupertinoIcons.arrowshape_turn_up_left_circle,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrowshape_turn_up_left_circle },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.arrowshape_turn_up_left_circle
+    },
   );
 
   static const NaIconData arrowshapeTurnUpLeftCircleFill = NaIconData(
     CupertinoIcons.arrowshape_turn_up_left_circle_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrowshape_turn_up_left_circle_fill },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.arrowshape_turn_up_left_circle_fill
+    },
   );
 
   static const NaIconData arrowshapeTurnUpLeftFill = NaIconData(
     CupertinoIcons.arrowshape_turn_up_left_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrowshape_turn_up_left_fill },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.arrowshape_turn_up_left_fill
+    },
   );
 
   static const NaIconData arrowshapeTurnUpRight = NaIconData(
     CupertinoIcons.arrowshape_turn_up_right,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrowshape_turn_up_right },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.arrowshape_turn_up_right
+    },
   );
 
   static const NaIconData arrowshapeTurnUpRightCircle = NaIconData(
     CupertinoIcons.arrowshape_turn_up_right_circle,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrowshape_turn_up_right_circle },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.arrowshape_turn_up_right_circle
+    },
   );
 
   static const NaIconData arrowshapeTurnUpRightCircleFill = NaIconData(
     CupertinoIcons.arrowshape_turn_up_right_circle_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrowshape_turn_up_right_circle_fill },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.arrowshape_turn_up_right_circle_fill
+    },
   );
 
   static const NaIconData arrowshapeTurnUpRightFill = NaIconData(
     CupertinoIcons.arrowshape_turn_up_right_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrowshape_turn_up_right_fill },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.arrowshape_turn_up_right_fill
+    },
   );
 
   static const NaIconData arrowtriangleDown = NaIconData(
     CupertinoIcons.arrowtriangle_down,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrowtriangle_down },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.arrowtriangle_down},
   );
 
   static const NaIconData arrowtriangleDownCircle = NaIconData(
     CupertinoIcons.arrowtriangle_down_circle,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrowtriangle_down_circle },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.arrowtriangle_down_circle
+    },
   );
 
   static const NaIconData arrowtriangleDownCircleFill = NaIconData(
     CupertinoIcons.arrowtriangle_down_circle_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrowtriangle_down_circle_fill },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.arrowtriangle_down_circle_fill
+    },
   );
 
   static const NaIconData arrowtriangleDownFill = NaIconData(
     CupertinoIcons.arrowtriangle_down_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrowtriangle_down_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.arrowtriangle_down_fill},
   );
 
   static const NaIconData arrowtriangleDownSquare = NaIconData(
     CupertinoIcons.arrowtriangle_down_square,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrowtriangle_down_square },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.arrowtriangle_down_square
+    },
   );
 
   static const NaIconData arrowtriangleDownSquareFill = NaIconData(
     CupertinoIcons.arrowtriangle_down_square_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrowtriangle_down_square_fill },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.arrowtriangle_down_square_fill
+    },
   );
 
   static const NaIconData arrowtriangleLeft = NaIconData(
     CupertinoIcons.arrowtriangle_left,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrowtriangle_left },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.arrowtriangle_left},
   );
 
   static const NaIconData arrowtriangleLeftCircle = NaIconData(
     CupertinoIcons.arrowtriangle_left_circle,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrowtriangle_left_circle },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.arrowtriangle_left_circle
+    },
   );
 
   static const NaIconData arrowtriangleLeftCircleFill = NaIconData(
     CupertinoIcons.arrowtriangle_left_circle_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrowtriangle_left_circle_fill },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.arrowtriangle_left_circle_fill
+    },
   );
 
   static const NaIconData arrowtriangleLeftFill = NaIconData(
     CupertinoIcons.arrowtriangle_left_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrowtriangle_left_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.arrowtriangle_left_fill},
   );
 
   static const NaIconData arrowtriangleLeftSquare = NaIconData(
     CupertinoIcons.arrowtriangle_left_square,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrowtriangle_left_square },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.arrowtriangle_left_square
+    },
   );
 
   static const NaIconData arrowtriangleLeftSquareFill = NaIconData(
     CupertinoIcons.arrowtriangle_left_square_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrowtriangle_left_square_fill },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.arrowtriangle_left_square_fill
+    },
   );
 
   static const NaIconData arrowtriangleRight = NaIconData(
     CupertinoIcons.arrowtriangle_right,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrowtriangle_right },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.arrowtriangle_right},
   );
 
   static const NaIconData arrowtriangleRightCircle = NaIconData(
     CupertinoIcons.arrowtriangle_right_circle,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrowtriangle_right_circle },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.arrowtriangle_right_circle
+    },
   );
 
   static const NaIconData arrowtriangleRightCircleFill = NaIconData(
     CupertinoIcons.arrowtriangle_right_circle_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrowtriangle_right_circle_fill },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.arrowtriangle_right_circle_fill
+    },
   );
 
   static const NaIconData arrowtriangleRightFill = NaIconData(
     CupertinoIcons.arrowtriangle_right_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrowtriangle_right_fill },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.arrowtriangle_right_fill
+    },
   );
 
   static const NaIconData arrowtriangleRightSquare = NaIconData(
     CupertinoIcons.arrowtriangle_right_square,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrowtriangle_right_square },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.arrowtriangle_right_square
+    },
   );
 
   static const NaIconData arrowtriangleRightSquareFill = NaIconData(
     CupertinoIcons.arrowtriangle_right_square_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrowtriangle_right_square_fill },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.arrowtriangle_right_square_fill
+    },
   );
 
   static const NaIconData arrowtriangleUp = NaIconData(
     CupertinoIcons.arrowtriangle_up,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrowtriangle_up },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.arrowtriangle_up},
   );
 
   static const NaIconData arrowtriangleUpCircle = NaIconData(
     CupertinoIcons.arrowtriangle_up_circle,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrowtriangle_up_circle },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.arrowtriangle_up_circle},
   );
 
   static const NaIconData arrowtriangleUpCircleFill = NaIconData(
     CupertinoIcons.arrowtriangle_up_circle_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrowtriangle_up_circle_fill },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.arrowtriangle_up_circle_fill
+    },
   );
 
   static const NaIconData arrowtriangleUpFill = NaIconData(
     CupertinoIcons.arrowtriangle_up_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrowtriangle_up_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.arrowtriangle_up_fill},
   );
 
   static const NaIconData arrowtriangleUpSquare = NaIconData(
     CupertinoIcons.arrowtriangle_up_square,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrowtriangle_up_square },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.arrowtriangle_up_square},
   );
 
   static const NaIconData arrowtriangleUpSquareFill = NaIconData(
     CupertinoIcons.arrowtriangle_up_square_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.arrowtriangle_up_square_fill },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.arrowtriangle_up_square_fill
+    },
   );
 
   static const NaIconData asteriskCircle = NaIconData(
     CupertinoIcons.asterisk_circle,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.asterisk_circle },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.asterisk_circle},
   );
 
   static const NaIconData asteriskCircleFill = NaIconData(
     CupertinoIcons.asterisk_circle_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.asterisk_circle_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.asterisk_circle_fill},
   );
 
   static const NaIconData at = NaIconData(
     CupertinoIcons.at,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.at },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.at},
   );
 
   static const NaIconData atBadgeMinus = NaIconData(
     CupertinoIcons.at_badge_minus,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.at_badge_minus },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.at_badge_minus},
   );
 
   static const NaIconData atBadgePlus = NaIconData(
     CupertinoIcons.at_badge_plus,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.at_badge_plus },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.at_badge_plus},
   );
 
   static const NaIconData atCircle = NaIconData(
     CupertinoIcons.at_circle,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.at_circle },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.at_circle},
   );
 
   static const NaIconData atCircleFill = NaIconData(
     CupertinoIcons.at_circle_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.at_circle_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.at_circle_fill},
   );
 
   static const NaIconData backwardEnd = NaIconData(
     CupertinoIcons.backward_end,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.backward_end },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.backward_end},
   );
 
   static const NaIconData backwardEndAlt = NaIconData(
     CupertinoIcons.backward_end_alt,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.backward_end_alt },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.backward_end_alt},
   );
 
   static const NaIconData backwardEndAltFill = NaIconData(
     CupertinoIcons.backward_end_alt_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.backward_end_alt_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.backward_end_alt_fill},
   );
 
   static const NaIconData backwardEndFill = NaIconData(
     CupertinoIcons.backward_end_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.backward_end_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.backward_end_fill},
   );
 
   static const NaIconData backwardFill = NaIconData(
     CupertinoIcons.backward_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.backward_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.backward_fill},
   );
 
   static const NaIconData badgePlusRadiowavesRight = NaIconData(
     CupertinoIcons.badge_plus_radiowaves_right,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.badge_plus_radiowaves_right },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.badge_plus_radiowaves_right
+    },
   );
 
   static const NaIconData bag = NaIconData(
     CupertinoIcons.bag,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.bag },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.bag},
   );
 
   static const NaIconData bagBadgeMinus = NaIconData(
     CupertinoIcons.bag_badge_minus,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.bag_badge_minus },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.bag_badge_minus},
   );
 
   static const NaIconData bagBadgePlus = NaIconData(
     CupertinoIcons.bag_badge_plus,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.bag_badge_plus },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.bag_badge_plus},
   );
 
   static const NaIconData bagFill = NaIconData(
     CupertinoIcons.bag_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.bag_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.bag_fill},
   );
 
   static const NaIconData bagFillBadgeMinus = NaIconData(
     CupertinoIcons.bag_fill_badge_minus,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.bag_fill_badge_minus },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.bag_fill_badge_minus},
   );
 
   static const NaIconData bagFillBadgePlus = NaIconData(
     CupertinoIcons.bag_fill_badge_plus,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.bag_fill_badge_plus },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.bag_fill_badge_plus},
   );
 
   static const NaIconData bandage = NaIconData(
     CupertinoIcons.bandage,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.bandage },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.bandage},
   );
 
   static const NaIconData bandageFill = NaIconData(
     CupertinoIcons.bandage_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.bandage_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.bandage_fill},
   );
 
   static const NaIconData barcode = NaIconData(
     CupertinoIcons.barcode,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.barcode },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.barcode},
   );
 
   static const NaIconData barcodeViewfinder = NaIconData(
     CupertinoIcons.barcode_viewfinder,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.barcode_viewfinder },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.barcode_viewfinder},
   );
 
   static const NaIconData bars = NaIconData(
     CupertinoIcons.bars,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.bars },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.bars},
   );
 
   static const NaIconData battery0 = NaIconData(
     CupertinoIcons.battery_0,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.battery_0 },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.battery_0},
   );
 
   static const NaIconData battery100 = NaIconData(
     CupertinoIcons.battery_100,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.battery_100 },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.battery_100},
   );
 
   static const NaIconData battery25 = NaIconData(
     CupertinoIcons.battery_25,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.battery_25 },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.battery_25},
   );
 
   static const NaIconData bedDouble = NaIconData(
     CupertinoIcons.bed_double,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.bed_double },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.bed_double},
   );
 
   static const NaIconData bedDoubleFill = NaIconData(
     CupertinoIcons.bed_double_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.bed_double_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.bed_double_fill},
   );
 
   static const NaIconData bellCircle = NaIconData(
     CupertinoIcons.bell_circle,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.bell_circle },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.bell_circle},
   );
 
   static const NaIconData bellCircleFill = NaIconData(
     CupertinoIcons.bell_circle_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.bell_circle_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.bell_circle_fill},
   );
 
   static const NaIconData bellFill = NaIconData(
     CupertinoIcons.bell_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.bell_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.bell_fill},
   );
 
   static const NaIconData bellSlashFill = NaIconData(
     CupertinoIcons.bell_slash_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.bell_slash_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.bell_slash_fill},
   );
 
   static const NaIconData binXmark = NaIconData(
     CupertinoIcons.bin_xmark,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.bin_xmark },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.bin_xmark},
   );
 
   static const NaIconData binXmarkFill = NaIconData(
     CupertinoIcons.bin_xmark_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.bin_xmark_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.bin_xmark_fill},
   );
 
   static const NaIconData bitcoin = NaIconData(
     CupertinoIcons.bitcoin,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.bitcoin },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.bitcoin},
   );
 
   static const NaIconData bitcoinCircle = NaIconData(
     CupertinoIcons.bitcoin_circle,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.bitcoin_circle },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.bitcoin_circle},
   );
 
   static const NaIconData bitcoinCircleFill = NaIconData(
     CupertinoIcons.bitcoin_circle_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.bitcoin_circle_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.bitcoin_circle_fill},
   );
 
   static const NaIconData boldItalicUnderline = NaIconData(
     CupertinoIcons.bold_italic_underline,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.bold_italic_underline },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.bold_italic_underline},
   );
 
   static const NaIconData boldUnderline = NaIconData(
     CupertinoIcons.bold_underline,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.bold_underline },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.bold_underline},
   );
 
   static const NaIconData boltBadgeA = NaIconData(
     CupertinoIcons.bolt_badge_a,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.bolt_badge_a },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.bolt_badge_a},
   );
 
   static const NaIconData boltBadgeAFill = NaIconData(
     CupertinoIcons.bolt_badge_a_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.bolt_badge_a_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.bolt_badge_a_fill},
   );
 
   static const NaIconData boltCircle = NaIconData(
     CupertinoIcons.bolt_circle,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.bolt_circle },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.bolt_circle},
   );
 
   static const NaIconData boltCircleFill = NaIconData(
     CupertinoIcons.bolt_circle_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.bolt_circle_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.bolt_circle_fill},
   );
 
   static const NaIconData boltFill = NaIconData(
     CupertinoIcons.bolt_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.bolt_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.bolt_fill},
   );
 
   static const NaIconData boltHorizontal = NaIconData(
     CupertinoIcons.bolt_horizontal,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.bolt_horizontal },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.bolt_horizontal},
   );
 
   static const NaIconData boltHorizontalCircle = NaIconData(
     CupertinoIcons.bolt_horizontal_circle,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.bolt_horizontal_circle },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.bolt_horizontal_circle},
   );
 
   static const NaIconData boltHorizontalCircleFill = NaIconData(
     CupertinoIcons.bolt_horizontal_circle_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.bolt_horizontal_circle_fill },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.bolt_horizontal_circle_fill
+    },
   );
 
   static const NaIconData boltHorizontalFill = NaIconData(
     CupertinoIcons.bolt_horizontal_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.bolt_horizontal_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.bolt_horizontal_fill},
   );
 
   static const NaIconData boltSlash = NaIconData(
     CupertinoIcons.bolt_slash,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.bolt_slash },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.bolt_slash},
   );
 
   static const NaIconData boltSlashFill = NaIconData(
     CupertinoIcons.bolt_slash_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.bolt_slash_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.bolt_slash_fill},
   );
 
   static const NaIconData bookCircle = NaIconData(
     CupertinoIcons.book_circle,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.book_circle },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.book_circle},
   );
 
   static const NaIconData bookCircleFill = NaIconData(
     CupertinoIcons.book_circle_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.book_circle_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.book_circle_fill},
   );
 
   static const NaIconData bookFill = NaIconData(
     CupertinoIcons.book_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.book_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.book_fill},
   );
 
   static const NaIconData bookmarkFill = NaIconData(
     CupertinoIcons.bookmark_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.bookmark_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.bookmark_fill},
   );
 
   static const NaIconData briefcase = NaIconData(
     CupertinoIcons.briefcase,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.briefcase },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.briefcase},
   );
 
   static const NaIconData briefcaseFill = NaIconData(
     CupertinoIcons.briefcase_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.briefcase_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.briefcase_fill},
   );
 
   static const NaIconData bubbleLeft = NaIconData(
     CupertinoIcons.bubble_left,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.bubble_left },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.bubble_left},
   );
 
   static const NaIconData bubbleLeftBubbleRight = NaIconData(
     CupertinoIcons.bubble_left_bubble_right,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.bubble_left_bubble_right },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.bubble_left_bubble_right
+    },
   );
 
   static const NaIconData bubbleLeftBubbleRightFill = NaIconData(
     CupertinoIcons.bubble_left_bubble_right_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.bubble_left_bubble_right_fill },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.bubble_left_bubble_right_fill
+    },
   );
 
   static const NaIconData bubbleLeftFill = NaIconData(
     CupertinoIcons.bubble_left_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.bubble_left_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.bubble_left_fill},
   );
 
   static const NaIconData bubbleMiddleBottom = NaIconData(
     CupertinoIcons.bubble_middle_bottom,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.bubble_middle_bottom },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.bubble_middle_bottom},
   );
 
   static const NaIconData bubbleMiddleBottomFill = NaIconData(
     CupertinoIcons.bubble_middle_bottom_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.bubble_middle_bottom_fill },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.bubble_middle_bottom_fill
+    },
   );
 
   static const NaIconData bubbleMiddleTop = NaIconData(
     CupertinoIcons.bubble_middle_top,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.bubble_middle_top },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.bubble_middle_top},
   );
 
   static const NaIconData bubbleMiddleTopFill = NaIconData(
     CupertinoIcons.bubble_middle_top_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.bubble_middle_top_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.bubble_middle_top_fill},
   );
 
   static const NaIconData bubbleRight = NaIconData(
     CupertinoIcons.bubble_right,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.bubble_right },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.bubble_right},
   );
 
   static const NaIconData bubbleRightFill = NaIconData(
     CupertinoIcons.bubble_right_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.bubble_right_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.bubble_right_fill},
   );
 
   static const NaIconData building2Fill = NaIconData(
     CupertinoIcons.building_2_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.building_2_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.building_2_fill},
   );
 
   static const NaIconData burn = NaIconData(
     CupertinoIcons.burn,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.burn },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.burn},
   );
 
   static const NaIconData burst = NaIconData(
     CupertinoIcons.burst,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.burst },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.burst},
   );
 
   static const NaIconData burstFill = NaIconData(
     CupertinoIcons.burst_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.burst_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.burst_fill},
   );
 
   static const NaIconData calendar = NaIconData(
     CupertinoIcons.calendar,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.calendar },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.calendar},
   );
 
   static const NaIconData calendarBadgeMinus = NaIconData(
     CupertinoIcons.calendar_badge_minus,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.calendar_badge_minus },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.calendar_badge_minus},
   );
 
   static const NaIconData calendarBadgePlus = NaIconData(
     CupertinoIcons.calendar_badge_plus,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.calendar_badge_plus },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.calendar_badge_plus},
   );
 
   static const NaIconData calendarCircle = NaIconData(
     CupertinoIcons.calendar_circle,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.calendar_circle },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.calendar_circle},
   );
 
   static const NaIconData calendarCircleFill = NaIconData(
     CupertinoIcons.calendar_circle_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.calendar_circle_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.calendar_circle_fill},
   );
 
   static const NaIconData cameraCircle = NaIconData(
     CupertinoIcons.camera_circle,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.camera_circle },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.camera_circle},
   );
 
   static const NaIconData cameraCircleFill = NaIconData(
     CupertinoIcons.camera_circle_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.camera_circle_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.camera_circle_fill},
   );
 
   static const NaIconData cameraOnRectangle = NaIconData(
     CupertinoIcons.camera_on_rectangle,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.camera_on_rectangle },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.camera_on_rectangle},
   );
 
   static const NaIconData cameraOnRectangleFill = NaIconData(
     CupertinoIcons.camera_on_rectangle_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.camera_on_rectangle_fill },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.camera_on_rectangle_fill
+    },
   );
 
   static const NaIconData cameraRotate = NaIconData(
     CupertinoIcons.camera_rotate,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.camera_rotate },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.camera_rotate},
   );
 
   static const NaIconData cameraRotateFill = NaIconData(
     CupertinoIcons.camera_rotate_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.camera_rotate_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.camera_rotate_fill},
   );
 
   static const NaIconData cameraViewfinder = NaIconData(
     CupertinoIcons.camera_viewfinder,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.camera_viewfinder },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.camera_viewfinder},
   );
 
   static const NaIconData capslock = NaIconData(
     CupertinoIcons.capslock,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.capslock },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.capslock},
   );
 
   static const NaIconData capslockFill = NaIconData(
     CupertinoIcons.capslock_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.capslock_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.capslock_fill},
   );
 
   static const NaIconData capsule = NaIconData(
     CupertinoIcons.capsule,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.capsule },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.capsule},
   );
 
   static const NaIconData capsuleFill = NaIconData(
     CupertinoIcons.capsule_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.capsule_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.capsule_fill},
   );
 
   static const NaIconData captionsBubble = NaIconData(
     CupertinoIcons.captions_bubble,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.captions_bubble },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.captions_bubble},
   );
 
   static const NaIconData captionsBubbleFill = NaIconData(
     CupertinoIcons.captions_bubble_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.captions_bubble_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.captions_bubble_fill},
   );
 
   static const NaIconData carFill = NaIconData(
     CupertinoIcons.car_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.car_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.car_fill},
   );
 
   static const NaIconData cart = NaIconData(
     CupertinoIcons.cart,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.cart },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.cart},
   );
 
   static const NaIconData cartBadgeMinus = NaIconData(
     CupertinoIcons.cart_badge_minus,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.cart_badge_minus },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.cart_badge_minus},
   );
 
   static const NaIconData cartBadgePlus = NaIconData(
     CupertinoIcons.cart_badge_plus,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.cart_badge_plus },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.cart_badge_plus},
   );
 
   static const NaIconData cartFill = NaIconData(
     CupertinoIcons.cart_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.cart_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.cart_fill},
   );
 
   static const NaIconData cartFillBadgeMinus = NaIconData(
     CupertinoIcons.cart_fill_badge_minus,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.cart_fill_badge_minus },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.cart_fill_badge_minus},
   );
 
   static const NaIconData cartFillBadgePlus = NaIconData(
     CupertinoIcons.cart_fill_badge_plus,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.cart_fill_badge_plus },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.cart_fill_badge_plus},
   );
 
   static const NaIconData chartBar = NaIconData(
     CupertinoIcons.chart_bar,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.chart_bar },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.chart_bar},
   );
 
   static const NaIconData chartBarAltFill = NaIconData(
     CupertinoIcons.chart_bar_alt_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.chart_bar_alt_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.chart_bar_alt_fill},
   );
 
   static const NaIconData chartBarCircle = NaIconData(
     CupertinoIcons.chart_bar_circle,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.chart_bar_circle },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.chart_bar_circle},
   );
 
   static const NaIconData chartBarCircleFill = NaIconData(
     CupertinoIcons.chart_bar_circle_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.chart_bar_circle_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.chart_bar_circle_fill},
   );
 
   static const NaIconData chartBarFill = NaIconData(
     CupertinoIcons.chart_bar_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.chart_bar_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.chart_bar_fill},
   );
 
   static const NaIconData chartBarSquare = NaIconData(
     CupertinoIcons.chart_bar_square,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.chart_bar_square },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.chart_bar_square},
   );
 
   static const NaIconData chartBarSquareFill = NaIconData(
     CupertinoIcons.chart_bar_square_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.chart_bar_square_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.chart_bar_square_fill},
   );
 
   static const NaIconData chartPie = NaIconData(
     CupertinoIcons.chart_pie,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.chart_pie },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.chart_pie},
   );
 
   static const NaIconData chartPieFill = NaIconData(
     CupertinoIcons.chart_pie_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.chart_pie_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.chart_pie_fill},
   );
 
   static const NaIconData chatBubble2 = NaIconData(
     CupertinoIcons.chat_bubble_2,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.chat_bubble_2 },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.chat_bubble_2},
   );
 
   static const NaIconData chatBubble2Fill = NaIconData(
     CupertinoIcons.chat_bubble_2_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.chat_bubble_2_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.chat_bubble_2_fill},
   );
 
   static const NaIconData chatBubbleFill = NaIconData(
     CupertinoIcons.chat_bubble_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.chat_bubble_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.chat_bubble_fill},
   );
 
   static const NaIconData chatBubbleText = NaIconData(
     CupertinoIcons.chat_bubble_text,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.chat_bubble_text },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.chat_bubble_text},
   );
 
   static const NaIconData chatBubbleTextFill = NaIconData(
     CupertinoIcons.chat_bubble_text_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.chat_bubble_text_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.chat_bubble_text_fill},
   );
 
   static const NaIconData checkmarkAltCircle = NaIconData(
     CupertinoIcons.checkmark_alt_circle,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.checkmark_alt_circle },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.checkmark_alt_circle},
   );
 
   static const NaIconData checkmarkAltCircleFill = NaIconData(
     CupertinoIcons.checkmark_alt_circle_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.checkmark_alt_circle_fill },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.checkmark_alt_circle_fill
+    },
   );
 
   static const NaIconData checkmarkCircle = NaIconData(
     CupertinoIcons.checkmark_circle,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.checkmark_circle },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.checkmark_circle},
   );
 
   static const NaIconData checkmarkCircleFill = NaIconData(
     CupertinoIcons.checkmark_circle_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.checkmark_circle_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.checkmark_circle_fill},
   );
 
   static const NaIconData checkmarkRectangle = NaIconData(
     CupertinoIcons.checkmark_rectangle,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.checkmark_rectangle },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.checkmark_rectangle},
   );
 
   static const NaIconData checkmarkRectangleFill = NaIconData(
     CupertinoIcons.checkmark_rectangle_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.checkmark_rectangle_fill },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.checkmark_rectangle_fill
+    },
   );
 
   static const NaIconData checkmarkSeal = NaIconData(
     CupertinoIcons.checkmark_seal,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.checkmark_seal },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.checkmark_seal},
   );
 
   static const NaIconData checkmarkSealFill = NaIconData(
     CupertinoIcons.checkmark_seal_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.checkmark_seal_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.checkmark_seal_fill},
   );
 
   static const NaIconData checkmarkShield = NaIconData(
     CupertinoIcons.checkmark_shield,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.checkmark_shield },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.checkmark_shield},
   );
 
   static const NaIconData checkmarkShieldFill = NaIconData(
     CupertinoIcons.checkmark_shield_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.checkmark_shield_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.checkmark_shield_fill},
   );
 
   static const NaIconData checkmarkSquare = NaIconData(
     CupertinoIcons.checkmark_square,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.checkmark_square },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.checkmark_square},
   );
 
   static const NaIconData checkmarkSquareFill = NaIconData(
     CupertinoIcons.checkmark_square_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.checkmark_square_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.checkmark_square_fill},
   );
 
   static const NaIconData chevronBack = NaIconData(
     CupertinoIcons.chevron_back,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.chevron_back },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.chevron_back},
   );
 
   static const NaIconData chevronCompactDown = NaIconData(
     CupertinoIcons.chevron_compact_down,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.chevron_compact_down },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.chevron_compact_down},
   );
 
   static const NaIconData chevronCompactLeft = NaIconData(
     CupertinoIcons.chevron_compact_left,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.chevron_compact_left },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.chevron_compact_left},
   );
 
   static const NaIconData chevronCompactRight = NaIconData(
     CupertinoIcons.chevron_compact_right,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.chevron_compact_right },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.chevron_compact_right},
   );
 
   static const NaIconData chevronCompactUp = NaIconData(
     CupertinoIcons.chevron_compact_up,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.chevron_compact_up },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.chevron_compact_up},
   );
 
   static const NaIconData chevronDownCircle = NaIconData(
     CupertinoIcons.chevron_down_circle,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.chevron_down_circle },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.chevron_down_circle},
   );
 
   static const NaIconData chevronDownCircleFill = NaIconData(
     CupertinoIcons.chevron_down_circle_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.chevron_down_circle_fill },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.chevron_down_circle_fill
+    },
   );
 
   static const NaIconData chevronDownSquare = NaIconData(
     CupertinoIcons.chevron_down_square,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.chevron_down_square },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.chevron_down_square},
   );
 
   static const NaIconData chevronDownSquareFill = NaIconData(
     CupertinoIcons.chevron_down_square_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.chevron_down_square_fill },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.chevron_down_square_fill
+    },
   );
 
   static const NaIconData chevronForward = NaIconData(
     CupertinoIcons.chevron_forward,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.chevron_forward },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.chevron_forward},
   );
 
   static const NaIconData chevronLeft2 = NaIconData(
     CupertinoIcons.chevron_left_2,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.chevron_left_2 },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.chevron_left_2},
   );
 
   static const NaIconData chevronLeftCircle = NaIconData(
     CupertinoIcons.chevron_left_circle,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.chevron_left_circle },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.chevron_left_circle},
   );
 
   static const NaIconData chevronLeftCircleFill = NaIconData(
     CupertinoIcons.chevron_left_circle_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.chevron_left_circle_fill },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.chevron_left_circle_fill
+    },
   );
 
   static const NaIconData chevronLeftSlashChevronRight = NaIconData(
     CupertinoIcons.chevron_left_slash_chevron_right,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.chevron_left_slash_chevron_right },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.chevron_left_slash_chevron_right
+    },
   );
 
   static const NaIconData chevronLeftSquare = NaIconData(
     CupertinoIcons.chevron_left_square,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.chevron_left_square },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.chevron_left_square},
   );
 
   static const NaIconData chevronLeftSquareFill = NaIconData(
     CupertinoIcons.chevron_left_square_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.chevron_left_square_fill },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.chevron_left_square_fill
+    },
   );
 
   static const NaIconData chevronRight2 = NaIconData(
     CupertinoIcons.chevron_right_2,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.chevron_right_2 },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.chevron_right_2},
   );
 
   static const NaIconData chevronRightCircle = NaIconData(
     CupertinoIcons.chevron_right_circle,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.chevron_right_circle },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.chevron_right_circle},
   );
 
   static const NaIconData chevronRightCircleFill = NaIconData(
     CupertinoIcons.chevron_right_circle_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.chevron_right_circle_fill },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.chevron_right_circle_fill
+    },
   );
 
   static const NaIconData chevronRightSquare = NaIconData(
     CupertinoIcons.chevron_right_square,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.chevron_right_square },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.chevron_right_square},
   );
 
   static const NaIconData chevronRightSquareFill = NaIconData(
     CupertinoIcons.chevron_right_square_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.chevron_right_square_fill },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.chevron_right_square_fill
+    },
   );
 
   static const NaIconData chevronUpChevronDown = NaIconData(
     CupertinoIcons.chevron_up_chevron_down,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.chevron_up_chevron_down },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.chevron_up_chevron_down},
   );
 
   static const NaIconData chevronUpCircle = NaIconData(
     CupertinoIcons.chevron_up_circle,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.chevron_up_circle },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.chevron_up_circle},
   );
 
   static const NaIconData chevronUpCircleFill = NaIconData(
     CupertinoIcons.chevron_up_circle_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.chevron_up_circle_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.chevron_up_circle_fill},
   );
 
   static const NaIconData chevronUpSquare = NaIconData(
     CupertinoIcons.chevron_up_square,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.chevron_up_square },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.chevron_up_square},
   );
 
   static const NaIconData chevronUpSquareFill = NaIconData(
     CupertinoIcons.chevron_up_square_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.chevron_up_square_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.chevron_up_square_fill},
   );
 
   static const NaIconData circleBottomthirdSplit = NaIconData(
     CupertinoIcons.circle_bottomthird_split,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.circle_bottomthird_split },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.circle_bottomthird_split
+    },
   );
 
   static const NaIconData circleFill = NaIconData(
     CupertinoIcons.circle_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.circle_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.circle_fill},
   );
 
   static const NaIconData circleGrid3x3 = NaIconData(
     CupertinoIcons.circle_grid_3x3,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.circle_grid_3x3 },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.circle_grid_3x3},
   );
 
   static const NaIconData circleGrid3x3Fill = NaIconData(
     CupertinoIcons.circle_grid_3x3_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.circle_grid_3x3_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.circle_grid_3x3_fill},
   );
 
   static const NaIconData circleGridHex = NaIconData(
     CupertinoIcons.circle_grid_hex,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.circle_grid_hex },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.circle_grid_hex},
   );
 
   static const NaIconData circleGridHexFill = NaIconData(
     CupertinoIcons.circle_grid_hex_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.circle_grid_hex_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.circle_grid_hex_fill},
   );
 
   static const NaIconData circleLefthalfFill = NaIconData(
     CupertinoIcons.circle_lefthalf_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.circle_lefthalf_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.circle_lefthalf_fill},
   );
 
   static const NaIconData circleRighthalfFill = NaIconData(
     CupertinoIcons.circle_righthalf_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.circle_righthalf_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.circle_righthalf_fill},
   );
 
   static const NaIconData clearFill = NaIconData(
     CupertinoIcons.clear_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.clear_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.clear_fill},
   );
 
   static const NaIconData clockFill = NaIconData(
     CupertinoIcons.clock_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.clock_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.clock_fill},
   );
 
   static const NaIconData cloudBolt = NaIconData(
     CupertinoIcons.cloud_bolt,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.cloud_bolt },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.cloud_bolt},
   );
 
   static const NaIconData cloudBoltFill = NaIconData(
     CupertinoIcons.cloud_bolt_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.cloud_bolt_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.cloud_bolt_fill},
   );
 
   static const NaIconData cloudBoltRain = NaIconData(
     CupertinoIcons.cloud_bolt_rain,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.cloud_bolt_rain },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.cloud_bolt_rain},
   );
 
   static const NaIconData cloudBoltRainFill = NaIconData(
     CupertinoIcons.cloud_bolt_rain_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.cloud_bolt_rain_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.cloud_bolt_rain_fill},
   );
 
   static const NaIconData cloudDownloadFill = NaIconData(
     CupertinoIcons.cloud_download_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.cloud_download_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.cloud_download_fill},
   );
 
   static const NaIconData cloudDrizzle = NaIconData(
     CupertinoIcons.cloud_drizzle,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.cloud_drizzle },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.cloud_drizzle},
   );
 
   static const NaIconData cloudDrizzleFill = NaIconData(
     CupertinoIcons.cloud_drizzle_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.cloud_drizzle_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.cloud_drizzle_fill},
   );
 
   static const NaIconData cloudFill = NaIconData(
     CupertinoIcons.cloud_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.cloud_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.cloud_fill},
   );
 
   static const NaIconData cloudFog = NaIconData(
     CupertinoIcons.cloud_fog,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.cloud_fog },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.cloud_fog},
   );
 
   static const NaIconData cloudFogFill = NaIconData(
     CupertinoIcons.cloud_fog_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.cloud_fog_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.cloud_fog_fill},
   );
 
   static const NaIconData cloudHail = NaIconData(
     CupertinoIcons.cloud_hail,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.cloud_hail },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.cloud_hail},
   );
 
   static const NaIconData cloudHailFill = NaIconData(
     CupertinoIcons.cloud_hail_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.cloud_hail_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.cloud_hail_fill},
   );
 
   static const NaIconData cloudHeavyrain = NaIconData(
     CupertinoIcons.cloud_heavyrain,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.cloud_heavyrain },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.cloud_heavyrain},
   );
 
   static const NaIconData cloudHeavyrainFill = NaIconData(
     CupertinoIcons.cloud_heavyrain_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.cloud_heavyrain_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.cloud_heavyrain_fill},
   );
 
   static const NaIconData cloudMoon = NaIconData(
     CupertinoIcons.cloud_moon,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.cloud_moon },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.cloud_moon},
   );
 
   static const NaIconData cloudMoonBolt = NaIconData(
     CupertinoIcons.cloud_moon_bolt,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.cloud_moon_bolt },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.cloud_moon_bolt},
   );
 
   static const NaIconData cloudMoonBoltFill = NaIconData(
     CupertinoIcons.cloud_moon_bolt_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.cloud_moon_bolt_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.cloud_moon_bolt_fill},
   );
 
   static const NaIconData cloudMoonFill = NaIconData(
     CupertinoIcons.cloud_moon_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.cloud_moon_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.cloud_moon_fill},
   );
 
   static const NaIconData cloudMoonRain = NaIconData(
     CupertinoIcons.cloud_moon_rain,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.cloud_moon_rain },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.cloud_moon_rain},
   );
 
   static const NaIconData cloudMoonRainFill = NaIconData(
     CupertinoIcons.cloud_moon_rain_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.cloud_moon_rain_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.cloud_moon_rain_fill},
   );
 
   static const NaIconData cloudRain = NaIconData(
     CupertinoIcons.cloud_rain,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.cloud_rain },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.cloud_rain},
   );
 
   static const NaIconData cloudRainFill = NaIconData(
     CupertinoIcons.cloud_rain_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.cloud_rain_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.cloud_rain_fill},
   );
 
   static const NaIconData cloudSleet = NaIconData(
     CupertinoIcons.cloud_sleet,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.cloud_sleet },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.cloud_sleet},
   );
 
   static const NaIconData cloudSleetFill = NaIconData(
     CupertinoIcons.cloud_sleet_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.cloud_sleet_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.cloud_sleet_fill},
   );
 
   static const NaIconData cloudSnow = NaIconData(
     CupertinoIcons.cloud_snow,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.cloud_snow },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.cloud_snow},
   );
 
   static const NaIconData cloudSnowFill = NaIconData(
     CupertinoIcons.cloud_snow_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.cloud_snow_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.cloud_snow_fill},
   );
 
   static const NaIconData cloudSun = NaIconData(
     CupertinoIcons.cloud_sun,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.cloud_sun },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.cloud_sun},
   );
 
   static const NaIconData cloudSunBolt = NaIconData(
     CupertinoIcons.cloud_sun_bolt,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.cloud_sun_bolt },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.cloud_sun_bolt},
   );
 
   static const NaIconData cloudSunBoltFill = NaIconData(
     CupertinoIcons.cloud_sun_bolt_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.cloud_sun_bolt_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.cloud_sun_bolt_fill},
   );
 
   static const NaIconData cloudSunFill = NaIconData(
     CupertinoIcons.cloud_sun_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.cloud_sun_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.cloud_sun_fill},
   );
 
   static const NaIconData cloudSunRain = NaIconData(
     CupertinoIcons.cloud_sun_rain,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.cloud_sun_rain },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.cloud_sun_rain},
   );
 
   static const NaIconData cloudSunRainFill = NaIconData(
     CupertinoIcons.cloud_sun_rain_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.cloud_sun_rain_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.cloud_sun_rain_fill},
   );
 
   static const NaIconData cloudUploadFill = NaIconData(
     CupertinoIcons.cloud_upload_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.cloud_upload_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.cloud_upload_fill},
   );
 
   static const NaIconData colorFilter = NaIconData(
     CupertinoIcons.color_filter,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.color_filter },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.color_filter},
   );
 
   static const NaIconData colorFilterFill = NaIconData(
     CupertinoIcons.color_filter_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.color_filter_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.color_filter_fill},
   );
 
   static const NaIconData command = NaIconData(
     CupertinoIcons.command,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.command },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.command},
   );
 
   static const NaIconData compass = NaIconData(
     CupertinoIcons.compass,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.compass },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.compass},
   );
 
   static const NaIconData compassFill = NaIconData(
     CupertinoIcons.compass_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.compass_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.compass_fill},
   );
 
   static const NaIconData control = NaIconData(
     CupertinoIcons.control,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.control },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.control},
   );
 
   static const NaIconData creditcard = NaIconData(
     CupertinoIcons.creditcard,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.creditcard },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.creditcard},
   );
 
   static const NaIconData creditcardFill = NaIconData(
     CupertinoIcons.creditcard_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.creditcard_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.creditcard_fill},
   );
 
   static const NaIconData cube = NaIconData(
     CupertinoIcons.cube,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.cube },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.cube},
   );
 
   static const NaIconData cubeBox = NaIconData(
     CupertinoIcons.cube_box,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.cube_box },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.cube_box},
   );
 
   static const NaIconData cubeBoxFill = NaIconData(
     CupertinoIcons.cube_box_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.cube_box_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.cube_box_fill},
   );
 
   static const NaIconData cubeFill = NaIconData(
     CupertinoIcons.cube_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.cube_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.cube_fill},
   );
 
   static const NaIconData cursorRays = NaIconData(
     CupertinoIcons.cursor_rays,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.cursor_rays },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.cursor_rays},
   );
 
   static const NaIconData decreaseIndent = NaIconData(
     CupertinoIcons.decrease_indent,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.decrease_indent },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.decrease_indent},
   );
 
   static const NaIconData decreaseQuotelevel = NaIconData(
     CupertinoIcons.decrease_quotelevel,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.decrease_quotelevel },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.decrease_quotelevel},
   );
 
   static const NaIconData deleteLeft = NaIconData(
     CupertinoIcons.delete_left,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.delete_left },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.delete_left},
   );
 
   static const NaIconData deleteLeftFill = NaIconData(
     CupertinoIcons.delete_left_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.delete_left_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.delete_left_fill},
   );
 
   static const NaIconData deleteRight = NaIconData(
     CupertinoIcons.delete_right,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.delete_right },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.delete_right},
   );
 
   static const NaIconData deleteRightFill = NaIconData(
     CupertinoIcons.delete_right_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.delete_right_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.delete_right_fill},
   );
 
   static const NaIconData desktopcomputer = NaIconData(
     CupertinoIcons.desktopcomputer,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.desktopcomputer },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.desktopcomputer},
   );
 
   static const NaIconData deviceDesktop = NaIconData(
     CupertinoIcons.device_desktop,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.device_desktop },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.device_desktop},
   );
 
   static const NaIconData deviceLaptop = NaIconData(
     CupertinoIcons.device_laptop,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.device_laptop },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.device_laptop},
   );
 
   static const NaIconData devicePhoneLandscape = NaIconData(
     CupertinoIcons.device_phone_landscape,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.device_phone_landscape },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.device_phone_landscape},
   );
 
   static const NaIconData devicePhonePortrait = NaIconData(
     CupertinoIcons.device_phone_portrait,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.device_phone_portrait },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.device_phone_portrait},
   );
 
   static const NaIconData dial = NaIconData(
     CupertinoIcons.dial,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.dial },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.dial},
   );
 
   static const NaIconData dialFill = NaIconData(
     CupertinoIcons.dial_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.dial_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.dial_fill},
   );
 
   static const NaIconData divide = NaIconData(
     CupertinoIcons.divide,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.divide },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.divide},
   );
 
   static const NaIconData divideCircle = NaIconData(
     CupertinoIcons.divide_circle,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.divide_circle },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.divide_circle},
   );
 
   static const NaIconData divideCircleFill = NaIconData(
     CupertinoIcons.divide_circle_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.divide_circle_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.divide_circle_fill},
   );
 
   static const NaIconData divideSquare = NaIconData(
     CupertinoIcons.divide_square,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.divide_square },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.divide_square},
   );
 
   static const NaIconData divideSquareFill = NaIconData(
     CupertinoIcons.divide_square_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.divide_square_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.divide_square_fill},
   );
 
   static const NaIconData doc = NaIconData(
     CupertinoIcons.doc,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.doc },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.doc},
   );
 
   static const NaIconData docAppend = NaIconData(
     CupertinoIcons.doc_append,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.doc_append },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.doc_append},
   );
 
   static const NaIconData docChart = NaIconData(
     CupertinoIcons.doc_chart,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.doc_chart },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.doc_chart},
   );
 
   static const NaIconData docChartFill = NaIconData(
     CupertinoIcons.doc_chart_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.doc_chart_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.doc_chart_fill},
   );
 
   static const NaIconData docCheckmark = NaIconData(
     CupertinoIcons.doc_checkmark,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.doc_checkmark },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.doc_checkmark},
   );
 
   static const NaIconData docCheckmarkFill = NaIconData(
     CupertinoIcons.doc_checkmark_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.doc_checkmark_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.doc_checkmark_fill},
   );
 
   static const NaIconData docCircle = NaIconData(
     CupertinoIcons.doc_circle,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.doc_circle },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.doc_circle},
   );
 
   static const NaIconData docCircleFill = NaIconData(
     CupertinoIcons.doc_circle_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.doc_circle_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.doc_circle_fill},
   );
 
   static const NaIconData docFill = NaIconData(
     CupertinoIcons.doc_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.doc_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.doc_fill},
   );
 
   static const NaIconData docOnClipboard = NaIconData(
     CupertinoIcons.doc_on_clipboard,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.doc_on_clipboard },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.doc_on_clipboard},
   );
 
   static const NaIconData docOnClipboardFill = NaIconData(
     CupertinoIcons.doc_on_clipboard_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.doc_on_clipboard_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.doc_on_clipboard_fill},
   );
 
   static const NaIconData docOnDoc = NaIconData(
     CupertinoIcons.doc_on_doc,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.doc_on_doc },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.doc_on_doc},
   );
 
   static const NaIconData docOnDocFill = NaIconData(
     CupertinoIcons.doc_on_doc_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.doc_on_doc_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.doc_on_doc_fill},
   );
 
   static const NaIconData docPerson = NaIconData(
     CupertinoIcons.doc_person,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.doc_person },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.doc_person},
   );
 
   static const NaIconData docPersonFill = NaIconData(
     CupertinoIcons.doc_person_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.doc_person_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.doc_person_fill},
   );
 
   static const NaIconData docPlaintext = NaIconData(
     CupertinoIcons.doc_plaintext,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.doc_plaintext },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.doc_plaintext},
   );
 
   static const NaIconData docRichtext = NaIconData(
     CupertinoIcons.doc_richtext,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.doc_richtext },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.doc_richtext},
   );
 
   static const NaIconData docText = NaIconData(
     CupertinoIcons.doc_text,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.doc_text },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.doc_text},
   );
 
   static const NaIconData docTextFill = NaIconData(
     CupertinoIcons.doc_text_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.doc_text_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.doc_text_fill},
   );
 
   static const NaIconData docTextSearch = NaIconData(
     CupertinoIcons.doc_text_search,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.doc_text_search },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.doc_text_search},
   );
 
   static const NaIconData docTextViewfinder = NaIconData(
     CupertinoIcons.doc_text_viewfinder,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.doc_text_viewfinder },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.doc_text_viewfinder},
   );
 
   static const NaIconData dotRadiowavesLeftRight = NaIconData(
     CupertinoIcons.dot_radiowaves_left_right,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.dot_radiowaves_left_right },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.dot_radiowaves_left_right
+    },
   );
 
   static const NaIconData dotRadiowavesRight = NaIconData(
     CupertinoIcons.dot_radiowaves_right,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.dot_radiowaves_right },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.dot_radiowaves_right},
   );
 
   static const NaIconData dotSquare = NaIconData(
     CupertinoIcons.dot_square,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.dot_square },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.dot_square},
   );
 
   static const NaIconData dotSquareFill = NaIconData(
     CupertinoIcons.dot_square_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.dot_square_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.dot_square_fill},
   );
 
   static const NaIconData downloadCircleFill = NaIconData(
     CupertinoIcons.download_circle_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.download_circle_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.download_circle_fill},
   );
 
   static const NaIconData dropFill = NaIconData(
     CupertinoIcons.drop_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.drop_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.drop_fill},
   );
 
   static const NaIconData dropTriangle = NaIconData(
     CupertinoIcons.drop_triangle,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.drop_triangle },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.drop_triangle},
   );
 
   static const NaIconData dropTriangleFill = NaIconData(
     CupertinoIcons.drop_triangle_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.drop_triangle_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.drop_triangle_fill},
   );
 
   static const NaIconData ear = NaIconData(
     CupertinoIcons.ear,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.ear },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.ear},
   );
 
   static const NaIconData ejectFill = NaIconData(
     CupertinoIcons.eject_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.eject_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.eject_fill},
   );
 
   static const NaIconData ellipsesBubble = NaIconData(
     CupertinoIcons.ellipses_bubble,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.ellipses_bubble },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.ellipses_bubble},
   );
 
   static const NaIconData ellipsesBubbleFill = NaIconData(
     CupertinoIcons.ellipses_bubble_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.ellipses_bubble_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.ellipses_bubble_fill},
   );
 
   static const NaIconData ellipsisCircle = NaIconData(
     CupertinoIcons.ellipsis_circle,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.ellipsis_circle },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.ellipsis_circle},
   );
 
   static const NaIconData ellipsisCircleFill = NaIconData(
     CupertinoIcons.ellipsis_circle_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.ellipsis_circle_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.ellipsis_circle_fill},
   );
 
   static const NaIconData ellipsisVertical = NaIconData(
     CupertinoIcons.ellipsis_vertical,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.ellipsis_vertical },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.ellipsis_vertical},
   );
 
   static const NaIconData ellipsisVerticalCircle = NaIconData(
     CupertinoIcons.ellipsis_vertical_circle,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.ellipsis_vertical_circle },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.ellipsis_vertical_circle
+    },
   );
 
   static const NaIconData ellipsisVerticalCircleFill = NaIconData(
     CupertinoIcons.ellipsis_vertical_circle_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.ellipsis_vertical_circle_fill },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.ellipsis_vertical_circle_fill
+    },
   );
 
   static const NaIconData envelope = NaIconData(
     CupertinoIcons.envelope,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.envelope },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.envelope},
   );
 
   static const NaIconData envelopeBadge = NaIconData(
     CupertinoIcons.envelope_badge,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.envelope_badge },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.envelope_badge},
   );
 
   static const NaIconData envelopeBadgeFill = NaIconData(
     CupertinoIcons.envelope_badge_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.envelope_badge_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.envelope_badge_fill},
   );
 
   static const NaIconData envelopeCircle = NaIconData(
     CupertinoIcons.envelope_circle,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.envelope_circle },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.envelope_circle},
   );
 
   static const NaIconData envelopeCircleFill = NaIconData(
     CupertinoIcons.envelope_circle_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.envelope_circle_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.envelope_circle_fill},
   );
 
   static const NaIconData envelopeFill = NaIconData(
     CupertinoIcons.envelope_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.envelope_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.envelope_fill},
   );
 
   static const NaIconData envelopeOpen = NaIconData(
     CupertinoIcons.envelope_open,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.envelope_open },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.envelope_open},
   );
 
   static const NaIconData envelopeOpenFill = NaIconData(
     CupertinoIcons.envelope_open_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.envelope_open_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.envelope_open_fill},
   );
 
   static const NaIconData equal = NaIconData(
     CupertinoIcons.equal,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.equal },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.equal},
   );
 
   static const NaIconData equalCircle = NaIconData(
     CupertinoIcons.equal_circle,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.equal_circle },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.equal_circle},
   );
 
   static const NaIconData equalCircleFill = NaIconData(
     CupertinoIcons.equal_circle_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.equal_circle_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.equal_circle_fill},
   );
 
   static const NaIconData equalSquare = NaIconData(
     CupertinoIcons.equal_square,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.equal_square },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.equal_square},
   );
 
   static const NaIconData equalSquareFill = NaIconData(
     CupertinoIcons.equal_square_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.equal_square_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.equal_square_fill},
   );
 
   static const NaIconData escape = NaIconData(
     CupertinoIcons.escape,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.escape },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.escape},
   );
 
   static const NaIconData exclamationmark = NaIconData(
     CupertinoIcons.exclamationmark,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.exclamationmark },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.exclamationmark},
   );
 
   static const NaIconData exclamationmarkBubble = NaIconData(
     CupertinoIcons.exclamationmark_bubble,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.exclamationmark_bubble },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.exclamationmark_bubble},
   );
 
   static const NaIconData exclamationmarkBubbleFill = NaIconData(
     CupertinoIcons.exclamationmark_bubble_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.exclamationmark_bubble_fill },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.exclamationmark_bubble_fill
+    },
   );
 
   static const NaIconData exclamationmarkCircle = NaIconData(
     CupertinoIcons.exclamationmark_circle,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.exclamationmark_circle },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.exclamationmark_circle},
   );
 
   static const NaIconData exclamationmarkCircleFill = NaIconData(
     CupertinoIcons.exclamationmark_circle_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.exclamationmark_circle_fill },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.exclamationmark_circle_fill
+    },
   );
 
   static const NaIconData exclamationmarkOctagon = NaIconData(
     CupertinoIcons.exclamationmark_octagon,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.exclamationmark_octagon },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.exclamationmark_octagon},
   );
 
   static const NaIconData exclamationmarkOctagonFill = NaIconData(
     CupertinoIcons.exclamationmark_octagon_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.exclamationmark_octagon_fill },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.exclamationmark_octagon_fill
+    },
   );
 
   static const NaIconData exclamationmarkShield = NaIconData(
     CupertinoIcons.exclamationmark_shield,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.exclamationmark_shield },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.exclamationmark_shield},
   );
 
   static const NaIconData exclamationmarkShieldFill = NaIconData(
     CupertinoIcons.exclamationmark_shield_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.exclamationmark_shield_fill },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.exclamationmark_shield_fill
+    },
   );
 
   static const NaIconData exclamationmarkSquare = NaIconData(
     CupertinoIcons.exclamationmark_square,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.exclamationmark_square },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.exclamationmark_square},
   );
 
   static const NaIconData exclamationmarkSquareFill = NaIconData(
     CupertinoIcons.exclamationmark_square_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.exclamationmark_square_fill },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.exclamationmark_square_fill
+    },
   );
 
   static const NaIconData exclamationmarkTriangle = NaIconData(
     CupertinoIcons.exclamationmark_triangle,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.exclamationmark_triangle },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.exclamationmark_triangle
+    },
   );
 
   static const NaIconData exclamationmarkTriangleFill = NaIconData(
     CupertinoIcons.exclamationmark_triangle_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.exclamationmark_triangle_fill },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.exclamationmark_triangle_fill
+    },
   );
 
   static const NaIconData eyeFill = NaIconData(
     CupertinoIcons.eye_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.eye_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.eye_fill},
   );
 
   static const NaIconData eyeSlashFill = NaIconData(
     CupertinoIcons.eye_slash_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.eye_slash_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.eye_slash_fill},
   );
 
   static const NaIconData eyedropper = NaIconData(
     CupertinoIcons.eyedropper,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.eyedropper },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.eyedropper},
   );
 
   static const NaIconData eyedropperFull = NaIconData(
     CupertinoIcons.eyedropper_full,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.eyedropper_full },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.eyedropper_full},
   );
 
   static const NaIconData eyedropperHalffull = NaIconData(
     CupertinoIcons.eyedropper_halffull,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.eyedropper_halffull },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.eyedropper_halffull},
   );
 
   static const NaIconData eyeglasses = NaIconData(
     CupertinoIcons.eyeglasses,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.eyeglasses },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.eyeglasses},
   );
 
   static const NaIconData fCursive = NaIconData(
     CupertinoIcons.f_cursive,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.f_cursive },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.f_cursive},
   );
 
   static const NaIconData fCursiveCircle = NaIconData(
     CupertinoIcons.f_cursive_circle,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.f_cursive_circle },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.f_cursive_circle},
   );
 
   static const NaIconData fCursiveCircleFill = NaIconData(
     CupertinoIcons.f_cursive_circle_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.f_cursive_circle_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.f_cursive_circle_fill},
   );
 
   static const NaIconData film = NaIconData(
     CupertinoIcons.film,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.film },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.film},
   );
 
   static const NaIconData filmFill = NaIconData(
     CupertinoIcons.film_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.film_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.film_fill},
   );
 
   static const NaIconData flagCircleFill = NaIconData(
     CupertinoIcons.flag_circle_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.flag_circle_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.flag_circle_fill},
   );
 
   static const NaIconData flagFill = NaIconData(
     CupertinoIcons.flag_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.flag_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.flag_fill},
   );
 
   static const NaIconData flagSlash = NaIconData(
     CupertinoIcons.flag_slash,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.flag_slash },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.flag_slash},
   );
 
   static const NaIconData flagSlashFill = NaIconData(
     CupertinoIcons.flag_slash_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.flag_slash_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.flag_slash_fill},
   );
 
   static const NaIconData flameFill = NaIconData(
     CupertinoIcons.flame_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.flame_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.flame_fill},
   );
 
   static const NaIconData floppyDisk = NaIconData(
     CupertinoIcons.floppy_disk,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.floppy_disk },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.floppy_disk},
   );
 
   static const NaIconData flowchart = NaIconData(
     CupertinoIcons.flowchart,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.flowchart },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.flowchart},
   );
 
   static const NaIconData flowchartFill = NaIconData(
     CupertinoIcons.flowchart_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.flowchart_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.flowchart_fill},
   );
 
   static const NaIconData folderBadgeMinus = NaIconData(
     CupertinoIcons.folder_badge_minus,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.folder_badge_minus },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.folder_badge_minus},
   );
 
   static const NaIconData folderBadgePersonCrop = NaIconData(
     CupertinoIcons.folder_badge_person_crop,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.folder_badge_person_crop },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.folder_badge_person_crop
+    },
   );
 
   static const NaIconData folderBadgePlus = NaIconData(
     CupertinoIcons.folder_badge_plus,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.folder_badge_plus },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.folder_badge_plus},
   );
 
   static const NaIconData folderCircle = NaIconData(
     CupertinoIcons.folder_circle,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.folder_circle },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.folder_circle},
   );
 
   static const NaIconData folderCircleFill = NaIconData(
     CupertinoIcons.folder_circle_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.folder_circle_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.folder_circle_fill},
   );
 
   static const NaIconData folderFill = NaIconData(
     CupertinoIcons.folder_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.folder_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.folder_fill},
   );
 
   static const NaIconData folderFillBadgeMinus = NaIconData(
     CupertinoIcons.folder_fill_badge_minus,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.folder_fill_badge_minus },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.folder_fill_badge_minus},
   );
 
   static const NaIconData folderFillBadgePersonCrop = NaIconData(
     CupertinoIcons.folder_fill_badge_person_crop,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.folder_fill_badge_person_crop },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.folder_fill_badge_person_crop
+    },
   );
 
   static const NaIconData folderFillBadgePlus = NaIconData(
     CupertinoIcons.folder_fill_badge_plus,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.folder_fill_badge_plus },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.folder_fill_badge_plus},
   );
 
   static const NaIconData forwardEnd = NaIconData(
     CupertinoIcons.forward_end,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.forward_end },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.forward_end},
   );
 
   static const NaIconData forwardEndAlt = NaIconData(
     CupertinoIcons.forward_end_alt,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.forward_end_alt },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.forward_end_alt},
   );
 
   static const NaIconData forwardEndAltFill = NaIconData(
     CupertinoIcons.forward_end_alt_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.forward_end_alt_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.forward_end_alt_fill},
   );
 
   static const NaIconData forwardEndFill = NaIconData(
     CupertinoIcons.forward_end_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.forward_end_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.forward_end_fill},
   );
 
   static const NaIconData forwardFill = NaIconData(
     CupertinoIcons.forward_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.forward_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.forward_fill},
   );
 
   static const NaIconData functionIcon = NaIconData(
     CupertinoIcons.function,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.function },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.function},
   );
 
   static const NaIconData fx = NaIconData(
     CupertinoIcons.fx,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.fx },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.fx},
   );
 
   static const NaIconData gamecontroller = NaIconData(
     CupertinoIcons.gamecontroller,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.gamecontroller },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.gamecontroller},
   );
 
   static const NaIconData gamecontrollerAltFill = NaIconData(
     CupertinoIcons.gamecontroller_alt_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.gamecontroller_alt_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.gamecontroller_alt_fill},
   );
 
   static const NaIconData gamecontrollerFill = NaIconData(
     CupertinoIcons.gamecontroller_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.gamecontroller_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.gamecontroller_fill},
   );
 
   static const NaIconData gauge = NaIconData(
     CupertinoIcons.gauge,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.gauge },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.gauge},
   );
 
   static const NaIconData gaugeBadgeMinus = NaIconData(
     CupertinoIcons.gauge_badge_minus,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.gauge_badge_minus },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.gauge_badge_minus},
   );
 
   static const NaIconData gaugeBadgePlus = NaIconData(
     CupertinoIcons.gauge_badge_plus,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.gauge_badge_plus },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.gauge_badge_plus},
   );
 
   static const NaIconData gearAltFill = NaIconData(
     CupertinoIcons.gear_alt_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.gear_alt_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.gear_alt_fill},
   );
 
   static const NaIconData gift = NaIconData(
     CupertinoIcons.gift,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.gift },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.gift},
   );
 
   static const NaIconData giftAlt = NaIconData(
     CupertinoIcons.gift_alt,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.gift_alt },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.gift_alt},
   );
 
   static const NaIconData giftAltFill = NaIconData(
     CupertinoIcons.gift_alt_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.gift_alt_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.gift_alt_fill},
   );
 
   static const NaIconData giftFill = NaIconData(
     CupertinoIcons.gift_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.gift_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.gift_fill},
   );
 
   static const NaIconData gobackward = NaIconData(
     CupertinoIcons.gobackward,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.gobackward },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.gobackward},
   );
 
   static const NaIconData gobackward10 = NaIconData(
     CupertinoIcons.gobackward_10,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.gobackward_10 },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.gobackward_10},
   );
 
   static const NaIconData gobackward15 = NaIconData(
     CupertinoIcons.gobackward_15,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.gobackward_15 },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.gobackward_15},
   );
 
   static const NaIconData gobackward30 = NaIconData(
     CupertinoIcons.gobackward_30,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.gobackward_30 },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.gobackward_30},
   );
 
   static const NaIconData gobackward45 = NaIconData(
     CupertinoIcons.gobackward_45,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.gobackward_45 },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.gobackward_45},
   );
 
   static const NaIconData gobackward60 = NaIconData(
     CupertinoIcons.gobackward_60,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.gobackward_60 },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.gobackward_60},
   );
 
   static const NaIconData gobackward75 = NaIconData(
     CupertinoIcons.gobackward_75,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.gobackward_75 },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.gobackward_75},
   );
 
   static const NaIconData gobackward90 = NaIconData(
     CupertinoIcons.gobackward_90,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.gobackward_90 },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.gobackward_90},
   );
 
   static const NaIconData gobackwardMinus = NaIconData(
     CupertinoIcons.gobackward_minus,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.gobackward_minus },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.gobackward_minus},
   );
 
   static const NaIconData goforward = NaIconData(
     CupertinoIcons.goforward,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.goforward },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.goforward},
   );
 
   static const NaIconData goforward10 = NaIconData(
     CupertinoIcons.goforward_10,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.goforward_10 },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.goforward_10},
   );
 
   static const NaIconData goforward15 = NaIconData(
     CupertinoIcons.goforward_15,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.goforward_15 },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.goforward_15},
   );
 
   static const NaIconData goforward30 = NaIconData(
     CupertinoIcons.goforward_30,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.goforward_30 },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.goforward_30},
   );
 
   static const NaIconData goforward45 = NaIconData(
     CupertinoIcons.goforward_45,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.goforward_45 },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.goforward_45},
   );
 
   static const NaIconData goforward60 = NaIconData(
     CupertinoIcons.goforward_60,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.goforward_60 },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.goforward_60},
   );
 
   static const NaIconData goforward75 = NaIconData(
     CupertinoIcons.goforward_75,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.goforward_75 },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.goforward_75},
   );
 
   static const NaIconData goforward90 = NaIconData(
     CupertinoIcons.goforward_90,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.goforward_90 },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.goforward_90},
   );
 
   static const NaIconData goforwardPlus = NaIconData(
     CupertinoIcons.goforward_plus,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.goforward_plus },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.goforward_plus},
   );
 
   static const NaIconData graphCircle = NaIconData(
     CupertinoIcons.graph_circle,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.graph_circle },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.graph_circle},
   );
 
   static const NaIconData graphCircleFill = NaIconData(
     CupertinoIcons.graph_circle_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.graph_circle_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.graph_circle_fill},
   );
 
   static const NaIconData graphSquare = NaIconData(
     CupertinoIcons.graph_square,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.graph_square },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.graph_square},
   );
 
   static const NaIconData graphSquareFill = NaIconData(
     CupertinoIcons.graph_square_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.graph_square_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.graph_square_fill},
   );
 
   static const NaIconData greaterthan = NaIconData(
     CupertinoIcons.greaterthan,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.greaterthan },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.greaterthan},
   );
 
   static const NaIconData greaterthanCircle = NaIconData(
     CupertinoIcons.greaterthan_circle,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.greaterthan_circle },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.greaterthan_circle},
   );
 
   static const NaIconData greaterthanCircleFill = NaIconData(
     CupertinoIcons.greaterthan_circle_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.greaterthan_circle_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.greaterthan_circle_fill},
   );
 
   static const NaIconData greaterthanSquare = NaIconData(
     CupertinoIcons.greaterthan_square,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.greaterthan_square },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.greaterthan_square},
   );
 
   static const NaIconData greaterthanSquareFill = NaIconData(
     CupertinoIcons.greaterthan_square_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.greaterthan_square_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.greaterthan_square_fill},
   );
 
   static const NaIconData grid = NaIconData(
     CupertinoIcons.grid,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.grid },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.grid},
   );
 
   static const NaIconData gridCircle = NaIconData(
     CupertinoIcons.grid_circle,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.grid_circle },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.grid_circle},
   );
 
   static const NaIconData gridCircleFill = NaIconData(
     CupertinoIcons.grid_circle_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.grid_circle_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.grid_circle_fill},
   );
 
   static const NaIconData guitars = NaIconData(
     CupertinoIcons.guitars,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.guitars },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.guitars},
   );
 
   static const NaIconData hammer = NaIconData(
     CupertinoIcons.hammer,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.hammer },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.hammer},
   );
 
   static const NaIconData hammerFill = NaIconData(
     CupertinoIcons.hammer_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.hammer_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.hammer_fill},
   );
 
   static const NaIconData handDraw = NaIconData(
     CupertinoIcons.hand_draw,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.hand_draw },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.hand_draw},
   );
 
   static const NaIconData handDrawFill = NaIconData(
     CupertinoIcons.hand_draw_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.hand_draw_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.hand_draw_fill},
   );
 
   static const NaIconData handPointLeft = NaIconData(
     CupertinoIcons.hand_point_left,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.hand_point_left },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.hand_point_left},
   );
 
   static const NaIconData handPointLeftFill = NaIconData(
     CupertinoIcons.hand_point_left_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.hand_point_left_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.hand_point_left_fill},
   );
 
   static const NaIconData handPointRight = NaIconData(
     CupertinoIcons.hand_point_right,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.hand_point_right },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.hand_point_right},
   );
 
   static const NaIconData handPointRightFill = NaIconData(
     CupertinoIcons.hand_point_right_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.hand_point_right_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.hand_point_right_fill},
   );
 
   static const NaIconData handRaised = NaIconData(
     CupertinoIcons.hand_raised,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.hand_raised },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.hand_raised},
   );
 
   static const NaIconData handRaisedFill = NaIconData(
     CupertinoIcons.hand_raised_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.hand_raised_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.hand_raised_fill},
   );
 
   static const NaIconData handRaisedSlash = NaIconData(
     CupertinoIcons.hand_raised_slash,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.hand_raised_slash },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.hand_raised_slash},
   );
 
   static const NaIconData handRaisedSlashFill = NaIconData(
     CupertinoIcons.hand_raised_slash_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.hand_raised_slash_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.hand_raised_slash_fill},
   );
 
   static const NaIconData handThumbsdown = NaIconData(
     CupertinoIcons.hand_thumbsdown,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.hand_thumbsdown },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.hand_thumbsdown},
   );
 
   static const NaIconData handThumbsdownFill = NaIconData(
     CupertinoIcons.hand_thumbsdown_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.hand_thumbsdown_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.hand_thumbsdown_fill},
   );
 
   static const NaIconData handThumbsup = NaIconData(
     CupertinoIcons.hand_thumbsup,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.hand_thumbsup },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.hand_thumbsup},
   );
 
   static const NaIconData handThumbsupFill = NaIconData(
     CupertinoIcons.hand_thumbsup_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.hand_thumbsup_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.hand_thumbsup_fill},
   );
 
   static const NaIconData hare = NaIconData(
     CupertinoIcons.hare,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.hare },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.hare},
   );
 
   static const NaIconData hareFill = NaIconData(
     CupertinoIcons.hare_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.hare_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.hare_fill},
   );
 
   static const NaIconData heartCircle = NaIconData(
     CupertinoIcons.heart_circle,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.heart_circle },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.heart_circle},
   );
 
   static const NaIconData heartCircleFill = NaIconData(
     CupertinoIcons.heart_circle_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.heart_circle_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.heart_circle_fill},
   );
 
   static const NaIconData heartSlash = NaIconData(
     CupertinoIcons.heart_slash,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.heart_slash },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.heart_slash},
   );
 
   static const NaIconData heartSlashCircle = NaIconData(
     CupertinoIcons.heart_slash_circle,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.heart_slash_circle },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.heart_slash_circle},
   );
 
   static const NaIconData heartSlashCircleFill = NaIconData(
     CupertinoIcons.heart_slash_circle_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.heart_slash_circle_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.heart_slash_circle_fill},
   );
 
   static const NaIconData heartSlashFill = NaIconData(
     CupertinoIcons.heart_slash_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.heart_slash_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.heart_slash_fill},
   );
 
   static const NaIconData helm = NaIconData(
     CupertinoIcons.helm,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.helm },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.helm},
   );
 
   static const NaIconData hexagonFill = NaIconData(
     CupertinoIcons.hexagon_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.hexagon_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.hexagon_fill},
   );
 
   static const NaIconData hifispeaker = NaIconData(
     CupertinoIcons.hifispeaker,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.hifispeaker },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.hifispeaker},
   );
 
   static const NaIconData hifispeakerFill = NaIconData(
     CupertinoIcons.hifispeaker_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.hifispeaker_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.hifispeaker_fill},
   );
 
   static const NaIconData hourglass = NaIconData(
     CupertinoIcons.hourglass,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.hourglass },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.hourglass},
   );
 
   static const NaIconData hourglassBottomhalfFill = NaIconData(
     CupertinoIcons.hourglass_bottomhalf_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.hourglass_bottomhalf_fill },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.hourglass_bottomhalf_fill
+    },
   );
 
   static const NaIconData hourglassTophalfFill = NaIconData(
     CupertinoIcons.hourglass_tophalf_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.hourglass_tophalf_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.hourglass_tophalf_fill},
   );
 
   static const NaIconData houseAlt = NaIconData(
     CupertinoIcons.house_alt,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.house_alt },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.house_alt},
   );
 
   static const NaIconData houseAltFill = NaIconData(
     CupertinoIcons.house_alt_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.house_alt_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.house_alt_fill},
   );
 
   static const NaIconData houseFill = NaIconData(
     CupertinoIcons.house_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.house_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.house_fill},
   );
 
   static const NaIconData hurricane = NaIconData(
     CupertinoIcons.hurricane,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.hurricane },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.hurricane},
   );
 
   static const NaIconData increaseIndent = NaIconData(
     CupertinoIcons.increase_indent,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.increase_indent },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.increase_indent},
   );
 
   static const NaIconData increaseQuotelevel = NaIconData(
     CupertinoIcons.increase_quotelevel,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.increase_quotelevel },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.increase_quotelevel},
   );
 
   static const NaIconData infinite = NaIconData(
     CupertinoIcons.infinite,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.infinite },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.infinite},
   );
 
   static const NaIconData infoCircle = NaIconData(
     CupertinoIcons.info_circle,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.info_circle },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.info_circle},
   );
 
   static const NaIconData infoCircleFill = NaIconData(
     CupertinoIcons.info_circle_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.info_circle_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.info_circle_fill},
   );
 
   static const NaIconData keyboardChevronCompactDown = NaIconData(
     CupertinoIcons.keyboard_chevron_compact_down,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.keyboard_chevron_compact_down },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.keyboard_chevron_compact_down
+    },
   );
 
   static const NaIconData largecircleFillCircle = NaIconData(
     CupertinoIcons.largecircle_fill_circle,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.largecircle_fill_circle },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.largecircle_fill_circle},
   );
 
   static const NaIconData lasso = NaIconData(
     CupertinoIcons.lasso,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.lasso },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.lasso},
   );
 
   static const NaIconData layersAlt = NaIconData(
     CupertinoIcons.layers_alt,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.layers_alt },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.layers_alt},
   );
 
   static const NaIconData layersAltFill = NaIconData(
     CupertinoIcons.layers_alt_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.layers_alt_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.layers_alt_fill},
   );
 
   static const NaIconData layersFill = NaIconData(
     CupertinoIcons.layers_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.layers_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.layers_fill},
   );
 
   static const NaIconData leafArrowCirclepath = NaIconData(
     CupertinoIcons.leaf_arrow_circlepath,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.leaf_arrow_circlepath },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.leaf_arrow_circlepath},
   );
 
   static const NaIconData lessthan = NaIconData(
     CupertinoIcons.lessthan,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.lessthan },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.lessthan},
   );
 
   static const NaIconData lessthanCircle = NaIconData(
     CupertinoIcons.lessthan_circle,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.lessthan_circle },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.lessthan_circle},
   );
 
   static const NaIconData lessthanCircleFill = NaIconData(
     CupertinoIcons.lessthan_circle_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.lessthan_circle_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.lessthan_circle_fill},
   );
 
   static const NaIconData lessthanSquare = NaIconData(
     CupertinoIcons.lessthan_square,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.lessthan_square },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.lessthan_square},
   );
 
   static const NaIconData lessthanSquareFill = NaIconData(
     CupertinoIcons.lessthan_square_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.lessthan_square_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.lessthan_square_fill},
   );
 
   static const NaIconData lightMax = NaIconData(
     CupertinoIcons.light_max,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.light_max },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.light_max},
   );
 
   static const NaIconData lightMin = NaIconData(
     CupertinoIcons.light_min,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.light_min },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.light_min},
   );
 
   static const NaIconData lightbulbFill = NaIconData(
     CupertinoIcons.lightbulb_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.lightbulb_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.lightbulb_fill},
   );
 
   static const NaIconData lightbulbSlash = NaIconData(
     CupertinoIcons.lightbulb_slash,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.lightbulb_slash },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.lightbulb_slash},
   );
 
   static const NaIconData lightbulbSlashFill = NaIconData(
     CupertinoIcons.lightbulb_slash_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.lightbulb_slash_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.lightbulb_slash_fill},
   );
 
   static const NaIconData lineHorizontal3 = NaIconData(
     CupertinoIcons.line_horizontal_3,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.line_horizontal_3 },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.line_horizontal_3},
   );
 
   static const NaIconData lineHorizontal3Decrease = NaIconData(
     CupertinoIcons.line_horizontal_3_decrease,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.line_horizontal_3_decrease },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.line_horizontal_3_decrease
+    },
   );
 
   static const NaIconData lineHorizontal3DecreaseCircle = NaIconData(
     CupertinoIcons.line_horizontal_3_decrease_circle,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.line_horizontal_3_decrease_circle },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.line_horizontal_3_decrease_circle
+    },
   );
 
   static const NaIconData lineHorizontal3DecreaseCircleFill = NaIconData(
     CupertinoIcons.line_horizontal_3_decrease_circle_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.line_horizontal_3_decrease_circle_fill },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.line_horizontal_3_decrease_circle_fill
+    },
   );
 
   static const NaIconData linkCircle = NaIconData(
     CupertinoIcons.link_circle,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.link_circle },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.link_circle},
   );
 
   static const NaIconData linkCircleFill = NaIconData(
     CupertinoIcons.link_circle_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.link_circle_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.link_circle_fill},
   );
 
   static const NaIconData listBullet = NaIconData(
     CupertinoIcons.list_bullet,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.list_bullet },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.list_bullet},
   );
 
   static const NaIconData listBulletBelowRectangle = NaIconData(
     CupertinoIcons.list_bullet_below_rectangle,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.list_bullet_below_rectangle },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.list_bullet_below_rectangle
+    },
   );
 
   static const NaIconData listBulletIndent = NaIconData(
     CupertinoIcons.list_bullet_indent,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.list_bullet_indent },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.list_bullet_indent},
   );
 
   static const NaIconData listDash = NaIconData(
     CupertinoIcons.list_dash,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.list_dash },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.list_dash},
   );
 
   static const NaIconData listNumber = NaIconData(
     CupertinoIcons.list_number,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.list_number },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.list_number},
   );
 
   static const NaIconData listNumberRtl = NaIconData(
     CupertinoIcons.list_number_rtl,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.list_number_rtl },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.list_number_rtl},
   );
 
   static const NaIconData locationCircle = NaIconData(
     CupertinoIcons.location_circle,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.location_circle },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.location_circle},
   );
 
   static const NaIconData locationCircleFill = NaIconData(
     CupertinoIcons.location_circle_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.location_circle_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.location_circle_fill},
   );
 
   static const NaIconData locationNorth = NaIconData(
     CupertinoIcons.location_north,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.location_north },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.location_north},
   );
 
   static const NaIconData locationNorthFill = NaIconData(
     CupertinoIcons.location_north_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.location_north_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.location_north_fill},
   );
 
   static const NaIconData locationNorthLine = NaIconData(
     CupertinoIcons.location_north_line,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.location_north_line },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.location_north_line},
   );
 
   static const NaIconData locationNorthLineFill = NaIconData(
     CupertinoIcons.location_north_line_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.location_north_line_fill },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.location_north_line_fill
+    },
   );
 
   static const NaIconData locationSlash = NaIconData(
     CupertinoIcons.location_slash,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.location_slash },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.location_slash},
   );
 
   static const NaIconData locationSlashFill = NaIconData(
     CupertinoIcons.location_slash_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.location_slash_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.location_slash_fill},
   );
 
   static const NaIconData lockCircle = NaIconData(
     CupertinoIcons.lock_circle,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.lock_circle },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.lock_circle},
   );
 
   static const NaIconData lockCircleFill = NaIconData(
     CupertinoIcons.lock_circle_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.lock_circle_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.lock_circle_fill},
   );
 
   static const NaIconData lockFill = NaIconData(
     CupertinoIcons.lock_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.lock_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.lock_fill},
   );
 
   static const NaIconData lockOpenFill = NaIconData(
     CupertinoIcons.lock_open_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.lock_open_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.lock_open_fill},
   );
 
   static const NaIconData lockRotation = NaIconData(
     CupertinoIcons.lock_rotation,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.lock_rotation },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.lock_rotation},
   );
 
   static const NaIconData lockRotationOpen = NaIconData(
     CupertinoIcons.lock_rotation_open,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.lock_rotation_open },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.lock_rotation_open},
   );
 
   static const NaIconData lockShield = NaIconData(
     CupertinoIcons.lock_shield,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.lock_shield },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.lock_shield},
   );
 
   static const NaIconData lockShieldFill = NaIconData(
     CupertinoIcons.lock_shield_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.lock_shield_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.lock_shield_fill},
   );
 
   static const NaIconData lockSlash = NaIconData(
     CupertinoIcons.lock_slash,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.lock_slash },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.lock_slash},
   );
 
   static const NaIconData lockSlashFill = NaIconData(
     CupertinoIcons.lock_slash_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.lock_slash_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.lock_slash_fill},
   );
 
   static const NaIconData macwindow = NaIconData(
     CupertinoIcons.macwindow,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.macwindow },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.macwindow},
   );
 
   static const NaIconData mapFill = NaIconData(
     CupertinoIcons.map_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.map_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.map_fill},
   );
 
   static const NaIconData mapPin = NaIconData(
     CupertinoIcons.map_pin,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.map_pin },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.map_pin},
   );
 
   static const NaIconData mapPinEllipse = NaIconData(
     CupertinoIcons.map_pin_ellipse,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.map_pin_ellipse },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.map_pin_ellipse},
   );
 
   static const NaIconData mapPinSlash = NaIconData(
     CupertinoIcons.map_pin_slash,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.map_pin_slash },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.map_pin_slash},
   );
 
   static const NaIconData memories = NaIconData(
     CupertinoIcons.memories,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.memories },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.memories},
   );
 
   static const NaIconData memoriesBadgeMinus = NaIconData(
     CupertinoIcons.memories_badge_minus,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.memories_badge_minus },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.memories_badge_minus},
   );
 
   static const NaIconData memoriesBadgePlus = NaIconData(
     CupertinoIcons.memories_badge_plus,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.memories_badge_plus },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.memories_badge_plus},
   );
 
   static const NaIconData metronome = NaIconData(
     CupertinoIcons.metronome,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.metronome },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.metronome},
   );
 
   static const NaIconData micCircle = NaIconData(
     CupertinoIcons.mic_circle,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.mic_circle },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.mic_circle},
   );
 
   static const NaIconData micCircleFill = NaIconData(
     CupertinoIcons.mic_circle_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.mic_circle_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.mic_circle_fill},
   );
 
   static const NaIconData micFill = NaIconData(
     CupertinoIcons.mic_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.mic_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.mic_fill},
   );
 
   static const NaIconData micSlash = NaIconData(
     CupertinoIcons.mic_slash,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.mic_slash },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.mic_slash},
   );
 
   static const NaIconData micSlashFill = NaIconData(
     CupertinoIcons.mic_slash_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.mic_slash_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.mic_slash_fill},
   );
 
   static const NaIconData minusCircle = NaIconData(
     CupertinoIcons.minus_circle,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.minus_circle },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.minus_circle},
   );
 
   static const NaIconData minusCircleFill = NaIconData(
     CupertinoIcons.minus_circle_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.minus_circle_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.minus_circle_fill},
   );
 
   static const NaIconData minusRectangle = NaIconData(
     CupertinoIcons.minus_rectangle,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.minus_rectangle },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.minus_rectangle},
   );
 
   static const NaIconData minusRectangleFill = NaIconData(
     CupertinoIcons.minus_rectangle_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.minus_rectangle_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.minus_rectangle_fill},
   );
 
   static const NaIconData minusSlashPlus = NaIconData(
     CupertinoIcons.minus_slash_plus,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.minus_slash_plus },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.minus_slash_plus},
   );
 
   static const NaIconData minusSquare = NaIconData(
     CupertinoIcons.minus_square,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.minus_square },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.minus_square},
   );
 
   static const NaIconData minusSquareFill = NaIconData(
     CupertinoIcons.minus_square_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.minus_square_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.minus_square_fill},
   );
 
   static const NaIconData moneyDollar = NaIconData(
     CupertinoIcons.money_dollar,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.money_dollar },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.money_dollar},
   );
 
   static const NaIconData moneyDollarCircle = NaIconData(
     CupertinoIcons.money_dollar_circle,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.money_dollar_circle },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.money_dollar_circle},
   );
 
   static const NaIconData moneyDollarCircleFill = NaIconData(
     CupertinoIcons.money_dollar_circle_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.money_dollar_circle_fill },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.money_dollar_circle_fill
+    },
   );
 
   static const NaIconData moneyEuro = NaIconData(
     CupertinoIcons.money_euro,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.money_euro },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.money_euro},
   );
 
   static const NaIconData moneyEuroCircle = NaIconData(
     CupertinoIcons.money_euro_circle,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.money_euro_circle },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.money_euro_circle},
   );
 
   static const NaIconData moneyEuroCircleFill = NaIconData(
     CupertinoIcons.money_euro_circle_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.money_euro_circle_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.money_euro_circle_fill},
   );
 
   static const NaIconData moneyPound = NaIconData(
     CupertinoIcons.money_pound,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.money_pound },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.money_pound},
   );
 
   static const NaIconData moneyPoundCircle = NaIconData(
     CupertinoIcons.money_pound_circle,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.money_pound_circle },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.money_pound_circle},
   );
 
   static const NaIconData moneyPoundCircleFill = NaIconData(
     CupertinoIcons.money_pound_circle_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.money_pound_circle_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.money_pound_circle_fill},
   );
 
   static const NaIconData moneyRubl = NaIconData(
     CupertinoIcons.money_rubl,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.money_rubl },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.money_rubl},
   );
 
   static const NaIconData moneyRublCircle = NaIconData(
     CupertinoIcons.money_rubl_circle,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.money_rubl_circle },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.money_rubl_circle},
   );
 
   static const NaIconData moneyRublCircleFill = NaIconData(
     CupertinoIcons.money_rubl_circle_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.money_rubl_circle_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.money_rubl_circle_fill},
   );
 
   static const NaIconData moneyYen = NaIconData(
     CupertinoIcons.money_yen,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.money_yen },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.money_yen},
   );
 
   static const NaIconData moneyYenCircle = NaIconData(
     CupertinoIcons.money_yen_circle,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.money_yen_circle },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.money_yen_circle},
   );
 
   static const NaIconData moneyYenCircleFill = NaIconData(
     CupertinoIcons.money_yen_circle_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.money_yen_circle_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.money_yen_circle_fill},
   );
 
   static const NaIconData moonCircle = NaIconData(
     CupertinoIcons.moon_circle,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.moon_circle },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.moon_circle},
   );
 
   static const NaIconData moonCircleFill = NaIconData(
     CupertinoIcons.moon_circle_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.moon_circle_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.moon_circle_fill},
   );
 
   static const NaIconData moonFill = NaIconData(
     CupertinoIcons.moon_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.moon_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.moon_fill},
   );
 
   static const NaIconData moonStars = NaIconData(
     CupertinoIcons.moon_stars,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.moon_stars },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.moon_stars},
   );
 
   static const NaIconData moonStarsFill = NaIconData(
     CupertinoIcons.moon_stars_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.moon_stars_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.moon_stars_fill},
   );
 
   static const NaIconData moonZzz = NaIconData(
     CupertinoIcons.moon_zzz,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.moon_zzz },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.moon_zzz},
   );
 
   static const NaIconData moonZzzFill = NaIconData(
     CupertinoIcons.moon_zzz_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.moon_zzz_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.moon_zzz_fill},
   );
 
   static const NaIconData move = NaIconData(
     CupertinoIcons.move,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.move },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.move},
   );
 
   static const NaIconData multiply = NaIconData(
     CupertinoIcons.multiply,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.multiply },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.multiply},
   );
 
   static const NaIconData multiplyCircle = NaIconData(
     CupertinoIcons.multiply_circle,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.multiply_circle },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.multiply_circle},
   );
 
   static const NaIconData multiplyCircleFill = NaIconData(
     CupertinoIcons.multiply_circle_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.multiply_circle_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.multiply_circle_fill},
   );
 
   static const NaIconData multiplySquare = NaIconData(
     CupertinoIcons.multiply_square,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.multiply_square },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.multiply_square},
   );
 
   static const NaIconData multiplySquareFill = NaIconData(
     CupertinoIcons.multiply_square_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.multiply_square_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.multiply_square_fill},
   );
 
   static const NaIconData musicAlbums = NaIconData(
     CupertinoIcons.music_albums,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.music_albums },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.music_albums},
   );
 
   static const NaIconData musicAlbumsFill = NaIconData(
     CupertinoIcons.music_albums_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.music_albums_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.music_albums_fill},
   );
 
   static const NaIconData musicHouse = NaIconData(
     CupertinoIcons.music_house,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.music_house },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.music_house},
   );
 
   static const NaIconData musicHouseFill = NaIconData(
     CupertinoIcons.music_house_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.music_house_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.music_house_fill},
   );
 
   static const NaIconData musicMic = NaIconData(
     CupertinoIcons.music_mic,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.music_mic },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.music_mic},
   );
 
   static const NaIconData musicNote2 = NaIconData(
     CupertinoIcons.music_note_2,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.music_note_2 },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.music_note_2},
   );
 
   static const NaIconData musicNoteList = NaIconData(
     CupertinoIcons.music_note_list,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.music_note_list },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.music_note_list},
   );
 
   static const NaIconData nosign = NaIconData(
     CupertinoIcons.nosign,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.nosign },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.nosign},
   );
 
   static const NaIconData number = NaIconData(
     CupertinoIcons.number,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.number },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.number},
   );
 
   static const NaIconData numberCircle = NaIconData(
     CupertinoIcons.number_circle,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.number_circle },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.number_circle},
   );
 
   static const NaIconData numberCircleFill = NaIconData(
     CupertinoIcons.number_circle_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.number_circle_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.number_circle_fill},
   );
 
   static const NaIconData numberSquare = NaIconData(
     CupertinoIcons.number_square,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.number_square },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.number_square},
   );
 
   static const NaIconData numberSquareFill = NaIconData(
     CupertinoIcons.number_square_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.number_square_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.number_square_fill},
   );
 
   static const NaIconData option = NaIconData(
     CupertinoIcons.option,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.option },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.option},
   );
 
   static const NaIconData paintbrush = NaIconData(
     CupertinoIcons.paintbrush,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.paintbrush },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.paintbrush},
   );
 
   static const NaIconData paintbrushFill = NaIconData(
     CupertinoIcons.paintbrush_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.paintbrush_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.paintbrush_fill},
   );
 
   static const NaIconData pano = NaIconData(
     CupertinoIcons.pano,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.pano },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.pano},
   );
 
   static const NaIconData panoFill = NaIconData(
     CupertinoIcons.pano_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.pano_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.pano_fill},
   );
 
   static const NaIconData paperclip = NaIconData(
     CupertinoIcons.paperclip,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.paperclip },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.paperclip},
   );
 
   static const NaIconData paperplaneFill = NaIconData(
     CupertinoIcons.paperplane_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.paperplane_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.paperplane_fill},
   );
 
   static const NaIconData paragraph = NaIconData(
     CupertinoIcons.paragraph,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.paragraph },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.paragraph},
   );
 
   static const NaIconData pauseCircleFill = NaIconData(
     CupertinoIcons.pause_circle_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.pause_circle_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.pause_circle_fill},
   );
 
   static const NaIconData pauseFill = NaIconData(
     CupertinoIcons.pause_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.pause_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.pause_fill},
   );
 
   static const NaIconData pauseRectangle = NaIconData(
     CupertinoIcons.pause_rectangle,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.pause_rectangle },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.pause_rectangle},
   );
 
   static const NaIconData pauseRectangleFill = NaIconData(
     CupertinoIcons.pause_rectangle_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.pause_rectangle_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.pause_rectangle_fill},
   );
 
   static const NaIconData pencilCircleFill = NaIconData(
     CupertinoIcons.pencil_circle_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.pencil_circle_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.pencil_circle_fill},
   );
 
   static const NaIconData pencilEllipsisRectangle = NaIconData(
     CupertinoIcons.pencil_ellipsis_rectangle,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.pencil_ellipsis_rectangle },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.pencil_ellipsis_rectangle
+    },
   );
 
   static const NaIconData pencilOutline = NaIconData(
     CupertinoIcons.pencil_outline,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.pencil_outline },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.pencil_outline},
   );
 
   static const NaIconData pencilSlash = NaIconData(
     CupertinoIcons.pencil_slash,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.pencil_slash },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.pencil_slash},
   );
 
   static const NaIconData person2Alt = NaIconData(
     CupertinoIcons.person_2_alt,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.person_2_alt },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.person_2_alt},
   );
 
   static const NaIconData person2Fill = NaIconData(
     CupertinoIcons.person_2_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.person_2_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.person_2_fill},
   );
 
   static const NaIconData person2SquareStack = NaIconData(
     CupertinoIcons.person_2_square_stack,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.person_2_square_stack },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.person_2_square_stack},
   );
 
   static const NaIconData person2SquareStackFill = NaIconData(
     CupertinoIcons.person_2_square_stack_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.person_2_square_stack_fill },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.person_2_square_stack_fill
+    },
   );
 
   static const NaIconData person3Fill = NaIconData(
     CupertinoIcons.person_3_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.person_3_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.person_3_fill},
   );
 
   static const NaIconData personAlt = NaIconData(
     CupertinoIcons.person_alt,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.person_alt },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.person_alt},
   );
 
   static const NaIconData personAltCircle = NaIconData(
     CupertinoIcons.person_alt_circle,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.person_alt_circle },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.person_alt_circle},
   );
 
   static const NaIconData personAltCircleFill = NaIconData(
     CupertinoIcons.person_alt_circle_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.person_alt_circle_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.person_alt_circle_fill},
   );
 
   static const NaIconData personBadgeMinus = NaIconData(
     CupertinoIcons.person_badge_minus,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.person_badge_minus },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.person_badge_minus},
   );
 
   static const NaIconData personBadgeMinusFill = NaIconData(
     CupertinoIcons.person_badge_minus_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.person_badge_minus_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.person_badge_minus_fill},
   );
 
   static const NaIconData personBadgePlus = NaIconData(
     CupertinoIcons.person_badge_plus,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.person_badge_plus },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.person_badge_plus},
   );
 
   static const NaIconData personBadgePlusFill = NaIconData(
     CupertinoIcons.person_badge_plus_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.person_badge_plus_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.person_badge_plus_fill},
   );
 
   static const NaIconData personCircle = NaIconData(
     CupertinoIcons.person_circle,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.person_circle },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.person_circle},
   );
 
   static const NaIconData personCircleFill = NaIconData(
     CupertinoIcons.person_circle_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.person_circle_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.person_circle_fill},
   );
 
   static const NaIconData personCropCircleBadgeCheckmark = NaIconData(
     CupertinoIcons.person_crop_circle_badge_checkmark,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.person_crop_circle_badge_checkmark },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.person_crop_circle_badge_checkmark
+    },
   );
 
   static const NaIconData personCropCircleBadgeExclam = NaIconData(
     CupertinoIcons.person_crop_circle_badge_exclam,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.person_crop_circle_badge_exclam },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.person_crop_circle_badge_exclam
+    },
   );
 
   static const NaIconData personCropCircleBadgeMinus = NaIconData(
     CupertinoIcons.person_crop_circle_badge_minus,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.person_crop_circle_badge_minus },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.person_crop_circle_badge_minus
+    },
   );
 
   static const NaIconData personCropCircleBadgePlus = NaIconData(
     CupertinoIcons.person_crop_circle_badge_plus,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.person_crop_circle_badge_plus },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.person_crop_circle_badge_plus
+    },
   );
 
   static const NaIconData personCropCircleBadgeXmark = NaIconData(
     CupertinoIcons.person_crop_circle_badge_xmark,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.person_crop_circle_badge_xmark },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.person_crop_circle_badge_xmark
+    },
   );
 
   static const NaIconData personCropCircleFill = NaIconData(
     CupertinoIcons.person_crop_circle_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.person_crop_circle_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.person_crop_circle_fill},
   );
 
   static const NaIconData personCropCircleFillBadgeCheckmark = NaIconData(
     CupertinoIcons.person_crop_circle_fill_badge_checkmark,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.person_crop_circle_fill_badge_checkmark },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.person_crop_circle_fill_badge_checkmark
+    },
   );
 
   static const NaIconData personCropCircleFillBadgeExclam = NaIconData(
     CupertinoIcons.person_crop_circle_fill_badge_exclam,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.person_crop_circle_fill_badge_exclam },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.person_crop_circle_fill_badge_exclam
+    },
   );
 
   static const NaIconData personCropCircleFillBadgeMinus = NaIconData(
     CupertinoIcons.person_crop_circle_fill_badge_minus,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.person_crop_circle_fill_badge_minus },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.person_crop_circle_fill_badge_minus
+    },
   );
 
   static const NaIconData personCropCircleFillBadgePlus = NaIconData(
     CupertinoIcons.person_crop_circle_fill_badge_plus,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.person_crop_circle_fill_badge_plus },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.person_crop_circle_fill_badge_plus
+    },
   );
 
   static const NaIconData personCropCircleFillBadgeXmark = NaIconData(
     CupertinoIcons.person_crop_circle_fill_badge_xmark,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.person_crop_circle_fill_badge_xmark },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.person_crop_circle_fill_badge_xmark
+    },
   );
 
   static const NaIconData personCropRectangle = NaIconData(
     CupertinoIcons.person_crop_rectangle,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.person_crop_rectangle },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.person_crop_rectangle},
   );
 
   static const NaIconData personCropRectangleFill = NaIconData(
     CupertinoIcons.person_crop_rectangle_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.person_crop_rectangle_fill },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.person_crop_rectangle_fill
+    },
   );
 
   static const NaIconData personCropSquare = NaIconData(
     CupertinoIcons.person_crop_square,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.person_crop_square },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.person_crop_square},
   );
 
   static const NaIconData personCropSquareFill = NaIconData(
     CupertinoIcons.person_crop_square_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.person_crop_square_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.person_crop_square_fill},
   );
 
   static const NaIconData personFill = NaIconData(
     CupertinoIcons.person_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.person_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.person_fill},
   );
 
   static const NaIconData personalhotspot = NaIconData(
     CupertinoIcons.personalhotspot,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.personalhotspot },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.personalhotspot},
   );
 
   static const NaIconData perspective = NaIconData(
     CupertinoIcons.perspective,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.perspective },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.perspective},
   );
 
   static const NaIconData phoneArrowDownLeft = NaIconData(
     CupertinoIcons.phone_arrow_down_left,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.phone_arrow_down_left },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.phone_arrow_down_left},
   );
 
   static const NaIconData phoneArrowRight = NaIconData(
     CupertinoIcons.phone_arrow_right,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.phone_arrow_right },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.phone_arrow_right},
   );
 
   static const NaIconData phoneArrowUpRight = NaIconData(
     CupertinoIcons.phone_arrow_up_right,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.phone_arrow_up_right },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.phone_arrow_up_right},
   );
 
   static const NaIconData phoneBadgePlus = NaIconData(
     CupertinoIcons.phone_badge_plus,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.phone_badge_plus },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.phone_badge_plus},
   );
 
   static const NaIconData phoneCircle = NaIconData(
     CupertinoIcons.phone_circle,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.phone_circle },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.phone_circle},
   );
 
   static const NaIconData phoneCircleFill = NaIconData(
     CupertinoIcons.phone_circle_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.phone_circle_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.phone_circle_fill},
   );
 
   static const NaIconData phoneDown = NaIconData(
     CupertinoIcons.phone_down,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.phone_down },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.phone_down},
   );
 
   static const NaIconData phoneDownCircle = NaIconData(
     CupertinoIcons.phone_down_circle,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.phone_down_circle },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.phone_down_circle},
   );
 
   static const NaIconData phoneDownCircleFill = NaIconData(
     CupertinoIcons.phone_down_circle_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.phone_down_circle_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.phone_down_circle_fill},
   );
 
   static const NaIconData phoneDownFill = NaIconData(
     CupertinoIcons.phone_down_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.phone_down_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.phone_down_fill},
   );
 
   static const NaIconData phoneFill = NaIconData(
     CupertinoIcons.phone_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.phone_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.phone_fill},
   );
 
   static const NaIconData phoneFillArrowDownLeft = NaIconData(
     CupertinoIcons.phone_fill_arrow_down_left,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.phone_fill_arrow_down_left },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.phone_fill_arrow_down_left
+    },
   );
 
   static const NaIconData phoneFillArrowRight = NaIconData(
     CupertinoIcons.phone_fill_arrow_right,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.phone_fill_arrow_right },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.phone_fill_arrow_right},
   );
 
   static const NaIconData phoneFillArrowUpRight = NaIconData(
     CupertinoIcons.phone_fill_arrow_up_right,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.phone_fill_arrow_up_right },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.phone_fill_arrow_up_right
+    },
   );
 
   static const NaIconData phoneFillBadgePlus = NaIconData(
     CupertinoIcons.phone_fill_badge_plus,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.phone_fill_badge_plus },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.phone_fill_badge_plus},
   );
 
   static const NaIconData photoFillOnRectangleFill = NaIconData(
     CupertinoIcons.photo_fill_on_rectangle_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.photo_fill_on_rectangle_fill },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.photo_fill_on_rectangle_fill
+    },
   );
 
   static const NaIconData photoOnRectangle = NaIconData(
     CupertinoIcons.photo_on_rectangle,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.photo_on_rectangle },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.photo_on_rectangle},
   );
 
   static const NaIconData pinSlash = NaIconData(
     CupertinoIcons.pin_slash,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.pin_slash },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.pin_slash},
   );
 
   static const NaIconData pinSlashFill = NaIconData(
     CupertinoIcons.pin_slash_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.pin_slash_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.pin_slash_fill},
   );
 
   static const NaIconData placemark = NaIconData(
     CupertinoIcons.placemark,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.placemark },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.placemark},
   );
 
   static const NaIconData placemarkFill = NaIconData(
     CupertinoIcons.placemark_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.placemark_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.placemark_fill},
   );
 
   static const NaIconData play = NaIconData(
     CupertinoIcons.play,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.play },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.play},
   );
 
   static const NaIconData playFill = NaIconData(
     CupertinoIcons.play_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.play_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.play_fill},
   );
 
   static const NaIconData playRectangle = NaIconData(
     CupertinoIcons.play_rectangle,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.play_rectangle },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.play_rectangle},
   );
 
   static const NaIconData playRectangleFill = NaIconData(
     CupertinoIcons.play_rectangle_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.play_rectangle_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.play_rectangle_fill},
   );
 
   static const NaIconData playpause = NaIconData(
     CupertinoIcons.playpause,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.playpause },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.playpause},
   );
 
   static const NaIconData playpauseFill = NaIconData(
     CupertinoIcons.playpause_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.playpause_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.playpause_fill},
   );
 
   static const NaIconData plus = NaIconData(
     CupertinoIcons.plus,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.plus },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.plus},
   );
 
   static const NaIconData plusApp = NaIconData(
     CupertinoIcons.plus_app,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.plus_app },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.plus_app},
   );
 
   static const NaIconData plusAppFill = NaIconData(
     CupertinoIcons.plus_app_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.plus_app_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.plus_app_fill},
   );
 
   static const NaIconData plusBubble = NaIconData(
     CupertinoIcons.plus_bubble,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.plus_bubble },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.plus_bubble},
   );
 
   static const NaIconData plusBubbleFill = NaIconData(
     CupertinoIcons.plus_bubble_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.plus_bubble_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.plus_bubble_fill},
   );
 
   static const NaIconData plusCircle = NaIconData(
     CupertinoIcons.plus_circle,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.plus_circle },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.plus_circle},
   );
 
   static const NaIconData plusCircleFill = NaIconData(
     CupertinoIcons.plus_circle_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.plus_circle_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.plus_circle_fill},
   );
 
   static const NaIconData plusRectangle = NaIconData(
     CupertinoIcons.plus_rectangle,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.plus_rectangle },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.plus_rectangle},
   );
 
   static const NaIconData plusRectangleFill = NaIconData(
     CupertinoIcons.plus_rectangle_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.plus_rectangle_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.plus_rectangle_fill},
   );
 
   static const NaIconData plusRectangleFillOnRectangleFill = NaIconData(
     CupertinoIcons.plus_rectangle_fill_on_rectangle_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.plus_rectangle_fill_on_rectangle_fill },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.plus_rectangle_fill_on_rectangle_fill
+    },
   );
 
   static const NaIconData plusRectangleOnRectangle = NaIconData(
     CupertinoIcons.plus_rectangle_on_rectangle,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.plus_rectangle_on_rectangle },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.plus_rectangle_on_rectangle
+    },
   );
 
   static const NaIconData plusSlashMinus = NaIconData(
     CupertinoIcons.plus_slash_minus,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.plus_slash_minus },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.plus_slash_minus},
   );
 
   static const NaIconData plusSquare = NaIconData(
     CupertinoIcons.plus_square,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.plus_square },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.plus_square},
   );
 
   static const NaIconData plusSquareFill = NaIconData(
     CupertinoIcons.plus_square_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.plus_square_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.plus_square_fill},
   );
 
   static const NaIconData plusSquareFillOnSquareFill = NaIconData(
     CupertinoIcons.plus_square_fill_on_square_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.plus_square_fill_on_square_fill },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.plus_square_fill_on_square_fill
+    },
   );
 
   static const NaIconData plusSquareOnSquare = NaIconData(
     CupertinoIcons.plus_square_on_square,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.plus_square_on_square },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.plus_square_on_square},
   );
 
   static const NaIconData plusminus = NaIconData(
     CupertinoIcons.plusminus,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.plusminus },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.plusminus},
   );
 
   static const NaIconData plusminusCircle = NaIconData(
     CupertinoIcons.plusminus_circle,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.plusminus_circle },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.plusminus_circle},
   );
 
   static const NaIconData plusminusCircleFill = NaIconData(
     CupertinoIcons.plusminus_circle_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.plusminus_circle_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.plusminus_circle_fill},
   );
 
   static const NaIconData printer = NaIconData(
     CupertinoIcons.printer,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.printer },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.printer},
   );
 
   static const NaIconData printerFill = NaIconData(
     CupertinoIcons.printer_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.printer_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.printer_fill},
   );
 
   static const NaIconData projective = NaIconData(
     CupertinoIcons.projective,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.projective },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.projective},
   );
 
   static const NaIconData purchased = NaIconData(
     CupertinoIcons.purchased,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.purchased },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.purchased},
   );
 
   static const NaIconData purchasedCircle = NaIconData(
     CupertinoIcons.purchased_circle,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.purchased_circle },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.purchased_circle},
   );
 
   static const NaIconData purchasedCircleFill = NaIconData(
     CupertinoIcons.purchased_circle_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.purchased_circle_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.purchased_circle_fill},
   );
 
   static const NaIconData qrcode = NaIconData(
     CupertinoIcons.qrcode,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.qrcode },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.qrcode},
   );
 
   static const NaIconData qrcodeViewfinder = NaIconData(
     CupertinoIcons.qrcode_viewfinder,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.qrcode_viewfinder },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.qrcode_viewfinder},
   );
 
   static const NaIconData question = NaIconData(
     CupertinoIcons.question,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.question },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.question},
   );
 
   static const NaIconData questionCircle = NaIconData(
     CupertinoIcons.question_circle,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.question_circle },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.question_circle},
   );
 
   static const NaIconData questionCircleFill = NaIconData(
     CupertinoIcons.question_circle_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.question_circle_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.question_circle_fill},
   );
 
   static const NaIconData questionDiamond = NaIconData(
     CupertinoIcons.question_diamond,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.question_diamond },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.question_diamond},
   );
 
   static const NaIconData questionDiamondFill = NaIconData(
     CupertinoIcons.question_diamond_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.question_diamond_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.question_diamond_fill},
   );
 
   static const NaIconData questionSquare = NaIconData(
     CupertinoIcons.question_square,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.question_square },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.question_square},
   );
 
   static const NaIconData questionSquareFill = NaIconData(
     CupertinoIcons.question_square_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.question_square_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.question_square_fill},
   );
 
   static const NaIconData quoteBubble = NaIconData(
     CupertinoIcons.quote_bubble,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.quote_bubble },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.quote_bubble},
   );
 
   static const NaIconData quoteBubbleFill = NaIconData(
     CupertinoIcons.quote_bubble_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.quote_bubble_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.quote_bubble_fill},
   );
 
   static const NaIconData radiowavesLeft = NaIconData(
     CupertinoIcons.radiowaves_left,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.radiowaves_left },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.radiowaves_left},
   );
 
   static const NaIconData radiowavesRight = NaIconData(
     CupertinoIcons.radiowaves_right,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.radiowaves_right },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.radiowaves_right},
   );
 
   static const NaIconData rays = NaIconData(
     CupertinoIcons.rays,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.rays },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.rays},
   );
 
   static const NaIconData recordingtape = NaIconData(
     CupertinoIcons.recordingtape,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.recordingtape },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.recordingtape},
   );
 
   static const NaIconData rectangle3Offgrid = NaIconData(
     CupertinoIcons.rectangle_3_offgrid,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.rectangle_3_offgrid },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.rectangle_3_offgrid},
   );
 
   static const NaIconData rectangle3OffgridFill = NaIconData(
     CupertinoIcons.rectangle_3_offgrid_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.rectangle_3_offgrid_fill },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.rectangle_3_offgrid_fill
+    },
   );
 
   static const NaIconData rectangleArrowUpRightArrowDownLeft = NaIconData(
     CupertinoIcons.rectangle_arrow_up_right_arrow_down_left,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.rectangle_arrow_up_right_arrow_down_left },
+    platformIcons: {
+      NaUiType.cupertino:
+          CupertinoIcons.rectangle_arrow_up_right_arrow_down_left
+    },
   );
 
   static const NaIconData rectangleArrowUpRightArrowDownLeftSlash = NaIconData(
     CupertinoIcons.rectangle_arrow_up_right_arrow_down_left_slash,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.rectangle_arrow_up_right_arrow_down_left_slash },
+    platformIcons: {
+      NaUiType.cupertino:
+          CupertinoIcons.rectangle_arrow_up_right_arrow_down_left_slash
+    },
   );
 
   static const NaIconData rectangleBadgeCheckmark = NaIconData(
     CupertinoIcons.rectangle_badge_checkmark,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.rectangle_badge_checkmark },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.rectangle_badge_checkmark
+    },
   );
 
   static const NaIconData rectangleBadgeXmark = NaIconData(
     CupertinoIcons.rectangle_badge_xmark,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.rectangle_badge_xmark },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.rectangle_badge_xmark},
   );
 
   static const NaIconData rectangleCompressVertical = NaIconData(
     CupertinoIcons.rectangle_compress_vertical,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.rectangle_compress_vertical },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.rectangle_compress_vertical
+    },
   );
 
   static const NaIconData rectangleDock = NaIconData(
     CupertinoIcons.rectangle_dock,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.rectangle_dock },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.rectangle_dock},
   );
 
   static const NaIconData rectangleExpandVertical = NaIconData(
     CupertinoIcons.rectangle_expand_vertical,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.rectangle_expand_vertical },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.rectangle_expand_vertical
+    },
   );
 
   static const NaIconData rectangleFill = NaIconData(
     CupertinoIcons.rectangle_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.rectangle_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.rectangle_fill},
   );
 
   static const NaIconData rectangleFillBadgeCheckmark = NaIconData(
     CupertinoIcons.rectangle_fill_badge_checkmark,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.rectangle_fill_badge_checkmark },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.rectangle_fill_badge_checkmark
+    },
   );
 
   static const NaIconData rectangleFillBadgeXmark = NaIconData(
     CupertinoIcons.rectangle_fill_badge_xmark,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.rectangle_fill_badge_xmark },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.rectangle_fill_badge_xmark
+    },
   );
 
   static const NaIconData rectangleFillOnRectangleAngledFill = NaIconData(
     CupertinoIcons.rectangle_fill_on_rectangle_angled_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.rectangle_fill_on_rectangle_angled_fill },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.rectangle_fill_on_rectangle_angled_fill
+    },
   );
 
   static const NaIconData rectangleFillOnRectangleFill = NaIconData(
     CupertinoIcons.rectangle_fill_on_rectangle_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.rectangle_fill_on_rectangle_fill },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.rectangle_fill_on_rectangle_fill
+    },
   );
 
   static const NaIconData rectangleGrid1x2 = NaIconData(
     CupertinoIcons.rectangle_grid_1x2,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.rectangle_grid_1x2 },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.rectangle_grid_1x2},
   );
 
   static const NaIconData rectangleGrid1x2Fill = NaIconData(
     CupertinoIcons.rectangle_grid_1x2_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.rectangle_grid_1x2_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.rectangle_grid_1x2_fill},
   );
 
   static const NaIconData rectangleGrid2x2 = NaIconData(
     CupertinoIcons.rectangle_grid_2x2,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.rectangle_grid_2x2 },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.rectangle_grid_2x2},
   );
 
   static const NaIconData rectangleGrid2x2Fill = NaIconData(
     CupertinoIcons.rectangle_grid_2x2_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.rectangle_grid_2x2_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.rectangle_grid_2x2_fill},
   );
 
   static const NaIconData rectangleGrid3x2 = NaIconData(
     CupertinoIcons.rectangle_grid_3x2,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.rectangle_grid_3x2 },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.rectangle_grid_3x2},
   );
 
   static const NaIconData rectangleGrid3x2Fill = NaIconData(
     CupertinoIcons.rectangle_grid_3x2_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.rectangle_grid_3x2_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.rectangle_grid_3x2_fill},
   );
 
   static const NaIconData rectangleOnRectangle = NaIconData(
     CupertinoIcons.rectangle_on_rectangle,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.rectangle_on_rectangle },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.rectangle_on_rectangle},
   );
 
   static const NaIconData rectangleOnRectangleAngled = NaIconData(
     CupertinoIcons.rectangle_on_rectangle_angled,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.rectangle_on_rectangle_angled },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.rectangle_on_rectangle_angled
+    },
   );
 
   static const NaIconData rectanglePaperclip = NaIconData(
     CupertinoIcons.rectangle_paperclip,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.rectangle_paperclip },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.rectangle_paperclip},
   );
 
   static const NaIconData rectangleSplit3x1 = NaIconData(
     CupertinoIcons.rectangle_split_3x1,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.rectangle_split_3x1 },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.rectangle_split_3x1},
   );
 
   static const NaIconData rectangleSplit3x1Fill = NaIconData(
     CupertinoIcons.rectangle_split_3x1_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.rectangle_split_3x1_fill },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.rectangle_split_3x1_fill
+    },
   );
 
   static const NaIconData rectangleSplit3x3 = NaIconData(
     CupertinoIcons.rectangle_split_3x3,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.rectangle_split_3x3 },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.rectangle_split_3x3},
   );
 
   static const NaIconData rectangleSplit3x3Fill = NaIconData(
     CupertinoIcons.rectangle_split_3x3_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.rectangle_split_3x3_fill },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.rectangle_split_3x3_fill
+    },
   );
 
   static const NaIconData rectangleStack = NaIconData(
     CupertinoIcons.rectangle_stack,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.rectangle_stack },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.rectangle_stack},
   );
 
   static const NaIconData rectangleStackBadgeMinus = NaIconData(
     CupertinoIcons.rectangle_stack_badge_minus,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.rectangle_stack_badge_minus },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.rectangle_stack_badge_minus
+    },
   );
 
   static const NaIconData rectangleStackBadgePersonCrop = NaIconData(
     CupertinoIcons.rectangle_stack_badge_person_crop,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.rectangle_stack_badge_person_crop },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.rectangle_stack_badge_person_crop
+    },
   );
 
   static const NaIconData rectangleStackBadgePlus = NaIconData(
     CupertinoIcons.rectangle_stack_badge_plus,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.rectangle_stack_badge_plus },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.rectangle_stack_badge_plus
+    },
   );
 
   static const NaIconData rectangleStackFill = NaIconData(
     CupertinoIcons.rectangle_stack_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.rectangle_stack_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.rectangle_stack_fill},
   );
 
   static const NaIconData rectangleStackFillBadgeMinus = NaIconData(
     CupertinoIcons.rectangle_stack_fill_badge_minus,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.rectangle_stack_fill_badge_minus },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.rectangle_stack_fill_badge_minus
+    },
   );
 
   static const NaIconData rectangleStackFillBadgePersonCrop = NaIconData(
     CupertinoIcons.rectangle_stack_fill_badge_person_crop,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.rectangle_stack_fill_badge_person_crop },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.rectangle_stack_fill_badge_person_crop
+    },
   );
 
   static const NaIconData rectangleStackFillBadgePlus = NaIconData(
     CupertinoIcons.rectangle_stack_fill_badge_plus,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.rectangle_stack_fill_badge_plus },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.rectangle_stack_fill_badge_plus
+    },
   );
 
   static const NaIconData rectangleStackPersonCrop = NaIconData(
     CupertinoIcons.rectangle_stack_person_crop,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.rectangle_stack_person_crop },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.rectangle_stack_person_crop
+    },
   );
 
   static const NaIconData rectangleStackPersonCropFill = NaIconData(
     CupertinoIcons.rectangle_stack_person_crop_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.rectangle_stack_person_crop_fill },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.rectangle_stack_person_crop_fill
+    },
   );
 
   static const NaIconData repeat1 = NaIconData(
     CupertinoIcons.repeat_1,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.repeat_1 },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.repeat_1},
   );
 
   static const NaIconData resize = NaIconData(
     CupertinoIcons.resize,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.resize },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.resize},
   );
 
   static const NaIconData resizeH = NaIconData(
     CupertinoIcons.resize_h,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.resize_h },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.resize_h},
   );
 
   static const NaIconData resizeV = NaIconData(
     CupertinoIcons.resize_v,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.resize_v },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.resize_v},
   );
 
   static const NaIconData returnIcon = NaIconData(
     CupertinoIcons.return_icon,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.return_icon },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.return_icon},
   );
 
   static const NaIconData rhombus = NaIconData(
     CupertinoIcons.rhombus,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.rhombus },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.rhombus},
   );
 
   static const NaIconData rhombusFill = NaIconData(
     CupertinoIcons.rhombus_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.rhombus_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.rhombus_fill},
   );
 
   static const NaIconData rocketFill = NaIconData(
     CupertinoIcons.rocket_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.rocket_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.rocket_fill},
   );
 
   static const NaIconData rosette = NaIconData(
     CupertinoIcons.rosette,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.rosette },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.rosette},
   );
 
   static const NaIconData rotateLeftFill = NaIconData(
     CupertinoIcons.rotate_left_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.rotate_left_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.rotate_left_fill},
   );
 
   static const NaIconData rotateRightFill = NaIconData(
     CupertinoIcons.rotate_right_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.rotate_right_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.rotate_right_fill},
   );
 
   static const NaIconData scissors = NaIconData(
     CupertinoIcons.scissors,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.scissors },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.scissors},
   );
 
   static const NaIconData scissorsAlt = NaIconData(
     CupertinoIcons.scissors_alt,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.scissors_alt },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.scissors_alt},
   );
 
   static const NaIconData scope = NaIconData(
     CupertinoIcons.scope,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.scope },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.scope},
   );
 
   static const NaIconData scribble = NaIconData(
     CupertinoIcons.scribble,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.scribble },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.scribble},
   );
 
   static const NaIconData searchCircle = NaIconData(
     CupertinoIcons.search_circle,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.search_circle },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.search_circle},
   );
 
   static const NaIconData searchCircleFill = NaIconData(
     CupertinoIcons.search_circle_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.search_circle_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.search_circle_fill},
   );
 
   static const NaIconData selectionPinInOut = NaIconData(
     CupertinoIcons.selection_pin_in_out,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.selection_pin_in_out },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.selection_pin_in_out},
   );
 
   static const NaIconData shieldFill = NaIconData(
     CupertinoIcons.shield_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.shield_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.shield_fill},
   );
 
   static const NaIconData shieldLefthalfFill = NaIconData(
     CupertinoIcons.shield_lefthalf_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.shield_lefthalf_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.shield_lefthalf_fill},
   );
 
   static const NaIconData shieldSlash = NaIconData(
     CupertinoIcons.shield_slash,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.shield_slash },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.shield_slash},
   );
 
   static const NaIconData shieldSlashFill = NaIconData(
     CupertinoIcons.shield_slash_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.shield_slash_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.shield_slash_fill},
   );
 
   static const NaIconData shift = NaIconData(
     CupertinoIcons.shift,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.shift },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.shift},
   );
 
   static const NaIconData shiftFill = NaIconData(
     CupertinoIcons.shift_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.shift_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.shift_fill},
   );
 
   static const NaIconData sidebarLeft = NaIconData(
     CupertinoIcons.sidebar_left,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.sidebar_left },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.sidebar_left},
   );
 
   static const NaIconData sidebarRight = NaIconData(
     CupertinoIcons.sidebar_right,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.sidebar_right },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.sidebar_right},
   );
 
   static const NaIconData signature = NaIconData(
     CupertinoIcons.signature,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.signature },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.signature},
   );
 
   static const NaIconData skew = NaIconData(
     CupertinoIcons.skew,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.skew },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.skew},
   );
 
   static const NaIconData slashCircle = NaIconData(
     CupertinoIcons.slash_circle,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.slash_circle },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.slash_circle},
   );
 
   static const NaIconData slashCircleFill = NaIconData(
     CupertinoIcons.slash_circle_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.slash_circle_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.slash_circle_fill},
   );
 
   static const NaIconData sliderHorizontal3 = NaIconData(
     CupertinoIcons.slider_horizontal_3,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.slider_horizontal_3 },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.slider_horizontal_3},
   );
 
   static const NaIconData sliderHorizontalBelowRectangle = NaIconData(
     CupertinoIcons.slider_horizontal_below_rectangle,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.slider_horizontal_below_rectangle },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.slider_horizontal_below_rectangle
+    },
   );
 
   static const NaIconData slowmo = NaIconData(
     CupertinoIcons.slowmo,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.slowmo },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.slowmo},
   );
 
   static const NaIconData smallcircleCircle = NaIconData(
     CupertinoIcons.smallcircle_circle,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.smallcircle_circle },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.smallcircle_circle},
   );
 
   static const NaIconData smallcircleCircleFill = NaIconData(
     CupertinoIcons.smallcircle_circle_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.smallcircle_circle_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.smallcircle_circle_fill},
   );
 
   static const NaIconData smallcircleFillCircle = NaIconData(
     CupertinoIcons.smallcircle_fill_circle,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.smallcircle_fill_circle },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.smallcircle_fill_circle},
   );
 
   static const NaIconData smallcircleFillCircleFill = NaIconData(
     CupertinoIcons.smallcircle_fill_circle_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.smallcircle_fill_circle_fill },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.smallcircle_fill_circle_fill
+    },
   );
 
   static const NaIconData smiley = NaIconData(
     CupertinoIcons.smiley,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.smiley },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.smiley},
   );
 
   static const NaIconData smileyFill = NaIconData(
     CupertinoIcons.smiley_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.smiley_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.smiley_fill},
   );
 
   static const NaIconData smoke = NaIconData(
     CupertinoIcons.smoke,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.smoke },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.smoke},
   );
 
   static const NaIconData smokeFill = NaIconData(
     CupertinoIcons.smoke_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.smoke_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.smoke_fill},
   );
 
   static const NaIconData snow = NaIconData(
     CupertinoIcons.snow,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.snow },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.snow},
   );
 
   static const NaIconData sortDown = NaIconData(
     CupertinoIcons.sort_down,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.sort_down },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.sort_down},
   );
 
   static const NaIconData sortDownCircle = NaIconData(
     CupertinoIcons.sort_down_circle,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.sort_down_circle },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.sort_down_circle},
   );
 
   static const NaIconData sortDownCircleFill = NaIconData(
     CupertinoIcons.sort_down_circle_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.sort_down_circle_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.sort_down_circle_fill},
   );
 
   static const NaIconData sortUp = NaIconData(
     CupertinoIcons.sort_up,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.sort_up },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.sort_up},
   );
 
   static const NaIconData sortUpCircle = NaIconData(
     CupertinoIcons.sort_up_circle,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.sort_up_circle },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.sort_up_circle},
   );
 
   static const NaIconData sortUpCircleFill = NaIconData(
     CupertinoIcons.sort_up_circle_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.sort_up_circle_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.sort_up_circle_fill},
   );
 
   static const NaIconData sparkles = NaIconData(
     CupertinoIcons.sparkles,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.sparkles },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.sparkles},
   );
 
   static const NaIconData speaker1 = NaIconData(
     CupertinoIcons.speaker_1,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.speaker_1 },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.speaker_1},
   );
 
   static const NaIconData speaker1Fill = NaIconData(
     CupertinoIcons.speaker_1_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.speaker_1_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.speaker_1_fill},
   );
 
   static const NaIconData speaker2 = NaIconData(
     CupertinoIcons.speaker_2,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.speaker_2 },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.speaker_2},
   );
 
   static const NaIconData speaker2Fill = NaIconData(
     CupertinoIcons.speaker_2_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.speaker_2_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.speaker_2_fill},
   );
 
   static const NaIconData speaker3 = NaIconData(
     CupertinoIcons.speaker_3,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.speaker_3 },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.speaker_3},
   );
 
   static const NaIconData speaker3Fill = NaIconData(
     CupertinoIcons.speaker_3_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.speaker_3_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.speaker_3_fill},
   );
 
   static const NaIconData speakerFill = NaIconData(
     CupertinoIcons.speaker_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.speaker_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.speaker_fill},
   );
 
   static const NaIconData speakerSlash = NaIconData(
     CupertinoIcons.speaker_slash,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.speaker_slash },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.speaker_slash},
   );
 
   static const NaIconData speakerSlashFill = NaIconData(
     CupertinoIcons.speaker_slash_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.speaker_slash_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.speaker_slash_fill},
   );
 
   static const NaIconData speakerSlashFillRtl = NaIconData(
     CupertinoIcons.speaker_slash_fill_rtl,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.speaker_slash_fill_rtl },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.speaker_slash_fill_rtl},
   );
 
   static const NaIconData speakerSlashRtl = NaIconData(
     CupertinoIcons.speaker_slash_rtl,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.speaker_slash_rtl },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.speaker_slash_rtl},
   );
 
   static const NaIconData speakerZzz = NaIconData(
     CupertinoIcons.speaker_zzz,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.speaker_zzz },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.speaker_zzz},
   );
 
   static const NaIconData speakerZzzFill = NaIconData(
     CupertinoIcons.speaker_zzz_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.speaker_zzz_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.speaker_zzz_fill},
   );
 
   static const NaIconData speakerZzzFillRtl = NaIconData(
     CupertinoIcons.speaker_zzz_fill_rtl,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.speaker_zzz_fill_rtl },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.speaker_zzz_fill_rtl},
   );
 
   static const NaIconData speakerZzzRtl = NaIconData(
     CupertinoIcons.speaker_zzz_rtl,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.speaker_zzz_rtl },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.speaker_zzz_rtl},
   );
 
   static const NaIconData speedometer = NaIconData(
     CupertinoIcons.speedometer,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.speedometer },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.speedometer},
   );
 
   static const NaIconData sportscourt = NaIconData(
     CupertinoIcons.sportscourt,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.sportscourt },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.sportscourt},
   );
 
   static const NaIconData sportscourtFill = NaIconData(
     CupertinoIcons.sportscourt_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.sportscourt_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.sportscourt_fill},
   );
 
   static const NaIconData squareArrowDown = NaIconData(
     CupertinoIcons.square_arrow_down,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.square_arrow_down },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.square_arrow_down},
   );
 
   static const NaIconData squareArrowDownFill = NaIconData(
     CupertinoIcons.square_arrow_down_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.square_arrow_down_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.square_arrow_down_fill},
   );
 
   static const NaIconData squareArrowDownOnSquare = NaIconData(
     CupertinoIcons.square_arrow_down_on_square,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.square_arrow_down_on_square },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.square_arrow_down_on_square
+    },
   );
 
   static const NaIconData squareArrowDownOnSquareFill = NaIconData(
     CupertinoIcons.square_arrow_down_on_square_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.square_arrow_down_on_square_fill },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.square_arrow_down_on_square_fill
+    },
   );
 
   static const NaIconData squareArrowLeft = NaIconData(
     CupertinoIcons.square_arrow_left,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.square_arrow_left },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.square_arrow_left},
   );
 
   static const NaIconData squareArrowLeftFill = NaIconData(
     CupertinoIcons.square_arrow_left_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.square_arrow_left_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.square_arrow_left_fill},
   );
 
   static const NaIconData squareArrowRight = NaIconData(
     CupertinoIcons.square_arrow_right,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.square_arrow_right },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.square_arrow_right},
   );
 
   static const NaIconData squareArrowRightFill = NaIconData(
     CupertinoIcons.square_arrow_right_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.square_arrow_right_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.square_arrow_right_fill},
   );
 
   static const NaIconData squareArrowUp = NaIconData(
     CupertinoIcons.square_arrow_up,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.square_arrow_up },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.square_arrow_up},
   );
 
   static const NaIconData squareArrowUpFill = NaIconData(
     CupertinoIcons.square_arrow_up_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.square_arrow_up_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.square_arrow_up_fill},
   );
 
   static const NaIconData squareArrowUpOnSquare = NaIconData(
     CupertinoIcons.square_arrow_up_on_square,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.square_arrow_up_on_square },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.square_arrow_up_on_square
+    },
   );
 
   static const NaIconData squareArrowUpOnSquareFill = NaIconData(
     CupertinoIcons.square_arrow_up_on_square_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.square_arrow_up_on_square_fill },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.square_arrow_up_on_square_fill
+    },
   );
 
   static const NaIconData squareFavorites = NaIconData(
     CupertinoIcons.square_favorites,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.square_favorites },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.square_favorites},
   );
 
   static const NaIconData squareFavoritesAlt = NaIconData(
     CupertinoIcons.square_favorites_alt,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.square_favorites_alt },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.square_favorites_alt},
   );
 
   static const NaIconData squareFavoritesAltFill = NaIconData(
     CupertinoIcons.square_favorites_alt_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.square_favorites_alt_fill },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.square_favorites_alt_fill
+    },
   );
 
   static const NaIconData squareFavoritesFill = NaIconData(
     CupertinoIcons.square_favorites_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.square_favorites_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.square_favorites_fill},
   );
 
   static const NaIconData squareFill = NaIconData(
     CupertinoIcons.square_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.square_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.square_fill},
   );
 
   static const NaIconData squareFillLineVerticalSquare = NaIconData(
     CupertinoIcons.square_fill_line_vertical_square,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.square_fill_line_vertical_square },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.square_fill_line_vertical_square
+    },
   );
 
   static const NaIconData squareFillLineVerticalSquareFill = NaIconData(
     CupertinoIcons.square_fill_line_vertical_square_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.square_fill_line_vertical_square_fill },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.square_fill_line_vertical_square_fill
+    },
   );
 
   static const NaIconData squareFillOnCircleFill = NaIconData(
     CupertinoIcons.square_fill_on_circle_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.square_fill_on_circle_fill },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.square_fill_on_circle_fill
+    },
   );
 
   static const NaIconData squareFillOnSquareFill = NaIconData(
     CupertinoIcons.square_fill_on_square_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.square_fill_on_square_fill },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.square_fill_on_square_fill
+    },
   );
 
   static const NaIconData squareGrid2x2 = NaIconData(
     CupertinoIcons.square_grid_2x2,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.square_grid_2x2 },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.square_grid_2x2},
   );
 
   static const NaIconData squareGrid2x2Fill = NaIconData(
     CupertinoIcons.square_grid_2x2_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.square_grid_2x2_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.square_grid_2x2_fill},
   );
 
   static const NaIconData squareGrid3x2 = NaIconData(
     CupertinoIcons.square_grid_3x2,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.square_grid_3x2 },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.square_grid_3x2},
   );
 
   static const NaIconData squareGrid3x2Fill = NaIconData(
     CupertinoIcons.square_grid_3x2_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.square_grid_3x2_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.square_grid_3x2_fill},
   );
 
   static const NaIconData squareGrid4x3Fill = NaIconData(
     CupertinoIcons.square_grid_4x3_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.square_grid_4x3_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.square_grid_4x3_fill},
   );
 
   static const NaIconData squareLefthalfFill = NaIconData(
     CupertinoIcons.square_lefthalf_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.square_lefthalf_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.square_lefthalf_fill},
   );
 
   static const NaIconData squareLineVerticalSquare = NaIconData(
     CupertinoIcons.square_line_vertical_square,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.square_line_vertical_square },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.square_line_vertical_square
+    },
   );
 
   static const NaIconData squareLineVerticalSquareFill = NaIconData(
     CupertinoIcons.square_line_vertical_square_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.square_line_vertical_square_fill },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.square_line_vertical_square_fill
+    },
   );
 
   static const NaIconData squareList = NaIconData(
     CupertinoIcons.square_list,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.square_list },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.square_list},
   );
 
   static const NaIconData squareListFill = NaIconData(
     CupertinoIcons.square_list_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.square_list_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.square_list_fill},
   );
 
   static const NaIconData squareOnCircle = NaIconData(
     CupertinoIcons.square_on_circle,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.square_on_circle },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.square_on_circle},
   );
 
   static const NaIconData squareOnSquare = NaIconData(
     CupertinoIcons.square_on_square,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.square_on_square },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.square_on_square},
   );
 
   static const NaIconData squarePencil = NaIconData(
     CupertinoIcons.square_pencil,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.square_pencil },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.square_pencil},
   );
 
   static const NaIconData squarePencilFill = NaIconData(
     CupertinoIcons.square_pencil_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.square_pencil_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.square_pencil_fill},
   );
 
   static const NaIconData squareRighthalfFill = NaIconData(
     CupertinoIcons.square_righthalf_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.square_righthalf_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.square_righthalf_fill},
   );
 
   static const NaIconData squareSplit1x2 = NaIconData(
     CupertinoIcons.square_split_1x2,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.square_split_1x2 },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.square_split_1x2},
   );
 
   static const NaIconData squareSplit1x2Fill = NaIconData(
     CupertinoIcons.square_split_1x2_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.square_split_1x2_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.square_split_1x2_fill},
   );
 
   static const NaIconData squareSplit2x1 = NaIconData(
     CupertinoIcons.square_split_2x1,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.square_split_2x1 },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.square_split_2x1},
   );
 
   static const NaIconData squareSplit2x1Fill = NaIconData(
     CupertinoIcons.square_split_2x1_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.square_split_2x1_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.square_split_2x1_fill},
   );
 
   static const NaIconData squareSplit2x2 = NaIconData(
     CupertinoIcons.square_split_2x2,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.square_split_2x2 },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.square_split_2x2},
   );
 
   static const NaIconData squareSplit2x2Fill = NaIconData(
     CupertinoIcons.square_split_2x2_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.square_split_2x2_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.square_split_2x2_fill},
   );
 
   static const NaIconData squareStack = NaIconData(
     CupertinoIcons.square_stack,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.square_stack },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.square_stack},
   );
 
   static const NaIconData squareStack3dDownDottedline = NaIconData(
     CupertinoIcons.square_stack_3d_down_dottedline,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.square_stack_3d_down_dottedline },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.square_stack_3d_down_dottedline
+    },
   );
 
   static const NaIconData squareStack3dDownRight = NaIconData(
     CupertinoIcons.square_stack_3d_down_right,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.square_stack_3d_down_right },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.square_stack_3d_down_right
+    },
   );
 
   static const NaIconData squareStack3dDownRightFill = NaIconData(
     CupertinoIcons.square_stack_3d_down_right_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.square_stack_3d_down_right_fill },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.square_stack_3d_down_right_fill
+    },
   );
 
   static const NaIconData squareStack3dUp = NaIconData(
     CupertinoIcons.square_stack_3d_up,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.square_stack_3d_up },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.square_stack_3d_up},
   );
 
   static const NaIconData squareStack3dUpFill = NaIconData(
     CupertinoIcons.square_stack_3d_up_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.square_stack_3d_up_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.square_stack_3d_up_fill},
   );
 
   static const NaIconData squareStack3dUpSlash = NaIconData(
     CupertinoIcons.square_stack_3d_up_slash,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.square_stack_3d_up_slash },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.square_stack_3d_up_slash
+    },
   );
 
   static const NaIconData squareStack3dUpSlashFill = NaIconData(
     CupertinoIcons.square_stack_3d_up_slash_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.square_stack_3d_up_slash_fill },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.square_stack_3d_up_slash_fill
+    },
   );
 
   static const NaIconData squareStackFill = NaIconData(
     CupertinoIcons.square_stack_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.square_stack_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.square_stack_fill},
   );
 
   static const NaIconData squaresBelowRectangle = NaIconData(
     CupertinoIcons.squares_below_rectangle,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.squares_below_rectangle },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.squares_below_rectangle},
   );
 
   static const NaIconData starCircle = NaIconData(
     CupertinoIcons.star_circle,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.star_circle },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.star_circle},
   );
 
   static const NaIconData starCircleFill = NaIconData(
     CupertinoIcons.star_circle_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.star_circle_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.star_circle_fill},
   );
 
   static const NaIconData starFill = NaIconData(
     CupertinoIcons.star_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.star_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.star_fill},
   );
 
   static const NaIconData starLefthalfFill = NaIconData(
     CupertinoIcons.star_lefthalf_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.star_lefthalf_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.star_lefthalf_fill},
   );
 
   static const NaIconData starSlash = NaIconData(
     CupertinoIcons.star_slash,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.star_slash },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.star_slash},
   );
 
   static const NaIconData starSlashFill = NaIconData(
     CupertinoIcons.star_slash_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.star_slash_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.star_slash_fill},
   );
 
   static const NaIconData staroflife = NaIconData(
     CupertinoIcons.staroflife,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.staroflife },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.staroflife},
   );
 
   static const NaIconData staroflifeFill = NaIconData(
     CupertinoIcons.staroflife_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.staroflife_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.staroflife_fill},
   );
 
   static const NaIconData stopCircleFill = NaIconData(
     CupertinoIcons.stop_circle_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.stop_circle_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.stop_circle_fill},
   );
 
   static const NaIconData stopFill = NaIconData(
     CupertinoIcons.stop_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.stop_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.stop_fill},
   );
 
   static const NaIconData stopwatch = NaIconData(
     CupertinoIcons.stopwatch,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.stopwatch },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.stopwatch},
   );
 
   static const NaIconData stopwatchFill = NaIconData(
     CupertinoIcons.stopwatch_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.stopwatch_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.stopwatch_fill},
   );
 
   static const NaIconData suitClub = NaIconData(
     CupertinoIcons.suit_club,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.suit_club },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.suit_club},
   );
 
   static const NaIconData suitClubFill = NaIconData(
     CupertinoIcons.suit_club_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.suit_club_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.suit_club_fill},
   );
 
   static const NaIconData suitDiamond = NaIconData(
     CupertinoIcons.suit_diamond,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.suit_diamond },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.suit_diamond},
   );
 
   static const NaIconData suitDiamondFill = NaIconData(
     CupertinoIcons.suit_diamond_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.suit_diamond_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.suit_diamond_fill},
   );
 
   static const NaIconData suitHeart = NaIconData(
     CupertinoIcons.suit_heart,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.suit_heart },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.suit_heart},
   );
 
   static const NaIconData suitHeartFill = NaIconData(
     CupertinoIcons.suit_heart_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.suit_heart_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.suit_heart_fill},
   );
 
   static const NaIconData suitSpade = NaIconData(
     CupertinoIcons.suit_spade,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.suit_spade },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.suit_spade},
   );
 
   static const NaIconData suitSpadeFill = NaIconData(
     CupertinoIcons.suit_spade_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.suit_spade_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.suit_spade_fill},
   );
 
   static const NaIconData sum = NaIconData(
     CupertinoIcons.sum,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.sum },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.sum},
   );
 
   static const NaIconData sunDust = NaIconData(
     CupertinoIcons.sun_dust,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.sun_dust },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.sun_dust},
   );
 
   static const NaIconData sunDustFill = NaIconData(
     CupertinoIcons.sun_dust_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.sun_dust_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.sun_dust_fill},
   );
 
   static const NaIconData sunHaze = NaIconData(
     CupertinoIcons.sun_haze,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.sun_haze },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.sun_haze},
   );
 
   static const NaIconData sunHazeFill = NaIconData(
     CupertinoIcons.sun_haze_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.sun_haze_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.sun_haze_fill},
   );
 
   static const NaIconData sunMaxFill = NaIconData(
     CupertinoIcons.sun_max_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.sun_max_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.sun_max_fill},
   );
 
   static const NaIconData sunMin = NaIconData(
     CupertinoIcons.sun_min,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.sun_min },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.sun_min},
   );
 
   static const NaIconData sunMinFill = NaIconData(
     CupertinoIcons.sun_min_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.sun_min_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.sun_min_fill},
   );
 
   static const NaIconData sunrise = NaIconData(
     CupertinoIcons.sunrise,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.sunrise },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.sunrise},
   );
 
   static const NaIconData sunriseFill = NaIconData(
     CupertinoIcons.sunrise_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.sunrise_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.sunrise_fill},
   );
 
   static const NaIconData sunset = NaIconData(
     CupertinoIcons.sunset,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.sunset },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.sunset},
   );
 
   static const NaIconData sunsetFill = NaIconData(
     CupertinoIcons.sunset_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.sunset_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.sunset_fill},
   );
 
   static const NaIconData tBubble = NaIconData(
     CupertinoIcons.t_bubble,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.t_bubble },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.t_bubble},
   );
 
   static const NaIconData tBubbleFill = NaIconData(
     CupertinoIcons.t_bubble_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.t_bubble_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.t_bubble_fill},
   );
 
   static const NaIconData table = NaIconData(
     CupertinoIcons.table,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.table },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.table},
   );
 
   static const NaIconData tableBadgeMore = NaIconData(
     CupertinoIcons.table_badge_more,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.table_badge_more },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.table_badge_more},
   );
 
   static const NaIconData tableBadgeMoreFill = NaIconData(
     CupertinoIcons.table_badge_more_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.table_badge_more_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.table_badge_more_fill},
   );
 
   static const NaIconData tableFill = NaIconData(
     CupertinoIcons.table_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.table_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.table_fill},
   );
 
   static const NaIconData tagCircle = NaIconData(
     CupertinoIcons.tag_circle,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.tag_circle },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.tag_circle},
   );
 
   static const NaIconData tagCircleFill = NaIconData(
     CupertinoIcons.tag_circle_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.tag_circle_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.tag_circle_fill},
   );
 
   static const NaIconData textAligncenter = NaIconData(
     CupertinoIcons.text_aligncenter,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.text_aligncenter },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.text_aligncenter},
   );
 
   static const NaIconData textAlignleft = NaIconData(
     CupertinoIcons.text_alignleft,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.text_alignleft },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.text_alignleft},
   );
 
   static const NaIconData textAlignright = NaIconData(
     CupertinoIcons.text_alignright,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.text_alignright },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.text_alignright},
   );
 
   static const NaIconData textAppend = NaIconData(
     CupertinoIcons.text_append,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.text_append },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.text_append},
   );
 
   static const NaIconData textBadgeCheckmark = NaIconData(
     CupertinoIcons.text_badge_checkmark,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.text_badge_checkmark },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.text_badge_checkmark},
   );
 
   static const NaIconData textBadgeMinus = NaIconData(
     CupertinoIcons.text_badge_minus,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.text_badge_minus },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.text_badge_minus},
   );
 
   static const NaIconData textBadgePlus = NaIconData(
     CupertinoIcons.text_badge_plus,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.text_badge_plus },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.text_badge_plus},
   );
 
   static const NaIconData textBadgeStar = NaIconData(
     CupertinoIcons.text_badge_star,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.text_badge_star },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.text_badge_star},
   );
 
   static const NaIconData textBadgeXmark = NaIconData(
     CupertinoIcons.text_badge_xmark,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.text_badge_xmark },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.text_badge_xmark},
   );
 
   static const NaIconData textBubble = NaIconData(
     CupertinoIcons.text_bubble,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.text_bubble },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.text_bubble},
   );
 
   static const NaIconData textBubbleFill = NaIconData(
     CupertinoIcons.text_bubble_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.text_bubble_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.text_bubble_fill},
   );
 
   static const NaIconData textCursor = NaIconData(
     CupertinoIcons.text_cursor,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.text_cursor },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.text_cursor},
   );
 
   static const NaIconData textInsert = NaIconData(
     CupertinoIcons.text_insert,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.text_insert },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.text_insert},
   );
 
   static const NaIconData textJustify = NaIconData(
     CupertinoIcons.text_justify,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.text_justify },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.text_justify},
   );
 
   static const NaIconData textJustifyleft = NaIconData(
     CupertinoIcons.text_justifyleft,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.text_justifyleft },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.text_justifyleft},
   );
 
   static const NaIconData textJustifyright = NaIconData(
     CupertinoIcons.text_justifyright,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.text_justifyright },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.text_justifyright},
   );
 
   static const NaIconData textQuote = NaIconData(
     CupertinoIcons.text_quote,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.text_quote },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.text_quote},
   );
 
   static const NaIconData textbox = NaIconData(
     CupertinoIcons.textbox,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.textbox },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.textbox},
   );
 
   static const NaIconData textformat = NaIconData(
     CupertinoIcons.textformat,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.textformat },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.textformat},
   );
 
   static const NaIconData textformat123 = NaIconData(
     CupertinoIcons.textformat_123,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.textformat_123 },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.textformat_123},
   );
 
   static const NaIconData textformatAbc = NaIconData(
     CupertinoIcons.textformat_abc,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.textformat_abc },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.textformat_abc},
   );
 
   static const NaIconData textformatAbcDottedunderline = NaIconData(
     CupertinoIcons.textformat_abc_dottedunderline,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.textformat_abc_dottedunderline },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.textformat_abc_dottedunderline
+    },
   );
 
   static const NaIconData textformatAlt = NaIconData(
     CupertinoIcons.textformat_alt,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.textformat_alt },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.textformat_alt},
   );
 
   static const NaIconData textformatSize = NaIconData(
     CupertinoIcons.textformat_size,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.textformat_size },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.textformat_size},
   );
 
   static const NaIconData textformatSubscript = NaIconData(
     CupertinoIcons.textformat_subscript,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.textformat_subscript },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.textformat_subscript},
   );
 
   static const NaIconData textformatSuperscript = NaIconData(
     CupertinoIcons.textformat_superscript,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.textformat_superscript },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.textformat_superscript},
   );
 
   static const NaIconData thermometer = NaIconData(
     CupertinoIcons.thermometer,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.thermometer },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.thermometer},
   );
 
   static const NaIconData thermometerSnowflake = NaIconData(
     CupertinoIcons.thermometer_snowflake,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.thermometer_snowflake },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.thermometer_snowflake},
   );
 
   static const NaIconData thermometerSun = NaIconData(
     CupertinoIcons.thermometer_sun,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.thermometer_sun },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.thermometer_sun},
   );
 
   static const NaIconData ticket = NaIconData(
     CupertinoIcons.ticket,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.ticket },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.ticket},
   );
 
   static const NaIconData ticketFill = NaIconData(
     CupertinoIcons.ticket_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.ticket_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.ticket_fill},
   );
 
   static const NaIconData tickets = NaIconData(
     CupertinoIcons.tickets,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.tickets },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.tickets},
   );
 
   static const NaIconData ticketsFill = NaIconData(
     CupertinoIcons.tickets_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.tickets_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.tickets_fill},
   );
 
   static const NaIconData timerFill = NaIconData(
     CupertinoIcons.timer_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.timer_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.timer_fill},
   );
 
   static const NaIconData todayFill = NaIconData(
     CupertinoIcons.today_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.today_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.today_fill},
   );
 
   static const NaIconData tortoise = NaIconData(
     CupertinoIcons.tortoise,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.tortoise },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.tortoise},
   );
 
   static const NaIconData tortoiseFill = NaIconData(
     CupertinoIcons.tortoise_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.tortoise_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.tortoise_fill},
   );
 
   static const NaIconData trashCircle = NaIconData(
     CupertinoIcons.trash_circle,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.trash_circle },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.trash_circle},
   );
 
   static const NaIconData trashCircleFill = NaIconData(
     CupertinoIcons.trash_circle_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.trash_circle_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.trash_circle_fill},
   );
 
   static const NaIconData trashFill = NaIconData(
     CupertinoIcons.trash_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.trash_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.trash_fill},
   );
 
   static const NaIconData trashSlash = NaIconData(
     CupertinoIcons.trash_slash,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.trash_slash },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.trash_slash},
   );
 
   static const NaIconData trashSlashFill = NaIconData(
     CupertinoIcons.trash_slash_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.trash_slash_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.trash_slash_fill},
   );
 
   static const NaIconData tray = NaIconData(
     CupertinoIcons.tray,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.tray },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.tray},
   );
 
   static const NaIconData tray2 = NaIconData(
     CupertinoIcons.tray_2,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.tray_2 },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.tray_2},
   );
 
   static const NaIconData tray2Fill = NaIconData(
     CupertinoIcons.tray_2_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.tray_2_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.tray_2_fill},
   );
 
   static const NaIconData trayArrowDown = NaIconData(
     CupertinoIcons.tray_arrow_down,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.tray_arrow_down },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.tray_arrow_down},
   );
 
   static const NaIconData trayArrowDownFill = NaIconData(
     CupertinoIcons.tray_arrow_down_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.tray_arrow_down_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.tray_arrow_down_fill},
   );
 
   static const NaIconData trayArrowUp = NaIconData(
     CupertinoIcons.tray_arrow_up,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.tray_arrow_up },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.tray_arrow_up},
   );
 
   static const NaIconData trayArrowUpFill = NaIconData(
     CupertinoIcons.tray_arrow_up_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.tray_arrow_up_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.tray_arrow_up_fill},
   );
 
   static const NaIconData trayFill = NaIconData(
     CupertinoIcons.tray_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.tray_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.tray_fill},
   );
 
   static const NaIconData trayFull = NaIconData(
     CupertinoIcons.tray_full,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.tray_full },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.tray_full},
   );
 
   static const NaIconData trayFullFill = NaIconData(
     CupertinoIcons.tray_full_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.tray_full_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.tray_full_fill},
   );
 
   static const NaIconData tree = NaIconData(
     CupertinoIcons.tree,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.tree },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.tree},
   );
 
   static const NaIconData triangle = NaIconData(
     CupertinoIcons.triangle,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.triangle },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.triangle},
   );
 
   static const NaIconData triangleFill = NaIconData(
     CupertinoIcons.triangle_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.triangle_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.triangle_fill},
   );
 
   static const NaIconData triangleLefthalfFill = NaIconData(
     CupertinoIcons.triangle_lefthalf_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.triangle_lefthalf_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.triangle_lefthalf_fill},
   );
 
   static const NaIconData triangleRighthalfFill = NaIconData(
     CupertinoIcons.triangle_righthalf_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.triangle_righthalf_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.triangle_righthalf_fill},
   );
 
   static const NaIconData tropicalstorm = NaIconData(
     CupertinoIcons.tropicalstorm,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.tropicalstorm },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.tropicalstorm},
   );
 
   static const NaIconData tuningfork = NaIconData(
     CupertinoIcons.tuningfork,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.tuningfork },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.tuningfork},
   );
 
   static const NaIconData tvCircle = NaIconData(
     CupertinoIcons.tv_circle,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.tv_circle },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.tv_circle},
   );
 
   static const NaIconData tvCircleFill = NaIconData(
     CupertinoIcons.tv_circle_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.tv_circle_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.tv_circle_fill},
   );
 
   static const NaIconData tvFill = NaIconData(
     CupertinoIcons.tv_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.tv_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.tv_fill},
   );
 
   static const NaIconData tvMusicNote = NaIconData(
     CupertinoIcons.tv_music_note,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.tv_music_note },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.tv_music_note},
   );
 
   static const NaIconData tvMusicNoteFill = NaIconData(
     CupertinoIcons.tv_music_note_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.tv_music_note_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.tv_music_note_fill},
   );
 
   static const NaIconData uiwindowSplit2x1 = NaIconData(
     CupertinoIcons.uiwindow_split_2x1,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.uiwindow_split_2x1 },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.uiwindow_split_2x1},
   );
 
   static const NaIconData umbrellaFill = NaIconData(
     CupertinoIcons.umbrella_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.umbrella_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.umbrella_fill},
   );
 
   static const NaIconData uploadCircleFill = NaIconData(
     CupertinoIcons.upload_circle_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.upload_circle_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.upload_circle_fill},
   );
 
   static const NaIconData videocamCircle = NaIconData(
     CupertinoIcons.videocam_circle,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.videocam_circle },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.videocam_circle},
   );
 
   static const NaIconData videocamCircleFill = NaIconData(
     CupertinoIcons.videocam_circle_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.videocam_circle_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.videocam_circle_fill},
   );
 
   static const NaIconData videocamFill = NaIconData(
     CupertinoIcons.videocam_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.videocam_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.videocam_fill},
   );
 
   static const NaIconData view2d = NaIconData(
     CupertinoIcons.view_2d,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.view_2d },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.view_2d},
   );
 
   static const NaIconData view3d = NaIconData(
     CupertinoIcons.view_3d,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.view_3d },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.view_3d},
   );
 
   static const NaIconData viewfinder = NaIconData(
     CupertinoIcons.viewfinder,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.viewfinder },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.viewfinder},
   );
 
   static const NaIconData viewfinderCircle = NaIconData(
     CupertinoIcons.viewfinder_circle,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.viewfinder_circle },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.viewfinder_circle},
   );
 
   static const NaIconData viewfinderCircleFill = NaIconData(
     CupertinoIcons.viewfinder_circle_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.viewfinder_circle_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.viewfinder_circle_fill},
   );
 
   static const NaIconData wandRays = NaIconData(
     CupertinoIcons.wand_rays,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.wand_rays },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.wand_rays},
   );
 
   static const NaIconData wandRaysInverse = NaIconData(
     CupertinoIcons.wand_rays_inverse,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.wand_rays_inverse },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.wand_rays_inverse},
   );
 
   static const NaIconData wandStars = NaIconData(
     CupertinoIcons.wand_stars,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.wand_stars },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.wand_stars},
   );
 
   static const NaIconData wandStarsInverse = NaIconData(
     CupertinoIcons.wand_stars_inverse,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.wand_stars_inverse },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.wand_stars_inverse},
   );
 
   static const NaIconData waveform = NaIconData(
     CupertinoIcons.waveform,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.waveform },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.waveform},
   );
 
   static const NaIconData waveformCircle = NaIconData(
     CupertinoIcons.waveform_circle,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.waveform_circle },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.waveform_circle},
   );
 
   static const NaIconData waveformCircleFill = NaIconData(
     CupertinoIcons.waveform_circle_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.waveform_circle_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.waveform_circle_fill},
   );
 
   static const NaIconData waveformPath = NaIconData(
     CupertinoIcons.waveform_path,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.waveform_path },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.waveform_path},
   );
 
   static const NaIconData waveformPathBadgeMinus = NaIconData(
     CupertinoIcons.waveform_path_badge_minus,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.waveform_path_badge_minus },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.waveform_path_badge_minus
+    },
   );
 
   static const NaIconData waveformPathBadgePlus = NaIconData(
     CupertinoIcons.waveform_path_badge_plus,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.waveform_path_badge_plus },
+    platformIcons: {
+      NaUiType.cupertino: CupertinoIcons.waveform_path_badge_plus
+    },
   );
 
   static const NaIconData waveformPathEcg = NaIconData(
     CupertinoIcons.waveform_path_ecg,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.waveform_path_ecg },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.waveform_path_ecg},
   );
 
   static const NaIconData wifiExclamationmark = NaIconData(
     CupertinoIcons.wifi_exclamationmark,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.wifi_exclamationmark },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.wifi_exclamationmark},
   );
 
   static const NaIconData wifiSlash = NaIconData(
     CupertinoIcons.wifi_slash,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.wifi_slash },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.wifi_slash},
   );
 
   static const NaIconData wind = NaIconData(
     CupertinoIcons.wind,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.wind },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.wind},
   );
 
   static const NaIconData windSnow = NaIconData(
     CupertinoIcons.wind_snow,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.wind_snow },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.wind_snow},
   );
 
   static const NaIconData wrench = NaIconData(
     CupertinoIcons.wrench,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.wrench },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.wrench},
   );
 
   static const NaIconData wrenchFill = NaIconData(
     CupertinoIcons.wrench_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.wrench_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.wrench_fill},
   );
 
   static const NaIconData xmarkCircle = NaIconData(
     CupertinoIcons.xmark_circle,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.xmark_circle },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.xmark_circle},
   );
 
   static const NaIconData xmarkCircleFill = NaIconData(
     CupertinoIcons.xmark_circle_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.xmark_circle_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.xmark_circle_fill},
   );
 
   static const NaIconData xmarkOctagon = NaIconData(
     CupertinoIcons.xmark_octagon,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.xmark_octagon },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.xmark_octagon},
   );
 
   static const NaIconData xmarkOctagonFill = NaIconData(
     CupertinoIcons.xmark_octagon_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.xmark_octagon_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.xmark_octagon_fill},
   );
 
   static const NaIconData xmarkRectangle = NaIconData(
     CupertinoIcons.xmark_rectangle,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.xmark_rectangle },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.xmark_rectangle},
   );
 
   static const NaIconData xmarkRectangleFill = NaIconData(
     CupertinoIcons.xmark_rectangle_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.xmark_rectangle_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.xmark_rectangle_fill},
   );
 
   static const NaIconData xmarkSeal = NaIconData(
     CupertinoIcons.xmark_seal,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.xmark_seal },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.xmark_seal},
   );
 
   static const NaIconData xmarkSealFill = NaIconData(
     CupertinoIcons.xmark_seal_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.xmark_seal_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.xmark_seal_fill},
   );
 
   static const NaIconData xmarkShield = NaIconData(
     CupertinoIcons.xmark_shield,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.xmark_shield },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.xmark_shield},
   );
 
   static const NaIconData xmarkShieldFill = NaIconData(
     CupertinoIcons.xmark_shield_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.xmark_shield_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.xmark_shield_fill},
   );
 
   static const NaIconData xmarkSquare = NaIconData(
     CupertinoIcons.xmark_square,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.xmark_square },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.xmark_square},
   );
 
   static const NaIconData xmarkSquareFill = NaIconData(
     CupertinoIcons.xmark_square_fill,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.xmark_square_fill },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.xmark_square_fill},
   );
 
   static const NaIconData zzz = NaIconData(
     CupertinoIcons.zzz,
-    platformIcons: { NaUiType.cupertino: CupertinoIcons.zzz },
+    platformIcons: {NaUiType.cupertino: CupertinoIcons.zzz},
   );
-
 }

@@ -22,9 +22,9 @@ class NaTextFieldCaption extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      mainAxisSize      : MainAxisSize.min,
+      mainAxisSize: MainAxisSize.min,
       crossAxisAlignment: CrossAxisAlignment.start,
-      children          : [
+      children: [
         Padding(
           padding: EdgeInsets.only(
             left: this._getLeftPadding(context),
@@ -52,7 +52,7 @@ class NaTextFieldCaption extends StatelessWidget {
         return 0.0;
       }
     }
-    
+
     return 0.0;
   }
 }

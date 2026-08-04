@@ -2,6 +2,7 @@ import 'package:flutter/widgets.dart';
 import 'package:nanna_platform/nanna_platform.dart';
 
 import '../main.dart';
+import '../widgets/example-icons.widget.dart';
 import '../widgets/example-radio.widget.dart';
 import '../widgets/example-slider.widget.dart';
 import '../widgets/example-switch.widget.dart';
@@ -57,7 +58,11 @@ class ExampleHomePage extends StatelessWidget {
                 ),
                 const SizedBox(height: 40.0),
 
+                const ExampleIconsWidget(),
+                const SizedBox(height: 20.0),
+
                 const ExamplePageRouteWidget(),
+
                 const SizedBox(height: 20.0),
 
                 const ExampleSwitchWidget(),

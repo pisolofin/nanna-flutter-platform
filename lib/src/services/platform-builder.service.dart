@@ -33,8 +33,10 @@ NaWidgetBuilder? naPlatformServiceGetWidgetBuilder(
 
   final String targetBaseName = widgetType.toString().split('<').first;
   for (final Type registeredType in _widgetBuilders.keys) {
-    final String registeredBaseName = registeredType.toString().split('<').first;
-    if (registeredBaseName == targetBaseName && _widgetBuilders[registeredType]!.containsKey(uiType)) {
+    final String registeredBaseName =
+        registeredType.toString().split('<').first;
+    if (registeredBaseName == targetBaseName &&
+        _widgetBuilders[registeredType]!.containsKey(uiType)) {
       return _widgetBuilders[registeredType]![uiType];
     }
   }

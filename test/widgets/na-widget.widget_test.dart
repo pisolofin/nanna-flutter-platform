@@ -16,12 +16,14 @@ class NaDummyWidget extends NaWidget {
 }
 
 void main() {
-  testWidgets('NaWidget renders material if supported', (WidgetTester tester) async {
+  testWidgets('NaWidget renders material if supported',
+      (WidgetTester tester) async {
     await pumpMaterialNaWidget(tester, const NaDummyWidget());
     expect(find.text('Material'), findsOneWidget);
   });
 
-  testWidgets('NaWidget falls back to material if cupertino not supported', (WidgetTester tester) async {
+  testWidgets('NaWidget falls back to material if cupertino not supported',
+      (WidgetTester tester) async {
     await tester.pumpWidget(
       const NaUiTypeScope(
         uiTypes: [NaUiType.cupertino, NaUiType.material],
@@ -35,5 +37,3 @@ void main() {
     expect(find.text('Material'), findsOneWidget);
   });
 }
-
-

@@ -5,7 +5,7 @@ import '../models/ui-type.model.dart';
 import '../scopes/ui-type.scope.dart';
 
 /// Displays a cross-platform dialog according to the current [NaUiType].
-/// 
+///
 /// Uses [showDialog] on Material and [showCupertinoDialog] on Cupertino.
 Future<T?> naShowDialog<T>({
   required BuildContext context,
