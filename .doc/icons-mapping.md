@@ -11,6 +11,27 @@ This document contains the complete comparison table between Material icons (`Ic
 
 ---
 
+## 🚀 How to Use NaIcons
+
+To render icons seamlessly across platforms, use `NaIcon` with `NaIcons`:
+
+```dart
+import 'package:flutter/widgets.dart';
+import 'package:nanna_platform/nanna_platform.dart';
+
+// Automatically renders Icons.home on Material (Android/Web/Linux)
+// and CupertinoIcons.home on Cupertino (iOS/macOS):
+const NaIcon(NaIcons.home)
+
+// With size and custom styling:
+const NaIcon(
+  NaIcons.settings,
+  size: 24.0,
+)
+```
+
+---
+
 ## Table 1: Cross-Platform Icons (Available in both Icons and CupertinoIcons)
 
 The following icons have both Material and Cupertino variants and automatically adapt to the selected platform.

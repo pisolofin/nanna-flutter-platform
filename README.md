@@ -1,12 +1,14 @@
 <p align="center">
   <img src="https://raw.githubusercontent.com/pisolofin/nanna-flutter-platform/main/.logo/nanna-platform-logo-transparent.png" alt="Nanna Platform Logo" width="200"/>
 </p>
-# nanna_flutter_platform
+
+# nanna_platform
 
 This library provides unified cross-platform components for Flutter apps.
-Instead of writing platform-conditional code (`if (Platform.isIOS) ...`) on every screen, `nanna_flutter_platform` exposes generic widgets (like `NaButton`) that automatically translate into the appropriate native design system:
+Instead of writing platform-conditional code (`if (Platform.isIOS) ...`) on every screen, `nanna_platform` exposes generic widgets (like `NaButton`) that automatically translate into the appropriate native design system:
 - **Material Design** for Android, Web, and Linux
 - **Cupertino** for iOS and macOS
+- **Custom Design Systems** (via dynamic widget builder plugins)
 
 ## Visual Comparison
 Below are side-by-side examples of the exact same code rendering automatically in Material Design (Android) and Cupertino (iOS).
@@ -58,13 +60,13 @@ Below are side-by-side examples of the exact same code rendering automatically i
 | `Dialog Action` | `CupertinoDialogAction` | ✅ | `NaDialogAction` |
 | `TextField` | `CupertinoTextField` | ✅ | `NaTextField` |
 | `PageRoute` | `CupertinoPageRoute` | ✅ | `NaPageRoute` |
+| `Scrollbar` | `CupertinoScrollbar` | ✅ | `NaScrollbar` |
+| `SearchBar` | `CupertinoSearchTextField`| ✅ | `NaSearchBar` |
 | `TabBar` | `CupertinoTabBar` | ⏳ | `NaTabBar` |
 | `TabBarView` | `CupertinoTabView` | ⏳ | `NaTabView` |
 | `DropdownButton` | `CupertinoPicker` | ⏳ | `NaDropdown` |
 | `RefreshIndicator` | `CupertinoSliverRefreshControl` | ⏳ | `NaRefreshIndicator` |
 | `BottomSheet` | `CupertinoActionSheet` | ⏳ | `NaActionSheet` |
-| `Scrollbar` | `CupertinoScrollbar` | ✅ | `NaScrollbar` |
-| `SearchBar` | `CupertinoSearchTextField`| ✅ | `NaSearchBar` |
 
 > 💡 **Icons Mapping**: For the full mapping table of all 10,000+ Material and Cupertino icons available via `NaIcons`, see [.doc/icons-mapping.md](.doc/icons-mapping.md).
 
@@ -84,15 +86,15 @@ You can pass a fallback chain of UI types. The widgets will attempt to render th
 
 ```dart
 import 'package:flutter/widgets.dart';
-import 'package:nanna_flutter_platform/nanna_flutter_platform.dart';
+import 'package:nanna_platform/nanna_platform.dart';
 
 void main() {
   runApp(
     NaUiTypeScope(
-      // Priority list of UI types (e.g., custom style first, then cupertino, falling back to material)
-      uiTypes: [NaUiType('custom'), NaUiType.cupertino], 
+      // Priority list of UI types (e.g., Cupertino first, falling back to Material)
+      uiTypes: const [NaUiType.cupertino, NaUiType.material], 
       child: const MyApp(),
-    )
+    ),
   );
 }
 ```
@@ -110,6 +112,13 @@ NaButton(
       return NaButtonOptionsMaterial(
         autofocus: true,
         clipBehavior: Clip.hardEdge,
+      );
+    }
+    
+    // Options for Cupertino
+    if (uiType == NaUiType.cupertino) {
+      return NaButtonOptionsCupertino(
+        pressedOpacity: 0.6,
       );
     }
     
@@ -157,7 +166,5 @@ The library uses a **Widget Builder Registry** that allows external packages to 
 Read the full guide and example here: [Extending the Platform with External Libraries](.doc/external-libraries.md)
 
 ### Technical Deep Dives
-*   **[Development Guidelines](.doc/development-guidelines.md)**: Strict constraints, target platforms (iOS/Android), offline-first storage logic, dependencies (e.g., `nanna_flutter`), and Dart/Flutter coding styles.
+*   **[Development Guidelines](.doc/development-guidelines.md)**: Architectural constraints, design patterns, coding rules, and conventions for `nanna_platform`.
 *   **[Icons Mapping](.doc/icons-mapping.md)**: Complete mapping table of all Flutter `Icons` (Material) and `CupertinoIcons` available in `NaIcons`.
-
-

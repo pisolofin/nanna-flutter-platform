@@ -10,8 +10,8 @@ import '../models/ui-type.model.dart';
 /// Example usage:
 /// ```dart
 /// NaUiTypeScope(
-///   uiTypes: [NaUiType('macos'), NaUiType.cupertino],
-///   child: MyApp(),
+///   uiTypes: const [NaUiType.cupertino, NaUiType.material],
+///   child: const MyApp(),
 /// )
 /// ```
 class NaUiTypeScope extends InheritedWidget {

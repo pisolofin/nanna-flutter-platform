@@ -1,16 +1,28 @@
-# example
+# Nanna Platform Example App
 
-A new Flutter project.
+A sample Flutter application demonstrating the cross-platform widgets and features provided by the `nanna_platform` package.
 
-## Getting Started
+## Features Demonstrated
 
-This project is a starting point for a Flutter application.
+- **Dynamic UI Switching**: Live toggle between **Material Design** and **Cupertino** at runtime via `NaUiTypeScope`.
+- **Adaptive Widgets Showcase**:
+  - `NaButton` & `NaIconButton`
+  - `NaTextField` & `NaTextFieldCaption`
+  - `NaSearchBar`
+  - `NaSwitch`, `NaCheckbox`, `NaRadio`, & `NaSlider`
+  - `NaCard` & `NaListTile`
+  - `NaDatePicker` & `NaTimePicker`
+  - `NaAlertDialog` & `naShowDialog` helper
+  - `NaProgressIndicator`
+  - `NaScrollbar`
+  - `NaPageRoute` adaptive page transitions
+  - `NaBottomNavigationBar`
+  - `NaIcons` cross-platform icon mapping
 
-A few resources to get you started if this is your first Flutter project:
+## Running the Example
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+From the `example/` directory, run:
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```bash
+flutter run
+```

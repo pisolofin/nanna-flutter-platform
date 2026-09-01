@@ -1,6 +1,6 @@
-export 'src/models/style.model.dart';
 export 'src/models/ui-type.model.dart';
 export 'src/models/icon-data.model.dart';
+export 'src/models/widget-options.model.dart';
 
 export 'src/scopes/ui-type.scope.dart';
 

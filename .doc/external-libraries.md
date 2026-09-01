@@ -1,6 +1,6 @@
 # Extending the Platform with External Libraries
 
-The `nanna_flutter_platform` core library is designed to be lightweight and strictly independent of heavy third-party UI packages (like `macos_ui`, etc.). Instead of coupling the core package to every design system in existence, it uses a **Widget Builder Registry** architecture.
+The `nanna_platform` core library is designed to be lightweight and strictly independent of heavy third-party UI packages (like `macos_ui`, etc.). Instead of coupling the core package to every design system in existence, it uses a **Widget Builder Registry** architecture.
 
 This allows third-party libraries (or your own app code) to dynamically register support for new UI types at runtime without modifying the core package.
 
@@ -14,7 +14,7 @@ Instead, you register a builder for it.
 ```dart
 import 'package:flutter/widgets.dart';
 import 'package:macos_ui/macos_ui.dart' as macos;
-import 'package:nanna_flutter_platform/nanna_flutter_platform.dart';
+import 'package:nanna_platform/nanna_platform.dart';
 
 // 1. Define custom options for your specific platform
 class MacosButtonOptions extends NaButtonOptions {
