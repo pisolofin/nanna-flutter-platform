@@ -8,9 +8,9 @@ void main() {
     expect(find.byType(NaAlertDialog), findsOneWidget);
   });
 
-  testWidgets('NaAlertDialog renders in Cupertino', (WidgetTester tester) async {
+  testWidgets('NaAlertDialog renders in Cupertino',
+      (WidgetTester tester) async {
     await pumpCupertinoNaWidget(tester, const NaAlertDialog());
     expect(find.byType(NaAlertDialog), findsOneWidget);
   });
 }
-

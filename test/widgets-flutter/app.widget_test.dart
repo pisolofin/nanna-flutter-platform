@@ -14,4 +14,3 @@ void main() {
     expect(find.byType(NaApp), findsOneWidget);
   });
 }
-

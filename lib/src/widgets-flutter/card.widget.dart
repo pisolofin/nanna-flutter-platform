@@ -69,22 +69,18 @@ class NaCard extends NaWidget {
     final NaCardOptions? options = optionsBuilder?.call(context, uiType);
 
     if (uiType == NaUiType.cupertino) {
-      final NaCardOptionsCupertino? cupertinoOptions = options is NaCardOptionsCupertino
-        ? options
-        : null
-      ;
+      final NaCardOptionsCupertino? cupertinoOptions =
+          options is NaCardOptionsCupertino ? options : null;
       return Container(
-        margin      : cupertinoOptions?.margin ?? const EdgeInsets.all(4.0),
-        padding     : cupertinoOptions?.padding,
+        margin: cupertinoOptions?.margin ?? const EdgeInsets.all(4.0),
+        padding: cupertinoOptions?.padding,
         clipBehavior: Clip.hardEdge,
-        decoration  : BoxDecoration(
-          color:
-              cupertinoOptions?.color ??
+        decoration: BoxDecoration(
+          color: cupertinoOptions?.color ??
               CupertinoTheme.of(context).barBackgroundColor,
           borderRadius:
               cupertinoOptions?.borderRadius ?? BorderRadius.circular(10.0),
-          border:
-              cupertinoOptions?.border ??
+          border: cupertinoOptions?.border ??
               Border.all(
                 color: CupertinoColors.systemGrey4.resolveFrom(context),
                 width: 0.5,
@@ -95,21 +91,19 @@ class NaCard extends NaWidget {
     }
 
     if (uiType == NaUiType.material) {
-      final NaCardOptionsMaterial? materialOptions = options is NaCardOptionsMaterial
-        ? options
-        : null
-      ;
+      final NaCardOptionsMaterial? materialOptions =
+          options is NaCardOptionsMaterial ? options : null;
       return Card(
-        color             : materialOptions?.color,
-        shadowColor       : materialOptions?.shadowColor,
-        surfaceTintColor  : materialOptions?.surfaceTintColor,
-        elevation         : materialOptions?.elevation,
-        shape             : materialOptions?.shape,
+        color: materialOptions?.color,
+        shadowColor: materialOptions?.shadowColor,
+        surfaceTintColor: materialOptions?.surfaceTintColor,
+        elevation: materialOptions?.elevation,
+        shape: materialOptions?.shape,
         borderOnForeground: materialOptions?.borderOnForeground ?? true,
-        margin            : materialOptions?.margin,
-        clipBehavior      : materialOptions?.clipBehavior,
-        semanticContainer : materialOptions?.semanticContainer ?? true,
-        child             : this.child,
+        margin: materialOptions?.margin,
+        clipBehavior: materialOptions?.clipBehavior,
+        semanticContainer: materialOptions?.semanticContainer ?? true,
+        child: this.child,
       );
     }
 

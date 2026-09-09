@@ -1,12 +1,19 @@
+## 1.1.0
+
+* Added `NaSearchBar` widget for Material and Cupertino search inputs.
+* Added `naShowDialog` helper function for cross-platform dialog presentation.
+* Exported `NaWidgetOptions` and `NaWidgetOptionsBuilder` in the public API.
+* Added `NaIcons` class for cross-platform icon mapping.
+
 ## 1.0.2
 
 * Cupertino icons dependency.
-* Navigation (NaPageRoute).
+* Navigation (`NaPageRoute`).
 
 ## 1.0.1
 
 * Added dynamic fallback engine for UI rendering with `NaUiTypeScope` and `uiTypes` chain.
-* Migrated 19 foundational widgets (Button, Textfield, Dialog, AppBar, Scaffold, etc.) to natively fallback between custom builder styles, Cupertino, and Material.
+* Migrated 19 foundational widgets (Button, TextField, Dialog, AppBar, Scaffold, etc.) to natively fallback between custom builder styles, Cupertino, and Material.
 
 ## 1.0.0
 

@@ -4,9 +4,10 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:nanna_platform/nanna_platform.dart';
 
 void main() {
-  testWidgets('NaPageRoute returns MaterialPageRoute when uiType is material', (WidgetTester tester) async {
+  testWidgets('NaPageRoute returns MaterialPageRoute when uiType is material',
+      (WidgetTester tester) async {
     PageRoute<dynamic>? route;
-    
+
     await tester.pumpWidget(
       NaUiTypeScope(
         uiTypes: const [NaUiType.material],
@@ -34,9 +35,10 @@ void main() {
     expect(route, isA<MaterialPageRoute>());
   });
 
-  testWidgets('NaPageRoute returns CupertinoPageRoute when uiType is cupertino', (WidgetTester tester) async {
+  testWidgets('NaPageRoute returns CupertinoPageRoute when uiType is cupertino',
+      (WidgetTester tester) async {
     PageRoute<dynamic>? route;
-    
+
     await tester.pumpWidget(
       NaUiTypeScope(
         uiTypes: const [NaUiType.cupertino],
