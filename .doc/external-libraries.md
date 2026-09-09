@@ -34,10 +34,9 @@ void initNannaMacosUi() {
   );
 
   // B. Register how to build a NaButton when macosUiType is active
-  naPlatformServiceRegisterWidgetBuilder(
+  naPlatformServiceRegisterWidgetBuilder<NaButton>(
     macosUiType, 
-    NaButton, 
-    (BuildContext context, covariant NaButton widget) {
+    (BuildContext context, NaButton widget) {
       // The builder checks if the user provided an optionsBuilder, and executes it 
       // to see if MacosButtonOptions were provided.
       final options = widget.optionsBuilder?.call(context, macosUiType);
@@ -49,7 +48,7 @@ void initNannaMacosUi() {
         onPressed: widget.onPressed,
         child: widget.child,
       );
-    }
+    },
   );
 }
 ```
