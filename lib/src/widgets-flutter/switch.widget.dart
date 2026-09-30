@@ -9,12 +9,27 @@ import '../models/widget-options.model.dart';
 /// Base options for [NaSwitch].
 abstract class NaSwitchOptions extends NaWidgetOptions {}
 
-/// Material-specific options for [NaSwitch], resolving into a [Switch].
-class NaSwitchOptionsMaterial extends NaSwitchOptions {
-  final Color? activeThumbColor;
+/// Generic options for [NaSwitch], holding properties common to both platforms.
+class NaSwitchOptionsGeneric extends NaSwitchOptions {
   final Color? activeTrackColor;
-  final Color? inactiveThumbColor;
   final Color? inactiveTrackColor;
+  final Color? focusColor;
+  final FocusNode? focusNode;
+  final bool? autofocus;
+
+  NaSwitchOptionsGeneric({
+    this.activeTrackColor,
+    this.inactiveTrackColor,
+    this.focusColor,
+    this.focusNode,
+    this.autofocus,
+  });
+}
+
+/// Material-specific options for [NaSwitch], resolving into a [Switch].
+class NaSwitchOptionsMaterial extends NaSwitchOptionsGeneric {
+  final Color? activeThumbColor;
+  final Color? inactiveThumbColor;
   final ImageProvider? activeThumbImage;
   final ImageProvider? inactiveThumbImage;
   final WidgetStateProperty<Color?>? thumbColor;
@@ -22,18 +37,13 @@ class NaSwitchOptionsMaterial extends NaSwitchOptions {
   final WidgetStateProperty<Icon?>? thumbIcon;
   final DragStartBehavior? dragStartBehavior;
   final MouseCursor? mouseCursor;
-  final Color? focusColor;
   final Color? hoverColor;
   final WidgetStateProperty<Color?>? overlayColor;
   final double? splashRadius;
-  final FocusNode? focusNode;
-  final bool? autofocus;
 
   NaSwitchOptionsMaterial({
     this.activeThumbColor,
-    this.activeTrackColor,
     this.inactiveThumbColor,
-    this.inactiveTrackColor,
     this.activeThumbImage,
     this.inactiveThumbImage,
     this.thumbColor,
@@ -41,33 +51,30 @@ class NaSwitchOptionsMaterial extends NaSwitchOptions {
     this.thumbIcon,
     this.dragStartBehavior,
     this.mouseCursor,
-    this.focusColor,
     this.hoverColor,
     this.overlayColor,
     this.splashRadius,
-    this.focusNode,
-    this.autofocus,
+    super.activeTrackColor,
+    super.inactiveTrackColor,
+    super.focusColor,
+    super.focusNode,
+    super.autofocus,
   });
 }
 
 /// Cupertino-specific options for [NaSwitch], resolving into a [CupertinoSwitch].
-class NaSwitchOptionsCupertino extends NaSwitchOptions {
-  final Color? activeTrackColor;
-  final Color? inactiveTrackColor;
+class NaSwitchOptionsCupertino extends NaSwitchOptionsGeneric {
   final Color? thumbColor;
   final bool? applyTheme;
-  final Color? focusColor;
-  final FocusNode? focusNode;
-  final bool? autofocus;
 
   NaSwitchOptionsCupertino({
-    this.activeTrackColor,
-    this.inactiveTrackColor,
     this.thumbColor,
     this.applyTheme,
-    this.focusColor,
-    this.focusNode,
-    this.autofocus,
+    super.activeTrackColor,
+    super.inactiveTrackColor,
+    super.focusColor,
+    super.focusNode,
+    super.autofocus,
   });
 }
 
@@ -89,7 +96,11 @@ class NaSwitch extends NaWidget {
 
   @override
   Widget? renderForUIType(BuildContext context, NaUiType uiType) {
-    final NaSwitchOptions? options = optionsBuilder?.call(context, uiType);
+    final NaSwitchOptions? options = this.optionsBuilder?.call(context, uiType);
+    final NaSwitchOptionsGeneric? genericOptions = options is NaSwitchOptionsGeneric
+      ? options
+      : null
+    ;
 
     if (uiType == NaUiType.cupertino) {
       final NaSwitchOptionsCupertino? cupertinoOptions = options is NaSwitchOptionsCupertino
@@ -99,13 +110,13 @@ class NaSwitch extends NaWidget {
       return CupertinoSwitch(
         value             : this.value,
         onChanged         : this.onChanged,
-        activeTrackColor  : cupertinoOptions?.activeTrackColor,
-        inactiveTrackColor: cupertinoOptions?.inactiveTrackColor,
+        activeTrackColor  : genericOptions?.activeTrackColor,
+        inactiveTrackColor: genericOptions?.inactiveTrackColor,
         thumbColor        : cupertinoOptions?.thumbColor,
         applyTheme        : cupertinoOptions?.applyTheme,
-        focusColor        : cupertinoOptions?.focusColor,
-        focusNode         : cupertinoOptions?.focusNode,
-        autofocus         : cupertinoOptions?.autofocus ?? false,
+        focusColor        : genericOptions?.focusColor,
+        focusNode         : genericOptions?.focusNode,
+        autofocus         : genericOptions?.autofocus ?? false,
       );
     }
 
@@ -118,9 +129,9 @@ class NaSwitch extends NaWidget {
         value             : this.value,
         onChanged         : this.onChanged,
         activeThumbColor  : materialOptions?.activeThumbColor,
-        activeTrackColor  : materialOptions?.activeTrackColor,
+        activeTrackColor  : genericOptions?.activeTrackColor,
         inactiveThumbColor: materialOptions?.inactiveThumbColor,
-        inactiveTrackColor: materialOptions?.inactiveTrackColor,
+        inactiveTrackColor: genericOptions?.inactiveTrackColor,
         activeThumbImage  : materialOptions?.activeThumbImage,
         inactiveThumbImage: materialOptions?.inactiveThumbImage,
         thumbColor        : materialOptions?.thumbColor,
@@ -129,12 +140,12 @@ class NaSwitch extends NaWidget {
         dragStartBehavior :
             materialOptions?.dragStartBehavior ?? DragStartBehavior.start,
         mouseCursor : materialOptions?.mouseCursor,
-        focusColor  : materialOptions?.focusColor,
+        focusColor  : genericOptions?.focusColor,
         hoverColor  : materialOptions?.hoverColor,
         overlayColor: materialOptions?.overlayColor,
         splashRadius: materialOptions?.splashRadius,
-        focusNode   : materialOptions?.focusNode,
-        autofocus   : materialOptions?.autofocus ?? false,
+        focusNode   : genericOptions?.focusNode,
+        autofocus   : genericOptions?.autofocus ?? false,
       );
     }
 

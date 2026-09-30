@@ -8,8 +8,13 @@ import '../models/widget-options.model.dart';
 /// Base options for [NaApp].
 abstract class NaAppOptions extends NaWidgetOptions {}
 
+/// Generic options for [NaApp], holding properties common to both platforms.
+class NaAppOptionsGeneric extends NaAppOptions {
+  NaAppOptionsGeneric();
+}
+
 /// Material-specific options for [NaApp], resolving into a [MaterialApp].
-class NaAppOptionsMaterial extends NaAppOptions {
+class NaAppOptionsMaterial extends NaAppOptionsGeneric {
   final ThemeData? theme;
   final ThemeData? darkTheme;
   final ThemeData? highContrastTheme;
@@ -32,7 +37,7 @@ class NaAppOptionsMaterial extends NaAppOptions {
 }
 
 /// Cupertino-specific options for [NaApp], resolving into a [CupertinoApp].
-class NaAppOptionsCupertino extends NaAppOptions {
+class NaAppOptionsCupertino extends NaAppOptionsGeneric {
   final CupertinoThemeData? theme;
 
   NaAppOptionsCupertino({ this.theme });

@@ -8,8 +8,13 @@ import '../models/widget-options.model.dart';
 /// Base options for [NaDialogAction].
 abstract class NaDialogActionOptions extends NaWidgetOptions {}
 
+/// Generic options for [NaDialogAction], holding properties common to both platforms.
+class NaDialogActionOptionsGeneric extends NaDialogActionOptions {
+  NaDialogActionOptionsGeneric();
+}
+
 /// Material-specific options for [NaDialogAction], resolving into a [TextButton].
-class NaDialogActionOptionsMaterial extends NaDialogActionOptions {
+class NaDialogActionOptionsMaterial extends NaDialogActionOptionsGeneric {
   final ButtonStyle? style;
   final FocusNode? focusNode;
   final bool? autofocus;
@@ -24,7 +29,7 @@ class NaDialogActionOptionsMaterial extends NaDialogActionOptions {
 }
 
 /// Cupertino-specific options for [NaDialogAction], resolving into a [CupertinoDialogAction].
-class NaDialogActionOptionsCupertino extends NaDialogActionOptions {
+class NaDialogActionOptionsCupertino extends NaDialogActionOptionsGeneric {
   final bool? isDefaultAction;
   final bool? isDestructiveAction;
   final TextStyle? textStyle;

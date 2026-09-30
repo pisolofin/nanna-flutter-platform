@@ -8,69 +8,75 @@ import '../models/widget-options.model.dart';
 /// Base options for [NaCheckbox].
 abstract class NaCheckboxOptions extends NaWidgetOptions {}
 
-/// Material-specific options for [NaCheckbox], resolving into a [Checkbox].
-class NaCheckboxOptionsMaterial extends NaCheckboxOptions {
+/// Generic options for [NaCheckbox], holding properties common to both platforms.
+class NaCheckboxOptionsGeneric extends NaCheckboxOptions {
   final bool? tristate;
-  final MouseCursor? mouseCursor;
   final Color? activeColor;
-  final WidgetStateProperty<Color?>? fillColor;
   final Color? checkColor;
   final Color? focusColor;
+  final FocusNode? focusNode;
+  final bool? autofocus;
+  final OutlinedBorder? shape;
+  final BorderSide? side;
+  final String? semanticLabel;
+
+  NaCheckboxOptionsGeneric({
+    this.tristate,
+    this.activeColor,
+    this.checkColor,
+    this.focusColor,
+    this.focusNode,
+    this.autofocus,
+    this.shape,
+    this.side,
+    this.semanticLabel,
+  });
+}
+
+/// Material-specific options for [NaCheckbox], resolving into a [Checkbox].
+class NaCheckboxOptionsMaterial extends NaCheckboxOptionsGeneric {
+  final MouseCursor? mouseCursor;
+  final WidgetStateProperty<Color?>? fillColor;
   final Color? hoverColor;
   final WidgetStateProperty<Color?>? overlayColor;
   final double? splashRadius;
   final MaterialTapTargetSize? materialTapTargetSize;
   final VisualDensity? visualDensity;
-  final FocusNode? focusNode;
-  final bool? autofocus;
-  final OutlinedBorder? shape;
-  final BorderSide? side;
   final bool? isError;
-  final String? semanticLabel;
 
   NaCheckboxOptionsMaterial({
-    this.tristate,
     this.mouseCursor,
-    this.activeColor,
     this.fillColor,
-    this.checkColor,
-    this.focusColor,
     this.hoverColor,
     this.overlayColor,
     this.splashRadius,
     this.materialTapTargetSize,
     this.visualDensity,
-    this.focusNode,
-    this.autofocus,
-    this.shape,
-    this.side,
     this.isError,
-    this.semanticLabel,
+    super.tristate,
+    super.activeColor,
+    super.checkColor,
+    super.focusColor,
+    super.focusNode,
+    super.autofocus,
+    super.shape,
+    super.side,
+    super.semanticLabel,
   });
 }
 
 /// Cupertino-specific options for [NaCheckbox], resolving into a [CupertinoCheckbox].
-class NaCheckboxOptionsCupertino extends NaCheckboxOptions {
-  final bool? tristate;
-  final Color? activeColor;
-  final Color? checkColor;
-  final Color? focusColor;
-  final FocusNode? focusNode;
-  final bool? autofocus;
-  final OutlinedBorder? shape;
-  final BorderSide? side;
-  final String? semanticLabel;
-
+class NaCheckboxOptionsCupertino extends NaCheckboxOptionsGeneric {
   NaCheckboxOptionsCupertino({
-    this.tristate,
-    this.activeColor,
-    this.checkColor,
-    this.focusColor,
-    this.focusNode,
-    this.autofocus,
-    this.shape,
-    this.side,
-    this.semanticLabel,
+    super.tristate,
+    super.activeColor,
+    super.checkColor,
+    super.focusColor,
+    super.focusNode,
+    super.autofocus,
+    super.shape,
+    super.side,
+    super.semanticLabel,
   });
 }
 
@@ -92,25 +98,25 @@ class NaCheckbox extends NaWidget {
 
   @override
   Widget? renderForUIType(BuildContext context, NaUiType uiType) {
-    final NaCheckboxOptions? options = optionsBuilder?.call(context, uiType);
+    final NaCheckboxOptions? options = this.optionsBuilder?.call(context, uiType);
+    final NaCheckboxOptionsGeneric? genericOptions = options is NaCheckboxOptionsGeneric
+      ? options
+      : null
+    ;
 
     if (uiType == NaUiType.cupertino) {
-      final NaCheckboxOptionsCupertino? cupertinoOptions = options is NaCheckboxOptionsCupertino
-        ? options
-        : null
-      ;
       return CupertinoCheckbox(
         value        : this.value,
         onChanged    : this.onChanged,
-        tristate     : cupertinoOptions?.tristate ?? false,
-        activeColor  : cupertinoOptions?.activeColor,
-        checkColor   : cupertinoOptions?.checkColor,
-        focusColor   : cupertinoOptions?.focusColor,
-        focusNode    : cupertinoOptions?.focusNode,
-        autofocus    : cupertinoOptions?.autofocus ?? false,
-        shape        : cupertinoOptions?.shape,
-        side         : cupertinoOptions?.side,
-        semanticLabel: cupertinoOptions?.semanticLabel,
+        tristate     : genericOptions?.tristate ?? false,
+        activeColor  : genericOptions?.activeColor,
+        checkColor   : genericOptions?.checkColor,
+        focusColor   : genericOptions?.focusColor,
+        focusNode    : genericOptions?.focusNode,
+        autofocus    : genericOptions?.autofocus ?? false,
+        shape        : genericOptions?.shape,
+        side         : genericOptions?.side,
+        semanticLabel: genericOptions?.semanticLabel,
       );
     }
 
@@ -122,23 +128,23 @@ class NaCheckbox extends NaWidget {
       return Checkbox(
         value                : this.value,
         onChanged            : this.onChanged,
-        tristate             : materialOptions?.tristate ?? false,
+        tristate             : genericOptions?.tristate ?? false,
         mouseCursor          : materialOptions?.mouseCursor,
-        activeColor          : materialOptions?.activeColor,
+        activeColor          : genericOptions?.activeColor,
         fillColor            : materialOptions?.fillColor,
-        checkColor           : materialOptions?.checkColor,
-        focusColor           : materialOptions?.focusColor,
+        checkColor           : genericOptions?.checkColor,
+        focusColor           : genericOptions?.focusColor,
         hoverColor           : materialOptions?.hoverColor,
         overlayColor         : materialOptions?.overlayColor,
         splashRadius         : materialOptions?.splashRadius,
         materialTapTargetSize: materialOptions?.materialTapTargetSize,
         visualDensity        : materialOptions?.visualDensity,
-        focusNode            : materialOptions?.focusNode,
-        autofocus            : materialOptions?.autofocus ?? false,
-        shape                : materialOptions?.shape,
-        side                 : materialOptions?.side,
+        focusNode            : genericOptions?.focusNode,
+        autofocus            : genericOptions?.autofocus ?? false,
+        shape                : genericOptions?.shape,
+        side                 : genericOptions?.side,
         isError              : materialOptions?.isError ?? false,
-        semanticLabel        : materialOptions?.semanticLabel,
+        semanticLabel        : genericOptions?.semanticLabel,
       );
     }
 

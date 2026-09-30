@@ -5,9 +5,16 @@ import '../models/ui-type.model.dart';
 import '../widgets/na-widget.widget.dart';
 import '../models/widget-options.model.dart';
 
+/// Base options for [NaSearchBar].
 abstract class NaSearchBarOptions extends NaWidgetOptions {}
 
-class NaSearchBarOptionsMaterial extends NaSearchBarOptions {
+/// Generic options for [NaSearchBar], holding properties common to both platforms.
+class NaSearchBarOptionsGeneric extends NaSearchBarOptions {
+  NaSearchBarOptionsGeneric();
+}
+
+/// Material-specific options for [NaSearchBar], resolving into a [SearchBar].
+class NaSearchBarOptionsMaterial extends NaSearchBarOptionsGeneric {
   final WidgetStateProperty<Color?>? backgroundColor;
   final WidgetStateProperty<double?>? elevation;
   final Iterable<Widget>? trailing;
@@ -21,7 +28,8 @@ class NaSearchBarOptionsMaterial extends NaSearchBarOptions {
   });
 }
 
-class NaSearchBarOptionsCupertino extends NaSearchBarOptions {
+/// Cupertino-specific options for [NaSearchBar], resolving into a [CupertinoSearchTextField].
+class NaSearchBarOptionsCupertino extends NaSearchBarOptionsGeneric {
   final BoxDecoration? decoration;
   final EdgeInsetsGeometry padding;
   final Color itemColor;

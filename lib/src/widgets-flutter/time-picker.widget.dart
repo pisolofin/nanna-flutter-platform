@@ -8,8 +8,13 @@ import '../models/widget-options.model.dart';
 /// Base options for [NaTimePicker].
 abstract class NaTimePickerOptions extends NaWidgetOptions {}
 
+/// Generic options for [NaTimePicker], holding properties common to both platforms.
+class NaTimePickerOptionsGeneric extends NaTimePickerOptions {
+  NaTimePickerOptionsGeneric();
+}
+
 /// Material-specific options for [NaTimePicker], resolving into a [TimePickerDialog].
-class NaTimePickerOptionsMaterial extends NaTimePickerOptions {
+class NaTimePickerOptionsMaterial extends NaTimePickerOptionsGeneric {
   final String? cancelText;
   final String? confirmText;
   final String? helpText;
@@ -32,7 +37,7 @@ class NaTimePickerOptionsMaterial extends NaTimePickerOptions {
 }
 
 /// Cupertino-specific options for [NaTimePicker], resolving into a [CupertinoTimerPicker].
-class NaTimePickerOptionsCupertino extends NaTimePickerOptions {
+class NaTimePickerOptionsCupertino extends NaTimePickerOptionsGeneric {
   final CupertinoTimerPickerMode? mode;
   final int? minuteInterval;
   final int? secondInterval;

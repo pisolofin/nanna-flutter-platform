@@ -8,8 +8,13 @@ import '../models/widget-options.model.dart';
 /// Base options for [NaDatePicker].
 abstract class NaDatePickerOptions extends NaWidgetOptions {}
 
+/// Generic options for [NaDatePicker], holding properties common to both platforms.
+class NaDatePickerOptionsGeneric extends NaDatePickerOptions {
+  NaDatePickerOptionsGeneric();
+}
+
 /// Material-specific options for [NaDatePicker], resolving into a [CalendarDatePicker].
-class NaDatePickerOptionsMaterial extends NaDatePickerOptions {
+class NaDatePickerOptionsMaterial extends NaDatePickerOptionsGeneric {
   final DateTime? currentDate;
   final ValueChanged<DateTime>? onDisplayedMonthChanged;
   final DatePickerMode? initialCalendarMode;
@@ -24,7 +29,7 @@ class NaDatePickerOptionsMaterial extends NaDatePickerOptions {
 }
 
 /// Cupertino-specific options for [NaDatePicker], resolving into a [CupertinoDatePicker].
-class NaDatePickerOptionsCupertino extends NaDatePickerOptions {
+class NaDatePickerOptionsCupertino extends NaDatePickerOptionsGeneric {
   final double? itemExtent;
   final Widget? selectionOverlay;
   final Color? backgroundColor;

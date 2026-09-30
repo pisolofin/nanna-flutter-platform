@@ -8,8 +8,13 @@ import '../models/widget-options.model.dart';
 /// Base options for [NaListTile].
 abstract class NaListTileOptions extends NaWidgetOptions {}
 
+/// Generic options for [NaListTile], holding properties common to both platforms.
+class NaListTileOptionsGeneric extends NaListTileOptions {
+  NaListTileOptionsGeneric();
+}
+
 /// Material-specific options for [NaListTile], resolving into a [ListTile].
-class NaListTileOptionsMaterial extends NaListTileOptions {
+class NaListTileOptionsMaterial extends NaListTileOptionsGeneric {
   final bool? isThreeLine;
   final bool? dense;
   final VisualDensity? visualDensity;
@@ -66,7 +71,7 @@ class NaListTileOptionsMaterial extends NaListTileOptions {
 }
 
 /// Cupertino-specific options for [NaListTile], resolving into a [CupertinoListTile].
-class NaListTileOptionsCupertino extends NaListTileOptions {
+class NaListTileOptionsCupertino extends NaListTileOptionsGeneric {
   final Widget? additionalInfo;
   final Color? backgroundColor;
   final Color? backgroundColorActivated;

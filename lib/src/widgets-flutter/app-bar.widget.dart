@@ -8,8 +8,13 @@ import '../models/widget-options.model.dart';
 /// Base options for [NaAppBar].
 abstract class NaAppBarOptions extends NaWidgetOptions {}
 
+/// Generic options for [NaAppBar], holding properties common to both platforms.
+class NaAppBarOptionsGeneric extends NaAppBarOptions {
+  NaAppBarOptionsGeneric();
+}
+
 /// Material-specific options for [NaAppBar], resolving into an [AppBar].
-class NaAppBarOptionsMaterial extends NaAppBarOptions {
+class NaAppBarOptionsMaterial extends NaAppBarOptionsGeneric {
   final double? elevation;
   final bool? centerTitle;
   final PreferredSizeWidget? bottom;
@@ -18,7 +23,7 @@ class NaAppBarOptionsMaterial extends NaAppBarOptions {
 }
 
 /// Cupertino-specific options for [NaAppBar], resolving into a [CupertinoNavigationBar].
-class NaAppBarOptionsCupertino extends NaAppBarOptions {
+class NaAppBarOptionsCupertino extends NaAppBarOptionsGeneric {
   final Border? border;
   final bool? transitionBetweenRoutes;
 
@@ -47,7 +52,7 @@ class NaAppBar extends NaWidget implements ObstructingPreferredSizeWidget {
 
   @override
   Widget? renderForUIType(BuildContext context, NaUiType uiType) {
-    final NaAppBarOptions? options = optionsBuilder?.call(context, uiType);
+    final NaAppBarOptions? options = this.optionsBuilder?.call(context, uiType);
 
     if (uiType == NaUiType.cupertino) {
       final NaAppBarOptionsCupertino? cupertinoOptions = options is NaAppBarOptionsCupertino

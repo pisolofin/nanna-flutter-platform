@@ -9,10 +9,8 @@ import '../models/widget-options.model.dart';
 /// Base options for [NaTextField].
 abstract class NaTextFieldOptions extends NaWidgetOptions {}
 
-/// Material-specific options for [NaTextField], resolving into a [TextField].
-class NaTextFieldOptionsMaterial extends NaTextFieldOptions {
-  final InputDecoration? decoration;
-  final TextSelectionThemeData? selectionTheme;
+/// Generic options for [NaTextField], holding properties common to both platforms.
+class NaTextFieldOptionsGeneric extends NaTextFieldOptions {
   final String? obscuringCharacter;
   final bool? obscureText;
   final TextSelectionControls? selectionControls;
@@ -21,14 +19,11 @@ class NaTextFieldOptionsMaterial extends NaTextFieldOptions {
   final double? cursorWidth;
   final Radius? cursorRadius;
   final bool? showCursor;
-  final MouseCursor? mouseCursor;
   final StrutStyle? strutStyle;
   final TextAlignVertical? textAlignVertical;
   final TextDirection? textDirection;
 
-  NaTextFieldOptionsMaterial({
-    this.decoration,
-    this.selectionTheme,
+  NaTextFieldOptionsGeneric({
     this.obscuringCharacter,
     this.obscureText,
     this.selectionControls,
@@ -37,15 +32,38 @@ class NaTextFieldOptionsMaterial extends NaTextFieldOptions {
     this.cursorWidth,
     this.cursorRadius,
     this.showCursor,
-    this.mouseCursor,
     this.strutStyle,
     this.textAlignVertical,
     this.textDirection,
   });
 }
 
+/// Material-specific options for [NaTextField], resolving into a [TextField].
+class NaTextFieldOptionsMaterial extends NaTextFieldOptionsGeneric {
+  final InputDecoration? decoration;
+  final TextSelectionThemeData? selectionTheme;
+  final MouseCursor? mouseCursor;
+
+  NaTextFieldOptionsMaterial({
+    this.decoration,
+    this.selectionTheme,
+    this.mouseCursor,
+    super.obscuringCharacter,
+    super.obscureText,
+    super.selectionControls,
+    super.cursorColor,
+    super.cursorHeight,
+    super.cursorWidth,
+    super.cursorRadius,
+    super.showCursor,
+    super.strutStyle,
+    super.textAlignVertical,
+    super.textDirection,
+  });
+}
+
 /// Cupertino-specific options for [NaTextField], resolving into a [CupertinoTextField].
-class NaTextFieldOptionsCupertino extends NaTextFieldOptions {
+class NaTextFieldOptionsCupertino extends NaTextFieldOptionsGeneric {
   final BoxDecoration? decoration;
   final EdgeInsetsGeometry? padding;
   final Widget? prefix;
@@ -55,17 +73,6 @@ class NaTextFieldOptionsCupertino extends NaTextFieldOptions {
   final OverlayVisibilityMode? clearButtonMode;
   final String? placeholder;
   final TextStyle? placeholderStyle;
-  final String? obscuringCharacter;
-  final bool? obscureText;
-  final Color? cursorColor;
-  final double? cursorHeight;
-  final double? cursorWidth;
-  final Radius? cursorRadius;
-  final bool? showCursor;
-  final TextSelectionControls? selectionControls;
-  final StrutStyle? strutStyle;
-  final TextAlignVertical? textAlignVertical;
-  final TextDirection? textDirection;
 
   NaTextFieldOptionsCupertino({
     this.decoration,
@@ -77,17 +84,17 @@ class NaTextFieldOptionsCupertino extends NaTextFieldOptions {
     this.clearButtonMode,
     this.placeholder,
     this.placeholderStyle,
-    this.obscuringCharacter,
-    this.obscureText,
-    this.cursorColor,
-    this.cursorHeight,
-    this.cursorWidth,
-    this.cursorRadius,
-    this.showCursor,
-    this.selectionControls,
-    this.strutStyle,
-    this.textAlignVertical,
-    this.textDirection,
+    super.obscuringCharacter,
+    super.obscureText,
+    super.cursorColor,
+    super.cursorHeight,
+    super.cursorWidth,
+    super.cursorRadius,
+    super.showCursor,
+    super.selectionControls,
+    super.strutStyle,
+    super.textAlignVertical,
+    super.textDirection,
   });
 }
 
@@ -151,7 +158,11 @@ class NaTextField extends NaWidget {
 
   @override
   Widget? renderForUIType(BuildContext context, NaUiType uiType) {
-    final NaTextFieldOptions? options = optionsBuilder?.call(context, uiType);
+    final NaTextFieldOptions? options = this.optionsBuilder?.call(context, uiType);
+    final NaTextFieldOptionsGeneric? genericOptions = options is NaTextFieldOptionsGeneric
+      ? options
+      : null
+    ;
 
     if (uiType == NaUiType.cupertino) {
       final NaTextFieldOptionsCupertino? cupertinoOptions = options is NaTextFieldOptionsCupertino
@@ -168,8 +179,8 @@ class NaTextField extends NaWidget {
         textAlign         : this.textAlign,
         autofocus         : this.autofocus,
         readOnly          : this.readOnly,
-        showCursor        : cupertinoOptions?.showCursor ?? this.showCursor,
-        obscureText       : cupertinoOptions?.obscureText ?? this.obscureText,
+        showCursor        : genericOptions?.showCursor ?? this.showCursor,
+        obscureText       : genericOptions?.obscureText ?? this.obscureText,
         autocorrect       : this.autocorrect,
         enableSuggestions : this.enableSuggestions,
         maxLines          : this.maxLines,
@@ -200,16 +211,16 @@ class NaTextField extends NaWidget {
               fontWeight: FontWeight.w400,
               color     : CupertinoColors.placeholderText,
             ),
-        obscuringCharacter: cupertinoOptions?.obscuringCharacter ?? '•',
-        cursorColor       : cupertinoOptions?.cursorColor,
-        cursorHeight      : cupertinoOptions?.cursorHeight,
-        cursorWidth       : cupertinoOptions?.cursorWidth ?? 2.0,
+        obscuringCharacter: genericOptions?.obscuringCharacter ?? '•',
+        cursorColor       : genericOptions?.cursorColor,
+        cursorHeight      : genericOptions?.cursorHeight,
+        cursorWidth       : genericOptions?.cursorWidth ?? 2.0,
         cursorRadius      :
-            cupertinoOptions?.cursorRadius ?? const Radius.circular(2.0),
-        selectionControls: cupertinoOptions?.selectionControls,
-        strutStyle       : cupertinoOptions?.strutStyle,
-        textAlignVertical: cupertinoOptions?.textAlignVertical,
-        textDirection    : cupertinoOptions?.textDirection,
+            genericOptions?.cursorRadius ?? const Radius.circular(2.0),
+        selectionControls: genericOptions?.selectionControls,
+        strutStyle       : genericOptions?.strutStyle,
+        textAlignVertical: genericOptions?.textAlignVertical,
+        textDirection    : genericOptions?.textDirection,
       );
     }
 
@@ -228,8 +239,8 @@ class NaTextField extends NaWidget {
         textAlign         : this.textAlign,
         autofocus         : this.autofocus,
         readOnly          : this.readOnly,
-        showCursor        : materialOptions?.showCursor ?? this.showCursor,
-        obscureText       : materialOptions?.obscureText ?? this.obscureText,
+        showCursor        : genericOptions?.showCursor ?? this.showCursor,
+        obscureText       : genericOptions?.obscureText ?? this.obscureText,
         autocorrect       : this.autocorrect,
         enableSuggestions : this.enableSuggestions,
         maxLines          : this.maxLines,
@@ -245,16 +256,16 @@ class NaTextField extends NaWidget {
 
         // Material specific
         decoration        : materialOptions?.decoration ?? const InputDecoration(),
-        obscuringCharacter: materialOptions?.obscuringCharacter ?? '•',
-        selectionControls : materialOptions?.selectionControls,
-        cursorColor       : materialOptions?.cursorColor,
-        cursorHeight      : materialOptions?.cursorHeight,
-        cursorWidth       : materialOptions?.cursorWidth ?? 2.0,
-        cursorRadius      : materialOptions?.cursorRadius,
+        obscuringCharacter: genericOptions?.obscuringCharacter ?? '•',
+        selectionControls : genericOptions?.selectionControls,
+        cursorColor       : genericOptions?.cursorColor,
+        cursorHeight      : genericOptions?.cursorHeight,
+        cursorWidth       : genericOptions?.cursorWidth ?? 2.0,
+        cursorRadius      : genericOptions?.cursorRadius,
         mouseCursor       : materialOptions?.mouseCursor,
-        strutStyle        : materialOptions?.strutStyle,
-        textAlignVertical : materialOptions?.textAlignVertical,
-        textDirection     : materialOptions?.textDirection,
+        strutStyle        : genericOptions?.strutStyle,
+        textAlignVertical : genericOptions?.textAlignVertical,
+        textDirection     : genericOptions?.textDirection,
       );
     }
 

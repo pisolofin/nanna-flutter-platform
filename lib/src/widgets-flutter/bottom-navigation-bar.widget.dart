@@ -8,14 +8,23 @@ import '../models/widget-options.model.dart';
 /// Base options for [NaBottomNavigationBar].
 abstract class NaBottomNavigationBarOptions extends NaWidgetOptions {}
 
+/// Generic options for [NaBottomNavigationBar], holding properties common to both platforms.
+class NaBottomNavigationBarOptionsGeneric extends NaBottomNavigationBarOptions {
+  final Color? backgroundColor;
+  final double? iconSize;
+
+  NaBottomNavigationBarOptionsGeneric({
+    this.backgroundColor,
+    this.iconSize,
+  });
+}
+
 /// Material-specific options for [NaBottomNavigationBar], resolving into a [BottomNavigationBar].
 class NaBottomNavigationBarOptionsMaterial
-    extends NaBottomNavigationBarOptions {
+    extends NaBottomNavigationBarOptionsGeneric {
   final double? elevation;
   final BottomNavigationBarType? type;
   final Color? fixedColor;
-  final Color? backgroundColor;
-  final double? iconSize;
   final Color? selectedItemColor;
   final Color? unselectedItemColor;
   final IconThemeData? selectedIconTheme;
@@ -32,8 +41,6 @@ class NaBottomNavigationBarOptionsMaterial
     this.elevation,
     this.type,
     this.fixedColor,
-    this.backgroundColor,
-    this.iconSize,
     this.selectedItemColor,
     this.unselectedItemColor,
     this.selectedIconTheme,
@@ -45,26 +52,26 @@ class NaBottomNavigationBarOptionsMaterial
     this.mouseCursor,
     this.enableFeedback,
     this.landscapeLayout,
+    super.backgroundColor,
+    super.iconSize,
   });
 }
 
 /// Cupertino-specific options for [NaBottomNavigationBar], resolving into a [CupertinoTabBar].
 class NaBottomNavigationBarOptionsCupertino
-    extends NaBottomNavigationBarOptions {
-  final Color? backgroundColor;
+    extends NaBottomNavigationBarOptionsGeneric {
   final Color? activeColor;
   final Color? inactiveColor;
-  final double? iconSize;
   final double? height;
   final Border? border;
 
   NaBottomNavigationBarOptionsCupertino({
-    this.backgroundColor,
     this.activeColor,
     this.inactiveColor,
-    this.iconSize,
     this.height,
     this.border,
+    super.backgroundColor,
+    super.iconSize,
   });
 }
 
@@ -92,6 +99,10 @@ class NaBottomNavigationBar extends NaWidget {
       context,
       uiType,
     );
+    final NaBottomNavigationBarOptionsGeneric? genericOptions = options is NaBottomNavigationBarOptionsGeneric
+      ? options
+      : null
+    ;
 
     if (uiType == NaUiType.cupertino) {
       final NaBottomNavigationBarOptionsCupertino? cupertinoOptions = options is NaBottomNavigationBarOptionsCupertino
@@ -102,11 +113,11 @@ class NaBottomNavigationBar extends NaWidget {
         items          : this.items,
         onTap          : this.onTap,
         currentIndex   : this.currentIndex,
-        backgroundColor: cupertinoOptions?.backgroundColor,
+        backgroundColor: genericOptions?.backgroundColor,
         activeColor    : cupertinoOptions?.activeColor,
         inactiveColor  :
             cupertinoOptions?.inactiveColor ?? CupertinoColors.inactiveGray,
-        iconSize: cupertinoOptions?.iconSize ?? 30.0,
+        iconSize: genericOptions?.iconSize ?? 30.0,
         height  : cupertinoOptions?.height ?? 50.0,
         border  : cupertinoOptions?.border,
       );
@@ -124,8 +135,8 @@ class NaBottomNavigationBar extends NaWidget {
         elevation           : materialOptions?.elevation,
         type                : materialOptions?.type,
         fixedColor          : materialOptions?.fixedColor,
-        backgroundColor     : materialOptions?.backgroundColor,
-        iconSize            : materialOptions?.iconSize ?? 24.0,
+        backgroundColor     : genericOptions?.backgroundColor,
+        iconSize            : genericOptions?.iconSize ?? 24.0,
         selectedItemColor   : materialOptions?.selectedItemColor,
         unselectedItemColor : materialOptions?.unselectedItemColor,
         selectedIconTheme   : materialOptions?.selectedIconTheme,

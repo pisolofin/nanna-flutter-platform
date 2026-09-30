@@ -8,11 +8,19 @@ import '../models/widget-options.model.dart';
 /// Base options for [NaProgressIndicator].
 abstract class NaProgressIndicatorOptions extends NaWidgetOptions {}
 
+/// Generic options for [NaProgressIndicator], holding properties common to both platforms.
+class NaProgressIndicatorOptionsGeneric extends NaProgressIndicatorOptions {
+  final Color? color;
+
+  NaProgressIndicatorOptionsGeneric({
+    this.color,
+  });
+}
+
 /// Material-specific options for [NaProgressIndicator], resolving into a [CircularProgressIndicator].
-class NaProgressIndicatorOptionsMaterial extends NaProgressIndicatorOptions {
+class NaProgressIndicatorOptionsMaterial extends NaProgressIndicatorOptionsGeneric {
   final double? value;
   final Color? backgroundColor;
-  final Color? color;
   final Animation<Color?>? valueColor;
   final double? strokeWidth;
   final String? semanticsLabel;
@@ -21,24 +29,23 @@ class NaProgressIndicatorOptionsMaterial extends NaProgressIndicatorOptions {
   NaProgressIndicatorOptionsMaterial({
     this.value,
     this.backgroundColor,
-    this.color,
     this.valueColor,
     this.strokeWidth,
     this.semanticsLabel,
     this.semanticsValue,
+    super.color,
   });
 }
 
 /// Cupertino-specific options for [NaProgressIndicator], resolving into a [CupertinoActivityIndicator].
-class NaProgressIndicatorOptionsCupertino extends NaProgressIndicatorOptions {
+class NaProgressIndicatorOptionsCupertino extends NaProgressIndicatorOptionsGeneric {
   final double? radius;
   final bool? animating;
-  final Color? color;
 
   NaProgressIndicatorOptionsCupertino({
     this.radius,
     this.animating,
-    this.color,
+    super.color,
   });
 }
 
@@ -55,6 +62,10 @@ class NaProgressIndicator extends NaWidget {
       context,
       uiType,
     );
+    final NaProgressIndicatorOptionsGeneric? genericOptions = options is NaProgressIndicatorOptionsGeneric
+      ? options
+      : null
+    ;
 
     if (uiType == NaUiType.cupertino) {
       final NaProgressIndicatorOptionsCupertino? cupertinoOptions = options is NaProgressIndicatorOptionsCupertino
@@ -64,7 +75,7 @@ class NaProgressIndicator extends NaWidget {
       return CupertinoActivityIndicator(
         radius   : cupertinoOptions?.radius ?? 10.0,
         animating: cupertinoOptions?.animating ?? true,
-        color    : cupertinoOptions?.color,
+        color    : genericOptions?.color,
       );
     }
 
@@ -76,7 +87,7 @@ class NaProgressIndicator extends NaWidget {
       return CircularProgressIndicator(
         value          : materialOptions?.value,
         backgroundColor: materialOptions?.backgroundColor,
-        color          : materialOptions?.color,
+        color          : genericOptions?.color,
         valueColor     : materialOptions?.valueColor,
         strokeWidth    : materialOptions?.strokeWidth ?? 4.0,
         semanticsLabel : materialOptions?.semanticsLabel,

@@ -5,33 +5,43 @@ import '../models/ui-type.model.dart';
 import '../widgets/na-widget.widget.dart';
 import '../models/widget-options.model.dart';
 
+/// Base options for [NaScrollbar].
 abstract class NaScrollbarOptions extends NaWidgetOptions {}
 
-class NaScrollbarOptionsMaterial extends NaScrollbarOptions {
-  final bool? trackVisibility;
-  final bool? interactive;
+/// Generic options for [NaScrollbar], holding properties common to both platforms.
+class NaScrollbarOptionsGeneric extends NaScrollbarOptions {
   final double? thickness;
   final Radius? radius;
 
-  NaScrollbarOptionsMaterial({
-    this.trackVisibility,
-    this.interactive,
+  NaScrollbarOptionsGeneric({
     this.thickness,
     this.radius,
   });
 }
 
-class NaScrollbarOptionsCupertino extends NaScrollbarOptions {
-  final double thickness;
+/// Material-specific options for [NaScrollbar], resolving into a [Scrollbar].
+class NaScrollbarOptionsMaterial extends NaScrollbarOptionsGeneric {
+  final bool? trackVisibility;
+  final bool? interactive;
+
+  NaScrollbarOptionsMaterial({
+    this.trackVisibility,
+    this.interactive,
+    super.thickness,
+    super.radius,
+  });
+}
+
+/// Cupertino-specific options for [NaScrollbar], resolving into a [CupertinoScrollbar].
+class NaScrollbarOptionsCupertino extends NaScrollbarOptionsGeneric {
   final double thicknessWhileDragging;
-  final Radius radius;
   final Radius radiusWhileDragging;
 
   NaScrollbarOptionsCupertino({
-    this.thickness = CupertinoScrollbar.defaultThickness,
+    super.thickness = CupertinoScrollbar.defaultThickness,
     this.thicknessWhileDragging =
         CupertinoScrollbar.defaultThicknessWhileDragging,
-    this.radius = CupertinoScrollbar.defaultRadius,
+    super.radius = CupertinoScrollbar.defaultRadius,
     this.radiusWhileDragging = CupertinoScrollbar.defaultRadiusWhileDragging,
   });
 }
@@ -58,7 +68,11 @@ class NaScrollbar extends NaWidget {
   @override
   Widget? renderForUIType(BuildContext context, NaUiType uiType) {
     final NaScrollbarOptions? options =
-        this.options ?? optionsBuilder?.call(context, uiType);
+        this.options ?? this.optionsBuilder?.call(context, uiType);
+    final NaScrollbarOptionsGeneric? genericOptions = options is NaScrollbarOptionsGeneric
+      ? options
+      : null
+    ;
 
     if (uiType == NaUiType.cupertino) {
       final NaScrollbarOptionsCupertino? cupertinoOptions = options is NaScrollbarOptionsCupertino
@@ -70,10 +84,10 @@ class NaScrollbar extends NaWidget {
         controller     : this.controller,
         thumbVisibility: this.thumbVisibility ?? false,
         thickness      :
-            cupertinoOptions?.thickness ?? CupertinoScrollbar.defaultThickness,
+            genericOptions?.thickness ?? CupertinoScrollbar.defaultThickness,
         thicknessWhileDragging: cupertinoOptions?.thicknessWhileDragging ??
             CupertinoScrollbar.defaultThicknessWhileDragging,
-        radius             : cupertinoOptions?.radius ?? CupertinoScrollbar.defaultRadius,
+        radius             : genericOptions?.radius ?? CupertinoScrollbar.defaultRadius,
         radiusWhileDragging: cupertinoOptions?.radiusWhileDragging ??
             CupertinoScrollbar.defaultRadiusWhileDragging,
         child: this.child,
@@ -91,8 +105,8 @@ class NaScrollbar extends NaWidget {
         thumbVisibility: this.thumbVisibility,
         trackVisibility: materialOptions?.trackVisibility,
         interactive    : materialOptions?.interactive,
-        thickness      : materialOptions?.thickness,
-        radius         : materialOptions?.radius,
+        thickness      : genericOptions?.thickness,
+        radius         : genericOptions?.radius,
         child          : this.child,
       );
     }

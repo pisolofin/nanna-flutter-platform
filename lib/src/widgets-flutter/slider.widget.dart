@@ -8,40 +8,50 @@ import '../models/widget-options.model.dart';
 /// Base options for [NaSlider].
 abstract class NaSliderOptions extends NaWidgetOptions {}
 
-/// Material-specific options for [NaSlider], resolving into a [Slider].
-class NaSliderOptionsMaterial extends NaSliderOptions {
+/// Generic options for [NaSlider], holding properties common to both platforms.
+class NaSliderOptionsGeneric extends NaSliderOptions {
   final Color? activeColor;
-  final Color? inactiveColor;
   final Color? thumbColor;
+  final int? divisions;
+
+  NaSliderOptionsGeneric({
+    this.activeColor,
+    this.thumbColor,
+    this.divisions,
+  });
+}
+
+/// Material-specific options for [NaSlider], resolving into a [Slider].
+class NaSliderOptionsMaterial extends NaSliderOptionsGeneric {
+  final Color? inactiveColor;
   final WidgetStateProperty<Color?>? overlayColor;
   final MouseCursor? mouseCursor;
   final SemanticFormatterCallback? semanticFormatterCallback;
   final FocusNode? focusNode;
   final bool? autofocus;
   final String? label;
-  final int? divisions;
 
   NaSliderOptionsMaterial({
-    this.activeColor,
     this.inactiveColor,
-    this.thumbColor,
     this.overlayColor,
     this.mouseCursor,
     this.semanticFormatterCallback,
     this.focusNode,
     this.autofocus,
     this.label,
-    this.divisions,
+    super.activeColor,
+    super.thumbColor,
+    super.divisions,
   });
 }
 
 /// Cupertino-specific options for [NaSlider], resolving into a [CupertinoSlider].
-class NaSliderOptionsCupertino extends NaSliderOptions {
-  final Color? activeColor;
-  final Color? thumbColor;
-  final int? divisions;
-
-  NaSliderOptionsCupertino({ this.activeColor, this.thumbColor, this.divisions });
+class NaSliderOptionsCupertino extends NaSliderOptionsGeneric {
+  NaSliderOptionsCupertino({
+    super.activeColor,
+    super.thumbColor,
+    super.divisions,
+  });
 }
 
 /// A generic Slider widget that automatically renders a [Slider] on Material
@@ -70,13 +80,13 @@ class NaSlider extends NaWidget {
 
   @override
   Widget? renderForUIType(BuildContext context, NaUiType uiType) {
-    final NaSliderOptions? options = optionsBuilder?.call(context, uiType);
+    final NaSliderOptions? options = this.optionsBuilder?.call(context, uiType);
+    final NaSliderOptionsGeneric? genericOptions = options is NaSliderOptionsGeneric
+      ? options
+      : null
+    ;
 
     if (uiType == NaUiType.cupertino) {
-      final NaSliderOptionsCupertino? cupertinoOptions = options is NaSliderOptionsCupertino
-        ? options
-        : null
-      ;
       return CupertinoSlider(
         value        : this.value,
         onChanged    : this.onChanged,
@@ -84,9 +94,9 @@ class NaSlider extends NaWidget {
         onChangeEnd  : this.onChangeEnd,
         min          : this.min,
         max          : this.max,
-        activeColor  : cupertinoOptions?.activeColor,
-        thumbColor   : cupertinoOptions?.thumbColor ?? CupertinoColors.white,
-        divisions    : cupertinoOptions?.divisions,
+        activeColor  : genericOptions?.activeColor,
+        thumbColor   : genericOptions?.thumbColor ?? CupertinoColors.white,
+        divisions    : genericOptions?.divisions,
       );
     }
 
@@ -102,16 +112,16 @@ class NaSlider extends NaWidget {
         onChangeEnd              : this.onChangeEnd,
         min                      : this.min,
         max                      : this.max,
-        activeColor              : materialOptions?.activeColor,
+        activeColor              : genericOptions?.activeColor,
         inactiveColor            : materialOptions?.inactiveColor,
-        thumbColor               : materialOptions?.thumbColor,
+        thumbColor               : genericOptions?.thumbColor,
         overlayColor             : materialOptions?.overlayColor,
         mouseCursor              : materialOptions?.mouseCursor,
         semanticFormatterCallback: materialOptions?.semanticFormatterCallback,
         focusNode                : materialOptions?.focusNode,
         autofocus                : materialOptions?.autofocus ?? false,
         label                    : materialOptions?.label,
-        divisions                : materialOptions?.divisions,
+        divisions                : genericOptions?.divisions,
       );
     }
 

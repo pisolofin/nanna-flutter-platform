@@ -9,26 +9,34 @@ import '../models/widget-options.model.dart';
 /// Base options for [NaScaffold].
 abstract class NaScaffoldOptions extends NaWidgetOptions {}
 
+/// Generic options for [NaScaffold], holding properties common to both platforms.
+class NaScaffoldOptionsGeneric extends NaScaffoldOptions {
+  final bool? resizeToAvoidBottomInset;
+
+  NaScaffoldOptionsGeneric({
+    this.resizeToAvoidBottomInset,
+  });
+}
+
 /// Material-specific options for [NaScaffold], resolving into a [Scaffold].
-class NaScaffoldOptionsMaterial extends NaScaffoldOptions {
+class NaScaffoldOptionsMaterial extends NaScaffoldOptionsGeneric {
   final Widget? floatingActionButton;
   final Widget? bottomNavigationBar;
   final Widget? drawer;
-  final bool? resizeToAvoidBottomInset;
 
   NaScaffoldOptionsMaterial({
     this.floatingActionButton,
     this.bottomNavigationBar,
     this.drawer,
-    this.resizeToAvoidBottomInset,
+    super.resizeToAvoidBottomInset,
   });
 }
 
 /// Cupertino-specific options for [NaScaffold], resolving into a [CupertinoPageScaffold].
-class NaScaffoldOptionsCupertino extends NaScaffoldOptions {
-  final bool? resizeToAvoidBottomInset;
-
-  NaScaffoldOptionsCupertino({ this.resizeToAvoidBottomInset });
+class NaScaffoldOptionsCupertino extends NaScaffoldOptionsGeneric {
+  NaScaffoldOptionsCupertino({
+    super.resizeToAvoidBottomInset,
+  });
 }
 
 /// A generic Scaffold widget that automatically renders a [Scaffold] on Material
@@ -54,13 +62,12 @@ class NaScaffold extends NaWidget {
   @override
   Widget? renderForUIType(BuildContext context, NaUiType uiType) {
     final NaScaffoldOptions? options = optionsBuilder?.call(context, uiType);
+    final NaScaffoldOptionsGeneric? genericOptions = options is NaScaffoldOptionsGeneric
+      ? options
+      : null
+    ;
 
     if (uiType == NaUiType.cupertino) {
-      final NaScaffoldOptionsCupertino? cupertinoOptions = options is NaScaffoldOptionsCupertino
-        ? options
-        : null
-      ;
-
       Widget content = this.body;
       if (this.bottomNavigationBar != null) {
         content = Column(
@@ -75,7 +82,7 @@ class NaScaffold extends NaWidget {
         navigationBar           : this.appBar,
         backgroundColor         : this.backgroundColor,
         resizeToAvoidBottomInset:
-            cupertinoOptions?.resizeToAvoidBottomInset ?? true,
+            genericOptions?.resizeToAvoidBottomInset ?? true,
         child: content,
       );
     }
@@ -93,7 +100,7 @@ class NaScaffold extends NaWidget {
         bottomNavigationBar :
             materialOptions?.bottomNavigationBar ?? this.bottomNavigationBar,
         drawer                  : materialOptions?.drawer,
-        resizeToAvoidBottomInset: materialOptions?.resizeToAvoidBottomInset,
+        resizeToAvoidBottomInset: genericOptions?.resizeToAvoidBottomInset,
       );
     }
 

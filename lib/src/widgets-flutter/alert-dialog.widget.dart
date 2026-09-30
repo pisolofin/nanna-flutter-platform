@@ -8,8 +8,13 @@ import '../models/widget-options.model.dart';
 /// Base options for [NaAlertDialog].
 abstract class NaAlertDialogOptions extends NaWidgetOptions {}
 
+/// Generic options for [NaAlertDialog], holding properties common to both platforms.
+class NaAlertDialogOptionsGeneric extends NaAlertDialogOptions {
+  NaAlertDialogOptionsGeneric();
+}
+
 /// Material-specific options for [NaAlertDialog], resolving into a [AlertDialog].
-class NaAlertDialogOptionsMaterial extends NaAlertDialogOptions {
+class NaAlertDialogOptionsMaterial extends NaAlertDialogOptionsGeneric {
   /// The optional icon at the top of the dialog.
   final Widget? icon;
 
@@ -100,7 +105,7 @@ class NaAlertDialogOptionsMaterial extends NaAlertDialogOptions {
 }
 
 /// Cupertino-specific options for [NaAlertDialog], resolving into a [CupertinoAlertDialog].
-class NaAlertDialogOptionsCupertino extends NaAlertDialogOptions {
+class NaAlertDialogOptionsCupertino extends NaAlertDialogOptionsGeneric {
   /// Scroll controller for the actions section.
   final ScrollController? actionScrollController;
 
@@ -141,7 +146,7 @@ class NaAlertDialog extends NaWidget {
 
   @override
   Widget? renderForUIType(BuildContext context, NaUiType uiType) {
-    final NaAlertDialogOptions? options = optionsBuilder?.call(context, uiType);
+    final NaAlertDialogOptions? options = this.optionsBuilder?.call(context, uiType);
 
     if (uiType == NaUiType.cupertino) {
       final NaAlertDialogOptionsCupertino? cupertinoOptions = options is NaAlertDialogOptionsCupertino

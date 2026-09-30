@@ -1,3 +1,8 @@
+## 1.2.0
+
+* Added `NaApp.router` to configure the router.
+* Added `NaOptionsGeneric` to support common widget options.
+
 ## 1.1.0
 
 * Added `NaSearchBar` widget for Material and Cupertino search inputs.

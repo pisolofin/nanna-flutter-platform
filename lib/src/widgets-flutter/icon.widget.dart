@@ -9,38 +9,44 @@ import '../models/widget-options.model.dart';
 /// Base options for [NaIcon].
 abstract class NaIconOptions extends NaWidgetOptions {}
 
-/// Material-specific options for [NaIcon], resolving into an [Icon].
-class NaIconOptionsMaterial extends NaIconOptions {
-  final double? fill;
-  final double? weight;
-  final double? grade;
-  final double? opticalSize;
+/// Generic options for [NaIcon], holding properties common to both platforms.
+class NaIconOptionsGeneric extends NaIconOptions {
   final List<Shadow>? shadows;
   final String? semanticLabel;
   final TextDirection? textDirection;
 
-  NaIconOptionsMaterial({
-    this.fill,
-    this.weight,
-    this.grade,
-    this.opticalSize,
+  NaIconOptionsGeneric({
     this.shadows,
     this.semanticLabel,
     this.textDirection,
   });
 }
 
+/// Material-specific options for [NaIcon], resolving into an [Icon].
+class NaIconOptionsMaterial extends NaIconOptionsGeneric {
+  final double? fill;
+  final double? weight;
+  final double? grade;
+  final double? opticalSize;
+
+  NaIconOptionsMaterial({
+    this.fill,
+    this.weight,
+    this.grade,
+    this.opticalSize,
+    super.shadows,
+    super.semanticLabel,
+    super.textDirection,
+  });
+}
+
 /// Cupertino-specific options for [NaIcon], resolving into an [Icon].
 /// (Cupertino does not use fill/weight/grade native properties by default on standard icons).
-class NaIconOptionsCupertino extends NaIconOptions {
-  final List<Shadow>? shadows;
-  final String? semanticLabel;
-  final TextDirection? textDirection;
-
+class NaIconOptionsCupertino extends NaIconOptionsGeneric {
   NaIconOptionsCupertino({
-    this.shadows,
-    this.semanticLabel,
-    this.textDirection,
+    super.shadows,
+    super.semanticLabel,
+    super.textDirection,
   });
 }
 
@@ -64,22 +70,22 @@ class NaIcon extends NaWidget {
 
   @override
   Widget? renderForUIType(BuildContext context, NaUiType uiType) {
-    final NaIconOptions? options = optionsBuilder?.call(context, uiType);
+    final NaIconOptions? options = this.optionsBuilder?.call(context, uiType);
+    final NaIconOptionsGeneric? genericOptions = options is NaIconOptionsGeneric
+      ? options
+      : null
+    ;
 
     final IconData resolvedIcon = this.icon.resolve(uiType);
 
     if (uiType == NaUiType.cupertino) {
-      final NaIconOptionsCupertino? cupertinoOptions = options is NaIconOptionsCupertino
-        ? options
-        : null
-      ;
       return Icon(
         resolvedIcon,
         size         : this.size,
         color        : this.color,
-        shadows      : cupertinoOptions?.shadows,
-        semanticLabel: cupertinoOptions?.semanticLabel,
-        textDirection: cupertinoOptions?.textDirection,
+        shadows      : genericOptions?.shadows,
+        semanticLabel: genericOptions?.semanticLabel,
+        textDirection: genericOptions?.textDirection,
       );
     }
 
@@ -96,9 +102,9 @@ class NaIcon extends NaWidget {
         weight       : materialOptions?.weight,
         grade        : materialOptions?.grade,
         opticalSize  : materialOptions?.opticalSize,
-        shadows      : materialOptions?.shadows,
-        semanticLabel: materialOptions?.semanticLabel,
-        textDirection: materialOptions?.textDirection,
+        shadows      : genericOptions?.shadows,
+        semanticLabel: genericOptions?.semanticLabel,
+        textDirection: genericOptions?.textDirection,
       );
     }
 

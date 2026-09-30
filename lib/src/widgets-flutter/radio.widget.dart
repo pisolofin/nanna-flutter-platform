@@ -8,51 +8,58 @@ import '../models/widget-options.model.dart';
 /// Base options for [NaRadio].
 abstract class NaRadioOptions extends NaWidgetOptions {}
 
-/// Material-specific options for [NaRadio], resolving into a [Radio].
-class NaRadioOptionsMaterial extends NaRadioOptions {
-  final MouseCursor? mouseCursor;
+/// Generic options for [NaRadio], holding properties common to both platforms.
+class NaRadioOptionsGeneric extends NaRadioOptions {
   final bool? toggleable;
   final Color? activeColor;
-  final WidgetStateProperty<Color?>? fillColor;
   final Color? focusColor;
-  final Color? hoverColor;
-  final WidgetStateProperty<Color?>? overlayColor;
-  final double? splashRadius;
   final FocusNode? focusNode;
   final bool? autofocus;
 
-  NaRadioOptionsMaterial({
-    this.mouseCursor,
+  NaRadioOptionsGeneric({
     this.toggleable,
     this.activeColor,
-    this.fillColor,
     this.focusColor,
-    this.hoverColor,
-    this.overlayColor,
-    this.splashRadius,
     this.focusNode,
     this.autofocus,
   });
 }
 
+/// Material-specific options for [NaRadio], resolving into a [Radio].
+class NaRadioOptionsMaterial extends NaRadioOptionsGeneric {
+  final MouseCursor? mouseCursor;
+  final WidgetStateProperty<Color?>? fillColor;
+  final Color? hoverColor;
+  final WidgetStateProperty<Color?>? overlayColor;
+  final double? splashRadius;
+
+  NaRadioOptionsMaterial({
+    this.mouseCursor,
+    this.fillColor,
+    this.hoverColor,
+    this.overlayColor,
+    this.splashRadius,
+    super.toggleable,
+    super.activeColor,
+    super.focusColor,
+    super.focusNode,
+    super.autofocus,
+  });
+}
+
 /// Cupertino-specific options for [NaRadio], resolving into a [CupertinoRadio].
-class NaRadioOptionsCupertino extends NaRadioOptions {
-  final Color? activeColor;
+class NaRadioOptionsCupertino extends NaRadioOptionsGeneric {
   final Color? inactiveColor;
   final Color? fillColor;
-  final Color? focusColor;
-  final FocusNode? focusNode;
-  final bool? autofocus;
-  final bool? toggleable;
 
   NaRadioOptionsCupertino({
-    this.activeColor,
     this.inactiveColor,
     this.fillColor,
-    this.focusColor,
-    this.focusNode,
-    this.autofocus,
-    this.toggleable,
+    super.activeColor,
+    super.focusColor,
+    super.focusNode,
+    super.autofocus,
+    super.toggleable,
   });
 }
 
@@ -76,7 +83,11 @@ class NaRadio<T> extends NaWidget {
 
   @override
   Widget? renderForUIType(BuildContext context, NaUiType uiType) {
-    final NaRadioOptions? options = optionsBuilder?.call(context, uiType);
+    final NaRadioOptions? options = this.optionsBuilder?.call(context, uiType);
+    final NaRadioOptionsGeneric? genericOptions = options is NaRadioOptionsGeneric
+      ? options
+      : null
+    ;
 
     if (uiType == NaUiType.cupertino) {
       final NaRadioOptionsCupertino? cupertinoOptions = options is NaRadioOptionsCupertino
@@ -89,13 +100,13 @@ class NaRadio<T> extends NaWidget {
         groupValue: this.groupValue,
         // ignore: deprecated_member_use
         onChanged    : this.onChanged,
-        activeColor  : cupertinoOptions?.activeColor,
+        activeColor  : genericOptions?.activeColor,
         inactiveColor: cupertinoOptions?.inactiveColor,
         fillColor    : cupertinoOptions?.fillColor,
-        focusColor   : cupertinoOptions?.focusColor,
-        focusNode    : cupertinoOptions?.focusNode,
-        autofocus    : cupertinoOptions?.autofocus ?? false,
-        toggleable   : cupertinoOptions?.toggleable ?? false,
+        focusColor   : genericOptions?.focusColor,
+        focusNode    : genericOptions?.focusNode,
+        autofocus    : genericOptions?.autofocus ?? false,
+        toggleable   : genericOptions?.toggleable ?? false,
       );
     }
 
@@ -111,15 +122,15 @@ class NaRadio<T> extends NaWidget {
         // ignore: deprecated_member_use
         onChanged   : this.onChanged,
         mouseCursor : materialOptions?.mouseCursor,
-        toggleable  : materialOptions?.toggleable ?? false,
-        activeColor : materialOptions?.activeColor,
+        toggleable  : genericOptions?.toggleable ?? false,
+        activeColor : genericOptions?.activeColor,
         fillColor   : materialOptions?.fillColor,
-        focusColor  : materialOptions?.focusColor,
+        focusColor  : genericOptions?.focusColor,
         hoverColor  : materialOptions?.hoverColor,
         overlayColor: materialOptions?.overlayColor,
         splashRadius: materialOptions?.splashRadius,
-        focusNode   : materialOptions?.focusNode,
-        autofocus   : materialOptions?.autofocus ?? false,
+        focusNode   : genericOptions?.focusNode,
+        autofocus   : genericOptions?.autofocus ?? false,
       );
     }
 

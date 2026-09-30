@@ -8,8 +8,13 @@ import '../models/widget-options.model.dart';
 /// Base options for [NaButton].
 abstract class NaButtonOptions extends NaWidgetOptions {}
 
+/// Generic options for [NaButton], holding properties common to both platforms.
+class NaButtonOptionsGeneric extends NaButtonOptions {
+  NaButtonOptionsGeneric();
+}
+
 /// Material-specific options for [NaButton], resolving into an [ElevatedButton].
-class NaButtonOptionsMaterial extends NaButtonOptions {
+class NaButtonOptionsMaterial extends NaButtonOptionsGeneric {
   final VoidCallback? onLongPress;
   final ValueChanged<bool>? onHover;
   final ValueChanged<bool>? onFocusChange;
@@ -32,7 +37,7 @@ class NaButtonOptionsMaterial extends NaButtonOptions {
 }
 
 /// Cupertino-specific options for [NaButton], resolving into a [CupertinoButton].
-class NaButtonOptionsCupertino extends NaButtonOptions {
+class NaButtonOptionsCupertino extends NaButtonOptionsGeneric {
   final EdgeInsetsGeometry? padding;
   final Color? color;
   final Color? disabledColor;
