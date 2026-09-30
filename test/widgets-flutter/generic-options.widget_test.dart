@@ -11,6 +11,7 @@ void main() {
       tester,
       NaTextField(
         optionsBuilder: (BuildContext context, NaUiType uiType) => NaTextFieldOptionsGeneric(
+          placeholder       : 'Enter text',
           obscureText       : true,
           obscuringCharacter: '*',
         ),
@@ -19,11 +20,13 @@ void main() {
     final TextField materialTextField = tester.widget(find.byType(TextField));
     expect(materialTextField.obscureText, isTrue);
     expect(materialTextField.obscuringCharacter, '*');
+    expect(materialTextField.decoration?.hintText, 'Enter text');
 
     await pumpCupertinoNaWidget(
       tester,
       NaTextField(
         optionsBuilder: (BuildContext context, NaUiType uiType) => NaTextFieldOptionsGeneric(
+          placeholder       : 'Enter text',
           obscureText       : true,
           obscuringCharacter: '*',
         ),
@@ -32,6 +35,7 @@ void main() {
     final CupertinoTextField cupertinoTextField = tester.widget(find.byType(CupertinoTextField));
     expect(cupertinoTextField.obscureText, isTrue);
     expect(cupertinoTextField.obscuringCharacter, '*');
+    expect(cupertinoTextField.placeholder, 'Enter text');
   });
 
   testWidgets('NaCheckbox optionsBuilder with NaCheckboxOptionsGeneric in Material and Cupertino', (WidgetTester tester) async {

@@ -11,6 +11,7 @@ abstract class NaTextFieldOptions extends NaWidgetOptions {}
 
 /// Generic options for [NaTextField], holding properties common to both platforms.
 class NaTextFieldOptionsGeneric extends NaTextFieldOptions {
+  final String? placeholder;
   final String? obscuringCharacter;
   final bool? obscureText;
   final TextSelectionControls? selectionControls;
@@ -24,6 +25,7 @@ class NaTextFieldOptionsGeneric extends NaTextFieldOptions {
   final TextDirection? textDirection;
 
   NaTextFieldOptionsGeneric({
+    this.placeholder,
     this.obscuringCharacter,
     this.obscureText,
     this.selectionControls,
@@ -48,6 +50,7 @@ class NaTextFieldOptionsMaterial extends NaTextFieldOptionsGeneric {
     this.decoration,
     this.selectionTheme,
     this.mouseCursor,
+    super.placeholder,
     super.obscuringCharacter,
     super.obscureText,
     super.selectionControls,
@@ -71,7 +74,6 @@ class NaTextFieldOptionsCupertino extends NaTextFieldOptionsGeneric {
   final Widget? suffix;
   final OverlayVisibilityMode? suffixMode;
   final OverlayVisibilityMode? clearButtonMode;
-  final String? placeholder;
   final TextStyle? placeholderStyle;
 
   NaTextFieldOptionsCupertino({
@@ -82,8 +84,8 @@ class NaTextFieldOptionsCupertino extends NaTextFieldOptionsGeneric {
     this.suffix,
     this.suffixMode,
     this.clearButtonMode,
-    this.placeholder,
     this.placeholderStyle,
+    super.placeholder,
     super.obscuringCharacter,
     super.obscureText,
     super.cursorColor,
@@ -205,7 +207,7 @@ class NaTextField extends NaWidget {
             cupertinoOptions?.suffixMode ?? OverlayVisibilityMode.always,
         clearButtonMode:
             cupertinoOptions?.clearButtonMode ?? OverlayVisibilityMode.never,
-        placeholder     : cupertinoOptions?.placeholder,
+        placeholder     : genericOptions?.placeholder,
         placeholderStyle: cupertinoOptions?.placeholderStyle ??
             const TextStyle(
               fontWeight: FontWeight.w400,
@@ -228,6 +230,11 @@ class NaTextField extends NaWidget {
       final NaTextFieldOptionsMaterial? materialOptions = options is NaTextFieldOptionsMaterial
         ? options
         : null
+      ;
+      final InputDecoration effectiveDecoration = materialOptions?.decoration ?? const InputDecoration();
+      final InputDecoration decoration = ((genericOptions?.placeholder != null) && (effectiveDecoration.hintText == null))
+        ? effectiveDecoration.copyWith(hintText: genericOptions?.placeholder)
+        : effectiveDecoration
       ;
       return TextField(
         controller        : this.controller,
@@ -255,7 +262,7 @@ class NaTextField extends NaWidget {
         keyboardAppearance: this.keyboardAppearance,
 
         // Material specific
-        decoration        : materialOptions?.decoration ?? const InputDecoration(),
+        decoration        : decoration,
         obscuringCharacter: genericOptions?.obscuringCharacter ?? '•',
         selectionControls : genericOptions?.selectionControls,
         cursorColor       : genericOptions?.cursorColor,
