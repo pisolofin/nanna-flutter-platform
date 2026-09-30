@@ -69,30 +69,34 @@ class NaIcon extends NaWidget {
     final IconData resolvedIcon = this.icon.resolve(uiType);
 
     if (uiType == NaUiType.cupertino) {
-      final NaIconOptionsCupertino? cupertinoOptions =
-          options is NaIconOptionsCupertino ? options : null;
+      final NaIconOptionsCupertino? cupertinoOptions = options is NaIconOptionsCupertino
+        ? options
+        : null
+      ;
       return Icon(
         resolvedIcon,
-        size: this.size,
-        color: this.color,
-        shadows: cupertinoOptions?.shadows,
+        size         : this.size,
+        color        : this.color,
+        shadows      : cupertinoOptions?.shadows,
         semanticLabel: cupertinoOptions?.semanticLabel,
         textDirection: cupertinoOptions?.textDirection,
       );
     }
 
     if (uiType == NaUiType.material) {
-      final NaIconOptionsMaterial? materialOptions =
-          options is NaIconOptionsMaterial ? options : null;
+      final NaIconOptionsMaterial? materialOptions = options is NaIconOptionsMaterial
+        ? options
+        : null
+      ;
       return Icon(
         resolvedIcon,
-        size: this.size,
-        color: this.color,
-        fill: materialOptions?.fill,
-        weight: materialOptions?.weight,
-        grade: materialOptions?.grade,
-        opticalSize: materialOptions?.opticalSize,
-        shadows: materialOptions?.shadows,
+        size         : this.size,
+        color        : this.color,
+        fill         : materialOptions?.fill,
+        weight       : materialOptions?.weight,
+        grade        : materialOptions?.grade,
+        opticalSize  : materialOptions?.opticalSize,
+        shadows      : materialOptions?.shadows,
         semanticLabel: materialOptions?.semanticLabel,
         textDirection: materialOptions?.textDirection,
       );

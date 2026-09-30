@@ -68,8 +68,10 @@ class NaSearchBar extends NaWidget {
         this.options ?? optionsBuilder?.call(context, uiType);
 
     if (uiType == NaUiType.cupertino) {
-      final NaSearchBarOptionsCupertino? cupertinoOptions =
-          options is NaSearchBarOptionsCupertino ? options : null;
+      final NaSearchBarOptionsCupertino? cupertinoOptions = options is NaSearchBarOptionsCupertino
+        ? options
+        : null
+      ;
 
       // Extract the icon from 'leading' if it's an Icon widget, as CupertinoSearchTextField
       // expects an Icon for prefixIcon (defaulting to CupertinoIcons.search).
@@ -79,37 +81,39 @@ class NaSearchBar extends NaWidget {
       }
 
       return CupertinoSearchTextField(
-        controller: this.controller,
-        focusNode: this.focusNode,
+        controller : this.controller,
+        focusNode  : this.focusNode,
         placeholder: this.hintText,
-        prefixIcon: cupertinoPrefixIcon ?? const Icon(CupertinoIcons.search),
-        onChanged: this.onChanged,
+        prefixIcon : cupertinoPrefixIcon ?? const Icon(CupertinoIcons.search),
+        onChanged  : this.onChanged,
         onSubmitted: this.onSubmitted,
-        onTap: this.onTap,
-        decoration: cupertinoOptions?.decoration,
-        padding: cupertinoOptions?.padding ??
+        onTap      : this.onTap,
+        decoration : cupertinoOptions?.decoration,
+        padding    : cupertinoOptions?.padding ??
             const EdgeInsets.symmetric(horizontal: 5.0, vertical: 8.0),
         itemColor: cupertinoOptions?.itemColor ?? CupertinoColors.systemGrey2,
-        itemSize: cupertinoOptions?.itemSize ?? 20.0,
+        itemSize : cupertinoOptions?.itemSize ?? 20.0,
       );
     }
 
     if (uiType == NaUiType.material) {
-      final NaSearchBarOptionsMaterial? materialOptions =
-          options is NaSearchBarOptionsMaterial ? options : null;
+      final NaSearchBarOptionsMaterial? materialOptions = options is NaSearchBarOptionsMaterial
+        ? options
+        : null
+      ;
 
       return SearchBar(
-        controller: this.controller,
-        focusNode: this.focusNode,
-        hintText: this.hintText,
-        leading: this.leading ?? const Icon(Icons.search),
-        trailing: materialOptions?.trailing,
-        onChanged: this.onChanged,
-        onSubmitted: this.onSubmitted,
-        onTap: this.onTap,
+        controller     : this.controller,
+        focusNode      : this.focusNode,
+        hintText       : this.hintText,
+        leading        : this.leading ?? const Icon(Icons.search),
+        trailing       : materialOptions?.trailing,
+        onChanged      : this.onChanged,
+        onSubmitted    : this.onSubmitted,
+        onTap          : this.onTap,
         backgroundColor: materialOptions?.backgroundColor,
-        elevation: materialOptions?.elevation,
-        constraints: materialOptions?.constraints,
+        elevation      : materialOptions?.elevation,
+        constraints    : materialOptions?.constraints,
       );
     }
 

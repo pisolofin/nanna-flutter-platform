@@ -1,10 +1,11 @@
 import 'package:flutter/widgets.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:nanna_platform/nanna_platform.dart';
+
 import '../helpers/test-helpers.dart';
 
 class NaDummyWidget extends NaWidget {
-  const NaDummyWidget({super.key});
+  const NaDummyWidget({ super.key });
 
   @override
   Widget? renderForUIType(BuildContext context, NaUiType uiType) {
@@ -27,9 +28,9 @@ void main() {
     await tester.pumpWidget(
       const NaUiTypeScope(
         uiTypes: [NaUiType.cupertino, NaUiType.material],
-        child: Directionality(
+        child  : Directionality(
           textDirection: TextDirection.ltr,
-          child: NaDummyWidget(),
+          child        : NaDummyWidget(),
         ),
       ),
     );

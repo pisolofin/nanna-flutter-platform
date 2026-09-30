@@ -61,17 +61,19 @@ class NaScrollbar extends NaWidget {
         this.options ?? optionsBuilder?.call(context, uiType);
 
     if (uiType == NaUiType.cupertino) {
-      final NaScrollbarOptionsCupertino? cupertinoOptions =
-          options is NaScrollbarOptionsCupertino ? options : null;
+      final NaScrollbarOptionsCupertino? cupertinoOptions = options is NaScrollbarOptionsCupertino
+        ? options
+        : null
+      ;
 
       return CupertinoScrollbar(
-        controller: this.controller,
+        controller     : this.controller,
         thumbVisibility: this.thumbVisibility ?? false,
-        thickness:
+        thickness      :
             cupertinoOptions?.thickness ?? CupertinoScrollbar.defaultThickness,
         thicknessWhileDragging: cupertinoOptions?.thicknessWhileDragging ??
             CupertinoScrollbar.defaultThicknessWhileDragging,
-        radius: cupertinoOptions?.radius ?? CupertinoScrollbar.defaultRadius,
+        radius             : cupertinoOptions?.radius ?? CupertinoScrollbar.defaultRadius,
         radiusWhileDragging: cupertinoOptions?.radiusWhileDragging ??
             CupertinoScrollbar.defaultRadiusWhileDragging,
         child: this.child,
@@ -79,17 +81,19 @@ class NaScrollbar extends NaWidget {
     }
 
     if (uiType == NaUiType.material) {
-      final NaScrollbarOptionsMaterial? materialOptions =
-          options is NaScrollbarOptionsMaterial ? options : null;
+      final NaScrollbarOptionsMaterial? materialOptions = options is NaScrollbarOptionsMaterial
+        ? options
+        : null
+      ;
 
       return Scrollbar(
-        controller: this.controller,
+        controller     : this.controller,
         thumbVisibility: this.thumbVisibility,
         trackVisibility: materialOptions?.trackVisibility,
-        interactive: materialOptions?.interactive,
-        thickness: materialOptions?.thickness,
-        radius: materialOptions?.radius,
-        child: this.child,
+        interactive    : materialOptions?.interactive,
+        thickness      : materialOptions?.thickness,
+        radius         : materialOptions?.radius,
+        child          : this.child,
       );
     }
 

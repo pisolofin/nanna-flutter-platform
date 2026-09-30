@@ -23,13 +23,13 @@ Future<T?> naShowDialog<T>({
   for (final NaUiType type in uiTypes) {
     if (type == NaUiType.cupertino) {
       return showCupertinoDialog<T>(
-        context: context,
-        builder: builder,
+        context           : context,
+        builder           : builder,
         barrierDismissible: barrierDismissible,
-        barrierLabel: barrierLabel,
-        useRootNavigator: useRootNavigator,
-        routeSettings: routeSettings,
-        anchorPoint: anchorPoint,
+        barrierLabel      : barrierLabel,
+        useRootNavigator  : useRootNavigator,
+        routeSettings     : routeSettings,
+        anchorPoint       : anchorPoint,
       );
     }
     if (type == NaUiType.material) {
@@ -40,14 +40,14 @@ Future<T?> naShowDialog<T>({
 
   // Fallback
   return showDialog<T>(
-    context: context,
-    builder: builder,
+    context           : context,
+    builder           : builder,
     barrierDismissible: barrierDismissible,
-    barrierColor: barrierColor,
-    barrierLabel: barrierLabel,
-    useSafeArea: useSafeArea,
-    useRootNavigator: useRootNavigator,
-    routeSettings: routeSettings,
-    anchorPoint: anchorPoint,
+    barrierColor      : barrierColor,
+    barrierLabel      : barrierLabel,
+    useSafeArea       : useSafeArea,
+    useRootNavigator  : useRootNavigator,
+    routeSettings     : routeSettings,
+    anchorPoint       : anchorPoint,
   );
 }

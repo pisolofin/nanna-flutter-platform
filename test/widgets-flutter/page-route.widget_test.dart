@@ -11,7 +11,7 @@ void main() {
     await tester.pumpWidget(
       NaUiTypeScope(
         uiTypes: const [NaUiType.material],
-        child: MaterialApp(
+        child  : MaterialApp(
           home: Builder(
             builder: (BuildContext context) {
               return ElevatedButton(
@@ -42,7 +42,7 @@ void main() {
     await tester.pumpWidget(
       NaUiTypeScope(
         uiTypes: const [NaUiType.cupertino],
-        child: CupertinoApp(
+        child  : CupertinoApp(
           home: Builder(
             builder: (BuildContext context) {
               return CupertinoButton(

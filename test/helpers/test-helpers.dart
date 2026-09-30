@@ -8,7 +8,7 @@ Future pumpMaterialNaWidget(WidgetTester tester, Widget child) async {
   await tester.pumpWidget(
     NaUiTypeScope(
       uiTypes: const [NaUiType.material],
-      child: MaterialApp(
+      child  : MaterialApp(
         home: Scaffold(
           body: child,
         ),
@@ -22,7 +22,7 @@ Future pumpCupertinoNaWidget(WidgetTester tester, Widget child) async {
   await tester.pumpWidget(
     NaUiTypeScope(
       uiTypes: const [NaUiType.cupertino],
-      child: CupertinoApp(
+      child  : CupertinoApp(
         home: CupertinoPageScaffold(
           child: child,
         ),
