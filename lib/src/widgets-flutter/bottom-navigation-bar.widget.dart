@@ -93,6 +93,25 @@ class NaBottomNavigationBar extends NaWidget {
     super.uiType,
   });
 
+  /// Creates a copy of this [NaBottomNavigationBar] with the given fields replaced by non-null values.
+  NaBottomNavigationBar copyWith({
+    Key? key,
+    List<BottomNavigationBarItem>? items,
+    ValueChanged<int>? onTap,
+    int? currentIndex,
+    NaWidgetOptionsBuilder<NaBottomNavigationBarOptions>? optionsBuilder,
+    NaUiType? uiType,
+  }) {
+    return NaBottomNavigationBar(
+      key           : key ?? this.key,
+      items         : items ?? this.items,
+      onTap         : onTap ?? this.onTap,
+      currentIndex  : currentIndex ?? this.currentIndex,
+      optionsBuilder: optionsBuilder ?? this.optionsBuilder,
+      uiType        : uiType ?? this.uiType,
+    );
+  }
+
   @override
   Widget? renderForUIType(BuildContext context, NaUiType uiType) {
     final NaBottomNavigationBarOptions? options = optionsBuilder?.call(

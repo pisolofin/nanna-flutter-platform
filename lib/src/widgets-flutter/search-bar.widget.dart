@@ -70,6 +70,35 @@ class NaSearchBar extends NaWidget {
     super.options,
   });
 
+  /// Creates a copy of this [NaSearchBar] with the given fields replaced with the new values.
+  NaSearchBar copyWith({
+    Key? key,
+    TextEditingController? controller,
+    FocusNode? focusNode,
+    String? hintText,
+    Widget? leading,
+    ValueChanged<String>? onChanged,
+    ValueChanged<String>? onSubmitted,
+    VoidCallback? onTap,
+    NaWidgetOptionsBuilder<NaSearchBarOptions>? optionsBuilder,
+    NaUiType? uiType,
+    dynamic options,
+  }) {
+    return NaSearchBar(
+      key           : key ?? this.key,
+      controller    : controller ?? this.controller,
+      focusNode     : focusNode ?? this.focusNode,
+      hintText      : hintText ?? this.hintText,
+      leading       : leading ?? this.leading,
+      onChanged     : onChanged ?? this.onChanged,
+      onSubmitted   : onSubmitted ?? this.onSubmitted,
+      onTap         : onTap ?? this.onTap,
+      optionsBuilder: optionsBuilder ?? this.optionsBuilder,
+      uiType        : uiType ?? this.uiType,
+      options       : options ?? this.options,
+    );
+  }
+
   @override
   Widget? renderForUIType(BuildContext context, NaUiType uiType) {
     final NaSearchBarOptions? options =

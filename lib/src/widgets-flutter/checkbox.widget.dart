@@ -96,6 +96,23 @@ class NaCheckbox extends NaWidget {
     super.uiType,
   });
 
+  /// Creates a copy of this [NaCheckbox] with the given fields replaced by non-null values.
+  NaCheckbox copyWith({
+    Key? key,
+    bool? value,
+    ValueChanged<bool?>? onChanged,
+    NaWidgetOptionsBuilder<NaCheckboxOptions>? optionsBuilder,
+    NaUiType? uiType,
+  }) {
+    return NaCheckbox(
+      key           : key ?? this.key,
+      value         : value ?? this.value,
+      onChanged     : onChanged ?? this.onChanged,
+      optionsBuilder: optionsBuilder ?? this.optionsBuilder,
+      uiType        : uiType ?? this.uiType,
+    );
+  }
+
   @override
   Widget? renderForUIType(BuildContext context, NaUiType uiType) {
     final NaCheckboxOptions? options = this.optionsBuilder?.call(context, uiType);

@@ -57,6 +57,23 @@ class NaDialogAction extends NaWidget {
     super.uiType,
   });
 
+  /// Creates a copy of this [NaDialogAction] with the given fields replaced by non-null values.
+  NaDialogAction copyWith({
+    Key? key,
+    Widget? child,
+    VoidCallback? onPressed,
+    NaWidgetOptionsBuilder<NaDialogActionOptions>? optionsBuilder,
+    NaUiType? uiType,
+  }) {
+    return NaDialogAction(
+      key           : key ?? this.key,
+      onPressed     : onPressed ?? this.onPressed,
+      optionsBuilder: optionsBuilder ?? this.optionsBuilder,
+      uiType        : uiType ?? this.uiType,
+      child         : child ?? this.child,
+    );
+  }
+
   @override
   Widget? renderForUIType(BuildContext context, NaUiType uiType) {
     final NaDialogActionOptions? options = optionsBuilder?.call(

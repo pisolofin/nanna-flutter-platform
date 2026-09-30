@@ -93,6 +93,23 @@ class NaIconButton extends NaWidget {
     super.uiType,
   });
 
+  /// Creates a copy of this [NaIconButton] with the given fields replaced by non-null values.
+  NaIconButton copyWith({
+    Key? key,
+    Widget? icon,
+    VoidCallback? onPressed,
+    NaWidgetOptionsBuilder<NaIconButtonOptions>? optionsBuilder,
+    NaUiType? uiType,
+  }) {
+    return NaIconButton(
+      key           : key ?? this.key,
+      icon          : icon ?? this.icon,
+      onPressed     : onPressed ?? this.onPressed,
+      optionsBuilder: optionsBuilder ?? this.optionsBuilder,
+      uiType        : uiType ?? this.uiType,
+    );
+  }
+
   @override
   Widget? renderForUIType(BuildContext context, NaUiType uiType) {
     final NaIconButtonOptions? options = this.optionsBuilder?.call(context, uiType);

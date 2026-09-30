@@ -81,6 +81,25 @@ class NaRadio<T> extends NaWidget {
     super.uiType,
   });
 
+  /// Creates a copy of this [NaRadio] with the given fields replaced by non-null values.
+  NaRadio<T> copyWith({
+    Key? key,
+    T? value,
+    T? groupValue,
+    ValueChanged<T?>? onChanged,
+    NaWidgetOptionsBuilder<NaRadioOptions>? optionsBuilder,
+    NaUiType? uiType,
+  }) {
+    return NaRadio<T>(
+      key           : key ?? this.key,
+      value         : value ?? this.value,
+      groupValue    : groupValue ?? this.groupValue,
+      onChanged     : onChanged ?? this.onChanged,
+      optionsBuilder: optionsBuilder ?? this.optionsBuilder,
+      uiType        : uiType ?? this.uiType,
+    );
+  }
+
   @override
   Widget? renderForUIType(BuildContext context, NaUiType uiType) {
     final NaRadioOptions? options = this.optionsBuilder?.call(context, uiType);

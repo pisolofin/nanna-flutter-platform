@@ -94,6 +94,23 @@ class NaSwitch extends NaWidget {
     super.uiType,
   });
 
+  /// Creates a copy of this [NaSwitch] with the given fields replaced with the new values.
+  NaSwitch copyWith({
+    Key? key,
+    bool? value,
+    ValueChanged<bool>? onChanged,
+    NaWidgetOptionsBuilder<NaSwitchOptions>? optionsBuilder,
+    NaUiType? uiType,
+  }) {
+    return NaSwitch(
+      key           : key ?? this.key,
+      value         : value ?? this.value,
+      onChanged     : onChanged ?? this.onChanged,
+      optionsBuilder: optionsBuilder ?? this.optionsBuilder,
+      uiType        : uiType ?? this.uiType,
+    );
+  }
+
   @override
   Widget? renderForUIType(BuildContext context, NaUiType uiType) {
     final NaSwitchOptions? options = this.optionsBuilder?.call(context, uiType);

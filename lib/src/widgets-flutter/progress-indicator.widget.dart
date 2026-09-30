@@ -56,6 +56,19 @@ class NaProgressIndicator extends NaWidget {
 
   const NaProgressIndicator({ super.key, this.optionsBuilder, super.uiType });
 
+  /// Creates a copy of this [NaProgressIndicator] with the given fields replaced by non-null values.
+  NaProgressIndicator copyWith({
+    Key? key,
+    NaWidgetOptionsBuilder<NaProgressIndicatorOptions>? optionsBuilder,
+    NaUiType? uiType,
+  }) {
+    return NaProgressIndicator(
+      key           : key ?? this.key,
+      optionsBuilder: optionsBuilder ?? this.optionsBuilder,
+      uiType        : uiType ?? this.uiType,
+    );
+  }
+
   @override
   Widget? renderForUIType(BuildContext context, NaUiType uiType) {
     final NaProgressIndicatorOptions? options = optionsBuilder?.call(

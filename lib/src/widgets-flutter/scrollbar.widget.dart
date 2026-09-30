@@ -65,6 +65,27 @@ class NaScrollbar extends NaWidget {
     super.options,
   });
 
+  /// Creates a copy of this [NaScrollbar] with the given fields replaced with the new values.
+  NaScrollbar copyWith({
+    Key? key,
+    Widget? child,
+    ScrollController? controller,
+    bool? thumbVisibility,
+    NaWidgetOptionsBuilder<NaScrollbarOptions>? optionsBuilder,
+    NaUiType? uiType,
+    dynamic options,
+  }) {
+    return NaScrollbar(
+      key            : key ?? this.key,
+      controller     : controller ?? this.controller,
+      thumbVisibility: thumbVisibility ?? this.thumbVisibility,
+      optionsBuilder : optionsBuilder ?? this.optionsBuilder,
+      uiType         : uiType ?? this.uiType,
+      options        : options ?? this.options,
+      child          : child ?? this.child,
+    );
+  }
+
   @override
   Widget? renderForUIType(BuildContext context, NaUiType uiType) {
     final NaScrollbarOptions? options =

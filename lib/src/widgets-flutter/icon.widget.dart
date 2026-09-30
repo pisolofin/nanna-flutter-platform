@@ -68,6 +68,25 @@ class NaIcon extends NaWidget {
     super.uiType,
   });
 
+  /// Creates a copy of this [NaIcon] with the given fields replaced by non-null values.
+  NaIcon copyWith({
+    NaIconData? icon,
+    Key? key,
+    double? size,
+    Color? color,
+    NaWidgetOptionsBuilder<NaIconOptions>? optionsBuilder,
+    NaUiType? uiType,
+  }) {
+    return NaIcon(
+      icon ?? this.icon,
+      key           : key ?? this.key,
+      size          : size ?? this.size,
+      color         : color ?? this.color,
+      optionsBuilder: optionsBuilder ?? this.optionsBuilder,
+      uiType        : uiType ?? this.uiType,
+    );
+  }
+
   @override
   Widget? renderForUIType(BuildContext context, NaUiType uiType) {
     final NaIconOptions? options = this.optionsBuilder?.call(context, uiType);

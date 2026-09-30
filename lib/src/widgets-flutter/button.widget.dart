@@ -74,6 +74,23 @@ class NaButton extends NaWidget {
     super.uiType,
   });
 
+  /// Creates a copy of this [NaButton] with the given fields replaced by non-null values.
+  NaButton copyWith({
+    Key? key,
+    Widget? child,
+    VoidCallback? onPressed,
+    NaWidgetOptionsBuilder<NaButtonOptions>? optionsBuilder,
+    NaUiType? uiType,
+  }) {
+    return NaButton(
+      key           : key ?? this.key,
+      onPressed     : onPressed ?? this.onPressed,
+      optionsBuilder: optionsBuilder ?? this.optionsBuilder,
+      uiType        : uiType ?? this.uiType,
+      child         : child ?? this.child,
+    );
+  }
+
   @override
   Widget? renderForUIType(BuildContext context, NaUiType uiType) {
     // 1. Resolve options via the builder provided by the user (if present)

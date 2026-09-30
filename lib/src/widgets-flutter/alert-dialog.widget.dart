@@ -144,6 +144,25 @@ class NaAlertDialog extends NaWidget {
     super.uiType,
   });
 
+  /// Creates a copy of this [NaAlertDialog] with the given fields replaced by non-null values.
+  NaAlertDialog copyWith({
+    Key? key,
+    Widget? title,
+    Widget? content,
+    List<Widget>? actions,
+    NaWidgetOptionsBuilder<NaAlertDialogOptions>? optionsBuilder,
+    NaUiType? uiType,
+  }) {
+    return NaAlertDialog(
+      key           : key ?? this.key,
+      title         : title ?? this.title,
+      content       : content ?? this.content,
+      actions       : actions ?? this.actions,
+      optionsBuilder: optionsBuilder ?? this.optionsBuilder,
+      uiType        : uiType ?? this.uiType,
+    );
+  }
+
   @override
   Widget? renderForUIType(BuildContext context, NaUiType uiType) {
     final NaAlertDialogOptions? options = this.optionsBuilder?.call(context, uiType);

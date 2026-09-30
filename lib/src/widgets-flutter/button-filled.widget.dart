@@ -76,6 +76,23 @@ class NaButtonFilled extends NaWidget {
     super.uiType,
   });
 
+  /// Creates a copy of this [NaButtonFilled] with the given fields replaced by non-null values.
+  NaButtonFilled copyWith({
+    Key? key,
+    Widget? child,
+    VoidCallback? onPressed,
+    NaWidgetOptionsBuilder<NaButtonFilledOptions>? optionsBuilder,
+    NaUiType? uiType,
+  }) {
+    return NaButtonFilled(
+      key           : key ?? this.key,
+      onPressed     : onPressed ?? this.onPressed,
+      optionsBuilder: optionsBuilder ?? this.optionsBuilder,
+      uiType        : uiType ?? this.uiType,
+      child         : child ?? this.child,
+    );
+  }
+
   @override
   Widget? renderForUIType(BuildContext context, NaUiType uiType) {
     final NaButtonFilledOptions? options = optionsBuilder?.call(context, uiType);

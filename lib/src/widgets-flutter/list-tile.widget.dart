@@ -113,6 +113,31 @@ class NaListTile extends NaWidget {
     super.uiType,
   });
 
+  /// Creates a copy of this [NaListTile] with the given fields replaced by non-null values.
+  NaListTile copyWith({
+    Key? key,
+    Widget? leading,
+    Widget? title,
+    Widget? subtitle,
+    Widget? trailing,
+    VoidCallback? onTap,
+    bool? hasChevron,
+    NaWidgetOptionsBuilder<NaListTileOptions>? optionsBuilder,
+    NaUiType? uiType,
+  }) {
+    return NaListTile(
+      key           : key ?? this.key,
+      leading       : leading ?? this.leading,
+      title         : title ?? this.title,
+      subtitle      : subtitle ?? this.subtitle,
+      trailing      : trailing ?? this.trailing,
+      onTap         : onTap ?? this.onTap,
+      hasChevron    : hasChevron ?? this.hasChevron,
+      optionsBuilder: optionsBuilder ?? this.optionsBuilder,
+      uiType        : uiType ?? this.uiType,
+    );
+  }
+
   @override
   Widget? renderForUIType(BuildContext context, NaUiType uiType) {
     final NaListTileOptions? options = optionsBuilder?.call(context, uiType);

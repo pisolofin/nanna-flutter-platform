@@ -71,9 +71,6 @@ class NaTextFieldOptionsMaterial extends NaTextFieldOptionsGeneric {
   });
 }
 
-
-
-
 /// Cupertino-specific options for [NaTextField], resolving into a [CupertinoTextField].
 class NaTextFieldOptionsCupertino extends NaTextFieldOptionsGeneric {
   final BoxDecoration? decoration;

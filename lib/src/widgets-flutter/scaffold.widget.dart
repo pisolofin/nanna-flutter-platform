@@ -59,6 +59,27 @@ class NaScaffold extends NaWidget {
     super.uiType,
   });
 
+  /// Creates a copy of this [NaScaffold] with the given fields replaced with the new values.
+  NaScaffold copyWith({
+    Key? key,
+    NaAppBar? appBar,
+    Widget? body,
+    Color? backgroundColor,
+    Widget? bottomNavigationBar,
+    NaWidgetOptionsBuilder<NaScaffoldOptions>? optionsBuilder,
+    NaUiType? uiType,
+  }) {
+    return NaScaffold(
+      key                : key ?? this.key,
+      appBar             : appBar ?? this.appBar,
+      body               : body ?? this.body,
+      backgroundColor    : backgroundColor ?? this.backgroundColor,
+      bottomNavigationBar: bottomNavigationBar ?? this.bottomNavigationBar,
+      optionsBuilder     : optionsBuilder ?? this.optionsBuilder,
+      uiType             : uiType ?? this.uiType,
+    );
+  }
+
   @override
   Widget? renderForUIType(BuildContext context, NaUiType uiType) {
     final NaScaffoldOptions? options = optionsBuilder?.call(context, uiType);

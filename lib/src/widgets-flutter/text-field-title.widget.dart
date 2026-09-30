@@ -1,11 +1,10 @@
 import 'package:flutter/widgets.dart';
 import 'package:flutter/material.dart' show InputDecoration, InputBorder, ThemeData, Theme;
 
+import 'text-field.widget.dart';
 import '../models/ui-type.model.dart';
 import '../scopes/ui-type.scope.dart';
 import '../widgets/na-widget.widget.dart';
-
-import 'text-field.widget.dart';
 
 /// Title wrapper for text fields (such as [NaTextField])
 /// that conditionally displays the title while maintaining identical layout space
@@ -94,6 +93,41 @@ class NaTextFieldTitle extends StatefulWidget {
     this.showWhenFocusedOrHasText = true,
     this.uiType,
   });
+
+  /// Creates a copy of this [NaTextFieldTitle] with the given fields replaced with the new values.
+  NaTextFieldTitle copyWith({
+    Key? key,
+    String? title,
+    Widget? textField,
+    TextStyle? titleStyle,
+    double? gap,
+    BoxBorder? border,
+    BorderRadiusGeometry? borderRadius,
+    Color? borderColor,
+    Color? focusedBorderColor,
+    Color? backgroundColor,
+    TextEditingController? controller,
+    FocusNode? focusNode,
+    bool? showWhenFocusedOrHasText,
+    NaUiType? uiType,
+  }) {
+    return NaTextFieldTitle(
+      key                     : key ?? this.key,
+      title                   : title ?? this.title,
+      textField               : textField ?? this.textField,
+      titleStyle              : titleStyle ?? this.titleStyle,
+      gap                     : gap ?? this.gap,
+      border                  : border ?? this.border,
+      borderRadius            : borderRadius ?? this.borderRadius,
+      borderColor             : borderColor ?? this.borderColor,
+      focusedBorderColor      : focusedBorderColor ?? this.focusedBorderColor,
+      backgroundColor         : backgroundColor ?? this.backgroundColor,
+      controller              : controller ?? this.controller,
+      focusNode               : focusNode ?? this.focusNode,
+      showWhenFocusedOrHasText: showWhenFocusedOrHasText ?? this.showWhenFocusedOrHasText,
+      uiType                  : uiType ?? this.uiType,
+    );
+  }
 
   @override
   State<NaTextFieldTitle> createState() => _NaTextFieldTitleState();

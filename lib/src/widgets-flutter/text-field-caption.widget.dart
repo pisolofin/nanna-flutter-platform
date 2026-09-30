@@ -19,6 +19,23 @@ class NaTextFieldCaption extends StatelessWidget {
     this.gap = 0,
   });
 
+  /// Creates a copy of this [NaTextFieldCaption] with the given fields replaced with the new values.
+  NaTextFieldCaption copyWith({
+    Key? key,
+    String? caption,
+    NaTextField? textField,
+    TextStyle? captionStyle,
+    double? gap,
+  }) {
+    return NaTextFieldCaption(
+      key         : key ?? this.key,
+      caption     : caption ?? this.caption,
+      textField   : textField ?? this.textField,
+      captionStyle: captionStyle ?? this.captionStyle,
+      gap         : gap ?? this.gap,
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Column(

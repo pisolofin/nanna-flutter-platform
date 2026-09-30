@@ -71,6 +71,21 @@ class NaCard extends NaWidget {
     super.uiType,
   });
 
+  /// Creates a copy of this [NaCard] with the given fields replaced by non-null values.
+  NaCard copyWith({
+    Key? key,
+    Widget? child,
+    NaWidgetOptionsBuilder<NaCardOptions>? optionsBuilder,
+    NaUiType? uiType,
+  }) {
+    return NaCard(
+      key           : key ?? this.key,
+      optionsBuilder: optionsBuilder ?? this.optionsBuilder,
+      uiType        : uiType ?? this.uiType,
+      child         : child ?? this.child,
+    );
+  }
+
   @override
   Widget? renderForUIType(BuildContext context, NaUiType uiType) {
     final NaCardOptions? options = this.optionsBuilder?.call(context, uiType);

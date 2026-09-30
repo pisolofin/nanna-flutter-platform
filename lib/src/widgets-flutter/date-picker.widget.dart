@@ -65,6 +65,27 @@ class NaDatePicker extends NaWidget {
     super.uiType,
   });
 
+  /// Creates a copy of this [NaDatePicker] with the given fields replaced by non-null values.
+  NaDatePicker copyWith({
+    Key? key,
+    DateTime? initialDate,
+    DateTime? firstDate,
+    DateTime? lastDate,
+    ValueChanged<DateTime>? onDateChanged,
+    NaWidgetOptionsBuilder<NaDatePickerOptions>? optionsBuilder,
+    NaUiType? uiType,
+  }) {
+    return NaDatePicker(
+      key           : key ?? this.key,
+      initialDate   : initialDate ?? this.initialDate,
+      firstDate     : firstDate ?? this.firstDate,
+      lastDate      : lastDate ?? this.lastDate,
+      onDateChanged : onDateChanged ?? this.onDateChanged,
+      optionsBuilder: optionsBuilder ?? this.optionsBuilder,
+      uiType        : uiType ?? this.uiType,
+    );
+  }
+
   @override
   Widget? renderForUIType(BuildContext context, NaUiType uiType) {
     final NaDatePickerOptions? options = optionsBuilder?.call(context, uiType);

@@ -78,6 +78,31 @@ class NaSlider extends NaWidget {
     super.uiType,
   });
 
+  /// Creates a copy of this [NaSlider] with the given fields replaced with the new values.
+  NaSlider copyWith({
+    Key? key,
+    double? value,
+    ValueChanged<double>? onChanged,
+    ValueChanged<double>? onChangeStart,
+    ValueChanged<double>? onChangeEnd,
+    double? min,
+    double? max,
+    NaWidgetOptionsBuilder<NaSliderOptions>? optionsBuilder,
+    NaUiType? uiType,
+  }) {
+    return NaSlider(
+      key           : key ?? this.key,
+      value         : value ?? this.value,
+      onChanged     : onChanged ?? this.onChanged,
+      onChangeStart : onChangeStart ?? this.onChangeStart,
+      onChangeEnd   : onChangeEnd ?? this.onChangeEnd,
+      min           : min ?? this.min,
+      max           : max ?? this.max,
+      optionsBuilder: optionsBuilder ?? this.optionsBuilder,
+      uiType        : uiType ?? this.uiType,
+    );
+  }
+
   @override
   Widget? renderForUIType(BuildContext context, NaUiType uiType) {
     final NaSliderOptions? options = this.optionsBuilder?.call(context, uiType);

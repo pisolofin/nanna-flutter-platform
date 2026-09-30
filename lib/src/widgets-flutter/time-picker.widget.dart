@@ -75,6 +75,23 @@ class NaTimePicker extends NaWidget {
     super.uiType,
   });
 
+  /// Creates a copy of this [NaTimePicker] with the given fields replaced with the new values.
+  NaTimePicker copyWith({
+    Key? key,
+    Duration? initialTimerDuration,
+    ValueChanged<Duration>? onTimerDurationChanged,
+    NaWidgetOptionsBuilder<NaTimePickerOptions>? optionsBuilder,
+    NaUiType? uiType,
+  }) {
+    return NaTimePicker(
+      key                   : key ?? this.key,
+      initialTimerDuration  : initialTimerDuration ?? this.initialTimerDuration,
+      onTimerDurationChanged: onTimerDurationChanged ?? this.onTimerDurationChanged,
+      optionsBuilder        : optionsBuilder ?? this.optionsBuilder,
+      uiType                : uiType ?? this.uiType,
+    );
+  }
+
   @override
   Widget? renderForUIType(BuildContext context, NaUiType uiType) {
     final NaTimePickerOptions? options = optionsBuilder?.call(context, uiType);

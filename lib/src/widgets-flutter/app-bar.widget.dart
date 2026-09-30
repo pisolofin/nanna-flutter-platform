@@ -50,6 +50,27 @@ class NaAppBar extends NaWidget implements ObstructingPreferredSizeWidget {
     super.uiType,
   });
 
+  /// Creates a copy of this [NaAppBar] with the given fields replaced by non-null values.
+  NaAppBar copyWith({
+    Key? key,
+    Widget? title,
+    Widget? leading,
+    List<Widget>? actions,
+    Color? backgroundColor,
+    NaWidgetOptionsBuilder<NaAppBarOptions>? optionsBuilder,
+    NaUiType? uiType,
+  }) {
+    return NaAppBar(
+      key            : key ?? this.key,
+      title          : title ?? this.title,
+      leading        : leading ?? this.leading,
+      actions        : actions ?? this.actions,
+      backgroundColor: backgroundColor ?? this.backgroundColor,
+      optionsBuilder : optionsBuilder ?? this.optionsBuilder,
+      uiType         : uiType ?? this.uiType,
+    );
+  }
+
   @override
   Widget? renderForUIType(BuildContext context, NaUiType uiType) {
     final NaAppBarOptions? options = this.optionsBuilder?.call(context, uiType);
