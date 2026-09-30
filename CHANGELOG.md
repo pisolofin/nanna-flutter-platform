@@ -2,6 +2,8 @@
 
 * Added `NaApp.router` to configure the router.
 * Added `NaOptionsGeneric` to support common widget options.
+* Added `NaButtonFilled` widget for cross-platform filled buttons (`FilledButton` and `CupertinoButton.filled`).
+* Added `NaTextFieldTitle` widget for text fields with fixed-space conditional titles and custom border styling.
 
 ## 1.1.0
 

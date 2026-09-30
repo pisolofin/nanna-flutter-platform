@@ -44,6 +44,7 @@ Below are side-by-side examples of the exact same code rendering automatically i
 | `Scaffold` | `CupertinoPageScaffold` | ✅ | `NaScaffold` |
 | `AppBar` | `CupertinoNavigationBar`| ✅ | `NaAppBar` |
 | `ElevatedButton` | `CupertinoButton` | ✅ | `NaButton` |
+| `FilledButton` | `CupertinoButton.filled` | ✅ | `NaButtonFilled` |
 | `IconButton` | `CupertinoButton` (icon) | ✅ | `NaIconButton` |
 | `Switch` | `CupertinoSwitch` | ✅ | `NaSwitch` |
 | `Checkbox` | `CupertinoCheckbox` | ✅ | `NaCheckbox` |
@@ -77,6 +78,7 @@ These widgets are not direct wrappers of native platform components, but rather 
 | Component Name | Description | Implemented |
 | --- | --- | :---: |
 | `NaTextFieldCaption` | A `NaTextField` with a label placed above it. | ✅ |
+| `NaTextFieldTitle` | A `NaTextField` wrapper with a conditional title that preserves layout space and provides custom border decoration. | ✅ |
 
 ## How to use the library
 
