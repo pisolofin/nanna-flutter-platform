@@ -192,4 +192,40 @@ void main() {
     expect(updatedWidget.titlePosition, equals(NaTextFieldTitlePosition.onBorder));
     expect(updatedWidget.titleBackgroundColor, equals(const Color(0xFFFFFFFF)));
   });
+
+  testWidgets('NaTextFieldTitle maintains identical vertical alignment for obscureText true and false in Material', (WidgetTester tester) async {
+    await pumpMaterialNaWidget(
+      tester,
+      const Column(
+        children: [
+          NaTextFieldTitle(
+            title    : 'Username',
+            textField: NaTextField(
+              obscureText: false,
+            ),
+          ),
+          NaTextFieldTitle(
+            title    : 'Password',
+            textField: NaTextField(
+              obscureText: true,
+            ),
+          ),
+        ],
+      ),
+    );
+
+    final List<EditableText> editableTexts = tester.widgetList<EditableText>(find.byType(EditableText)).toList();
+    expect(editableTexts.length, 2);
+
+    final RenderBox firstEditableRenderBox = tester.renderObject(find.byWidget(editableTexts[0])) as RenderBox;
+    final RenderBox secondEditableRenderBox = tester.renderObject(find.byWidget(editableTexts[1])) as RenderBox;
+
+    final RenderBox firstParentRenderBox = tester.renderObject(find.byType(NaTextFieldTitle).first) as RenderBox;
+    final RenderBox secondParentRenderBox = tester.renderObject(find.byType(NaTextFieldTitle).last) as RenderBox;
+
+    final double firstDy = firstEditableRenderBox.localToGlobal(Offset.zero).dy - firstParentRenderBox.localToGlobal(Offset.zero).dy;
+    final double secondDy = secondEditableRenderBox.localToGlobal(Offset.zero).dy - secondParentRenderBox.localToGlobal(Offset.zero).dy;
+
+    expect(firstDy, equals(secondDy));
+  });
 }

@@ -418,8 +418,14 @@ class _NaTextFieldPlatformRenderState extends State<_NaTextFieldPlatformRender> 
         : decorationWithPlaceholder.suffixIcon
       ;
 
+      EdgeInsetsGeometry? resolvedContentPadding = decorationWithPlaceholder.contentPadding;
+      if (resolvedContentPadding == null && (decorationWithPlaceholder.border == null || decorationWithPlaceholder.border is UnderlineInputBorder || decorationWithPlaceholder.border == InputBorder.none)) {
+        resolvedContentPadding = const EdgeInsets.symmetric(vertical: 12.0);
+      }
+
       final InputDecoration finalDecoration = decorationWithPlaceholder.copyWith(
-        suffixIcon: suffixIconWidget,
+        suffixIcon    : suffixIconWidget,
+        contentPadding: resolvedContentPadding,
       );
 
       return TextField(
