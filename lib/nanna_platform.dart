@@ -1,6 +1,7 @@
 export 'src/models/ui-type.model.dart';
 export 'src/models/icon-data.model.dart';
 export 'src/models/widget-options.model.dart';
+export 'src/models/selection-item.model.dart';
 
 export 'src/scopes/ui-type.scope.dart';
 
@@ -41,3 +42,4 @@ export 'src/constants/icons.constant.dart';
 export 'src/exceptions/ui-type-already-registered.exception.dart';
 
 export 'src/helpers/show-dialog.helper.dart';
+export 'src/helpers/show-selection-modal.helper.dart';
