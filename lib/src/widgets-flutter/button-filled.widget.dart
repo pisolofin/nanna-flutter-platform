@@ -10,7 +10,13 @@ abstract class NaButtonFilledOptions extends NaWidgetOptions {}
 
 /// Generic options for [NaButtonFilled], holding properties common to both platforms.
 class NaButtonFilledOptionsGeneric extends NaButtonFilledOptions {
-  NaButtonFilledOptionsGeneric();
+  final EdgeInsetsGeometry? padding;
+  final Color? color;
+
+  NaButtonFilledOptionsGeneric({
+    this.padding,
+    this.color,
+  });
 }
 
 /// Material-specific options for [NaButtonFilled], resolving into a [FilledButton].
@@ -33,12 +39,13 @@ class NaButtonFilledOptionsMaterial extends NaButtonFilledOptionsGeneric {
     this.autofocus,
     this.clipBehavior,
     this.statesController,
+    super.padding,
+    super.color,
   });
 }
 
 /// Cupertino-specific options for [NaButtonFilled], resolving into a [CupertinoButton.filled].
 class NaButtonFilledOptionsCupertino extends NaButtonFilledOptionsGeneric {
-  final EdgeInsetsGeometry? padding;
   final Color? disabledColor;
   final Size? minimumSize;
   final double? pressedOpacity;
@@ -48,7 +55,6 @@ class NaButtonFilledOptionsCupertino extends NaButtonFilledOptionsGeneric {
   final bool? autofocus;
 
   NaButtonFilledOptionsCupertino({
-    this.padding,
     this.disabledColor,
     this.minimumSize,
     this.pressedOpacity,
@@ -56,6 +62,8 @@ class NaButtonFilledOptionsCupertino extends NaButtonFilledOptionsGeneric {
     this.alignment,
     this.focusNode,
     this.autofocus,
+    super.padding,
+    super.color,
   });
 }
 
@@ -95,7 +103,11 @@ class NaButtonFilled extends NaWidget {
 
   @override
   Widget? renderForUIType(BuildContext context, NaUiType uiType) {
-    final NaButtonFilledOptions? options = optionsBuilder?.call(context, uiType);
+    final NaButtonFilledOptions? options = this.optionsBuilder?.call(context, uiType);
+    final NaButtonFilledOptionsGeneric? genericOptions = options is NaButtonFilledOptionsGeneric
+      ? options
+      : null
+    ;
 
     // Cupertino
     if (uiType == NaUiType.cupertino) {
@@ -105,17 +117,18 @@ class NaButtonFilled extends NaWidget {
       ;
       return CupertinoButton.filled(
         onPressed    : this.onPressed,
-        padding      : cupertinoOptions?.padding,
+        padding      : genericOptions?.padding,
+        color        : genericOptions?.color,
         disabledColor: cupertinoOptions?.disabledColor ??
-            CupertinoColors.quaternarySystemFill,
+          CupertinoColors.quaternarySystemFill,
         minimumSize: cupertinoOptions?.minimumSize ??
-            const Size(
-              kMinInteractiveDimensionCupertino,
-              kMinInteractiveDimensionCupertino,
-            ),
+          const Size(
+            kMinInteractiveDimensionCupertino,
+            kMinInteractiveDimensionCupertino,
+          ),
         pressedOpacity: cupertinoOptions?.pressedOpacity ?? 0.4,
         borderRadius  : cupertinoOptions?.borderRadius ??
-            const BorderRadius.all(Radius.circular(8.0)),
+          const BorderRadius.all(Radius.circular(8.0)),
         alignment: cupertinoOptions?.alignment ?? Alignment.center,
         focusNode: cupertinoOptions?.focusNode,
         autofocus: cupertinoOptions?.autofocus ?? false,
@@ -129,12 +142,25 @@ class NaButtonFilled extends NaWidget {
         ? options
         : null
       ;
+      final ButtonStyle? customStyle = ((genericOptions?.color != null) || (genericOptions?.padding != null))
+        ? FilledButton.styleFrom(
+          backgroundColor: genericOptions?.color,
+          padding        : genericOptions?.padding,
+        )
+        : null
+      ;
+      final ButtonStyle? effectiveStyle = materialOptions?.style != null
+        ? (customStyle != null
+          ? customStyle.merge(materialOptions!.style)
+          : materialOptions!.style)
+        : customStyle
+      ;
       return FilledButton(
         onPressed       : this.onPressed,
         onLongPress     : materialOptions?.onLongPress,
         onHover         : materialOptions?.onHover,
         onFocusChange   : materialOptions?.onFocusChange,
-        style           : materialOptions?.style,
+        style           : effectiveStyle,
         focusNode       : materialOptions?.focusNode,
         autofocus       : materialOptions?.autofocus ?? false,
         clipBehavior    : materialOptions?.clipBehavior ?? Clip.none,
