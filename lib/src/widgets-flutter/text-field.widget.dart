@@ -374,7 +374,7 @@ class _NaTextFieldPlatformRenderState extends State<_NaTextFieldPlatformRender> 
         keyboardAppearance: widget.naTextField.keyboardAppearance,
 
         // Cupertino specific
-        decoration: cupertinoOptions?.decoration,
+        decoration: cupertinoOptions?.decoration ?? const CupertinoTextField().decoration,
         padding   : cupertinoOptions?.padding ?? const EdgeInsets.all(6.0),
         prefix    : cupertinoOptions?.prefix,
         prefixMode:

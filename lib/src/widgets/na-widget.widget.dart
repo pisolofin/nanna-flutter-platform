@@ -18,8 +18,10 @@ abstract class NaWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final List<NaUiType> currentUiTypes =
-        this.uiType != null ? [this.uiType!] : NaUiTypeScope.of(context);
+    final List<NaUiType> currentUiTypes = this.uiType != null
+      ? [this.uiType!]
+      : NaUiTypeScope.of(context)
+    ;
 
     for (final NaUiType type in currentUiTypes) {
       final NaWidgetBuilder? builder = naPlatformServiceGetWidgetBuilder(
