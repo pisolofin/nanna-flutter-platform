@@ -29,6 +29,34 @@ void main() {
     expect(find.text('Test Title'), findsOneWidget);
   });
 
+  testWidgets('NaTextFieldTitle renders on border in Material', (WidgetTester tester) async {
+    await pumpMaterialNaWidget(
+      tester,
+      const NaTextFieldTitle(
+        title        : 'On Border Title',
+        titlePosition: NaTextFieldTitlePosition.onBorder,
+        textField    : NaTextField(),
+      ),
+    );
+    expect(find.byType(NaTextFieldTitle), findsOneWidget);
+    expect(find.text('On Border Title'), findsOneWidget);
+    expect(find.byType(Stack), findsWidgets);
+  });
+
+  testWidgets('NaTextFieldTitle renders on border in Cupertino', (WidgetTester tester) async {
+    await pumpCupertinoNaWidget(
+      tester,
+      const NaTextFieldTitle(
+        title        : 'On Border Title Cupertino',
+        titlePosition: NaTextFieldTitlePosition.onBorder,
+        textField    : NaTextField(),
+      ),
+    );
+    expect(find.byType(NaTextFieldTitle), findsOneWidget);
+    expect(find.text('On Border Title Cupertino'), findsOneWidget);
+    expect(find.byType(Stack), findsWidgets);
+  });
+
   testWidgets('NaTextFieldTitle shows title when text is entered', (WidgetTester tester) async {
     final TextEditingController textEditingController = TextEditingController();
 
@@ -38,6 +66,33 @@ void main() {
         title     : 'Dynamic Title',
         controller: textEditingController,
         textField : NaTextField(
+          controller: textEditingController,
+        ),
+      ),
+    );
+
+    // Initial state: empty and not focused
+    final Visibility initialVisibility = tester.widget<Visibility>(find.byType(Visibility));
+    expect(initialVisibility.visible, isFalse);
+
+    // Enter text
+    textEditingController.text = 'Hello';
+    await tester.pump();
+
+    final Visibility updatedVisibility = tester.widget<Visibility>(find.byType(Visibility));
+    expect(updatedVisibility.visible, isTrue);
+  });
+
+  testWidgets('NaTextFieldTitle shows title on border when text is entered', (WidgetTester tester) async {
+    final TextEditingController textEditingController = TextEditingController();
+
+    await pumpMaterialNaWidget(
+      tester,
+      NaTextFieldTitle(
+        title        : 'Dynamic Border Title',
+        titlePosition: NaTextFieldTitlePosition.onBorder,
+        controller   : textEditingController,
+        textField    : NaTextField(
           controller: textEditingController,
         ),
       ),
@@ -118,5 +173,23 @@ void main() {
     expect(themeWidget.data.inputDecorationTheme.border, equals(InputBorder.none));
     expect(themeWidget.data.inputDecorationTheme.enabledBorder, equals(InputBorder.none));
     expect(themeWidget.data.inputDecorationTheme.focusedBorder, equals(InputBorder.none));
+  });
+
+  test('NaTextFieldTitle copyWith updates titlePosition and titleBackgroundColor', () {
+    const NaTextFieldTitle originalWidget = NaTextFieldTitle(
+      title    : 'Original',
+      textField: NaTextField(),
+    );
+
+    expect(originalWidget.titlePosition, equals(NaTextFieldTitlePosition.above));
+    expect(originalWidget.titleBackgroundColor, isNull);
+
+    final NaTextFieldTitle updatedWidget = originalWidget.copyWith(
+      titlePosition       : NaTextFieldTitlePosition.onBorder,
+      titleBackgroundColor: const Color(0xFFFFFFFF),
+    );
+
+    expect(updatedWidget.titlePosition, equals(NaTextFieldTitlePosition.onBorder));
+    expect(updatedWidget.titleBackgroundColor, equals(const Color(0xFFFFFFFF)));
   });
 }

@@ -1,10 +1,20 @@
 import 'package:flutter/widgets.dart';
+import 'package:flutter/cupertino.dart' show CupertinoTheme;
 import 'package:flutter/material.dart' show InputDecoration, InputBorder, ThemeData, Theme;
 
 import 'text-field.widget.dart';
 import '../models/ui-type.model.dart';
 import '../scopes/ui-type.scope.dart';
 import '../widgets/na-widget.widget.dart';
+
+/// Position of the title relative to the text field container
+enum NaTextFieldTitlePosition {
+  /// Display the title above the field container with vertical spacing
+  above,
+
+  /// Display the title overlapping the top border of the field container
+  onBorder,
+}
 
 /// Title wrapper for text fields (such as [NaTextField])
 /// that conditionally displays the title while maintaining identical layout space
@@ -31,7 +41,7 @@ class NaTextFieldTitle extends StatefulWidget {
     Radius.circular(5.0),
   );
 
-  /// Title text displayed above the field
+  /// Title text displayed above or overlapping the field
   final String title;
 
   /// Input widget wrapped by this title
@@ -40,7 +50,7 @@ class NaTextFieldTitle extends StatefulWidget {
   /// Text style for the title, defaulting to [defaultTitleStyle]
   final TextStyle? titleStyle;
 
-  /// Vertical space between the title and the text field
+  /// Vertical space between the title and the text field when [titlePosition] is [NaTextFieldTitlePosition.above]
   final double gap;
 
   /// Border decoration applied to the field container, defaulting to [defaultBorder]
@@ -57,6 +67,12 @@ class NaTextFieldTitle extends StatefulWidget {
 
   /// Optional background color for the field container
   final Color? backgroundColor;
+
+  /// Optional background color for the title when [titlePosition] is [NaTextFieldTitlePosition.onBorder]
+  final Color? titleBackgroundColor;
+
+  /// Position of the title relative to the field container
+  final NaTextFieldTitlePosition titlePosition;
 
   /// Optional explicit text controller
   final TextEditingController? controller;
@@ -88,6 +104,8 @@ class NaTextFieldTitle extends StatefulWidget {
     this.borderColor,
     this.focusedBorderColor,
     this.backgroundColor,
+    this.titleBackgroundColor,
+    this.titlePosition = NaTextFieldTitlePosition.above,
     this.controller,
     this.focusNode,
     this.showWhenFocusedOrHasText = true,
@@ -106,6 +124,8 @@ class NaTextFieldTitle extends StatefulWidget {
     Color? borderColor,
     Color? focusedBorderColor,
     Color? backgroundColor,
+    Color? titleBackgroundColor,
+    NaTextFieldTitlePosition? titlePosition,
     TextEditingController? controller,
     FocusNode? focusNode,
     bool? showWhenFocusedOrHasText,
@@ -122,6 +142,8 @@ class NaTextFieldTitle extends StatefulWidget {
       borderColor             : borderColor ?? this.borderColor,
       focusedBorderColor      : focusedBorderColor ?? this.focusedBorderColor,
       backgroundColor         : backgroundColor ?? this.backgroundColor,
+      titleBackgroundColor    : titleBackgroundColor ?? this.titleBackgroundColor,
+      titlePosition           : titlePosition ?? this.titlePosition,
       controller              : controller ?? this.controller,
       focusNode               : focusNode ?? this.focusNode,
       showWhenFocusedOrHasText: showWhenFocusedOrHasText ?? this.showWhenFocusedOrHasText,
@@ -219,7 +241,7 @@ class _NaTextFieldTitleState extends State<NaTextFieldTitle> {
       if (candidateType == NaUiType.cupertino) {
         return false;
       }
-      if ((candidateType == NaUiType.material) ) {
+      if (candidateType == NaUiType.material) {
         return true;
       }
     }
@@ -229,6 +251,15 @@ class _NaTextFieldTitleState extends State<NaTextFieldTitle> {
 
   /// Calculates platform-adaptive left padding for title text alignment
   double _titleLeftPadding(BuildContext context) {
+    if (widget.titlePosition == NaTextFieldTitlePosition.onBorder) {
+      double minLeftOffset = 8.0;
+      if (widget.borderRadius is BorderRadius) {
+        final BorderRadius radius = widget.borderRadius as BorderRadius;
+        minLeftOffset = radius.topLeft.x + 4.0;
+      }
+      return minLeftOffset;
+    }
+
     final List<NaUiType> uiTypeList = _resolveUiTypes(context);
 
     for (final NaUiType candidateType in uiTypeList) {
@@ -259,6 +290,36 @@ class _NaTextFieldTitleState extends State<NaTextFieldTitle> {
     return 0.0;
   }
 
+  /// Calculates the vertical offset to center the title on the top border
+  double _calculateTitleOffset() {
+    final double fontSize = widget.titleStyle?.fontSize ?? NaTextFieldTitle.defaultTitleStyle.fontSize ?? 13.0;
+    final double lineHeightMultiplier = widget.titleStyle?.height ?? 1.2;
+    return (fontSize * lineHeightMultiplier) / 2.0;
+  }
+
+  /// Resolves the background color for masking the border under the title
+  Color _resolveTitleBackgroundColor(BuildContext context) {
+    if (widget.titleBackgroundColor != null) {
+      return widget.titleBackgroundColor!;
+    }
+    if (widget.backgroundColor != null) {
+      return widget.backgroundColor!;
+    }
+    if (_isMaterialStyle(context)) {
+      try {
+        return Theme.of(context).scaffoldBackgroundColor;
+      }catch (exception) {
+        return const Color(0xFFFFFFFF);
+      }
+    }else {
+      try {
+        return CupertinoTheme.of(context).scaffoldBackgroundColor;
+      }catch (exception) {
+        return const Color(0xFFFFFFFF);
+      }
+    }
+  }
+
   /// Resolves effective border to use, falling back to default border styling
   BoxBorder _resolveBorder(BuildContext context, bool hasFocus) {
     if (widget.border != null) {
@@ -286,6 +347,26 @@ class _NaTextFieldTitleState extends State<NaTextFieldTitle> {
         _hasFocus = focused;
       });
     }
+  }
+
+  /// Builds the field container with resolved borders and focus handling
+  Widget _buildFieldContainer(BuildContext context, bool hasFocus) {
+    return Container(
+      decoration: BoxDecoration(
+        border      : _resolveBorder(context, hasFocus),
+        borderRadius: widget.borderRadius ?? NaTextFieldTitle.defaultBorderRadius,
+        color       : widget.backgroundColor,
+      ),
+      child: Focus(
+        onFocusChange: _onFocusChange,
+        child        : Padding(
+          padding: EdgeInsets.only(
+            left: _textFieldLeftPadding(context),
+          ),
+          child: _buildTextField(context),
+        ),
+      ),
+    );
   }
 
   /// Builds the text field widget, removing borders when in Material style
@@ -364,12 +445,55 @@ class _NaTextFieldTitleState extends State<NaTextFieldTitle> {
   /// Builds the title and text field layout maintaining equal space whether title is visible or not
   @override
   Widget build(BuildContext context) {
-    final bool hasFocus   = _hasFocus || (_focusNode?.hasFocus ?? false);
-    final bool hasText    = _controller?.text.isNotEmpty ?? false;
-    final bool showTitle  = widget.showWhenFocusedOrHasText
+    final bool hasFocus  = _hasFocus || (_focusNode?.hasFocus ?? false);
+    final bool hasText   = _controller?.text.isNotEmpty ?? false;
+    final bool showTitle = widget.showWhenFocusedOrHasText
       ? (hasFocus || hasText)
       : (!hasFocus && !hasText)
     ;
+
+    if (widget.titlePosition == NaTextFieldTitlePosition.onBorder) {
+      return Stack(
+        children: [
+          // Text field container with top offset for overlapping title
+          Padding(
+            padding: EdgeInsets.only(
+              top: _calculateTitleOffset(),
+            ),
+            child: _buildFieldContainer(context, hasFocus),
+          ),
+          // Title label overlapping the top border
+          Positioned(
+            top  : 0,
+            left : _titleLeftPadding(context),
+            child: Visibility(
+              visible              : showTitle,
+              maintainSize         : true,
+              maintainAnimation    : true,
+              maintainState        : true,
+              maintainSemantics    : false,
+              maintainInteractivity: false,
+              child                : GestureDetector(
+                behavior: HitTestBehavior.opaque,
+                onTap   : () {
+                  if (_focusNode != null) {
+                    _focusNode?.requestFocus();
+                  }
+                },
+                child: Container(
+                  color  : _resolveTitleBackgroundColor(context),
+                  padding: const EdgeInsets.symmetric(horizontal: 4.0),
+                  child  : Text(
+                    widget.title,
+                    style: widget.titleStyle ?? NaTextFieldTitle.defaultTitleStyle,
+                  ),
+                ),
+              ),
+            ),
+          ),
+        ],
+      );
+    }
 
     return Column(
       mainAxisSize      : MainAxisSize.min,
@@ -396,22 +520,7 @@ class _NaTextFieldTitleState extends State<NaTextFieldTitle> {
         // Gap spacing
         SizedBox(height: widget.gap),
         // Text field container
-        Container(
-          decoration: BoxDecoration(
-            border      : _resolveBorder(context, hasFocus),
-            borderRadius: widget.borderRadius ?? NaTextFieldTitle.defaultBorderRadius,
-            color       : widget.backgroundColor,
-          ),
-          child: Focus(
-            onFocusChange: _onFocusChange,
-            child        : Padding(
-              padding: EdgeInsets.only(
-                left: _textFieldLeftPadding(context),
-              ),
-              child: _buildTextField(context),
-            ),
-          ),
-        ),
+        _buildFieldContainer(context, hasFocus),
       ],
     );
   }

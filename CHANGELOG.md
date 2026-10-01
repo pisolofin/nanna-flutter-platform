@@ -4,6 +4,7 @@
 * Added `NaOptionsGeneric` to support common widget options.
 * Added `NaButtonFilled` widget for cross-platform filled buttons (`FilledButton` and `CupertinoButton.filled`).
 * Added `NaTextFieldTitle` widget for text fields with fixed-space conditional titles and custom border styling.
+* Added `titlePosition` (`NaTextFieldTitlePosition.above` or `NaTextFieldTitlePosition.onBorder`) and `titleBackgroundColor` to `NaTextFieldTitle`.
 
 ## 1.1.0
 
