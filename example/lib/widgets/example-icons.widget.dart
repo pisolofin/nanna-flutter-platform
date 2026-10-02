@@ -49,7 +49,6 @@ class ExampleIconsWidget extends StatelessWidget {
           // Section Subtitle
           const Text(
             'Icons automatically adapt between Material and Cupertino designs:',
-            style: TextStyle(fontSize: 13.0),
           ),
           const SizedBox(height: 16.0),
 

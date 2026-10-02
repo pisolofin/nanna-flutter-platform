@@ -20,8 +20,7 @@ class NaBottomNavigationBarOptionsGeneric extends NaBottomNavigationBarOptions {
 }
 
 /// Material-specific options for [NaBottomNavigationBar], resolving into a [BottomNavigationBar].
-class NaBottomNavigationBarOptionsMaterial
-    extends NaBottomNavigationBarOptionsGeneric {
+class NaBottomNavigationBarOptionsMaterial extends NaBottomNavigationBarOptionsGeneric {
   final double? elevation;
   final BottomNavigationBarType? type;
   final Color? fixedColor;
@@ -58,8 +57,7 @@ class NaBottomNavigationBarOptionsMaterial
 }
 
 /// Cupertino-specific options for [NaBottomNavigationBar], resolving into a [CupertinoTabBar].
-class NaBottomNavigationBarOptionsCupertino
-    extends NaBottomNavigationBarOptionsGeneric {
+class NaBottomNavigationBarOptionsCupertino extends NaBottomNavigationBarOptionsGeneric {
   final Color? activeColor;
   final Color? inactiveColor;
   final double? height;
