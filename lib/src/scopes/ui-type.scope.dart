@@ -1,4 +1,6 @@
-import 'package:flutter/widgets.dart';
+﻿import 'package:flutter/widgets.dart';
+import 'package:flutter/material.dart' show Scaffold;
+import 'package:flutter/cupertino.dart' show CupertinoPageScaffold, CupertinoTabScaffold;
 
 import '../models/ui-type.model.dart';
 
@@ -27,13 +29,40 @@ class NaUiTypeScope extends InheritedWidget {
     return scope?.uiTypes ?? [NaUiType.material];
   }
 
+  /// Resolves the active [NaUiType] from the closest [NaUiTypeScope].
+  /// Returns the first [NaUiType] in the fallback chain, or [defaultType] if the scope is empty.
+  static NaUiType resolveUiType(BuildContext context, {NaUiType defaultType = NaUiType.material}) {
+    final List<NaUiType> uiTypes = NaUiTypeScope.of(context);
+    if (uiTypes.isNotEmpty) {
+      return uiTypes.first;
+    }
+    return defaultType;
+  }
+
+  /// Checks if the current context is hosted inside a Material [Scaffold].
+  static bool isMaterial(BuildContext context) {
+    return context.findAncestorWidgetOfExactType<Scaffold>() != null;
+  }
+
+  /// Checks if the current context is hosted inside a Cupertino scaffold ([CupertinoPageScaffold] or [CupertinoTabScaffold]).
+  static bool isCupertino(BuildContext context) {
+    return context.findAncestorWidgetOfExactType<CupertinoPageScaffold>() != null
+      || context.findAncestorWidgetOfExactType<CupertinoTabScaffold>() != null
+    ;
+  }
+
+  /// Checks if the current context is hosted inside a scaffold of type [T].
+  static bool isScaffold<T extends Widget>(BuildContext context) {
+    return context.findAncestorWidgetOfExactType<T>() != null;
+  }
+
   @override
   bool updateShouldNotify(NaUiTypeScope oldWidget) {
-    if (uiTypes.length != oldWidget.uiTypes.length) {
+    if (this.uiTypes.length != oldWidget.uiTypes.length) {
       return true;
     }
-    for (int index = 0; index < uiTypes.length; index++) {
-      if (uiTypes[index] != oldWidget.uiTypes[index]) {
+    for (int index = 0; index < this.uiTypes.length; index++) {
+      if (this.uiTypes[index] != oldWidget.uiTypes[index]) {
         return true;
       }
     }
