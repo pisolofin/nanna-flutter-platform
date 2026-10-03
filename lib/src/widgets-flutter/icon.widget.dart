@@ -7,7 +7,13 @@ import '../widgets/na-widget.widget.dart';
 import '../models/widget-options.model.dart';
 
 /// Base options for [NaIcon].
-abstract class NaIconOptions extends NaWidgetOptions {}
+abstract class NaIconOptions extends NaWidgetOptions {
+  /// Default constructor for subclasses.
+  NaIconOptions();
+
+  /// Creates an empty [NaIconOptions] with default values.
+  factory NaIconOptions.empty() => NaIconOptionsGeneric.empty();
+}
 
 /// Generic options for [NaIcon], holding properties common to both platforms.
 class NaIconOptionsGeneric extends NaIconOptions {
@@ -20,6 +26,9 @@ class NaIconOptionsGeneric extends NaIconOptions {
     this.semanticLabel,
     this.textDirection,
   });
+
+  /// Creates an empty [NaIconOptionsGeneric] with default values.
+  NaIconOptionsGeneric.empty() : this();
 
   /// Creates a copy of this [NaIconOptionsGeneric] with the given fields replaced by non-null values.
   NaIconOptionsGeneric copyWith({
@@ -52,6 +61,9 @@ class NaIconOptionsMaterial extends NaIconOptionsGeneric {
     super.textDirection,
   });
 
+  /// Creates an empty [NaIconOptionsMaterial] with default values.
+  NaIconOptionsMaterial.empty() : this();
+
   /// Creates a copy of this [NaIconOptionsMaterial] with the given fields replaced by non-null values.
   @override
   NaIconOptionsMaterial copyWith({
@@ -83,6 +95,9 @@ class NaIconOptionsCupertino extends NaIconOptionsGeneric {
     super.semanticLabel,
     super.textDirection,
   });
+
+  /// Creates an empty [NaIconOptionsCupertino] with default values.
+  NaIconOptionsCupertino.empty() : this();
 
   /// Creates a copy of this [NaIconOptionsCupertino] with the given fields replaced by non-null values.
   @override

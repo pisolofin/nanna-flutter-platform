@@ -6,7 +6,13 @@ import '../widgets/na-widget.widget.dart';
 import '../models/widget-options.model.dart';
 
 /// Base options for [NaIconButton].
-abstract class NaIconButtonOptions extends NaWidgetOptions {}
+abstract class NaIconButtonOptions extends NaWidgetOptions {
+  /// Default constructor for subclasses.
+  NaIconButtonOptions();
+
+  /// Creates an empty [NaIconButtonOptions] with default values.
+  factory NaIconButtonOptions.empty() => NaIconButtonOptionsGeneric.empty();
+}
 
 /// Generic options for [NaIconButton], holding properties common to both platforms.
 class NaIconButtonOptionsGeneric extends NaIconButtonOptions {
@@ -21,6 +27,9 @@ class NaIconButtonOptionsGeneric extends NaIconButtonOptions {
     this.color,
     this.disabledColor,
   });
+
+  /// Creates an empty [NaIconButtonOptionsGeneric] with default values.
+  NaIconButtonOptionsGeneric.empty() : this();
 
   /// Creates a copy of this [NaIconButtonOptionsGeneric] with the given fields replaced by non-null values.
   NaIconButtonOptionsGeneric copyWith({
@@ -73,6 +82,9 @@ class NaIconButtonOptionsMaterial extends NaIconButtonOptionsGeneric {
     super.color,
     super.disabledColor,
   });
+
+  /// Creates an empty [NaIconButtonOptionsMaterial] with default values.
+  NaIconButtonOptionsMaterial.empty() : this();
 
   /// Creates a copy of this [NaIconButtonOptionsMaterial] with the given fields replaced by non-null values.
   @override
@@ -132,6 +144,9 @@ class NaIconButtonOptionsCupertino extends NaIconButtonOptionsGeneric {
     super.color,
     super.disabledColor,
   });
+
+  /// Creates an empty [NaIconButtonOptionsCupertino] with default values.
+  NaIconButtonOptionsCupertino.empty() : this();
 
   /// Creates a copy of this [NaIconButtonOptionsCupertino] with the given fields replaced by non-null values.
   @override

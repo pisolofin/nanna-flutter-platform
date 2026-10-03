@@ -6,7 +6,13 @@ import '../widgets/na-widget.widget.dart';
 import '../models/widget-options.model.dart';
 
 /// Base options for [NaRadio].
-abstract class NaRadioOptions extends NaWidgetOptions {}
+abstract class NaRadioOptions extends NaWidgetOptions {
+  /// Default constructor for subclasses.
+  NaRadioOptions();
+
+  /// Creates an empty [NaRadioOptions] with default values.
+  factory NaRadioOptions.empty() => NaRadioOptionsGeneric.empty();
+}
 
 /// Generic options for [NaRadio], holding properties common to both platforms.
 class NaRadioOptionsGeneric extends NaRadioOptions {
@@ -23,6 +29,9 @@ class NaRadioOptionsGeneric extends NaRadioOptions {
     this.focusNode,
     this.autofocus,
   });
+
+  /// Creates an empty [NaRadioOptionsGeneric] with default values.
+  NaRadioOptionsGeneric.empty() : this();
 
   /// Creates a copy of this [NaRadioOptionsGeneric] with the given fields replaced by non-null values.
   NaRadioOptionsGeneric copyWith({
@@ -62,6 +71,9 @@ class NaRadioOptionsMaterial extends NaRadioOptionsGeneric {
     super.focusNode,
     super.autofocus,
   });
+
+  /// Creates an empty [NaRadioOptionsMaterial] with default values.
+  NaRadioOptionsMaterial.empty() : this();
 
   /// Creates a copy of this [NaRadioOptionsMaterial] with the given fields replaced by non-null values.
   @override
@@ -106,6 +118,9 @@ class NaRadioOptionsCupertino extends NaRadioOptionsGeneric {
     super.autofocus,
     super.toggleable,
   });
+
+  /// Creates an empty [NaRadioOptionsCupertino] with default values.
+  NaRadioOptionsCupertino.empty() : this();
 
   /// Creates a copy of this [NaRadioOptionsCupertino] with the given fields replaced by non-null values.
   @override

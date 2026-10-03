@@ -6,11 +6,20 @@ import '../widgets/na-widget.widget.dart';
 import '../models/widget-options.model.dart';
 
 /// Base options for [NaTimePicker].
-abstract class NaTimePickerOptions extends NaWidgetOptions {}
+abstract class NaTimePickerOptions extends NaWidgetOptions {
+  /// Default constructor for subclasses.
+  NaTimePickerOptions();
+
+  /// Creates an empty [NaTimePickerOptions] with default values.
+  factory NaTimePickerOptions.empty() => NaTimePickerOptionsGeneric.empty();
+}
 
 /// Generic options for [NaTimePicker], holding properties common to both platforms.
 class NaTimePickerOptionsGeneric extends NaTimePickerOptions {
   NaTimePickerOptionsGeneric();
+
+  /// Creates an empty [NaTimePickerOptionsGeneric] with default values.
+  NaTimePickerOptionsGeneric.empty() : this();
 
   /// Creates a copy of this [NaTimePickerOptionsGeneric].
   NaTimePickerOptionsGeneric copyWith() {
@@ -39,6 +48,9 @@ class NaTimePickerOptionsMaterial extends NaTimePickerOptionsGeneric {
     this.initialEntryMode,
     this.orientation,
   });
+
+  /// Creates an empty [NaTimePickerOptionsMaterial] with default values.
+  NaTimePickerOptionsMaterial.empty() : this();
 
   /// Creates a copy of this [NaTimePickerOptionsMaterial] with the given fields replaced by non-null values.
   @override
@@ -82,6 +94,9 @@ class NaTimePickerOptionsCupertino extends NaTimePickerOptionsGeneric {
     this.backgroundColor,
     this.itemExtent,
   });
+
+  /// Creates an empty [NaTimePickerOptionsCupertino] with default values.
+  NaTimePickerOptionsCupertino.empty() : this();
 
   /// Creates a copy of this [NaTimePickerOptionsCupertino] with the given fields replaced by non-null values.
   @override

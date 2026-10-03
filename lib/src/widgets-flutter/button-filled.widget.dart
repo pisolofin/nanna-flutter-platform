@@ -6,7 +6,13 @@ import '../widgets/na-widget.widget.dart';
 import '../models/widget-options.model.dart';
 
 /// Base options for [NaButtonFilled].
-abstract class NaButtonFilledOptions extends NaWidgetOptions {}
+abstract class NaButtonFilledOptions extends NaWidgetOptions {
+  /// Default constructor for subclasses.
+  NaButtonFilledOptions();
+
+  /// Creates an empty [NaButtonFilledOptions] with default values.
+  factory NaButtonFilledOptions.empty() => NaButtonFilledOptionsGeneric.empty();
+}
 
 /// Generic options for [NaButtonFilled], holding properties common to both platforms.
 class NaButtonFilledOptionsGeneric extends NaButtonFilledOptions {
@@ -17,6 +23,9 @@ class NaButtonFilledOptionsGeneric extends NaButtonFilledOptions {
     this.padding,
     this.color,
   });
+
+  /// Creates an empty [NaButtonFilledOptionsGeneric] with default values.
+  NaButtonFilledOptionsGeneric.empty() : this();
 
   /// Creates a copy of this [NaButtonFilledOptionsGeneric] with the given fields replaced by non-null values.
   NaButtonFilledOptionsGeneric copyWith({
@@ -53,6 +62,9 @@ class NaButtonFilledOptionsMaterial extends NaButtonFilledOptionsGeneric {
     super.padding,
     super.color,
   });
+
+  /// Creates an empty [NaButtonFilledOptionsMaterial] with default values.
+  NaButtonFilledOptionsMaterial.empty() : this();
 
   /// Creates a copy of this [NaButtonFilledOptionsMaterial] with the given fields replaced by non-null values.
   @override
@@ -104,6 +116,9 @@ class NaButtonFilledOptionsCupertino extends NaButtonFilledOptionsGeneric {
     super.padding,
     super.color,
   });
+
+  /// Creates an empty [NaButtonFilledOptionsCupertino] with default values.
+  NaButtonFilledOptionsCupertino.empty() : this();
 
   /// Creates a copy of this [NaButtonFilledOptionsCupertino] with the given fields replaced by non-null values.
   @override

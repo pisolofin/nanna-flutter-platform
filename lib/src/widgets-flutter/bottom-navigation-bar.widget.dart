@@ -6,7 +6,13 @@ import '../widgets/na-widget.widget.dart';
 import '../models/widget-options.model.dart';
 
 /// Base options for [NaBottomNavigationBar].
-abstract class NaBottomNavigationBarOptions extends NaWidgetOptions {}
+abstract class NaBottomNavigationBarOptions extends NaWidgetOptions {
+  /// Default constructor for subclasses.
+  NaBottomNavigationBarOptions();
+
+  /// Creates an empty [NaBottomNavigationBarOptions] with default values.
+  factory NaBottomNavigationBarOptions.empty() => NaBottomNavigationBarOptionsGeneric.empty();
+}
 
 /// Generic options for [NaBottomNavigationBar], holding properties common to both platforms.
 class NaBottomNavigationBarOptionsGeneric extends NaBottomNavigationBarOptions {
@@ -17,6 +23,9 @@ class NaBottomNavigationBarOptionsGeneric extends NaBottomNavigationBarOptions {
     this.backgroundColor,
     this.iconSize,
   });
+
+  /// Creates an empty [NaBottomNavigationBarOptionsGeneric] with default values.
+  NaBottomNavigationBarOptionsGeneric.empty() : this();
 
   /// Creates a copy of this [NaBottomNavigationBarOptionsGeneric] with the given fields replaced by non-null values.
   NaBottomNavigationBarOptionsGeneric copyWith({
@@ -65,6 +74,9 @@ class NaBottomNavigationBarOptionsMaterial extends NaBottomNavigationBarOptionsG
     super.backgroundColor,
     super.iconSize,
   });
+
+  /// Creates an empty [NaBottomNavigationBarOptionsMaterial] with default values.
+  NaBottomNavigationBarOptionsMaterial.empty() : this();
 
   /// Creates a copy of this [NaBottomNavigationBarOptionsMaterial] with the given fields replaced by non-null values.
   @override
@@ -122,6 +134,9 @@ class NaBottomNavigationBarOptionsCupertino extends NaBottomNavigationBarOptions
     super.backgroundColor,
     super.iconSize,
   });
+
+  /// Creates an empty [NaBottomNavigationBarOptionsCupertino] with default values.
+  NaBottomNavigationBarOptionsCupertino.empty() : this();
 
   /// Creates a copy of this [NaBottomNavigationBarOptionsCupertino] with the given fields replaced by non-null values.
   @override

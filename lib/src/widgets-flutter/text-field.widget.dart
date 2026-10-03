@@ -10,7 +10,13 @@ import '../constants/icons.constant.dart';
 import '../models/widget-options.model.dart';
 
 /// Base options for [NaTextField].
-abstract class NaTextFieldOptions extends NaWidgetOptions {}
+abstract class NaTextFieldOptions extends NaWidgetOptions {
+  /// Default constructor for subclasses.
+  NaTextFieldOptions();
+
+  /// Creates an empty [NaTextFieldOptions] with default values.
+  factory NaTextFieldOptions.empty() => NaTextFieldOptionsGeneric.empty();
+}
 
 /// Generic options for [NaTextField], holding properties common to both platforms.
 class NaTextFieldOptionsGeneric extends NaTextFieldOptions {
@@ -43,6 +49,9 @@ class NaTextFieldOptionsGeneric extends NaTextFieldOptions {
     this.textAlignVertical,
     this.textDirection,
   });
+
+  /// Creates an empty [NaTextFieldOptionsGeneric] with default values.
+  NaTextFieldOptionsGeneric.empty() : this();
 
   /// Creates a copy of this [NaTextFieldOptionsGeneric] with the given fields replaced by non-null values.
   NaTextFieldOptionsGeneric copyWith({
@@ -102,6 +111,9 @@ class NaTextFieldOptionsMaterial extends NaTextFieldOptionsGeneric {
     super.textAlignVertical,
     super.textDirection,
   });
+
+  /// Creates an empty [NaTextFieldOptionsMaterial] with default values.
+  NaTextFieldOptionsMaterial.empty() : this();
 
   /// Creates a copy of this [NaTextFieldOptionsMaterial] with the given fields replaced by non-null values.
   @override
@@ -178,6 +190,9 @@ class NaTextFieldOptionsCupertino extends NaTextFieldOptionsGeneric {
     super.textAlignVertical,
     super.textDirection,
   });
+
+  /// Creates an empty [NaTextFieldOptionsCupertino] with default values.
+  NaTextFieldOptionsCupertino.empty() : this();
 
   /// Creates a copy of this [NaTextFieldOptionsCupertino] with the given fields replaced by non-null values.
   @override

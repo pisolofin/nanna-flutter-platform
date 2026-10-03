@@ -6,7 +6,13 @@ import '../widgets/na-widget.widget.dart';
 import '../models/widget-options.model.dart';
 
 /// Base options for [NaSlider].
-abstract class NaSliderOptions extends NaWidgetOptions {}
+abstract class NaSliderOptions extends NaWidgetOptions {
+  /// Default constructor for subclasses.
+  NaSliderOptions();
+
+  /// Creates an empty [NaSliderOptions] with default values.
+  factory NaSliderOptions.empty() => NaSliderOptionsGeneric.empty();
+}
 
 /// Generic options for [NaSlider], holding properties common to both platforms.
 class NaSliderOptionsGeneric extends NaSliderOptions {
@@ -19,6 +25,9 @@ class NaSliderOptionsGeneric extends NaSliderOptions {
     this.thumbColor,
     this.divisions,
   });
+
+  /// Creates an empty [NaSliderOptionsGeneric] with default values.
+  NaSliderOptionsGeneric.empty() : this();
 
   /// Creates a copy of this [NaSliderOptionsGeneric] with the given fields replaced by non-null values.
   NaSliderOptionsGeneric copyWith({
@@ -57,6 +66,9 @@ class NaSliderOptionsMaterial extends NaSliderOptionsGeneric {
     super.divisions,
   });
 
+  /// Creates an empty [NaSliderOptionsMaterial] with default values.
+  NaSliderOptionsMaterial.empty() : this();
+
   /// Creates a copy of this [NaSliderOptionsMaterial] with the given fields replaced by non-null values.
   @override
   NaSliderOptionsMaterial copyWith({
@@ -93,6 +105,9 @@ class NaSliderOptionsCupertino extends NaSliderOptionsGeneric {
     super.thumbColor,
     super.divisions,
   });
+
+  /// Creates an empty [NaSliderOptionsCupertino] with default values.
+  NaSliderOptionsCupertino.empty() : this();
 
   /// Creates a copy of this [NaSliderOptionsCupertino] with the given fields replaced by non-null values.
   @override

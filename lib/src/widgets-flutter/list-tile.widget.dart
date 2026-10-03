@@ -6,11 +6,20 @@ import '../widgets/na-widget.widget.dart';
 import '../models/widget-options.model.dart';
 
 /// Base options for [NaListTile].
-abstract class NaListTileOptions extends NaWidgetOptions {}
+abstract class NaListTileOptions extends NaWidgetOptions {
+  /// Default constructor for subclasses.
+  NaListTileOptions();
+
+  /// Creates an empty [NaListTileOptions] with default values.
+  factory NaListTileOptions.empty() => NaListTileOptionsGeneric.empty();
+}
 
 /// Generic options for [NaListTile], holding properties common to both platforms.
 class NaListTileOptionsGeneric extends NaListTileOptions {
   NaListTileOptionsGeneric();
+
+  /// Creates an empty [NaListTileOptionsGeneric] with default values.
+  NaListTileOptionsGeneric.empty() : this();
 
   /// Creates a copy of this [NaListTileOptionsGeneric].
   NaListTileOptionsGeneric copyWith() {
@@ -73,6 +82,9 @@ class NaListTileOptionsMaterial extends NaListTileOptionsGeneric {
     this.minVerticalPadding,
     this.minLeadingWidth,
   });
+
+  /// Creates an empty [NaListTileOptionsMaterial] with default values.
+  NaListTileOptionsMaterial.empty() : this();
 
   /// Creates a copy of this [NaListTileOptionsMaterial] with the given fields replaced by non-null values.
   @override
@@ -150,6 +162,9 @@ class NaListTileOptionsCupertino extends NaListTileOptionsGeneric {
     this.leadingSize,
     this.leadingToTitle,
   });
+
+  /// Creates an empty [NaListTileOptionsCupertino] with default values.
+  NaListTileOptionsCupertino.empty() : this();
 
   /// Creates a copy of this [NaListTileOptionsCupertino] with the given fields replaced by non-null values.
   @override

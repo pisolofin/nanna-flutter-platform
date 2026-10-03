@@ -6,11 +6,20 @@ import '../widgets/na-widget.widget.dart';
 import '../models/widget-options.model.dart';
 
 /// Base options for [NaApp].
-abstract class NaAppOptions extends NaWidgetOptions {}
+abstract class NaAppOptions extends NaWidgetOptions {
+  /// Default constructor for subclasses.
+  NaAppOptions();
+
+  /// Creates an empty [NaAppOptions] with default values.
+  factory NaAppOptions.empty() => NaAppOptionsGeneric.empty();
+}
 
 /// Generic options for [NaApp], holding properties common to both platforms.
 class NaAppOptionsGeneric extends NaAppOptions {
   NaAppOptionsGeneric();
+
+  /// Creates an empty [NaAppOptionsGeneric] with default values.
+  NaAppOptionsGeneric.empty() : this();
 
   /// Creates a copy of this [NaAppOptionsGeneric].
   NaAppOptionsGeneric copyWith() {
@@ -39,6 +48,9 @@ class NaAppOptionsMaterial extends NaAppOptionsGeneric {
     this.themeAnimationCurve,
     this.scaffoldMessengerKey,
   });
+
+  /// Creates an empty [NaAppOptionsMaterial] with default values.
+  NaAppOptionsMaterial.empty() : this();
 
   /// Creates a copy of this [NaAppOptionsMaterial] with the given fields replaced by non-null values.
   @override
@@ -70,6 +82,9 @@ class NaAppOptionsCupertino extends NaAppOptionsGeneric {
   final CupertinoThemeData? theme;
 
   NaAppOptionsCupertino({ this.theme });
+
+  /// Creates an empty [NaAppOptionsCupertino] with default values.
+  NaAppOptionsCupertino.empty() : this();
 
   /// Creates a copy of this [NaAppOptionsCupertino] with the given fields replaced by non-null values.
   @override

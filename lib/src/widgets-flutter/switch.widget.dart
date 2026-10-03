@@ -7,7 +7,13 @@ import '../widgets/na-widget.widget.dart';
 import '../models/widget-options.model.dart';
 
 /// Base options for [NaSwitch].
-abstract class NaSwitchOptions extends NaWidgetOptions {}
+abstract class NaSwitchOptions extends NaWidgetOptions {
+  /// Default constructor for subclasses.
+  NaSwitchOptions();
+
+  /// Creates an empty [NaSwitchOptions] with default values.
+  factory NaSwitchOptions.empty() => NaSwitchOptionsGeneric.empty();
+}
 
 /// Generic options for [NaSwitch], holding properties common to both platforms.
 class NaSwitchOptionsGeneric extends NaSwitchOptions {
@@ -24,6 +30,9 @@ class NaSwitchOptionsGeneric extends NaSwitchOptions {
     this.focusNode,
     this.autofocus,
   });
+
+  /// Creates an empty [NaSwitchOptionsGeneric] with default values.
+  NaSwitchOptionsGeneric.empty() : this();
 
   /// Creates a copy of this [NaSwitchOptionsGeneric] with the given fields replaced by non-null values.
   NaSwitchOptionsGeneric copyWith({
@@ -77,6 +86,9 @@ class NaSwitchOptionsMaterial extends NaSwitchOptionsGeneric {
     super.focusNode,
     super.autofocus,
   });
+
+  /// Creates an empty [NaSwitchOptionsMaterial] with default values.
+  NaSwitchOptionsMaterial.empty() : this();
 
   /// Creates a copy of this [NaSwitchOptionsMaterial] with the given fields replaced by non-null values.
   @override
@@ -135,6 +147,9 @@ class NaSwitchOptionsCupertino extends NaSwitchOptionsGeneric {
     super.focusNode,
     super.autofocus,
   });
+
+  /// Creates an empty [NaSwitchOptionsCupertino] with default values.
+  NaSwitchOptionsCupertino.empty() : this();
 
   /// Creates a copy of this [NaSwitchOptionsCupertino] with the given fields replaced by non-null values.
   @override

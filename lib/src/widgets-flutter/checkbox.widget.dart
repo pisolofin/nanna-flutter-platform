@@ -6,7 +6,13 @@ import '../widgets/na-widget.widget.dart';
 import '../models/widget-options.model.dart';
 
 /// Base options for [NaCheckbox].
-abstract class NaCheckboxOptions extends NaWidgetOptions {}
+abstract class NaCheckboxOptions extends NaWidgetOptions {
+  /// Default constructor for subclasses.
+  NaCheckboxOptions();
+
+  /// Creates an empty [NaCheckboxOptions] with default values.
+  factory NaCheckboxOptions.empty() => NaCheckboxOptionsGeneric.empty();
+}
 
 /// Generic options for [NaCheckbox], holding properties common to both platforms.
 class NaCheckboxOptionsGeneric extends NaCheckboxOptions {
@@ -31,6 +37,9 @@ class NaCheckboxOptionsGeneric extends NaCheckboxOptions {
     this.side,
     this.semanticLabel,
   });
+
+  /// Creates an empty [NaCheckboxOptionsGeneric] with default values.
+  NaCheckboxOptionsGeneric.empty() : this();
 
   /// Creates a copy of this [NaCheckboxOptionsGeneric] with the given fields replaced by non-null values.
   NaCheckboxOptionsGeneric copyWith({
@@ -89,6 +98,9 @@ class NaCheckboxOptionsMaterial extends NaCheckboxOptionsGeneric {
     super.semanticLabel,
   });
 
+  /// Creates an empty [NaCheckboxOptionsMaterial] with default values.
+  NaCheckboxOptionsMaterial.empty() : this();
+
   /// Creates a copy of this [NaCheckboxOptionsMaterial] with the given fields replaced by non-null values.
   @override
   NaCheckboxOptionsMaterial copyWith({
@@ -145,6 +157,9 @@ class NaCheckboxOptionsCupertino extends NaCheckboxOptionsGeneric {
     super.side,
     super.semanticLabel,
   });
+
+  /// Creates an empty [NaCheckboxOptionsCupertino] with default values.
+  NaCheckboxOptionsCupertino.empty() : this();
 
   /// Creates a copy of this [NaCheckboxOptionsCupertino] with the given fields replaced by non-null values.
   @override

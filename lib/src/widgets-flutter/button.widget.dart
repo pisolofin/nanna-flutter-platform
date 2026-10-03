@@ -6,11 +6,20 @@ import '../widgets/na-widget.widget.dart';
 import '../models/widget-options.model.dart';
 
 /// Base options for [NaButton].
-abstract class NaButtonOptions extends NaWidgetOptions {}
+abstract class NaButtonOptions extends NaWidgetOptions {
+  /// Default constructor for subclasses.
+  NaButtonOptions();
+
+  /// Creates an empty [NaButtonOptions] with default values.
+  factory NaButtonOptions.empty() => NaButtonOptionsGeneric.empty();
+}
 
 /// Generic options for [NaButton], holding properties common to both platforms.
 class NaButtonOptionsGeneric extends NaButtonOptions {
   NaButtonOptionsGeneric();
+
+  /// Creates an empty [NaButtonOptionsGeneric] with default values.
+  NaButtonOptionsGeneric.empty() : this();
 
   /// Creates a copy of this [NaButtonOptionsGeneric].
   NaButtonOptionsGeneric copyWith() {
@@ -39,6 +48,9 @@ class NaButtonOptionsMaterial extends NaButtonOptionsGeneric {
     this.clipBehavior,
     this.statesController,
   });
+
+  /// Creates an empty [NaButtonOptionsMaterial] with default values.
+  NaButtonOptionsMaterial.empty() : this();
 
   /// Creates a copy of this [NaButtonOptionsMaterial] with the given fields replaced by non-null values.
   @override
@@ -84,6 +96,9 @@ class NaButtonOptionsCupertino extends NaButtonOptionsGeneric {
     this.borderRadius,
     this.alignment,
   });
+
+  /// Creates an empty [NaButtonOptionsCupertino] with default values.
+  NaButtonOptionsCupertino.empty() : this();
 
   /// Creates a copy of this [NaButtonOptionsCupertino] with the given fields replaced by non-null values.
   @override

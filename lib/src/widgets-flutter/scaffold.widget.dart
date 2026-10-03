@@ -7,7 +7,13 @@ import '../widgets/na-widget.widget.dart';
 import '../models/widget-options.model.dart';
 
 /// Base options for [NaScaffold].
-abstract class NaScaffoldOptions extends NaWidgetOptions {}
+abstract class NaScaffoldOptions extends NaWidgetOptions {
+  /// Default constructor for subclasses.
+  NaScaffoldOptions();
+
+  /// Creates an empty [NaScaffoldOptions] with default values.
+  factory NaScaffoldOptions.empty() => NaScaffoldOptionsGeneric.empty();
+}
 
 /// Generic options for [NaScaffold], holding properties common to both platforms.
 class NaScaffoldOptionsGeneric extends NaScaffoldOptions {
@@ -16,6 +22,9 @@ class NaScaffoldOptionsGeneric extends NaScaffoldOptions {
   NaScaffoldOptionsGeneric({
     this.resizeToAvoidBottomInset,
   });
+
+  /// Creates an empty [NaScaffoldOptionsGeneric] with default values.
+  NaScaffoldOptionsGeneric.empty() : this();
 
   /// Creates a copy of this [NaScaffoldOptionsGeneric] with the given fields replaced by non-null values.
   NaScaffoldOptionsGeneric copyWith({
@@ -40,6 +49,9 @@ class NaScaffoldOptionsMaterial extends NaScaffoldOptionsGeneric {
     super.resizeToAvoidBottomInset,
   });
 
+  /// Creates an empty [NaScaffoldOptionsMaterial] with default values.
+  NaScaffoldOptionsMaterial.empty() : this();
+
   /// Creates a copy of this [NaScaffoldOptionsMaterial] with the given fields replaced by non-null values.
   @override
   NaScaffoldOptionsMaterial copyWith({
@@ -62,6 +74,9 @@ class NaScaffoldOptionsCupertino extends NaScaffoldOptionsGeneric {
   NaScaffoldOptionsCupertino({
     super.resizeToAvoidBottomInset,
   });
+
+  /// Creates an empty [NaScaffoldOptionsCupertino] with default values.
+  NaScaffoldOptionsCupertino.empty() : this();
 
   /// Creates a copy of this [NaScaffoldOptionsCupertino] with the given fields replaced by non-null values.
   @override

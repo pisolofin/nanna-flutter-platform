@@ -6,11 +6,20 @@ import '../widgets/na-widget.widget.dart';
 import '../models/widget-options.model.dart';
 
 /// Base options for [NaSearchBar].
-abstract class NaSearchBarOptions extends NaWidgetOptions {}
+abstract class NaSearchBarOptions extends NaWidgetOptions {
+  /// Default constructor for subclasses.
+  NaSearchBarOptions();
+
+  /// Creates an empty [NaSearchBarOptions] with default values.
+  factory NaSearchBarOptions.empty() => NaSearchBarOptionsGeneric.empty();
+}
 
 /// Generic options for [NaSearchBar], holding properties common to both platforms.
 class NaSearchBarOptionsGeneric extends NaSearchBarOptions {
   NaSearchBarOptionsGeneric();
+
+  /// Creates an empty [NaSearchBarOptionsGeneric] with default values.
+  NaSearchBarOptionsGeneric.empty() : this();
 
   /// Creates a copy of this [NaSearchBarOptionsGeneric].
   NaSearchBarOptionsGeneric copyWith() {
@@ -31,6 +40,9 @@ class NaSearchBarOptionsMaterial extends NaSearchBarOptionsGeneric {
     this.trailing,
     this.constraints,
   });
+
+  /// Creates an empty [NaSearchBarOptionsMaterial] with default values.
+  NaSearchBarOptionsMaterial.empty() : this();
 
   /// Creates a copy of this [NaSearchBarOptionsMaterial] with the given fields replaced by non-null values.
   @override
@@ -62,6 +74,9 @@ class NaSearchBarOptionsCupertino extends NaSearchBarOptionsGeneric {
     this.itemColor = CupertinoColors.systemGrey2,
     this.itemSize = 20.0,
   });
+
+  /// Creates an empty [NaSearchBarOptionsCupertino] with default values.
+  NaSearchBarOptionsCupertino.empty() : this();
 
   /// Creates a copy of this [NaSearchBarOptionsCupertino] with the given fields replaced by non-null values.
   @override

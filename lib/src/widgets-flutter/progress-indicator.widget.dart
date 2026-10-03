@@ -6,7 +6,13 @@ import '../widgets/na-widget.widget.dart';
 import '../models/widget-options.model.dart';
 
 /// Base options for [NaProgressIndicator].
-abstract class NaProgressIndicatorOptions extends NaWidgetOptions {}
+abstract class NaProgressIndicatorOptions extends NaWidgetOptions {
+  /// Default constructor for subclasses.
+  NaProgressIndicatorOptions();
+
+  /// Creates an empty [NaProgressIndicatorOptions] with default values.
+  factory NaProgressIndicatorOptions.empty() => NaProgressIndicatorOptionsGeneric.empty();
+}
 
 /// Generic options for [NaProgressIndicator], holding properties common to both platforms.
 class NaProgressIndicatorOptionsGeneric extends NaProgressIndicatorOptions {
@@ -15,6 +21,9 @@ class NaProgressIndicatorOptionsGeneric extends NaProgressIndicatorOptions {
   NaProgressIndicatorOptionsGeneric({
     this.color,
   });
+
+  /// Creates an empty [NaProgressIndicatorOptionsGeneric] with default values.
+  NaProgressIndicatorOptionsGeneric.empty() : this();
 
   /// Creates a copy of this [NaProgressIndicatorOptionsGeneric] with the given fields replaced by non-null values.
   NaProgressIndicatorOptionsGeneric copyWith({
@@ -44,6 +53,9 @@ class NaProgressIndicatorOptionsMaterial extends NaProgressIndicatorOptionsGener
     this.semanticsValue,
     super.color,
   });
+
+  /// Creates an empty [NaProgressIndicatorOptionsMaterial] with default values.
+  NaProgressIndicatorOptionsMaterial.empty() : this();
 
   /// Creates a copy of this [NaProgressIndicatorOptionsMaterial] with the given fields replaced by non-null values.
   @override
@@ -78,6 +90,9 @@ class NaProgressIndicatorOptionsCupertino extends NaProgressIndicatorOptionsGene
     this.animating,
     super.color,
   });
+
+  /// Creates an empty [NaProgressIndicatorOptionsCupertino] with default values.
+  NaProgressIndicatorOptionsCupertino.empty() : this();
 
   /// Creates a copy of this [NaProgressIndicatorOptionsCupertino] with the given fields replaced by non-null values.
   @override

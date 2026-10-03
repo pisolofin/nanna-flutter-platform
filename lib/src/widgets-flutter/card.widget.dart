@@ -6,7 +6,13 @@ import '../widgets/na-widget.widget.dart';
 import '../models/widget-options.model.dart';
 
 /// Base options for [NaCard].
-abstract class NaCardOptions extends NaWidgetOptions {}
+abstract class NaCardOptions extends NaWidgetOptions {
+  /// Default constructor for subclasses.
+  NaCardOptions();
+
+  /// Creates an empty [NaCardOptions] with default values.
+  factory NaCardOptions.empty() => NaCardOptionsGeneric.empty();
+}
 
 /// Generic options for [NaCard], holding properties common to both platforms.
 class NaCardOptionsGeneric extends NaCardOptions {
@@ -17,6 +23,9 @@ class NaCardOptionsGeneric extends NaCardOptions {
     this.color,
     this.margin,
   });
+
+  /// Creates an empty [NaCardOptionsGeneric] with default values.
+  NaCardOptionsGeneric.empty() : this();
 
   /// Creates a copy of this [NaCardOptionsGeneric] with the given fields replaced by non-null values.
   NaCardOptionsGeneric copyWith({
@@ -51,6 +60,9 @@ class NaCardOptionsMaterial extends NaCardOptionsGeneric {
     super.color,
     super.margin,
   });
+
+  /// Creates an empty [NaCardOptionsMaterial] with default values.
+  NaCardOptionsMaterial.empty() : this();
 
   /// Creates a copy of this [NaCardOptionsMaterial] with the given fields replaced by non-null values.
   @override
@@ -92,6 +104,9 @@ class NaCardOptionsCupertino extends NaCardOptionsGeneric {
     super.color,
     super.margin,
   });
+
+  /// Creates an empty [NaCardOptionsCupertino] with default values.
+  NaCardOptionsCupertino.empty() : this();
 
   /// Creates a copy of this [NaCardOptionsCupertino] with the given fields replaced by non-null values.
   @override

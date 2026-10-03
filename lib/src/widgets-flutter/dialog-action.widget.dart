@@ -6,11 +6,20 @@ import '../widgets/na-widget.widget.dart';
 import '../models/widget-options.model.dart';
 
 /// Base options for [NaDialogAction].
-abstract class NaDialogActionOptions extends NaWidgetOptions {}
+abstract class NaDialogActionOptions extends NaWidgetOptions {
+  /// Default constructor for subclasses.
+  NaDialogActionOptions();
+
+  /// Creates an empty [NaDialogActionOptions] with default values.
+  factory NaDialogActionOptions.empty() => NaDialogActionOptionsGeneric.empty();
+}
 
 /// Generic options for [NaDialogAction], holding properties common to both platforms.
 class NaDialogActionOptionsGeneric extends NaDialogActionOptions {
   NaDialogActionOptionsGeneric();
+
+  /// Creates an empty [NaDialogActionOptionsGeneric] with default values.
+  NaDialogActionOptionsGeneric.empty() : this();
 
   /// Creates a copy of this [NaDialogActionOptionsGeneric].
   NaDialogActionOptionsGeneric copyWith() {
@@ -31,6 +40,9 @@ class NaDialogActionOptionsMaterial extends NaDialogActionOptionsGeneric {
     this.autofocus,
     this.clipBehavior,
   });
+
+  /// Creates an empty [NaDialogActionOptionsMaterial] with default values.
+  NaDialogActionOptionsMaterial.empty() : this();
 
   /// Creates a copy of this [NaDialogActionOptionsMaterial] with the given fields replaced by non-null values.
   @override
@@ -60,6 +72,9 @@ class NaDialogActionOptionsCupertino extends NaDialogActionOptionsGeneric {
     this.isDestructiveAction,
     this.textStyle,
   });
+
+  /// Creates an empty [NaDialogActionOptionsCupertino] with default values.
+  NaDialogActionOptionsCupertino.empty() : this();
 
   /// Creates a copy of this [NaDialogActionOptionsCupertino] with the given fields replaced by non-null values.
   @override

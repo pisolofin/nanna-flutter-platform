@@ -6,11 +6,20 @@ import '../widgets/na-widget.widget.dart';
 import '../models/widget-options.model.dart';
 
 /// Base options for [NaDatePicker].
-abstract class NaDatePickerOptions extends NaWidgetOptions {}
+abstract class NaDatePickerOptions extends NaWidgetOptions {
+  /// Default constructor for subclasses.
+  NaDatePickerOptions();
+
+  /// Creates an empty [NaDatePickerOptions] with default values.
+  factory NaDatePickerOptions.empty() => NaDatePickerOptionsGeneric.empty();
+}
 
 /// Generic options for [NaDatePicker], holding properties common to both platforms.
 class NaDatePickerOptionsGeneric extends NaDatePickerOptions {
   NaDatePickerOptionsGeneric();
+
+  /// Creates an empty [NaDatePickerOptionsGeneric] with default values.
+  NaDatePickerOptionsGeneric.empty() : this();
 
   /// Creates a copy of this [NaDatePickerOptionsGeneric].
   NaDatePickerOptionsGeneric copyWith() {
@@ -31,6 +40,9 @@ class NaDatePickerOptionsMaterial extends NaDatePickerOptionsGeneric {
     this.initialCalendarMode,
     this.selectableDayPredicate,
   });
+
+  /// Creates an empty [NaDatePickerOptionsMaterial] with default values.
+  NaDatePickerOptionsMaterial.empty() : this();
 
   /// Creates a copy of this [NaDatePickerOptionsMaterial] with the given fields replaced by non-null values.
   @override
@@ -64,6 +76,9 @@ class NaDatePickerOptionsCupertino extends NaDatePickerOptionsGeneric {
     this.use24hFormat,
     this.minuteInterval,
   });
+
+  /// Creates an empty [NaDatePickerOptionsCupertino] with default values.
+  NaDatePickerOptionsCupertino.empty() : this();
 
   /// Creates a copy of this [NaDatePickerOptionsCupertino] with the given fields replaced by non-null values.
   @override

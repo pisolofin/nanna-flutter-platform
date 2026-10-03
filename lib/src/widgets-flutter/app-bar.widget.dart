@@ -6,11 +6,20 @@ import '../widgets/na-widget.widget.dart';
 import '../models/widget-options.model.dart';
 
 /// Base options for [NaAppBar].
-abstract class NaAppBarOptions extends NaWidgetOptions {}
+abstract class NaAppBarOptions extends NaWidgetOptions {
+  /// Default constructor for subclasses.
+  NaAppBarOptions();
+
+  /// Creates an empty [NaAppBarOptions] with default values.
+  factory NaAppBarOptions.empty() => NaAppBarOptionsGeneric.empty();
+}
 
 /// Generic options for [NaAppBar], holding properties common to both platforms.
 class NaAppBarOptionsGeneric extends NaAppBarOptions {
   NaAppBarOptionsGeneric();
+
+  /// Creates an empty [NaAppBarOptionsGeneric] with default values.
+  NaAppBarOptionsGeneric.empty() : this();
 
   /// Creates a copy of this [NaAppBarOptionsGeneric].
   NaAppBarOptionsGeneric copyWith() {
@@ -29,6 +38,9 @@ class NaAppBarOptionsMaterial extends NaAppBarOptionsGeneric {
     this.centerTitle,
     this.bottom,
   });
+
+  /// Creates an empty [NaAppBarOptionsMaterial] with default values.
+  NaAppBarOptionsMaterial.empty() : this();
 
   /// Creates a copy of this [NaAppBarOptionsMaterial] with the given fields replaced by non-null values.
   @override
@@ -54,6 +66,9 @@ class NaAppBarOptionsCupertino extends NaAppBarOptionsGeneric {
     this.border,
     this.transitionBetweenRoutes,
   });
+
+  /// Creates an empty [NaAppBarOptionsCupertino] with default values.
+  NaAppBarOptionsCupertino.empty() : this();
 
   /// Creates a copy of this [NaAppBarOptionsCupertino] with the given fields replaced by non-null values.
   @override

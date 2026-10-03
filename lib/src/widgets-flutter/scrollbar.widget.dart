@@ -6,7 +6,13 @@ import '../widgets/na-widget.widget.dart';
 import '../models/widget-options.model.dart';
 
 /// Base options for [NaScrollbar].
-abstract class NaScrollbarOptions extends NaWidgetOptions {}
+abstract class NaScrollbarOptions extends NaWidgetOptions {
+  /// Default constructor for subclasses.
+  NaScrollbarOptions();
+
+  /// Creates an empty [NaScrollbarOptions] with default values.
+  factory NaScrollbarOptions.empty() => NaScrollbarOptionsGeneric.empty();
+}
 
 /// Generic options for [NaScrollbar], holding properties common to both platforms.
 class NaScrollbarOptionsGeneric extends NaScrollbarOptions {
@@ -17,6 +23,9 @@ class NaScrollbarOptionsGeneric extends NaScrollbarOptions {
     this.thickness,
     this.radius,
   });
+
+  /// Creates an empty [NaScrollbarOptionsGeneric] with default values.
+  NaScrollbarOptionsGeneric.empty() : this();
 
   /// Creates a copy of this [NaScrollbarOptionsGeneric] with the given fields replaced by non-null values.
   NaScrollbarOptionsGeneric copyWith({
@@ -41,6 +50,9 @@ class NaScrollbarOptionsMaterial extends NaScrollbarOptionsGeneric {
     super.thickness,
     super.radius,
   });
+
+  /// Creates an empty [NaScrollbarOptionsMaterial] with default values.
+  NaScrollbarOptionsMaterial.empty() : this();
 
   /// Creates a copy of this [NaScrollbarOptionsMaterial] with the given fields replaced by non-null values.
   @override
@@ -71,6 +83,9 @@ class NaScrollbarOptionsCupertino extends NaScrollbarOptionsGeneric {
     super.radius = CupertinoScrollbar.defaultRadius,
     this.radiusWhileDragging = CupertinoScrollbar.defaultRadiusWhileDragging,
   });
+
+  /// Creates an empty [NaScrollbarOptionsCupertino] with default values.
+  NaScrollbarOptionsCupertino.empty() : this();
 
   /// Creates a copy of this [NaScrollbarOptionsCupertino] with the given fields replaced by non-null values.
   @override

@@ -6,11 +6,20 @@ import '../widgets/na-widget.widget.dart';
 import '../models/widget-options.model.dart';
 
 /// Base options for [NaAlertDialog].
-abstract class NaAlertDialogOptions extends NaWidgetOptions {}
+abstract class NaAlertDialogOptions extends NaWidgetOptions {
+  /// Default constructor for subclasses.
+  NaAlertDialogOptions();
+
+  /// Creates an empty [NaAlertDialogOptions] with default values.
+  factory NaAlertDialogOptions.empty() => NaAlertDialogOptionsGeneric.empty();
+}
 
 /// Generic options for [NaAlertDialog], holding properties common to both platforms.
 class NaAlertDialogOptionsGeneric extends NaAlertDialogOptions {
   NaAlertDialogOptionsGeneric();
+
+  /// Creates an empty [NaAlertDialogOptionsGeneric] with default values.
+  NaAlertDialogOptionsGeneric.empty() : this();
 
   /// Creates a copy of this [NaAlertDialogOptionsGeneric].
   NaAlertDialogOptionsGeneric copyWith() {
@@ -108,6 +117,9 @@ class NaAlertDialogOptionsMaterial extends NaAlertDialogOptionsGeneric {
     this.scrollable,
   });
 
+  /// Creates an empty [NaAlertDialogOptionsMaterial] with default values.
+  NaAlertDialogOptionsMaterial.empty() : this();
+
   /// Creates a copy of this [NaAlertDialogOptionsMaterial] with the given fields replaced by non-null values.
   @override
   NaAlertDialogOptionsMaterial copyWith({
@@ -172,6 +184,9 @@ class NaAlertDialogOptionsCupertino extends NaAlertDialogOptionsGeneric {
     this.actionScrollController,
     this.scrollController,
   });
+
+  /// Creates an empty [NaAlertDialogOptionsCupertino] with default values.
+  NaAlertDialogOptionsCupertino.empty() : this();
 
   /// Creates a copy of this [NaAlertDialogOptionsCupertino] with the given fields replaced by non-null values.
   @override
