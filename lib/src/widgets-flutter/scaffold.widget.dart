@@ -16,6 +16,15 @@ class NaScaffoldOptionsGeneric extends NaScaffoldOptions {
   NaScaffoldOptionsGeneric({
     this.resizeToAvoidBottomInset,
   });
+
+  /// Creates a copy of this [NaScaffoldOptionsGeneric] with the given fields replaced by non-null values.
+  NaScaffoldOptionsGeneric copyWith({
+    bool? resizeToAvoidBottomInset,
+  }) {
+    return NaScaffoldOptionsGeneric(
+      resizeToAvoidBottomInset: resizeToAvoidBottomInset ?? this.resizeToAvoidBottomInset,
+    );
+  }
 }
 
 /// Material-specific options for [NaScaffold], resolving into a [Scaffold].
@@ -30,6 +39,22 @@ class NaScaffoldOptionsMaterial extends NaScaffoldOptionsGeneric {
     this.drawer,
     super.resizeToAvoidBottomInset,
   });
+
+  /// Creates a copy of this [NaScaffoldOptionsMaterial] with the given fields replaced by non-null values.
+  @override
+  NaScaffoldOptionsMaterial copyWith({
+    Widget? floatingActionButton,
+    Widget? bottomNavigationBar,
+    Widget? drawer,
+    bool? resizeToAvoidBottomInset,
+  }) {
+    return NaScaffoldOptionsMaterial(
+      floatingActionButton    : floatingActionButton ?? this.floatingActionButton,
+      bottomNavigationBar     : bottomNavigationBar ?? this.bottomNavigationBar,
+      drawer                  : drawer ?? this.drawer,
+      resizeToAvoidBottomInset: resizeToAvoidBottomInset ?? this.resizeToAvoidBottomInset,
+    );
+  }
 }
 
 /// Cupertino-specific options for [NaScaffold], resolving into a [CupertinoPageScaffold].
@@ -37,6 +62,16 @@ class NaScaffoldOptionsCupertino extends NaScaffoldOptionsGeneric {
   NaScaffoldOptionsCupertino({
     super.resizeToAvoidBottomInset,
   });
+
+  /// Creates a copy of this [NaScaffoldOptionsCupertino] with the given fields replaced by non-null values.
+  @override
+  NaScaffoldOptionsCupertino copyWith({
+    bool? resizeToAvoidBottomInset,
+  }) {
+    return NaScaffoldOptionsCupertino(
+      resizeToAvoidBottomInset: resizeToAvoidBottomInset ?? this.resizeToAvoidBottomInset,
+    );
+  }
 }
 
 /// A generic Scaffold widget that automatically renders a [Scaffold] on Material

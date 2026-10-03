@@ -11,6 +11,11 @@ abstract class NaDatePickerOptions extends NaWidgetOptions {}
 /// Generic options for [NaDatePicker], holding properties common to both platforms.
 class NaDatePickerOptionsGeneric extends NaDatePickerOptions {
   NaDatePickerOptionsGeneric();
+
+  /// Creates a copy of this [NaDatePickerOptionsGeneric].
+  NaDatePickerOptionsGeneric copyWith() {
+    return NaDatePickerOptionsGeneric();
+  }
 }
 
 /// Material-specific options for [NaDatePicker], resolving into a [CalendarDatePicker].
@@ -26,6 +31,22 @@ class NaDatePickerOptionsMaterial extends NaDatePickerOptionsGeneric {
     this.initialCalendarMode,
     this.selectableDayPredicate,
   });
+
+  /// Creates a copy of this [NaDatePickerOptionsMaterial] with the given fields replaced by non-null values.
+  @override
+  NaDatePickerOptionsMaterial copyWith({
+    DateTime? currentDate,
+    ValueChanged<DateTime>? onDisplayedMonthChanged,
+    DatePickerMode? initialCalendarMode,
+    SelectableDayPredicate? selectableDayPredicate,
+  }) {
+    return NaDatePickerOptionsMaterial(
+      currentDate            : currentDate ?? this.currentDate,
+      onDisplayedMonthChanged: onDisplayedMonthChanged ?? this.onDisplayedMonthChanged,
+      initialCalendarMode    : initialCalendarMode ?? this.initialCalendarMode,
+      selectableDayPredicate : selectableDayPredicate ?? this.selectableDayPredicate,
+    );
+  }
 }
 
 /// Cupertino-specific options for [NaDatePicker], resolving into a [CupertinoDatePicker].
@@ -43,6 +64,24 @@ class NaDatePickerOptionsCupertino extends NaDatePickerOptionsGeneric {
     this.use24hFormat,
     this.minuteInterval,
   });
+
+  /// Creates a copy of this [NaDatePickerOptionsCupertino] with the given fields replaced by non-null values.
+  @override
+  NaDatePickerOptionsCupertino copyWith({
+    double? itemExtent,
+    Widget? selectionOverlay,
+    Color? backgroundColor,
+    bool? use24hFormat,
+    int? minuteInterval,
+  }) {
+    return NaDatePickerOptionsCupertino(
+      itemExtent      : itemExtent ?? this.itemExtent,
+      selectionOverlay: selectionOverlay ?? this.selectionOverlay,
+      backgroundColor : backgroundColor ?? this.backgroundColor,
+      use24hFormat    : use24hFormat ?? this.use24hFormat,
+      minuteInterval  : minuteInterval ?? this.minuteInterval,
+    );
+  }
 }
 
 /// A generic DatePicker widget that automatically renders a [CalendarDatePicker] on Material

@@ -19,6 +19,19 @@ class NaSliderOptionsGeneric extends NaSliderOptions {
     this.thumbColor,
     this.divisions,
   });
+
+  /// Creates a copy of this [NaSliderOptionsGeneric] with the given fields replaced by non-null values.
+  NaSliderOptionsGeneric copyWith({
+    Color? activeColor,
+    Color? thumbColor,
+    int? divisions,
+  }) {
+    return NaSliderOptionsGeneric(
+      activeColor: activeColor ?? this.activeColor,
+      thumbColor : thumbColor ?? this.thumbColor,
+      divisions  : divisions ?? this.divisions,
+    );
+  }
 }
 
 /// Material-specific options for [NaSlider], resolving into a [Slider].
@@ -43,6 +56,34 @@ class NaSliderOptionsMaterial extends NaSliderOptionsGeneric {
     super.thumbColor,
     super.divisions,
   });
+
+  /// Creates a copy of this [NaSliderOptionsMaterial] with the given fields replaced by non-null values.
+  @override
+  NaSliderOptionsMaterial copyWith({
+    Color? inactiveColor,
+    WidgetStateProperty<Color?>? overlayColor,
+    MouseCursor? mouseCursor,
+    SemanticFormatterCallback? semanticFormatterCallback,
+    FocusNode? focusNode,
+    bool? autofocus,
+    String? label,
+    Color? activeColor,
+    Color? thumbColor,
+    int? divisions,
+  }) {
+    return NaSliderOptionsMaterial(
+      inactiveColor            : inactiveColor ?? this.inactiveColor,
+      overlayColor             : overlayColor ?? this.overlayColor,
+      mouseCursor              : mouseCursor ?? this.mouseCursor,
+      semanticFormatterCallback: semanticFormatterCallback ?? this.semanticFormatterCallback,
+      focusNode                : focusNode ?? this.focusNode,
+      autofocus                : autofocus ?? this.autofocus,
+      label                    : label ?? this.label,
+      activeColor              : activeColor ?? this.activeColor,
+      thumbColor               : thumbColor ?? this.thumbColor,
+      divisions                : divisions ?? this.divisions,
+    );
+  }
 }
 
 /// Cupertino-specific options for [NaSlider], resolving into a [CupertinoSlider].
@@ -52,6 +93,20 @@ class NaSliderOptionsCupertino extends NaSliderOptionsGeneric {
     super.thumbColor,
     super.divisions,
   });
+
+  /// Creates a copy of this [NaSliderOptionsCupertino] with the given fields replaced by non-null values.
+  @override
+  NaSliderOptionsCupertino copyWith({
+    Color? activeColor,
+    Color? thumbColor,
+    int? divisions,
+  }) {
+    return NaSliderOptionsCupertino(
+      activeColor: activeColor ?? this.activeColor,
+      thumbColor : thumbColor ?? this.thumbColor,
+      divisions  : divisions ?? this.divisions,
+    );
+  }
 }
 
 /// A generic Slider widget that automatically renders a [Slider] on Material

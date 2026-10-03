@@ -21,6 +21,21 @@ class NaIconButtonOptionsGeneric extends NaIconButtonOptions {
     this.color,
     this.disabledColor,
   });
+
+  /// Creates a copy of this [NaIconButtonOptionsGeneric] with the given fields replaced by non-null values.
+  NaIconButtonOptionsGeneric copyWith({
+    EdgeInsetsGeometry? padding,
+    AlignmentGeometry? alignment,
+    Color? color,
+    Color? disabledColor,
+  }) {
+    return NaIconButtonOptionsGeneric(
+      padding      : padding ?? this.padding,
+      alignment    : alignment ?? this.alignment,
+      color        : color ?? this.color,
+      disabledColor: disabledColor ?? this.disabledColor,
+    );
+  }
 }
 
 /// Material-specific options for [NaIconButton], resolving into an [IconButton].
@@ -58,6 +73,48 @@ class NaIconButtonOptionsMaterial extends NaIconButtonOptionsGeneric {
     super.color,
     super.disabledColor,
   });
+
+  /// Creates a copy of this [NaIconButtonOptionsMaterial] with the given fields replaced by non-null values.
+  @override
+  NaIconButtonOptionsMaterial copyWith({
+    double? iconSize,
+    VisualDensity? visualDensity,
+    double? splashRadius,
+    Color? focusColor,
+    Color? hoverColor,
+    Color? highlightColor,
+    Color? splashColor,
+    MouseCursor? mouseCursor,
+    FocusNode? focusNode,
+    bool? autofocus,
+    String? tooltip,
+    BoxConstraints? constraints,
+    ButtonStyle? style,
+    EdgeInsetsGeometry? padding,
+    AlignmentGeometry? alignment,
+    Color? color,
+    Color? disabledColor,
+  }) {
+    return NaIconButtonOptionsMaterial(
+      iconSize      : iconSize ?? this.iconSize,
+      visualDensity : visualDensity ?? this.visualDensity,
+      splashRadius  : splashRadius ?? this.splashRadius,
+      focusColor    : focusColor ?? this.focusColor,
+      hoverColor    : hoverColor ?? this.hoverColor,
+      highlightColor: highlightColor ?? this.highlightColor,
+      splashColor   : splashColor ?? this.splashColor,
+      mouseCursor   : mouseCursor ?? this.mouseCursor,
+      focusNode     : focusNode ?? this.focusNode,
+      autofocus     : autofocus ?? this.autofocus,
+      tooltip       : tooltip ?? this.tooltip,
+      constraints   : constraints ?? this.constraints,
+      style         : style ?? this.style,
+      padding       : padding ?? this.padding,
+      alignment     : alignment ?? this.alignment,
+      color         : color ?? this.color,
+      disabledColor : disabledColor ?? this.disabledColor,
+    );
+  }
 }
 
 /// Cupertino-specific options for [NaIconButton], resolving into a [CupertinoButton].
@@ -75,6 +132,28 @@ class NaIconButtonOptionsCupertino extends NaIconButtonOptionsGeneric {
     super.color,
     super.disabledColor,
   });
+
+  /// Creates a copy of this [NaIconButtonOptionsCupertino] with the given fields replaced by non-null values.
+  @override
+  NaIconButtonOptionsCupertino copyWith({
+    Size? minimumSize,
+    double? pressedOpacity,
+    BorderRadius? borderRadius,
+    EdgeInsetsGeometry? padding,
+    AlignmentGeometry? alignment,
+    Color? color,
+    Color? disabledColor,
+  }) {
+    return NaIconButtonOptionsCupertino(
+      minimumSize   : minimumSize ?? this.minimumSize,
+      pressedOpacity: pressedOpacity ?? this.pressedOpacity,
+      borderRadius  : borderRadius ?? this.borderRadius,
+      padding       : padding ?? this.padding,
+      alignment     : alignment ?? this.alignment,
+      color         : color ?? this.color,
+      disabledColor : disabledColor ?? this.disabledColor,
+    );
+  }
 }
 
 /// A generic IconButton widget that automatically renders an [IconButton] on Material

@@ -17,6 +17,17 @@ class NaButtonFilledOptionsGeneric extends NaButtonFilledOptions {
     this.padding,
     this.color,
   });
+
+  /// Creates a copy of this [NaButtonFilledOptionsGeneric] with the given fields replaced by non-null values.
+  NaButtonFilledOptionsGeneric copyWith({
+    EdgeInsetsGeometry? padding,
+    Color? color,
+  }) {
+    return NaButtonFilledOptionsGeneric(
+      padding: padding ?? this.padding,
+      color  : color ?? this.color,
+    );
+  }
 }
 
 /// Material-specific options for [NaButtonFilled], resolving into a [FilledButton].
@@ -42,6 +53,34 @@ class NaButtonFilledOptionsMaterial extends NaButtonFilledOptionsGeneric {
     super.padding,
     super.color,
   });
+
+  /// Creates a copy of this [NaButtonFilledOptionsMaterial] with the given fields replaced by non-null values.
+  @override
+  NaButtonFilledOptionsMaterial copyWith({
+    VoidCallback? onLongPress,
+    ValueChanged<bool>? onHover,
+    ValueChanged<bool>? onFocusChange,
+    ButtonStyle? style,
+    FocusNode? focusNode,
+    bool? autofocus,
+    Clip? clipBehavior,
+    WidgetStatesController? statesController,
+    EdgeInsetsGeometry? padding,
+    Color? color,
+  }) {
+    return NaButtonFilledOptionsMaterial(
+      onLongPress     : onLongPress ?? this.onLongPress,
+      onHover         : onHover ?? this.onHover,
+      onFocusChange   : onFocusChange ?? this.onFocusChange,
+      style           : style ?? this.style,
+      focusNode       : focusNode ?? this.focusNode,
+      autofocus       : autofocus ?? this.autofocus,
+      clipBehavior    : clipBehavior ?? this.clipBehavior,
+      statesController: statesController ?? this.statesController,
+      padding         : padding ?? this.padding,
+      color           : color ?? this.color,
+    );
+  }
 }
 
 /// Cupertino-specific options for [NaButtonFilled], resolving into a [CupertinoButton.filled].
@@ -65,6 +104,32 @@ class NaButtonFilledOptionsCupertino extends NaButtonFilledOptionsGeneric {
     super.padding,
     super.color,
   });
+
+  /// Creates a copy of this [NaButtonFilledOptionsCupertino] with the given fields replaced by non-null values.
+  @override
+  NaButtonFilledOptionsCupertino copyWith({
+    Color? disabledColor,
+    Size? minimumSize,
+    double? pressedOpacity,
+    BorderRadius? borderRadius,
+    AlignmentGeometry? alignment,
+    FocusNode? focusNode,
+    bool? autofocus,
+    EdgeInsetsGeometry? padding,
+    Color? color,
+  }) {
+    return NaButtonFilledOptionsCupertino(
+      disabledColor : disabledColor ?? this.disabledColor,
+      minimumSize   : minimumSize ?? this.minimumSize,
+      pressedOpacity: pressedOpacity ?? this.pressedOpacity,
+      borderRadius  : borderRadius ?? this.borderRadius,
+      alignment     : alignment ?? this.alignment,
+      focusNode     : focusNode ?? this.focusNode,
+      autofocus     : autofocus ?? this.autofocus,
+      padding       : padding ?? this.padding,
+      color         : color ?? this.color,
+    );
+  }
 }
 
 /// A generic Filled Button widget that automatically renders a [FilledButton] on Material

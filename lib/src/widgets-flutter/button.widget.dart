@@ -11,6 +11,11 @@ abstract class NaButtonOptions extends NaWidgetOptions {}
 /// Generic options for [NaButton], holding properties common to both platforms.
 class NaButtonOptionsGeneric extends NaButtonOptions {
   NaButtonOptionsGeneric();
+
+  /// Creates a copy of this [NaButtonOptionsGeneric].
+  NaButtonOptionsGeneric copyWith() {
+    return NaButtonOptionsGeneric();
+  }
 }
 
 /// Material-specific options for [NaButton], resolving into an [ElevatedButton].
@@ -34,6 +39,30 @@ class NaButtonOptionsMaterial extends NaButtonOptionsGeneric {
     this.clipBehavior,
     this.statesController,
   });
+
+  /// Creates a copy of this [NaButtonOptionsMaterial] with the given fields replaced by non-null values.
+  @override
+  NaButtonOptionsMaterial copyWith({
+    VoidCallback? onLongPress,
+    ValueChanged<bool>? onHover,
+    ValueChanged<bool>? onFocusChange,
+    ButtonStyle? style,
+    FocusNode? focusNode,
+    bool? autofocus,
+    Clip? clipBehavior,
+    WidgetStatesController? statesController,
+  }) {
+    return NaButtonOptionsMaterial(
+      onLongPress     : onLongPress ?? this.onLongPress,
+      onHover         : onHover ?? this.onHover,
+      onFocusChange   : onFocusChange ?? this.onFocusChange,
+      style           : style ?? this.style,
+      focusNode       : focusNode ?? this.focusNode,
+      autofocus       : autofocus ?? this.autofocus,
+      clipBehavior    : clipBehavior ?? this.clipBehavior,
+      statesController: statesController ?? this.statesController,
+    );
+  }
 }
 
 /// Cupertino-specific options for [NaButton], resolving into a [CupertinoButton].
@@ -55,6 +84,28 @@ class NaButtonOptionsCupertino extends NaButtonOptionsGeneric {
     this.borderRadius,
     this.alignment,
   });
+
+  /// Creates a copy of this [NaButtonOptionsCupertino] with the given fields replaced by non-null values.
+  @override
+  NaButtonOptionsCupertino copyWith({
+    EdgeInsetsGeometry? padding,
+    Color? color,
+    Color? disabledColor,
+    Size? minimumSize,
+    double? pressedOpacity,
+    BorderRadius? borderRadius,
+    AlignmentGeometry? alignment,
+  }) {
+    return NaButtonOptionsCupertino(
+      padding       : padding ?? this.padding,
+      color         : color ?? this.color,
+      disabledColor : disabledColor ?? this.disabledColor,
+      minimumSize   : minimumSize ?? this.minimumSize,
+      pressedOpacity: pressedOpacity ?? this.pressedOpacity,
+      borderRadius  : borderRadius ?? this.borderRadius,
+      alignment     : alignment ?? this.alignment,
+    );
+  }
 }
 
 /// A generic Button widget that automatically renders an [ElevatedButton] on Material

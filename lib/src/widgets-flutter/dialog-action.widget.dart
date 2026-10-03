@@ -11,6 +11,11 @@ abstract class NaDialogActionOptions extends NaWidgetOptions {}
 /// Generic options for [NaDialogAction], holding properties common to both platforms.
 class NaDialogActionOptionsGeneric extends NaDialogActionOptions {
   NaDialogActionOptionsGeneric();
+
+  /// Creates a copy of this [NaDialogActionOptionsGeneric].
+  NaDialogActionOptionsGeneric copyWith() {
+    return NaDialogActionOptionsGeneric();
+  }
 }
 
 /// Material-specific options for [NaDialogAction], resolving into a [TextButton].
@@ -26,6 +31,22 @@ class NaDialogActionOptionsMaterial extends NaDialogActionOptionsGeneric {
     this.autofocus,
     this.clipBehavior,
   });
+
+  /// Creates a copy of this [NaDialogActionOptionsMaterial] with the given fields replaced by non-null values.
+  @override
+  NaDialogActionOptionsMaterial copyWith({
+    ButtonStyle? style,
+    FocusNode? focusNode,
+    bool? autofocus,
+    Clip? clipBehavior,
+  }) {
+    return NaDialogActionOptionsMaterial(
+      style       : style ?? this.style,
+      focusNode   : focusNode ?? this.focusNode,
+      autofocus   : autofocus ?? this.autofocus,
+      clipBehavior: clipBehavior ?? this.clipBehavior,
+    );
+  }
 }
 
 /// Cupertino-specific options for [NaDialogAction], resolving into a [CupertinoDialogAction].
@@ -39,6 +60,20 @@ class NaDialogActionOptionsCupertino extends NaDialogActionOptionsGeneric {
     this.isDestructiveAction,
     this.textStyle,
   });
+
+  /// Creates a copy of this [NaDialogActionOptionsCupertino] with the given fields replaced by non-null values.
+  @override
+  NaDialogActionOptionsCupertino copyWith({
+    bool? isDefaultAction,
+    bool? isDestructiveAction,
+    TextStyle? textStyle,
+  }) {
+    return NaDialogActionOptionsCupertino(
+      isDefaultAction    : isDefaultAction ?? this.isDefaultAction,
+      isDestructiveAction: isDestructiveAction ?? this.isDestructiveAction,
+      textStyle          : textStyle ?? this.textStyle,
+    );
+  }
 }
 
 /// A generic Dialog Action widget that automatically renders a [TextButton] on Material

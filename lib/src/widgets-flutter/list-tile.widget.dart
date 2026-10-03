@@ -11,6 +11,11 @@ abstract class NaListTileOptions extends NaWidgetOptions {}
 /// Generic options for [NaListTile], holding properties common to both platforms.
 class NaListTileOptionsGeneric extends NaListTileOptions {
   NaListTileOptionsGeneric();
+
+  /// Creates a copy of this [NaListTileOptionsGeneric].
+  NaListTileOptionsGeneric copyWith() {
+    return NaListTileOptionsGeneric();
+  }
 }
 
 /// Material-specific options for [NaListTile], resolving into a [ListTile].
@@ -68,6 +73,64 @@ class NaListTileOptionsMaterial extends NaListTileOptionsGeneric {
     this.minVerticalPadding,
     this.minLeadingWidth,
   });
+
+  /// Creates a copy of this [NaListTileOptionsMaterial] with the given fields replaced by non-null values.
+  @override
+  NaListTileOptionsMaterial copyWith({
+    bool? isThreeLine,
+    bool? dense,
+    VisualDensity? visualDensity,
+    ShapeBorder? shape,
+    ListTileStyle? style,
+    Color? selectedColor,
+    Color? iconColor,
+    Color? textColor,
+    EdgeInsetsGeometry? contentPadding,
+    bool? enabled,
+    VoidCallback? onLongPress,
+    ValueChanged<bool>? onFocusChange,
+    MouseCursor? mouseCursor,
+    bool? selected,
+    Color? focusColor,
+    Color? hoverColor,
+    Color? splashColor,
+    FocusNode? focusNode,
+    bool? autofocus,
+    Color? tileColor,
+    Color? selectedTileColor,
+    bool? enableFeedback,
+    double? horizontalTitleGap,
+    double? minVerticalPadding,
+    double? minLeadingWidth,
+  }) {
+    return NaListTileOptionsMaterial(
+      isThreeLine       : isThreeLine ?? this.isThreeLine,
+      dense             : dense ?? this.dense,
+      visualDensity     : visualDensity ?? this.visualDensity,
+      shape             : shape ?? this.shape,
+      style             : style ?? this.style,
+      selectedColor     : selectedColor ?? this.selectedColor,
+      iconColor         : iconColor ?? this.iconColor,
+      textColor         : textColor ?? this.textColor,
+      contentPadding    : contentPadding ?? this.contentPadding,
+      enabled           : enabled ?? this.enabled,
+      onLongPress       : onLongPress ?? this.onLongPress,
+      onFocusChange     : onFocusChange ?? this.onFocusChange,
+      mouseCursor       : mouseCursor ?? this.mouseCursor,
+      selected          : selected ?? this.selected,
+      focusColor        : focusColor ?? this.focusColor,
+      hoverColor        : hoverColor ?? this.hoverColor,
+      splashColor       : splashColor ?? this.splashColor,
+      focusNode         : focusNode ?? this.focusNode,
+      autofocus         : autofocus ?? this.autofocus,
+      tileColor         : tileColor ?? this.tileColor,
+      selectedTileColor : selectedTileColor ?? this.selectedTileColor,
+      enableFeedback    : enableFeedback ?? this.enableFeedback,
+      horizontalTitleGap: horizontalTitleGap ?? this.horizontalTitleGap,
+      minVerticalPadding: minVerticalPadding ?? this.minVerticalPadding,
+      minLeadingWidth   : minLeadingWidth ?? this.minLeadingWidth,
+    );
+  }
 }
 
 /// Cupertino-specific options for [NaListTile], resolving into a [CupertinoListTile].
@@ -87,6 +150,26 @@ class NaListTileOptionsCupertino extends NaListTileOptionsGeneric {
     this.leadingSize,
     this.leadingToTitle,
   });
+
+  /// Creates a copy of this [NaListTileOptionsCupertino] with the given fields replaced by non-null values.
+  @override
+  NaListTileOptionsCupertino copyWith({
+    Widget? additionalInfo,
+    Color? backgroundColor,
+    Color? backgroundColorActivated,
+    EdgeInsetsGeometry? padding,
+    double? leadingSize,
+    double? leadingToTitle,
+  }) {
+    return NaListTileOptionsCupertino(
+      additionalInfo          : additionalInfo ?? this.additionalInfo,
+      backgroundColor         : backgroundColor ?? this.backgroundColor,
+      backgroundColorActivated: backgroundColorActivated ?? this.backgroundColorActivated,
+      padding                 : padding ?? this.padding,
+      leadingSize             : leadingSize ?? this.leadingSize,
+      leadingToTitle          : leadingToTitle ?? this.leadingToTitle,
+    );
+  }
 }
 
 /// A generic ListTile widget that automatically renders a [ListTile] on Material

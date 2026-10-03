@@ -24,6 +24,23 @@ class NaSwitchOptionsGeneric extends NaSwitchOptions {
     this.focusNode,
     this.autofocus,
   });
+
+  /// Creates a copy of this [NaSwitchOptionsGeneric] with the given fields replaced by non-null values.
+  NaSwitchOptionsGeneric copyWith({
+    Color? activeTrackColor,
+    Color? inactiveTrackColor,
+    Color? focusColor,
+    FocusNode? focusNode,
+    bool? autofocus,
+  }) {
+    return NaSwitchOptionsGeneric(
+      activeTrackColor  : activeTrackColor ?? this.activeTrackColor,
+      inactiveTrackColor: inactiveTrackColor ?? this.inactiveTrackColor,
+      focusColor        : focusColor ?? this.focusColor,
+      focusNode         : focusNode ?? this.focusNode,
+      autofocus         : autofocus ?? this.autofocus,
+    );
+  }
 }
 
 /// Material-specific options for [NaSwitch], resolving into a [Switch].
@@ -60,6 +77,48 @@ class NaSwitchOptionsMaterial extends NaSwitchOptionsGeneric {
     super.focusNode,
     super.autofocus,
   });
+
+  /// Creates a copy of this [NaSwitchOptionsMaterial] with the given fields replaced by non-null values.
+  @override
+  NaSwitchOptionsMaterial copyWith({
+    Color? activeThumbColor,
+    Color? inactiveThumbColor,
+    ImageProvider? activeThumbImage,
+    ImageProvider? inactiveThumbImage,
+    WidgetStateProperty<Color?>? thumbColor,
+    WidgetStateProperty<Color?>? trackColor,
+    WidgetStateProperty<Icon?>? thumbIcon,
+    DragStartBehavior? dragStartBehavior,
+    MouseCursor? mouseCursor,
+    Color? hoverColor,
+    WidgetStateProperty<Color?>? overlayColor,
+    double? splashRadius,
+    Color? activeTrackColor,
+    Color? inactiveTrackColor,
+    Color? focusColor,
+    FocusNode? focusNode,
+    bool? autofocus,
+  }) {
+    return NaSwitchOptionsMaterial(
+      activeThumbColor  : activeThumbColor ?? this.activeThumbColor,
+      inactiveThumbColor: inactiveThumbColor ?? this.inactiveThumbColor,
+      activeThumbImage  : activeThumbImage ?? this.activeThumbImage,
+      inactiveThumbImage: inactiveThumbImage ?? this.inactiveThumbImage,
+      thumbColor        : thumbColor ?? this.thumbColor,
+      trackColor        : trackColor ?? this.trackColor,
+      thumbIcon         : thumbIcon ?? this.thumbIcon,
+      dragStartBehavior : dragStartBehavior ?? this.dragStartBehavior,
+      mouseCursor       : mouseCursor ?? this.mouseCursor,
+      hoverColor        : hoverColor ?? this.hoverColor,
+      overlayColor      : overlayColor ?? this.overlayColor,
+      splashRadius      : splashRadius ?? this.splashRadius,
+      activeTrackColor  : activeTrackColor ?? this.activeTrackColor,
+      inactiveTrackColor: inactiveTrackColor ?? this.inactiveTrackColor,
+      focusColor        : focusColor ?? this.focusColor,
+      focusNode         : focusNode ?? this.focusNode,
+      autofocus         : autofocus ?? this.autofocus,
+    );
+  }
 }
 
 /// Cupertino-specific options for [NaSwitch], resolving into a [CupertinoSwitch].
@@ -76,6 +135,28 @@ class NaSwitchOptionsCupertino extends NaSwitchOptionsGeneric {
     super.focusNode,
     super.autofocus,
   });
+
+  /// Creates a copy of this [NaSwitchOptionsCupertino] with the given fields replaced by non-null values.
+  @override
+  NaSwitchOptionsCupertino copyWith({
+    Color? thumbColor,
+    bool? applyTheme,
+    Color? activeTrackColor,
+    Color? inactiveTrackColor,
+    Color? focusColor,
+    FocusNode? focusNode,
+    bool? autofocus,
+  }) {
+    return NaSwitchOptionsCupertino(
+      thumbColor        : thumbColor ?? this.thumbColor,
+      applyTheme        : applyTheme ?? this.applyTheme,
+      activeTrackColor  : activeTrackColor ?? this.activeTrackColor,
+      inactiveTrackColor: inactiveTrackColor ?? this.inactiveTrackColor,
+      focusColor        : focusColor ?? this.focusColor,
+      focusNode         : focusNode ?? this.focusNode,
+      autofocus         : autofocus ?? this.autofocus,
+    );
+  }
 }
 
 /// A generic Switch widget that automatically renders a [Switch] on Material

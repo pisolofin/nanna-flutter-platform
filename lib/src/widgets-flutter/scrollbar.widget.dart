@@ -17,6 +17,17 @@ class NaScrollbarOptionsGeneric extends NaScrollbarOptions {
     this.thickness,
     this.radius,
   });
+
+  /// Creates a copy of this [NaScrollbarOptionsGeneric] with the given fields replaced by non-null values.
+  NaScrollbarOptionsGeneric copyWith({
+    double? thickness,
+    Radius? radius,
+  }) {
+    return NaScrollbarOptionsGeneric(
+      thickness: thickness ?? this.thickness,
+      radius   : radius ?? this.radius,
+    );
+  }
 }
 
 /// Material-specific options for [NaScrollbar], resolving into a [Scrollbar].
@@ -30,6 +41,22 @@ class NaScrollbarOptionsMaterial extends NaScrollbarOptionsGeneric {
     super.thickness,
     super.radius,
   });
+
+  /// Creates a copy of this [NaScrollbarOptionsMaterial] with the given fields replaced by non-null values.
+  @override
+  NaScrollbarOptionsMaterial copyWith({
+    bool? trackVisibility,
+    bool? interactive,
+    double? thickness,
+    Radius? radius,
+  }) {
+    return NaScrollbarOptionsMaterial(
+      trackVisibility: trackVisibility ?? this.trackVisibility,
+      interactive    : interactive ?? this.interactive,
+      thickness      : thickness ?? this.thickness,
+      radius         : radius ?? this.radius,
+    );
+  }
 }
 
 /// Cupertino-specific options for [NaScrollbar], resolving into a [CupertinoScrollbar].
@@ -44,6 +71,22 @@ class NaScrollbarOptionsCupertino extends NaScrollbarOptionsGeneric {
     super.radius = CupertinoScrollbar.defaultRadius,
     this.radiusWhileDragging = CupertinoScrollbar.defaultRadiusWhileDragging,
   });
+
+  /// Creates a copy of this [NaScrollbarOptionsCupertino] with the given fields replaced by non-null values.
+  @override
+  NaScrollbarOptionsCupertino copyWith({
+    double? thicknessWhileDragging,
+    Radius? radiusWhileDragging,
+    double? thickness,
+    Radius? radius,
+  }) {
+    return NaScrollbarOptionsCupertino(
+      thicknessWhileDragging: thicknessWhileDragging ?? this.thicknessWhileDragging,
+      radiusWhileDragging   : radiusWhileDragging ?? this.radiusWhileDragging,
+      thickness             : thickness ?? this.thickness,
+      radius                : radius ?? this.radius,
+    );
+  }
 }
 
 /// A cross-platform scrollbar that translates to [Scrollbar] on Material

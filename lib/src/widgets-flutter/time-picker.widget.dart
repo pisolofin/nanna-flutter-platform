@@ -11,6 +11,11 @@ abstract class NaTimePickerOptions extends NaWidgetOptions {}
 /// Generic options for [NaTimePicker], holding properties common to both platforms.
 class NaTimePickerOptionsGeneric extends NaTimePickerOptions {
   NaTimePickerOptionsGeneric();
+
+  /// Creates a copy of this [NaTimePickerOptionsGeneric].
+  NaTimePickerOptionsGeneric copyWith() {
+    return NaTimePickerOptionsGeneric();
+  }
 }
 
 /// Material-specific options for [NaTimePicker], resolving into a [TimePickerDialog].
@@ -34,6 +39,30 @@ class NaTimePickerOptionsMaterial extends NaTimePickerOptionsGeneric {
     this.initialEntryMode,
     this.orientation,
   });
+
+  /// Creates a copy of this [NaTimePickerOptionsMaterial] with the given fields replaced by non-null values.
+  @override
+  NaTimePickerOptionsMaterial copyWith({
+    String? cancelText,
+    String? confirmText,
+    String? helpText,
+    String? errorInvalidText,
+    String? hourLabelText,
+    String? minuteLabelText,
+    TimePickerEntryMode? initialEntryMode,
+    Orientation? orientation,
+  }) {
+    return NaTimePickerOptionsMaterial(
+      cancelText      : cancelText ?? this.cancelText,
+      confirmText     : confirmText ?? this.confirmText,
+      helpText        : helpText ?? this.helpText,
+      errorInvalidText: errorInvalidText ?? this.errorInvalidText,
+      hourLabelText   : hourLabelText ?? this.hourLabelText,
+      minuteLabelText : minuteLabelText ?? this.minuteLabelText,
+      initialEntryMode: initialEntryMode ?? this.initialEntryMode,
+      orientation     : orientation ?? this.orientation,
+    );
+  }
 }
 
 /// Cupertino-specific options for [NaTimePicker], resolving into a [CupertinoTimerPicker].
@@ -53,6 +82,26 @@ class NaTimePickerOptionsCupertino extends NaTimePickerOptionsGeneric {
     this.backgroundColor,
     this.itemExtent,
   });
+
+  /// Creates a copy of this [NaTimePickerOptionsCupertino] with the given fields replaced by non-null values.
+  @override
+  NaTimePickerOptionsCupertino copyWith({
+    CupertinoTimerPickerMode? mode,
+    int? minuteInterval,
+    int? secondInterval,
+    AlignmentGeometry? alignment,
+    Color? backgroundColor,
+    double? itemExtent,
+  }) {
+    return NaTimePickerOptionsCupertino(
+      mode           : mode ?? this.mode,
+      minuteInterval : minuteInterval ?? this.minuteInterval,
+      secondInterval : secondInterval ?? this.secondInterval,
+      alignment      : alignment ?? this.alignment,
+      backgroundColor: backgroundColor ?? this.backgroundColor,
+      itemExtent     : itemExtent ?? this.itemExtent,
+    );
+  }
 }
 
 /// A generic TimePicker widget that automatically renders a [TimePickerDialog] on Material

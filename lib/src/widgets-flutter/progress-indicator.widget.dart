@@ -15,6 +15,15 @@ class NaProgressIndicatorOptionsGeneric extends NaProgressIndicatorOptions {
   NaProgressIndicatorOptionsGeneric({
     this.color,
   });
+
+  /// Creates a copy of this [NaProgressIndicatorOptionsGeneric] with the given fields replaced by non-null values.
+  NaProgressIndicatorOptionsGeneric copyWith({
+    Color? color,
+  }) {
+    return NaProgressIndicatorOptionsGeneric(
+      color: color ?? this.color,
+    );
+  }
 }
 
 /// Material-specific options for [NaProgressIndicator], resolving into a [CircularProgressIndicator].
@@ -35,6 +44,28 @@ class NaProgressIndicatorOptionsMaterial extends NaProgressIndicatorOptionsGener
     this.semanticsValue,
     super.color,
   });
+
+  /// Creates a copy of this [NaProgressIndicatorOptionsMaterial] with the given fields replaced by non-null values.
+  @override
+  NaProgressIndicatorOptionsMaterial copyWith({
+    double? value,
+    Color? backgroundColor,
+    Animation<Color?>? valueColor,
+    double? strokeWidth,
+    String? semanticsLabel,
+    String? semanticsValue,
+    Color? color,
+  }) {
+    return NaProgressIndicatorOptionsMaterial(
+      value          : value ?? this.value,
+      backgroundColor: backgroundColor ?? this.backgroundColor,
+      valueColor     : valueColor ?? this.valueColor,
+      strokeWidth    : strokeWidth ?? this.strokeWidth,
+      semanticsLabel : semanticsLabel ?? this.semanticsLabel,
+      semanticsValue : semanticsValue ?? this.semanticsValue,
+      color          : color ?? this.color,
+    );
+  }
 }
 
 /// Cupertino-specific options for [NaProgressIndicator], resolving into a [CupertinoActivityIndicator].
@@ -47,6 +78,20 @@ class NaProgressIndicatorOptionsCupertino extends NaProgressIndicatorOptionsGene
     this.animating,
     super.color,
   });
+
+  /// Creates a copy of this [NaProgressIndicatorOptionsCupertino] with the given fields replaced by non-null values.
+  @override
+  NaProgressIndicatorOptionsCupertino copyWith({
+    double? radius,
+    bool? animating,
+    Color? color,
+  }) {
+    return NaProgressIndicatorOptionsCupertino(
+      radius   : radius ?? this.radius,
+      animating: animating ?? this.animating,
+      color    : color ?? this.color,
+    );
+  }
 }
 
 /// A generic ProgressIndicator widget that automatically renders a [CircularProgressIndicator] on Material

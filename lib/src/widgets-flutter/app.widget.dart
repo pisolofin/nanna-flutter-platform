@@ -11,6 +11,11 @@ abstract class NaAppOptions extends NaWidgetOptions {}
 /// Generic options for [NaApp], holding properties common to both platforms.
 class NaAppOptionsGeneric extends NaAppOptions {
   NaAppOptionsGeneric();
+
+  /// Creates a copy of this [NaAppOptionsGeneric].
+  NaAppOptionsGeneric copyWith() {
+    return NaAppOptionsGeneric();
+  }
 }
 
 /// Material-specific options for [NaApp], resolving into a [MaterialApp].
@@ -34,6 +39,30 @@ class NaAppOptionsMaterial extends NaAppOptionsGeneric {
     this.themeAnimationCurve,
     this.scaffoldMessengerKey,
   });
+
+  /// Creates a copy of this [NaAppOptionsMaterial] with the given fields replaced by non-null values.
+  @override
+  NaAppOptionsMaterial copyWith({
+    ThemeData? theme,
+    ThemeData? darkTheme,
+    ThemeData? highContrastTheme,
+    ThemeData? highContrastDarkTheme,
+    ThemeMode? themeMode,
+    Duration? themeAnimationDuration,
+    Curve? themeAnimationCurve,
+    GlobalKey<ScaffoldMessengerState>? scaffoldMessengerKey,
+  }) {
+    return NaAppOptionsMaterial(
+      theme                 : theme ?? this.theme,
+      darkTheme             : darkTheme ?? this.darkTheme,
+      highContrastTheme     : highContrastTheme ?? this.highContrastTheme,
+      highContrastDarkTheme : highContrastDarkTheme ?? this.highContrastDarkTheme,
+      themeMode             : themeMode ?? this.themeMode,
+      themeAnimationDuration: themeAnimationDuration ?? this.themeAnimationDuration,
+      themeAnimationCurve   : themeAnimationCurve ?? this.themeAnimationCurve,
+      scaffoldMessengerKey  : scaffoldMessengerKey ?? this.scaffoldMessengerKey,
+    );
+  }
 }
 
 /// Cupertino-specific options for [NaApp], resolving into a [CupertinoApp].
@@ -41,6 +70,16 @@ class NaAppOptionsCupertino extends NaAppOptionsGeneric {
   final CupertinoThemeData? theme;
 
   NaAppOptionsCupertino({ this.theme });
+
+  /// Creates a copy of this [NaAppOptionsCupertino] with the given fields replaced by non-null values.
+  @override
+  NaAppOptionsCupertino copyWith({
+    CupertinoThemeData? theme,
+  }) {
+    return NaAppOptionsCupertino(
+      theme: theme ?? this.theme,
+    );
+  }
 }
 
 /// A generic App widget that automatically renders a [MaterialApp] on Material

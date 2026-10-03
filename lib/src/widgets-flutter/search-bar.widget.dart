@@ -11,6 +11,11 @@ abstract class NaSearchBarOptions extends NaWidgetOptions {}
 /// Generic options for [NaSearchBar], holding properties common to both platforms.
 class NaSearchBarOptionsGeneric extends NaSearchBarOptions {
   NaSearchBarOptionsGeneric();
+
+  /// Creates a copy of this [NaSearchBarOptionsGeneric].
+  NaSearchBarOptionsGeneric copyWith() {
+    return NaSearchBarOptionsGeneric();
+  }
 }
 
 /// Material-specific options for [NaSearchBar], resolving into a [SearchBar].
@@ -26,6 +31,22 @@ class NaSearchBarOptionsMaterial extends NaSearchBarOptionsGeneric {
     this.trailing,
     this.constraints,
   });
+
+  /// Creates a copy of this [NaSearchBarOptionsMaterial] with the given fields replaced by non-null values.
+  @override
+  NaSearchBarOptionsMaterial copyWith({
+    WidgetStateProperty<Color?>? backgroundColor,
+    WidgetStateProperty<double?>? elevation,
+    Iterable<Widget>? trailing,
+    BoxConstraints? constraints,
+  }) {
+    return NaSearchBarOptionsMaterial(
+      backgroundColor: backgroundColor ?? this.backgroundColor,
+      elevation      : elevation ?? this.elevation,
+      trailing       : trailing ?? this.trailing,
+      constraints    : constraints ?? this.constraints,
+    );
+  }
 }
 
 /// Cupertino-specific options for [NaSearchBar], resolving into a [CupertinoSearchTextField].
@@ -41,6 +62,22 @@ class NaSearchBarOptionsCupertino extends NaSearchBarOptionsGeneric {
     this.itemColor = CupertinoColors.systemGrey2,
     this.itemSize = 20.0,
   });
+
+  /// Creates a copy of this [NaSearchBarOptionsCupertino] with the given fields replaced by non-null values.
+  @override
+  NaSearchBarOptionsCupertino copyWith({
+    BoxDecoration? decoration,
+    EdgeInsetsGeometry? padding,
+    Color? itemColor,
+    double? itemSize,
+  }) {
+    return NaSearchBarOptionsCupertino(
+      decoration: decoration ?? this.decoration,
+      padding   : padding ?? this.padding,
+      itemColor : itemColor ?? this.itemColor,
+      itemSize  : itemSize ?? this.itemSize,
+    );
+  }
 }
 
 /// A cross-platform search bar that translates to [SearchBar] on Material

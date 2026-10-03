@@ -17,6 +17,17 @@ class NaBottomNavigationBarOptionsGeneric extends NaBottomNavigationBarOptions {
     this.backgroundColor,
     this.iconSize,
   });
+
+  /// Creates a copy of this [NaBottomNavigationBarOptionsGeneric] with the given fields replaced by non-null values.
+  NaBottomNavigationBarOptionsGeneric copyWith({
+    Color? backgroundColor,
+    double? iconSize,
+  }) {
+    return NaBottomNavigationBarOptionsGeneric(
+      backgroundColor: backgroundColor ?? this.backgroundColor,
+      iconSize       : iconSize ?? this.iconSize,
+    );
+  }
 }
 
 /// Material-specific options for [NaBottomNavigationBar], resolving into a [BottomNavigationBar].
@@ -54,6 +65,46 @@ class NaBottomNavigationBarOptionsMaterial extends NaBottomNavigationBarOptionsG
     super.backgroundColor,
     super.iconSize,
   });
+
+  /// Creates a copy of this [NaBottomNavigationBarOptionsMaterial] with the given fields replaced by non-null values.
+  @override
+  NaBottomNavigationBarOptionsMaterial copyWith({
+    double? elevation,
+    BottomNavigationBarType? type,
+    Color? fixedColor,
+    Color? selectedItemColor,
+    Color? unselectedItemColor,
+    IconThemeData? selectedIconTheme,
+    IconThemeData? unselectedIconTheme,
+    TextStyle? selectedLabelStyle,
+    TextStyle? unselectedLabelStyle,
+    bool? showSelectedLabels,
+    bool? showUnselectedLabels,
+    MouseCursor? mouseCursor,
+    bool? enableFeedback,
+    BottomNavigationBarLandscapeLayout? landscapeLayout,
+    Color? backgroundColor,
+    double? iconSize,
+  }) {
+    return NaBottomNavigationBarOptionsMaterial(
+      elevation           : elevation ?? this.elevation,
+      type                : type ?? this.type,
+      fixedColor          : fixedColor ?? this.fixedColor,
+      selectedItemColor   : selectedItemColor ?? this.selectedItemColor,
+      unselectedItemColor : unselectedItemColor ?? this.unselectedItemColor,
+      selectedIconTheme   : selectedIconTheme ?? this.selectedIconTheme,
+      unselectedIconTheme : unselectedIconTheme ?? this.unselectedIconTheme,
+      selectedLabelStyle  : selectedLabelStyle ?? this.selectedLabelStyle,
+      unselectedLabelStyle: unselectedLabelStyle ?? this.unselectedLabelStyle,
+      showSelectedLabels  : showSelectedLabels ?? this.showSelectedLabels,
+      showUnselectedLabels: showUnselectedLabels ?? this.showUnselectedLabels,
+      mouseCursor         : mouseCursor ?? this.mouseCursor,
+      enableFeedback      : enableFeedback ?? this.enableFeedback,
+      landscapeLayout     : landscapeLayout ?? this.landscapeLayout,
+      backgroundColor     : backgroundColor ?? this.backgroundColor,
+      iconSize            : iconSize ?? this.iconSize,
+    );
+  }
 }
 
 /// Cupertino-specific options for [NaBottomNavigationBar], resolving into a [CupertinoTabBar].
@@ -71,6 +122,26 @@ class NaBottomNavigationBarOptionsCupertino extends NaBottomNavigationBarOptions
     super.backgroundColor,
     super.iconSize,
   });
+
+  /// Creates a copy of this [NaBottomNavigationBarOptionsCupertino] with the given fields replaced by non-null values.
+  @override
+  NaBottomNavigationBarOptionsCupertino copyWith({
+    Color? activeColor,
+    Color? inactiveColor,
+    double? height,
+    Border? border,
+    Color? backgroundColor,
+    double? iconSize,
+  }) {
+    return NaBottomNavigationBarOptionsCupertino(
+      activeColor    : activeColor ?? this.activeColor,
+      inactiveColor  : inactiveColor ?? this.inactiveColor,
+      height         : height ?? this.height,
+      border         : border ?? this.border,
+      backgroundColor: backgroundColor ?? this.backgroundColor,
+      iconSize       : iconSize ?? this.iconSize,
+    );
+  }
 }
 
 /// A generic Bottom Navigation Bar widget that automatically renders a [BottomNavigationBar] on Material

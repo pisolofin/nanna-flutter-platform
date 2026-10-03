@@ -31,6 +31,31 @@ class NaCheckboxOptionsGeneric extends NaCheckboxOptions {
     this.side,
     this.semanticLabel,
   });
+
+  /// Creates a copy of this [NaCheckboxOptionsGeneric] with the given fields replaced by non-null values.
+  NaCheckboxOptionsGeneric copyWith({
+    bool? tristate,
+    Color? activeColor,
+    Color? checkColor,
+    Color? focusColor,
+    FocusNode? focusNode,
+    bool? autofocus,
+    OutlinedBorder? shape,
+    BorderSide? side,
+    String? semanticLabel,
+  }) {
+    return NaCheckboxOptionsGeneric(
+      tristate     : tristate ?? this.tristate,
+      activeColor  : activeColor ?? this.activeColor,
+      checkColor   : checkColor ?? this.checkColor,
+      focusColor   : focusColor ?? this.focusColor,
+      focusNode    : focusNode ?? this.focusNode,
+      autofocus    : autofocus ?? this.autofocus,
+      shape        : shape ?? this.shape,
+      side         : side ?? this.side,
+      semanticLabel: semanticLabel ?? this.semanticLabel,
+    );
+  }
 }
 
 /// Material-specific options for [NaCheckbox], resolving into a [Checkbox].
@@ -63,6 +88,48 @@ class NaCheckboxOptionsMaterial extends NaCheckboxOptionsGeneric {
     super.side,
     super.semanticLabel,
   });
+
+  /// Creates a copy of this [NaCheckboxOptionsMaterial] with the given fields replaced by non-null values.
+  @override
+  NaCheckboxOptionsMaterial copyWith({
+    MouseCursor? mouseCursor,
+    WidgetStateProperty<Color?>? fillColor,
+    Color? hoverColor,
+    WidgetStateProperty<Color?>? overlayColor,
+    double? splashRadius,
+    MaterialTapTargetSize? materialTapTargetSize,
+    VisualDensity? visualDensity,
+    bool? isError,
+    bool? tristate,
+    Color? activeColor,
+    Color? checkColor,
+    Color? focusColor,
+    FocusNode? focusNode,
+    bool? autofocus,
+    OutlinedBorder? shape,
+    BorderSide? side,
+    String? semanticLabel,
+  }) {
+    return NaCheckboxOptionsMaterial(
+      mouseCursor          : mouseCursor ?? this.mouseCursor,
+      fillColor            : fillColor ?? this.fillColor,
+      hoverColor           : hoverColor ?? this.hoverColor,
+      overlayColor         : overlayColor ?? this.overlayColor,
+      splashRadius         : splashRadius ?? this.splashRadius,
+      materialTapTargetSize: materialTapTargetSize ?? this.materialTapTargetSize,
+      visualDensity        : visualDensity ?? this.visualDensity,
+      isError              : isError ?? this.isError,
+      tristate             : tristate ?? this.tristate,
+      activeColor          : activeColor ?? this.activeColor,
+      checkColor           : checkColor ?? this.checkColor,
+      focusColor           : focusColor ?? this.focusColor,
+      focusNode            : focusNode ?? this.focusNode,
+      autofocus            : autofocus ?? this.autofocus,
+      shape                : shape ?? this.shape,
+      side                 : side ?? this.side,
+      semanticLabel        : semanticLabel ?? this.semanticLabel,
+    );
+  }
 }
 
 /// Cupertino-specific options for [NaCheckbox], resolving into a [CupertinoCheckbox].
@@ -78,6 +145,32 @@ class NaCheckboxOptionsCupertino extends NaCheckboxOptionsGeneric {
     super.side,
     super.semanticLabel,
   });
+
+  /// Creates a copy of this [NaCheckboxOptionsCupertino] with the given fields replaced by non-null values.
+  @override
+  NaCheckboxOptionsCupertino copyWith({
+    bool? tristate,
+    Color? activeColor,
+    Color? checkColor,
+    Color? focusColor,
+    FocusNode? focusNode,
+    bool? autofocus,
+    OutlinedBorder? shape,
+    BorderSide? side,
+    String? semanticLabel,
+  }) {
+    return NaCheckboxOptionsCupertino(
+      tristate     : tristate ?? this.tristate,
+      activeColor  : activeColor ?? this.activeColor,
+      checkColor   : checkColor ?? this.checkColor,
+      focusColor   : focusColor ?? this.focusColor,
+      focusNode    : focusNode ?? this.focusNode,
+      autofocus    : autofocus ?? this.autofocus,
+      shape        : shape ?? this.shape,
+      side         : side ?? this.side,
+      semanticLabel: semanticLabel ?? this.semanticLabel,
+    );
+  }
 }
 
 /// A generic Checkbox widget that automatically renders a [Checkbox] on Material

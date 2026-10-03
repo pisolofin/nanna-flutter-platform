@@ -23,6 +23,23 @@ class NaRadioOptionsGeneric extends NaRadioOptions {
     this.focusNode,
     this.autofocus,
   });
+
+  /// Creates a copy of this [NaRadioOptionsGeneric] with the given fields replaced by non-null values.
+  NaRadioOptionsGeneric copyWith({
+    bool? toggleable,
+    Color? activeColor,
+    Color? focusColor,
+    FocusNode? focusNode,
+    bool? autofocus,
+  }) {
+    return NaRadioOptionsGeneric(
+      toggleable : toggleable ?? this.toggleable,
+      activeColor: activeColor ?? this.activeColor,
+      focusColor : focusColor ?? this.focusColor,
+      focusNode  : focusNode ?? this.focusNode,
+      autofocus  : autofocus ?? this.autofocus,
+    );
+  }
 }
 
 /// Material-specific options for [NaRadio], resolving into a [Radio].
@@ -45,6 +62,34 @@ class NaRadioOptionsMaterial extends NaRadioOptionsGeneric {
     super.focusNode,
     super.autofocus,
   });
+
+  /// Creates a copy of this [NaRadioOptionsMaterial] with the given fields replaced by non-null values.
+  @override
+  NaRadioOptionsMaterial copyWith({
+    MouseCursor? mouseCursor,
+    WidgetStateProperty<Color?>? fillColor,
+    Color? hoverColor,
+    WidgetStateProperty<Color?>? overlayColor,
+    double? splashRadius,
+    bool? toggleable,
+    Color? activeColor,
+    Color? focusColor,
+    FocusNode? focusNode,
+    bool? autofocus,
+  }) {
+    return NaRadioOptionsMaterial(
+      mouseCursor : mouseCursor ?? this.mouseCursor,
+      fillColor   : fillColor ?? this.fillColor,
+      hoverColor  : hoverColor ?? this.hoverColor,
+      overlayColor: overlayColor ?? this.overlayColor,
+      splashRadius: splashRadius ?? this.splashRadius,
+      toggleable  : toggleable ?? this.toggleable,
+      activeColor : activeColor ?? this.activeColor,
+      focusColor  : focusColor ?? this.focusColor,
+      focusNode   : focusNode ?? this.focusNode,
+      autofocus   : autofocus ?? this.autofocus,
+    );
+  }
 }
 
 /// Cupertino-specific options for [NaRadio], resolving into a [CupertinoRadio].
@@ -61,6 +106,28 @@ class NaRadioOptionsCupertino extends NaRadioOptionsGeneric {
     super.autofocus,
     super.toggleable,
   });
+
+  /// Creates a copy of this [NaRadioOptionsCupertino] with the given fields replaced by non-null values.
+  @override
+  NaRadioOptionsCupertino copyWith({
+    Color? inactiveColor,
+    Color? fillColor,
+    Color? activeColor,
+    Color? focusColor,
+    FocusNode? focusNode,
+    bool? autofocus,
+    bool? toggleable,
+  }) {
+    return NaRadioOptionsCupertino(
+      inactiveColor: inactiveColor ?? this.inactiveColor,
+      fillColor    : fillColor ?? this.fillColor,
+      activeColor  : activeColor ?? this.activeColor,
+      focusColor   : focusColor ?? this.focusColor,
+      focusNode    : focusNode ?? this.focusNode,
+      autofocus    : autofocus ?? this.autofocus,
+      toggleable   : toggleable ?? this.toggleable,
+    );
+  }
 }
 
 /// A generic Radio widget that automatically renders a [Radio] on Material

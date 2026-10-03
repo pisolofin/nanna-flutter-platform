@@ -20,6 +20,19 @@ class NaIconOptionsGeneric extends NaIconOptions {
     this.semanticLabel,
     this.textDirection,
   });
+
+  /// Creates a copy of this [NaIconOptionsGeneric] with the given fields replaced by non-null values.
+  NaIconOptionsGeneric copyWith({
+    List<Shadow>? shadows,
+    String? semanticLabel,
+    TextDirection? textDirection,
+  }) {
+    return NaIconOptionsGeneric(
+      shadows      : shadows ?? this.shadows,
+      semanticLabel: semanticLabel ?? this.semanticLabel,
+      textDirection: textDirection ?? this.textDirection,
+    );
+  }
 }
 
 /// Material-specific options for [NaIcon], resolving into an [Icon].
@@ -38,6 +51,28 @@ class NaIconOptionsMaterial extends NaIconOptionsGeneric {
     super.semanticLabel,
     super.textDirection,
   });
+
+  /// Creates a copy of this [NaIconOptionsMaterial] with the given fields replaced by non-null values.
+  @override
+  NaIconOptionsMaterial copyWith({
+    double? fill,
+    double? weight,
+    double? grade,
+    double? opticalSize,
+    List<Shadow>? shadows,
+    String? semanticLabel,
+    TextDirection? textDirection,
+  }) {
+    return NaIconOptionsMaterial(
+      fill         : fill ?? this.fill,
+      weight       : weight ?? this.weight,
+      grade        : grade ?? this.grade,
+      opticalSize  : opticalSize ?? this.opticalSize,
+      shadows      : shadows ?? this.shadows,
+      semanticLabel: semanticLabel ?? this.semanticLabel,
+      textDirection: textDirection ?? this.textDirection,
+    );
+  }
 }
 
 /// Cupertino-specific options for [NaIcon], resolving into an [Icon].
@@ -48,6 +83,20 @@ class NaIconOptionsCupertino extends NaIconOptionsGeneric {
     super.semanticLabel,
     super.textDirection,
   });
+
+  /// Creates a copy of this [NaIconOptionsCupertino] with the given fields replaced by non-null values.
+  @override
+  NaIconOptionsCupertino copyWith({
+    List<Shadow>? shadows,
+    String? semanticLabel,
+    TextDirection? textDirection,
+  }) {
+    return NaIconOptionsCupertino(
+      shadows      : shadows ?? this.shadows,
+      semanticLabel: semanticLabel ?? this.semanticLabel,
+      textDirection: textDirection ?? this.textDirection,
+    );
+  }
 }
 
 /// A cross-platform Icon widget that automatically resolves to the correct native [IconData]

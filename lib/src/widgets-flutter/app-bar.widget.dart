@@ -11,6 +11,11 @@ abstract class NaAppBarOptions extends NaWidgetOptions {}
 /// Generic options for [NaAppBar], holding properties common to both platforms.
 class NaAppBarOptionsGeneric extends NaAppBarOptions {
   NaAppBarOptionsGeneric();
+
+  /// Creates a copy of this [NaAppBarOptionsGeneric].
+  NaAppBarOptionsGeneric copyWith() {
+    return NaAppBarOptionsGeneric();
+  }
 }
 
 /// Material-specific options for [NaAppBar], resolving into an [AppBar].
@@ -19,7 +24,25 @@ class NaAppBarOptionsMaterial extends NaAppBarOptionsGeneric {
   final bool? centerTitle;
   final PreferredSizeWidget? bottom;
 
-  NaAppBarOptionsMaterial({ this.elevation, this.centerTitle, this.bottom });
+  NaAppBarOptionsMaterial({
+    this.elevation,
+    this.centerTitle,
+    this.bottom,
+  });
+
+  /// Creates a copy of this [NaAppBarOptionsMaterial] with the given fields replaced by non-null values.
+  @override
+  NaAppBarOptionsMaterial copyWith({
+    double? elevation,
+    bool? centerTitle,
+    PreferredSizeWidget? bottom,
+  }) {
+    return NaAppBarOptionsMaterial(
+      elevation  : elevation ?? this.elevation,
+      centerTitle: centerTitle ?? this.centerTitle,
+      bottom     : bottom ?? this.bottom,
+    );
+  }
 }
 
 /// Cupertino-specific options for [NaAppBar], resolving into a [CupertinoNavigationBar].
@@ -27,7 +50,22 @@ class NaAppBarOptionsCupertino extends NaAppBarOptionsGeneric {
   final Border? border;
   final bool? transitionBetweenRoutes;
 
-  NaAppBarOptionsCupertino({ this.border, this.transitionBetweenRoutes });
+  NaAppBarOptionsCupertino({
+    this.border,
+    this.transitionBetweenRoutes,
+  });
+
+  /// Creates a copy of this [NaAppBarOptionsCupertino] with the given fields replaced by non-null values.
+  @override
+  NaAppBarOptionsCupertino copyWith({
+    Border? border,
+    bool? transitionBetweenRoutes,
+  }) {
+    return NaAppBarOptionsCupertino(
+      border                 : border ?? this.border,
+      transitionBetweenRoutes: transitionBetweenRoutes ?? this.transitionBetweenRoutes,
+    );
+  }
 }
 
 /// A generic AppBar widget that automatically renders an [AppBar] on Material

@@ -43,6 +43,39 @@ class NaTextFieldOptionsGeneric extends NaTextFieldOptions {
     this.textAlignVertical,
     this.textDirection,
   });
+
+  /// Creates a copy of this [NaTextFieldOptionsGeneric] with the given fields replaced by non-null values.
+  NaTextFieldOptionsGeneric copyWith({
+    String? placeholder,
+    String? obscuringCharacter,
+    bool? obscureText,
+    bool? showObscureTextToggle,
+    TextSelectionControls? selectionControls,
+    Color? cursorColor,
+    double? cursorHeight,
+    double? cursorWidth,
+    Radius? cursorRadius,
+    bool? showCursor,
+    StrutStyle? strutStyle,
+    TextAlignVertical? textAlignVertical,
+    TextDirection? textDirection,
+  }) {
+    return NaTextFieldOptionsGeneric(
+      placeholder          : placeholder ?? this.placeholder,
+      obscuringCharacter   : obscuringCharacter ?? this.obscuringCharacter,
+      obscureText          : obscureText ?? this.obscureText,
+      showObscureTextToggle: showObscureTextToggle ?? this.showObscureTextToggle,
+      selectionControls    : selectionControls ?? this.selectionControls,
+      cursorColor          : cursorColor ?? this.cursorColor,
+      cursorHeight         : cursorHeight ?? this.cursorHeight,
+      cursorWidth          : cursorWidth ?? this.cursorWidth,
+      cursorRadius         : cursorRadius ?? this.cursorRadius,
+      showCursor           : showCursor ?? this.showCursor,
+      strutStyle           : strutStyle ?? this.strutStyle,
+      textAlignVertical    : textAlignVertical ?? this.textAlignVertical,
+      textDirection        : textDirection ?? this.textDirection,
+    );
+  }
 }
 
 /// Material-specific options for [NaTextField], resolving into a [TextField].
@@ -69,6 +102,46 @@ class NaTextFieldOptionsMaterial extends NaTextFieldOptionsGeneric {
     super.textAlignVertical,
     super.textDirection,
   });
+
+  /// Creates a copy of this [NaTextFieldOptionsMaterial] with the given fields replaced by non-null values.
+  @override
+  NaTextFieldOptionsMaterial copyWith({
+    InputDecoration? decoration,
+    TextSelectionThemeData? selectionTheme,
+    MouseCursor? mouseCursor,
+    String? placeholder,
+    String? obscuringCharacter,
+    bool? obscureText,
+    bool? showObscureTextToggle,
+    TextSelectionControls? selectionControls,
+    Color? cursorColor,
+    double? cursorHeight,
+    double? cursorWidth,
+    Radius? cursorRadius,
+    bool? showCursor,
+    StrutStyle? strutStyle,
+    TextAlignVertical? textAlignVertical,
+    TextDirection? textDirection,
+  }) {
+    return NaTextFieldOptionsMaterial(
+      decoration           : decoration ?? this.decoration,
+      selectionTheme       : selectionTheme ?? this.selectionTheme,
+      mouseCursor          : mouseCursor ?? this.mouseCursor,
+      placeholder          : placeholder ?? this.placeholder,
+      obscuringCharacter   : obscuringCharacter ?? this.obscuringCharacter,
+      obscureText          : obscureText ?? this.obscureText,
+      showObscureTextToggle: showObscureTextToggle ?? this.showObscureTextToggle,
+      selectionControls    : selectionControls ?? this.selectionControls,
+      cursorColor          : cursorColor ?? this.cursorColor,
+      cursorHeight         : cursorHeight ?? this.cursorHeight,
+      cursorWidth          : cursorWidth ?? this.cursorWidth,
+      cursorRadius         : cursorRadius ?? this.cursorRadius,
+      showCursor           : showCursor ?? this.showCursor,
+      strutStyle           : strutStyle ?? this.strutStyle,
+      textAlignVertical    : textAlignVertical ?? this.textAlignVertical,
+      textDirection        : textDirection ?? this.textDirection,
+    );
+  }
 }
 
 /// Cupertino-specific options for [NaTextField], resolving into a [CupertinoTextField].
@@ -105,6 +178,56 @@ class NaTextFieldOptionsCupertino extends NaTextFieldOptionsGeneric {
     super.textAlignVertical,
     super.textDirection,
   });
+
+  /// Creates a copy of this [NaTextFieldOptionsCupertino] with the given fields replaced by non-null values.
+  @override
+  NaTextFieldOptionsCupertino copyWith({
+    BoxDecoration? decoration,
+    EdgeInsetsGeometry? padding,
+    Widget? prefix,
+    OverlayVisibilityMode? prefixMode,
+    Widget? suffix,
+    OverlayVisibilityMode? suffixMode,
+    OverlayVisibilityMode? clearButtonMode,
+    TextStyle? placeholderStyle,
+    String? placeholder,
+    String? obscuringCharacter,
+    bool? obscureText,
+    bool? showObscureTextToggle,
+    TextSelectionControls? selectionControls,
+    Color? cursorColor,
+    double? cursorHeight,
+    double? cursorWidth,
+    Radius? cursorRadius,
+    bool? showCursor,
+    StrutStyle? strutStyle,
+    TextAlignVertical? textAlignVertical,
+    TextDirection? textDirection,
+  }) {
+    return NaTextFieldOptionsCupertino(
+      decoration           : decoration ?? this.decoration,
+      padding              : padding ?? this.padding,
+      prefix               : prefix ?? this.prefix,
+      prefixMode           : prefixMode ?? this.prefixMode,
+      suffix               : suffix ?? this.suffix,
+      suffixMode           : suffixMode ?? this.suffixMode,
+      clearButtonMode      : clearButtonMode ?? this.clearButtonMode,
+      placeholderStyle     : placeholderStyle ?? this.placeholderStyle,
+      placeholder          : placeholder ?? this.placeholder,
+      obscuringCharacter   : obscuringCharacter ?? this.obscuringCharacter,
+      obscureText          : obscureText ?? this.obscureText,
+      showObscureTextToggle: showObscureTextToggle ?? this.showObscureTextToggle,
+      selectionControls    : selectionControls ?? this.selectionControls,
+      cursorColor          : cursorColor ?? this.cursorColor,
+      cursorHeight         : cursorHeight ?? this.cursorHeight,
+      cursorWidth          : cursorWidth ?? this.cursorWidth,
+      cursorRadius         : cursorRadius ?? this.cursorRadius,
+      showCursor           : showCursor ?? this.showCursor,
+      strutStyle           : strutStyle ?? this.strutStyle,
+      textAlignVertical    : textAlignVertical ?? this.textAlignVertical,
+      textDirection        : textDirection ?? this.textDirection,
+    );
+  }
 }
 
 /// A generic TextField widget that automatically renders a [TextField] on Material

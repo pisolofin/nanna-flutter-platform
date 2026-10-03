@@ -17,6 +17,17 @@ class NaCardOptionsGeneric extends NaCardOptions {
     this.color,
     this.margin,
   });
+
+  /// Creates a copy of this [NaCardOptionsGeneric] with the given fields replaced by non-null values.
+  NaCardOptionsGeneric copyWith({
+    Color? color,
+    EdgeInsetsGeometry? margin,
+  }) {
+    return NaCardOptionsGeneric(
+      color : color ?? this.color,
+      margin: margin ?? this.margin,
+    );
+  }
 }
 
 /// Material-specific options for [NaCard], resolving into a [Card].
@@ -40,6 +51,32 @@ class NaCardOptionsMaterial extends NaCardOptionsGeneric {
     super.color,
     super.margin,
   });
+
+  /// Creates a copy of this [NaCardOptionsMaterial] with the given fields replaced by non-null values.
+  @override
+  NaCardOptionsMaterial copyWith({
+    Color? shadowColor,
+    Color? surfaceTintColor,
+    double? elevation,
+    ShapeBorder? shape,
+    bool? borderOnForeground,
+    Clip? clipBehavior,
+    bool? semanticContainer,
+    Color? color,
+    EdgeInsetsGeometry? margin,
+  }) {
+    return NaCardOptionsMaterial(
+      shadowColor       : shadowColor ?? this.shadowColor,
+      surfaceTintColor  : surfaceTintColor ?? this.surfaceTintColor,
+      elevation         : elevation ?? this.elevation,
+      shape             : shape ?? this.shape,
+      borderOnForeground: borderOnForeground ?? this.borderOnForeground,
+      clipBehavior      : clipBehavior ?? this.clipBehavior,
+      semanticContainer : semanticContainer ?? this.semanticContainer,
+      color             : color ?? this.color,
+      margin            : margin ?? this.margin,
+    );
+  }
 }
 
 /// Cupertino-specific options for [NaCard], resolving into a decorated [Container].
@@ -55,6 +92,24 @@ class NaCardOptionsCupertino extends NaCardOptionsGeneric {
     super.color,
     super.margin,
   });
+
+  /// Creates a copy of this [NaCardOptionsCupertino] with the given fields replaced by non-null values.
+  @override
+  NaCardOptionsCupertino copyWith({
+    EdgeInsetsGeometry? padding,
+    BorderRadiusGeometry? borderRadius,
+    BoxBorder? border,
+    Color? color,
+    EdgeInsetsGeometry? margin,
+  }) {
+    return NaCardOptionsCupertino(
+      padding     : padding ?? this.padding,
+      borderRadius: borderRadius ?? this.borderRadius,
+      border      : border ?? this.border,
+      color       : color ?? this.color,
+      margin      : margin ?? this.margin,
+    );
+  }
 }
 
 /// A generic Card widget that automatically renders a [Card] on Material
