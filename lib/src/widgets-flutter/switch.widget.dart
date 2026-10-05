@@ -90,6 +90,29 @@ class NaSwitchOptionsMaterial extends NaSwitchOptionsGeneric {
   /// Creates an empty [NaSwitchOptionsMaterial] with default values.
   NaSwitchOptionsMaterial.empty() : this();
 
+  /// Creates a [NaSwitchOptionsMaterial] from generic options.
+  NaSwitchOptionsMaterial.fromGeneric(
+    NaSwitchOptionsGeneric? generic, {
+    this.activeThumbColor,
+    this.inactiveThumbColor,
+    this.activeThumbImage,
+    this.inactiveThumbImage,
+    this.thumbColor,
+    this.trackColor,
+    this.thumbIcon,
+    this.dragStartBehavior,
+    this.mouseCursor,
+    this.hoverColor,
+    this.overlayColor,
+    this.splashRadius,
+  }) : super(
+         activeTrackColor  : generic?.activeTrackColor,
+         inactiveTrackColor: generic?.inactiveTrackColor,
+         focusColor        : generic?.focusColor,
+         focusNode         : generic?.focusNode,
+         autofocus         : generic?.autofocus,
+       );
+
   /// Creates a copy of this [NaSwitchOptionsMaterial] with the given fields replaced by non-null values.
   @override
   NaSwitchOptionsMaterial copyWith({
@@ -150,6 +173,19 @@ class NaSwitchOptionsCupertino extends NaSwitchOptionsGeneric {
 
   /// Creates an empty [NaSwitchOptionsCupertino] with default values.
   NaSwitchOptionsCupertino.empty() : this();
+
+  /// Creates a [NaSwitchOptionsCupertino] from generic options.
+  NaSwitchOptionsCupertino.fromGeneric(
+    NaSwitchOptionsGeneric? generic, {
+    this.thumbColor,
+    this.applyTheme,
+  }) : super(
+         activeTrackColor  : generic?.activeTrackColor,
+         inactiveTrackColor: generic?.inactiveTrackColor,
+         focusColor        : generic?.focusColor,
+         focusNode         : generic?.focusNode,
+         autofocus         : generic?.autofocus,
+       );
 
   /// Creates a copy of this [NaSwitchOptionsCupertino] with the given fields replaced by non-null values.
   @override

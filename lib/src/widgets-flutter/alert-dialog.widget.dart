@@ -120,6 +120,32 @@ class NaAlertDialogOptionsMaterial extends NaAlertDialogOptionsGeneric {
   /// Creates an empty [NaAlertDialogOptionsMaterial] with default values.
   NaAlertDialogOptionsMaterial.empty() : this();
 
+  /// Creates a [NaAlertDialogOptionsMaterial] from generic options.
+  NaAlertDialogOptionsMaterial.fromGeneric(
+    NaAlertDialogOptionsGeneric? generic, {
+    this.icon,
+    this.iconPadding,
+    this.iconColor,
+    this.titlePadding,
+    this.titleTextStyle,
+    this.contentPadding,
+    this.contentTextStyle,
+    this.actionsPadding,
+    this.actionsAlignment,
+    this.actionsOverflowAlignment,
+    this.actionsOverflowDirection,
+    this.actionsOverflowButtonSpacing,
+    this.buttonPadding,
+    this.backgroundColor,
+    this.elevation,
+    this.shadowColor,
+    this.surfaceTintColor,
+    this.semanticLabel,
+    this.shape,
+    this.clipBehavior,
+    this.scrollable,
+  }) : super();
+
   /// Creates a copy of this [NaAlertDialogOptionsMaterial] with the given fields replaced by non-null values.
   @override
   NaAlertDialogOptionsMaterial copyWith({
@@ -187,6 +213,13 @@ class NaAlertDialogOptionsCupertino extends NaAlertDialogOptionsGeneric {
 
   /// Creates an empty [NaAlertDialogOptionsCupertino] with default values.
   NaAlertDialogOptionsCupertino.empty() : this();
+
+  /// Creates a [NaAlertDialogOptionsCupertino] from generic options.
+  NaAlertDialogOptionsCupertino.fromGeneric(
+    NaAlertDialogOptionsGeneric? generic, {
+    this.actionScrollController,
+    this.scrollController,
+  }) : super();
 
   /// Creates a copy of this [NaAlertDialogOptionsCupertino] with the given fields replaced by non-null values.
   @override

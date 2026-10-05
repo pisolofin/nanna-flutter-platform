@@ -101,6 +101,29 @@ class NaCheckboxOptionsMaterial extends NaCheckboxOptionsGeneric {
   /// Creates an empty [NaCheckboxOptionsMaterial] with default values.
   NaCheckboxOptionsMaterial.empty() : this();
 
+  /// Creates a [NaCheckboxOptionsMaterial] from generic options.
+  NaCheckboxOptionsMaterial.fromGeneric(
+    NaCheckboxOptionsGeneric? generic, {
+    this.mouseCursor,
+    this.fillColor,
+    this.hoverColor,
+    this.overlayColor,
+    this.splashRadius,
+    this.materialTapTargetSize,
+    this.visualDensity,
+    this.isError,
+  }) : super(
+         tristate     : generic?.tristate,
+         activeColor  : generic?.activeColor,
+         checkColor   : generic?.checkColor,
+         focusColor   : generic?.focusColor,
+         focusNode    : generic?.focusNode,
+         autofocus    : generic?.autofocus,
+         shape        : generic?.shape,
+         side         : generic?.side,
+         semanticLabel: generic?.semanticLabel,
+       );
+
   /// Creates a copy of this [NaCheckboxOptionsMaterial] with the given fields replaced by non-null values.
   @override
   NaCheckboxOptionsMaterial copyWith({
@@ -160,6 +183,21 @@ class NaCheckboxOptionsCupertino extends NaCheckboxOptionsGeneric {
 
   /// Creates an empty [NaCheckboxOptionsCupertino] with default values.
   NaCheckboxOptionsCupertino.empty() : this();
+
+  /// Creates a [NaCheckboxOptionsCupertino] from generic options.
+  NaCheckboxOptionsCupertino.fromGeneric(
+    NaCheckboxOptionsGeneric? generic,
+  ) : super(
+         tristate     : generic?.tristate,
+         activeColor  : generic?.activeColor,
+         checkColor   : generic?.checkColor,
+         focusColor   : generic?.focusColor,
+         focusNode    : generic?.focusNode,
+         autofocus    : generic?.autofocus,
+         shape        : generic?.shape,
+         side         : generic?.side,
+         semanticLabel: generic?.semanticLabel,
+       );
 
   /// Creates a copy of this [NaCheckboxOptionsCupertino] with the given fields replaced by non-null values.
   @override

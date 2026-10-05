@@ -52,6 +52,19 @@ class NaAppOptionsMaterial extends NaAppOptionsGeneric {
   /// Creates an empty [NaAppOptionsMaterial] with default values.
   NaAppOptionsMaterial.empty() : this();
 
+  /// Creates a [NaAppOptionsMaterial] from generic options.
+  NaAppOptionsMaterial.fromGeneric(
+    NaAppOptionsGeneric? generic, {
+    this.theme,
+    this.darkTheme,
+    this.highContrastTheme,
+    this.highContrastDarkTheme,
+    this.themeMode,
+    this.themeAnimationDuration,
+    this.themeAnimationCurve,
+    this.scaffoldMessengerKey,
+  }) : super();
+
   /// Creates a copy of this [NaAppOptionsMaterial] with the given fields replaced by non-null values.
   @override
   NaAppOptionsMaterial copyWith({
@@ -85,6 +98,12 @@ class NaAppOptionsCupertino extends NaAppOptionsGeneric {
 
   /// Creates an empty [NaAppOptionsCupertino] with default values.
   NaAppOptionsCupertino.empty() : this();
+
+  /// Creates a [NaAppOptionsCupertino] from generic options.
+  NaAppOptionsCupertino.fromGeneric(
+    NaAppOptionsGeneric? generic, {
+    this.theme,
+  }) : super();
 
   /// Creates a copy of this [NaAppOptionsCupertino] with the given fields replaced by non-null values.
   @override

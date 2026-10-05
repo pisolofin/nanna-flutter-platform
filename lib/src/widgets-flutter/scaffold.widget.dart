@@ -52,6 +52,16 @@ class NaScaffoldOptionsMaterial extends NaScaffoldOptionsGeneric {
   /// Creates an empty [NaScaffoldOptionsMaterial] with default values.
   NaScaffoldOptionsMaterial.empty() : this();
 
+  /// Creates a [NaScaffoldOptionsMaterial] from generic options.
+  NaScaffoldOptionsMaterial.fromGeneric(
+    NaScaffoldOptionsGeneric? generic, {
+    this.floatingActionButton,
+    this.bottomNavigationBar,
+    this.drawer,
+  }) : super(
+         resizeToAvoidBottomInset: generic?.resizeToAvoidBottomInset,
+       );
+
   /// Creates a copy of this [NaScaffoldOptionsMaterial] with the given fields replaced by non-null values.
   @override
   NaScaffoldOptionsMaterial copyWith({
@@ -77,6 +87,13 @@ class NaScaffoldOptionsCupertino extends NaScaffoldOptionsGeneric {
 
   /// Creates an empty [NaScaffoldOptionsCupertino] with default values.
   NaScaffoldOptionsCupertino.empty() : this();
+
+  /// Creates a [NaScaffoldOptionsCupertino] from generic options.
+  NaScaffoldOptionsCupertino.fromGeneric(
+    NaScaffoldOptionsGeneric? generic,
+  ) : super(
+         resizeToAvoidBottomInset: generic?.resizeToAvoidBottomInset,
+       );
 
   /// Creates a copy of this [NaScaffoldOptionsCupertino] with the given fields replaced by non-null values.
   @override

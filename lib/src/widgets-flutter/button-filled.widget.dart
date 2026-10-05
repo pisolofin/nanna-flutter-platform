@@ -66,6 +66,22 @@ class NaButtonFilledOptionsMaterial extends NaButtonFilledOptionsGeneric {
   /// Creates an empty [NaButtonFilledOptionsMaterial] with default values.
   NaButtonFilledOptionsMaterial.empty() : this();
 
+  /// Creates a [NaButtonFilledOptionsMaterial] from generic options.
+  NaButtonFilledOptionsMaterial.fromGeneric(
+    NaButtonFilledOptionsGeneric? generic, {
+    this.onLongPress,
+    this.onHover,
+    this.onFocusChange,
+    this.style,
+    this.focusNode,
+    this.autofocus,
+    this.clipBehavior,
+    this.statesController,
+  }) : super(
+         padding: generic?.padding,
+         color  : generic?.color,
+       );
+
   /// Creates a copy of this [NaButtonFilledOptionsMaterial] with the given fields replaced by non-null values.
   @override
   NaButtonFilledOptionsMaterial copyWith({
@@ -119,6 +135,21 @@ class NaButtonFilledOptionsCupertino extends NaButtonFilledOptionsGeneric {
 
   /// Creates an empty [NaButtonFilledOptionsCupertino] with default values.
   NaButtonFilledOptionsCupertino.empty() : this();
+
+  /// Creates a [NaButtonFilledOptionsCupertino] from generic options.
+  NaButtonFilledOptionsCupertino.fromGeneric(
+    NaButtonFilledOptionsGeneric? generic, {
+    this.disabledColor,
+    this.minimumSize,
+    this.pressedOpacity,
+    this.borderRadius,
+    this.alignment,
+    this.focusNode,
+    this.autofocus,
+  }) : super(
+         padding: generic?.padding,
+         color  : generic?.color,
+       );
 
   /// Creates a copy of this [NaButtonFilledOptionsCupertino] with the given fields replaced by non-null values.
   @override

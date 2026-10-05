@@ -115,6 +115,28 @@ class NaTextFieldOptionsMaterial extends NaTextFieldOptionsGeneric {
   /// Creates an empty [NaTextFieldOptionsMaterial] with default values.
   NaTextFieldOptionsMaterial.empty() : this();
 
+  /// Creates a [NaTextFieldOptionsMaterial] from generic options.
+  NaTextFieldOptionsMaterial.fromGeneric(
+    NaTextFieldOptionsGeneric? generic, {
+    this.decoration,
+    this.selectionTheme,
+    this.mouseCursor,
+  }) : super(
+         placeholder          : generic?.placeholder,
+         obscuringCharacter   : generic?.obscuringCharacter,
+         obscureText          : generic?.obscureText,
+         showObscureTextToggle: generic?.showObscureTextToggle,
+         selectionControls    : generic?.selectionControls,
+         cursorColor          : generic?.cursorColor,
+         cursorHeight         : generic?.cursorHeight,
+         cursorWidth          : generic?.cursorWidth,
+         cursorRadius         : generic?.cursorRadius,
+         showCursor           : generic?.showCursor,
+         strutStyle           : generic?.strutStyle,
+         textAlignVertical    : generic?.textAlignVertical,
+         textDirection        : generic?.textDirection,
+       );
+
   /// Creates a copy of this [NaTextFieldOptionsMaterial] with the given fields replaced by non-null values.
   @override
   NaTextFieldOptionsMaterial copyWith({
@@ -193,6 +215,33 @@ class NaTextFieldOptionsCupertino extends NaTextFieldOptionsGeneric {
 
   /// Creates an empty [NaTextFieldOptionsCupertino] with default values.
   NaTextFieldOptionsCupertino.empty() : this();
+
+  /// Creates a [NaTextFieldOptionsCupertino] from generic options.
+  NaTextFieldOptionsCupertino.fromGeneric(
+    NaTextFieldOptionsGeneric? generic, {
+    this.decoration,
+    this.padding,
+    this.prefix,
+    this.prefixMode,
+    this.suffix,
+    this.suffixMode,
+    this.clearButtonMode,
+    this.placeholderStyle,
+  }) : super(
+         placeholder          : generic?.placeholder,
+         obscuringCharacter   : generic?.obscuringCharacter,
+         obscureText          : generic?.obscureText,
+         showObscureTextToggle: generic?.showObscureTextToggle,
+         selectionControls    : generic?.selectionControls,
+         cursorColor          : generic?.cursorColor,
+         cursorHeight         : generic?.cursorHeight,
+         cursorWidth          : generic?.cursorWidth,
+         cursorRadius         : generic?.cursorRadius,
+         showCursor           : generic?.showCursor,
+         strutStyle           : generic?.strutStyle,
+         textAlignVertical    : generic?.textAlignVertical,
+         textDirection        : generic?.textDirection,
+       );
 
   /// Creates a copy of this [NaTextFieldOptionsCupertino] with the given fields replaced by non-null values.
   @override

@@ -42,6 +42,14 @@ class NaAppBarOptionsMaterial extends NaAppBarOptionsGeneric {
   /// Creates an empty [NaAppBarOptionsMaterial] with default values.
   NaAppBarOptionsMaterial.empty() : this();
 
+  /// Creates a [NaAppBarOptionsMaterial] from generic options.
+  NaAppBarOptionsMaterial.fromGeneric(
+    NaAppBarOptionsGeneric? generic, {
+    this.elevation,
+    this.centerTitle,
+    this.bottom,
+  }) : super();
+
   /// Creates a copy of this [NaAppBarOptionsMaterial] with the given fields replaced by non-null values.
   @override
   NaAppBarOptionsMaterial copyWith({
@@ -69,6 +77,13 @@ class NaAppBarOptionsCupertino extends NaAppBarOptionsGeneric {
 
   /// Creates an empty [NaAppBarOptionsCupertino] with default values.
   NaAppBarOptionsCupertino.empty() : this();
+
+  /// Creates a [NaAppBarOptionsCupertino] from generic options.
+  NaAppBarOptionsCupertino.fromGeneric(
+    NaAppBarOptionsGeneric? generic, {
+    this.border,
+    this.transitionBetweenRoutes,
+  }) : super();
 
   /// Creates a copy of this [NaAppBarOptionsCupertino] with the given fields replaced by non-null values.
   @override

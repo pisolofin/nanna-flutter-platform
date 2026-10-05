@@ -86,6 +86,36 @@ class NaListTileOptionsMaterial extends NaListTileOptionsGeneric {
   /// Creates an empty [NaListTileOptionsMaterial] with default values.
   NaListTileOptionsMaterial.empty() : this();
 
+  /// Creates a [NaListTileOptionsMaterial] from generic options.
+  NaListTileOptionsMaterial.fromGeneric(
+    NaListTileOptionsGeneric? generic, {
+    this.isThreeLine,
+    this.dense,
+    this.visualDensity,
+    this.shape,
+    this.style,
+    this.selectedColor,
+    this.iconColor,
+    this.textColor,
+    this.contentPadding,
+    this.enabled,
+    this.onLongPress,
+    this.onFocusChange,
+    this.mouseCursor,
+    this.selected,
+    this.focusColor,
+    this.hoverColor,
+    this.splashColor,
+    this.focusNode,
+    this.autofocus,
+    this.tileColor,
+    this.selectedTileColor,
+    this.enableFeedback,
+    this.horizontalTitleGap,
+    this.minVerticalPadding,
+    this.minLeadingWidth,
+  }) : super();
+
   /// Creates a copy of this [NaListTileOptionsMaterial] with the given fields replaced by non-null values.
   @override
   NaListTileOptionsMaterial copyWith({
@@ -165,6 +195,17 @@ class NaListTileOptionsCupertino extends NaListTileOptionsGeneric {
 
   /// Creates an empty [NaListTileOptionsCupertino] with default values.
   NaListTileOptionsCupertino.empty() : this();
+
+  /// Creates a [NaListTileOptionsCupertino] from generic options.
+  NaListTileOptionsCupertino.fromGeneric(
+    NaListTileOptionsGeneric? generic, {
+    this.additionalInfo,
+    this.backgroundColor,
+    this.backgroundColorActivated,
+    this.padding,
+    this.leadingSize,
+    this.leadingToTitle,
+  }) : super();
 
   /// Creates a copy of this [NaListTileOptionsCupertino] with the given fields replaced by non-null values.
   @override

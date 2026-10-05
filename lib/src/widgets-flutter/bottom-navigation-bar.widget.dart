@@ -78,6 +78,28 @@ class NaBottomNavigationBarOptionsMaterial extends NaBottomNavigationBarOptionsG
   /// Creates an empty [NaBottomNavigationBarOptionsMaterial] with default values.
   NaBottomNavigationBarOptionsMaterial.empty() : this();
 
+  /// Creates a [NaBottomNavigationBarOptionsMaterial] from generic options.
+  NaBottomNavigationBarOptionsMaterial.fromGeneric(
+    NaBottomNavigationBarOptionsGeneric? generic, {
+    this.elevation,
+    this.type,
+    this.fixedColor,
+    this.selectedItemColor,
+    this.unselectedItemColor,
+    this.selectedIconTheme,
+    this.unselectedIconTheme,
+    this.selectedLabelStyle,
+    this.unselectedLabelStyle,
+    this.showSelectedLabels,
+    this.showUnselectedLabels,
+    this.mouseCursor,
+    this.enableFeedback,
+    this.landscapeLayout,
+  }) : super(
+         backgroundColor: generic?.backgroundColor,
+         iconSize       : generic?.iconSize,
+       );
+
   /// Creates a copy of this [NaBottomNavigationBarOptionsMaterial] with the given fields replaced by non-null values.
   @override
   NaBottomNavigationBarOptionsMaterial copyWith({
@@ -137,6 +159,18 @@ class NaBottomNavigationBarOptionsCupertino extends NaBottomNavigationBarOptions
 
   /// Creates an empty [NaBottomNavigationBarOptionsCupertino] with default values.
   NaBottomNavigationBarOptionsCupertino.empty() : this();
+
+  /// Creates a [NaBottomNavigationBarOptionsCupertino] from generic options.
+  NaBottomNavigationBarOptionsCupertino.fromGeneric(
+    NaBottomNavigationBarOptionsGeneric? generic, {
+    this.activeColor,
+    this.inactiveColor,
+    this.height,
+    this.border,
+  }) : super(
+         backgroundColor: generic?.backgroundColor,
+         iconSize       : generic?.iconSize,
+       );
 
   /// Creates a copy of this [NaBottomNavigationBarOptionsCupertino] with the given fields replaced by non-null values.
   @override

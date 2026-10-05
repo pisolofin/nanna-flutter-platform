@@ -64,6 +64,19 @@ class NaIconOptionsMaterial extends NaIconOptionsGeneric {
   /// Creates an empty [NaIconOptionsMaterial] with default values.
   NaIconOptionsMaterial.empty() : this();
 
+  /// Creates a [NaIconOptionsMaterial] from generic options.
+  NaIconOptionsMaterial.fromGeneric(
+    NaIconOptionsGeneric? generic, {
+    this.fill,
+    this.weight,
+    this.grade,
+    this.opticalSize,
+  }) : super(
+         shadows      : generic?.shadows,
+         semanticLabel: generic?.semanticLabel,
+         textDirection: generic?.textDirection,
+       );
+
   /// Creates a copy of this [NaIconOptionsMaterial] with the given fields replaced by non-null values.
   @override
   NaIconOptionsMaterial copyWith({
@@ -98,6 +111,15 @@ class NaIconOptionsCupertino extends NaIconOptionsGeneric {
 
   /// Creates an empty [NaIconOptionsCupertino] with default values.
   NaIconOptionsCupertino.empty() : this();
+
+  /// Creates a [NaIconOptionsCupertino] from generic options.
+  NaIconOptionsCupertino.fromGeneric(
+    NaIconOptionsGeneric? generic,
+  ) : super(
+         shadows      : generic?.shadows,
+         semanticLabel: generic?.semanticLabel,
+         textDirection: generic?.textDirection,
+       );
 
   /// Creates a copy of this [NaIconOptionsCupertino] with the given fields replaced by non-null values.
   @override

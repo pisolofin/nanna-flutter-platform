@@ -69,6 +69,22 @@ class NaSliderOptionsMaterial extends NaSliderOptionsGeneric {
   /// Creates an empty [NaSliderOptionsMaterial] with default values.
   NaSliderOptionsMaterial.empty() : this();
 
+  /// Creates a [NaSliderOptionsMaterial] from generic options.
+  NaSliderOptionsMaterial.fromGeneric(
+    NaSliderOptionsGeneric? generic, {
+    this.inactiveColor,
+    this.overlayColor,
+    this.mouseCursor,
+    this.semanticFormatterCallback,
+    this.focusNode,
+    this.autofocus,
+    this.label,
+  }) : super(
+         activeColor: generic?.activeColor,
+         thumbColor : generic?.thumbColor,
+         divisions  : generic?.divisions,
+       );
+
   /// Creates a copy of this [NaSliderOptionsMaterial] with the given fields replaced by non-null values.
   @override
   NaSliderOptionsMaterial copyWith({
@@ -108,6 +124,15 @@ class NaSliderOptionsCupertino extends NaSliderOptionsGeneric {
 
   /// Creates an empty [NaSliderOptionsCupertino] with default values.
   NaSliderOptionsCupertino.empty() : this();
+
+  /// Creates a [NaSliderOptionsCupertino] from generic options.
+  NaSliderOptionsCupertino.fromGeneric(
+    NaSliderOptionsGeneric? generic,
+  ) : super(
+         activeColor: generic?.activeColor,
+         thumbColor : generic?.thumbColor,
+         divisions  : generic?.divisions,
+       );
 
   /// Creates a copy of this [NaSliderOptionsCupertino] with the given fields replaced by non-null values.
   @override

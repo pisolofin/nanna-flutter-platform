@@ -52,6 +52,19 @@ class NaTimePickerOptionsMaterial extends NaTimePickerOptionsGeneric {
   /// Creates an empty [NaTimePickerOptionsMaterial] with default values.
   NaTimePickerOptionsMaterial.empty() : this();
 
+  /// Creates a [NaTimePickerOptionsMaterial] from generic options.
+  NaTimePickerOptionsMaterial.fromGeneric(
+    NaTimePickerOptionsGeneric? generic, {
+    this.cancelText,
+    this.confirmText,
+    this.helpText,
+    this.errorInvalidText,
+    this.hourLabelText,
+    this.minuteLabelText,
+    this.initialEntryMode,
+    this.orientation,
+  }) : super();
+
   /// Creates a copy of this [NaTimePickerOptionsMaterial] with the given fields replaced by non-null values.
   @override
   NaTimePickerOptionsMaterial copyWith({
@@ -97,6 +110,17 @@ class NaTimePickerOptionsCupertino extends NaTimePickerOptionsGeneric {
 
   /// Creates an empty [NaTimePickerOptionsCupertino] with default values.
   NaTimePickerOptionsCupertino.empty() : this();
+
+  /// Creates a [NaTimePickerOptionsCupertino] from generic options.
+  NaTimePickerOptionsCupertino.fromGeneric(
+    NaTimePickerOptionsGeneric? generic, {
+    this.mode,
+    this.minuteInterval,
+    this.secondInterval,
+    this.alignment,
+    this.backgroundColor,
+    this.itemExtent,
+  }) : super();
 
   /// Creates a copy of this [NaTimePickerOptionsCupertino] with the given fields replaced by non-null values.
   @override

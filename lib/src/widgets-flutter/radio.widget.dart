@@ -75,6 +75,22 @@ class NaRadioOptionsMaterial extends NaRadioOptionsGeneric {
   /// Creates an empty [NaRadioOptionsMaterial] with default values.
   NaRadioOptionsMaterial.empty() : this();
 
+  /// Creates a [NaRadioOptionsMaterial] from generic options.
+  NaRadioOptionsMaterial.fromGeneric(
+    NaRadioOptionsGeneric? generic, {
+    this.mouseCursor,
+    this.fillColor,
+    this.hoverColor,
+    this.overlayColor,
+    this.splashRadius,
+  }) : super(
+         toggleable : generic?.toggleable,
+         activeColor: generic?.activeColor,
+         focusColor : generic?.focusColor,
+         focusNode  : generic?.focusNode,
+         autofocus  : generic?.autofocus,
+       );
+
   /// Creates a copy of this [NaRadioOptionsMaterial] with the given fields replaced by non-null values.
   @override
   NaRadioOptionsMaterial copyWith({
@@ -121,6 +137,19 @@ class NaRadioOptionsCupertino extends NaRadioOptionsGeneric {
 
   /// Creates an empty [NaRadioOptionsCupertino] with default values.
   NaRadioOptionsCupertino.empty() : this();
+
+  /// Creates a [NaRadioOptionsCupertino] from generic options.
+  NaRadioOptionsCupertino.fromGeneric(
+    NaRadioOptionsGeneric? generic, {
+    this.inactiveColor,
+    this.fillColor,
+  }) : super(
+         toggleable : generic?.toggleable,
+         activeColor: generic?.activeColor,
+         focusColor : generic?.focusColor,
+         focusNode  : generic?.focusNode,
+         autofocus  : generic?.autofocus,
+       );
 
   /// Creates a copy of this [NaRadioOptionsCupertino] with the given fields replaced by non-null values.
   @override

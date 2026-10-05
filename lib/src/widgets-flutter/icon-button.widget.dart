@@ -86,6 +86,29 @@ class NaIconButtonOptionsMaterial extends NaIconButtonOptionsGeneric {
   /// Creates an empty [NaIconButtonOptionsMaterial] with default values.
   NaIconButtonOptionsMaterial.empty() : this();
 
+  /// Creates a [NaIconButtonOptionsMaterial] from generic options.
+  NaIconButtonOptionsMaterial.fromGeneric(
+    NaIconButtonOptionsGeneric? generic, {
+    this.iconSize,
+    this.visualDensity,
+    this.splashRadius,
+    this.focusColor,
+    this.hoverColor,
+    this.highlightColor,
+    this.splashColor,
+    this.mouseCursor,
+    this.focusNode,
+    this.autofocus,
+    this.tooltip,
+    this.constraints,
+    this.style,
+  }) : super(
+         padding      : generic?.padding,
+         alignment    : generic?.alignment,
+         color        : generic?.color,
+         disabledColor: generic?.disabledColor,
+       );
+
   /// Creates a copy of this [NaIconButtonOptionsMaterial] with the given fields replaced by non-null values.
   @override
   NaIconButtonOptionsMaterial copyWith({
@@ -147,6 +170,19 @@ class NaIconButtonOptionsCupertino extends NaIconButtonOptionsGeneric {
 
   /// Creates an empty [NaIconButtonOptionsCupertino] with default values.
   NaIconButtonOptionsCupertino.empty() : this();
+
+  /// Creates a [NaIconButtonOptionsCupertino] from generic options.
+  NaIconButtonOptionsCupertino.fromGeneric(
+    NaIconButtonOptionsGeneric? generic, {
+    this.minimumSize,
+    this.pressedOpacity,
+    this.borderRadius,
+  }) : super(
+         padding      : generic?.padding,
+         alignment    : generic?.alignment,
+         color        : generic?.color,
+         disabledColor: generic?.disabledColor,
+       );
 
   /// Creates a copy of this [NaIconButtonOptionsCupertino] with the given fields replaced by non-null values.
   @override

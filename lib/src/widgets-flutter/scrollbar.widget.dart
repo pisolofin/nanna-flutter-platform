@@ -54,6 +54,16 @@ class NaScrollbarOptionsMaterial extends NaScrollbarOptionsGeneric {
   /// Creates an empty [NaScrollbarOptionsMaterial] with default values.
   NaScrollbarOptionsMaterial.empty() : this();
 
+  /// Creates a [NaScrollbarOptionsMaterial] from generic options.
+  NaScrollbarOptionsMaterial.fromGeneric(
+    NaScrollbarOptionsGeneric? generic, {
+    this.trackVisibility,
+    this.interactive,
+  }) : super(
+         thickness: generic?.thickness,
+         radius   : generic?.radius,
+       );
+
   /// Creates a copy of this [NaScrollbarOptionsMaterial] with the given fields replaced by non-null values.
   @override
   NaScrollbarOptionsMaterial copyWith({
@@ -86,6 +96,16 @@ class NaScrollbarOptionsCupertino extends NaScrollbarOptionsGeneric {
 
   /// Creates an empty [NaScrollbarOptionsCupertino] with default values.
   NaScrollbarOptionsCupertino.empty() : this();
+
+  /// Creates a [NaScrollbarOptionsCupertino] from generic options.
+  NaScrollbarOptionsCupertino.fromGeneric(
+    NaScrollbarOptionsGeneric? generic, {
+    this.thicknessWhileDragging = CupertinoScrollbar.defaultThicknessWhileDragging,
+    this.radiusWhileDragging    = CupertinoScrollbar.defaultRadiusWhileDragging,
+  }) : super(
+         thickness: generic?.thickness ?? CupertinoScrollbar.defaultThickness,
+         radius   : generic?.radius ?? CupertinoScrollbar.defaultRadius,
+       );
 
   /// Creates a copy of this [NaScrollbarOptionsCupertino] with the given fields replaced by non-null values.
   @override

@@ -44,6 +44,15 @@ class NaDialogActionOptionsMaterial extends NaDialogActionOptionsGeneric {
   /// Creates an empty [NaDialogActionOptionsMaterial] with default values.
   NaDialogActionOptionsMaterial.empty() : this();
 
+  /// Creates a [NaDialogActionOptionsMaterial] from generic options.
+  NaDialogActionOptionsMaterial.fromGeneric(
+    NaDialogActionOptionsGeneric? generic, {
+    this.style,
+    this.focusNode,
+    this.autofocus,
+    this.clipBehavior,
+  }) : super();
+
   /// Creates a copy of this [NaDialogActionOptionsMaterial] with the given fields replaced by non-null values.
   @override
   NaDialogActionOptionsMaterial copyWith({
@@ -75,6 +84,14 @@ class NaDialogActionOptionsCupertino extends NaDialogActionOptionsGeneric {
 
   /// Creates an empty [NaDialogActionOptionsCupertino] with default values.
   NaDialogActionOptionsCupertino.empty() : this();
+
+  /// Creates a [NaDialogActionOptionsCupertino] from generic options.
+  NaDialogActionOptionsCupertino.fromGeneric(
+    NaDialogActionOptionsGeneric? generic, {
+    this.isDefaultAction,
+    this.isDestructiveAction,
+    this.textStyle,
+  }) : super();
 
   /// Creates a copy of this [NaDialogActionOptionsCupertino] with the given fields replaced by non-null values.
   @override

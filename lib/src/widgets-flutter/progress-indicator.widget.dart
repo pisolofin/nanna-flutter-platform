@@ -57,6 +57,19 @@ class NaProgressIndicatorOptionsMaterial extends NaProgressIndicatorOptionsGener
   /// Creates an empty [NaProgressIndicatorOptionsMaterial] with default values.
   NaProgressIndicatorOptionsMaterial.empty() : this();
 
+  /// Creates a [NaProgressIndicatorOptionsMaterial] from generic options.
+  NaProgressIndicatorOptionsMaterial.fromGeneric(
+    NaProgressIndicatorOptionsGeneric? generic, {
+    this.value,
+    this.backgroundColor,
+    this.valueColor,
+    this.strokeWidth,
+    this.semanticsLabel,
+    this.semanticsValue,
+  }) : super(
+         color: generic?.color,
+       );
+
   /// Creates a copy of this [NaProgressIndicatorOptionsMaterial] with the given fields replaced by non-null values.
   @override
   NaProgressIndicatorOptionsMaterial copyWith({
@@ -93,6 +106,15 @@ class NaProgressIndicatorOptionsCupertino extends NaProgressIndicatorOptionsGene
 
   /// Creates an empty [NaProgressIndicatorOptionsCupertino] with default values.
   NaProgressIndicatorOptionsCupertino.empty() : this();
+
+  /// Creates a [NaProgressIndicatorOptionsCupertino] from generic options.
+  NaProgressIndicatorOptionsCupertino.fromGeneric(
+    NaProgressIndicatorOptionsGeneric? generic, {
+    this.radius,
+    this.animating,
+  }) : super(
+         color: generic?.color,
+       );
 
   /// Creates a copy of this [NaProgressIndicatorOptionsCupertino] with the given fields replaced by non-null values.
   @override

@@ -44,6 +44,15 @@ class NaSearchBarOptionsMaterial extends NaSearchBarOptionsGeneric {
   /// Creates an empty [NaSearchBarOptionsMaterial] with default values.
   NaSearchBarOptionsMaterial.empty() : this();
 
+  /// Creates a [NaSearchBarOptionsMaterial] from generic options.
+  NaSearchBarOptionsMaterial.fromGeneric(
+    NaSearchBarOptionsGeneric? generic, {
+    this.backgroundColor,
+    this.elevation,
+    this.trailing,
+    this.constraints,
+  }) : super();
+
   /// Creates a copy of this [NaSearchBarOptionsMaterial] with the given fields replaced by non-null values.
   @override
   NaSearchBarOptionsMaterial copyWith({
@@ -77,6 +86,15 @@ class NaSearchBarOptionsCupertino extends NaSearchBarOptionsGeneric {
 
   /// Creates an empty [NaSearchBarOptionsCupertino] with default values.
   NaSearchBarOptionsCupertino.empty() : this();
+
+  /// Creates a [NaSearchBarOptionsCupertino] from generic options.
+  NaSearchBarOptionsCupertino.fromGeneric(
+    NaSearchBarOptionsGeneric? generic, {
+    this.decoration,
+    this.padding   = const EdgeInsets.symmetric(horizontal: 5.0, vertical: 8.0),
+    this.itemColor = CupertinoColors.systemGrey2,
+    this.itemSize  = 20.0,
+  }) : super();
 
   /// Creates a copy of this [NaSearchBarOptionsCupertino] with the given fields replaced by non-null values.
   @override

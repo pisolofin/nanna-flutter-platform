@@ -1,4 +1,4 @@
-﻿import 'package:flutter/widgets.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter/material.dart' show Scaffold;
 import 'package:flutter/cupertino.dart' show CupertinoPageScaffold, CupertinoTabScaffold;
 
@@ -31,7 +31,7 @@ class NaUiTypeScope extends InheritedWidget {
 
   /// Resolves the active [NaUiType] from the closest [NaUiTypeScope].
   /// Returns the first [NaUiType] in the fallback chain, or [defaultType] if the scope is empty.
-  static NaUiType resolveUiType(BuildContext context, {NaUiType defaultType = NaUiType.material}) {
+  static NaUiType resolveUiType(BuildContext context, { NaUiType defaultType = NaUiType.material }) {
     final List<NaUiType> uiTypes = NaUiTypeScope.of(context);
     if (uiTypes.isNotEmpty) {
       return uiTypes.first;

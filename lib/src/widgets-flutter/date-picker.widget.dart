@@ -44,6 +44,15 @@ class NaDatePickerOptionsMaterial extends NaDatePickerOptionsGeneric {
   /// Creates an empty [NaDatePickerOptionsMaterial] with default values.
   NaDatePickerOptionsMaterial.empty() : this();
 
+  /// Creates a [NaDatePickerOptionsMaterial] from generic options.
+  NaDatePickerOptionsMaterial.fromGeneric(
+    NaDatePickerOptionsGeneric? generic, {
+    this.currentDate,
+    this.onDisplayedMonthChanged,
+    this.initialCalendarMode,
+    this.selectableDayPredicate,
+  }) : super();
+
   /// Creates a copy of this [NaDatePickerOptionsMaterial] with the given fields replaced by non-null values.
   @override
   NaDatePickerOptionsMaterial copyWith({
@@ -79,6 +88,16 @@ class NaDatePickerOptionsCupertino extends NaDatePickerOptionsGeneric {
 
   /// Creates an empty [NaDatePickerOptionsCupertino] with default values.
   NaDatePickerOptionsCupertino.empty() : this();
+
+  /// Creates a [NaDatePickerOptionsCupertino] from generic options.
+  NaDatePickerOptionsCupertino.fromGeneric(
+    NaDatePickerOptionsGeneric? generic, {
+    this.itemExtent,
+    this.selectionOverlay,
+    this.backgroundColor,
+    this.use24hFormat,
+    this.minuteInterval,
+  }) : super();
 
   /// Creates a copy of this [NaDatePickerOptionsCupertino] with the given fields replaced by non-null values.
   @override

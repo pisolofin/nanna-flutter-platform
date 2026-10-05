@@ -64,6 +64,21 @@ class NaCardOptionsMaterial extends NaCardOptionsGeneric {
   /// Creates an empty [NaCardOptionsMaterial] with default values.
   NaCardOptionsMaterial.empty() : this();
 
+  /// Creates a [NaCardOptionsMaterial] from generic options.
+  NaCardOptionsMaterial.fromGeneric(
+    NaCardOptionsGeneric? generic, {
+    this.shadowColor,
+    this.surfaceTintColor,
+    this.elevation,
+    this.shape,
+    this.borderOnForeground,
+    this.clipBehavior,
+    this.semanticContainer,
+  }) : super(
+         color : generic?.color,
+         margin: generic?.margin,
+       );
+
   /// Creates a copy of this [NaCardOptionsMaterial] with the given fields replaced by non-null values.
   @override
   NaCardOptionsMaterial copyWith({
@@ -107,6 +122,17 @@ class NaCardOptionsCupertino extends NaCardOptionsGeneric {
 
   /// Creates an empty [NaCardOptionsCupertino] with default values.
   NaCardOptionsCupertino.empty() : this();
+
+  /// Creates a [NaCardOptionsCupertino] from generic options.
+  NaCardOptionsCupertino.fromGeneric(
+    NaCardOptionsGeneric? generic, {
+    this.padding,
+    this.borderRadius,
+    this.border,
+  }) : super(
+         color : generic?.color,
+         margin: generic?.margin,
+       );
 
   /// Creates a copy of this [NaCardOptionsCupertino] with the given fields replaced by non-null values.
   @override
