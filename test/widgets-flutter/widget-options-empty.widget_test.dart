@@ -49,6 +49,7 @@ void main() {
     expect(NaIconButtonOptions.empty(), isA<NaIconButtonOptionsGeneric>());
     expect(NaIconOptions.empty(), isA<NaIconOptionsGeneric>());
     expect(NaListTileOptions.empty(), isA<NaListTileOptionsGeneric>());
+    expect(NaPageOptions.empty(), isA<NaPageOptionsGeneric>());
     expect(NaProgressIndicatorOptions.empty(), isA<NaProgressIndicatorOptionsGeneric>());
     expect(NaRadioOptions.empty(), isA<NaRadioOptionsGeneric>());
     expect(NaScaffoldOptions.empty(), isA<NaScaffoldOptionsGeneric>());
@@ -96,6 +97,9 @@ void main() {
 
     expect(NaListTileOptionsMaterial.empty(), isA<NaListTileOptionsMaterial>());
     expect(NaListTileOptionsCupertino.empty(), isA<NaListTileOptionsCupertino>());
+
+    expect(NaPageOptionsMaterial.empty(), isA<NaPageOptionsMaterial>());
+    expect(NaPageOptionsCupertino.empty(), isA<NaPageOptionsCupertino>());
 
     expect(NaProgressIndicatorOptionsMaterial.empty(), isA<NaProgressIndicatorOptionsMaterial>());
     expect(NaProgressIndicatorOptionsCupertino.empty(), isA<NaProgressIndicatorOptionsCupertino>());

@@ -52,6 +52,28 @@ void main() {
     expect(cupertino.padding, const EdgeInsets.all(6.0));
   });
 
+  test('NaPageOptions fromGeneric constructors inherit generic properties and set specific properties', () {
+    final NaPageOptionsGeneric generic = NaPageOptionsGeneric(
+      maintainState    : false,
+      fullscreenDialog : true,
+      allowSnapshotting: false,
+    );
+
+    final NaPageOptionsMaterial material = NaPageOptionsMaterial.fromGeneric(generic);
+    expect(material.maintainState, isFalse);
+    expect(material.fullscreenDialog, isTrue);
+    expect(material.allowSnapshotting, isFalse);
+
+    final NaPageOptionsCupertino cupertino = NaPageOptionsCupertino.fromGeneric(
+      generic,
+      title: 'Test Title',
+    );
+    expect(cupertino.maintainState, isFalse);
+    expect(cupertino.fullscreenDialog, isTrue);
+    expect(cupertino.allowSnapshotting, isFalse);
+    expect(cupertino.title, 'Test Title');
+  });
+
   test('NaScrollbarOptionsCupertino fromGeneric handles overrides and defaults', () {
     final NaScrollbarOptionsGeneric genericWithValues = NaScrollbarOptionsGeneric(
       thickness: 10.0,
@@ -113,6 +135,9 @@ void main() {
 
     expect(NaListTileOptionsMaterial.fromGeneric(null), isA<NaListTileOptionsMaterial>());
     expect(NaListTileOptionsCupertino.fromGeneric(null), isA<NaListTileOptionsCupertino>());
+
+    expect(NaPageOptionsMaterial.fromGeneric(null), isA<NaPageOptionsMaterial>());
+    expect(NaPageOptionsCupertino.fromGeneric(null), isA<NaPageOptionsCupertino>());
 
     expect(NaProgressIndicatorOptionsMaterial.fromGeneric(null), isA<NaProgressIndicatorOptionsMaterial>());
     expect(NaProgressIndicatorOptionsCupertino.fromGeneric(null), isA<NaProgressIndicatorOptionsCupertino>());

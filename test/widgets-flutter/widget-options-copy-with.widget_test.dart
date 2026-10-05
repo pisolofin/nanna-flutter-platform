@@ -95,6 +95,37 @@ void main() {
     expect(updatedCupertino.applyTheme, isTrue);
   });
 
+  test('NaPageOptions copyWith works correctly', () {
+    final NaPageOptionsGeneric genericOptions = NaPageOptionsGeneric(
+      maintainState   : true,
+      fullscreenDialog: false,
+    );
+    final NaPageOptionsGeneric updatedGeneric = genericOptions.copyWith(
+      fullscreenDialog: true,
+    );
+    expect(updatedGeneric.maintainState, isTrue);
+    expect(updatedGeneric.fullscreenDialog, isTrue);
+
+    final NaPageOptionsMaterial materialOptions = NaPageOptionsMaterial(
+      fullscreenDialog: false,
+    );
+    final NaPageOptionsMaterial updatedMaterial = materialOptions.copyWith(
+      fullscreenDialog: true,
+    );
+    expect(updatedMaterial.fullscreenDialog, isTrue);
+
+    final NaPageOptionsCupertino cupertinoOptions = NaPageOptionsCupertino(
+      title           : 'Initial Title',
+      fullscreenDialog: false,
+    );
+    final NaPageOptionsCupertino updatedCupertino = cupertinoOptions.copyWith(
+      title           : 'Updated Title',
+      fullscreenDialog: true,
+    );
+    expect(updatedCupertino.title, 'Updated Title');
+    expect(updatedCupertino.fullscreenDialog, isTrue);
+  });
+
   test('Parameterless Generic options copyWith creates a new instance', () {
     final NaAlertDialogOptionsGeneric alertDialogOptions = NaAlertDialogOptionsGeneric();
     expect(alertDialogOptions.copyWith(), isA<NaAlertDialogOptionsGeneric>());
