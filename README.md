@@ -61,6 +61,7 @@ Below are side-by-side examples of the exact same code rendering automatically i
 | `Dialog Action` | `CupertinoDialogAction` | ✅ | `NaDialogAction` |
 | `TextField` | `CupertinoTextField` | ✅ | `NaTextField` |
 | `PageRoute` | `CupertinoPageRoute` | ✅ | `NaPageRoute` |
+| `MaterialPage` | `CupertinoPage` | ✅ | `NaPage` |
 | `Scrollbar` | `CupertinoScrollbar` | ✅ | `NaScrollbar` |
 | `SearchBar` | `CupertinoSearchTextField`| ✅ | `NaSearchBar` |
 | `TabBar` | `CupertinoTabBar` | ⏳ | `NaTabBar` |
@@ -95,24 +96,52 @@ void main() {
     NaUiTypeScope(
       // Priority list of UI types (e.g., Cupertino first, falling back to Material)
       uiTypes: const [NaUiType.cupertino, NaUiType.material], 
-      child: const MyApp(),
+      child  : const MyApp(),
     ),
   );
 }
 ```
 
-### 2. Create and use Widgets (Options Builder Pattern)
-When using `NaPlatform` widgets, you can pass common parameters (like `child`, `onPressed`) and define platform-specific options at runtime using the `optionsBuilder` function.
-This pattern (based on Marker Interfaces) guarantees total Type Safety and perfect decoupling.
+You can also inspect or resolve the active UI type from anywhere in the widget tree:
+
+```dart
+// Retrieve the active fallback chain
+final List<NaUiType> uiTypeList = NaUiTypeScope.of(context);
+
+// Resolve the active primary UI type
+final NaUiType activeUiType = NaUiTypeScope.resolveUiType(context);
+
+// Check if currently inside a Material or Cupertino scaffold
+final bool isMaterial = NaUiTypeScope.isMaterial(context);
+final bool isCupertino = NaUiTypeScope.isCupertino(context);
+```
+
+### 2. Create and use Widgets (Options Builder Pattern & Generic Options)
+When using `NaPlatform` widgets, you can pass common parameters (like `child`, `onPressed`, `placeholder`) and customize behavior using `optionsBuilder`.
+
+#### Generic Options (Cross-Platform)
+To apply options across all supported platforms without branching, return generic options (e.g., `NaTextFieldOptionsGeneric`, `NaButtonOptionsGeneric`):
+
+```dart
+NaTextField(
+  optionsBuilder: (BuildContext context, NaUiType uiType) => NaTextFieldOptionsGeneric(
+    placeholder: 'Enter username',
+    obscureText: false,
+  ),
+)
+```
+
+#### Platform-Specific Options
+For fine-grained control, branch on `uiType`. You can create platform-specific options from generic ones using `.fromGeneric()` or mutate them with `.copyWith()`:
 
 ```dart
 NaButton(
-  onPressed: () => print('Pressed!'),
+  onPressed     : () => print('Pressed!'),
   optionsBuilder: (BuildContext context, NaUiType uiType) {
     // Specific options for Material
     if (uiType == NaUiType.material) {
       return NaButtonOptionsMaterial(
-        autofocus: true,
+        autofocus   : true,
         clipBehavior: Clip.hardEdge,
       );
     }
@@ -131,15 +160,38 @@ NaButton(
     
     return null;
   },
-  child: const Text('Submit'),
+  child         : const Text('Submit'),
 )
 ```
-This ensures that the widget remains clean and can accommodate configurations for UI plugins added in the future without needing to be modified.
 
-### 3. Navigation and Dialogs (NaPageRoute & naShowDialog)
-When changing pages or showing modals, standard Flutter routing pushes either a material transition or requires you to manually specify a `CupertinoPageRoute`. 
+Every options class also provides `.empty()` factory constructors and `.copyWith(...)` methods.
 
-To get the correct native transition (like the swipe-back gesture on iOS) based on the active `NaUiType`, use `NaPageRoute.create`:
+### 3. Navigation, Pages, Dialogs & Modals
+
+#### Declarative Routing (NaApp.router & NaPage)
+Use `NaApp.router` with declarative routing solutions such as **GoRouter**:
+
+```dart
+NaApp.router(
+  routerConfig: myGoRouter,
+  title       : 'My App',
+)
+```
+
+Inside your route configurations, use `NaPage.create` to automatically produce `MaterialPage` or `CupertinoPage` transitions matching the active `NaUiType`:
+
+```dart
+GoRoute(
+  path       : '/details',
+  pageBuilder: (BuildContext context, GoRouterState state) => NaPage.create(
+    context,
+    child: const DetailsPage(),
+  ),
+);
+```
+
+#### Imperative Navigation (NaPageRoute)
+To navigate imperatively with native transitions (such as iOS swipe-to-pop), use `NaPageRoute.create`:
 
 ```dart
 Navigator.push(
@@ -151,14 +203,45 @@ Navigator.push(
 );
 ```
 
-Similarly, to show a dialog with the correct native animation (fade for Material, spring/scale for Cupertino), use the `naShowDialog` helper instead of the standard `showDialog`:
+#### Native Alert Dialogs (naShowDialog)
+To show a dialog with the correct native animations and styling (Material alert dialog vs Cupertino alert dialog), use `naShowDialog`:
 
 ```dart
 naShowDialog(
   context: context,
   builder: (context) => NaAlertDialog(
-    title: const Text('Hello!'),
+    title  : const Text('Hello!'),
+    content: const Text('This is a cross-platform alert dialog.'),
   ),
+);
+```
+
+#### Adaptive Selection Modals (naShowSelectionModalAsync)
+To display a selection sheet that automatically renders as an action sheet / bottom sheet on phones and as a modal dialog on tablets:
+
+```dart
+final String? selected = await naShowSelectionModalAsync<String>(
+  context     : context,
+  title       : const Text('Choose an Option'),
+  message     : const Text('Select one of the available items:'),
+  cancelButton: const Text('Cancel'),
+  itemList    : [
+    NaSelectionItem(
+      value   : 'opt1',
+      title   : const Text('First Option'),
+      subtitle: const Text('Description for option 1'),
+    ),
+    NaSelectionItem(
+      value   : 'opt2',
+      title   : const Text('Second Option'),
+      subtitle: const Text('Description for option 2'),
+    ),
+    const NaSelectionItem(
+      value        : 'delete',
+      title        : Text('Remove selection'),
+      isDestructive: true,
+    ),
+  ],
 );
 ```
 
