@@ -24,20 +24,20 @@ class NaPageRoute {
     for (final NaUiType type in uiTypes) {
       if (type == NaUiType.cupertino) {
         return CupertinoPageRoute<T>(
-          builder: builder,
-          title: title,
-          settings: settings,
-          maintainState: maintainState,
-          fullscreenDialog: fullscreenDialog,
+          builder          : builder,
+          title            : title,
+          settings         : settings,
+          maintainState    : maintainState,
+          fullscreenDialog : fullscreenDialog,
           allowSnapshotting: allowSnapshotting,
         );
       }
       if (type == NaUiType.material) {
         return MaterialPageRoute<T>(
-          builder: builder,
-          settings: settings,
-          maintainState: maintainState,
-          fullscreenDialog: fullscreenDialog,
+          builder          : builder,
+          settings         : settings,
+          maintainState    : maintainState,
+          fullscreenDialog : fullscreenDialog,
           allowSnapshotting: allowSnapshotting,
         );
       }
@@ -45,10 +45,10 @@ class NaPageRoute {
 
     // Ultimate fallback
     return MaterialPageRoute<T>(
-      builder: builder,
-      settings: settings,
-      maintainState: maintainState,
-      fullscreenDialog: fullscreenDialog,
+      builder          : builder,
+      settings         : settings,
+      maintainState    : maintainState,
+      fullscreenDialog : fullscreenDialog,
       allowSnapshotting: allowSnapshotting,
     );
   }

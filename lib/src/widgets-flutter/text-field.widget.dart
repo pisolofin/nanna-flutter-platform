@@ -2,50 +2,184 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/cupertino.dart';
 
+import 'icon.widget.dart';
+import 'icon-button.widget.dart';
 import '../models/ui-type.model.dart';
 import '../widgets/na-widget.widget.dart';
+import '../constants/icons.constant.dart';
 import '../models/widget-options.model.dart';
 
 /// Base options for [NaTextField].
-abstract class NaTextFieldOptions extends NaWidgetOptions {}
+abstract class NaTextFieldOptions extends NaWidgetOptions {
+  /// Default constructor for subclasses.
+  NaTextFieldOptions();
 
-/// Material-specific options for [NaTextField], resolving into a [TextField].
-class NaTextFieldOptionsMaterial extends NaTextFieldOptions {
-  final InputDecoration? decoration;
-  final TextSelectionThemeData? selectionTheme;
+  /// Creates an empty [NaTextFieldOptions] with default values.
+  factory NaTextFieldOptions.empty() => NaTextFieldOptionsGeneric.empty();
+}
+
+/// Generic options for [NaTextField], holding properties common to both platforms.
+class NaTextFieldOptionsGeneric extends NaTextFieldOptions {
+  final String? placeholder;
   final String? obscuringCharacter;
   final bool? obscureText;
+  final bool? showObscureTextToggle;
   final TextSelectionControls? selectionControls;
   final Color? cursorColor;
   final double? cursorHeight;
   final double? cursorWidth;
   final Radius? cursorRadius;
   final bool? showCursor;
-  final MouseCursor? mouseCursor;
   final StrutStyle? strutStyle;
   final TextAlignVertical? textAlignVertical;
   final TextDirection? textDirection;
 
-  NaTextFieldOptionsMaterial({
-    this.decoration,
-    this.selectionTheme,
+  NaTextFieldOptionsGeneric({
+    this.placeholder,
     this.obscuringCharacter,
     this.obscureText,
+    this.showObscureTextToggle,
     this.selectionControls,
     this.cursorColor,
     this.cursorHeight,
     this.cursorWidth,
     this.cursorRadius,
     this.showCursor,
-    this.mouseCursor,
     this.strutStyle,
     this.textAlignVertical,
     this.textDirection,
   });
+
+  /// Creates an empty [NaTextFieldOptionsGeneric] with default values.
+  NaTextFieldOptionsGeneric.empty() : this();
+
+  /// Creates a copy of this [NaTextFieldOptionsGeneric] with the given fields replaced by non-null values.
+  NaTextFieldOptionsGeneric copyWith({
+    String? placeholder,
+    String? obscuringCharacter,
+    bool? obscureText,
+    bool? showObscureTextToggle,
+    TextSelectionControls? selectionControls,
+    Color? cursorColor,
+    double? cursorHeight,
+    double? cursorWidth,
+    Radius? cursorRadius,
+    bool? showCursor,
+    StrutStyle? strutStyle,
+    TextAlignVertical? textAlignVertical,
+    TextDirection? textDirection,
+  }) {
+    return NaTextFieldOptionsGeneric(
+      placeholder          : placeholder ?? this.placeholder,
+      obscuringCharacter   : obscuringCharacter ?? this.obscuringCharacter,
+      obscureText          : obscureText ?? this.obscureText,
+      showObscureTextToggle: showObscureTextToggle ?? this.showObscureTextToggle,
+      selectionControls    : selectionControls ?? this.selectionControls,
+      cursorColor          : cursorColor ?? this.cursorColor,
+      cursorHeight         : cursorHeight ?? this.cursorHeight,
+      cursorWidth          : cursorWidth ?? this.cursorWidth,
+      cursorRadius         : cursorRadius ?? this.cursorRadius,
+      showCursor           : showCursor ?? this.showCursor,
+      strutStyle           : strutStyle ?? this.strutStyle,
+      textAlignVertical    : textAlignVertical ?? this.textAlignVertical,
+      textDirection        : textDirection ?? this.textDirection,
+    );
+  }
+}
+
+/// Material-specific options for [NaTextField], resolving into a [TextField].
+class NaTextFieldOptionsMaterial extends NaTextFieldOptionsGeneric {
+  final InputDecoration? decoration;
+  final TextSelectionThemeData? selectionTheme;
+  final MouseCursor? mouseCursor;
+
+  NaTextFieldOptionsMaterial({
+    this.decoration,
+    this.selectionTheme,
+    this.mouseCursor,
+    super.placeholder,
+    super.obscuringCharacter,
+    super.obscureText,
+    super.showObscureTextToggle,
+    super.selectionControls,
+    super.cursorColor,
+    super.cursorHeight,
+    super.cursorWidth,
+    super.cursorRadius,
+    super.showCursor,
+    super.strutStyle,
+    super.textAlignVertical,
+    super.textDirection,
+  });
+
+  /// Creates an empty [NaTextFieldOptionsMaterial] with default values.
+  NaTextFieldOptionsMaterial.empty() : this();
+
+  /// Creates a [NaTextFieldOptionsMaterial] from generic options.
+  NaTextFieldOptionsMaterial.fromGeneric(
+    NaTextFieldOptionsGeneric? generic, {
+    this.decoration,
+    this.selectionTheme,
+    this.mouseCursor,
+  }) : super(
+         placeholder          : generic?.placeholder,
+         obscuringCharacter   : generic?.obscuringCharacter,
+         obscureText          : generic?.obscureText,
+         showObscureTextToggle: generic?.showObscureTextToggle,
+         selectionControls    : generic?.selectionControls,
+         cursorColor          : generic?.cursorColor,
+         cursorHeight         : generic?.cursorHeight,
+         cursorWidth          : generic?.cursorWidth,
+         cursorRadius         : generic?.cursorRadius,
+         showCursor           : generic?.showCursor,
+         strutStyle           : generic?.strutStyle,
+         textAlignVertical    : generic?.textAlignVertical,
+         textDirection        : generic?.textDirection,
+       );
+
+  /// Creates a copy of this [NaTextFieldOptionsMaterial] with the given fields replaced by non-null values.
+  @override
+  NaTextFieldOptionsMaterial copyWith({
+    InputDecoration? decoration,
+    TextSelectionThemeData? selectionTheme,
+    MouseCursor? mouseCursor,
+    String? placeholder,
+    String? obscuringCharacter,
+    bool? obscureText,
+    bool? showObscureTextToggle,
+    TextSelectionControls? selectionControls,
+    Color? cursorColor,
+    double? cursorHeight,
+    double? cursorWidth,
+    Radius? cursorRadius,
+    bool? showCursor,
+    StrutStyle? strutStyle,
+    TextAlignVertical? textAlignVertical,
+    TextDirection? textDirection,
+  }) {
+    return NaTextFieldOptionsMaterial(
+      decoration           : decoration ?? this.decoration,
+      selectionTheme       : selectionTheme ?? this.selectionTheme,
+      mouseCursor          : mouseCursor ?? this.mouseCursor,
+      placeholder          : placeholder ?? this.placeholder,
+      obscuringCharacter   : obscuringCharacter ?? this.obscuringCharacter,
+      obscureText          : obscureText ?? this.obscureText,
+      showObscureTextToggle: showObscureTextToggle ?? this.showObscureTextToggle,
+      selectionControls    : selectionControls ?? this.selectionControls,
+      cursorColor          : cursorColor ?? this.cursorColor,
+      cursorHeight         : cursorHeight ?? this.cursorHeight,
+      cursorWidth          : cursorWidth ?? this.cursorWidth,
+      cursorRadius         : cursorRadius ?? this.cursorRadius,
+      showCursor           : showCursor ?? this.showCursor,
+      strutStyle           : strutStyle ?? this.strutStyle,
+      textAlignVertical    : textAlignVertical ?? this.textAlignVertical,
+      textDirection        : textDirection ?? this.textDirection,
+    );
+  }
 }
 
 /// Cupertino-specific options for [NaTextField], resolving into a [CupertinoTextField].
-class NaTextFieldOptionsCupertino extends NaTextFieldOptions {
+class NaTextFieldOptionsCupertino extends NaTextFieldOptionsGeneric {
   final BoxDecoration? decoration;
   final EdgeInsetsGeometry? padding;
   final Widget? prefix;
@@ -53,19 +187,7 @@ class NaTextFieldOptionsCupertino extends NaTextFieldOptions {
   final Widget? suffix;
   final OverlayVisibilityMode? suffixMode;
   final OverlayVisibilityMode? clearButtonMode;
-  final String? placeholder;
   final TextStyle? placeholderStyle;
-  final String? obscuringCharacter;
-  final bool? obscureText;
-  final Color? cursorColor;
-  final double? cursorHeight;
-  final double? cursorWidth;
-  final Radius? cursorRadius;
-  final bool? showCursor;
-  final TextSelectionControls? selectionControls;
-  final StrutStyle? strutStyle;
-  final TextAlignVertical? textAlignVertical;
-  final TextDirection? textDirection;
 
   NaTextFieldOptionsCupertino({
     this.decoration,
@@ -75,20 +197,101 @@ class NaTextFieldOptionsCupertino extends NaTextFieldOptions {
     this.suffix,
     this.suffixMode,
     this.clearButtonMode,
-    this.placeholder,
     this.placeholderStyle,
-    this.obscuringCharacter,
-    this.obscureText,
-    this.cursorColor,
-    this.cursorHeight,
-    this.cursorWidth,
-    this.cursorRadius,
-    this.showCursor,
-    this.selectionControls,
-    this.strutStyle,
-    this.textAlignVertical,
-    this.textDirection,
+    super.placeholder,
+    super.obscuringCharacter,
+    super.obscureText,
+    super.showObscureTextToggle,
+    super.cursorColor,
+    super.cursorHeight,
+    super.cursorWidth,
+    super.cursorRadius,
+    super.showCursor,
+    super.selectionControls,
+    super.strutStyle,
+    super.textAlignVertical,
+    super.textDirection,
   });
+
+  /// Creates an empty [NaTextFieldOptionsCupertino] with default values.
+  NaTextFieldOptionsCupertino.empty() : this();
+
+  /// Creates a [NaTextFieldOptionsCupertino] from generic options.
+  NaTextFieldOptionsCupertino.fromGeneric(
+    NaTextFieldOptionsGeneric? generic, {
+    this.decoration,
+    this.padding,
+    this.prefix,
+    this.prefixMode,
+    this.suffix,
+    this.suffixMode,
+    this.clearButtonMode,
+    this.placeholderStyle,
+  }) : super(
+         placeholder          : generic?.placeholder,
+         obscuringCharacter   : generic?.obscuringCharacter,
+         obscureText          : generic?.obscureText,
+         showObscureTextToggle: generic?.showObscureTextToggle,
+         selectionControls    : generic?.selectionControls,
+         cursorColor          : generic?.cursorColor,
+         cursorHeight         : generic?.cursorHeight,
+         cursorWidth          : generic?.cursorWidth,
+         cursorRadius         : generic?.cursorRadius,
+         showCursor           : generic?.showCursor,
+         strutStyle           : generic?.strutStyle,
+         textAlignVertical    : generic?.textAlignVertical,
+         textDirection        : generic?.textDirection,
+       );
+
+  /// Creates a copy of this [NaTextFieldOptionsCupertino] with the given fields replaced by non-null values.
+  @override
+  NaTextFieldOptionsCupertino copyWith({
+    BoxDecoration? decoration,
+    EdgeInsetsGeometry? padding,
+    Widget? prefix,
+    OverlayVisibilityMode? prefixMode,
+    Widget? suffix,
+    OverlayVisibilityMode? suffixMode,
+    OverlayVisibilityMode? clearButtonMode,
+    TextStyle? placeholderStyle,
+    String? placeholder,
+    String? obscuringCharacter,
+    bool? obscureText,
+    bool? showObscureTextToggle,
+    TextSelectionControls? selectionControls,
+    Color? cursorColor,
+    double? cursorHeight,
+    double? cursorWidth,
+    Radius? cursorRadius,
+    bool? showCursor,
+    StrutStyle? strutStyle,
+    TextAlignVertical? textAlignVertical,
+    TextDirection? textDirection,
+  }) {
+    return NaTextFieldOptionsCupertino(
+      decoration           : decoration ?? this.decoration,
+      padding              : padding ?? this.padding,
+      prefix               : prefix ?? this.prefix,
+      prefixMode           : prefixMode ?? this.prefixMode,
+      suffix               : suffix ?? this.suffix,
+      suffixMode           : suffixMode ?? this.suffixMode,
+      clearButtonMode      : clearButtonMode ?? this.clearButtonMode,
+      placeholderStyle     : placeholderStyle ?? this.placeholderStyle,
+      placeholder          : placeholder ?? this.placeholder,
+      obscuringCharacter   : obscuringCharacter ?? this.obscuringCharacter,
+      obscureText          : obscureText ?? this.obscureText,
+      showObscureTextToggle: showObscureTextToggle ?? this.showObscureTextToggle,
+      selectionControls    : selectionControls ?? this.selectionControls,
+      cursorColor          : cursorColor ?? this.cursorColor,
+      cursorHeight         : cursorHeight ?? this.cursorHeight,
+      cursorWidth          : cursorWidth ?? this.cursorWidth,
+      cursorRadius         : cursorRadius ?? this.cursorRadius,
+      showCursor           : showCursor ?? this.showCursor,
+      strutStyle           : strutStyle ?? this.strutStyle,
+      textAlignVertical    : textAlignVertical ?? this.textAlignVertical,
+      textDirection        : textDirection ?? this.textDirection,
+    );
+  }
 }
 
 /// A generic TextField widget that automatically renders a [TextField] on Material
@@ -105,6 +308,7 @@ class NaTextField extends NaWidget {
   final bool readOnly;
   final bool? showCursor;
   final bool obscureText;
+  final bool showObscureTextToggle;
   final bool autocorrect;
   final bool enableSuggestions;
   final int? maxLines;
@@ -133,6 +337,7 @@ class NaTextField extends NaWidget {
     this.readOnly = false,
     this.showCursor,
     this.obscureText = false,
+    this.showObscureTextToggle = true,
     this.autocorrect = true,
     this.enableSuggestions = true,
     this.maxLines = 1,
@@ -149,111 +354,307 @@ class NaTextField extends NaWidget {
     super.uiType,
   });
 
+  /// Creates a copy of this [NaTextField] with the given fields replaced by non-null values.
+  NaTextField copyWith({
+    Key? key,
+    TextEditingController? controller,
+    FocusNode? focusNode,
+    TextInputType? keyboardType,
+    TextInputAction? textInputAction,
+    TextCapitalization? textCapitalization,
+    TextStyle? style,
+    TextAlign? textAlign,
+    bool? autofocus,
+    bool? readOnly,
+    bool? showCursor,
+    bool? obscureText,
+    bool? showObscureTextToggle,
+    bool? autocorrect,
+    bool? enableSuggestions,
+    int? maxLines,
+    int? minLines,
+    bool? expands,
+    int? maxLength,
+    ValueChanged<String>? onChanged,
+    VoidCallback? onEditingComplete,
+    ValueChanged<String>? onSubmitted,
+    List<TextInputFormatter>? inputFormatters,
+    bool? enabled,
+    Brightness? keyboardAppearance,
+    NaWidgetOptionsBuilder<NaTextFieldOptions>? optionsBuilder,
+    NaUiType? uiType,
+  }) {
+    return NaTextField(
+      key                  : key ?? this.key,
+      controller           : controller ?? this.controller,
+      focusNode            : focusNode ?? this.focusNode,
+      keyboardType         : keyboardType ?? this.keyboardType,
+      textInputAction      : textInputAction ?? this.textInputAction,
+      textCapitalization   : textCapitalization ?? this.textCapitalization,
+      style                : style ?? this.style,
+      textAlign            : textAlign ?? this.textAlign,
+      autofocus            : autofocus ?? this.autofocus,
+      readOnly             : readOnly ?? this.readOnly,
+      showCursor           : showCursor ?? this.showCursor,
+      obscureText          : obscureText ?? this.obscureText,
+      showObscureTextToggle: showObscureTextToggle ?? this.showObscureTextToggle,
+      autocorrect          : autocorrect ?? this.autocorrect,
+      enableSuggestions    : enableSuggestions ?? this.enableSuggestions,
+      maxLines             : maxLines ?? this.maxLines,
+      minLines             : minLines ?? this.minLines,
+      expands              : expands ?? this.expands,
+      maxLength            : maxLength ?? this.maxLength,
+      onChanged            : onChanged ?? this.onChanged,
+      onEditingComplete    : onEditingComplete ?? this.onEditingComplete,
+      onSubmitted          : onSubmitted ?? this.onSubmitted,
+      inputFormatters      : inputFormatters ?? this.inputFormatters,
+      enabled              : enabled ?? this.enabled,
+      keyboardAppearance   : keyboardAppearance ?? this.keyboardAppearance,
+      optionsBuilder       : optionsBuilder ?? this.optionsBuilder,
+      uiType               : uiType ?? this.uiType,
+    );
+  }
+
   @override
   Widget? renderForUIType(BuildContext context, NaUiType uiType) {
-    final NaTextFieldOptions? options = optionsBuilder?.call(context, uiType);
+    if ((uiType != NaUiType.cupertino) && (uiType != NaUiType.material) ) {
+      return null;
+    }
 
-    if (uiType == NaUiType.cupertino) {
-      final NaTextFieldOptionsCupertino? cupertinoOptions =
-          options is NaTextFieldOptionsCupertino ? options : null;
+    final NaTextFieldOptions? options = this.optionsBuilder?.call(context, uiType);
+
+    return _NaTextFieldPlatformRender(
+      naTextField: this,
+      uiType     : uiType,
+      options    : options,
+    );
+  }
+}
+
+/// Internal stateful wrapper for [NaTextField] that manages dynamic text obscuring toggle.
+class _NaTextFieldPlatformRender extends StatefulWidget {
+  final NaTextField naTextField;
+  final NaUiType uiType;
+  final NaTextFieldOptions? options;
+
+  const _NaTextFieldPlatformRender({
+    required this.naTextField,
+    required this.uiType,
+    this.options,
+  });
+
+  @override
+  State<_NaTextFieldPlatformRender> createState() => _NaTextFieldPlatformRenderState();
+}
+
+class _NaTextFieldPlatformRenderState extends State<_NaTextFieldPlatformRender> {
+  late bool _obscureText;
+  late bool _isObscureConfigured;
+
+  @override
+  void initState() {
+    super.initState();
+
+    final NaTextFieldOptionsGeneric? genericOptions = widget.options is NaTextFieldOptionsGeneric
+      ? (widget.options as NaTextFieldOptionsGeneric)
+      : null
+    ;
+    _isObscureConfigured = genericOptions?.obscureText ?? widget.naTextField.obscureText;
+    _obscureText         = _isObscureConfigured;
+  }
+
+  @override
+  void didUpdateWidget(_NaTextFieldPlatformRender oldWidget) {
+    super.didUpdateWidget(oldWidget);
+
+    final NaTextFieldOptionsGeneric? genericOptions = widget.options is NaTextFieldOptionsGeneric
+      ? (widget.options as NaTextFieldOptionsGeneric)
+      : null
+    ;
+    final bool newConfigured = genericOptions?.obscureText ?? widget.naTextField.obscureText;
+    if (newConfigured != _isObscureConfigured) {
+      _isObscureConfigured = newConfigured;
+      _obscureText         = newConfigured;
+    }
+  }
+
+  /// Toggles between obscured and plain text display
+  void _toggleObscureText() {
+    setState(() {
+      _obscureText = !_obscureText;
+    });
+  }
+
+  /// Builds the standard visibility toggle icon button
+  Widget _buildToggleVisibilityButton(BuildContext context) {
+    return NaIconButton(
+      icon: NaIcon(
+        _obscureText ? NaIcons.visibility : NaIcons.visibilityOff,
+        size: 20.0,
+      ),
+      onPressed     : _toggleObscureText,
+      optionsBuilder: (BuildContext context, NaUiType uiType) {
+        if (uiType == NaUiType.cupertino) {
+          return NaIconButtonOptionsCupertino(
+            minimumSize: Size.zero,
+            padding    : const EdgeInsets.symmetric(horizontal: 6.0),
+          );
+        }
+        if (uiType == NaUiType.material) {
+          return NaIconButtonOptionsMaterial(
+            splashRadius: 20.0,
+            padding     : EdgeInsets.zero,
+          );
+        }
+        return null;
+      },
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final NaTextFieldOptionsGeneric? genericOptions = widget.options is NaTextFieldOptionsGeneric
+      ? (widget.options as NaTextFieldOptionsGeneric)
+      : null
+    ;
+    final bool showToggle = genericOptions?.showObscureTextToggle ?? widget.naTextField.showObscureTextToggle;
+    final bool enableToggle = _isObscureConfigured && showToggle;
+
+    if (widget.uiType == NaUiType.cupertino) {
+      final NaTextFieldOptionsCupertino? cupertinoOptions = widget.options is NaTextFieldOptionsCupertino
+        ? (widget.options as NaTextFieldOptionsCupertino)
+        : null
+      ;
+
+      final Widget? suffixWidget = enableToggle
+        ? (cupertinoOptions?.suffix ?? _buildToggleVisibilityButton(context))
+        : cupertinoOptions?.suffix
+      ;
+      final OverlayVisibilityMode suffixMode = enableToggle
+        ? (cupertinoOptions?.suffixMode ?? OverlayVisibilityMode.always)
+        : (cupertinoOptions?.suffixMode ?? OverlayVisibilityMode.always)
+      ;
+
       return CupertinoTextField(
-        controller: this.controller,
-        focusNode: this.focusNode,
-        keyboardType: this.keyboardType,
-        textInputAction: this.textInputAction,
-        textCapitalization: this.textCapitalization,
-        style: this.style,
-        textAlign: this.textAlign,
-        autofocus: this.autofocus,
-        readOnly: this.readOnly,
-        showCursor: cupertinoOptions?.showCursor ?? this.showCursor,
-        obscureText: cupertinoOptions?.obscureText ?? this.obscureText,
-        autocorrect: this.autocorrect,
-        enableSuggestions: this.enableSuggestions,
-        maxLines: this.maxLines,
-        minLines: this.minLines,
-        expands: this.expands,
-        maxLength: this.maxLength,
-        onChanged: this.onChanged,
-        onEditingComplete: this.onEditingComplete,
-        onSubmitted: this.onSubmitted,
-        inputFormatters: this.inputFormatters,
-        enabled: this.enabled ?? true,
-        keyboardAppearance: this.keyboardAppearance,
+        controller        : widget.naTextField.controller,
+        focusNode         : widget.naTextField.focusNode,
+        keyboardType      : widget.naTextField.keyboardType,
+        textInputAction   : widget.naTextField.textInputAction,
+        textCapitalization: widget.naTextField.textCapitalization,
+        style             : widget.naTextField.style,
+        textAlign         : widget.naTextField.textAlign,
+        autofocus         : widget.naTextField.autofocus,
+        readOnly          : widget.naTextField.readOnly,
+        showCursor        : genericOptions?.showCursor ?? widget.naTextField.showCursor,
+        obscureText       : enableToggle ? _obscureText : (genericOptions?.obscureText ?? widget.naTextField.obscureText),
+        autocorrect       : widget.naTextField.autocorrect,
+        enableSuggestions : widget.naTextField.enableSuggestions,
+        maxLines          : widget.naTextField.maxLines,
+        minLines          : widget.naTextField.minLines,
+        expands           : widget.naTextField.expands,
+        maxLength         : widget.naTextField.maxLength,
+        onChanged         : widget.naTextField.onChanged,
+        onEditingComplete : widget.naTextField.onEditingComplete,
+        onSubmitted       : widget.naTextField.onSubmitted,
+        inputFormatters   : widget.naTextField.inputFormatters,
+        enabled           : widget.naTextField.enabled ?? true,
+        keyboardAppearance: widget.naTextField.keyboardAppearance,
 
         // Cupertino specific
-        decoration: cupertinoOptions?.decoration,
-        padding: cupertinoOptions?.padding ?? const EdgeInsets.all(6.0),
-        prefix: cupertinoOptions?.prefix,
+        decoration: cupertinoOptions?.decoration ?? const CupertinoTextField().decoration,
+        padding   : cupertinoOptions?.padding ?? const EdgeInsets.all(6.0),
+        prefix    : cupertinoOptions?.prefix,
         prefixMode:
             cupertinoOptions?.prefixMode ?? OverlayVisibilityMode.always,
-        suffix: cupertinoOptions?.suffix,
-        suffixMode:
-            cupertinoOptions?.suffixMode ?? OverlayVisibilityMode.always,
+        suffix         : suffixWidget,
+        suffixMode     : suffixMode,
         clearButtonMode:
             cupertinoOptions?.clearButtonMode ?? OverlayVisibilityMode.never,
-        placeholder: cupertinoOptions?.placeholder,
+        placeholder     : genericOptions?.placeholder,
         placeholderStyle: cupertinoOptions?.placeholderStyle ??
             const TextStyle(
               fontWeight: FontWeight.w400,
-              color: CupertinoColors.placeholderText,
+              color     : CupertinoColors.placeholderText,
             ),
-        obscuringCharacter: cupertinoOptions?.obscuringCharacter ?? '•',
-        cursorColor: cupertinoOptions?.cursorColor,
-        cursorHeight: cupertinoOptions?.cursorHeight,
-        cursorWidth: cupertinoOptions?.cursorWidth ?? 2.0,
-        cursorRadius:
-            cupertinoOptions?.cursorRadius ?? const Radius.circular(2.0),
-        selectionControls: cupertinoOptions?.selectionControls,
-        strutStyle: cupertinoOptions?.strutStyle,
-        textAlignVertical: cupertinoOptions?.textAlignVertical,
-        textDirection: cupertinoOptions?.textDirection,
+        obscuringCharacter: genericOptions?.obscuringCharacter ?? '•',
+        cursorColor       : genericOptions?.cursorColor,
+        cursorHeight      : genericOptions?.cursorHeight,
+        cursorWidth       : genericOptions?.cursorWidth ?? 2.0,
+        cursorRadius      :
+            genericOptions?.cursorRadius ?? const Radius.circular(2.0),
+        selectionControls: genericOptions?.selectionControls,
+        strutStyle       : genericOptions?.strutStyle,
+        textAlignVertical: genericOptions?.textAlignVertical,
+        textDirection    : genericOptions?.textDirection,
       );
     }
 
-    if (uiType == NaUiType.material) {
-      final NaTextFieldOptionsMaterial? materialOptions =
-          options is NaTextFieldOptionsMaterial ? options : null;
+    if (widget.uiType == NaUiType.material) {
+      final NaTextFieldOptionsMaterial? materialOptions = widget.options is NaTextFieldOptionsMaterial
+        ? (widget.options as NaTextFieldOptionsMaterial)
+        : null
+      ;
+      final InputDecoration effectiveDecoration = materialOptions?.decoration ?? const InputDecoration();
+      final InputDecoration decorationWithPlaceholder = ((genericOptions?.placeholder != null) && (effectiveDecoration.hintText == null))
+        ? effectiveDecoration.copyWith(hintText: genericOptions?.placeholder)
+        : effectiveDecoration
+      ;
+
+      final Widget? suffixIconWidget = enableToggle
+        ? (decorationWithPlaceholder.suffixIcon ?? _buildToggleVisibilityButton(context))
+        : decorationWithPlaceholder.suffixIcon
+      ;
+
+      EdgeInsetsGeometry? resolvedContentPadding = decorationWithPlaceholder.contentPadding;
+      if (resolvedContentPadding == null && (decorationWithPlaceholder.border == null || decorationWithPlaceholder.border is UnderlineInputBorder || decorationWithPlaceholder.border == InputBorder.none)) {
+        resolvedContentPadding = const EdgeInsets.symmetric(vertical: 12.0);
+      }
+
+      final InputDecoration finalDecoration = decorationWithPlaceholder.copyWith(
+        suffixIcon    : suffixIconWidget,
+        contentPadding: resolvedContentPadding,
+      );
+
       return TextField(
-        controller: this.controller,
-        focusNode: this.focusNode,
-        keyboardType: this.keyboardType,
-        textInputAction: this.textInputAction,
-        textCapitalization: this.textCapitalization,
-        style: this.style,
-        textAlign: this.textAlign,
-        autofocus: this.autofocus,
-        readOnly: this.readOnly,
-        showCursor: materialOptions?.showCursor ?? this.showCursor,
-        obscureText: materialOptions?.obscureText ?? this.obscureText,
-        autocorrect: this.autocorrect,
-        enableSuggestions: this.enableSuggestions,
-        maxLines: this.maxLines,
-        minLines: this.minLines,
-        expands: this.expands,
-        maxLength: this.maxLength,
-        onChanged: this.onChanged,
-        onEditingComplete: this.onEditingComplete,
-        onSubmitted: this.onSubmitted,
-        inputFormatters: this.inputFormatters,
-        enabled: this.enabled,
-        keyboardAppearance: this.keyboardAppearance,
+        controller        : widget.naTextField.controller,
+        focusNode         : widget.naTextField.focusNode,
+        keyboardType      : widget.naTextField.keyboardType,
+        textInputAction   : widget.naTextField.textInputAction,
+        textCapitalization: widget.naTextField.textCapitalization,
+        style             : widget.naTextField.style,
+        textAlign         : widget.naTextField.textAlign,
+        autofocus         : widget.naTextField.autofocus,
+        readOnly          : widget.naTextField.readOnly,
+        showCursor        : genericOptions?.showCursor ?? widget.naTextField.showCursor,
+        obscureText       : enableToggle ? _obscureText : (genericOptions?.obscureText ?? widget.naTextField.obscureText),
+        autocorrect       : widget.naTextField.autocorrect,
+        enableSuggestions : widget.naTextField.enableSuggestions,
+        maxLines          : widget.naTextField.maxLines,
+        minLines          : widget.naTextField.minLines,
+        expands           : widget.naTextField.expands,
+        maxLength         : widget.naTextField.maxLength,
+        onChanged         : widget.naTextField.onChanged,
+        onEditingComplete : widget.naTextField.onEditingComplete,
+        onSubmitted       : widget.naTextField.onSubmitted,
+        inputFormatters   : widget.naTextField.inputFormatters,
+        enabled           : widget.naTextField.enabled,
+        keyboardAppearance: widget.naTextField.keyboardAppearance,
 
         // Material specific
-        decoration: materialOptions?.decoration ?? const InputDecoration(),
-        obscuringCharacter: materialOptions?.obscuringCharacter ?? '•',
-        selectionControls: materialOptions?.selectionControls,
-        cursorColor: materialOptions?.cursorColor,
-        cursorHeight: materialOptions?.cursorHeight,
-        cursorWidth: materialOptions?.cursorWidth ?? 2.0,
-        cursorRadius: materialOptions?.cursorRadius,
-        mouseCursor: materialOptions?.mouseCursor,
-        strutStyle: materialOptions?.strutStyle,
-        textAlignVertical: materialOptions?.textAlignVertical,
-        textDirection: materialOptions?.textDirection,
+        decoration        : finalDecoration,
+        obscuringCharacter: genericOptions?.obscuringCharacter ?? '•',
+        selectionControls : genericOptions?.selectionControls,
+        cursorColor       : genericOptions?.cursorColor,
+        cursorHeight      : genericOptions?.cursorHeight,
+        cursorWidth       : genericOptions?.cursorWidth ?? 2.0,
+        cursorRadius      : genericOptions?.cursorRadius,
+        mouseCursor       : materialOptions?.mouseCursor,
+        strutStyle        : genericOptions?.strutStyle,
+        textAlignVertical : genericOptions?.textAlignVertical,
+        textDirection     : genericOptions?.textDirection,
       );
     }
 
-    return null;
+    return const SizedBox.shrink();
   }
 }

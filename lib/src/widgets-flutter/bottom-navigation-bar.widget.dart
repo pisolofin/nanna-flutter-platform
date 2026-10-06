@@ -6,16 +6,44 @@ import '../widgets/na-widget.widget.dart';
 import '../models/widget-options.model.dart';
 
 /// Base options for [NaBottomNavigationBar].
-abstract class NaBottomNavigationBarOptions extends NaWidgetOptions {}
+abstract class NaBottomNavigationBarOptions extends NaWidgetOptions {
+  /// Default constructor for subclasses.
+  NaBottomNavigationBarOptions();
+
+  /// Creates an empty [NaBottomNavigationBarOptions] with default values.
+  factory NaBottomNavigationBarOptions.empty() => NaBottomNavigationBarOptionsGeneric.empty();
+}
+
+/// Generic options for [NaBottomNavigationBar], holding properties common to both platforms.
+class NaBottomNavigationBarOptionsGeneric extends NaBottomNavigationBarOptions {
+  final Color? backgroundColor;
+  final double? iconSize;
+
+  NaBottomNavigationBarOptionsGeneric({
+    this.backgroundColor,
+    this.iconSize,
+  });
+
+  /// Creates an empty [NaBottomNavigationBarOptionsGeneric] with default values.
+  NaBottomNavigationBarOptionsGeneric.empty() : this();
+
+  /// Creates a copy of this [NaBottomNavigationBarOptionsGeneric] with the given fields replaced by non-null values.
+  NaBottomNavigationBarOptionsGeneric copyWith({
+    Color? backgroundColor,
+    double? iconSize,
+  }) {
+    return NaBottomNavigationBarOptionsGeneric(
+      backgroundColor: backgroundColor ?? this.backgroundColor,
+      iconSize       : iconSize ?? this.iconSize,
+    );
+  }
+}
 
 /// Material-specific options for [NaBottomNavigationBar], resolving into a [BottomNavigationBar].
-class NaBottomNavigationBarOptionsMaterial
-    extends NaBottomNavigationBarOptions {
+class NaBottomNavigationBarOptionsMaterial extends NaBottomNavigationBarOptionsGeneric {
   final double? elevation;
   final BottomNavigationBarType? type;
   final Color? fixedColor;
-  final Color? backgroundColor;
-  final double? iconSize;
   final Color? selectedItemColor;
   final Color? unselectedItemColor;
   final IconThemeData? selectedIconTheme;
@@ -32,8 +60,6 @@ class NaBottomNavigationBarOptionsMaterial
     this.elevation,
     this.type,
     this.fixedColor,
-    this.backgroundColor,
-    this.iconSize,
     this.selectedItemColor,
     this.unselectedItemColor,
     this.selectedIconTheme,
@@ -45,27 +71,126 @@ class NaBottomNavigationBarOptionsMaterial
     this.mouseCursor,
     this.enableFeedback,
     this.landscapeLayout,
+    super.backgroundColor,
+    super.iconSize,
   });
+
+  /// Creates an empty [NaBottomNavigationBarOptionsMaterial] with default values.
+  NaBottomNavigationBarOptionsMaterial.empty() : this();
+
+  /// Creates a [NaBottomNavigationBarOptionsMaterial] from generic options.
+  NaBottomNavigationBarOptionsMaterial.fromGeneric(
+    NaBottomNavigationBarOptionsGeneric? generic, {
+    this.elevation,
+    this.type,
+    this.fixedColor,
+    this.selectedItemColor,
+    this.unselectedItemColor,
+    this.selectedIconTheme,
+    this.unselectedIconTheme,
+    this.selectedLabelStyle,
+    this.unselectedLabelStyle,
+    this.showSelectedLabels,
+    this.showUnselectedLabels,
+    this.mouseCursor,
+    this.enableFeedback,
+    this.landscapeLayout,
+  }) : super(
+         backgroundColor: generic?.backgroundColor,
+         iconSize       : generic?.iconSize,
+       );
+
+  /// Creates a copy of this [NaBottomNavigationBarOptionsMaterial] with the given fields replaced by non-null values.
+  @override
+  NaBottomNavigationBarOptionsMaterial copyWith({
+    double? elevation,
+    BottomNavigationBarType? type,
+    Color? fixedColor,
+    Color? selectedItemColor,
+    Color? unselectedItemColor,
+    IconThemeData? selectedIconTheme,
+    IconThemeData? unselectedIconTheme,
+    TextStyle? selectedLabelStyle,
+    TextStyle? unselectedLabelStyle,
+    bool? showSelectedLabels,
+    bool? showUnselectedLabels,
+    MouseCursor? mouseCursor,
+    bool? enableFeedback,
+    BottomNavigationBarLandscapeLayout? landscapeLayout,
+    Color? backgroundColor,
+    double? iconSize,
+  }) {
+    return NaBottomNavigationBarOptionsMaterial(
+      elevation           : elevation ?? this.elevation,
+      type                : type ?? this.type,
+      fixedColor          : fixedColor ?? this.fixedColor,
+      selectedItemColor   : selectedItemColor ?? this.selectedItemColor,
+      unselectedItemColor : unselectedItemColor ?? this.unselectedItemColor,
+      selectedIconTheme   : selectedIconTheme ?? this.selectedIconTheme,
+      unselectedIconTheme : unselectedIconTheme ?? this.unselectedIconTheme,
+      selectedLabelStyle  : selectedLabelStyle ?? this.selectedLabelStyle,
+      unselectedLabelStyle: unselectedLabelStyle ?? this.unselectedLabelStyle,
+      showSelectedLabels  : showSelectedLabels ?? this.showSelectedLabels,
+      showUnselectedLabels: showUnselectedLabels ?? this.showUnselectedLabels,
+      mouseCursor         : mouseCursor ?? this.mouseCursor,
+      enableFeedback      : enableFeedback ?? this.enableFeedback,
+      landscapeLayout     : landscapeLayout ?? this.landscapeLayout,
+      backgroundColor     : backgroundColor ?? this.backgroundColor,
+      iconSize            : iconSize ?? this.iconSize,
+    );
+  }
 }
 
 /// Cupertino-specific options for [NaBottomNavigationBar], resolving into a [CupertinoTabBar].
-class NaBottomNavigationBarOptionsCupertino
-    extends NaBottomNavigationBarOptions {
-  final Color? backgroundColor;
+class NaBottomNavigationBarOptionsCupertino extends NaBottomNavigationBarOptionsGeneric {
   final Color? activeColor;
   final Color? inactiveColor;
-  final double? iconSize;
   final double? height;
   final Border? border;
 
   NaBottomNavigationBarOptionsCupertino({
-    this.backgroundColor,
     this.activeColor,
     this.inactiveColor,
-    this.iconSize,
     this.height,
     this.border,
+    super.backgroundColor,
+    super.iconSize,
   });
+
+  /// Creates an empty [NaBottomNavigationBarOptionsCupertino] with default values.
+  NaBottomNavigationBarOptionsCupertino.empty() : this();
+
+  /// Creates a [NaBottomNavigationBarOptionsCupertino] from generic options.
+  NaBottomNavigationBarOptionsCupertino.fromGeneric(
+    NaBottomNavigationBarOptionsGeneric? generic, {
+    this.activeColor,
+    this.inactiveColor,
+    this.height,
+    this.border,
+  }) : super(
+         backgroundColor: generic?.backgroundColor,
+         iconSize       : generic?.iconSize,
+       );
+
+  /// Creates a copy of this [NaBottomNavigationBarOptionsCupertino] with the given fields replaced by non-null values.
+  @override
+  NaBottomNavigationBarOptionsCupertino copyWith({
+    Color? activeColor,
+    Color? inactiveColor,
+    double? height,
+    Border? border,
+    Color? backgroundColor,
+    double? iconSize,
+  }) {
+    return NaBottomNavigationBarOptionsCupertino(
+      activeColor    : activeColor ?? this.activeColor,
+      inactiveColor  : inactiveColor ?? this.inactiveColor,
+      height         : height ?? this.height,
+      border         : border ?? this.border,
+      backgroundColor: backgroundColor ?? this.backgroundColor,
+      iconSize       : iconSize ?? this.iconSize,
+    );
+  }
 }
 
 /// A generic Bottom Navigation Bar widget that automatically renders a [BottomNavigationBar] on Material
@@ -86,53 +211,80 @@ class NaBottomNavigationBar extends NaWidget {
     super.uiType,
   });
 
+  /// Creates a copy of this [NaBottomNavigationBar] with the given fields replaced by non-null values.
+  NaBottomNavigationBar copyWith({
+    Key? key,
+    List<BottomNavigationBarItem>? items,
+    ValueChanged<int>? onTap,
+    int? currentIndex,
+    NaWidgetOptionsBuilder<NaBottomNavigationBarOptions>? optionsBuilder,
+    NaUiType? uiType,
+  }) {
+    return NaBottomNavigationBar(
+      key           : key ?? this.key,
+      items         : items ?? this.items,
+      onTap         : onTap ?? this.onTap,
+      currentIndex  : currentIndex ?? this.currentIndex,
+      optionsBuilder: optionsBuilder ?? this.optionsBuilder,
+      uiType        : uiType ?? this.uiType,
+    );
+  }
+
   @override
   Widget? renderForUIType(BuildContext context, NaUiType uiType) {
     final NaBottomNavigationBarOptions? options = optionsBuilder?.call(
       context,
       uiType,
     );
+    final NaBottomNavigationBarOptionsGeneric? genericOptions = options is NaBottomNavigationBarOptionsGeneric
+      ? options
+      : null
+    ;
 
     if (uiType == NaUiType.cupertino) {
-      final NaBottomNavigationBarOptionsCupertino? cupertinoOptions =
-          options is NaBottomNavigationBarOptionsCupertino ? options : null;
+      final NaBottomNavigationBarOptionsCupertino? cupertinoOptions = options is NaBottomNavigationBarOptionsCupertino
+        ? options
+        : null
+      ;
       return CupertinoTabBar(
-        items: this.items,
-        onTap: this.onTap,
-        currentIndex: this.currentIndex,
-        backgroundColor: cupertinoOptions?.backgroundColor,
-        activeColor: cupertinoOptions?.activeColor,
-        inactiveColor:
+        items          : this.items,
+        onTap          : this.onTap,
+        currentIndex   : this.currentIndex,
+        backgroundColor: genericOptions?.backgroundColor,
+        activeColor    : cupertinoOptions?.activeColor,
+        inactiveColor  :
             cupertinoOptions?.inactiveColor ?? CupertinoColors.inactiveGray,
-        iconSize: cupertinoOptions?.iconSize ?? 30.0,
-        height: cupertinoOptions?.height ?? 50.0,
-        border: cupertinoOptions?.border,
+        iconSize: genericOptions?.iconSize ?? 30.0,
+        height  : cupertinoOptions?.height ?? 50.0,
+        border  : cupertinoOptions?.border,
       );
     }
 
     if (uiType == NaUiType.material) {
-      final NaBottomNavigationBarOptionsMaterial? materialOptions =
-          options is NaBottomNavigationBarOptionsMaterial ? options : null;
+      final NaBottomNavigationBarOptionsMaterial? materialOptions = options is NaBottomNavigationBarOptionsMaterial
+        ? options
+        : null
+      ;
       return BottomNavigationBar(
-        items: this.items,
-        onTap: this.onTap,
-        currentIndex: this.currentIndex,
-        elevation: materialOptions?.elevation,
-        type: materialOptions?.type,
-        fixedColor: materialOptions?.fixedColor,
-        backgroundColor: materialOptions?.backgroundColor,
-        iconSize: materialOptions?.iconSize ?? 24.0,
-        selectedItemColor: materialOptions?.selectedItemColor,
-        unselectedItemColor: materialOptions?.unselectedItemColor,
-        selectedIconTheme: materialOptions?.selectedIconTheme,
-        unselectedIconTheme: materialOptions?.unselectedIconTheme,
-        selectedLabelStyle: materialOptions?.selectedLabelStyle,
+        items               : this.items,
+        onTap               : this.onTap,
+        currentIndex        : this.currentIndex,
+        elevation           : materialOptions?.elevation,
+        type                : materialOptions?.type,
+        fixedColor          : materialOptions?.fixedColor,
+        backgroundColor     : genericOptions?.backgroundColor,
+        iconSize            : genericOptions?.iconSize ?? 24.0,
+        selectedItemColor   : materialOptions?.selectedItemColor,
+        unselectedItemColor : materialOptions?.unselectedItemColor,
+        selectedIconTheme   : materialOptions?.selectedIconTheme,
+        unselectedIconTheme : materialOptions?.unselectedIconTheme,
+        selectedLabelStyle  : materialOptions?.selectedLabelStyle,
         unselectedLabelStyle: materialOptions?.unselectedLabelStyle,
-        showSelectedLabels: materialOptions?.showSelectedLabels,
+        showSelectedLabels  : materialOptions?.showSelectedLabels,
         showUnselectedLabels: materialOptions?.showUnselectedLabels,
-        mouseCursor: materialOptions?.mouseCursor,
-        enableFeedback: materialOptions?.enableFeedback,
-        landscapeLayout: materialOptions?.landscapeLayout,
+        mouseCursor         : materialOptions?.mouseCursor,
+        enableFeedback      : materialOptions?.enableFeedback,
+        landscapeLayout     : materialOptions?.landscapeLayout,
       );
     }
 

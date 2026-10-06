@@ -30,4 +30,3 @@ void main() {
     expect(find.text('Test Caption'), findsOneWidget);
   });
 }
-

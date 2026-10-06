@@ -16,6 +16,7 @@ This document outlines the technical constraints, architectural decisions, and s
     *   Variables representing lists/arrays must be singular and end with `List` (e.g., `userList`, not `users`).
     *   Asynchronous methods must have the `Async` suffix (e.g., `fetchDataAsync()`).
 *   **Syntax and Formatting:**
+    *   **Indentation (Tabulazione):** Strictly use **2 spaces** for all indentation levels. Never use 4 spaces or tab characters.
     *   **Mandatory Braces & Multiline:** Use curly braces `{}` for all `if`, `for`, and `while` blocks, with **no exceptions** for single-line blocks. The body of the block (e.g. `return;`) must NEVER be on the same line as the condition; it must be wrapped in `{}` on a new line.
     *   **Condition Parentheses:** When writing multiple conditions with logical operators (e.g. `||` or `&&`), any condition that is not a direct boolean must be wrapped in parentheses. Example: `if ((item == null) || (item.latitude == null))`. Direct booleans like `if (!mounted)` are fine without extra parentheses.
     *   No spaces before structural keywords if preceded by a closing brace (e.g., `}else` and `}catch`, not `} else`).
@@ -51,14 +52,15 @@ This document outlines the technical constraints, architectural decisions, and s
     *   `widgets/` (Reusable UI components)
     *   `database/` (Local data management)
 *   **File Naming:** File names must strictly use kebab-case (`-`), never underscores (`_`). Example: `home-page.dart`.
-*   Files must end with an empty line.
+*   **Trailing Empty Line:** There must ALWAYS be one and only one empty line at the end of every file (one single final newline `\n`). Never leave zero empty lines, and never leave multiple empty lines at the end of a file.
 
 ## Final Verification Rule
 At the end of every task or request, before concluding your turn and sending the final message to the user, you MUST automatically:
-1. Run the formatting scripts: dart run c:\Users\Fabio\source\nanna\nanna-flutter\bin\format-alignment.script.dart and dart run c:\Users\Fabio\source\nanna\nanna-flutter\bin\format-imports.script.dart.
-2. Run lutter analyze.
+1. Run the formatting scripts: dart run c:\Users\Fabio\source\internal\nanna-flutter\bin\format-alignment.script.dart and dart run c:\Users\Fabio\source\internal\nanna-flutter\bin\format-imports.script.dart.
+2. Run flutter analyze.
 3. Check that no hardcoded Colors. or CupertinoColors. were introduced. If any are found, replace them with AppColors constants.
 4. **No Magic Strings Check**: Strictly verify that NO hardcoded text strings (e.g. Text('Errore')) were introduced in the UI. If any are found, you MUST add them to the .arb files and replace them with AppLocalizations before finishing.
+5. **Single Trailing Empty Line Check**: Verify that every created or modified file ends with exactly one (and only one) empty line.
 Do not ask the user for permission to do this verification; do it proactively and fix any errors before considering the task done.
 
 ## Icons

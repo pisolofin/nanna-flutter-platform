@@ -6,10 +6,29 @@ import '../widgets/na-widget.widget.dart';
 import '../models/widget-options.model.dart';
 
 /// Base options for [NaAlertDialog].
-abstract class NaAlertDialogOptions extends NaWidgetOptions {}
+abstract class NaAlertDialogOptions extends NaWidgetOptions {
+  /// Default constructor for subclasses.
+  NaAlertDialogOptions();
+
+  /// Creates an empty [NaAlertDialogOptions] with default values.
+  factory NaAlertDialogOptions.empty() => NaAlertDialogOptionsGeneric.empty();
+}
+
+/// Generic options for [NaAlertDialog], holding properties common to both platforms.
+class NaAlertDialogOptionsGeneric extends NaAlertDialogOptions {
+  NaAlertDialogOptionsGeneric();
+
+  /// Creates an empty [NaAlertDialogOptionsGeneric] with default values.
+  NaAlertDialogOptionsGeneric.empty() : this();
+
+  /// Creates a copy of this [NaAlertDialogOptionsGeneric].
+  NaAlertDialogOptionsGeneric copyWith() {
+    return NaAlertDialogOptionsGeneric();
+  }
+}
 
 /// Material-specific options for [NaAlertDialog], resolving into a [AlertDialog].
-class NaAlertDialogOptionsMaterial extends NaAlertDialogOptions {
+class NaAlertDialogOptionsMaterial extends NaAlertDialogOptionsGeneric {
   /// The optional icon at the top of the dialog.
   final Widget? icon;
 
@@ -97,10 +116,89 @@ class NaAlertDialogOptionsMaterial extends NaAlertDialogOptions {
     this.clipBehavior,
     this.scrollable,
   });
+
+  /// Creates an empty [NaAlertDialogOptionsMaterial] with default values.
+  NaAlertDialogOptionsMaterial.empty() : this();
+
+  /// Creates a [NaAlertDialogOptionsMaterial] from generic options.
+  NaAlertDialogOptionsMaterial.fromGeneric(
+    NaAlertDialogOptionsGeneric? generic, {
+    this.icon,
+    this.iconPadding,
+    this.iconColor,
+    this.titlePadding,
+    this.titleTextStyle,
+    this.contentPadding,
+    this.contentTextStyle,
+    this.actionsPadding,
+    this.actionsAlignment,
+    this.actionsOverflowAlignment,
+    this.actionsOverflowDirection,
+    this.actionsOverflowButtonSpacing,
+    this.buttonPadding,
+    this.backgroundColor,
+    this.elevation,
+    this.shadowColor,
+    this.surfaceTintColor,
+    this.semanticLabel,
+    this.shape,
+    this.clipBehavior,
+    this.scrollable,
+  }) : super();
+
+  /// Creates a copy of this [NaAlertDialogOptionsMaterial] with the given fields replaced by non-null values.
+  @override
+  NaAlertDialogOptionsMaterial copyWith({
+    Widget? icon,
+    EdgeInsetsGeometry? iconPadding,
+    Color? iconColor,
+    EdgeInsetsGeometry? titlePadding,
+    TextStyle? titleTextStyle,
+    EdgeInsetsGeometry? contentPadding,
+    TextStyle? contentTextStyle,
+    EdgeInsetsGeometry? actionsPadding,
+    MainAxisAlignment? actionsAlignment,
+    OverflowBarAlignment? actionsOverflowAlignment,
+    VerticalDirection? actionsOverflowDirection,
+    double? actionsOverflowButtonSpacing,
+    EdgeInsetsGeometry? buttonPadding,
+    Color? backgroundColor,
+    double? elevation,
+    Color? shadowColor,
+    Color? surfaceTintColor,
+    String? semanticLabel,
+    ShapeBorder? shape,
+    Clip? clipBehavior,
+    bool? scrollable,
+  }) {
+    return NaAlertDialogOptionsMaterial(
+      icon                        : icon ?? this.icon,
+      iconPadding                 : iconPadding ?? this.iconPadding,
+      iconColor                   : iconColor ?? this.iconColor,
+      titlePadding                : titlePadding ?? this.titlePadding,
+      titleTextStyle              : titleTextStyle ?? this.titleTextStyle,
+      contentPadding              : contentPadding ?? this.contentPadding,
+      contentTextStyle            : contentTextStyle ?? this.contentTextStyle,
+      actionsPadding              : actionsPadding ?? this.actionsPadding,
+      actionsAlignment            : actionsAlignment ?? this.actionsAlignment,
+      actionsOverflowAlignment    : actionsOverflowAlignment ?? this.actionsOverflowAlignment,
+      actionsOverflowDirection    : actionsOverflowDirection ?? this.actionsOverflowDirection,
+      actionsOverflowButtonSpacing: actionsOverflowButtonSpacing ?? this.actionsOverflowButtonSpacing,
+      buttonPadding               : buttonPadding ?? this.buttonPadding,
+      backgroundColor             : backgroundColor ?? this.backgroundColor,
+      elevation                   : elevation ?? this.elevation,
+      shadowColor                 : shadowColor ?? this.shadowColor,
+      surfaceTintColor            : surfaceTintColor ?? this.surfaceTintColor,
+      semanticLabel               : semanticLabel ?? this.semanticLabel,
+      shape                       : shape ?? this.shape,
+      clipBehavior                : clipBehavior ?? this.clipBehavior,
+      scrollable                  : scrollable ?? this.scrollable,
+    );
+  }
 }
 
 /// Cupertino-specific options for [NaAlertDialog], resolving into a [CupertinoAlertDialog].
-class NaAlertDialogOptionsCupertino extends NaAlertDialogOptions {
+class NaAlertDialogOptionsCupertino extends NaAlertDialogOptionsGeneric {
   /// Scroll controller for the actions section.
   final ScrollController? actionScrollController;
 
@@ -112,6 +210,28 @@ class NaAlertDialogOptionsCupertino extends NaAlertDialogOptions {
     this.actionScrollController,
     this.scrollController,
   });
+
+  /// Creates an empty [NaAlertDialogOptionsCupertino] with default values.
+  NaAlertDialogOptionsCupertino.empty() : this();
+
+  /// Creates a [NaAlertDialogOptionsCupertino] from generic options.
+  NaAlertDialogOptionsCupertino.fromGeneric(
+    NaAlertDialogOptionsGeneric? generic, {
+    this.actionScrollController,
+    this.scrollController,
+  }) : super();
+
+  /// Creates a copy of this [NaAlertDialogOptionsCupertino] with the given fields replaced by non-null values.
+  @override
+  NaAlertDialogOptionsCupertino copyWith({
+    ScrollController? actionScrollController,
+    ScrollController? scrollController,
+  }) {
+    return NaAlertDialogOptionsCupertino(
+      actionScrollController: actionScrollController ?? this.actionScrollController,
+      scrollController      : scrollController ?? this.scrollController,
+    );
+  }
 }
 
 /// A generic Alert Dialog widget that automatically renders a [AlertDialog] on Material
@@ -139,51 +259,74 @@ class NaAlertDialog extends NaWidget {
     super.uiType,
   });
 
+  /// Creates a copy of this [NaAlertDialog] with the given fields replaced by non-null values.
+  NaAlertDialog copyWith({
+    Key? key,
+    Widget? title,
+    Widget? content,
+    List<Widget>? actions,
+    NaWidgetOptionsBuilder<NaAlertDialogOptions>? optionsBuilder,
+    NaUiType? uiType,
+  }) {
+    return NaAlertDialog(
+      key           : key ?? this.key,
+      title         : title ?? this.title,
+      content       : content ?? this.content,
+      actions       : actions ?? this.actions,
+      optionsBuilder: optionsBuilder ?? this.optionsBuilder,
+      uiType        : uiType ?? this.uiType,
+    );
+  }
+
   @override
   Widget? renderForUIType(BuildContext context, NaUiType uiType) {
-    final NaAlertDialogOptions? options = optionsBuilder?.call(context, uiType);
+    final NaAlertDialogOptions? options = this.optionsBuilder?.call(context, uiType);
 
     if (uiType == NaUiType.cupertino) {
-      final NaAlertDialogOptionsCupertino? cupertinoOptions =
-          options is NaAlertDialogOptionsCupertino ? options : null;
+      final NaAlertDialogOptionsCupertino? cupertinoOptions = options is NaAlertDialogOptionsCupertino
+        ? options
+        : null
+      ;
       return CupertinoAlertDialog(
-        title: this.title,
-        content: this.content,
-        actions: this.actions ?? const <Widget>[],
+        title                 : this.title,
+        content               : this.content,
+        actions               : this.actions ?? const <Widget>[],
         actionScrollController: cupertinoOptions?.actionScrollController,
-        scrollController: cupertinoOptions?.scrollController,
+        scrollController      : cupertinoOptions?.scrollController,
       );
     }
 
     if (uiType == NaUiType.material) {
-      final NaAlertDialogOptionsMaterial? materialOptions =
-          options is NaAlertDialogOptionsMaterial ? options : null;
+      final NaAlertDialogOptionsMaterial? materialOptions = options is NaAlertDialogOptionsMaterial
+        ? options
+        : null
+      ;
       return AlertDialog(
-        title: this.title,
-        content: this.content,
-        actions: this.actions,
-        icon: materialOptions?.icon,
-        iconPadding: materialOptions?.iconPadding,
-        iconColor: materialOptions?.iconColor,
-        titlePadding: materialOptions?.titlePadding,
-        titleTextStyle: materialOptions?.titleTextStyle,
-        contentPadding: materialOptions?.contentPadding,
-        contentTextStyle: materialOptions?.contentTextStyle,
-        actionsPadding: materialOptions?.actionsPadding,
-        actionsAlignment: materialOptions?.actionsAlignment,
-        actionsOverflowAlignment: materialOptions?.actionsOverflowAlignment,
-        actionsOverflowDirection: materialOptions?.actionsOverflowDirection,
+        title                       : this.title,
+        content                     : this.content,
+        actions                     : this.actions,
+        icon                        : materialOptions?.icon,
+        iconPadding                 : materialOptions?.iconPadding,
+        iconColor                   : materialOptions?.iconColor,
+        titlePadding                : materialOptions?.titlePadding,
+        titleTextStyle              : materialOptions?.titleTextStyle,
+        contentPadding              : materialOptions?.contentPadding,
+        contentTextStyle            : materialOptions?.contentTextStyle,
+        actionsPadding              : materialOptions?.actionsPadding,
+        actionsAlignment            : materialOptions?.actionsAlignment,
+        actionsOverflowAlignment    : materialOptions?.actionsOverflowAlignment,
+        actionsOverflowDirection    : materialOptions?.actionsOverflowDirection,
         actionsOverflowButtonSpacing:
             materialOptions?.actionsOverflowButtonSpacing,
-        buttonPadding: materialOptions?.buttonPadding,
-        backgroundColor: materialOptions?.backgroundColor,
-        elevation: materialOptions?.elevation,
-        shadowColor: materialOptions?.shadowColor,
+        buttonPadding   : materialOptions?.buttonPadding,
+        backgroundColor : materialOptions?.backgroundColor,
+        elevation       : materialOptions?.elevation,
+        shadowColor     : materialOptions?.shadowColor,
         surfaceTintColor: materialOptions?.surfaceTintColor,
-        semanticLabel: materialOptions?.semanticLabel,
-        shape: materialOptions?.shape,
-        clipBehavior: materialOptions?.clipBehavior ?? Clip.none,
-        scrollable: materialOptions?.scrollable ?? false,
+        semanticLabel   : materialOptions?.semanticLabel,
+        shape           : materialOptions?.shape,
+        clipBehavior    : materialOptions?.clipBehavior ?? Clip.none,
+        scrollable      : materialOptions?.scrollable ?? false,
       );
     }
 

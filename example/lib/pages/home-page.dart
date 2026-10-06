@@ -16,6 +16,7 @@ import '../widgets/example-alert-dialog.widget.dart';
 import '../widgets/example-progress-indicator.widget.dart';
 import '../widgets/example-search-bar.widget.dart';
 import '../widgets/example-scrollbar.widget.dart';
+import '../widgets/example-selection-modal.widget.dart';
 import '../widgets/example-bottom-navigation-bar.widget.dart';
 
 class ExampleHomePage extends StatelessWidget {
@@ -93,6 +94,9 @@ class ExampleHomePage extends StatelessWidget {
                 const SizedBox(height: 40.0),
 
                 const ExampleAlertDialogWidget(),
+                const SizedBox(height: 20.0),
+
+                const ExampleSelectionModalWidget(),
                 const SizedBox(height: 20.0),
 
                 const ExampleDatePickerWidget(),

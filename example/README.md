@@ -6,8 +6,8 @@ A sample Flutter application demonstrating the cross-platform widgets and featur
 
 - **Dynamic UI Switching**: Live toggle between **Material Design** and **Cupertino** at runtime via `NaUiTypeScope`.
 - **Adaptive Widgets Showcase**:
-  - `NaButton` & `NaIconButton`
-  - `NaTextField` & `NaTextFieldCaption`
+  - `NaButton`, `NaButtonFilled`, & `NaIconButton`
+  - `NaTextField`, `NaTextFieldCaption`, & `NaTextFieldTitle`
   - `NaSearchBar`
   - `NaSwitch`, `NaCheckbox`, `NaRadio`, & `NaSlider`
   - `NaCard` & `NaListTile`
