@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/foundation.dart';
 
 import '../models/ui-type.model.dart';
 import '../widgets/na-widget.widget.dart';
@@ -188,7 +189,19 @@ class NaAppBar extends NaWidget implements ObstructingPreferredSizeWidget {
   }
 
   @override
-  Size get preferredSize => const Size.fromHeight(56.0); // kToolbarHeight
+  Size get preferredSize {
+    if (uiType == NaUiType.cupertino) {
+      return const Size.fromHeight(44.0); // kMinInteractiveDimensionCupertino
+    }
+    if (uiType == NaUiType.material) {
+      return const Size.fromHeight(56.0); // kToolbarHeight
+    }
+    if (defaultTargetPlatform == TargetPlatform.iOS ||
+        defaultTargetPlatform == TargetPlatform.macOS) {
+      return const Size.fromHeight(44.0); // kMinInteractiveDimensionCupertino
+    }
+    return const Size.fromHeight(56.0); // kToolbarHeight
+  }
 
   @override
   bool shouldFullyObstruct(BuildContext context) {
