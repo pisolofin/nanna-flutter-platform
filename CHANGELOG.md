@@ -1,3 +1,6 @@
+## 1.2.1
+* Fix `NaAppBar` platform height
+
 ## 1.2.0
 
 * Added `NaApp.router` constructor to configure declarative routing using `routerConfig` (e.g., GoRouter) or custom router delegates.
