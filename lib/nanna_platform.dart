@@ -1,3 +1,7 @@
+/// A platform-adaptive UI extension for the Nanna Flutter package, providing
+/// dynamic fallback rendering for Material and Cupertino widgets.
+library;
+
 export 'src/models/ui-type.model.dart';
 export 'src/models/icon-data.model.dart';
 export 'src/models/widget-options.model.dart';

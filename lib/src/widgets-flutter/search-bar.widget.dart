@@ -16,6 +16,7 @@ abstract class NaSearchBarOptions extends NaWidgetOptions {
 
 /// Generic options for [NaSearchBar], holding properties common to both platforms.
 class NaSearchBarOptionsGeneric extends NaSearchBarOptions {
+  /// Creates a [NaSearchBarOptionsGeneric].
   NaSearchBarOptionsGeneric();
 
   /// Creates an empty [NaSearchBarOptionsGeneric] with default values.
@@ -29,11 +30,16 @@ class NaSearchBarOptionsGeneric extends NaSearchBarOptions {
 
 /// Material-specific options for [NaSearchBar], resolving into a [SearchBar].
 class NaSearchBarOptionsMaterial extends NaSearchBarOptionsGeneric {
+  /// The background color of this widget.
   final WidgetStateProperty<Color?>? backgroundColor;
+  /// The z-coordinate at which to place this widget relative to its parent.
   final WidgetStateProperty<double?>? elevation;
+  /// A widget to display after the title.
   final Iterable<Widget>? trailing;
+  /// The box constraints for this widget.
   final BoxConstraints? constraints;
 
+  /// Creates a [NaSearchBarOptionsMaterial].
   NaSearchBarOptionsMaterial({
     this.backgroundColor,
     this.elevation,
@@ -72,11 +78,16 @@ class NaSearchBarOptionsMaterial extends NaSearchBarOptionsGeneric {
 
 /// Cupertino-specific options for [NaSearchBar], resolving into a [CupertinoSearchTextField].
 class NaSearchBarOptionsCupertino extends NaSearchBarOptionsGeneric {
+  /// The decoration to show around the widget.
   final BoxDecoration? decoration;
+  /// The amount of space by which to inset the widget's contents.
   final EdgeInsetsGeometry padding;
+  /// The color of items in the search bar.
   final Color itemColor;
+  /// The size of items in the search bar.
   final double itemSize;
 
+  /// Creates a [NaSearchBarOptionsCupertino].
   NaSearchBarOptionsCupertino({
     this.decoration,
     this.padding = const EdgeInsets.symmetric(horizontal: 5.0, vertical: 8.0),
@@ -116,16 +127,25 @@ class NaSearchBarOptionsCupertino extends NaSearchBarOptionsGeneric {
 /// A cross-platform search bar that translates to [SearchBar] on Material
 /// and [CupertinoSearchTextField] on Cupertino.
 class NaSearchBar extends NaWidget {
+  /// Controls the text being edited.
   final TextEditingController? controller;
+  /// Defines the keyboard focus for this widget.
   final FocusNode? focusNode;
+  /// Text that suggests what sort of input the field accepts.
   final String? hintText;
+  /// A widget to display before the title.
   final Widget? leading;
+  /// Called when the value of the widget should change.
   final ValueChanged<String>? onChanged;
+  /// Called when the user indicates that they are done editing the text.
   final ValueChanged<String>? onSubmitted;
+  /// Called when the user taps this widget.
   final VoidCallback? onTap;
 
+  /// Optional options builder for customizing platform-specific widget configuration.
   final NaWidgetOptionsBuilder<NaSearchBarOptions>? optionsBuilder;
 
+  /// Creates a [NaSearchBar].
   const NaSearchBar({
     super.key,
     this.controller,

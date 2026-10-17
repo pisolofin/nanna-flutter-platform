@@ -6,11 +6,16 @@ import '../scopes/ui-type.scope.dart';
 
 /// Caption for a text field
 class NaTextFieldCaption extends StatelessWidget {
+  /// The caption text displayed below the text field.
   final String caption;
+  /// The underlying [NaTextField] wrapped by this widget.
   final NaTextField textField;
+  /// The text style of the caption.
   final TextStyle? captionStyle;
+  /// The vertical space between the text field and the caption.
   final double? gap;
 
+  /// Creates a [NaTextFieldCaption].
   const NaTextFieldCaption({
     super.key,
     required this.caption,

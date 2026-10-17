@@ -16,9 +16,13 @@ abstract class NaButtonFilledOptions extends NaWidgetOptions {
 
 /// Generic options for [NaButtonFilled], holding properties common to both platforms.
 class NaButtonFilledOptionsGeneric extends NaButtonFilledOptions {
+  /// The amount of space to surround the child widget with.
   final EdgeInsetsGeometry? padding;
+
+  /// The background fill color of the button.
   final Color? color;
 
+  /// Creates a [NaButtonFilledOptionsGeneric].
   NaButtonFilledOptionsGeneric({
     this.padding,
     this.color,
@@ -41,15 +45,31 @@ class NaButtonFilledOptionsGeneric extends NaButtonFilledOptions {
 
 /// Material-specific options for [NaButtonFilled], resolving into a [FilledButton].
 class NaButtonFilledOptionsMaterial extends NaButtonFilledOptionsGeneric {
+  /// Called when a long-press gesture occurs with this button.
   final VoidCallback? onLongPress;
+
+  /// Called when a pointer enters or exits the button response area.
   final ValueChanged<bool>? onHover;
+
+  /// Handler called when the focus changes.
   final ValueChanged<bool>? onFocusChange;
+
+  /// Customizes this button's appearance.
   final ButtonStyle? style;
+
+  /// An optional focus node to use as the focus node for this widget.
   final FocusNode? focusNode;
+
+  /// True if this widget will be selected as the initial focus.
   final bool? autofocus;
+
+  /// The content will be clipped (or not) according to this option.
   final Clip? clipBehavior;
+
+  /// Represents the interactive "state" of this widget in terms of a set of [WidgetState]s.
   final WidgetStatesController? statesController;
 
+  /// Creates a [NaButtonFilledOptionsMaterial].
   NaButtonFilledOptionsMaterial({
     this.onLongPress,
     this.onHover,
@@ -113,14 +133,28 @@ class NaButtonFilledOptionsMaterial extends NaButtonFilledOptionsGeneric {
 
 /// Cupertino-specific options for [NaButtonFilled], resolving into a [CupertinoButton.filled].
 class NaButtonFilledOptionsCupertino extends NaButtonFilledOptionsGeneric {
+  /// The color of the button's background when the button is disabled.
   final Color? disabledColor;
+
+  /// The minimum size of the button.
   final Size? minimumSize;
+
+  /// The opacity of the button when it is being pressed.
   final double? pressedOpacity;
+
+  /// The radius of the button's corners when it has a background color.
   final BorderRadius? borderRadius;
+
+  /// The alignment of the button's child.
   final AlignmentGeometry? alignment;
+
+  /// An optional focus node to use as the focus node for this widget.
   final FocusNode? focusNode;
+
+  /// True if this widget will be selected as the initial focus.
   final bool? autofocus;
 
+  /// Creates a [NaButtonFilledOptionsCupertino].
   NaButtonFilledOptionsCupertino({
     this.disabledColor,
     this.minimumSize,
@@ -181,12 +215,16 @@ class NaButtonFilledOptionsCupertino extends NaButtonFilledOptionsGeneric {
 /// A generic Filled Button widget that automatically renders a [FilledButton] on Material
 /// and a [CupertinoButton.filled] on Cupertino.
 class NaButtonFilled extends NaWidget {
+  /// The widget below this widget in the tree.
   final Widget child;
+
+  /// The callback that is called when the button is tapped or otherwise activated.
   final VoidCallback? onPressed;
 
   /// Function to resolve platform-specific options at runtime.
   final NaWidgetOptionsBuilder<NaButtonFilledOptions>? optionsBuilder;
 
+  /// Creates a [NaButtonFilled].
   const NaButtonFilled({
     super.key,
     required this.child,

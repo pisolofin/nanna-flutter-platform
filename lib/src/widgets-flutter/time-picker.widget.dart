@@ -16,6 +16,7 @@ abstract class NaTimePickerOptions extends NaWidgetOptions {
 
 /// Generic options for [NaTimePicker], holding properties common to both platforms.
 class NaTimePickerOptionsGeneric extends NaTimePickerOptions {
+  /// Creates a [NaTimePickerOptionsGeneric].
   NaTimePickerOptionsGeneric();
 
   /// Creates an empty [NaTimePickerOptionsGeneric] with default values.
@@ -29,15 +30,24 @@ class NaTimePickerOptionsGeneric extends NaTimePickerOptions {
 
 /// Material-specific options for [NaTimePicker], resolving into a [TimePickerDialog].
 class NaTimePickerOptionsMaterial extends NaTimePickerOptionsGeneric {
+  /// The text of the cancel button.
   final String? cancelText;
+  /// The text of the confirm button.
   final String? confirmText;
+  /// The text displayed at the top of the dialog.
   final String? helpText;
+  /// The text displayed when an invalid value is entered.
   final String? errorInvalidText;
+  /// The label for the hour input field.
   final String? hourLabelText;
+  /// The label for the minute input field.
   final String? minuteLabelText;
+  /// The initial entry mode for the time picker.
   final TimePickerEntryMode? initialEntryMode;
+  /// The orientation layout for the picker.
   final Orientation? orientation;
 
+  /// Creates a [NaTimePickerOptionsMaterial].
   NaTimePickerOptionsMaterial({
     this.cancelText,
     this.confirmText,
@@ -92,13 +102,20 @@ class NaTimePickerOptionsMaterial extends NaTimePickerOptionsGeneric {
 
 /// Cupertino-specific options for [NaTimePicker], resolving into a [CupertinoTimerPicker].
 class NaTimePickerOptionsCupertino extends NaTimePickerOptionsGeneric {
+  /// The timer picker display mode.
   final CupertinoTimerPickerMode? mode;
+  /// The granularity of the minutes display.
   final int? minuteInterval;
+  /// The granularity of the seconds display.
   final int? secondInterval;
+  /// How the child is aligned within the widget.
   final AlignmentGeometry? alignment;
+  /// The background color of this widget.
   final Color? backgroundColor;
+  /// The uniform height of each item in the picker.
   final double? itemExtent;
 
+  /// Creates a [NaTimePickerOptionsCupertino].
   NaTimePickerOptionsCupertino({
     this.mode,
     this.minuteInterval,
@@ -150,11 +167,15 @@ class NaTimePickerOptionsCupertino extends NaTimePickerOptionsGeneric {
 /// using this widget inline on Material will render a Dialog widget directly in your tree.
 /// It is recommended to use this widget inside a dialog wrapper.
 class NaTimePicker extends NaWidget {
+  /// The initial duration of the timer picker.
   final Duration initialTimerDuration;
+  /// Called when the timer duration changes.
   final ValueChanged<Duration> onTimerDurationChanged;
 
+  /// Optional options builder for customizing platform-specific widget configuration.
   final NaWidgetOptionsBuilder<NaTimePickerOptions>? optionsBuilder;
 
+  /// Creates a [NaTimePicker].
   const NaTimePicker({
     super.key,
     this.initialTimerDuration = Duration.zero,

@@ -17,6 +17,7 @@ abstract class NaAppBarOptions extends NaWidgetOptions {
 
 /// Generic options for [NaAppBar], holding properties common to both platforms.
 class NaAppBarOptionsGeneric extends NaAppBarOptions {
+  /// Creates a [NaAppBarOptionsGeneric].
   NaAppBarOptionsGeneric();
 
   /// Creates an empty [NaAppBarOptionsGeneric] with default values.
@@ -30,10 +31,16 @@ class NaAppBarOptionsGeneric extends NaAppBarOptions {
 
 /// Material-specific options for [NaAppBar], resolving into an [AppBar].
 class NaAppBarOptionsMaterial extends NaAppBarOptionsGeneric {
+  /// The z-coordinate at which to place this app bar relative to its parent.
   final double? elevation;
+
+  /// Whether the title should be centered.
   final bool? centerTitle;
+
+  /// This widget appears across the bottom of the app bar.
   final PreferredSizeWidget? bottom;
 
+  /// Creates a [NaAppBarOptionsMaterial].
   NaAppBarOptionsMaterial({
     this.elevation,
     this.centerTitle,
@@ -68,9 +75,13 @@ class NaAppBarOptionsMaterial extends NaAppBarOptionsGeneric {
 
 /// Cupertino-specific options for [NaAppBar], resolving into a [CupertinoNavigationBar].
 class NaAppBarOptionsCupertino extends NaAppBarOptionsGeneric {
+  /// The border of the navigation bar.
   final Border? border;
+
+  /// Whether to transition between routes.
   final bool? transitionBetweenRoutes;
 
+  /// Creates a [NaAppBarOptionsCupertino].
   NaAppBarOptionsCupertino({
     this.border,
     this.transitionBetweenRoutes,
@@ -102,13 +113,22 @@ class NaAppBarOptionsCupertino extends NaAppBarOptionsGeneric {
 /// A generic AppBar widget that automatically renders an [AppBar] on Material
 /// and a [CupertinoNavigationBar] on Cupertino.
 class NaAppBar extends NaWidget implements ObstructingPreferredSizeWidget {
+  /// The primary widget displayed in the app bar.
   final Widget? title;
+
+  /// A widget to display before the toolbar's title.
   final Widget? leading;
+
+  /// A list of Widgets to display in a row after the [title] widget.
   final List<Widget>? actions;
+
+  /// The fill color to use for the app bar.
   final Color? backgroundColor;
 
+  /// Optional options builder for customizing platform-specific app bar configuration.
   final NaWidgetOptionsBuilder<NaAppBarOptions>? optionsBuilder;
 
+  /// Creates a [NaAppBar].
   const NaAppBar({
     super.key,
     this.title,

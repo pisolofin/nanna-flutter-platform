@@ -16,8 +16,10 @@ abstract class NaProgressIndicatorOptions extends NaWidgetOptions {
 
 /// Generic options for [NaProgressIndicator], holding properties common to both platforms.
 class NaProgressIndicatorOptionsGeneric extends NaProgressIndicatorOptions {
+  /// The color of this widget.
   final Color? color;
 
+  /// Creates a [NaProgressIndicatorOptionsGeneric].
   NaProgressIndicatorOptionsGeneric({
     this.color,
   });
@@ -37,13 +39,20 @@ class NaProgressIndicatorOptionsGeneric extends NaProgressIndicatorOptions {
 
 /// Material-specific options for [NaProgressIndicator], resolving into a [CircularProgressIndicator].
 class NaProgressIndicatorOptionsMaterial extends NaProgressIndicatorOptionsGeneric {
+  /// The current value of this widget.
   final double? value;
+  /// The background color of this widget.
   final Color? backgroundColor;
+  /// The progress indicator's color as an animated value.
   final Animation<Color?>? valueColor;
+  /// The width of the line used to draw the indicator.
   final double? strokeWidth;
+  /// The semantic label for accessibility.
   final String? semanticsLabel;
+  /// The semantic value for accessibility.
   final String? semanticsValue;
 
+  /// Creates a [NaProgressIndicatorOptionsMaterial].
   NaProgressIndicatorOptionsMaterial({
     this.value,
     this.backgroundColor,
@@ -95,9 +104,12 @@ class NaProgressIndicatorOptionsMaterial extends NaProgressIndicatorOptionsGener
 
 /// Cupertino-specific options for [NaProgressIndicator], resolving into a [CupertinoActivityIndicator].
 class NaProgressIndicatorOptionsCupertino extends NaProgressIndicatorOptionsGeneric {
+  /// The [Radius] of the scrollbar thumb corners.
   final double? radius;
+  /// Whether the indicator is animating.
   final bool? animating;
 
+  /// Creates a [NaProgressIndicatorOptionsCupertino].
   NaProgressIndicatorOptionsCupertino({
     this.radius,
     this.animating,
@@ -134,8 +146,10 @@ class NaProgressIndicatorOptionsCupertino extends NaProgressIndicatorOptionsGene
 /// A generic ProgressIndicator widget that automatically renders a [CircularProgressIndicator] on Material
 /// and a [CupertinoActivityIndicator] on Cupertino.
 class NaProgressIndicator extends NaWidget {
+  /// Optional options builder for customizing platform-specific widget configuration.
   final NaWidgetOptionsBuilder<NaProgressIndicatorOptions>? optionsBuilder;
 
+  /// Creates a [NaProgressIndicator].
   const NaProgressIndicator({ super.key, this.optionsBuilder, super.uiType });
 
   /// Creates a copy of this [NaProgressIndicator] with the given fields replaced by non-null values.

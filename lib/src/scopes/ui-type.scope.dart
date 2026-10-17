@@ -17,8 +17,10 @@ import '../models/ui-type.model.dart';
 /// )
 /// ```
 class NaUiTypeScope extends InheritedWidget {
+  /// The prioritized list of UI types defining the fallback chain.
   final List<NaUiType> uiTypes;
 
+  /// Creates a [NaUiTypeScope] with the given [uiTypes] fallback chain.
   const NaUiTypeScope({ super.key, required this.uiTypes, required super.child });
 
   /// Retrieves the current active list of [NaUiType] from the closest [NaUiTypeScope] ancestor.

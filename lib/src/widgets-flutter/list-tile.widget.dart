@@ -16,6 +16,7 @@ abstract class NaListTileOptions extends NaWidgetOptions {
 
 /// Generic options for [NaListTile], holding properties common to both platforms.
 class NaListTileOptionsGeneric extends NaListTileOptions {
+  /// Creates a [NaListTileOptionsGeneric].
   NaListTileOptionsGeneric();
 
   /// Creates an empty [NaListTileOptionsGeneric] with default values.
@@ -29,32 +30,58 @@ class NaListTileOptionsGeneric extends NaListTileOptions {
 
 /// Material-specific options for [NaListTile], resolving into a [ListTile].
 class NaListTileOptionsMaterial extends NaListTileOptionsGeneric {
+  /// Whether this list tile is intended to display three lines of text.
   final bool? isThreeLine;
+  /// Whether this list tile is part of a vertically dense list.
   final bool? dense;
+  /// Defines how compact the widget's layout will be.
   final VisualDensity? visualDensity;
+  /// The shape of the widget.
   final ShapeBorder? shape;
+  /// The text style or button style.
   final ListTileStyle? style;
+  /// The color for the selected item.
   final Color? selectedColor;
+  /// The color for the icon.
   final Color? iconColor;
+  /// The color for the text.
   final Color? textColor;
+  /// The padding around the content.
   final EdgeInsetsGeometry? contentPadding;
+  /// Whether this widget is enabled for user interaction.
   final bool? enabled;
+  /// Called when a long-press gesture occurs.
   final VoidCallback? onLongPress;
+  /// Handler called when the focus changes.
   final ValueChanged<bool>? onFocusChange;
+  /// The cursor for a mouse pointer when hovering over this widget.
   final MouseCursor? mouseCursor;
+  /// Whether this widget is currently selected.
   final bool? selected;
+  /// The color for the focus overlay.
   final Color? focusColor;
+  /// The color of this widget when hovered over by a pointer.
   final Color? hoverColor;
+  /// The splash color for the ink response.
   final Color? splashColor;
+  /// Defines the keyboard focus for this widget.
   final FocusNode? focusNode;
+  /// True if this widget will be selected as the initial focus.
   final bool? autofocus;
+  /// The tile's background color.
   final Color? tileColor;
+  /// The background color of the tile when selected.
   final Color? selectedTileColor;
+  /// Whether detected gestures should provide acoustic and/or haptic feedback.
   final bool? enableFeedback;
+  /// The horizontal gap between the titles and the leading/trailing widgets.
   final double? horizontalTitleGap;
+  /// The minimum vertical padding around the list tile's contents.
   final double? minVerticalPadding;
+  /// The minimum width allocated for the leading widget.
   final double? minLeadingWidth;
 
+  /// Creates a [NaListTileOptionsMaterial].
   NaListTileOptionsMaterial({
     this.isThreeLine,
     this.dense,
@@ -177,13 +204,20 @@ class NaListTileOptionsMaterial extends NaListTileOptionsGeneric {
 
 /// Cupertino-specific options for [NaListTile], resolving into a [CupertinoListTile].
 class NaListTileOptionsCupertino extends NaListTileOptionsGeneric {
+  /// Additional information to display in the list tile.
   final Widget? additionalInfo;
+  /// The background color of this widget.
   final Color? backgroundColor;
+  /// The background color when the tile is activated.
   final Color? backgroundColorActivated;
+  /// The amount of space by which to inset the widget's contents.
   final EdgeInsetsGeometry? padding;
+  /// The size of the leading widget area.
   final double? leadingSize;
+  /// The spacing between the leading widget and title.
   final double? leadingToTitle;
 
+  /// Creates a [NaListTileOptionsCupertino].
   NaListTileOptionsCupertino({
     this.additionalInfo,
     this.backgroundColor,
@@ -231,15 +265,23 @@ class NaListTileOptionsCupertino extends NaListTileOptionsGeneric {
 /// A generic ListTile widget that automatically renders a [ListTile] on Material
 /// and a [CupertinoListTile] on Cupertino.
 class NaListTile extends NaWidget {
+  /// A widget to display before the title.
   final Widget? leading;
+  /// The primary content of the list tile or widget.
   final Widget title;
+  /// Additional content displayed below the title.
   final Widget? subtitle;
+  /// A widget to display after the title.
   final Widget? trailing;
+  /// Called when the user taps this widget.
   final VoidCallback? onTap;
+  /// Whether to display a trailing chevron disclosure indicator.
   final bool hasChevron;
 
+  /// Optional options builder for customizing platform-specific widget configuration.
   final NaWidgetOptionsBuilder<NaListTileOptions>? optionsBuilder;
 
+  /// Creates a [NaListTile].
   const NaListTile({
     super.key,
     this.leading,
@@ -292,7 +334,7 @@ class NaListTile extends NaWidget {
           mainAxisSize: MainAxisSize.min,
           children    : [finalTrailing, const SizedBox(width: 8.0), chevron],
         );
-      } else {
+      }else {
         finalTrailing = chevron;
       }
     }

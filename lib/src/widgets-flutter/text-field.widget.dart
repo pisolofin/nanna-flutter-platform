@@ -20,20 +20,34 @@ abstract class NaTextFieldOptions extends NaWidgetOptions {
 
 /// Generic options for [NaTextField], holding properties common to both platforms.
 class NaTextFieldOptionsGeneric extends NaTextFieldOptions {
+  /// Text that suggests what sort of input the field accepts.
   final String? placeholder;
+  /// Character used for obscuring text if [obscureText] is true.
   final String? obscuringCharacter;
+  /// Whether to hide the text being edited.
   final bool? obscureText;
+  /// Whether to show a toggle button to reveal or hide obscured text.
   final bool? showObscureTextToggle;
+  /// An interface for building the user interface for text selection.
   final TextSelectionControls? selectionControls;
+  /// The color of the cursor.
   final Color? cursorColor;
+  /// How tall the cursor will be.
   final double? cursorHeight;
+  /// How thick the cursor will be.
   final double? cursorWidth;
+  /// The radius of the cursor corners.
   final Radius? cursorRadius;
+  /// Whether to show cursor.
   final bool? showCursor;
+  /// The strut style to use for the text.
   final StrutStyle? strutStyle;
+  /// How the text should be aligned vertically.
   final TextAlignVertical? textAlignVertical;
+  /// The directionality of the text.
   final TextDirection? textDirection;
 
+  /// Creates a [NaTextFieldOptionsGeneric].
   NaTextFieldOptionsGeneric({
     this.placeholder,
     this.obscuringCharacter,
@@ -89,10 +103,14 @@ class NaTextFieldOptionsGeneric extends NaTextFieldOptions {
 
 /// Material-specific options for [NaTextField], resolving into a [TextField].
 class NaTextFieldOptionsMaterial extends NaTextFieldOptionsGeneric {
+  /// The decoration to show around the widget.
   final InputDecoration? decoration;
+  /// The text selection theme data.
   final TextSelectionThemeData? selectionTheme;
+  /// The cursor for a mouse pointer when hovering over this widget.
   final MouseCursor? mouseCursor;
 
+  /// Creates a [NaTextFieldOptionsMaterial].
   NaTextFieldOptionsMaterial({
     this.decoration,
     this.selectionTheme,
@@ -180,15 +198,24 @@ class NaTextFieldOptionsMaterial extends NaTextFieldOptionsGeneric {
 
 /// Cupertino-specific options for [NaTextField], resolving into a [CupertinoTextField].
 class NaTextFieldOptionsCupertino extends NaTextFieldOptionsGeneric {
+  /// The decoration to show around the widget.
   final BoxDecoration? decoration;
+  /// The amount of space by which to inset the widget's contents.
   final EdgeInsetsGeometry? padding;
+  /// Optional widget to display before the input area.
   final Widget? prefix;
+  /// When the [prefix] widget is visible.
   final OverlayVisibilityMode? prefixMode;
+  /// Optional widget to display after the input area.
   final Widget? suffix;
+  /// When the [suffix] widget is visible.
   final OverlayVisibilityMode? suffixMode;
+  /// When the clear button is visible in the text field.
   final OverlayVisibilityMode? clearButtonMode;
+  /// The style to use for the [placeholder] text.
   final TextStyle? placeholderStyle;
 
+  /// Creates a [NaTextFieldOptionsCupertino].
   NaTextFieldOptionsCupertino({
     this.decoration,
     this.padding,
@@ -297,33 +324,59 @@ class NaTextFieldOptionsCupertino extends NaTextFieldOptionsGeneric {
 /// A generic TextField widget that automatically renders a [TextField] on Material
 /// and a [CupertinoTextField] on Cupertino.
 class NaTextField extends NaWidget {
+  /// Controls the text being edited.
   final TextEditingController? controller;
+  /// Defines the keyboard focus for this widget.
   final FocusNode? focusNode;
+  /// The type of keyboard to use for editing the text.
   final TextInputType? keyboardType;
+  /// The type of action button to use for the keyboard.
   final TextInputAction? textInputAction;
+  /// Configures how the platform keyboard will select capitalization.
   final TextCapitalization textCapitalization;
+  /// The text style or button style.
   final TextStyle? style;
+  /// How the text should be aligned horizontally.
   final TextAlign textAlign;
+  /// True if this widget will be selected as the initial focus.
   final bool autofocus;
+  /// Whether the text can be changed.
   final bool readOnly;
+  /// Whether to show cursor.
   final bool? showCursor;
+  /// Whether to hide the text being edited.
   final bool obscureText;
+  /// Whether to show a toggle button to reveal or hide obscured text.
   final bool showObscureTextToggle;
+  /// Whether to enable autocorrection.
   final bool autocorrect;
+  /// Whether to show input suggestions.
   final bool enableSuggestions;
+  /// The maximum number of lines for the text field.
   final int? maxLines;
+  /// The minimum number of lines for the text field.
   final int? minLines;
+  /// Whether this widget's height will be sized to fill its parent.
   final bool expands;
+  /// The maximum number of characters to allow in the text field.
   final int? maxLength;
+  /// Called when the value of the widget should change.
   final ValueChanged<String>? onChanged;
+  /// Called when the user submits editable content.
   final VoidCallback? onEditingComplete;
+  /// Called when the user indicates that they are done editing the text.
   final ValueChanged<String>? onSubmitted;
+  /// Optional input formatters to validate and format text.
   final List<TextInputFormatter>? inputFormatters;
+  /// Whether this widget is enabled for user interaction.
   final bool? enabled;
+  /// The appearance of the keyboard.
   final Brightness? keyboardAppearance;
 
+  /// Optional options builder for customizing platform-specific widget configuration.
   final NaWidgetOptionsBuilder<NaTextFieldOptions>? optionsBuilder;
 
+  /// Creates a [NaTextField].
   const NaTextField({
     super.key,
     this.controller,

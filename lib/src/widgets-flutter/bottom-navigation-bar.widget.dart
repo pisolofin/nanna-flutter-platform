@@ -16,9 +16,13 @@ abstract class NaBottomNavigationBarOptions extends NaWidgetOptions {
 
 /// Generic options for [NaBottomNavigationBar], holding properties common to both platforms.
 class NaBottomNavigationBarOptionsGeneric extends NaBottomNavigationBarOptions {
+  /// The background color of the bottom navigation bar.
   final Color? backgroundColor;
+
+  /// The size of all of the [BottomNavigationBarItem] icons.
   final double? iconSize;
 
+  /// Creates a [NaBottomNavigationBarOptionsGeneric].
   NaBottomNavigationBarOptionsGeneric({
     this.backgroundColor,
     this.iconSize,
@@ -41,21 +45,49 @@ class NaBottomNavigationBarOptionsGeneric extends NaBottomNavigationBarOptions {
 
 /// Material-specific options for [NaBottomNavigationBar], resolving into a [BottomNavigationBar].
 class NaBottomNavigationBarOptionsMaterial extends NaBottomNavigationBarOptionsGeneric {
+  /// The z-coordinate at which to place this bottom navigation bar relative to its parent.
   final double? elevation;
+
+  /// Defines the layout and behavior of a [BottomNavigationBar].
   final BottomNavigationBarType? type;
+
+  /// The value of [selectedItemColor].
   final Color? fixedColor;
+
+  /// The color of the selected item when that item is an icon or text.
   final Color? selectedItemColor;
+
+  /// The color of the unselected items when they are icons or text.
   final Color? unselectedItemColor;
+
+  /// The size and color of the selected icon.
   final IconThemeData? selectedIconTheme;
+
+  /// The size and color of unselected icons.
   final IconThemeData? unselectedIconTheme;
+
+  /// The [TextStyle] of the [BottomNavigationBarItem] labels when they are selected.
   final TextStyle? selectedLabelStyle;
+
+  /// The [TextStyle] of the [BottomNavigationBarItem] labels when they are unselected.
   final TextStyle? unselectedLabelStyle;
+
+  /// Whether the labels are shown for selected items.
   final bool? showSelectedLabels;
+
+  /// Whether the labels are shown for unselected items.
   final bool? showUnselectedLabels;
+
+  /// The cursor for a mouse pointer when it enters or is hovering over the widget.
   final MouseCursor? mouseCursor;
+
+  /// Whether detected gestures should provide acoustic and/or haptic feedback.
   final bool? enableFeedback;
+
+  /// The arrangement of the bar's items when in landscape mode.
   final BottomNavigationBarLandscapeLayout? landscapeLayout;
 
+  /// Creates a [NaBottomNavigationBarOptionsMaterial].
   NaBottomNavigationBarOptionsMaterial({
     this.elevation,
     this.type,
@@ -143,11 +175,19 @@ class NaBottomNavigationBarOptionsMaterial extends NaBottomNavigationBarOptionsG
 
 /// Cupertino-specific options for [NaBottomNavigationBar], resolving into a [CupertinoTabBar].
 class NaBottomNavigationBarOptionsCupertino extends NaBottomNavigationBarOptionsGeneric {
+  /// The foreground color of the selected tab icon and text.
   final Color? activeColor;
+
+  /// The foreground color of the unselected tab icon and text.
   final Color? inactiveColor;
+
+  /// The height of the tab bar.
   final double? height;
+
+  /// The border at the top of the tab bar.
   final Border? border;
 
+  /// Creates a [NaBottomNavigationBarOptionsCupertino].
   NaBottomNavigationBarOptionsCupertino({
     this.activeColor,
     this.inactiveColor,
@@ -196,12 +236,19 @@ class NaBottomNavigationBarOptionsCupertino extends NaBottomNavigationBarOptions
 /// A generic Bottom Navigation Bar widget that automatically renders a [BottomNavigationBar] on Material
 /// and a [CupertinoTabBar] on Cupertino.
 class NaBottomNavigationBar extends NaWidget {
+  /// The interactive items laid out within the bottom navigation bar.
   final List<BottomNavigationBarItem> items;
+
+  /// The callback that is called when one of the items is tapped.
   final ValueChanged<int>? onTap;
+
+  /// The index into [items] for the current active item.
   final int currentIndex;
 
+  /// Optional options builder for customizing platform-specific navigation bar configuration.
   final NaWidgetOptionsBuilder<NaBottomNavigationBarOptions>? optionsBuilder;
 
+  /// Creates a [NaBottomNavigationBar].
   const NaBottomNavigationBar({
     super.key,
     required this.items,

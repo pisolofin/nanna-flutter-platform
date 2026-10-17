@@ -16,6 +16,7 @@ abstract class NaDialogActionOptions extends NaWidgetOptions {
 
 /// Generic options for [NaDialogAction], holding properties common to both platforms.
 class NaDialogActionOptionsGeneric extends NaDialogActionOptions {
+  /// Creates a [NaDialogActionOptionsGeneric].
   NaDialogActionOptionsGeneric();
 
   /// Creates an empty [NaDialogActionOptionsGeneric] with default values.
@@ -29,11 +30,16 @@ class NaDialogActionOptionsGeneric extends NaDialogActionOptions {
 
 /// Material-specific options for [NaDialogAction], resolving into a [TextButton].
 class NaDialogActionOptionsMaterial extends NaDialogActionOptionsGeneric {
+  /// The text style or button style.
   final ButtonStyle? style;
+  /// Defines the keyboard focus for this widget.
   final FocusNode? focusNode;
+  /// True if this widget will be selected as the initial focus.
   final bool? autofocus;
+  /// The content will be clipped (or not) according to this option.
   final Clip? clipBehavior;
 
+  /// Creates a [NaDialogActionOptionsMaterial].
   NaDialogActionOptionsMaterial({
     this.style,
     this.focusNode,
@@ -72,10 +78,14 @@ class NaDialogActionOptionsMaterial extends NaDialogActionOptionsGeneric {
 
 /// Cupertino-specific options for [NaDialogAction], resolving into a [CupertinoDialogAction].
 class NaDialogActionOptionsCupertino extends NaDialogActionOptionsGeneric {
+  /// Whether this action is the default choice in the dialog.
   final bool? isDefaultAction;
+  /// Whether this action destroys an object or performs a destructive action.
   final bool? isDestructiveAction;
+  /// The text style to use.
   final TextStyle? textStyle;
 
+  /// Creates a [NaDialogActionOptionsCupertino].
   NaDialogActionOptionsCupertino({
     this.isDefaultAction,
     this.isDestructiveAction,
@@ -111,11 +121,15 @@ class NaDialogActionOptionsCupertino extends NaDialogActionOptionsGeneric {
 /// A generic Dialog Action widget that automatically renders a [TextButton] on Material
 /// and a [CupertinoDialogAction] on Cupertino.
 class NaDialogAction extends NaWidget {
+  /// The widget below this widget in the tree.
   final Widget child;
+  /// The callback that is called when the widget is tapped or activated.
   final VoidCallback? onPressed;
 
+  /// Optional options builder for customizing platform-specific widget configuration.
   final NaWidgetOptionsBuilder<NaDialogActionOptions>? optionsBuilder;
 
+  /// Creates a [NaDialogAction].
   const NaDialogAction({
     super.key,
     required this.child,

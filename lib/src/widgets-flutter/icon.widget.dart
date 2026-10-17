@@ -17,10 +17,14 @@ abstract class NaIconOptions extends NaWidgetOptions {
 
 /// Generic options for [NaIcon], holding properties common to both platforms.
 class NaIconOptionsGeneric extends NaIconOptions {
+  /// A list of [Shadow]s that will be painted beneath the icon.
   final List<Shadow>? shadows;
+  /// The semantic label for the widget.
   final String? semanticLabel;
+  /// The directionality of the text.
   final TextDirection? textDirection;
 
+  /// Creates a [NaIconOptionsGeneric].
   NaIconOptionsGeneric({
     this.shadows,
     this.semanticLabel,
@@ -46,11 +50,16 @@ class NaIconOptionsGeneric extends NaIconOptions {
 
 /// Material-specific options for [NaIcon], resolving into an [Icon].
 class NaIconOptionsMaterial extends NaIconOptionsGeneric {
+  /// The fill opacity or weight of the icon.
   final double? fill;
+  /// The stroke weight attribute of the icon font.
   final double? weight;
+  /// The grade (weight stroke) of the icon font.
   final double? grade;
+  /// The optical size attribute of the icon font.
   final double? opticalSize;
 
+  /// Creates a [NaIconOptionsMaterial].
   NaIconOptionsMaterial({
     this.fill,
     this.weight,
@@ -103,6 +112,7 @@ class NaIconOptionsMaterial extends NaIconOptionsGeneric {
 /// Cupertino-specific options for [NaIcon], resolving into an [Icon].
 /// (Cupertino does not use fill/weight/grade native properties by default on standard icons).
 class NaIconOptionsCupertino extends NaIconOptionsGeneric {
+  /// Creates a [NaIconOptionsCupertino].
   NaIconOptionsCupertino({
     super.shadows,
     super.semanticLabel,
@@ -139,12 +149,17 @@ class NaIconOptionsCupertino extends NaIconOptionsGeneric {
 /// A cross-platform Icon widget that automatically resolves to the correct native [IconData]
 /// via a [NaIconData] object.
 class NaIcon extends NaWidget {
+  /// The icon to display.
   final NaIconData icon;
+  /// The size of the widget.
   final double? size;
+  /// The color of this widget.
   final Color? color;
 
+  /// Optional options builder for customizing platform-specific widget configuration.
   final NaWidgetOptionsBuilder<NaIconOptions>? optionsBuilder;
 
+  /// Creates a [NaIcon].
   const NaIcon(
     this.icon, {
     super.key,
