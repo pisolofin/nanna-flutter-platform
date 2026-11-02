@@ -11,7 +11,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  nanna: ^1.2.0
+  nanna: ^1.3.0
   cupertino_icons: ^2.0.0
 
 dev_dependencies:
