@@ -2,7 +2,7 @@ import 'package:flutter/widgets.dart';
 import 'package:nanna_platform/nanna_platform.dart';
 
 class ExampleBottomNavigationBarWidget extends StatefulWidget {
-  const ExampleBottomNavigationBarWidget({super.key});
+  const ExampleBottomNavigationBarWidget({ super.key });
 
   @override
   State<ExampleBottomNavigationBarWidget> createState() =>
@@ -17,7 +17,7 @@ class _ExampleBottomNavigationBarWidgetState
   Widget build(BuildContext context) {
     return NaBottomNavigationBar(
       currentIndex: _currentIndex,
-      onTap: (index) {
+      onTap       : (index) {
         setState(() {
           _currentIndex = index;
         });
@@ -25,7 +25,7 @@ class _ExampleBottomNavigationBarWidgetState
       items: const [
         BottomNavigationBarItem(icon: NaIcon(NaIcons.home), label: 'Home'),
         BottomNavigationBarItem(
-          icon: NaIcon(NaIcons.settings),
+          icon : NaIcon(NaIcons.settings),
           label: 'Settings',
         ),
       ],

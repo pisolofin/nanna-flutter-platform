@@ -43,3 +43,8 @@ NaWidgetBuilder? naPlatformServiceGetWidgetBuilder(
 
   return null;
 }
+
+/// Resets all registered widget builders (useful for test isolation).
+void naPlatformServiceResetWidgetBuilders() {
+  _widgetBuilders.clear();
+}

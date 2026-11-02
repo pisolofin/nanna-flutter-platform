@@ -17,4 +17,18 @@ class NaUiType {
 
   /// All default [NaUiType] values.
   static const List<NaUiType> values = [none, material, cupertino];
+
+  @override
+  String toString() {
+    if (this.value == 0) {
+      return 'NaUiType.none';
+    }
+    if (this.value == 1) {
+      return 'NaUiType.material';
+    }
+    if (this.value == 2) {
+      return 'NaUiType.cupertino';
+    }
+    return 'NaUiType(${this.value})';
+  }
 }

@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 
+import 'icon.widget.dart';
 import '../models/ui-type.model.dart';
 import '../widgets/na-widget.widget.dart';
+import '../constants/icons.constant.dart';
 import '../models/widget-options.model.dart';
 
 /// Base options for [NaListTile].
@@ -327,7 +329,7 @@ class NaListTile extends NaWidget {
     if (this.hasChevron) {
       final Widget chevron = uiType == NaUiType.cupertino
           ? const CupertinoListTileChevron()
-          : const Icon(Icons.chevron_right);
+          : const NaIcon(NaIcons.chevronRight);
 
       if (finalTrailing != null) {
         finalTrailing = Row(

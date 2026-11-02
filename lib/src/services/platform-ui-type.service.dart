@@ -15,10 +15,17 @@ NaUiType naPlatformServiceRegisterUiType({
   final String uniqueUITypeKey = '$styleId::${uiType.toString()}';
   // Check unique value
   if (_registeredUiTypes.containsKey(uniqueUITypeKey)) {
-    throw NaUiTypeAlreadyRegisteredException('');
+    throw NaUiTypeAlreadyRegisteredException(
+      'UI type "$uniqueUITypeKey" is already registered.',
+    );
   }
 
   _registeredUiTypes[uniqueUITypeKey] = uiType;
-  NaUiType systemUiType = NaUiType(_registeredUiTypes.length + 100);
+  final NaUiType systemUiType = NaUiType(_registeredUiTypes.length + 100);
   return systemUiType;
+}
+
+/// Resets all registered UI types (useful for test isolation).
+void naPlatformServiceResetUiTypes() {
+  _registeredUiTypes.clear();
 }

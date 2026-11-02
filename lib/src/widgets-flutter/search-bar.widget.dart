@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 
+import 'icon.widget.dart';
 import '../models/ui-type.model.dart';
 import '../widgets/na-widget.widget.dart';
+import '../constants/icons.constant.dart';
 import '../models/widget-options.model.dart';
 
 /// Base options for [NaSearchBar].
@@ -200,18 +202,13 @@ class NaSearchBar extends NaWidget {
         : null
       ;
 
-      // Extract the icon from 'leading' if it's an Icon widget, as CupertinoSearchTextField
-      // expects an Icon for prefixIcon (defaulting to CupertinoIcons.search).
-      Icon? cupertinoPrefixIcon;
-      if (this.leading is Icon) {
-        cupertinoPrefixIcon = this.leading as Icon;
-      }
+      final Widget prefixWidget = this.leading ?? const NaIcon(NaIcons.search);
 
       return CupertinoSearchTextField(
         controller : this.controller,
         focusNode  : this.focusNode,
         placeholder: this.hintText,
-        prefixIcon : cupertinoPrefixIcon ?? const Icon(CupertinoIcons.search),
+        prefixIcon : prefixWidget,
         onChanged  : this.onChanged,
         onSubmitted: this.onSubmitted,
         onTap      : this.onTap,
@@ -233,7 +230,7 @@ class NaSearchBar extends NaWidget {
         controller     : this.controller,
         focusNode      : this.focusNode,
         hintText       : this.hintText,
-        leading        : this.leading ?? const Icon(Icons.search),
+        leading        : this.leading ?? const NaIcon(NaIcons.search),
         trailing       : materialOptions?.trailing,
         onChanged      : this.onChanged,
         onSubmitted    : this.onSubmitted,

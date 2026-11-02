@@ -2,7 +2,7 @@ import 'package:flutter/widgets.dart';
 import 'package:nanna_platform/nanna_platform.dart';
 
 class ExampleScrollbarWidget extends StatefulWidget {
-  const ExampleScrollbarWidget({super.key});
+  const ExampleScrollbarWidget({ super.key });
 
   @override
   State<ExampleScrollbarWidget> createState() => _ExampleScrollbarWidgetState();
@@ -21,9 +21,9 @@ class _ExampleScrollbarWidgetState extends State<ExampleScrollbarWidget> {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 16.0),
-      child: Column(
+      child  : Column(
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
+        children          : [
           const Text(
             'NaScrollbar',
             style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
@@ -31,16 +31,16 @@ class _ExampleScrollbarWidgetState extends State<ExampleScrollbarWidget> {
           const SizedBox(height: 8.0),
           SizedBox(
             height: 120.0,
-            child: NaScrollbar(
-              controller: _scrollController,
+            child : NaScrollbar(
+              controller     : _scrollController,
               thumbVisibility: true,
-              child: ListView.builder(
-                controller: _scrollController,
-                itemCount: 20,
+              child          : ListView.builder(
+                controller : _scrollController,
+                itemCount  : 20,
                 itemBuilder: (context, index) {
                   return Padding(
                     padding: const EdgeInsets.all(8.0),
-                    child: Text('Scrollable Item $index'),
+                    child  : Text('Scrollable Item $index'),
                   );
                 },
               ),

@@ -2,7 +2,7 @@ import 'package:flutter/widgets.dart';
 import 'package:nanna_platform/nanna_platform.dart';
 
 class ExampleProgressIndicatorWidget extends StatelessWidget {
-  const ExampleProgressIndicatorWidget({super.key});
+  const ExampleProgressIndicatorWidget({ super.key });
 
   @override
   Widget build(BuildContext context) {

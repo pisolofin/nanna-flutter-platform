@@ -64,11 +64,11 @@ Below are side-by-side examples of the exact same code rendering automatically i
 | `MaterialPage` | `CupertinoPage` | ✅ | `NaPage` |
 | `Scrollbar` | `CupertinoScrollbar` | ✅ | `NaScrollbar` |
 | `SearchBar` | `CupertinoSearchTextField`| ✅ | `NaSearchBar` |
+| `BottomSheet / Dialog` | `CupertinoActionSheet` | ✅ | `naShowActionSheetAsync` / `naShowSelectionModalAsync` |
 | `TabBar` | `CupertinoTabBar` | ⏳ | `NaTabBar` |
 | `TabBarView` | `CupertinoTabView` | ⏳ | `NaTabView` |
 | `DropdownButton` | `CupertinoPicker` | ⏳ | `NaDropdown` |
 | `RefreshIndicator` | `CupertinoSliverRefreshControl` | ⏳ | `NaRefreshIndicator` |
-| `BottomSheet` | `CupertinoActionSheet` | ⏳ | `NaActionSheet` |
 
 > 💡 **Icons Mapping**: For the full mapping table of all 10,000+ Material and Cupertino icons available via `NaIcons`, see [.doc/icons-mapping.md](.doc/icons-mapping.md).
 
@@ -203,11 +203,11 @@ Navigator.push(
 );
 ```
 
-#### Native Alert Dialogs (naShowDialog)
-To show a dialog with the correct native animations and styling (Material alert dialog vs Cupertino alert dialog), use `naShowDialog`:
+#### Native Alert Dialogs (naShowDialogAsync)
+To show a dialog with the correct native animations and styling (Material alert dialog vs Cupertino alert dialog), use `naShowDialogAsync`:
 
 ```dart
-naShowDialog(
+naShowDialogAsync(
   context: context,
   builder: (context) => NaAlertDialog(
     title  : const Text('Hello!'),
@@ -216,11 +216,11 @@ naShowDialog(
 );
 ```
 
-#### Adaptive Selection Modals (naShowSelectionModalAsync)
-To display a selection sheet that automatically renders as an action sheet / bottom sheet on phones and as a modal dialog on tablets:
+#### Action Sheets, Bottom Menus & Selection Modals (naShowActionSheetAsync / naShowSelectionModalAsync)
+To display a selection sheet that automatically renders as an iOS action sheet or Material bottom sheet on phones, and as a modal dialog on tablets (with `naShowActionSheetAsync` and `naShowBottomSheetAsync` available as convenient aliases):
 
 ```dart
-final String? selected = await naShowSelectionModalAsync<String>(
+final String? selected = await naShowActionSheetAsync<String>(
   context     : context,
   title       : const Text('Choose an Option'),
   message     : const Text('Select one of the available items:'),

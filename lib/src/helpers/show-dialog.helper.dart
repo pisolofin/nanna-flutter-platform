@@ -7,7 +7,7 @@ import '../scopes/ui-type.scope.dart';
 /// Displays a cross-platform dialog according to the current [NaUiType].
 ///
 /// Uses [showDialog] on Material and [showCupertinoDialog] on Cupertino.
-Future<T?> naShowDialog<T>({
+Future<T?> naShowDialogAsync<T>({
   required BuildContext context,
   required WidgetBuilder builder,
   bool barrierDismissible = true,
@@ -40,6 +40,32 @@ Future<T?> naShowDialog<T>({
 
   // Fallback
   return showDialog<T>(
+    context           : context,
+    builder           : builder,
+    barrierDismissible: barrierDismissible,
+    barrierColor      : barrierColor,
+    barrierLabel      : barrierLabel,
+    useSafeArea       : useSafeArea,
+    useRootNavigator  : useRootNavigator,
+    routeSettings     : routeSettings,
+    anchorPoint       : anchorPoint,
+  );
+}
+
+/// Backward-compatible alias for [naShowDialogAsync].
+@Deprecated('Use naShowDialogAsync instead')
+Future<T?> naShowDialog<T>({
+  required BuildContext context,
+  required WidgetBuilder builder,
+  bool barrierDismissible = true,
+  Color? barrierColor,
+  String? barrierLabel,
+  bool useSafeArea = true,
+  bool useRootNavigator = true,
+  RouteSettings? routeSettings,
+  Offset? anchorPoint,
+}) {
+  return naShowDialogAsync<T>(
     context           : context,
     builder           : builder,
     barrierDismissible: barrierDismissible,

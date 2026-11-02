@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 
 import '../models/ui-type.model.dart';
+import '../scopes/ui-type.scope.dart';
 import '../widgets/na-widget.widget.dart';
 import '../models/widget-options.model.dart';
 
@@ -437,6 +438,17 @@ class NaApp extends NaWidget {
   Widget? renderForUIType(BuildContext context, NaUiType uiType) {
     final NaAppOptions? options = this.optionsBuilder?.call(context, uiType);
 
+    Widget buildWithScope(BuildContext innerContext, Widget? innerChild) {
+      final Widget resolvedChild = this.builder != null
+        ? this.builder!(innerContext, innerChild)
+        : (innerChild ?? const SizedBox.shrink())
+      ;
+      return NaUiTypeScope(
+        uiTypes: [uiType],
+        child  : resolvedChild,
+      );
+    }
+
     if (uiType == NaUiType.cupertino) {
       final NaAppOptionsCupertino? cupertinoOptions = options is NaAppOptionsCupertino
         ? options
@@ -452,7 +464,7 @@ class NaApp extends NaWidget {
           routerConfig                 : this.routerConfig,
           backButtonDispatcher         : this.backButtonDispatcher,
           theme                        : cupertinoOptions?.theme,
-          builder                      : this.builder,
+          builder                      : buildWithScope,
           title                        : this.title,
           onGenerateTitle              : this.onGenerateTitle,
           onNavigationNotification     : this.onNavigationNotification,
@@ -484,7 +496,7 @@ class NaApp extends NaWidget {
         onGenerateInitialRoutes      : this.onGenerateInitialRoutes,
         onUnknownRoute               : this.onUnknownRoute,
         navigatorObservers           : this.navigatorObservers ?? const <NavigatorObserver>[],
-        builder                      : this.builder,
+        builder                      : buildWithScope,
         title                        : this.title,
         onGenerateTitle              : this.onGenerateTitle,
         onNavigationNotification     : this.onNavigationNotification,
@@ -522,7 +534,7 @@ class NaApp extends NaWidget {
           routerDelegate               : this.routerDelegate,
           routerConfig                 : this.routerConfig,
           backButtonDispatcher         : this.backButtonDispatcher,
-          builder                      : this.builder,
+          builder                      : buildWithScope,
           title                        : this.title,
           onGenerateTitle              : this.onGenerateTitle,
           onNavigationNotification     : this.onNavigationNotification,
@@ -562,7 +574,7 @@ class NaApp extends NaWidget {
         onGenerateInitialRoutes      : this.onGenerateInitialRoutes,
         onUnknownRoute               : this.onUnknownRoute,
         navigatorObservers           : this.navigatorObservers ?? const <NavigatorObserver>[],
-        builder                      : this.builder,
+        builder                      : buildWithScope,
         title                        : this.title,
         onGenerateTitle              : this.onGenerateTitle,
         onNavigationNotification     : this.onNavigationNotification,
