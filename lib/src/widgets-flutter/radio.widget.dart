@@ -16,12 +16,18 @@ abstract class NaRadioOptions extends NaWidgetOptions {
 
 /// Generic options for [NaRadio], holding properties common to both platforms.
 class NaRadioOptionsGeneric extends NaRadioOptions {
+  /// Whether the radio value can be toggled unselected.
   final bool? toggleable;
+  /// The color to use when this widget is active.
   final Color? activeColor;
+  /// The color for the focus overlay.
   final Color? focusColor;
+  /// Defines the keyboard focus for this widget.
   final FocusNode? focusNode;
+  /// True if this widget will be selected as the initial focus.
   final bool? autofocus;
 
+  /// Creates a [NaRadioOptionsGeneric].
   NaRadioOptionsGeneric({
     this.toggleable,
     this.activeColor,
@@ -53,12 +59,18 @@ class NaRadioOptionsGeneric extends NaRadioOptions {
 
 /// Material-specific options for [NaRadio], resolving into a [Radio].
 class NaRadioOptionsMaterial extends NaRadioOptionsGeneric {
+  /// The cursor for a mouse pointer when hovering over this widget.
   final MouseCursor? mouseCursor;
+  /// The color that fills the background of this widget.
   final WidgetStateProperty<Color?>? fillColor;
+  /// The color of this widget when hovered over by a pointer.
   final Color? hoverColor;
+  /// The color for the widget's ink response overlay.
   final WidgetStateProperty<Color?>? overlayColor;
+  /// The radius of the ink splash.
   final double? splashRadius;
 
+  /// Creates a [NaRadioOptionsMaterial].
   NaRadioOptionsMaterial({
     this.mouseCursor,
     this.fillColor,
@@ -122,9 +134,12 @@ class NaRadioOptionsMaterial extends NaRadioOptionsGeneric {
 
 /// Cupertino-specific options for [NaRadio], resolving into a [CupertinoRadio].
 class NaRadioOptionsCupertino extends NaRadioOptionsGeneric {
+  /// The color to use when this widget is inactive.
   final Color? inactiveColor;
+  /// The color that fills the background of this widget.
   final Color? fillColor;
 
+  /// Creates a [NaRadioOptionsCupertino].
   NaRadioOptionsCupertino({
     this.inactiveColor,
     this.fillColor,
@@ -177,12 +192,17 @@ class NaRadioOptionsCupertino extends NaRadioOptionsGeneric {
 /// A generic Radio widget that automatically renders a [Radio] on Material
 /// and a [CupertinoRadio] on Cupertino.
 class NaRadio<T> extends NaWidget {
+  /// The current value of this widget.
   final T value;
+  /// The currently selected value for a group of radio buttons.
   final T? groupValue;
+  /// Called when the value of the widget should change.
   final ValueChanged<T?>? onChanged;
 
+  /// Optional options builder for customizing platform-specific widget configuration.
   final NaWidgetOptionsBuilder<NaRadioOptions>? optionsBuilder;
 
+  /// Creates a [NaRadio].
   const NaRadio({
     super.key,
     required this.value,

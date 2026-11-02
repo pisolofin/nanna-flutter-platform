@@ -16,10 +16,14 @@ abstract class NaPageOptions extends NaWidgetOptions {
 
 /// Generic options for [NaPage], holding properties common to both platforms.
 class NaPageOptionsGeneric extends NaPageOptions {
+  /// Whether this route should remain in memory when inactive.
   final bool maintainState;
+  /// Whether this route is a full-screen dialog.
   final bool fullscreenDialog;
+  /// Whether route transitions are allowed to use snapshots.
   final bool allowSnapshotting;
 
+  /// Creates a [NaPageOptionsGeneric].
   NaPageOptionsGeneric({
     this.maintainState     = true,
     this.fullscreenDialog  = false,
@@ -45,6 +49,7 @@ class NaPageOptionsGeneric extends NaPageOptions {
 
 /// Material-specific options for [NaPage], resolving into a [MaterialPage].
 class NaPageOptionsMaterial extends NaPageOptionsGeneric {
+  /// Creates a [NaPageOptionsMaterial].
   NaPageOptionsMaterial({
     super.maintainState,
     super.fullscreenDialog,
@@ -80,8 +85,10 @@ class NaPageOptionsMaterial extends NaPageOptionsGeneric {
 
 /// Cupertino-specific options for [NaPage], resolving into a [CupertinoPage].
 class NaPageOptionsCupertino extends NaPageOptionsGeneric {
+  /// The primary content of the list tile or widget.
   final String? title;
 
+  /// Creates a [NaPageOptionsCupertino].
   NaPageOptionsCupertino({
     this.title,
     super.maintainState,

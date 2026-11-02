@@ -3,7 +3,9 @@ import 'package:flutter/cupertino.dart';
 
 import '../models/ui-type.model.dart';
 import '../scopes/ui-type.scope.dart';
+import '../constants/icons.constant.dart';
 import '../models/selection-item.model.dart';
+import '../widgets-flutter/icon.widget.dart';
 
 /// Builds the content widget for a Cupertino action or dialog item.
 Widget _buildCupertinoActionContent<T>(NaSelectionItem<T> item) {
@@ -46,7 +48,7 @@ Widget _buildCupertinoActionContent<T>(NaSelectionItem<T> item) {
       // Selection checkmark
       if (item.isSelected) ...[
         const SizedBox(width: 8.0),
-        const Icon(CupertinoIcons.checkmark, size: 18.0),
+        const NaIcon(NaIcons.check, size: 18.0),
       ],
       // Trailing widget
       if ((!item.isSelected) && (item.trailing != null)) ...[
@@ -194,7 +196,7 @@ Future<T?> _showMaterialMobileBottomSheetAsync<T>({
             itemCount  : itemList.length,
             itemBuilder: (BuildContext listContext, int index) {
               final NaSelectionItem<T> item = itemList[index];
-              final Widget? trailingWidget = item.trailing ?? (item.isSelected ? const Icon(Icons.check) : null);
+              final Widget? trailingWidget = item.trailing ?? (item.isSelected ? const NaIcon(NaIcons.check) : null);
 
               return ListTile(
                 leading : item.leading,
@@ -367,7 +369,7 @@ Future<T?> _showMaterialTabletDialogAsync<T>({
                 // Selected checkmark
                 if (item.isSelected) ...[
                   const SizedBox(width: 8.0),
-                  const Icon(Icons.check, size: 20.0),
+                  const NaIcon(NaIcons.check, size: 20.0),
                 ],
                 // Trailing widget
                 if ((!item.isSelected) && (item.trailing != null)) ...[
@@ -527,5 +529,90 @@ Future<T?> naShowSelectionModalAsync<T>({
     barrierColor      : barrierColor,
     useRootNavigator  : useRootNavigator,
     routeSettings     : routeSettings,
+  );
+}
+
+/// Displays a platform-adaptive action sheet or bottom menu according to the active [NaUiType].
+///
+/// On Cupertino, this renders a native [CupertinoActionSheet].
+/// On Material, this renders a native [ModalBottomSheet] on mobile or [SimpleDialog] on tablet.
+///
+/// This is a convenience alias for [naShowSelectionModalAsync].
+Future<T?> naShowActionSheetAsync<T>({
+  required BuildContext context,
+  required List<NaSelectionItem<T>> itemList,
+  Widget? title,
+  String? titleText,
+  Widget? message,
+  String? messageText,
+  Widget? cancelButton,
+  String? cancelText,
+  double tabletBreakpoint = 600.0,
+  bool barrierDismissible = true,
+  Color? barrierColor,
+  String? barrierLabel,
+  bool useRootNavigator = true,
+  RouteSettings? routeSettings,
+  bool? isTablet,
+  NaUiType? forceUiType,
+}) {
+  return naShowSelectionModalAsync<T>(
+    context           : context,
+    itemList          : itemList,
+    title             : title,
+    titleText         : titleText,
+    message           : message,
+    messageText       : messageText,
+    cancelButton      : cancelButton,
+    cancelText        : cancelText,
+    tabletBreakpoint  : tabletBreakpoint,
+    barrierDismissible: barrierDismissible,
+    barrierColor      : barrierColor,
+    barrierLabel      : barrierLabel,
+    useRootNavigator  : useRootNavigator,
+    routeSettings     : routeSettings,
+    isTablet          : isTablet,
+    forceUiType       : forceUiType,
+  );
+}
+
+/// Displays a platform-adaptive bottom sheet or bottom menu according to the active [NaUiType].
+///
+/// This is a convenience alias for [naShowSelectionModalAsync].
+Future<T?> naShowBottomSheetAsync<T>({
+  required BuildContext context,
+  required List<NaSelectionItem<T>> itemList,
+  Widget? title,
+  String? titleText,
+  Widget? message,
+  String? messageText,
+  Widget? cancelButton,
+  String? cancelText,
+  double tabletBreakpoint = 600.0,
+  bool barrierDismissible = true,
+  Color? barrierColor,
+  String? barrierLabel,
+  bool useRootNavigator = true,
+  RouteSettings? routeSettings,
+  bool? isTablet,
+  NaUiType? forceUiType,
+}) {
+  return naShowSelectionModalAsync<T>(
+    context           : context,
+    itemList          : itemList,
+    title             : title,
+    titleText         : titleText,
+    message           : message,
+    messageText       : messageText,
+    cancelButton      : cancelButton,
+    cancelText        : cancelText,
+    tabletBreakpoint  : tabletBreakpoint,
+    barrierDismissible: barrierDismissible,
+    barrierColor      : barrierColor,
+    barrierLabel      : barrierLabel,
+    useRootNavigator  : useRootNavigator,
+    routeSettings     : routeSettings,
+    isTablet          : isTablet,
+    forceUiType       : forceUiType,
   );
 }

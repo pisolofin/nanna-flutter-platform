@@ -16,16 +16,26 @@ abstract class NaCheckboxOptions extends NaWidgetOptions {
 
 /// Generic options for [NaCheckbox], holding properties common to both platforms.
 class NaCheckboxOptionsGeneric extends NaCheckboxOptions {
+  /// If true, the checkbox's value can be true, false, or null.
   final bool? tristate;
+  /// The color to use when this widget is active.
   final Color? activeColor;
+  /// The color to use for the check icon when the checkbox is checked.
   final Color? checkColor;
+  /// The color for the focus overlay.
   final Color? focusColor;
+  /// Defines the keyboard focus for this widget.
   final FocusNode? focusNode;
+  /// True if this widget will be selected as the initial focus.
   final bool? autofocus;
+  /// The shape of the widget.
   final OutlinedBorder? shape;
+  /// The color and width of the widget's border.
   final BorderSide? side;
+  /// The semantic label for the widget.
   final String? semanticLabel;
 
+  /// Creates a [NaCheckboxOptionsGeneric].
   NaCheckboxOptionsGeneric({
     this.tristate,
     this.activeColor,
@@ -69,15 +79,24 @@ class NaCheckboxOptionsGeneric extends NaCheckboxOptions {
 
 /// Material-specific options for [NaCheckbox], resolving into a [Checkbox].
 class NaCheckboxOptionsMaterial extends NaCheckboxOptionsGeneric {
+  /// The cursor for a mouse pointer when hovering over this widget.
   final MouseCursor? mouseCursor;
+  /// The color that fills the background of this widget.
   final WidgetStateProperty<Color?>? fillColor;
+  /// The color of this widget when hovered over by a pointer.
   final Color? hoverColor;
+  /// The color for the widget's ink response overlay.
   final WidgetStateProperty<Color?>? overlayColor;
+  /// The radius of the ink splash.
   final double? splashRadius;
+  /// Configures the minimum size of the tap target.
   final MaterialTapTargetSize? materialTapTargetSize;
+  /// Defines how compact the widget's layout will be.
   final VisualDensity? visualDensity;
+  /// True if this checkbox wants to show an error state.
   final bool? isError;
 
+  /// Creates a [NaCheckboxOptionsMaterial].
   NaCheckboxOptionsMaterial({
     this.mouseCursor,
     this.fillColor,
@@ -169,6 +188,7 @@ class NaCheckboxOptionsMaterial extends NaCheckboxOptionsGeneric {
 
 /// Cupertino-specific options for [NaCheckbox], resolving into a [CupertinoCheckbox].
 class NaCheckboxOptionsCupertino extends NaCheckboxOptionsGeneric {
+  /// Creates a [NaCheckboxOptionsCupertino].
   NaCheckboxOptionsCupertino({
     super.tristate,
     super.activeColor,
@@ -229,11 +249,15 @@ class NaCheckboxOptionsCupertino extends NaCheckboxOptionsGeneric {
 /// A generic Checkbox widget that automatically renders a [Checkbox] on Material
 /// and a [CupertinoCheckbox] on Cupertino.
 class NaCheckbox extends NaWidget {
+  /// The current value of this widget.
   final bool? value;
+  /// Called when the value of the widget should change.
   final ValueChanged<bool?>? onChanged;
 
+  /// Optional options builder for customizing platform-specific widget configuration.
   final NaWidgetOptionsBuilder<NaCheckboxOptions>? optionsBuilder;
 
+  /// Creates a [NaCheckbox].
   const NaCheckbox({
     super.key,
     required this.value,

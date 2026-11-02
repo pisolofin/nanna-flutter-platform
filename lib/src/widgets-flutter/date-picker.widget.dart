@@ -16,6 +16,7 @@ abstract class NaDatePickerOptions extends NaWidgetOptions {
 
 /// Generic options for [NaDatePicker], holding properties common to both platforms.
 class NaDatePickerOptionsGeneric extends NaDatePickerOptions {
+  /// Creates a [NaDatePickerOptionsGeneric].
   NaDatePickerOptionsGeneric();
 
   /// Creates an empty [NaDatePickerOptionsGeneric] with default values.
@@ -29,11 +30,16 @@ class NaDatePickerOptionsGeneric extends NaDatePickerOptions {
 
 /// Material-specific options for [NaDatePicker], resolving into a [CalendarDatePicker].
 class NaDatePickerOptionsMaterial extends NaDatePickerOptionsGeneric {
+  /// The currently selected date.
   final DateTime? currentDate;
+  /// Called when the user navigates to a new month.
   final ValueChanged<DateTime>? onDisplayedMonthChanged;
+  /// The initial mode of the calendar date picker.
   final DatePickerMode? initialCalendarMode;
+  /// Function to provide full control over which dates are selectable.
   final SelectableDayPredicate? selectableDayPredicate;
 
+  /// Creates a [NaDatePickerOptionsMaterial].
   NaDatePickerOptionsMaterial({
     this.currentDate,
     this.onDisplayedMonthChanged,
@@ -72,12 +78,18 @@ class NaDatePickerOptionsMaterial extends NaDatePickerOptionsGeneric {
 
 /// Cupertino-specific options for [NaDatePicker], resolving into a [CupertinoDatePicker].
 class NaDatePickerOptionsCupertino extends NaDatePickerOptionsGeneric {
+  /// The uniform height of each item in the picker.
   final double? itemExtent;
+  /// Custom widget for the selection overlay in the picker.
   final Widget? selectionOverlay;
+  /// The background color of this widget.
   final Color? backgroundColor;
+  /// Whether to use 24-hour time format.
   final bool? use24hFormat;
+  /// The granularity of the minutes display.
   final int? minuteInterval;
 
+  /// Creates a [NaDatePickerOptionsCupertino].
   NaDatePickerOptionsCupertino({
     this.itemExtent,
     this.selectionOverlay,
@@ -121,13 +133,19 @@ class NaDatePickerOptionsCupertino extends NaDatePickerOptionsGeneric {
 /// A generic DatePicker widget that automatically renders a [CalendarDatePicker] on Material
 /// and a [CupertinoDatePicker] on Cupertino.
 class NaDatePicker extends NaWidget {
+  /// The date initially selected.
   final DateTime initialDate;
+  /// The earliest allowable date.
   final DateTime firstDate;
+  /// The latest allowable date.
   final DateTime lastDate;
+  /// Called when the user selects a date.
   final ValueChanged<DateTime> onDateChanged;
 
+  /// Optional options builder for customizing platform-specific widget configuration.
   final NaWidgetOptionsBuilder<NaDatePickerOptions>? optionsBuilder;
 
+  /// Creates a [NaDatePicker].
   const NaDatePicker({
     super.key,
     required this.initialDate,

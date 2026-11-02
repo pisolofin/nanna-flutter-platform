@@ -28,7 +28,7 @@ class AppStateScope extends InheritedWidget {
 }
 
 class MyApp extends StatefulWidget {
-  const MyApp({super.key});
+  const MyApp({ super.key });
 
   @override
   State<MyApp> createState() => _MyAppState();
@@ -57,12 +57,12 @@ class _MyAppState extends State<MyApp> {
     // Wrap the app with NaUiTypeScope to propagate the selected UI type to all NaPlatform* widgets.
     return NaUiTypeScope(
       uiTypes: [_currentUiType],
-      child: AppStateScope(
+      child  : AppStateScope(
         toggleUiType: _toggleUiType,
-        child: NaApp(
-          title: 'Nanna Platform Example',
+        child       : NaApp(
+          title                     : 'Nanna Platform Example',
           debugShowCheckedModeBanner: false,
-          optionsBuilder: (BuildContext context, NaUiType uiType) {
+          optionsBuilder            : (BuildContext context, NaUiType uiType) {
             if (uiType == NaUiType.cupertino) {
               return NaAppOptionsCupertino(
                 theme: const CupertinoThemeData(brightness: Brightness.light),
@@ -71,7 +71,7 @@ class _MyAppState extends State<MyApp> {
 
             return NaAppOptionsMaterial(
               theme: ThemeData(
-                colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+                colorScheme : ColorScheme.fromSeed(seedColor: Colors.deepPurple),
                 useMaterial3: true,
               ),
             );

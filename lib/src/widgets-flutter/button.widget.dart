@@ -16,6 +16,7 @@ abstract class NaButtonOptions extends NaWidgetOptions {
 
 /// Generic options for [NaButton], holding properties common to both platforms.
 class NaButtonOptionsGeneric extends NaButtonOptions {
+  /// Creates a [NaButtonOptionsGeneric].
   NaButtonOptionsGeneric();
 
   /// Creates an empty [NaButtonOptionsGeneric] with default values.
@@ -29,15 +30,31 @@ class NaButtonOptionsGeneric extends NaButtonOptions {
 
 /// Material-specific options for [NaButton], resolving into an [ElevatedButton].
 class NaButtonOptionsMaterial extends NaButtonOptionsGeneric {
+  /// Called when a long-press gesture occurs with this button.
   final VoidCallback? onLongPress;
+
+  /// Called when a pointer enters or exits the button response area.
   final ValueChanged<bool>? onHover;
+
+  /// Handler called when the focus changes.
   final ValueChanged<bool>? onFocusChange;
+
+  /// Customizes this button's appearance.
   final ButtonStyle? style;
+
+  /// An optional focus node to use as the focus node for this widget.
   final FocusNode? focusNode;
+
+  /// True if this widget will be selected as the initial focus.
   final bool? autofocus;
+
+  /// The content will be clipped (or not) according to this option.
   final Clip? clipBehavior;
+
+  /// Represents the interactive "state" of this widget in terms of a set of [WidgetState]s.
   final WidgetStatesController? statesController;
 
+  /// Creates a [NaButtonOptionsMaterial].
   NaButtonOptionsMaterial({
     this.onLongPress,
     this.onHover,
@@ -92,14 +109,28 @@ class NaButtonOptionsMaterial extends NaButtonOptionsGeneric {
 
 /// Cupertino-specific options for [NaButton], resolving into a [CupertinoButton].
 class NaButtonOptionsCupertino extends NaButtonOptionsGeneric {
+  /// The amount of space to surround the child widget with.
   final EdgeInsetsGeometry? padding;
+
+  /// The background color of the button.
   final Color? color;
+
+  /// The color of the button's background when the button is disabled.
   final Color? disabledColor;
+
+  /// The minimum size of the button.
   final Size? minimumSize;
+
+  /// The opacity of the button when it is being pressed.
   final double? pressedOpacity;
+
+  /// The radius of the button's corners when it has a background color.
   final BorderRadius? borderRadius;
+
+  /// The alignment of the button's child.
   final AlignmentGeometry? alignment;
 
+  /// Creates a [NaButtonOptionsCupertino].
   NaButtonOptionsCupertino({
     this.padding,
     this.color,
@@ -151,12 +182,16 @@ class NaButtonOptionsCupertino extends NaButtonOptionsGeneric {
 /// A generic Button widget that automatically renders an [ElevatedButton] on Material
 /// and a [CupertinoButton] on Cupertino.
 class NaButton extends NaWidget {
+  /// The widget below this widget in the tree.
   final Widget child;
+
+  /// The callback that is called when the button is tapped or otherwise activated.
   final VoidCallback? onPressed;
 
   /// Function to resolve platform-specific options at runtime.
   final NaWidgetOptionsBuilder<NaButtonOptions>? optionsBuilder;
 
+  /// Creates a [NaButton].
   const NaButton({
     super.key,
     required this.child,

@@ -17,12 +17,18 @@ abstract class NaSwitchOptions extends NaWidgetOptions {
 
 /// Generic options for [NaSwitch], holding properties common to both platforms.
 class NaSwitchOptionsGeneric extends NaSwitchOptions {
+  /// The color to use on the track for this switch when active.
   final Color? activeTrackColor;
+  /// The color to use on the track for this switch when inactive.
   final Color? inactiveTrackColor;
+  /// The color for the focus overlay.
   final Color? focusColor;
+  /// Defines the keyboard focus for this widget.
   final FocusNode? focusNode;
+  /// True if this widget will be selected as the initial focus.
   final bool? autofocus;
 
+  /// Creates a [NaSwitchOptionsGeneric].
   NaSwitchOptionsGeneric({
     this.activeTrackColor,
     this.inactiveTrackColor,
@@ -54,19 +60,32 @@ class NaSwitchOptionsGeneric extends NaSwitchOptions {
 
 /// Material-specific options for [NaSwitch], resolving into a [Switch].
 class NaSwitchOptionsMaterial extends NaSwitchOptionsGeneric {
+  /// The color of this switch's thumb when active.
   final Color? activeThumbColor;
+  /// The color of this switch's thumb when inactive.
   final Color? inactiveThumbColor;
+  /// An image to use on the thumb of this switch when active.
   final ImageProvider? activeThumbImage;
+  /// An image to use on the thumb of this switch when inactive.
   final ImageProvider? inactiveThumbImage;
+  /// The color of the thumb.
   final WidgetStateProperty<Color?>? thumbColor;
+  /// The color of the track.
   final WidgetStateProperty<Color?>? trackColor;
+  /// The icon to use on the thumb of this switch.
   final WidgetStateProperty<Icon?>? thumbIcon;
+  /// Determines the way that drag start behavior is handled.
   final DragStartBehavior? dragStartBehavior;
+  /// The cursor for a mouse pointer when hovering over this widget.
   final MouseCursor? mouseCursor;
+  /// The color of this widget when hovered over by a pointer.
   final Color? hoverColor;
+  /// The color for the widget's ink response overlay.
   final WidgetStateProperty<Color?>? overlayColor;
+  /// The radius of the ink splash.
   final double? splashRadius;
 
+  /// Creates a [NaSwitchOptionsMaterial].
   NaSwitchOptionsMaterial({
     this.activeThumbColor,
     this.inactiveThumbColor,
@@ -158,9 +177,12 @@ class NaSwitchOptionsMaterial extends NaSwitchOptionsGeneric {
 
 /// Cupertino-specific options for [NaSwitch], resolving into a [CupertinoSwitch].
 class NaSwitchOptionsCupertino extends NaSwitchOptionsGeneric {
+  /// The color of the thumb.
   final Color? thumbColor;
+  /// Whether to apply theme colors to this widget.
   final bool? applyTheme;
 
+  /// Creates a [NaSwitchOptionsCupertino].
   NaSwitchOptionsCupertino({
     this.thumbColor,
     this.applyTheme,
@@ -213,11 +235,15 @@ class NaSwitchOptionsCupertino extends NaSwitchOptionsGeneric {
 /// A generic Switch widget that automatically renders a [Switch] on Material
 /// and a [CupertinoSwitch] on Cupertino.
 class NaSwitch extends NaWidget {
+  /// The current value of this widget.
   final bool value;
+  /// Called when the value of the widget should change.
   final ValueChanged<bool>? onChanged;
 
+  /// Optional options builder for customizing platform-specific widget configuration.
   final NaWidgetOptionsBuilder<NaSwitchOptions>? optionsBuilder;
 
+  /// Creates a [NaSwitch].
   const NaSwitch({
     super.key,
     required this.value,

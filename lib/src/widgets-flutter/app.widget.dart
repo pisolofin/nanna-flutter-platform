@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 
 import '../models/ui-type.model.dart';
+import '../scopes/ui-type.scope.dart';
 import '../widgets/na-widget.widget.dart';
 import '../models/widget-options.model.dart';
 
@@ -16,6 +17,7 @@ abstract class NaAppOptions extends NaWidgetOptions {
 
 /// Generic options for [NaApp], holding properties common to both platforms.
 class NaAppOptionsGeneric extends NaAppOptions {
+  /// Creates a [NaAppOptionsGeneric].
   NaAppOptionsGeneric();
 
   /// Creates an empty [NaAppOptionsGeneric] with default values.
@@ -29,15 +31,31 @@ class NaAppOptionsGeneric extends NaAppOptions {
 
 /// Material-specific options for [NaApp], resolving into a [MaterialApp].
 class NaAppOptionsMaterial extends NaAppOptionsGeneric {
+  /// The default visual theme for Material widgets.
   final ThemeData? theme;
+
+  /// The theme to use when the system requests a dark theme.
   final ThemeData? darkTheme;
+
+  /// The theme to use when the system requests high contrast.
   final ThemeData? highContrastTheme;
+
+  /// The dark theme to use when the system requests high contrast.
   final ThemeData? highContrastDarkTheme;
+
+  /// Determines which theme will be used by the application.
   final ThemeMode? themeMode;
+
+  /// The duration of animated theme changes.
   final Duration? themeAnimationDuration;
+
+  /// The curve for animations when switching themes.
   final Curve? themeAnimationCurve;
+
+  /// A key to use when referring to the [ScaffoldMessengerState].
   final GlobalKey<ScaffoldMessengerState>? scaffoldMessengerKey;
 
+  /// Creates a [NaAppOptionsMaterial].
   NaAppOptionsMaterial({
     this.theme,
     this.darkTheme,
@@ -92,8 +110,10 @@ class NaAppOptionsMaterial extends NaAppOptionsGeneric {
 
 /// Cupertino-specific options for [NaApp], resolving into a [CupertinoApp].
 class NaAppOptionsCupertino extends NaAppOptionsGeneric {
+  /// The visual theme to apply to Cupertino widgets.
   final CupertinoThemeData? theme;
 
+  /// Creates a [NaAppOptionsCupertino].
   NaAppOptionsCupertino({ this.theme });
 
   /// Creates an empty [NaAppOptionsCupertino] with default values.
@@ -119,40 +139,103 @@ class NaAppOptionsCupertino extends NaAppOptionsGeneric {
 /// A generic App widget that automatically renders a [MaterialApp] on Material
 /// and a [CupertinoApp] on Cupertino.
 class NaApp extends NaWidget {
+  /// The widget for the default route of the app.
   final Widget? home;
+
+  /// The application's top-level routing table.
   final Map<String, WidgetBuilder>? routes;
+
+  /// The name of the first route to show.
   final String? initialRoute;
+
+  /// The route generator callback used when the app is navigated to a named route.
   final RouteFactory? onGenerateRoute;
+
+  /// The callback used to generate a list of initial routes.
   final InitialRouteListFactory? onGenerateInitialRoutes;
+
+  /// Called when [onGenerateRoute] fails to generate a route.
   final RouteFactory? onUnknownRoute;
+
+  /// The list of observers for the [Navigator] created for this app.
   final List<NavigatorObserver>? navigatorObservers;
+
+  /// A builder that allows for modifying the widget tree above the [Navigator].
   final TransitionBuilder? builder;
+
+  /// A one-line description used for that app in the window manager.
   final String title;
+
+  /// If non-null, this callback is called to produce the app's title string.
   final GenerateAppTitle? onGenerateTitle;
+
+  /// Called when a navigation notification is received.
   final NotificationListenerCallback<NavigationNotification>? onNavigationNotification;
+
+  /// The primary color to use for the application in the operating system interface.
   final Color? color;
+
+  /// The initial locale for this app's widgets.
   final Locale? locale;
+
+  /// The delegates for this app's [Localizations] widget.
   final Iterable<LocalizationsDelegate<dynamic>>? localizationsDelegates;
+
+  /// This callback is responsible for choosing the app's locale when the device locale changes.
   final LocaleListResolutionCallback? localeListResolutionCallback;
+
+  /// A callback that is called when the device locale changes.
   final LocaleResolutionCallback? localeResolutionCallback;
+
+  /// The list of locales that this app has been configured to accept.
   final Iterable<Locale> supportedLocales;
+
+  /// Turns on a performance overlay.
   final bool showPerformanceOverlay;
+
+  /// Checkerboards raster cache images.
   final bool checkerboardRasterCacheImages;
+
+  /// Checkerboards layers rendered to offscreen bitmaps.
   final bool checkerboardOffscreenLayers;
+
+  /// Turns on an overlay to show accessibility information.
   final bool showSemanticsDebugger;
+
+  /// Turns on a little "DEBUG" banner in debug mode.
   final bool debugShowCheckedModeBanner;
+
+  /// Default key bindings for keyboard shortcuts.
   final Map<ShortcutActivator, Intent>? shortcuts;
+
+  /// Maps an Intent to an Action to configure how intent keys should be handled.
   final Map<Type, Action<Intent>>? actions;
+
+  /// The identifier for the restoration scope of this app.
   final String? restorationScopeId;
+
+  /// The default scroll behavior for the application.
   final ScrollBehavior? scrollBehavior;
+
+  /// A key to use when referring to the [NavigatorState].
   final GlobalKey<NavigatorState>? navigatorKey;
 
+  /// A provider that passes route information to the [Router].
   final RouteInformationProvider? routeInformationProvider;
+
+  /// A delegate that parses route information into a route configuration.
   final RouteInformationParser<Object>? routeInformationParser;
+
+  /// A delegate that configures a widget, typically a [Navigator], based on the app state.
   final RouterDelegate<Object>? routerDelegate;
+
+  /// The back button dispatcher used to listen for the system back button.
   final BackButtonDispatcher? backButtonDispatcher;
+
+  /// An object configuring the [Router] widgets.
   final RouterConfig<Object>? routerConfig;
 
+  /// Optional options builder for customizing platform-specific app configuration.
   final NaWidgetOptionsBuilder<NaAppOptions>? optionsBuilder;
 
   /// Creates a [NaApp] using the standard [Navigator].
@@ -355,6 +438,17 @@ class NaApp extends NaWidget {
   Widget? renderForUIType(BuildContext context, NaUiType uiType) {
     final NaAppOptions? options = this.optionsBuilder?.call(context, uiType);
 
+    Widget buildWithScope(BuildContext innerContext, Widget? innerChild) {
+      final Widget resolvedChild = this.builder != null
+        ? this.builder!(innerContext, innerChild)
+        : (innerChild ?? const SizedBox.shrink())
+      ;
+      return NaUiTypeScope(
+        uiTypes: [uiType],
+        child  : resolvedChild,
+      );
+    }
+
     if (uiType == NaUiType.cupertino) {
       final NaAppOptionsCupertino? cupertinoOptions = options is NaAppOptionsCupertino
         ? options
@@ -370,7 +464,7 @@ class NaApp extends NaWidget {
           routerConfig                 : this.routerConfig,
           backButtonDispatcher         : this.backButtonDispatcher,
           theme                        : cupertinoOptions?.theme,
-          builder                      : this.builder,
+          builder                      : buildWithScope,
           title                        : this.title,
           onGenerateTitle              : this.onGenerateTitle,
           onNavigationNotification     : this.onNavigationNotification,
@@ -402,7 +496,7 @@ class NaApp extends NaWidget {
         onGenerateInitialRoutes      : this.onGenerateInitialRoutes,
         onUnknownRoute               : this.onUnknownRoute,
         navigatorObservers           : this.navigatorObservers ?? const <NavigatorObserver>[],
-        builder                      : this.builder,
+        builder                      : buildWithScope,
         title                        : this.title,
         onGenerateTitle              : this.onGenerateTitle,
         onNavigationNotification     : this.onNavigationNotification,
@@ -440,7 +534,7 @@ class NaApp extends NaWidget {
           routerDelegate               : this.routerDelegate,
           routerConfig                 : this.routerConfig,
           backButtonDispatcher         : this.backButtonDispatcher,
-          builder                      : this.builder,
+          builder                      : buildWithScope,
           title                        : this.title,
           onGenerateTitle              : this.onGenerateTitle,
           onNavigationNotification     : this.onNavigationNotification,
@@ -480,7 +574,7 @@ class NaApp extends NaWidget {
         onGenerateInitialRoutes      : this.onGenerateInitialRoutes,
         onUnknownRoute               : this.onUnknownRoute,
         navigatorObservers           : this.navigatorObservers ?? const <NavigatorObserver>[],
-        builder                      : this.builder,
+        builder                      : buildWithScope,
         title                        : this.title,
         onGenerateTitle              : this.onGenerateTitle,
         onNavigationNotification     : this.onNavigationNotification,

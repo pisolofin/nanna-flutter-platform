@@ -72,4 +72,31 @@ class NaSelectionItem<T> {
       onTap        : onTap,
     );
   }
+
+  /// Creates a copy of this [NaSelectionItem] with the given fields replaced by non-null values.
+  NaSelectionItem<T> copyWith({
+    T? value,
+    Widget? title,
+    Widget? subtitle,
+    Widget? leading,
+    Widget? trailing,
+    bool? isDestructive,
+    bool? isDefault,
+    bool? isSelected,
+    bool? isEnabled,
+    VoidCallback? onTap,
+  }) {
+    return NaSelectionItem<T>(
+      value        : value ?? this.value,
+      title        : title ?? this.title,
+      subtitle     : subtitle ?? this.subtitle,
+      leading      : leading ?? this.leading,
+      trailing     : trailing ?? this.trailing,
+      isDestructive: isDestructive ?? this.isDestructive,
+      isDefault    : isDefault ?? this.isDefault,
+      isSelected   : isSelected ?? this.isSelected,
+      isEnabled    : isEnabled ?? this.isEnabled,
+      onTap        : onTap ?? this.onTap,
+    );
+  }
 }

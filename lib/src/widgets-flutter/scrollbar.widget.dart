@@ -16,9 +16,12 @@ abstract class NaScrollbarOptions extends NaWidgetOptions {
 
 /// Generic options for [NaScrollbar], holding properties common to both platforms.
 class NaScrollbarOptionsGeneric extends NaScrollbarOptions {
+  /// The thickness of the scrollbar thumb.
   final double? thickness;
+  /// The [Radius] of the scrollbar thumb corners.
   final Radius? radius;
 
+  /// Creates a [NaScrollbarOptionsGeneric].
   NaScrollbarOptionsGeneric({
     this.thickness,
     this.radius,
@@ -41,9 +44,12 @@ class NaScrollbarOptionsGeneric extends NaScrollbarOptions {
 
 /// Material-specific options for [NaScrollbar], resolving into a [Scrollbar].
 class NaScrollbarOptionsMaterial extends NaScrollbarOptionsGeneric {
+  /// Indicates that the scrollbar track should be visible.
   final bool? trackVisibility;
+  /// Whether the scrollbar is interactive.
   final bool? interactive;
 
+  /// Creates a [NaScrollbarOptionsMaterial].
   NaScrollbarOptionsMaterial({
     this.trackVisibility,
     this.interactive,
@@ -83,9 +89,12 @@ class NaScrollbarOptionsMaterial extends NaScrollbarOptionsGeneric {
 
 /// Cupertino-specific options for [NaScrollbar], resolving into a [CupertinoScrollbar].
 class NaScrollbarOptionsCupertino extends NaScrollbarOptionsGeneric {
+  /// The thickness of the scrollbar thumb while dragging.
   final double thicknessWhileDragging;
+  /// The [Radius] of the scrollbar thumb while being dragged.
   final Radius radiusWhileDragging;
 
+  /// Creates a [NaScrollbarOptionsCupertino].
   NaScrollbarOptionsCupertino({
     super.thickness = CupertinoScrollbar.defaultThickness,
     this.thicknessWhileDragging =
@@ -127,12 +136,17 @@ class NaScrollbarOptionsCupertino extends NaScrollbarOptionsGeneric {
 /// A cross-platform scrollbar that translates to [Scrollbar] on Material
 /// and [CupertinoScrollbar] on Cupertino.
 class NaScrollbar extends NaWidget {
+  /// The widget below this widget in the tree.
   final Widget child;
+  /// Controls the text being edited.
   final ScrollController? controller;
+  /// Indicates that the scrollbar thumb should be visible.
   final bool? thumbVisibility;
 
+  /// Optional options builder for customizing platform-specific widget configuration.
   final NaWidgetOptionsBuilder<NaScrollbarOptions>? optionsBuilder;
 
+  /// Creates a [NaScrollbar].
   const NaScrollbar({
     super.key,
     required this.child,

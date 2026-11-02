@@ -3,7 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:nanna_platform/nanna_platform.dart';
 
 class ExampleTimePickerWidget extends StatelessWidget {
-  const ExampleTimePickerWidget({super.key});
+  const ExampleTimePickerWidget({ super.key });
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +13,7 @@ class ExampleTimePickerWidget extends StatelessWidget {
     return NaButton(
       onPressed: () {
         final picker = NaTimePicker(
-          initialTimerDuration: const Duration(hours: 10, minutes: 30),
+          initialTimerDuration  : const Duration(hours: 10, minutes: 30),
           onTimerDurationChanged: (duration) {},
         );
 
@@ -22,13 +22,13 @@ class ExampleTimePickerWidget extends StatelessWidget {
             context: context,
             builder: (context) => Dialog(child: picker),
           );
-        } else {
+        }else {
           showCupertinoModalPopup(
             context: context,
             builder: (context) => Container(
               height: 250,
-              color: CupertinoColors.systemBackground.resolveFrom(context),
-              child: SafeArea(top: false, child: picker),
+              color : CupertinoColors.systemBackground.resolveFrom(context),
+              child : SafeArea(top: false, child: picker),
             ),
           );
         }

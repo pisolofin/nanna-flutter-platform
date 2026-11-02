@@ -16,9 +16,13 @@ abstract class NaCardOptions extends NaWidgetOptions {
 
 /// Generic options for [NaCard], holding properties common to both platforms.
 class NaCardOptionsGeneric extends NaCardOptions {
+  /// The background color of the card.
   final Color? color;
+
+  /// The empty space that surrounds the card.
   final EdgeInsetsGeometry? margin;
 
+  /// Creates a [NaCardOptionsGeneric].
   NaCardOptionsGeneric({
     this.color,
     this.margin,
@@ -41,14 +45,28 @@ class NaCardOptionsGeneric extends NaCardOptions {
 
 /// Material-specific options for [NaCard], resolving into a [Card].
 class NaCardOptionsMaterial extends NaCardOptionsGeneric {
+  /// The color to paint the shadow below the card.
   final Color? shadowColor;
+
+  /// The color used as an overlay on [color] to indicate elevation.
   final Color? surfaceTintColor;
+
+  /// The z-coordinate at which to place this card.
   final double? elevation;
+
+  /// The shape of the card's [Material].
   final ShapeBorder? shape;
+
+  /// Whether to paint the [shape] border in front of the child.
   final bool? borderOnForeground;
+
+  /// The content will be clipped (or not) according to this option.
   final Clip? clipBehavior;
+
+  /// Whether this widget represents a single semantic container.
   final bool? semanticContainer;
 
+  /// Creates a [NaCardOptionsMaterial].
   NaCardOptionsMaterial({
     this.shadowColor,
     this.surfaceTintColor,
@@ -108,10 +126,16 @@ class NaCardOptionsMaterial extends NaCardOptionsGeneric {
 
 /// Cupertino-specific options for [NaCard], resolving into a decorated [Container].
 class NaCardOptionsCupertino extends NaCardOptionsGeneric {
+  /// The amount of space to surround the child widget with.
   final EdgeInsetsGeometry? padding;
+
+  /// If non-null, the corners of this card are rounded by this [BorderRadiusGeometry].
   final BorderRadiusGeometry? borderRadius;
+
+  /// The border to draw around the card.
   final BoxBorder? border;
 
+  /// Creates a [NaCardOptionsCupertino].
   NaCardOptionsCupertino({
     this.padding,
     this.borderRadius,
@@ -156,10 +180,13 @@ class NaCardOptionsCupertino extends NaCardOptionsGeneric {
 /// A generic Card widget that automatically renders a [Card] on Material
 /// and a decorated [Container] on Cupertino.
 class NaCard extends NaWidget {
+  /// The widget below this widget in the tree.
   final Widget child;
 
+  /// Optional options builder for customizing platform-specific card configuration.
   final NaWidgetOptionsBuilder<NaCardOptions>? optionsBuilder;
 
+  /// Creates a [NaCard].
   const NaCard({
     super.key,
     required this.child,

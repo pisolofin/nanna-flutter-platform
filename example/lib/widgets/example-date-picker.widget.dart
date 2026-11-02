@@ -3,7 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:nanna_platform/nanna_platform.dart';
 
 class ExampleDatePickerWidget extends StatelessWidget {
-  const ExampleDatePickerWidget({super.key});
+  const ExampleDatePickerWidget({ super.key });
 
   @override
   Widget build(BuildContext context) {
@@ -13,9 +13,9 @@ class ExampleDatePickerWidget extends StatelessWidget {
     return NaButton(
       onPressed: () {
         final picker = NaDatePicker(
-          initialDate: DateTime.now(),
-          firstDate: DateTime(2000),
-          lastDate: DateTime(2100),
+          initialDate  : DateTime.now(),
+          firstDate    : DateTime(2000),
+          lastDate     : DateTime(2100),
           onDateChanged: (date) {},
         );
 
@@ -24,13 +24,13 @@ class ExampleDatePickerWidget extends StatelessWidget {
             context: context,
             builder: (context) => Dialog(child: picker),
           );
-        } else {
+        }else {
           showCupertinoModalPopup(
             context: context,
             builder: (context) => Container(
               height: 250,
-              color: CupertinoColors.systemBackground.resolveFrom(context),
-              child: SafeArea(top: false, child: picker),
+              color : CupertinoColors.systemBackground.resolveFrom(context),
+              child : SafeArea(top: false, child: picker),
             ),
           );
         }

@@ -12,7 +12,8 @@ A sample Flutter application demonstrating the cross-platform widgets and featur
   - `NaSwitch`, `NaCheckbox`, `NaRadio`, & `NaSlider`
   - `NaCard` & `NaListTile`
   - `NaDatePicker` & `NaTimePicker`
-  - `NaAlertDialog` & `naShowDialog` helper
+  - `NaAlertDialog` & `naShowDialogAsync` helper
+  - `naShowActionSheetAsync`, `naShowBottomSheetAsync`, & `naShowSelectionModalAsync` (Action Sheets & Bottom Menus)
   - `NaProgressIndicator`
   - `NaScrollbar`
   - `NaPageRoute` adaptive page transitions

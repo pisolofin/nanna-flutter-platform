@@ -8,8 +8,10 @@ import '../services/platform-builder.service.dart';
 abstract class NaWidget extends StatelessWidget {
   /// The UI type to use for this widget. If not provided, the [NaUiTypeScope] will be used.
   final NaUiType? uiType;
+  /// Optional options payload passed to widget builders.
   final dynamic options;
 
+  /// Creates a [NaWidget] with optional [uiType] and [options].
   const NaWidget({ super.key, this.uiType, this.options });
 
   /// Renders widget for active UI type.

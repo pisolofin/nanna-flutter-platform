@@ -1,3 +1,24 @@
+## 1.2.2
+
+* Fixed service initialization crash in `naPlatformServiceInit` and `naPlatformServiceRegisterUiType`.
+* Added `naPlatformServiceResetUiTypes()` and `naPlatformServiceResetWidgetBuilders()` for clean state resets in test environments.
+* Added meaningful `toString()` implementation to `NaUiType`.
+* Rebuilt `NaTimePicker` for Material Design as a native inline wheel duration picker with active `onTimerDurationChanged` callback support.
+* Renamed `naShowDialog` to `naShowDialogAsync` to adhere to async naming conventions (retaining `naShowDialog` as a backward-compatible alias).
+* Added `naShowActionSheetAsync` and `naShowBottomSheetAsync` aliases for `naShowSelectionModalAsync` for showing native iOS action sheets and Material bottom sheets.
+* Enhanced `NaApp` to automatically propagate `NaUiTypeScope` to descendant widgets.
+* Fixed `NaSearchBar` in Cupertino to preserve custom `NaIcon` and custom widget `leading`.
+* Replaced hardcoded `Icon` instances in `show-selection-modal.helper.dart`, `list-tile.widget.dart`, and `search-bar.widget.dart` with `NaIcon`.
+* Added configurable `position` (`above` / `below`) to `NaTextFieldCaption` and fixed typo in docstring.
+* Added `copyWith` method to `NaSelectionItem`.
+* Added Action Sheet / Bottom Menu showcase button and dialog in the example app.
+* Hardened internal formatting scripts against directory symlinks (e.g. `example/windows/flutter/ephemeral/.plugin_symlinks`) preventing accidental modifications to pub cache.
+* Added GitHub Actions CI workflow for automated testing and static analysis.
+* Significantly expanded test coverage with 8 new test suites covering models, scopes, services, helpers, and widgets (129 passing tests).
+
+## 1.2.1
+* Fix `NaAppBar` platform height
+
 ## 1.2.0
 
 * Added `NaApp.router` constructor to configure declarative routing using `routerConfig` (e.g., GoRouter) or custom router delegates.
@@ -25,9 +46,4 @@
 
 ## 1.0.1
 
-* Added dynamic fallback engine for UI rendering with `NaUiTypeScope` and `uiTypes` chain.
-* Migrated 19 foundational widgets (Button, TextField, Dialog, AppBar, Scaffold, etc.) to natively fallback between custom builder styles, Cupertino, and Material.
-
-## 1.0.0
-
-* Initial release of the `nanna_platform` package.
+* First public release of nanna_platform.

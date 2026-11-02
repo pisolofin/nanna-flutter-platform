@@ -1,10 +1,9 @@
 import 'package:flutter/widgets.dart';
-
 import 'package:nanna_platform/nanna_platform.dart';
 
 /// A showcase widget displaying a selection of cross-platform icons provided by [NaIcons].
 class ExampleIconsWidget extends StatelessWidget {
-  const ExampleIconsWidget({super.key});
+  const ExampleIconsWidget({ super.key });
 
   @override
   Widget build(BuildContext context) {
@@ -38,7 +37,7 @@ class ExampleIconsWidget extends StatelessWidget {
     return NaCard(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
+        children          : [
           // Section Title
           const Text(
             'NaIcons Cross-Platform Showcase',
@@ -54,13 +53,13 @@ class ExampleIconsWidget extends StatelessWidget {
 
           // Icons Grid
           Wrap(
-            spacing: 16.0,
+            spacing   : 16.0,
             runSpacing: 16.0,
-            children: [
+            children  : [
               for (final _IconItem item in iconItemList) ...[
                 Column(
                   mainAxisSize: MainAxisSize.min,
-                  children: [
+                  children    : [
                     // Icon preview
                     NaIcon(item.iconData, size: 28.0),
                     const SizedBox(height: 4.0),

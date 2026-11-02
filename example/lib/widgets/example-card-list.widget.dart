@@ -2,7 +2,7 @@ import 'package:flutter/widgets.dart';
 import 'package:nanna_platform/nanna_platform.dart';
 
 class ExampleCardListWidget extends StatelessWidget {
-  const ExampleCardListWidget({super.key});
+  const ExampleCardListWidget({ super.key });
 
   @override
   Widget build(BuildContext context) {
@@ -11,21 +11,21 @@ class ExampleCardListWidget extends StatelessWidget {
         const Text('NaCard e NaListTile:'),
         Padding(
           padding: const EdgeInsets.all(16.0),
-          child: NaCard(
+          child  : NaCard(
             child: Column(
               mainAxisSize: MainAxisSize.min,
-              children: [
+              children    : [
                 NaListTile(
-                  leading: const NaIcon(NaIcons.person),
-                  title: const Text('John Doe'),
-                  subtitle: const Text('Software Engineer'),
+                  leading   : const NaIcon(NaIcons.person),
+                  title     : const Text('John Doe'),
+                  subtitle  : const Text('Software Engineer'),
                   hasChevron: true,
-                  onTap: () {},
+                  onTap     : () {},
                 ),
                 NaListTile(
                   leading: const NaIcon(NaIcons.email),
-                  title: const Text('john.doe@example.com'),
-                  onTap: () {},
+                  title  : const Text('john.doe@example.com'),
+                  onTap  : () {},
                 ),
               ],
             ),

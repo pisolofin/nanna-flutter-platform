@@ -5,6 +5,10 @@ import 'platform-ui-type.service.dart';
 void naPlatformServiceInit() {
   // Register known types
   for (NaUiType knowUiType in NaUiType.values) {
-    naPlatformServiceRegisterUiType(styleId: '', uiType: knowUiType);
+    try {
+      naPlatformServiceRegisterUiType(styleId: 'builtin', uiType: knowUiType);
+    }catch (_) {
+      // Ignored if already registered
+    }
   }
 }

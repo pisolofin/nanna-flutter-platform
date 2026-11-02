@@ -204,4 +204,63 @@ void main() {
 
     expect(selectedResult, isNull);
   });
+  testWidgets('naShowActionSheetAsync renders CupertinoActionSheet on Cupertino', (WidgetTester tester) async {
+    tester.view.physicalSize = const Size(400, 800);
+    tester.view.devicePixelRatio = 1.0;
+    addTearDown(tester.view.resetPhysicalSize);
+
+    await pumpCupertinoNaWidget(
+      tester,
+      Builder(
+        builder: (BuildContext context) {
+          return CupertinoButton(
+            onPressed: () async {
+              await naShowActionSheetAsync<String>(
+                context     : context,
+                itemList    : sampleItemList,
+                title       : const Text('Action Sheet Title'),
+                cancelButton: const Text('Cancel'),
+              );
+            },
+            child: const Text('Open'),
+          );
+        },
+      ),
+    );
+
+    await tester.tap(find.text('Open'));
+    await tester.pumpAndSettle();
+
+    expect(find.byType(CupertinoActionSheet), findsOneWidget);
+    expect(find.text('Action Sheet Title'), findsOneWidget);
+  });
+
+  testWidgets('naShowBottomSheetAsync renders Material BottomSheet on Material', (WidgetTester tester) async {
+    tester.view.physicalSize = const Size(400, 800);
+    tester.view.devicePixelRatio = 1.0;
+    addTearDown(tester.view.resetPhysicalSize);
+
+    await pumpMaterialNaWidget(
+      tester,
+      Builder(
+        builder: (BuildContext context) {
+          return ElevatedButton(
+            onPressed: () async {
+              await naShowBottomSheetAsync<String>(
+                context     : context,
+                itemList    : sampleItemList,
+                cancelButton: const Text('Cancel'),
+              );
+            },
+            child: const Text('Open'),
+          );
+        },
+      ),
+    );
+
+    await tester.tap(find.text('Open'));
+    await tester.pumpAndSettle();
+
+    expect(find.byType(BottomSheet), findsOneWidget);
+  });
 }

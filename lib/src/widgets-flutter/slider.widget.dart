@@ -16,10 +16,14 @@ abstract class NaSliderOptions extends NaWidgetOptions {
 
 /// Generic options for [NaSlider], holding properties common to both platforms.
 class NaSliderOptionsGeneric extends NaSliderOptions {
+  /// The color to use when this widget is active.
   final Color? activeColor;
+  /// The color of the thumb.
   final Color? thumbColor;
+  /// The number of discrete divisions in the slider.
   final int? divisions;
 
+  /// Creates a [NaSliderOptionsGeneric].
   NaSliderOptionsGeneric({
     this.activeColor,
     this.thumbColor,
@@ -45,14 +49,22 @@ class NaSliderOptionsGeneric extends NaSliderOptions {
 
 /// Material-specific options for [NaSlider], resolving into a [Slider].
 class NaSliderOptionsMaterial extends NaSliderOptionsGeneric {
+  /// The color to use when this widget is inactive.
   final Color? inactiveColor;
+  /// The color for the widget's ink response overlay.
   final WidgetStateProperty<Color?>? overlayColor;
+  /// The cursor for a mouse pointer when hovering over this widget.
   final MouseCursor? mouseCursor;
+  /// The callback used to create a semantic value from the slider's value.
   final SemanticFormatterCallback? semanticFormatterCallback;
+  /// Defines the keyboard focus for this widget.
   final FocusNode? focusNode;
+  /// True if this widget will be selected as the initial focus.
   final bool? autofocus;
+  /// A label to display above or beside this widget.
   final String? label;
 
+  /// Creates a [NaSliderOptionsMaterial].
   NaSliderOptionsMaterial({
     this.inactiveColor,
     this.overlayColor,
@@ -116,6 +128,7 @@ class NaSliderOptionsMaterial extends NaSliderOptionsGeneric {
 
 /// Cupertino-specific options for [NaSlider], resolving into a [CupertinoSlider].
 class NaSliderOptionsCupertino extends NaSliderOptionsGeneric {
+  /// Creates a [NaSliderOptionsCupertino].
   NaSliderOptionsCupertino({
     super.activeColor,
     super.thumbColor,
@@ -152,15 +165,23 @@ class NaSliderOptionsCupertino extends NaSliderOptionsGeneric {
 /// A generic Slider widget that automatically renders a [Slider] on Material
 /// and a [CupertinoSlider] on Cupertino.
 class NaSlider extends NaWidget {
+  /// The current value of this widget.
   final double value;
+  /// Called when the value of the widget should change.
   final ValueChanged<double>? onChanged;
+  /// Called when the user starts selecting a new value.
   final ValueChanged<double>? onChangeStart;
+  /// Called when the user is done selecting a new value.
   final ValueChanged<double>? onChangeEnd;
+  /// The minimum value the user can select.
   final double min;
+  /// The maximum value the user can select.
   final double max;
 
+  /// Optional options builder for customizing platform-specific widget configuration.
   final NaWidgetOptionsBuilder<NaSliderOptions>? optionsBuilder;
 
+  /// Creates a [NaSlider].
   const NaSlider({
     super.key,
     required this.value,

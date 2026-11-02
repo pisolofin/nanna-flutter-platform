@@ -16,11 +16,16 @@ abstract class NaIconButtonOptions extends NaWidgetOptions {
 
 /// Generic options for [NaIconButton], holding properties common to both platforms.
 class NaIconButtonOptionsGeneric extends NaIconButtonOptions {
+  /// The amount of space by which to inset the widget's contents.
   final EdgeInsetsGeometry? padding;
+  /// How the child is aligned within the widget.
   final AlignmentGeometry? alignment;
+  /// The color of this widget.
   final Color? color;
+  /// The color for this widget when it is disabled.
   final Color? disabledColor;
 
+  /// Creates a [NaIconButtonOptionsGeneric].
   NaIconButtonOptionsGeneric({
     this.padding,
     this.alignment,
@@ -49,20 +54,34 @@ class NaIconButtonOptionsGeneric extends NaIconButtonOptions {
 
 /// Material-specific options for [NaIconButton], resolving into an [IconButton].
 class NaIconButtonOptionsMaterial extends NaIconButtonOptionsGeneric {
+  /// The size of the icon.
   final double? iconSize;
+  /// Defines how compact the widget's layout will be.
   final VisualDensity? visualDensity;
+  /// The radius of the ink splash.
   final double? splashRadius;
+  /// The color for the focus overlay.
   final Color? focusColor;
+  /// The color of this widget when hovered over by a pointer.
   final Color? hoverColor;
+  /// The highlight color for the widget's ink response.
   final Color? highlightColor;
+  /// The splash color for the ink response.
   final Color? splashColor;
+  /// The cursor for a mouse pointer when hovering over this widget.
   final MouseCursor? mouseCursor;
+  /// Defines the keyboard focus for this widget.
   final FocusNode? focusNode;
+  /// True if this widget will be selected as the initial focus.
   final bool? autofocus;
+  /// Text that describes the action that will occur when tapped.
   final String? tooltip;
+  /// The box constraints for this widget.
   final BoxConstraints? constraints;
+  /// The text style or button style.
   final ButtonStyle? style;
 
+  /// Creates a [NaIconButtonOptionsMaterial].
   NaIconButtonOptionsMaterial({
     this.iconSize,
     this.visualDensity,
@@ -154,10 +173,14 @@ class NaIconButtonOptionsMaterial extends NaIconButtonOptionsGeneric {
 
 /// Cupertino-specific options for [NaIconButton], resolving into a [CupertinoButton].
 class NaIconButtonOptionsCupertino extends NaIconButtonOptionsGeneric {
+  /// The minimum size of the widget.
   final Size? minimumSize;
+  /// The opacity of the widget when it is being pressed.
   final double? pressedOpacity;
+  /// If non-null, the corners of this widget are rounded by this [BorderRadius].
   final BorderRadius? borderRadius;
 
+  /// Creates a [NaIconButtonOptionsCupertino].
   NaIconButtonOptionsCupertino({
     this.minimumSize,
     this.pressedOpacity,
@@ -210,11 +233,15 @@ class NaIconButtonOptionsCupertino extends NaIconButtonOptionsGeneric {
 /// A generic IconButton widget that automatically renders an [IconButton] on Material
 /// and a [CupertinoButton] on Cupertino.
 class NaIconButton extends NaWidget {
+  /// The icon to display.
   final Widget icon;
+  /// The callback that is called when the widget is tapped or activated.
   final VoidCallback? onPressed;
 
+  /// Optional options builder for customizing platform-specific widget configuration.
   final NaWidgetOptionsBuilder<NaIconButtonOptions>? optionsBuilder;
 
+  /// Creates a [NaIconButton].
   const NaIconButton({
     super.key,
     required this.icon,

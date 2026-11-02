@@ -15,6 +15,7 @@ class NaIconData {
   /// A map defining specific [IconData] for various UI types.
   final Map<NaUiType, IconData> platformIcons;
 
+  /// Creates a [NaIconData] with a [defaultIcon] and optional [platformIcons].
   const NaIconData(this.defaultIcon, {this.platformIcons = const {}});
 
   /// Registers a custom platform icon map for a given [uiType].

@@ -17,8 +17,10 @@ abstract class NaScaffoldOptions extends NaWidgetOptions {
 
 /// Generic options for [NaScaffold], holding properties common to both platforms.
 class NaScaffoldOptionsGeneric extends NaScaffoldOptions {
+  /// If true the body should resize when the keyboard appears.
   final bool? resizeToAvoidBottomInset;
 
+  /// Creates a [NaScaffoldOptionsGeneric].
   NaScaffoldOptionsGeneric({
     this.resizeToAvoidBottomInset,
   });
@@ -38,10 +40,14 @@ class NaScaffoldOptionsGeneric extends NaScaffoldOptions {
 
 /// Material-specific options for [NaScaffold], resolving into a [Scaffold].
 class NaScaffoldOptionsMaterial extends NaScaffoldOptionsGeneric {
+  /// A button displayed floating above the body, in the bottom right corner.
   final Widget? floatingActionButton;
+  /// A bottom navigation bar to display at the bottom of the scaffold.
   final Widget? bottomNavigationBar;
+  /// A panel displayed to the side of the body, often hidden on mobile devices.
   final Widget? drawer;
 
+  /// Creates a [NaScaffoldOptionsMaterial].
   NaScaffoldOptionsMaterial({
     this.floatingActionButton,
     this.bottomNavigationBar,
@@ -81,6 +87,7 @@ class NaScaffoldOptionsMaterial extends NaScaffoldOptionsGeneric {
 
 /// Cupertino-specific options for [NaScaffold], resolving into a [CupertinoPageScaffold].
 class NaScaffoldOptionsCupertino extends NaScaffoldOptionsGeneric {
+  /// Creates a [NaScaffoldOptionsCupertino].
   NaScaffoldOptionsCupertino({
     super.resizeToAvoidBottomInset,
   });
@@ -109,13 +116,19 @@ class NaScaffoldOptionsCupertino extends NaScaffoldOptionsGeneric {
 /// A generic Scaffold widget that automatically renders a [Scaffold] on Material
 /// and a [CupertinoPageScaffold] on Cupertino.
 class NaScaffold extends NaWidget {
+  /// An app bar to display at the top of the scaffold.
   final NaAppBar? appBar;
+  /// The primary content of the scaffold.
   final Widget body;
+  /// The background color of this widget.
   final Color? backgroundColor;
+  /// A bottom navigation bar to display at the bottom of the scaffold.
   final Widget? bottomNavigationBar;
 
+  /// Optional options builder for customizing platform-specific widget configuration.
   final NaWidgetOptionsBuilder<NaScaffoldOptions>? optionsBuilder;
 
+  /// Creates a [NaScaffold].
   const NaScaffold({
     super.key,
     this.appBar,

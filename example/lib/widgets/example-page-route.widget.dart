@@ -2,7 +2,7 @@ import 'package:flutter/widgets.dart';
 import 'package:nanna_platform/nanna_platform.dart';
 
 class ExamplePageRouteWidget extends StatelessWidget {
-  const ExamplePageRouteWidget({super.key});
+  const ExamplePageRouteWidget({ super.key });
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +25,7 @@ class _TestPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return NaScaffold(
       appBar: NaAppBar(title: const Text('New Page')),
-      body: const Center(child: Text('This page was pushed with NaPageRoute!')),
+      body  : const Center(child: Text('This page was pushed with NaPageRoute!')),
     );
   }
 }

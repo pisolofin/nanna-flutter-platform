@@ -16,6 +16,7 @@ abstract class NaAlertDialogOptions extends NaWidgetOptions {
 
 /// Generic options for [NaAlertDialog], holding properties common to both platforms.
 class NaAlertDialogOptionsGeneric extends NaAlertDialogOptions {
+  /// Creates a [NaAlertDialogOptionsGeneric].
   NaAlertDialogOptionsGeneric();
 
   /// Creates an empty [NaAlertDialogOptionsGeneric] with default values.
