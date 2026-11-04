@@ -5,34 +5,49 @@ import 'package:nanna_platform/nanna_platform.dart';
 void main() {
   test('NaCardOptions copyWith works correctly', () {
     final NaCardOptionsGeneric genericOptions = NaCardOptionsGeneric(
-      color : const Color(0xFF111111),
-      margin: const EdgeInsets.all(8.0),
+      color       : const Color(0xFF111111),
+      margin      : const EdgeInsets.all(8.0),
+      padding     : const EdgeInsets.all(10.0),
+      borderRadius: BorderRadius.circular(12.0),
+      borderColor : const Color(0xFF333333),
+      borderWidth : 0.5,
+      clipBehavior: Clip.antiAlias,
     );
     final NaCardOptionsGeneric updatedGeneric = genericOptions.copyWith(
-      color: const Color(0xFF222222),
+      color      : const Color(0xFF222222),
+      borderWidth: 1.0,
     );
     expect(updatedGeneric.color, const Color(0xFF222222));
     expect(updatedGeneric.margin, const EdgeInsets.all(8.0));
+    expect(updatedGeneric.padding, const EdgeInsets.all(10.0));
+    expect(updatedGeneric.borderRadius, BorderRadius.circular(12.0));
+    expect(updatedGeneric.borderColor, const Color(0xFF333333));
+    expect(updatedGeneric.borderWidth, 1.0);
+    expect(updatedGeneric.clipBehavior, Clip.antiAlias);
 
     final NaCardOptionsMaterial materialOptions = NaCardOptionsMaterial(
       elevation: 2.0,
       color    : const Color(0xFF111111),
+      padding  : const EdgeInsets.all(12.0),
     );
     final NaCardOptionsMaterial updatedMaterial = materialOptions.copyWith(
       elevation: 4.0,
     );
     expect(updatedMaterial.elevation, 4.0);
     expect(updatedMaterial.color, const Color(0xFF111111));
+    expect(updatedMaterial.padding, const EdgeInsets.all(12.0));
 
     final NaCardOptionsCupertino cupertinoOptions = NaCardOptionsCupertino(
-      padding: const EdgeInsets.all(12.0),
-      color  : const Color(0xFF111111),
+      padding    : const EdgeInsets.all(12.0),
+      color      : const Color(0xFF111111),
+      borderColor: const Color(0xFF444444),
     );
     final NaCardOptionsCupertino updatedCupertino = cupertinoOptions.copyWith(
       padding: const EdgeInsets.all(16.0),
     );
     expect(updatedCupertino.padding, const EdgeInsets.all(16.0));
     expect(updatedCupertino.color, const Color(0xFF111111));
+    expect(updatedCupertino.borderColor, const Color(0xFF444444));
   });
 
   test('NaTextFieldOptions copyWith works correctly', () {
