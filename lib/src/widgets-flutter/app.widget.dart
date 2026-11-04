@@ -5,6 +5,7 @@ import '../models/ui-type.model.dart';
 import '../scopes/ui-type.scope.dart';
 import '../widgets/na-widget.widget.dart';
 import '../models/widget-options.model.dart';
+import '../services/platform-builder.service.dart';
 
 /// Base options for [NaApp].
 abstract class NaAppOptions extends NaWidgetOptions {
@@ -238,6 +239,9 @@ class NaApp extends NaWidget {
   /// Optional options builder for customizing platform-specific app configuration.
   final NaWidgetOptionsBuilder<NaAppOptions>? optionsBuilder;
 
+  /// The list of UI types defining the fallback chain for descendant widgets.
+  final List<NaUiType>? uiTypes;
+
   /// Creates a [NaApp] using the standard [Navigator].
   ///
   /// Automatically renders [MaterialApp] on Material and [CupertinoApp] on Cupertino.
@@ -271,6 +275,7 @@ class NaApp extends NaWidget {
     this.restorationScopeId,
     this.scrollBehavior,
     this.optionsBuilder,
+    this.uiTypes,
     super.uiType,
   })  : routeInformationProvider = null,
         routeInformationParser = null,
@@ -308,6 +313,7 @@ class NaApp extends NaWidget {
     this.restorationScopeId,
     this.scrollBehavior,
     this.optionsBuilder,
+    this.uiTypes,
     super.uiType,
   })  : assert(routerDelegate != null || routerConfig != null),
         assert(
@@ -366,6 +372,7 @@ class NaApp extends NaWidget {
     BackButtonDispatcher? backButtonDispatcher,
     RouterConfig<Object>? routerConfig,
     NaWidgetOptionsBuilder<NaAppOptions>? optionsBuilder,
+    List<NaUiType>? uiTypes,
     NaUiType? uiType,
   }) {
     if (this._isRouter) {
@@ -396,6 +403,7 @@ class NaApp extends NaWidget {
         restorationScopeId           : restorationScopeId ?? this.restorationScopeId,
         scrollBehavior               : scrollBehavior ?? this.scrollBehavior,
         optionsBuilder               : optionsBuilder ?? this.optionsBuilder,
+        uiTypes                      : uiTypes ?? this.uiTypes,
         uiType                       : uiType ?? this.uiType,
       );
     }
@@ -430,13 +438,51 @@ class NaApp extends NaWidget {
       restorationScopeId           : restorationScopeId ?? this.restorationScopeId,
       scrollBehavior               : scrollBehavior ?? this.scrollBehavior,
       optionsBuilder               : optionsBuilder ?? this.optionsBuilder,
+      uiTypes                      : uiTypes ?? this.uiTypes,
       uiType                       : uiType ?? this.uiType,
     );
   }
 
   @override
+  Widget build(BuildContext context) {
+    if (this.uiType == null && this.uiTypes != null && this.uiTypes!.isNotEmpty) {
+      for (final NaUiType type in this.uiTypes!) {
+        final NaWidgetBuilder? builder = naPlatformServiceGetWidgetBuilder(
+          this.runtimeType,
+          type,
+        );
+        if (builder != null) {
+          return builder(context, this);
+        }
+
+        final Widget? nativeWidget = renderForUIType(context, type);
+        if (nativeWidget != null) {
+          return nativeWidget;
+        }
+      }
+      return fallbackRender(context);
+    }
+
+    return super.build(context);
+  }
+
+  @override
   Widget? renderForUIType(BuildContext context, NaUiType uiType) {
     final NaAppOptions? options = this.optionsBuilder?.call(context, uiType);
+
+    final NaUiTypeScope? parentScope = context.dependOnInheritedWidgetOfExactType<NaUiTypeScope>();
+    final List<NaUiType> effectiveUiTypes;
+    if (this.uiTypes != null) {
+      effectiveUiTypes = this.uiTypes!;
+    }else if (parentScope != null) {
+      if (parentScope.uiTypes.contains(uiType)) {
+        effectiveUiTypes = parentScope.uiTypes;
+      }else{
+        effectiveUiTypes = [...parentScope.uiTypes, uiType];
+      }
+    }else{
+      effectiveUiTypes = [uiType];
+    }
 
     Widget buildWithScope(BuildContext innerContext, Widget? innerChild) {
       final Widget resolvedChild = this.builder != null
@@ -444,7 +490,7 @@ class NaApp extends NaWidget {
         : (innerChild ?? const SizedBox.shrink())
       ;
       return NaUiTypeScope(
-        uiTypes: [uiType],
+        uiTypes: effectiveUiTypes,
         child  : resolvedChild,
       );
     }

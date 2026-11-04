@@ -100,4 +100,62 @@ void main() {
     expect(find.byType(NaApp), findsOneWidget);
     expect(find.byType(CupertinoApp), findsOneWidget);
   });
+
+  testWidgets('NaApp preserves outer NaUiTypeScope fallback chain for descendant widgets', (WidgetTester tester) async {
+    const NaUiType customUiType = NaUiType(777);
+    List<NaUiType>? capturedUiTypes;
+
+    await tester.pumpWidget(
+      NaUiTypeScope(
+        uiTypes: const [customUiType, NaUiType.material],
+        child  : NaApp(
+          home: Builder(
+            builder: (BuildContext context) {
+              capturedUiTypes = NaUiTypeScope.of(context);
+              return const SizedBox();
+            },
+          ),
+        ),
+      ),
+    );
+
+    expect(capturedUiTypes, equals([customUiType, NaUiType.material]));
+  });
+
+  testWidgets('NaApp propagates its uiTypes parameter to descendant widgets', (WidgetTester tester) async {
+    const NaUiType customUiType = NaUiType(888);
+    List<NaUiType>? capturedUiTypes;
+
+    await tester.pumpWidget(
+      NaApp(
+        uiTypes: const [customUiType, NaUiType.material],
+        home   : Builder(
+          builder: (BuildContext context) {
+            capturedUiTypes = NaUiTypeScope.of(context);
+            return const SizedBox();
+          },
+        ),
+      ),
+    );
+
+    expect(capturedUiTypes, equals([customUiType, NaUiType.material]));
+  });
+
+  testWidgets('NaApp propagates single uiType to descendant widgets when no outer scope exists', (WidgetTester tester) async {
+    List<NaUiType>? capturedUiTypes;
+
+    await tester.pumpWidget(
+      NaApp(
+        uiType: NaUiType.cupertino,
+        home  : Builder(
+          builder: (BuildContext context) {
+            capturedUiTypes = NaUiTypeScope.of(context);
+            return const SizedBox();
+          },
+        ),
+      ),
+    );
+
+    expect(capturedUiTypes, equals([NaUiType.cupertino]));
+  });
 }

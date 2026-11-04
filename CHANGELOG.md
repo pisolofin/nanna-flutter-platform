@@ -1,3 +1,10 @@
+## 1.2.3
+
+* Enhanced `NaApp` to preserve ancestor `NaUiTypeScope` fallback chains instead of overwriting them with a single `uiType`.
+* Added `uiTypes` parameter to `NaApp` and `NaApp.router` constructors and `copyWith` method to define explicit fallback chains.
+* Enhanced `NaApp.build` to resolve and render across the `uiTypes` fallback chain when `uiType` is omitted.
+* Added unit tests verifying `NaApp` scope inheritance and `uiTypes` propagation.
+
 ## 1.2.2
 
 * Fixed service initialization crash in `naPlatformServiceInit` and `naPlatformServiceRegisterUiType`.
