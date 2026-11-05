@@ -366,7 +366,7 @@ class NaCard extends NaWidget {
         _extractBorderRadius(cardTheme.shape) ??
         BorderRadius.circular(defaultBorderRadius);
 
-    final double effectiveWidth = genericOptions?.borderWidth ?? defaultBorderWidth;
+    final double effectiveWidth    = genericOptions?.borderWidth ?? defaultBorderWidth;
     final Color defaultBorderColor = (materialTheme.brightness == Brightness.dark)
       ? _darkHairlineBorderColor
       : _lightHairlineBorderColor
@@ -388,7 +388,7 @@ class NaCard extends NaWidget {
 
   @override
   Widget? renderForUIType(BuildContext context, NaUiType uiType) {
-    final Object? rawOptions = this.options;
+    final Object? rawOptions             = this.options;
     final NaCardOptions? resolvedOptions = (rawOptions is NaCardOptions)
       ? rawOptions
       : this.optionsBuilder?.call(context, uiType)
@@ -427,7 +427,7 @@ class NaCard extends NaWidget {
       ;
       final ThemeData materialTheme = Theme.of(context);
       final CardThemeData cardTheme = CardTheme.of(context);
-      final Widget effectiveChild = (effectivePadding != null)
+      final Widget effectiveChild   = (effectivePadding != null)
         ? Padding(
             padding: effectivePadding,
             child  : this.child,

@@ -190,7 +190,7 @@ class NaIcon extends NaWidget {
 
   @override
   Widget? renderForUIType(BuildContext context, NaUiType uiType) {
-    final NaIconOptions? options = this.optionsBuilder?.call(context, uiType);
+    final NaIconOptions? options               = this.optionsBuilder?.call(context, uiType);
     final NaIconOptionsGeneric? genericOptions = options is NaIconOptionsGeneric
       ? options
       : null

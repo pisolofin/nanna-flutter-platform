@@ -252,7 +252,7 @@ class NaButtonFilled extends NaWidget {
 
   @override
   Widget? renderForUIType(BuildContext context, NaUiType uiType) {
-    final NaButtonFilledOptions? options = this.optionsBuilder?.call(context, uiType);
+    final NaButtonFilledOptions? options               = this.optionsBuilder?.call(context, uiType);
     final NaButtonFilledOptionsGeneric? genericOptions = options is NaButtonFilledOptionsGeneric
       ? options
       : null

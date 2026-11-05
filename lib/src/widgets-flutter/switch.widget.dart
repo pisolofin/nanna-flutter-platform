@@ -271,7 +271,7 @@ class NaSwitch extends NaWidget {
 
   @override
   Widget? renderForUIType(BuildContext context, NaUiType uiType) {
-    final NaSwitchOptions? options = this.optionsBuilder?.call(context, uiType);
+    final NaSwitchOptions? options               = this.optionsBuilder?.call(context, uiType);
     final NaSwitchOptionsGeneric? genericOptions = options is NaSwitchOptionsGeneric
       ? options
       : null

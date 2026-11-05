@@ -2,12 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/cupertino.dart';
 
+import '../models/ui-type.model.dart';
+import '../constants/icons.constant.dart';
+import '../widgets/na-widget.widget.dart';
+import '../models/widget-options.model.dart';
+
 import 'icon.widget.dart';
 import 'icon-button.widget.dart';
-import '../models/ui-type.model.dart';
-import '../widgets/na-widget.widget.dart';
-import '../constants/icons.constant.dart';
-import '../models/widget-options.model.dart';
 
 /// Base options for [NaTextField].
 abstract class NaTextFieldOptions extends NaWidgetOptions {
@@ -570,7 +571,7 @@ class _NaTextFieldPlatformRenderState extends State<_NaTextFieldPlatformRender> 
       ? (widget.options as NaTextFieldOptionsGeneric)
       : null
     ;
-    final bool showToggle = genericOptions?.showObscureTextToggle ?? widget.naTextField.showObscureTextToggle;
+    final bool showToggle   = genericOptions?.showObscureTextToggle ?? widget.naTextField.showObscureTextToggle;
     final bool enableToggle = _isObscureConfigured && showToggle;
 
     if (widget.uiType == NaUiType.cupertino) {
@@ -647,7 +648,7 @@ class _NaTextFieldPlatformRenderState extends State<_NaTextFieldPlatformRender> 
         ? (widget.options as NaTextFieldOptionsMaterial)
         : null
       ;
-      final InputDecoration effectiveDecoration = materialOptions?.decoration ?? const InputDecoration();
+      final InputDecoration effectiveDecoration       = materialOptions?.decoration ?? const InputDecoration();
       final InputDecoration decorationWithPlaceholder = ((genericOptions?.placeholder != null) && (effectiveDecoration.hintText == null))
         ? effectiveDecoration.copyWith(hintText: genericOptions?.placeholder)
         : effectiveDecoration

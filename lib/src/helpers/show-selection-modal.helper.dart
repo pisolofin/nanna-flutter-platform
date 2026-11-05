@@ -196,7 +196,7 @@ Future<T?> _showMaterialMobileBottomSheetAsync<T>({
             itemCount  : itemList.length,
             itemBuilder: (BuildContext listContext, int index) {
               final NaSelectionItem<T> item = itemList[index];
-              final Widget? trailingWidget = item.trailing ?? (item.isSelected ? const NaIcon(NaIcons.check) : null);
+              final Widget? trailingWidget  = item.trailing ?? (item.isSelected ? const NaIcon(NaIcons.check) : null);
 
               return ListTile(
                 leading : item.leading,
@@ -456,7 +456,7 @@ Future<T?> naShowSelectionModalAsync<T>({
 
   // Detect tablet or phone
   final MediaQueryData mediaQueryData = MediaQuery.of(context);
-  final bool resolvedIsTablet = isTablet ?? (mediaQueryData.size.shortestSide >= tabletBreakpoint);
+  final bool resolvedIsTablet         = isTablet ?? (mediaQueryData.size.shortestSide >= tabletBreakpoint);
 
   // Resolve active UI type
   NaUiType activeUiType = forceUiType ?? NaUiType.material;

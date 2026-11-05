@@ -1,3 +1,11 @@
+## 1.2.4
+
+* Refined `NaCard` visual defaults across Material and Cupertino (zero outer margin, 12pt rounded corners, anti-aliased clipping, flat surface with crisp 0.5pt hairline border).
+* Added direct `padding` and `options` parameters to `NaCard` constructor and `copyWith`.
+* Added cross-platform `padding`, `borderRadius`, `borderColor`, `borderWidth`, and `clipBehavior` options in `NaCardOptionsGeneric`.
+* Added static defaults (`defaultBorderRadius`, `defaultBorderWidth`, `defaultElevation`) to `NaCard`.
+* Broadened `cupertino_icons` dependency constraint to `>=1.0.0` for improved package compatibility.
+
 ## 1.2.3
 
 * Enhanced `NaApp` to preserve ancestor `NaUiTypeScope` fallback chains instead of overwriting them with a single `uiType`.
@@ -7,7 +15,6 @@
 
 ## 1.2.2
 
-* Refined `NaCard` visual defaults across Material and Cupertino (zero outer margin, 12pt rounded corners, anti-aliased clipping, flat surface with crisp 0.5pt hairline border) and added direct `padding` parameter plus cross-platform `padding`, `borderRadius`, `borderColor`, `borderWidth`, and `clipBehavior` options in `NaCardOptionsGeneric`.
 * Fixed service initialization crash in `naPlatformServiceInit` and `naPlatformServiceRegisterUiType`.
 * Added `naPlatformServiceResetUiTypes()` and `naPlatformServiceResetWidgetBuilders()` for clean state resets in test environments.
 * Added meaningful `toString()` implementation to `NaUiType`.
@@ -22,7 +29,7 @@
 * Added Action Sheet / Bottom Menu showcase button and dialog in the example app.
 * Hardened internal formatting scripts against directory symlinks (e.g. `example/windows/flutter/ephemeral/.plugin_symlinks`) preventing accidental modifications to pub cache.
 * Added GitHub Actions CI workflow for automated testing and static analysis.
-* Significantly expanded test coverage with 8 new test suites covering models, scopes, services, helpers, and widgets.
+* Significantly expanded test coverage with 8 new test suites covering models, scopes, services, helpers, and widgets (129 passing tests).
 
 ## 1.2.1
 * Fix `NaAppBar` platform height

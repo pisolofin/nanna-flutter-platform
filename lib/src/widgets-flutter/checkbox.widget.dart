@@ -285,7 +285,7 @@ class NaCheckbox extends NaWidget {
 
   @override
   Widget? renderForUIType(BuildContext context, NaUiType uiType) {
-    final NaCheckboxOptions? options = this.optionsBuilder?.call(context, uiType);
+    final NaCheckboxOptions? options               = this.optionsBuilder?.call(context, uiType);
     final NaCheckboxOptionsGeneric? genericOptions = options is NaCheckboxOptionsGeneric
       ? options
       : null

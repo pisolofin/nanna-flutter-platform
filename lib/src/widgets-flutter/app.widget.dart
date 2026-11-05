@@ -279,9 +279,9 @@ class NaApp extends NaWidget {
     super.uiType,
   })  : routeInformationProvider = null,
         routeInformationParser = null,
-        routerDelegate = null,
-        routerConfig = null,
-        backButtonDispatcher = null;
+        routerDelegate         = null,
+        routerConfig           = null,
+        backButtonDispatcher   = null;
 
   /// Creates a [NaApp] that uses the [Router] instead of a [Navigator].
   ///
@@ -324,14 +324,14 @@ class NaApp extends NaWidget {
                   backButtonDispatcher == null),
           'If routerConfig is provided, all other router delegate and information provider/parser parameters must be null.',
         ),
-        home = null,
-        routes = null,
-        initialRoute = null,
-        onGenerateRoute = null,
+        home                    = null,
+        routes                  = null,
+        initialRoute            = null,
+        onGenerateRoute         = null,
         onGenerateInitialRoutes = null,
-        onUnknownRoute = null,
-        navigatorObservers = null,
-        navigatorKey = null;
+        onUnknownRoute          = null,
+        navigatorObservers      = null,
+        navigatorKey            = null;
 
   /// Whether the app was configured using a router delegate or router config.
   bool get _isRouter => ((this.routerConfig != null) || (this.routerDelegate != null));
