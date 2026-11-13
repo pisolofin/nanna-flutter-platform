@@ -83,9 +83,14 @@ These widgets are not direct wrappers of native platform components, but rather 
 
 ## How to use the library
 
-### 1. Initialize the Scope (NaUiTypeScope)
-To make your entire app (or a portion of it) use a specific design system, wrap your widgets inside a `NaUiTypeScope`.
-You can pass a fallback chain of UI types. The widgets will attempt to render themselves according to the first supported type in the list, falling back gracefully to the next ones if a custom style is not supported.
+### 1. Platform Style Resolution (`NaApp` & `NaUiTypeScope`)
+
+#### Automatic Platform Detection (Recommended)
+By default, you do **not** need to wrap your app in a `NaUiTypeScope` or pass `uiTypes`. When `NaApp` has no `uiTypes`, no `uiType`, and no ancestor `NaUiTypeScope`, it automatically selects the native platform style:
+- **`NaUiType.cupertino`** on Apple platforms (`iOS` and `macOS`)
+- **`NaUiType.material`** on all other platforms (`Android`, `Web`, `Linux`, `Windows`, etc.)
+
+`NaApp` then injects a `NaUiTypeScope` internally so all descendant `NaWidget`s inherit the resolved style:
 
 ```dart
 import 'package:flutter/widgets.dart';
@@ -93,13 +98,34 @@ import 'package:nanna_platform/nanna_platform.dart';
 
 void main() {
   runApp(
-    NaUiTypeScope(
-      // Priority list of UI types (e.g., Cupertino first, falling back to Material)
-      uiTypes: const [NaUiType.cupertino, NaUiType.material], 
-      child  : const MyApp(),
+    const NaApp(
+      title: 'My App',
+      home : MyHomePage(),
     ),
   );
 }
+```
+
+#### Custom Styles & Fallback Chains (`uiTypes` / `NaUiTypeScope`)
+To prioritize a custom design system or override the default, pass `uiTypes` to `NaApp` (or wrap a subtree with `NaUiTypeScope`). Widgets will render using the first supported type in the list:
+
+```dart
+NaApp(
+  // Uses customStyle when supported, automatically falling back to
+  // NaUiType.cupertino on Apple platforms or NaUiType.material elsewhere.
+  uiTypes: [customStyle],
+  home   : const MyHomePage(),
+)
+```
+
+If you wrap `NaApp` with an explicit `NaUiTypeScope` (for example, to switch styles dynamically at runtime), `NaApp` respects that ancestor scope:
+
+```dart
+NaUiTypeScope(
+  // Explicit priority list of UI types (e.g., Cupertino first, falling back to Material)
+  uiTypes: const [NaUiType.cupertino, NaUiType.material],
+  child  : const NaApp(home: MyHomePage()),
+)
 ```
 
 You can also inspect or resolve the active UI type from anywhere in the widget tree:
