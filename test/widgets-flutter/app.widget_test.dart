@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:nanna_platform/nanna_platform.dart';
 
@@ -158,4 +159,149 @@ void main() {
 
     expect(capturedUiTypes, equals([NaUiType.cupertino]));
   });
+
+  testWidgets(
+    'NaApp defaults to Cupertino on iOS when no uiTypes, uiType, or ancestor scope exists',
+    variant: TargetPlatformVariant.only(TargetPlatform.iOS),
+    (WidgetTester tester) async {
+      List<NaUiType>? capturedUiTypes;
+
+      await tester.pumpWidget(
+        NaApp(
+          home: Builder(
+            builder: (BuildContext context) {
+              capturedUiTypes = NaUiTypeScope.of(context);
+              return const SizedBox();
+            },
+          ),
+        ),
+      );
+
+      expect(find.byType(CupertinoApp), findsOneWidget);
+      expect(find.byType(MaterialApp), findsNothing);
+      expect(capturedUiTypes, equals([NaUiType.cupertino]));
+    },
+  );
+
+  testWidgets(
+    'NaApp defaults to Cupertino on macOS when no uiTypes, uiType, or ancestor scope exists',
+    variant: TargetPlatformVariant.only(TargetPlatform.macOS),
+    (WidgetTester tester) async {
+      List<NaUiType>? capturedUiTypes;
+
+      await tester.pumpWidget(
+        NaApp(
+          home: Builder(
+            builder: (BuildContext context) {
+              capturedUiTypes = NaUiTypeScope.of(context);
+              return const SizedBox();
+            },
+          ),
+        ),
+      );
+
+      expect(find.byType(CupertinoApp), findsOneWidget);
+      expect(find.byType(MaterialApp), findsNothing);
+      expect(capturedUiTypes, equals([NaUiType.cupertino]));
+    },
+  );
+
+  testWidgets(
+    'NaApp defaults to Material on non-Apple platforms when no uiTypes, uiType, or ancestor scope exists',
+    variant: TargetPlatformVariant.only(TargetPlatform.android),
+    (WidgetTester tester) async {
+      List<NaUiType>? capturedUiTypes;
+
+      await tester.pumpWidget(
+        NaApp(
+          home: Builder(
+            builder: (BuildContext context) {
+              capturedUiTypes = NaUiTypeScope.of(context);
+              return const SizedBox();
+            },
+          ),
+        ),
+      );
+
+      expect(find.byType(MaterialApp), findsOneWidget);
+      expect(find.byType(CupertinoApp), findsNothing);
+      expect(capturedUiTypes, equals([NaUiType.material]));
+    },
+  );
+
+  testWidgets(
+    'NaApp respects ancestor NaUiTypeScope on iOS when uiTypes and uiType are omitted',
+    variant: TargetPlatformVariant.only(TargetPlatform.iOS),
+    (WidgetTester tester) async {
+      List<NaUiType>? capturedUiTypes;
+
+      await tester.pumpWidget(
+        NaUiTypeScope(
+          uiTypes: const [NaUiType.material],
+          child  : NaApp(
+            home: Builder(
+              builder: (BuildContext context) {
+                capturedUiTypes = NaUiTypeScope.of(context);
+                return const SizedBox();
+              },
+            ),
+          ),
+        ),
+      );
+
+      expect(find.byType(MaterialApp), findsOneWidget);
+      expect(find.byType(CupertinoApp), findsNothing);
+      expect(capturedUiTypes, equals([NaUiType.material]));
+    },
+  );
+
+  testWidgets(
+    'NaApp with custom uiTypes falls back to Cupertino on Apple platforms',
+    variant: TargetPlatformVariant.only(TargetPlatform.iOS),
+    (WidgetTester tester) async {
+      const NaUiType customStyle = NaUiType(999);
+      List<NaUiType>? capturedUiTypes;
+
+      await tester.pumpWidget(
+        NaApp(
+          uiTypes: const [customStyle],
+          home   : Builder(
+            builder: (BuildContext context) {
+              capturedUiTypes = NaUiTypeScope.of(context);
+              return const SizedBox();
+            },
+          ),
+        ),
+      );
+
+      expect(find.byType(CupertinoApp), findsOneWidget);
+      expect(find.byType(MaterialApp), findsNothing);
+      expect(capturedUiTypes, equals([customStyle, NaUiType.cupertino]));
+    },
+  );
+
+  testWidgets(
+    'NaApp with custom uiTypes falls back to Material on non-Apple platforms',
+    variant: TargetPlatformVariant.only(TargetPlatform.android),
+    (WidgetTester tester) async {
+      const NaUiType customStyle = NaUiType(999);
+      List<NaUiType>? capturedUiTypes;
+
+      await tester.pumpWidget(
+        NaApp(
+          uiTypes: const [customStyle],
+          home   : Builder(
+            builder: (BuildContext context) {
+              capturedUiTypes = NaUiTypeScope.of(context);
+              return const SizedBox();
+            },
+          ),
+        ),
+      );
+
+      expect(find.byType(MaterialApp), findsOneWidget);
+      expect(find.byType(CupertinoApp), findsNothing);
+      expect(capturedUiTypes, equals([customStyle, NaUiType.material]));
+    },
+  );
 }
