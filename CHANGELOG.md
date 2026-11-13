@@ -1,3 +1,11 @@
+## 1.2.5
+
+* Added `naPlatformServiceGetDefaultUiType()` returning `NaUiType.cupertino` on Apple platforms (`iOS`/`macOS`) and `NaUiType.material` elsewhere.
+* Enhanced `NaApp` to automatically select the native platform UI style (`CupertinoApp` on Apple, `MaterialApp` otherwise) when `uiTypes`, `uiType`, and an ancestor `NaUiTypeScope` are all omitted.
+* Enhanced `NaApp` and `NaWidget.fallbackRender` so custom `uiTypes` chains (e.g., `[customStyle]`) automatically fall back to `NaUiType.cupertino` on Apple platforms and `NaUiType.material` on other platforms.
+* Added `example-solo` app demonstrating automatic platform style detection without `NaUiTypeScope`.
+* Updated `README.md` documentation and added unit tests for automatic platform detection and custom style fallback in `NaApp`.
+
 ## 1.2.4
 
 * Refined `NaCard` visual defaults across Material and Cupertino (zero outer margin, 12pt rounded corners, anti-aliased clipping, flat surface with crisp 0.5pt hairline border).
