@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 
-import 'app-bar.widget.dart';
 import '../models/ui-type.model.dart';
 import '../widgets/na-widget.widget.dart';
 import '../models/widget-options.model.dart';
+
+import 'app-bar.widget.dart';
 
 /// Base options for [NaScaffold].
 abstract class NaScaffoldOptions extends NaWidgetOptions {
@@ -162,7 +163,7 @@ class NaScaffold extends NaWidget {
 
   @override
   Widget? renderForUIType(BuildContext context, NaUiType uiType) {
-    final NaScaffoldOptions? options = optionsBuilder?.call(context, uiType);
+    final NaScaffoldOptions? options               = optionsBuilder?.call(context, uiType);
     final NaScaffoldOptionsGeneric? genericOptions = options is NaScaffoldOptionsGeneric
       ? options
       : null

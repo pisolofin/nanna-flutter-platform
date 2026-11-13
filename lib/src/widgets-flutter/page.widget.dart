@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 
-import '../scopes/ui-type.scope.dart';
 import '../models/ui-type.model.dart';
+import '../scopes/ui-type.scope.dart';
 import '../models/widget-options.model.dart';
 
 /// Base options for [NaPage].
@@ -144,7 +144,7 @@ class NaPage {
 
     // Find the first matching natively supported page
     for (final NaUiType type in uiTypeList) {
-      final NaPageOptions? options = optionsBuilder?.call(context, type);
+      final NaPageOptions? options               = optionsBuilder?.call(context, type);
       final NaPageOptionsGeneric? genericOptions = options is NaPageOptionsGeneric
         ? options
         : null
@@ -189,7 +189,7 @@ class NaPage {
     }
 
     // Ultimate fallback
-    final NaPageOptions? fallbackOptions = optionsBuilder?.call(context, NaUiType.material);
+    final NaPageOptions? fallbackOptions               = optionsBuilder?.call(context, NaUiType.material);
     final NaPageOptionsGeneric? genericFallbackOptions = fallbackOptions is NaPageOptionsGeneric
       ? fallbackOptions
       : null

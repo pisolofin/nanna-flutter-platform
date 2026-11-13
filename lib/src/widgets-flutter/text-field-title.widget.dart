@@ -2,10 +2,11 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter/cupertino.dart' show CupertinoTheme;
 import 'package:flutter/material.dart' show InputDecoration, InputBorder, ThemeData, Theme;
 
-import 'text-field.widget.dart';
 import '../models/ui-type.model.dart';
 import '../scopes/ui-type.scope.dart';
 import '../widgets/na-widget.widget.dart';
+
+import 'text-field.widget.dart';
 
 /// Position of the title relative to the text field container
 enum NaTextFieldTitlePosition {
@@ -255,7 +256,7 @@ class _NaTextFieldTitleState extends State<NaTextFieldTitle> {
       double minLeftOffset = 8.0;
       if (widget.borderRadius is BorderRadius) {
         final BorderRadius radius = widget.borderRadius as BorderRadius;
-        minLeftOffset = radius.topLeft.x + 4.0;
+        minLeftOffset             = radius.topLeft.x + 4.0;
       }
       return minLeftOffset;
     }
@@ -292,7 +293,7 @@ class _NaTextFieldTitleState extends State<NaTextFieldTitle> {
 
   /// Calculates the vertical offset to center the title on the top border
   double _calculateTitleOffset() {
-    final double fontSize = widget.titleStyle?.fontSize ?? NaTextFieldTitle.defaultTitleStyle.fontSize ?? 13.0;
+    final double fontSize             = widget.titleStyle?.fontSize ?? NaTextFieldTitle.defaultTitleStyle.fontSize ?? 13.0;
     final double lineHeightMultiplier = widget.titleStyle?.height ?? 1.2;
     return (fontSize * lineHeightMultiplier) / 2.0;
   }
@@ -379,7 +380,7 @@ class _NaTextFieldTitleState extends State<NaTextFieldTitle> {
 
     if (widget.textField is NaTextField) {
       final NaTextField naTextField = widget.textField as NaTextField;
-      resolvedField = naTextField.copyWith(
+      resolvedField                 = naTextField.copyWith(
         optionsBuilder: (BuildContext fieldContext, NaUiType fieldUiType) {
           final NaTextFieldOptions? baseOptions = naTextField.optionsBuilder?.call(fieldContext, fieldUiType);
           if (fieldUiType == NaUiType.material) {
@@ -387,7 +388,7 @@ class _NaTextFieldTitleState extends State<NaTextFieldTitle> {
               ? baseOptions
               : null
             ;
-            final InputDecoration baseDecoration = materialOptions?.decoration ?? const InputDecoration();
+            final InputDecoration baseDecoration            = materialOptions?.decoration ?? const InputDecoration();
             final NaTextFieldOptionsGeneric? genericOptions = baseOptions is NaTextFieldOptionsGeneric
               ? baseOptions
               : null

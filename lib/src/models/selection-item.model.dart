@@ -54,9 +54,9 @@ class NaSelectionItem<T> {
     Widget? leading,
     Widget? trailing,
     bool isDestructive = false,
-    bool isDefault = false,
-    bool isSelected = false,
-    bool isEnabled = true,
+    bool isDefault     = false,
+    bool isSelected    = false,
+    bool isEnabled     = true,
     VoidCallback? onTap,
   }) {
     return NaSelectionItem<T>(

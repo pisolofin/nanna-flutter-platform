@@ -221,7 +221,7 @@ class NaSlider extends NaWidget {
 
   @override
   Widget? renderForUIType(BuildContext context, NaUiType uiType) {
-    final NaSliderOptions? options = this.optionsBuilder?.call(context, uiType);
+    final NaSliderOptions? options               = this.optionsBuilder?.call(context, uiType);
     final NaSliderOptionsGeneric? genericOptions = options is NaSliderOptionsGeneric
       ? options
       : null

@@ -2,6 +2,7 @@ import 'package:flutter/widgets.dart';
 
 import '../models/ui-type.model.dart';
 import '../scopes/ui-type.scope.dart';
+import '../services/platform.service.dart';
 import '../services/platform-builder.service.dart';
 
 /// Generic Widget that change its apparence according to the [NaUiType]
@@ -45,7 +46,9 @@ abstract class NaWidget extends StatelessWidget {
 
   /// Ultimate fallback if no uiType in the chain was supported.
   Widget fallbackRender(BuildContext context) {
-    return renderForUIType(context, NaUiType.material) ??
+    final NaUiType defaultType = naPlatformServiceGetDefaultUiType();
+    return renderForUIType(context, defaultType) ??
+        renderForUIType(context, NaUiType.material) ??
         const SizedBox.shrink();
   }
 }

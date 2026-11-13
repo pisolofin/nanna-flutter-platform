@@ -71,35 +71,6 @@ Future<T?> _showCupertinoMobileBottomSheetAsync<T>({
   required bool useRootNavigator,
   required RouteSettings? routeSettings,
 }) {
-  final List<Widget> actionWidgetList = [];
-
-  for (final NaSelectionItem<T> item in itemList) {
-    actionWidgetList.add(
-      CupertinoActionSheetAction(
-        isDefaultAction    : item.isDefault,
-        isDestructiveAction: item.isDestructive,
-        onPressed          : !item.isEnabled
-          ? () {}
-          : () {
-            item.onTap?.call();
-            Navigator.of(context, rootNavigator: useRootNavigator).pop(item.value);
-          },
-        child: _buildCupertinoActionContent(item),
-      ),
-    );
-  }
-
-  Widget? cancelButtonWidget;
-  if (cancelButton != null) {
-    cancelButtonWidget = CupertinoActionSheetAction(
-      isDefaultAction: true,
-      onPressed      : () {
-        Navigator.of(context, rootNavigator: useRootNavigator).pop();
-      },
-      child: cancelButton,
-    );
-  }
-
   return showCupertinoModalPopup<T>(
     context           : context,
     barrierDismissible: barrierDismissible,
@@ -107,6 +78,35 @@ Future<T?> _showCupertinoMobileBottomSheetAsync<T>({
     useRootNavigator  : useRootNavigator,
     routeSettings     : routeSettings,
     builder           : (BuildContext popupContext) {
+      final List<Widget> actionWidgetList = [];
+
+      for (final NaSelectionItem<T> item in itemList) {
+        actionWidgetList.add(
+          CupertinoActionSheetAction(
+            isDefaultAction    : item.isDefault,
+            isDestructiveAction: item.isDestructive,
+            onPressed          : !item.isEnabled
+              ? () {}
+              : () {
+                item.onTap?.call();
+                Navigator.of(popupContext, rootNavigator: useRootNavigator).pop(item.value);
+              },
+            child: _buildCupertinoActionContent(item),
+          ),
+        );
+      }
+
+      Widget? cancelButtonWidget;
+      if (cancelButton != null) {
+        cancelButtonWidget = CupertinoActionSheetAction(
+          isDefaultAction: true,
+          onPressed      : () {
+            Navigator.of(popupContext, rootNavigator: useRootNavigator).pop();
+          },
+          child: cancelButton,
+        );
+      }
+
       return CupertinoActionSheet(
         title       : title,
         message     : message,
@@ -196,7 +196,7 @@ Future<T?> _showMaterialMobileBottomSheetAsync<T>({
             itemCount  : itemList.length,
             itemBuilder: (BuildContext listContext, int index) {
               final NaSelectionItem<T> item = itemList[index];
-              final Widget? trailingWidget = item.trailing ?? (item.isSelected ? const NaIcon(NaIcons.check) : null);
+              final Widget? trailingWidget  = item.trailing ?? (item.isSelected ? const NaIcon(NaIcons.check) : null);
 
               return ListTile(
                 leading : item.leading,
@@ -255,36 +255,6 @@ Future<T?> _showCupertinoTabletDialogAsync<T>({
   required bool useRootNavigator,
   required RouteSettings? routeSettings,
 }) {
-  final List<Widget> actionWidgetList = [];
-
-  for (final NaSelectionItem<T> item in itemList) {
-    actionWidgetList.add(
-      CupertinoDialogAction(
-        isDefaultAction    : item.isDefault,
-        isDestructiveAction: item.isDestructive,
-        onPressed          : !item.isEnabled
-          ? () {}
-          : () {
-            item.onTap?.call();
-            Navigator.of(context, rootNavigator: useRootNavigator).pop(item.value);
-          },
-        child: _buildCupertinoActionContent(item),
-      ),
-    );
-  }
-
-  if (cancelButton != null) {
-    actionWidgetList.add(
-      CupertinoDialogAction(
-        isDefaultAction: true,
-        onPressed      : () {
-          Navigator.of(context, rootNavigator: useRootNavigator).pop();
-        },
-        child: cancelButton,
-      ),
-    );
-  }
-
   return showCupertinoDialog<T>(
     context           : context,
     barrierDismissible: barrierDismissible,
@@ -292,6 +262,36 @@ Future<T?> _showCupertinoTabletDialogAsync<T>({
     useRootNavigator  : useRootNavigator,
     routeSettings     : routeSettings,
     builder           : (BuildContext dialogContext) {
+      final List<Widget> actionWidgetList = [];
+
+      for (final NaSelectionItem<T> item in itemList) {
+        actionWidgetList.add(
+          CupertinoDialogAction(
+            isDefaultAction    : item.isDefault,
+            isDestructiveAction: item.isDestructive,
+            onPressed          : !item.isEnabled
+              ? () {}
+              : () {
+                item.onTap?.call();
+                Navigator.of(dialogContext, rootNavigator: useRootNavigator).pop(item.value);
+              },
+            child: _buildCupertinoActionContent(item),
+          ),
+        );
+      }
+
+      if (cancelButton != null) {
+        actionWidgetList.add(
+          CupertinoDialogAction(
+            isDefaultAction: true,
+            onPressed      : () {
+              Navigator.of(dialogContext, rootNavigator: useRootNavigator).pop();
+            },
+            child: cancelButton,
+          ),
+        );
+      }
+
       return CupertinoAlertDialog(
         title  : title,
         content: message,
@@ -456,7 +456,7 @@ Future<T?> naShowSelectionModalAsync<T>({
 
   // Detect tablet or phone
   final MediaQueryData mediaQueryData = MediaQuery.of(context);
-  final bool resolvedIsTablet = isTablet ?? (mediaQueryData.size.shortestSide >= tabletBreakpoint);
+  final bool resolvedIsTablet         = isTablet ?? (mediaQueryData.size.shortestSide >= tabletBreakpoint);
 
   // Resolve active UI type
   NaUiType activeUiType = forceUiType ?? NaUiType.material;

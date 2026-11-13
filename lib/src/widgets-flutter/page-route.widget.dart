@@ -14,8 +14,8 @@ class NaPageRoute {
     required WidgetBuilder builder,
     String? title,
     RouteSettings? settings,
-    bool maintainState = true,
-    bool fullscreenDialog = false,
+    bool maintainState     = true,
+    bool fullscreenDialog  = false,
     bool allowSnapshotting = true,
   }) {
     final List<NaUiType> uiTypes = NaUiTypeScope.of(context);

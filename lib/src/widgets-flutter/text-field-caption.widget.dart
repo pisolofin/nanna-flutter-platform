@@ -1,8 +1,9 @@
 import 'package:flutter/widgets.dart';
 
-import 'text-field.widget.dart';
 import '../models/ui-type.model.dart';
 import '../scopes/ui-type.scope.dart';
+
+import 'text-field.widget.dart';
 
 /// Position of the caption relative to the text field container.
 enum NaTextFieldCaptionPosition {

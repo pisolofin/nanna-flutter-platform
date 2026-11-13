@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 
-import 'icon.widget.dart';
 import '../models/ui-type.model.dart';
-import '../widgets/na-widget.widget.dart';
 import '../constants/icons.constant.dart';
+import '../widgets/na-widget.widget.dart';
 import '../models/widget-options.model.dart';
+
+import 'icon.widget.dart';
 
 /// Base options for [NaSearchBar].
 abstract class NaSearchBarOptions extends NaWidgetOptions {

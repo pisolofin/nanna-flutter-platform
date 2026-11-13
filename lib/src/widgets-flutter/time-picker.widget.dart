@@ -333,11 +333,11 @@ class _NaMaterialTimerPickerState extends State<_NaMaterialTimerPicker> {
     super.initState();
 
     final int totalSeconds = widget.initialTimerDuration.inSeconds;
-    _selectedHour = (totalSeconds ~/ 3600).clamp(0, 23);
-    _selectedMinute = ((totalSeconds % 3600) ~/ 60).clamp(0, 59);
-    _selectedSecond = (totalSeconds % 60).clamp(0, 59);
+    _selectedHour          = (totalSeconds ~/ 3600).clamp(0, 23);
+    _selectedMinute        = ((totalSeconds % 3600) ~/ 60).clamp(0, 59);
+    _selectedSecond        = (totalSeconds % 60).clamp(0, 59);
 
-    _hourController = FixedExtentScrollController(initialItem: _selectedHour);
+    _hourController   = FixedExtentScrollController(initialItem: _selectedHour);
     _minuteController = FixedExtentScrollController(
       initialItem: _selectedMinute ~/ _minuteInterval,
     );
@@ -389,7 +389,7 @@ class _NaMaterialTimerPickerState extends State<_NaMaterialTimerPicker> {
             childDelegate: ListWheelChildBuilderDelegate(
               childCount: itemCount,
               builder   : (BuildContext context, int index) {
-                final int value = valueBuilder(index);
+                final int value   = valueBuilder(index);
                 final String text = value.toString().padLeft(2, '0');
                 return Center(
                   child: Text(

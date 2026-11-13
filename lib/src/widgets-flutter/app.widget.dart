@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 
 import '../models/ui-type.model.dart';
 import '../scopes/ui-type.scope.dart';
+import '../services/platform.service.dart';
 import '../widgets/na-widget.widget.dart';
 import '../models/widget-options.model.dart';
 import '../services/platform-builder.service.dart';
@@ -279,9 +280,9 @@ class NaApp extends NaWidget {
     super.uiType,
   })  : routeInformationProvider = null,
         routeInformationParser = null,
-        routerDelegate = null,
-        routerConfig = null,
-        backButtonDispatcher = null;
+        routerDelegate         = null,
+        routerConfig           = null,
+        backButtonDispatcher   = null;
 
   /// Creates a [NaApp] that uses the [Router] instead of a [Navigator].
   ///
@@ -324,14 +325,14 @@ class NaApp extends NaWidget {
                   backButtonDispatcher == null),
           'If routerConfig is provided, all other router delegate and information provider/parser parameters must be null.',
         ),
-        home = null,
-        routes = null,
-        initialRoute = null,
-        onGenerateRoute = null,
+        home                    = null,
+        routes                  = null,
+        initialRoute            = null,
+        onGenerateRoute         = null,
         onGenerateInitialRoutes = null,
-        onUnknownRoute = null,
-        navigatorObservers = null,
-        navigatorKey = null;
+        onUnknownRoute          = null,
+        navigatorObservers      = null,
+        navigatorKey            = null;
 
   /// Whether the app was configured using a router delegate or router config.
   bool get _isRouter => ((this.routerConfig != null) || (this.routerDelegate != null));
@@ -443,24 +444,47 @@ class NaApp extends NaWidget {
     );
   }
 
+  /// Resolves the effective [NaUiType] fallback chain for this [NaApp],
+  /// or returns `null` if an ancestor [NaUiTypeScope] should be used.
+  List<NaUiType>? _resolveEffectiveUiTypes(BuildContext context) {
+    if ((this.uiTypes != null) && (this.uiTypes!.isNotEmpty)) {
+      final bool hasPlatformFallback = this.uiTypes!.contains(NaUiType.cupertino)
+        || this.uiTypes!.contains(NaUiType.material)
+      ;
+      if (hasPlatformFallback) {
+        return this.uiTypes!;
+      }
+      return [...this.uiTypes!, naPlatformServiceGetDefaultUiType()];
+    }
+
+    if ((this.uiType == null) && (context.dependOnInheritedWidgetOfExactType<NaUiTypeScope>() == null)) {
+      return [naPlatformServiceGetDefaultUiType()];
+    }
+
+    return null;
+  }
+
   @override
   Widget build(BuildContext context) {
-    if (this.uiType == null && this.uiTypes != null && this.uiTypes!.isNotEmpty) {
-      for (final NaUiType type in this.uiTypes!) {
-        final NaWidgetBuilder? builder = naPlatformServiceGetWidgetBuilder(
-          this.runtimeType,
-          type,
-        );
-        if (builder != null) {
-          return builder(context, this);
-        }
+    if (this.uiType == null) {
+      final List<NaUiType>? effectiveUiTypes = _resolveEffectiveUiTypes(context);
+      if (effectiveUiTypes != null) {
+        for (final NaUiType type in effectiveUiTypes) {
+          final NaWidgetBuilder? builder = naPlatformServiceGetWidgetBuilder(
+            this.runtimeType,
+            type,
+          );
+          if (builder != null) {
+            return builder(context, this);
+          }
 
-        final Widget? nativeWidget = renderForUIType(context, type);
-        if (nativeWidget != null) {
-          return nativeWidget;
+          final Widget? nativeWidget = renderForUIType(context, type);
+          if (nativeWidget != null) {
+            return nativeWidget;
+          }
         }
+        return fallbackRender(context);
       }
-      return fallbackRender(context);
     }
 
     return super.build(context);
@@ -471,9 +495,10 @@ class NaApp extends NaWidget {
     final NaAppOptions? options = this.optionsBuilder?.call(context, uiType);
 
     final NaUiTypeScope? parentScope = context.dependOnInheritedWidgetOfExactType<NaUiTypeScope>();
+    final List<NaUiType>? resolvedUiTypes = _resolveEffectiveUiTypes(context);
     final List<NaUiType> effectiveUiTypes;
-    if (this.uiTypes != null) {
-      effectiveUiTypes = this.uiTypes!;
+    if (resolvedUiTypes != null) {
+      effectiveUiTypes = resolvedUiTypes;
     }else if (parentScope != null) {
       if (parentScope.uiTypes.contains(uiType)) {
         effectiveUiTypes = parentScope.uiTypes;

@@ -10,14 +10,21 @@ void main() {
     final NaCardOptionsGeneric genericEmpty = NaCardOptionsGeneric.empty();
     expect(genericEmpty.color, isNull);
     expect(genericEmpty.margin, isNull);
+    expect(genericEmpty.padding, isNull);
+    expect(genericEmpty.borderRadius, isNull);
+    expect(genericEmpty.borderColor, isNull);
+    expect(genericEmpty.borderWidth, isNull);
+    expect(genericEmpty.clipBehavior, isNull);
 
     final NaCardOptionsMaterial materialEmpty = NaCardOptionsMaterial.empty();
     expect(materialEmpty.elevation, isNull);
     expect(materialEmpty.color, isNull);
+    expect(materialEmpty.padding, isNull);
 
     final NaCardOptionsCupertino cupertinoEmpty = NaCardOptionsCupertino.empty();
     expect(cupertinoEmpty.padding, isNull);
     expect(cupertinoEmpty.borderRadius, isNull);
+    expect(cupertinoEmpty.border, isNull);
   });
 
   test('NaSearchBarOptionsCupertino .empty constructor retains platform defaults', () {

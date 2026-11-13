@@ -269,7 +269,7 @@ class NaIconButton extends NaWidget {
 
   @override
   Widget? renderForUIType(BuildContext context, NaUiType uiType) {
-    final NaIconButtonOptions? options = this.optionsBuilder?.call(context, uiType);
+    final NaIconButtonOptions? options               = this.optionsBuilder?.call(context, uiType);
     final NaIconButtonOptionsGeneric? genericOptions = options is NaIconButtonOptionsGeneric
       ? options
       : null

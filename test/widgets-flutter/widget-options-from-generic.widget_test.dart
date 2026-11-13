@@ -5,8 +5,13 @@ import 'package:nanna_platform/nanna_platform.dart';
 void main() {
   test('NaCardOptions fromGeneric constructors inherit generic properties and set specific properties', () {
     final NaCardOptionsGeneric generic = NaCardOptionsGeneric(
-      color : const Color(0xFF112233),
-      margin: const EdgeInsets.all(8.0),
+      color       : const Color(0xFF112233),
+      margin      : const EdgeInsets.all(8.0),
+      padding     : const EdgeInsets.all(10.0),
+      borderRadius: BorderRadius.circular(14.0),
+      borderColor : const Color(0xFF445566),
+      borderWidth : 0.5,
+      clipBehavior: Clip.antiAlias,
     );
 
     final NaCardOptionsMaterial material = NaCardOptionsMaterial.fromGeneric(
@@ -15,6 +20,11 @@ void main() {
     );
     expect(material.color, const Color(0xFF112233));
     expect(material.margin, const EdgeInsets.all(8.0));
+    expect(material.padding, const EdgeInsets.all(10.0));
+    expect(material.borderRadius, BorderRadius.circular(14.0));
+    expect(material.borderColor, const Color(0xFF445566));
+    expect(material.borderWidth, 0.5);
+    expect(material.clipBehavior, Clip.antiAlias);
     expect(material.elevation, 4.0);
 
     final NaCardOptionsCupertino cupertino = NaCardOptionsCupertino.fromGeneric(
@@ -24,6 +34,10 @@ void main() {
     expect(cupertino.color, const Color(0xFF112233));
     expect(cupertino.margin, const EdgeInsets.all(8.0));
     expect(cupertino.padding, const EdgeInsets.all(12.0));
+    expect(cupertino.borderRadius, BorderRadius.circular(14.0));
+    expect(cupertino.borderColor, const Color(0xFF445566));
+    expect(cupertino.borderWidth, 0.5);
+    expect(cupertino.clipBehavior, Clip.antiAlias);
   });
 
   test('NaTextFieldOptions fromGeneric constructors inherit generic properties and set specific properties', () {

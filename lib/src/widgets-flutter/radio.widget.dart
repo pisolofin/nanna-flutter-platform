@@ -233,7 +233,7 @@ class NaRadio<T> extends NaWidget {
 
   @override
   Widget? renderForUIType(BuildContext context, NaUiType uiType) {
-    final NaRadioOptions? options = this.optionsBuilder?.call(context, uiType);
+    final NaRadioOptions? options               = this.optionsBuilder?.call(context, uiType);
     final NaRadioOptionsGeneric? genericOptions = options is NaRadioOptionsGeneric
       ? options
       : null
